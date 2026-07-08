@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Briefing Archive — BalakrishnaQuantum</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0d12;--panel:#11151c;--panel-2:#161c25;--line:#232b36;--line-soft:#1a212b;
+    --gold:#d4a017;--gold-soft:#f0c453;--teal:#2dd4bf;--text:#e7e6e2;--muted:#8b93a1;--muted-2:#5c6472;
+    --mono:'JetBrains Mono',monospace;--sans:'IBM Plex Sans',sans-serif;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);}
+  a{color:inherit;text-decoration:none;}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;border-bottom:1px solid var(--line-soft);}
+  .logo{font-family:var(--mono);font-weight:700;font-size:17px;display:flex;align-items:center;gap:10px;}
+  .logo .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);}
+  nav a{font-family:var(--mono);font-size:13px;color:var(--muted);}
+  main{max-width:900px;margin:0 auto;padding:56px 32px;}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--teal);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-family:var(--mono);font-size:clamp(24px,4vw,34px);margin:0 0 8px;}
+  .sub{color:var(--muted);font-size:14.5px;margin-bottom:36px;max-width:560px;line-height:1.6;}
+  .blog-list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);}
+  .blog-row{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line-soft);}
+  .blog-row:last-child{border-bottom:none;}
+  .blog-row:hover{background:var(--panel-2);}
+  .blog-date{font-family:var(--mono);font-size:12px;color:var(--muted-2);min-width:170px;}
+  .blog-title{font-size:14.5px;flex-grow:1;padding:0 16px;}
+  .blog-tag{font-family:var(--mono);font-size:11px;color:var(--teal);border:1px solid var(--teal);border-radius:20px;padding:2px 10px;}
+  .empty-note{color:var(--muted-2);font-size:13px;margin-top:24px;line-height:1.6;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo"><span class="dot"></span>BKQ</div>
+  <a href="../index.html">← Back to dashboard</a>
+</nav>
+<main>
+  <div class="eyebrow">Archive</div>
+  <h1>Pre-market briefings</h1>
+  <div class="sub">Every entry below is generated automatically at 12:00 PM IST from live market data — no manual editing, no approval step.</div>
+
+  <div class="blog-list" id="blog-list">
+    <a class="blog-row" href="2026-07-09-premarket.html">
+      <span class="blog-date">Jul 09, 2026 · 12:00 IST</span>
+      <span class="blog-title">Range-bound chop into CPI week — BTC pinned under 63K, PAXG holding the bid</span>
+      <span class="blog-tag">pre-market</span>
+    </a>
+  </div>
+
+  <div class="empty-note">
+    New entries append here automatically once the daily GitHub Action is wired up (see <code>.github/workflows/daily-briefing.yml</code> in the repo). Each run adds one dated HTML file to this folder and a new row to this index.
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,44 @@
+name: Daily Pre-Market Briefing
+
+# Runs every day at 06:30 UTC = 12:00 PM IST.
+# NOT active yet — see README "Wiring up the daily briefing" section
+# for the two things you need to add before this will actually publish anything:
+#   1. A script at scripts/generate_briefing.py (or .js) that pulls data and writes
+#      a new blog/YYYY-MM-DD-premarket.html file, using blog/2026-07-09-premarket.html
+#      as the template to follow.
+#   2. An ANTHROPIC_API_KEY repo secret, if you want Claude to write the narrative
+#      copy rather than a plain templated fill-in.
+
+on:
+  schedule:
+    - cron: '30 6 * * *'
+  workflow_dispatch: {}   # lets you trigger a run manually from the Actions tab to test
+
+permissions:
+  contents: write
+
+jobs:
+  publish-briefing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate briefing
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_briefing.py
+
+      - name: Commit and push new post
+        run: |
+          git config user.name "bkq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add blog/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto: pre-market briefing $(date -u +%Y-%m-%d)"
+          git push

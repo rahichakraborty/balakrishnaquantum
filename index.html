@@ -230,6 +230,8 @@
   <div class="logo"><span class="dot"></span>BKQ</div>
   <div class="nav-links">
     <a href="#dashboard">Dashboard</a>
+    <a href="cockpit-global.html">Global Cockpit</a>
+    <a href="cockpit-daily.html">Daily Cockpit</a>
     <a href="#indicators">Indicators</a>
     <a href="#blog">Briefing</a>
     <span class="soon">Journal (soon)</span>
@@ -238,25 +240,7 @@
   </div>
 </nav>
 
-<div class="ticker-wrap">
-  <div class="ticker" id="ticker">
-    <span><b>BTC</b><span id="t-btc">—</span></span>
-    <span><b>ETH</b><span id="t-eth">—</span></span>
-    <span><b>SOL</b><span id="t-sol">—</span></span>
-    <span><b>PAXG</b><span id="t-paxg">—</span></span>
-    <span><b>SPX</b>—</span>
-    <span><b>NDX</b>—</span>
-    <span><b>SPCX</b>—</span>
-    <!-- duplicate for seamless loop -->
-    <span><b>BTC</b><span id="t-btc2">—</span></span>
-    <span><b>ETH</b><span id="t-eth2">—</span></span>
-    <span><b>SOL</b><span id="t-sol2">—</span></span>
-    <span><b>PAXG</b><span id="t-paxg2">—</span></span>
-    <span><b>SPX</b>—</span>
-    <span><b>NDX</b>—</span>
-    <span><b>SPCX</b>—</span>
-  </div>
-</div>
+<div class="ticker-wrap" id="tv-ticker-tape"></div>
 
 <div class="hero" id="dashboard">
   <div class="hero-top">
@@ -270,6 +254,24 @@
       <div class="time" id="clock">--:--:--</div>
       <div class="status" id="session-status">checking…</div>
     </div>
+  </div>
+
+  <!-- Cockpit links -->
+  <div class="row2">
+    <a class="term" href="cockpit-global.html" style="text-decoration:none;color:inherit;display:block;">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq global cockpit</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">BTC · US Equities · Gold →</div>
+        <div style="color:var(--muted);font-size:13px;">Full-page terminal: crypto deck, US indices/stocks, metals, liquidation intel, and a crypto + global markets news wire.</div>
+      </div>
+    </a>
+    <a class="term" href="cockpit-daily.html" style="text-decoration:none;color:inherit;display:block;">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq daily cockpit</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">Session Brief Terminal →</div>
+        <div style="color:var(--muted);font-size:13px;">Crypto perps, Indian indices, US stocks/macro, metals + SPCX focus, liquidation intel, and a crypto + India news wire.</div>
+      </div>
+    </a>
   </div>
 
   <!-- Chart + Watchlist -->
@@ -475,9 +477,13 @@ new TradingView.widget({
   "allow_symbol_change": true,
   "details": false,
   "watchlist": [
+    "TVC:DXY","TVC:US10Y",
+    "OANDA:SPX500USD","OANDA:NAS100USD","OANDA:US30USD","TVC:VIX",
+    "TVC:USOIL","OANDA:XAUUSD","OANDA:XAGUSD",
+    "CRYPTOCAP:BTC.D","CRYPTOCAP:USDT.D",
     "BINANCE:BTCUSDT","BINANCE:ETHUSDT","BINANCE:SOLUSDT",
-    "OANDA:XAUUSD","OANDA:XAGUSD",
-    "SP:SPX","NASDAQ:NDX","NASDAQ:SPCX"
+    "NASDAQ:MSTR","NASDAQ:NVDA","NASDAQ:TSLA","NASDAQ:AAPL",
+    "NASDAQ:MSFT","NASDAQ:AMZN","NASDAQ:META","NASDAQ:SPCX","NASDAQ:GOOGL"
   ],
   "container_id": "tv_chart_container"
 });
@@ -499,34 +505,39 @@ function updateClock(){
 }
 setInterval(updateClock,1000); updateClock();
 
-/* ---------------- Ticker prices (Binance + CoinGecko fallback for PAXG) ---------------- */
-async function loadTicker(){
-  try{
-    const symbols = ["BTCUSDT","ETHUSDT","SOLUSDT"];
-    const res = await fetch('https://api.binance.com/api/v3/ticker/24hr?symbols=' + encodeURIComponent(JSON.stringify(symbols)));
-    const data = await res.json();
-    const map = {};
-    data.forEach(d=>map[d.symbol]=d);
-    setTick('btc', map['BTCUSDT']); setTick('eth', map['ETHUSDT']); setTick('sol', map['SOLUSDT']);
-  }catch(e){ console.warn('ticker fetch failed', e); }
-  try{
-    const res = await fetch('https://api.binance.com/api/v3/ticker/24hr?symbol=PAXGUSDT');
-    const d = await res.json();
-    setTick('paxg', d);
-  }catch(e){ console.warn('paxg fetch failed', e); }
-}
-function setTick(key, d){
-  if(!d || !d.lastPrice) return;
-  const price = parseFloat(d.lastPrice);
-  const chg = parseFloat(d.priceChangePercent);
-  const cls = chg>=0 ? 'up':'down';
-  const txt = ' $'+price.toLocaleString(undefined,{maximumFractionDigits:2})+' ('+(chg>=0?'+':'')+chg.toFixed(2)+'%)';
-  [key, key+'2'].forEach(id=>{
-    const el = document.getElementById('t-'+id);
-    if(el){ el.textContent = txt; el.className = cls; }
+/* ---------------- Ticker tape (TradingView widget — OANDA/CFD feeds for indices, freely embeddable) ---------------- */
+(function loadTickerTape(){
+  const host = document.getElementById('tv-ticker-tape');
+  const wrap = document.createElement('div');
+  wrap.className = 'tradingview-widget-container';
+  const inner = document.createElement('div');
+  inner.className = 'tradingview-widget-container__widget';
+  wrap.appendChild(inner);
+  const s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+  s.async = true;
+  s.innerHTML = JSON.stringify({
+    symbols:[
+      {proName:'BINANCE:BTCUSDT', title:'BTC'},
+      {proName:'BINANCE:ETHUSDT', title:'ETH'},
+      {proName:'BINANCE:SOLUSDT', title:'SOL'},
+      {proName:'OANDA:XAUUSD', title:'PAXG/GOLD'},
+      {proName:'OANDA:SPX500USD', title:'SPX'},
+      {proName:'OANDA:NAS100USD', title:'NDX'},
+      {proName:'OANDA:US30USD', title:'DOW'},
+      {proName:'TVC:VIX', title:'VIX'},
+      {proName:'TVC:DXY', title:'DXY'},
+      {proName:'NASDAQ:SPCX', title:'SPCX'},
+      {proName:'NASDAQ:NVDA', title:'NVDA'},
+      {proName:'NASDAQ:TSLA', title:'TSLA'},
+      {proName:'NASDAQ:MSTR', title:'MSTR'}
+    ],
+    showSymbolLogo:true, isTransparent:true, displayMode:'adaptive', colorTheme:'dark', locale:'en'
   });
-}
-loadTicker(); setInterval(loadTicker, 30000);
+  wrap.appendChild(s);
+  host.appendChild(wrap);
+})();
 
 /* ---------------- Fear & Greed (Alternative.me) ---------------- */
 async function loadFearGreed(){
@@ -654,7 +665,13 @@ function renderLiqHist(){
 }
 try{
   const ws = new WebSocket('wss://fstream.binance.com/ws/!forceOrder@arr');
+  const liqTimeout = setTimeout(()=>{
+    if(!liqEvents.length){
+      liqFeedEl.innerHTML = '<div class="liq-empty">No liquidations >$10k in the last few seconds — feed is live, just quiet. Leave this open; entries appear as they happen.</div>';
+    }
+  }, 15000);
   ws.onmessage = (msg)=>{
+    clearTimeout(liqTimeout);
     try{
       const payload = JSON.parse(msg.data);
       const o = payload.o;

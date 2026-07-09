@@ -369,11 +369,22 @@ function connect(){
   setStatus('','connecting…');
   const sym=S.symbol.toLowerCase();
   const host=WS_HOSTS[wsIdx%WS_HOSTS.length];
-  let opened=false;
+  let opened=false, dataReceived=false;
   const tout=setTimeout(()=>{
     if(!opened){wsIdx++;wsRetries++;
       if(wsRetries<WS_HOSTS.length*2)connect();else startDemo();}
   },4000);
+  // Watchdog: the socket can report "open" successfully but then never actually
+  // deliver trade data (seen in practice — connection succeeds, stream stays silent).
+  // If nothing arrives within 6s of opening, treat it as a dead connection and
+  // fail over the same way a failed handshake would, instead of sitting stuck on LIVE/---.
+  const dataWatchdog=setTimeout(()=>{
+    if(opened&&!dataReceived){
+      try{S.ws.close();}catch(e){}
+      wsIdx++;wsRetries++;
+      if(wsRetries<WS_HOSTS.length*2)connect();else startDemo();
+    }
+  },6000);
   try{
     if(S.ws){try{S.ws.close();}catch(e){}}
     if(S.wsOB){try{S.wsOB.close();}catch(e){}}
@@ -382,13 +393,14 @@ function connect(){
       setStatus('live','LIVE');};
     S.ws.onmessage=(e)=>{
       try{const d=JSON.parse(e.data);
+        dataReceived=true;clearTimeout(dataWatchdog);
         const p=parseFloat(d.p),q=parseFloat(d.q),b=!d.m;
         document.getElementById('live-price').textContent=fmtP(p);
         tick(p,q,b,d.T);}catch(ex){}
     };
-    S.ws.onerror=()=>{clearTimeout(tout);if(!opened){wsIdx++;wsRetries++;
+    S.ws.onerror=()=>{clearTimeout(tout);clearTimeout(dataWatchdog);if(!opened){wsIdx++;wsRetries++;
       if(wsRetries<WS_HOSTS.length*2)connect();else startDemo();}};
-    S.ws.onclose=()=>{if(!S.simMode){setStatus('','reconnecting…');
+    S.ws.onclose=()=>{clearTimeout(dataWatchdog);if(!S.simMode){setStatus('','reconnecting…');
       setTimeout(()=>{wsIdx=0;wsRetries=0;connect();},3000);}};
     S.wsOB=new WebSocket(`${host}/ws/${sym}@depth20@100ms`);
     S.wsOB.onmessage=(e)=>{
@@ -397,7 +409,7 @@ function connect(){
         S.ob.bids=d.bids.map(b=>[+b[0],+b[1]]).slice(0,15);
         renderDOM();}catch(ex){}
     };
-  }catch(ex){clearTimeout(tout);startDemo();}
+  }catch(ex){clearTimeout(tout);clearTimeout(dataWatchdog);startDemo();}
 }
 
 // ══════════════════════════════════════════════

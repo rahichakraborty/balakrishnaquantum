@@ -223,7 +223,7 @@
 <body>
 
 <nav>
-  <div class="logo"><span class="dot"></span>BKQ</div>
+  <div class="logo"><span class="dot"></span>Balakrishna Quantum</div>
   <div class="nav-links">
     <a href="#dashboard">Dashboard</a>
     <a href="cockpit-global.html">Global Cockpit</a>
@@ -453,18 +453,21 @@
     <div class="term">
       <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">contact.form</span></div>
       <div class="term-body">
-        <form id="contact-form">
+        <form id="contact-form" action="https://formsubmit.co/rahic.official@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New message from BalakrishnaQuantum.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
           <div style="margin-bottom:12px;">
             <label style="display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:5px;">NAME</label>
-            <input type="text" id="cf-name" required style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;">
+            <input type="text" name="name" required style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;">
           </div>
           <div style="margin-bottom:12px;">
             <label style="display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:5px;">YOUR EMAIL</label>
-            <input type="email" id="cf-email" required style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;">
+            <input type="email" name="email" required style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;">
           </div>
           <div style="margin-bottom:14px;">
             <label style="display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:5px;">MESSAGE</label>
-            <textarea id="cf-message" required rows="4" style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;resize:vertical;"></textarea>
+            <textarea name="message" required rows="4" style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;resize:vertical;"></textarea>
           </div>
           <button type="submit" style="width:100%;background:var(--gold);color:#0a0d12;border:none;border-radius:6px;padding:11px;font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.04em;cursor:pointer;">SEND MESSAGE →</button>
         </form>
@@ -590,20 +593,6 @@ async function loadTelegramLive(){
 }
 loadTelegramLive();
 setInterval(loadTelegramLive, 90000);
-
-/* ---------------- Contact form (opens pre-filled mailto — no backend on a static site) ---------------- */
-const cfForm = document.getElementById('contact-form');
-if(cfForm){
-  cfForm.addEventListener('submit', function(e){
-    e.preventDefault();
-    const name = document.getElementById('cf-name').value.trim();
-    const email = document.getElementById('cf-email').value.trim();
-    const message = document.getElementById('cf-message').value.trim();
-    const subject = encodeURIComponent('BKQ site inquiry from ' + name);
-    const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-    window.location.href = 'mailto:rahic.official@gmail.com?subject=' + subject + '&body=' + body;
-  });
-}
 
 /* ---------------- Session clock ---------------- */
 function pad(n){return n.toString().padStart(2,'0');}

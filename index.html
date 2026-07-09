@@ -30,6 +30,7 @@
   html{scroll-behavior:smooth;}
   body{
     margin:0;
+    overflow-x:hidden;
     background:
       radial-gradient(ellipse 900px 500px at 15% -10%, rgba(212,160,23,0.07), transparent 60%),
       radial-gradient(ellipse 900px 600px at 90% 10%, rgba(45,212,191,0.06), transparent 60%),
@@ -89,7 +90,14 @@
   .nav-links{display:flex;gap:28px;font-family:var(--mono);font-size:13px;color:var(--muted);}
   .nav-links a:hover{color:var(--gold-soft);}
   .nav-links .soon{opacity:.4;cursor:default;}
-  @media(max-width:860px){.nav-links{display:none;}}
+  @media(max-width:860px){
+    .nav-links{position:fixed;top:53px;left:0;right:0;bottom:0;background:var(--bg);flex-direction:column;
+      align-items:flex-start;padding:24px 32px;gap:22px;display:none;overflow-y:auto;z-index:99;}
+    .nav-links.open{display:flex;}
+    .mobile-menu-btn{display:flex !important;}
+  }
+  .mobile-menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:6px;color:var(--text);
+    width:36px;height:36px;align-items:center;justify-content:center;cursor:pointer;font-size:16px;}
 
   /* ---------- Ticker tape ---------- */
   .ticker-wrap{
@@ -202,6 +210,9 @@
   /* Founder / about */
   .about-grid{display:grid;grid-template-columns:220px 1fr;gap:32px;align-items:start;}
   @media(max-width:900px){.about-grid{grid-template-columns:1fr;}}
+  @media(max-width:640px){.pricing-grid{grid-template-columns:1fr !important;}}
+  @media(max-width:640px){.maxpain-grid{grid-template-columns:1fr 1fr !important;}}
+  @media(max-width:400px){.maxpain-grid{grid-template-columns:1fr !important;}}
   .about-grid p{color:var(--muted);line-height:1.75;font-size:14.5px;margin:0 0 14px;}
   .horizon{margin-top:22px;}
   .horizon-track{height:6px;border-radius:3px;background:var(--line);position:relative;overflow:hidden;}
@@ -235,7 +246,8 @@
     </svg>
     Balakrishna Quantum
   </div>
-  <div class="nav-links">
+  <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+  <div class="nav-links" id="nav-links">
     <a href="#dashboard">Dashboard</a>
     <a href="cockpit-global.html">Global Cockpit</a>
     <a href="cockpit-daily.html">Daily Cockpit</a>
@@ -339,7 +351,7 @@
   <!-- Max pain detail -->
   <div class="term" style="margin-bottom:16px;">
     <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">options.maxpain — deribit BTC</span></div>
-    <div class="term-body" id="maxpain-body" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+    <div class="term-body maxpain-grid" id="maxpain-body" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
       <div class="stat-row"><span class="k">Nearest expiry</span><span class="v" id="mp-expiry">—</span></div>
       <div class="stat-row"><span class="k">Max pain strike</span><span class="v" id="mp-strike">—</span></div>
       <div class="stat-row"><span class="k">Spot vs. max pain</span><span class="v" id="mp-diff">—</span></div>
@@ -420,7 +432,7 @@
     <h2>One plan, full access</h2>
     <div class="section-sub">All 9 indicators, all Playbook guidebooks, and BKQ Journal access, one subscription. No per-indicator pricing — the whole suite or nothing.</div>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;">
+  <div class="pricing-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;">
     <div class="term">
       <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">plan.annual</span></div>
       <div class="term-body">
@@ -688,6 +700,22 @@ async function loadTelegramLive(){
 }
 loadTelegramLive();
 setInterval(loadTelegramLive, 90000);
+
+/* ---------------- Mobile nav toggle ---------------- */
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const navLinksEl = document.getElementById('nav-links');
+if(mobileBtn && navLinksEl){
+  mobileBtn.addEventListener('click', ()=>{
+    navLinksEl.classList.toggle('open');
+    mobileBtn.textContent = navLinksEl.classList.contains('open') ? '✕' : '☰';
+  });
+  navLinksEl.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      navLinksEl.classList.remove('open');
+      mobileBtn.textContent = '☰';
+    });
+  });
+}
 
 /* ---------------- Session clock ---------------- */
 function pad(n){return n.toString().padStart(2,'0');}

@@ -412,6 +412,7 @@ async function startRestPolling(){
   const ok = await pollTrades();
   if(!ok){ startDemo(); return; }
   S.simMode=false;
+  S.restMode=true;
   setStatus('live','LIVE (REST)');
   lastAggTradeId=null; // reset so next poll grabs a fresh recent window
   stopRestPolling();
@@ -421,6 +422,7 @@ async function startRestPolling(){
 }
 
 function connect(){
+  S.restMode=false;
   setStatus('','connecting…');
   const sym=S.symbol.toLowerCase();
   const host=WS_HOSTS[wsIdx%WS_HOSTS.length];
@@ -455,7 +457,7 @@ function connect(){
     };
     S.ws.onerror=()=>{clearTimeout(tout);clearTimeout(dataWatchdog);if(!opened){wsIdx++;wsRetries++;
       if(wsRetries<WS_HOSTS.length*2)connect();else startRestPolling();}};
-    S.ws.onclose=()=>{clearTimeout(dataWatchdog);if(!S.simMode){setStatus('','reconnecting…');
+    S.ws.onclose=()=>{clearTimeout(dataWatchdog);if(!S.simMode&&!S.restMode){setStatus('','reconnecting…');
       setTimeout(()=>{wsIdx=0;wsRetries=0;connect();},3000);}};
     S.wsOB=new WebSocket(`${host}/ws/${sym}@depth20@100ms`);
     S.wsOB.onmessage=(e)=>{
@@ -474,6 +476,7 @@ let demoP=60500,demoTrend=-0.02,demoInterval=null;
 function startDemo(){
   if(S.simMode)return;
   stopRestPolling();
+  S.restMode=false;
   S.simMode=true;
   setStatus('demo','DEMO MODE');
   // Set realistic starting price per symbol
@@ -763,7 +766,7 @@ function setTF(tf){
 }
 
 function changeSymbol(sym){
-  S.symbol=sym;S.simMode=false;wsIdx=0;wsRetries=0;
+  S.symbol=sym;S.simMode=false;S.restMode=false;wsIdx=0;wsRetries=0;
   S.candles=[];S.cur=null;S.cvdHist=[];S.cvd=0;
   if(demoInterval){clearInterval(demoInterval);demoInterval=null;}
   stopRestPolling();lastAggTradeId=null;

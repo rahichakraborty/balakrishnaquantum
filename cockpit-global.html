@@ -206,7 +206,7 @@
 </section>
 
 <footer>
-  BKQ Global Cockpit · auto-loads on open, refreshes every 5 minutes · crypto via Binance public data + CoinGecko + Alternative.me · US indices, stocks &amp; metals via TradingView live embeds · DXY approximated from ECB reference rates — indicative only · pivots = classic floor pivots from previous UTC daily candle · not financial advice. Process over prediction.
+  BKQ Global Cockpit · auto-loads on open, refreshes every 90 seconds · crypto via Binance public data + CoinGecko + Alternative.me · US indices, stocks &amp; metals via TradingView live embeds · DXY approximated from ECB reference rates — indicative only · pivots = classic floor pivots from previous UTC daily candle · news wire polls RSS feeds on each refresh, not a live push stream — expect a few minutes of lag behind the source · not financial advice. Process over prediction.
 </footer>
 
 <script>
@@ -221,7 +221,7 @@ const COINS = [
 ];
 const SPOT_HOSTS = ['https://data-api.binance.vision','https://api.binance.com'];
 const FAPI = 'https://fapi.binance.com';
-const REFRESH_MS = 5*60*1000;
+const REFRESH_MS = 90*1000;
 
 /* ═══════════ HELPERS ═══════════ */
 const $ = id => document.getElementById(id);
@@ -475,23 +475,26 @@ function loadTV(){
   mini('tv-silver','TVC:SILVER');
   mini('tv-crude','TVC:USOIL');
   mini('tv-dxy','AMEX:UUP');
-  tapeQuote('tv-us10y','TVC:US10Y','US10Y');
+  mini('tv-us10y','OANDA:USB10YUSD');
   mini('tv-btc','BINANCE:BTCUSDT');
 }
 
 /* ═══════════ NEWS ═══════════ */
-async function loadNews(id, rss, fallback){
+async function loadNews(id, rssList, fallback){
   const el = $(id);
-  try{
-    const d = await getJSON('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rss));
-    if(!d.items || !d.items.length) throw new Error('empty');
-    el.innerHTML = d.items.slice(0,8).map(i=>{
-      const when = i.pubDate ? new Date(i.pubDate).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'}) : '';
-      return `<div class="newsitem"><a href="${i.link}" target="_blank" rel="noopener">${i.title}</a><div class="when">${when} IST</div></div>`;
-    }).join('');
-  }catch(e){
-    el.innerHTML = `<div class="cardstate">feed unavailable right now — <a href="${fallback}" target="_blank" rel="noopener">open source directly →</a></div>`;
+  const sources = Array.isArray(rssList) ? rssList : [rssList];
+  for(const rss of sources){
+    try{
+      const d = await getJSON('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rss));
+      if(!d.items || !d.items.length) continue;
+      el.innerHTML = d.items.slice(0,8).map(i=>{
+        const when = i.pubDate ? new Date(i.pubDate).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'}) : '';
+        return `<div class="newsitem"><a href="${i.link}" target="_blank" rel="noopener">${i.title}</a><div class="when">${when} IST</div></div>`;
+      }).join('');
+      return;
+    }catch(e){ /* try next source */ }
   }
+  el.innerHTML = `<div class="cardstate">feed unavailable right now — <a href="${fallback}" target="_blank" rel="noopener">open source directly →</a></div>`;
 }
 
 /* ═══════════ ORCHESTRATION ═══════════ */
@@ -501,8 +504,15 @@ async function refreshAll(){
   await Promise.allSettled([
     ...COINS.map(loadCoin),
     loadDerivs(), loadGlobal(), loadFNG(), loadDXY(),
-    loadNews('news-crypto','https://www.coindesk.com/arc/outboundfeeds/rss/','https://www.coindesk.com'),
-    loadNews('news-global','http://feeds.marketwatch.com/marketwatch/topstories/','https://www.marketwatch.com/markets')
+    loadNews('news-crypto',[
+      'https://www.coindesk.com/arc/outboundfeeds/rss/',
+      'https://cointelegraph.com/rss'
+    ],'https://www.coindesk.com'),
+    loadNews('news-global',[
+      'http://feeds.marketwatch.com/marketwatch/topstories/',
+      'https://www.investing.com/rss/news.rss',
+      'https://finance.yahoo.com/news/rssindex'
+    ],'https://www.marketwatch.com/markets')
   ]);
   const now = new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata'});
   $('lastupd').textContent = 'updated '+now+' IST';

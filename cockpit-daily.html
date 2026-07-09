@@ -325,13 +325,22 @@ async function loadGlobal(){
 }
 async function loadFNG(){
   try{
-    const d = await getJSON('https://api.alternative.me/fng/?limit=1');
-    const v = d.data[0];
-    $('fng').textContent = v.value;
-    $('fngc').textContent = v.value_classification.toLowerCase();
-    const n=+v.value;
+    const target = 'https://pro-api.coinmarketcap.com/public-api/v3/fear-and-greed/latest';
+    const d = await getJSON('https://api.allorigins.win/raw?url='+encodeURIComponent(target));
+    $('fng').textContent = d.data.value;
+    $('fngc').textContent = d.data.value_classification.toLowerCase();
+    const n=+d.data.value;
     $('fng').style.color = n<=25?'var(--red)': n<=45?'var(--orange)': n<=55?'var(--gold)': 'var(--green)';
-  }catch(e){ $('fng').textContent='n/a'; }
+  }catch(e){
+    try{
+      const d = await getJSON('https://api.alternative.me/fng/?limit=1');
+      const v = d.data[0];
+      $('fng').textContent = v.value;
+      $('fngc').textContent = v.value_classification.toLowerCase();
+      const n=+v.value;
+      $('fng').style.color = n<=25?'var(--red)': n<=45?'var(--orange)': n<=55?'var(--gold)': 'var(--green)';
+    }catch(e2){ $('fng').textContent='n/a'; }
+  }
 }
 async function loadDXY(){
   const hosts = [
@@ -360,29 +369,60 @@ async function loadNews(id, rssList, fallback){
   const tsEl = document.getElementById(id+'-ts');
   const sources = Array.isArray(rssList) ? rssList : [rssList];
 
-  const attempt = async (rss) => {
-    const res = await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(rss), {signal:AbortSignal.timeout(9000)});
+  const attemptAllOrigins = async (rss) => {
+    const res = await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(rss), {signal:AbortSignal.timeout(8000)});
     if(!res.ok) throw new Error('bad response');
     const xmlText = await res.text();
     const doc = new DOMParser().parseFromString(xmlText, 'text/xml');
     if(doc.querySelector('parsererror')) throw new Error('parse error');
-    const items = Array.from(doc.querySelectorAll('item')).slice(0,8);
+    const items = Array.from(doc.querySelectorAll('item')).slice(0,8).map(it => ({
+      title: it.querySelector('title')?.textContent || '',
+      link: it.querySelector('link')?.textContent || rss,
+      pubDate: it.querySelector('pubDate')?.textContent || null,
+    }));
     if(!items.length) throw new Error('empty feed');
     return items;
   };
 
+  const attemptJina = async (rss) => {
+    const res = await fetch('https://r.jina.ai/'+rss, {signal:AbortSignal.timeout(9000)});
+    if(!res.ok) throw new Error('bad response');
+    const text = await res.text();
+    const re = /### \[([^\]]+)\]\([^)]*\)\s*\n\s*\[?.*?\]?\(?[^)]*\)?\s*\n\s*([A-Za-z]{3}, \d{2} [A-Za-z]{3} \d{4} [\d:]+ [+-]\d{4})/g;
+    const items = [];
+    let m;
+    while((m = re.exec(text)) && items.length < 8){
+      items.push({title: m[1].trim(), link: rss, pubDate: m[2]});
+    }
+    if(!items.length) throw new Error('no items parsed');
+    return items;
+  };
+
+  const attempt = async (rss) => {
+    try{ return await attemptAllOrigins(rss); }
+    catch(e){ return await attemptJina(rss); }
+  };
+
   try{
-    const items = await Promise.any(sources.map(attempt));
+    const results = await Promise.allSettled(sources.map(attempt));
+    const successes = results
+      .filter(r => r.status === 'fulfilled')
+      .map(r => r.value);
+    if(!successes.length) throw new Error('all sources failed');
+
+    const freshest = successes.reduce((best, items) => {
+      const bestDate = new Date(best[0]?.pubDate || 0);
+      const thisDate = new Date(items[0]?.pubDate || 0);
+      return thisDate > bestDate ? items : best;
+    });
+
+    const items = freshest;
     el.innerHTML = items.map(it=>{
-      const title = it.querySelector('title')?.textContent || '';
-      const link = it.querySelector('link')?.textContent || '#';
-      const pubDate = it.querySelector('pubDate')?.textContent;
-      const when = pubDate ? new Date(pubDate).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'}) : '';
-      return `<div class="newsitem"><a href="${link}" target="_blank" rel="noopener">${title}</a><div class="when">${when} IST</div></div>`;
+      const when = it.pubDate ? new Date(it.pubDate).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'}) : '';
+      return `<div class="newsitem"><a href="${it.link}" target="_blank" rel="noopener">${it.title}</a><div class="when">${when} IST</div></div>`;
     }).join('');
     if(tsEl){
-      const firstPub = items[0].querySelector('pubDate')?.textContent;
-      const latest = firstPub ? new Date(firstPub) : null;
+      const latest = items[0].pubDate ? new Date(items[0].pubDate) : null;
       const fetchedAt = new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'});
       tsEl.textContent = latest ? `· latest ${latest.toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'})} IST · checked ${fetchedAt}` : `· checked ${fetchedAt} IST`;
     }

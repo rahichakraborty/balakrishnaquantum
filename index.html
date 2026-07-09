@@ -229,8 +229,9 @@
     <a href="cockpit-global.html">Global Cockpit</a>
     <a href="cockpit-daily.html">Daily Cockpit</a>
     <a href="#indicators">Indicators</a>
+    <a href="#pricing">Pricing</a>
     <a href="#blog">Briefing</a>
-    <span class="soon">Journal (soon)</span>
+    <a href="journal.html">Journal</a>
     <a href="orderflow.html">Orderflow</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
@@ -254,7 +255,7 @@
   </div>
 
   <!-- Cockpit links -->
-  <div class="row3">
+  <div class="row3" style="grid-template-columns:repeat(4,1fr);">
     <a class="term" href="cockpit-global.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq global cockpit</span></div>
       <div class="term-body">
@@ -274,6 +275,13 @@
       <div class="term-body">
         <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">Footprint · CVD · DOM →</div>
         <div style="color:var(--muted);font-size:13px;">Live footprint chart with point-of-control, candle imbalance, book pressure, cumulative delta, and a real-time DOM ladder.</div>
+      </div>
+    </a>
+    <a class="term" href="journal.html" style="text-decoration:none;color:inherit;display:block;">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq journal</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">Setup-Tagged Trade Log →</div>
+        <div style="color:var(--muted);font-size:13px;">Log every trade against the exact BKQ framework that generated it — win rate, R:R, expectancy, calendar heatmap, and behavior tagging.</div>
       </div>
     </a>
   </div>
@@ -371,18 +379,87 @@
   <div class="section-head">
     <div class="eyebrow">Toolkit</div>
     <h2>The BKQ indicator suite</h2>
-    <div class="section-sub">Nine tools, one house logic. Each ships with a PDF field guide and a link to the live TradingView script.</div>
+    <div class="section-sub">Nine tools, one house logic. Each ships with a Playbook field guide and a link to the live TradingView script.</div>
   </div>
   <div class="ind-grid">
-    <div class="ind-card"><div class="ind-tag">Crypto · Scalping</div><h3>BKQ Paroshpathar Scalper 2.0</h3><p>The foundational system — EMA/RSI/ADX/volume/ATR confluence with Bollinger squeeze detection, IST session filter, and two-tranche exits.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a></div></div>
-    <div class="ind-card"><div class="ind-tag">Crypto · Trend</div><h3>BKQ BTC Unified v3.0</h3><p>Orderflow-aware trend system built on CVD and absorption logic, tuned for the 13:00–21:00 IST session.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a></div></div>
-    <div class="ind-card"><div class="ind-tag">Multi-asset</div><h3>BKQ 5 EMA Pro v2.0</h3><p>Alert-candle breakout system with a 0–5 confluence quality score, structure-based stops, and configurable R:R targets.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a></div></div>
-    <div class="ind-card"><div class="ind-tag">Metals</div><h3>BKQ Metal Scalper v2.0</h3><p>COMEX/London session clock, AM/PM fix markers, COT proxy, DXY correlation, and a real-yield panel for PAXG and silver.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a></div></div>
-    <div class="ind-card"><div class="ind-tag">US Equities/Index</div><h3>BKQ US Stocks &amp; Index Scalper</h3><p>Session-aware scalper covering SPX, NDX, and named large caps, with corrected pre-market/Power Hour labeling.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a></div></div>
-    <div class="ind-card"><div class="ind-tag">Swing</div><h3>BKQ Pullback System v2.0</h3><p>Arm→trigger state machine: EMA regime plus ADX arms at the 21 EMA, a rejection candle with volume confirms the trigger.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a></div></div>
-    <div class="ind-card"><div class="ind-tag">Equities · Scalp</div><h3>BKQ SMB Momentum Suite v1.0</h3><p>9 EMA Continuation, Fashionably Late, and Backside setups encoded with A+/B/C confluence auto-grading.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a></div></div>
-    <div class="ind-card"><div class="ind-tag">Orderflow</div><h3>BKQ Orderflow 4-Stage v1.0</h3><p>Balance vs. imbalance, trend model, and mean reversion model — Fabio Valentini's framework encoded for chart use.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a></div></div>
-    <div class="ind-card"><div class="ind-tag">Options</div><h3>BKQ Indian Options v1.0</h3><p>12-point scoring engine for CE/PE buying signals across Nifty, Bank Nifty, Fin Nifty, Midcap Nifty, and Sensex.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Crypto · Scalping</div><h3>BKQ Paroshpathar Scalper 2.0</h3><p>The foundational system — EMA/RSI/ADX/volume/ATR confluence with Bollinger squeeze detection, IST session filter, and two-tranche exits.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Crypto · Trend</div><h3>BKQ BTC Unified v3.0</h3><p>Orderflow-aware trend system built on CVD and absorption logic, tuned for the 13:00–21:00 IST session.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Multi-asset</div><h3>BKQ 5 EMA Pro v2.0</h3><p>Alert-candle breakout system with a 0–5 confluence quality score, structure-based stops, and configurable R:R targets.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Metals</div><h3>BKQ Metal Scalper v2.0</h3><p>COMEX/London session clock, AM/PM fix markers, COT proxy, DXY correlation, and a real-yield panel for PAXG and silver.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">US Equities/Index</div><h3>BKQ US Stocks &amp; Index Scalper</h3><p>Session-aware scalper covering SPX, NDX, and named large caps, with corrected pre-market/Power Hour labeling.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Swing</div><h3>BKQ Pullback System v2.0</h3><p>Arm→trigger state machine: EMA regime plus ADX arms at the 21 EMA, a rejection candle with volume confirms the trigger.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Equities · Scalp</div><h3>BKQ SMB Momentum Suite v1.0</h3><p>9 EMA Continuation, Fashionably Late, and Backside setups encoded with A+/B/C confluence auto-grading.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Orderflow</div><h3>BKQ Orderflow 4-Stage v1.0</h3><p>Balance vs. imbalance, trend model, and mean reversion model — Fabio Valentini's framework encoded for chart use.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Options</div><h3>BKQ Indian Options v1.0</h3><p>12-point scoring engine for CE/PE buying signals across Nifty, Bank Nifty, Fin Nifty, Midcap Nifty, and Sensex.</p><div class="ind-links"><a href="#">TradingView →</a><a href="#">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing">
+  <div class="section-head">
+    <div class="eyebrow">Subscribe</div>
+    <h2>One plan, full access</h2>
+    <div class="section-sub">All 9 indicators, all Playbook guidebooks, and BKQ Journal access, one subscription. No per-indicator pricing — the whole suite or nothing.</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;">
+    <div class="term">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">plan.annual</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:11px;color:var(--teal);letter-spacing:.08em;margin-bottom:6px;">BILLED ANNUALLY</div>
+        <div style="font-family:var(--mono);font-size:34px;font-weight:700;color:var(--gold-soft);">₹4,999<span style="font-size:14px;color:var(--muted);font-weight:400;">/mo</span></div>
+        <div style="font-size:12.5px;color:var(--muted-2);margin-bottom:16px;">₹59,988 charged once a year</div>
+        <ul style="list-style:none;padding:0;margin:0 0 20px;font-size:13.5px;color:var(--muted);line-height:2;">
+          <li>✓ All 9 BKQ indicators</li>
+          <li>✓ All Playbook field guides</li>
+          <li>✓ Live TradingView script access</li>
+          <li>✓ BKQ Journal — trade log &amp; analytics</li>
+          <li>✓ ~37% cheaper than monthly</li>
+        </ul>
+        <a href="#contact" style="display:block;text-align:center;background:var(--gold);color:#0a0d12;border-radius:6px;padding:11px;font-family:var(--mono);font-size:13px;font-weight:700;text-decoration:none;">SUBSCRIBE →</a>
+      </div>
+    </div>
+    <div class="term">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">plan.monthly</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em;margin-bottom:6px;">BILLED MONTHLY</div>
+        <div style="font-family:var(--mono);font-size:34px;font-weight:700;color:var(--text);">₹7,999<span style="font-size:14px;color:var(--muted);font-weight:400;">/mo</span></div>
+        <div style="font-size:12.5px;color:var(--muted-2);margin-bottom:16px;">Cancel any time, no lock-in</div>
+        <ul style="list-style:none;padding:0;margin:0 0 20px;font-size:13.5px;color:var(--muted);line-height:2;">
+          <li>✓ All 9 BKQ indicators</li>
+          <li>✓ All Playbook field guides</li>
+          <li>✓ Live TradingView script access</li>
+          <li>✓ BKQ Journal — trade log &amp; analytics</li>
+          <li>✓ Switch to annual any time</li>
+        </ul>
+        <a href="#contact" style="display:block;text-align:center;background:var(--panel-2);border:1px solid var(--line);color:var(--text);border-radius:6px;padding:11px;font-family:var(--mono);font-size:13px;font-weight:700;text-decoration:none;">SUBSCRIBE →</a>
+      </div>
+    </div>
+  </div>
+  <div class="section-sub" style="margin-top:16px;">Subscribe routes to the contact form for now — payment collection isn't wired up yet. Once live, this becomes a direct checkout.</div>
+
+  <div style="max-width:760px;margin-top:32px;">
+    <div class="term" style="border-color:var(--gold);">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">plan.mentorship — advanced traders only</span></div>
+      <div class="term-body">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;margin-bottom:10px;">
+          <div>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--gold-soft);letter-spacing:.08em;margin-bottom:6px;">1:1 MENTORSHIP &amp; QUARTERLY FEEDBACK</div>
+            <div style="font-family:var(--mono);font-size:30px;font-weight:700;color:var(--gold-soft);">₹1,99,999</div>
+            <div style="font-size:12.5px;color:var(--muted-2);">for 3 sessions, one per quarter</div>
+          </div>
+        </div>
+        <div style="font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:14px;">
+          For traders who already have a real track record — a minimum of <b style="color:var(--text);">6–9 months of logged trade data</b> going in, since these sessions are built around reviewing your actual execution, not teaching from scratch. Each session is a direct 1:1 review of your log against the BKQ framework: R:R discipline, session adherence, and specific, personalized feedback on what's actually costing you money.
+        </div>
+        <ul style="list-style:none;padding:0;margin:0 0 20px;font-size:13.5px;color:var(--muted);line-height:2;">
+          <li>✓ 3 sessions, one per quarter (roughly every 3 months)</li>
+          <li>✓ Direct 1:1 review of your own trade log</li>
+          <li>✓ Personalized feedback, not generic framework teaching</li>
+          <li>✓ Requires 6–9 months of existing trade log data to apply</li>
+        </ul>
+        <a href="#contact" style="display:block;text-align:center;background:var(--gold);color:#0a0d12;border-radius:6px;padding:11px;font-family:var(--mono);font-size:13px;font-weight:700;text-decoration:none;max-width:280px;">APPLY FOR MENTORSHIP →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -437,7 +514,7 @@
     <div>
       <p>BalakrishnaQuantum started as a personal trading system by Rahi C. — a way to bring session discipline and real reward-to-risk math to BTC perpetual futures trading, after realizing win rate was never the actual problem.</p>
       <p>Every indicator here started as a fix for a specific, documented mistake: fee drag, off-session losses, cutting winners early. The dashboard above is the same one used to trade every day — nothing on this site is a demo built for show.</p>
-      <p>The next builds in progress are a trade journal (setup-tagged to these exact frameworks) and a crypto-focused orderflow tool. Both are being built the same way everything else here was: used first, shipped second.</p>
+      <p>The trade journal (setup-tagged to these exact frameworks) and the crypto-focused orderflow tool are both live now — built the same way everything else here was: used first, shipped second.</p>
     </div>
   </div>
 </section>

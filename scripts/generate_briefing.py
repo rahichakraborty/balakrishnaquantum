@@ -43,11 +43,34 @@ def get_text(url, timeout=10):
 
 
 # ---------------- Market data ----------------
+COINGECKO_IDS = {
+    "BTCUSDT": "bitcoin", "ETHUSDT": "ethereum", "SOLUSDT": "solana", "PAXGUSDT": "pax-gold"
+}
+
 def fetch_binance_ticker(symbol):
     try:
         d = get_json(f"https://api.binance.com/api/v3/ticker/24hr?symbol={symbol}")
         return {"price": float(d["lastPrice"]), "change": float(d["priceChangePercent"])}
-    except Exception:
+    except Exception as e:
+        print(f"Binance fetch failed for {symbol} ({e}), trying CoinGecko fallback...")
+        return fetch_coingecko_ticker(symbol)
+
+
+def fetch_coingecko_ticker(symbol):
+    """Fallback for when Binance blocks/rate-limits the CI runner's IP (a known,
+    recurring issue — cloud/CI datacenter IP ranges are frequently rate-limited by
+    exchanges regardless of request volume)."""
+    coin_id = COINGECKO_IDS.get(symbol)
+    if not coin_id:
+        return None
+    try:
+        d = get_json(f"https://api.coingecko.com/api/v3/simple/price?ids={coin_id}&vs_currencies=usd&include_24hr_change=true")
+        entry = d.get(coin_id, {})
+        if "usd" not in entry:
+            return None
+        return {"price": float(entry["usd"]), "change": float(entry.get("usd_24h_change", 0))}
+    except Exception as e:
+        print(f"CoinGecko fallback also failed for {symbol} ({e})")
         return None
 
 
@@ -57,21 +80,38 @@ def fetch_btc_pivots():
         kl = get_json("https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=2")
         y = kl[0]
         h, l, c = float(y[2]), float(y[3]), float(y[4])
-        p = (h + l + c) / 3
-        r1, s1 = 2 * p - l, 2 * p - h
-        r2, s2 = p + (h - l), p - (h - l)
-        return {"p": p, "r1": r1, "r2": r2, "s1": s1, "s2": s2}
-    except Exception:
-        return None
+        return _calc_pivots(h, l, c)
+    except Exception as e:
+        print(f"Binance klines fetch failed ({e}), trying CoinGecko OHLC fallback...")
+        try:
+            ohlc = get_json("https://api.coingecko.com/api/v3/coins/bitcoin/ohlc?vs_currency=usd&days=2")
+            y = ohlc[-2] if len(ohlc) >= 2 else ohlc[-1]  # [timestamp, open, high, low, close]
+            h, l, c = float(y[2]), float(y[3]), float(y[4])
+            return _calc_pivots(h, l, c)
+        except Exception as e2:
+            print(f"CoinGecko OHLC fallback also failed ({e2})")
+            return None
+
+
+def _calc_pivots(h, l, c):
+    p = (h + l + c) / 3
+    r1, s1 = 2 * p - l, 2 * p - h
+    r2, s2 = p + (h - l), p - (h - l)
+    return {"p": p, "r1": r1, "r2": r2, "s1": s1, "s2": s2}
 
 
 def fetch_fear_greed():
     try:
-        d = get_json("https://api.alternative.me/fng/?limit=1")
-        v = d["data"][0]
+        d = get_json("https://pro-api.coinmarketcap.com/public-api/v3/fear-and-greed/latest")
+        v = d["data"]
         return {"value": int(v["value"]), "label": v["value_classification"]}
     except Exception:
-        return None
+        try:
+            d = get_json("https://api.alternative.me/fng/?limit=1")
+            v = d["data"][0]
+            return {"value": int(v["value"]), "label": v["value_classification"]}
+        except Exception:
+            return None
 
 
 def fetch_dxy():

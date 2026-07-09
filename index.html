@@ -130,7 +130,7 @@
   }
   @media(max-width:1000px){.grid{grid-template-columns:1fr;}}
   .stack{display:flex;flex-direction:column;gap:16px;}
-  #tv_chart_container{height:520px;}
+  #tv_chart_container{height:720px;}
   .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px;}
   @media(max-width:900px){.row3{grid-template-columns:1fr;}}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
@@ -164,6 +164,14 @@
   .feed-frame{width:100%;height:420px;border:none;border-radius:6px;background:var(--panel-2);}
   .feed-note{font-size:12px;color:var(--muted-2);margin-top:8px;line-height:1.5;}
   .feed-note code{background:var(--panel-2);padding:1px 5px;border-radius:4px;color:var(--gold-soft);}
+  .linkout-grid{display:flex;flex-direction:column;gap:8px;}
+  .linkout-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 14px;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;transition:border-color .15s;}
+  .linkout-item:hover{border-color:var(--gold);}
+  .linkout-item .name{font-family:var(--mono);font-size:13px;color:var(--text);}
+  .linkout-item .desc{font-size:11px;color:var(--muted-2);margin-top:2px;}
+  .linkout-item .go{font-family:var(--mono);font-size:11px;color:var(--gold-soft);white-space:nowrap;}
+  .linkout-cta{display:block;text-align:center;margin-top:10px;font-family:var(--mono);font-size:12px;color:var(--teal);border:1px solid var(--teal);border-radius:6px;padding:9px;}
+  .linkout-cta:hover{background:rgba(45,212,191,0.08);}
 
   /* ---------- Section shells ---------- */
   section{max-width:1400px;margin:0 auto;padding:64px 32px;}
@@ -331,28 +339,22 @@
       <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">feed.x — curated list</span></div>
       <div class="term-body">
         <!--
-          SETUP: Create a public X List of the accounts you follow for market news,
-          then replace YOUR_LIST_ID below with the numeric ID from your list's URL
-          (e.g. https://twitter.com/i/lists/1234567890123456789).
-          The widgets.js script at the bottom of this page renders it automatically — free, no API key.
+          X's embedded-timeline widget (widgets.js) is unreliable for List embeds — it intermittently
+          throws internally and never renders, with no clean way to detect/retry from our side.
+          Linking out directly is the reliable option instead of a flaky iframe.
         -->
-        <a class="twitter-timeline" data-theme="dark" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/i/lists/2074982525173370946?ref_src=twsrc%5Etfw">BKQ Watchlist</a>
-        <div class="feed-note">Live — <a href="https://twitter.com/i/lists/2074982525173370946" target="_blank" style="color:var(--gold-soft);border-bottom:1px solid var(--gold-soft);">BKQ Watchlist</a> on X. Add more accounts to the list any time — the feed updates automatically, no code changes needed.</div>
+        <div id="x-linkout"></div>
       </div>
     </div>
     <div class="term">
       <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">feed.telegram — news channels</span></div>
       <div class="term-body">
         <!--
-          SETUP: Replace CHANNEL_NAME with a public Telegram channel username (no @).
-          Add more iframes for additional channels, or stack a couple at reduced height.
+          Telegram's t.me/s/ preview pages send X-Frame-Options that blocks third-party iframing
+          in most browsers — the iframe approach fails silently (blank/broken box). Linking out
+          directly is the reliable option instead.
         -->
-        <iframe class="feed-frame" style="height:180px;" src="https://t.me/s/WatcherGuru" loading="lazy"></iframe>
-        <iframe class="feed-frame" style="height:180px;margin-top:10px;" src="https://t.me/s/ForexLive" loading="lazy"></iframe>
-        <iframe class="feed-frame" style="height:180px;margin-top:10px;" src="https://t.me/s/WhaleAlert" loading="lazy"></iframe>
-        <iframe class="feed-frame" style="height:180px;margin-top:10px;" src="https://t.me/s/tradingeconomics" loading="lazy"></iframe>
-        <iframe class="feed-frame" style="height:180px;margin-top:10px;" src="https://t.me/s/Cointelegraph" loading="lazy"></iframe>
-        <div class="feed-note">Live — WatcherGuru, ForexLive, WhaleAlert, TradingEconomics, and Cointelegraph, stacked in priority order. Reorder or trim by moving/deleting the iframe lines in the page source.</div>
+        <div id="tg-linkout"></div>
       </div>
     </div>
   </div>
@@ -426,6 +428,7 @@
         <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">whoami</span></div>
         <div class="term-body">
           <div class="stat-row"><span class="k">Name</span><span class="v">Balakrishna Quantum (BKQ)</span></div>
+          <div class="stat-row"><span class="k">Founder</span><span class="v">Rahi C.</span></div>
           <div class="stat-row"><span class="k">Base</span><span class="v">Bangalore, IN</span></div>
           <div class="stat-row"><span class="k">Session</span><span class="v">13:00–21:00 IST</span></div>
           <div class="stat-row"><span class="k">Focus</span><span class="v">BTC · Metals · US Index</span></div>
@@ -438,7 +441,7 @@
       </div>
     </div>
     <div>
-      <p>BalakrishnaQuantum started as a personal trading system — a way to bring session discipline and real reward-to-risk math to BTC perpetual futures trading, after realizing win rate was never the actual problem.</p>
+      <p>BalakrishnaQuantum started as a personal trading system by Rahi C. — a way to bring session discipline and real reward-to-risk math to BTC perpetual futures trading, after realizing win rate was never the actual problem.</p>
       <p>Every indicator here started as a fix for a specific, documented mistake: fee drag, off-session losses, cutting winners early. The dashboard above is the same one used to trade every day — nothing on this site is a demo built for show.</p>
       <p>The next builds in progress are a trade journal (setup-tagged to these exact frameworks) and a crypto-focused orderflow tool. Both are being built the same way everything else here was: used first, shipped second.</p>
     </div>
@@ -464,7 +467,7 @@
 <script>
 new TradingView.widget({
   "width": "100%",
-  "height": 520,
+  "height": 720,
   "symbol": "BINANCE:BTCUSDT",
   "interval": "60",
   "timezone": "Asia/Kolkata",
@@ -477,9 +480,9 @@ new TradingView.widget({
   "allow_symbol_change": true,
   "details": false,
   "watchlist": [
-    "TVC:DXY","TVC:US10Y",
-    "OANDA:SPX500USD","OANDA:NAS100USD","OANDA:US30USD","TVC:VIX",
-    "TVC:USOIL","OANDA:XAUUSD","OANDA:XAGUSD",
+    "AMEX:UUP","OANDA:USB10YUSD",
+    "OANDA:SPX500USD","OANDA:NAS100USD","OANDA:US30USD","AMEX:VIXY",
+    "OANDA:WTICOUSD","OANDA:XAUUSD","OANDA:XAGUSD",
     "CRYPTOCAP:BTC.D","CRYPTOCAP:USDT.D",
     "BINANCE:BTCUSDT","BINANCE:ETHUSDT","BINANCE:SOLUSDT",
     "NASDAQ:MSTR","NASDAQ:NVDA","NASDAQ:TSLA","NASDAQ:AAPL",
@@ -489,10 +492,41 @@ new TradingView.widget({
 });
 </script>
 
-<!-- X (Twitter) widget -->
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!-- (X timeline widget removed — unreliable for List embeds, replaced with direct links below) -->
 
 <script>
+/* ---------------- Social feed link-outs (reliable — no fragile embeds) ---------------- */
+const X_ACCOUNTS = [
+  {handle:'Whale_Alert', desc:'Large wallet moves, exchange in/outflows'},
+  {handle:'WatcherGuru', desc:'Fastest crypto/macro breaking news'},
+  {handle:'DeItaone', desc:'Fed/macro headlines, often first'},
+  {handle:'FirstSquawk', desc:'Fast macro/Fed headline feed'},
+  {handle:'Cointelegraph', desc:'Crypto news outlet'}
+];
+document.getElementById('x-linkout').innerHTML =
+  '<div class="linkout-grid">' +
+  X_ACCOUNTS.map(a => `<a class="linkout-item" href="https://twitter.com/${a.handle}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
+    <div><div class="name">@${a.handle}</div><div class="desc">${a.desc}</div></div>
+    <div class="go">Open →</div>
+  </a>`).join('') +
+  '</div>' +
+  '<a class="linkout-cta" href="https://twitter.com/i/lists/2074982525173370946" target="_blank" rel="noopener">View full BKQ Watchlist on X →</a>';
+
+const TG_CHANNELS = [
+  {name:'WatcherGuru', desc:'Fastest general crypto/macro breaking news'},
+  {name:'ForexLive', desc:'Fed/CPI/NFP macro headline breaks'},
+  {name:'WhaleAlert', desc:'Large transaction/liquidation-adjacent flow'},
+  {name:'tradingeconomics', desc:'Economic calendar — rates, inflation prints'},
+  {name:'Cointelegraph', desc:'Steady crypto-specific news feed'}
+];
+document.getElementById('tg-linkout').innerHTML =
+  '<div class="linkout-grid">' +
+  TG_CHANNELS.map(c => `<a class="linkout-item" href="https://t.me/${c.name}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
+    <div><div class="name">${c.name}</div><div class="desc">${c.desc}</div></div>
+    <div class="go">Open →</div>
+  </a>`).join('') +
+  '</div>';
+
 /* ---------------- Session clock ---------------- */
 function pad(n){return n.toString().padStart(2,'0');}
 function updateClock(){
@@ -533,7 +567,7 @@ setInterval(updateClock,1000); updateClock();
       {proName:'NASDAQ:TSLA', title:'TSLA'},
       {proName:'NASDAQ:MSTR', title:'MSTR'}
     ],
-    showSymbolLogo:true, isTransparent:true, displayMode:'adaptive', colorTheme:'dark', locale:'en'
+    showSymbolLogo:false, isTransparent:true, displayMode:'adaptive', colorTheme:'dark', locale:'en'
   });
   wrap.appendChild(s);
   host.appendChild(wrap);

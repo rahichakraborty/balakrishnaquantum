@@ -365,6 +365,61 @@ function setStatus(state, text){
   txt.textContent=text;
 }
 
+// ══════════════════════════════════════════════
+// REST POLLING FALLBACK — real market data, no WebSocket required.
+// Used when the WebSocket connects but never delivers trade data
+// (seen in practice on some networks) — polls Binance's REST API
+// directly for real trades and order book instead of falling to
+// simulated demo data.
+// ══════════════════════════════════════════════
+let lastAggTradeId = null;
+let restTradeTimer = null, restDepthTimer = null;
+
+async function pollTrades(){
+  try{
+    const url = lastAggTradeId
+      ? `https://fapi.binance.com/fapi/v1/aggTrades?symbol=${S.symbol}&fromId=${lastAggTradeId+1}&limit=1000`
+      : `https://fapi.binance.com/fapi/v1/aggTrades?symbol=${S.symbol}&limit=100`;
+    const res = await fetch(url);
+    if(!res.ok) throw new Error('rest trades failed');
+    const trades = await res.json();
+    if(Array.isArray(trades) && trades.length){
+      trades.forEach(t=>{
+        const p=parseFloat(t.p), q=parseFloat(t.q), isBuy=!t.m;
+        tick(p,q,isBuy,t.T);
+        lastAggTradeId = t.a;
+      });
+      document.getElementById('live-price').textContent = fmtP(parseFloat(trades[trades.length-1].p));
+    }
+    return true;
+  }catch(e){ return false; }
+}
+async function pollDepth(){
+  try{
+    const res = await fetch(`https://fapi.binance.com/fapi/v1/depth?symbol=${S.symbol}&limit=20`);
+    if(!res.ok) return;
+    const d = await res.json();
+    S.ob.asks = d.asks.map(a=>[+a[0],+a[1]]).slice(0,15);
+    S.ob.bids = d.bids.map(b=>[+b[0],+b[1]]).slice(0,15);
+    renderDOM();
+  }catch(e){}
+}
+function stopRestPolling(){
+  if(restTradeTimer){clearInterval(restTradeTimer);restTradeTimer=null;}
+  if(restDepthTimer){clearInterval(restDepthTimer);restDepthTimer=null;}
+}
+async function startRestPolling(){
+  const ok = await pollTrades();
+  if(!ok){ startDemo(); return; }
+  S.simMode=false;
+  setStatus('live','LIVE (REST)');
+  lastAggTradeId=null; // reset so next poll grabs a fresh recent window
+  stopRestPolling();
+  restTradeTimer = setInterval(pollTrades, 2000);
+  restDepthTimer = setInterval(pollDepth, 2000);
+  pollDepth();
+}
+
 function connect(){
   setStatus('','connecting…');
   const sym=S.symbol.toLowerCase();
@@ -372,7 +427,7 @@ function connect(){
   let opened=false, dataReceived=false;
   const tout=setTimeout(()=>{
     if(!opened){wsIdx++;wsRetries++;
-      if(wsRetries<WS_HOSTS.length*2)connect();else startDemo();}
+      if(wsRetries<WS_HOSTS.length*2)connect();else startRestPolling();}
   },4000);
   // Watchdog: the socket can report "open" successfully but then never actually
   // deliver trade data (seen in practice — connection succeeds, stream stays silent).
@@ -382,7 +437,7 @@ function connect(){
     if(opened&&!dataReceived){
       try{S.ws.close();}catch(e){}
       wsIdx++;wsRetries++;
-      if(wsRetries<WS_HOSTS.length*2)connect();else startDemo();
+      if(wsRetries<WS_HOSTS.length*2)connect();else startRestPolling();
     }
   },6000);
   try{
@@ -399,7 +454,7 @@ function connect(){
         tick(p,q,b,d.T);}catch(ex){}
     };
     S.ws.onerror=()=>{clearTimeout(tout);clearTimeout(dataWatchdog);if(!opened){wsIdx++;wsRetries++;
-      if(wsRetries<WS_HOSTS.length*2)connect();else startDemo();}};
+      if(wsRetries<WS_HOSTS.length*2)connect();else startRestPolling();}};
     S.ws.onclose=()=>{clearTimeout(dataWatchdog);if(!S.simMode){setStatus('','reconnecting…');
       setTimeout(()=>{wsIdx=0;wsRetries=0;connect();},3000);}};
     S.wsOB=new WebSocket(`${host}/ws/${sym}@depth20@100ms`);
@@ -409,7 +464,7 @@ function connect(){
         S.ob.bids=d.bids.map(b=>[+b[0],+b[1]]).slice(0,15);
         renderDOM();}catch(ex){}
     };
-  }catch(ex){clearTimeout(tout);clearTimeout(dataWatchdog);startDemo();}
+  }catch(ex){clearTimeout(tout);clearTimeout(dataWatchdog);startRestPolling();}
 }
 
 // ══════════════════════════════════════════════
@@ -418,6 +473,7 @@ function connect(){
 let demoP=60500,demoTrend=-0.02,demoInterval=null;
 function startDemo(){
   if(S.simMode)return;
+  stopRestPolling();
   S.simMode=true;
   setStatus('demo','DEMO MODE');
   // Set realistic starting price per symbol
@@ -710,6 +766,7 @@ function changeSymbol(sym){
   S.symbol=sym;S.simMode=false;wsIdx=0;wsRetries=0;
   S.candles=[];S.cur=null;S.cvdHist=[];S.cvd=0;
   if(demoInterval){clearInterval(demoInterval);demoInterval=null;}
+  stopRestPolling();lastAggTradeId=null;
   document.getElementById('live-price').textContent='---';
   connect();
 }

@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BalakrishnaQuantum — BKQ Trading Systems</title>
+<title>Balakrishna Quantum by Rahi | BKQ Trading Systems</title>
 <meta name="description" content="BKQ — indicators, live cockpit, and daily briefings. Built by a trader, used by a trader, every session.">
+<link rel="canonical" href="https://balakrishnaquantum.com/">
+<meta property="og:title" content="Balakrishna Quantum by Rahi | BKQ Trading Systems">
+<meta property="og:description" content="Indicators, live market cockpit, trade journal, and daily briefings — built by a trader, used by a trader, every session.">
+<meta property="og:url" content="https://balakrishnaquantum.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Balakrishna Quantum by Rahi | BKQ Trading Systems">
+<meta name="twitter:description" content="Indicators, live market cockpit, trade journal, and daily briefings — built by a trader, used by a trader, every session.">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -91,6 +100,7 @@
   .nav-links a:hover{color:var(--gold-soft);}
   .nav-links .soon{opacity:.4;cursor:default;}
   @media(max-width:860px){
+    .ticker-wrap{max-height:44px;overflow:hidden;}
     .nav-links{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);flex-direction:column;
       align-items:flex-start;padding:90px 32px 24px;gap:22px;display:none;overflow-y:auto;z-index:9999;}
     .nav-links.open{display:flex;}
@@ -704,15 +714,54 @@ setInterval(loadTelegramLive, 90000);
 /* ---------------- Mobile nav toggle ---------------- */
 const mobileBtn = document.getElementById('mobile-menu-btn');
 const navLinksEl = document.getElementById('nav-links');
+function openMobileMenu(){
+  document.body.style.overflow = 'hidden';
+  document.querySelectorAll('body > *').forEach(el=>{
+    if(el.id !== 'nav-links' && el.id !== 'mobile-menu-btn' && el.tagName !== 'NAV' && el.tagName !== 'SCRIPT'){
+      el.dataset.bkqPrevDisplay = el.style.display || '';
+      el.style.display = 'none';
+    }
+  });
+  navLinksEl.style.cssText = `
+    display:flex !important; flex-direction:column !important; align-items:flex-start !important;
+    position:fixed !important; top:0 !important; left:0 !important; right:0 !important; bottom:0 !important;
+    background:var(--bg) !important;
+    min-height:100vh !important; min-height:100dvh !important;
+    padding:100px 32px 24px !important; gap:26px !important; overflow-y:auto !important;
+    z-index:99999 !important; box-sizing:border-box !important;
+  `;
+  navLinksEl.querySelectorAll('a, span').forEach(el=>{
+    el.style.fontSize = '20px';
+    el.style.padding = '4px 0';
+  });
+  mobileBtn.textContent = '✕';
+  mobileBtn.style.cssText = 'display:flex !important; position:relative !important; z-index:100000 !important;';
+}
+function closeMobileMenu(){
+  document.body.style.overflow = '';
+  document.querySelectorAll('body > *').forEach(el=>{
+    if(el.dataset.bkqPrevDisplay !== undefined){
+      el.style.display = el.dataset.bkqPrevDisplay;
+      delete el.dataset.bkqPrevDisplay;
+    }
+  });
+  navLinksEl.removeAttribute('style');
+  navLinksEl.querySelectorAll('a, span').forEach(el=>{
+    el.style.fontSize = '';
+    el.style.padding = '';
+  });
+  mobileBtn.textContent = '☰';
+}
 if(mobileBtn && navLinksEl){
+  let menuOpen = false;
   mobileBtn.addEventListener('click', ()=>{
-    navLinksEl.classList.toggle('open');
-    mobileBtn.textContent = navLinksEl.classList.contains('open') ? '✕' : '☰';
+    menuOpen = !menuOpen;
+    if(menuOpen) openMobileMenu(); else closeMobileMenu();
   });
   navLinksEl.querySelectorAll('a').forEach(a=>{
     a.addEventListener('click', ()=>{
-      navLinksEl.classList.remove('open');
-      mobileBtn.textContent = '☰';
+      menuOpen = false;
+      closeMobileMenu();
     });
   });
 }
@@ -758,7 +807,7 @@ setInterval(updateClock,1000); updateClock();
       {proName:'NASDAQ:TSLA', title:'TSLA'},
       {proName:'NASDAQ:MSTR', title:'MSTR'}
     ],
-    showSymbolLogo:true, isTransparent:true, displayMode:'adaptive', colorTheme:'dark', locale:'en'
+    showSymbolLogo: window.innerWidth > 700, isTransparent:true, displayMode:'adaptive', colorTheme:'dark', locale:'en'
   });
   wrap.appendChild(s);
   host.appendChild(wrap);

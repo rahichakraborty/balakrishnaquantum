@@ -200,8 +200,8 @@
 <section>
   <h2>Wire — Crypto &amp; Global Markets</h2>
   <div class="newsgrid">
-    <div class="newscol"><h3>COINDESK — CRYPTO <span id="news-crypto-ts" style="color:var(--muted);font-weight:400;letter-spacing:0;"></span></h3><div id="news-crypto"><div class="cardstate">loading…</div></div></div>
-    <div class="newscol"><h3>MARKETWATCH — GLOBAL MARKETS <span id="news-global-ts" style="color:var(--muted);font-weight:400;letter-spacing:0;"></span></h3><div id="news-global"><div class="cardstate">loading…</div></div></div>
+    <div class="newscol"><h3>CRYPTO WIRE <span id="news-crypto-ts" style="color:var(--muted);font-weight:400;letter-spacing:0;"></span></h3><div id="news-crypto"><div class="cardstate">loading…</div></div></div>
+    <div class="newscol"><h3>GLOBAL MARKETS WIRE <span id="news-global-ts" style="color:var(--muted);font-weight:400;letter-spacing:0;"></span></h3><div id="news-global"><div class="cardstate">loading…</div></div></div>
   </div>
 </section>
 
@@ -446,11 +446,11 @@ function loadTV(){
       {proName:'OANDA:SPX500USD', title:'S&P 500'},
       {proName:'OANDA:NAS100USD', title:'NASDAQ 100'},
       {proName:'OANDA:US30USD', title:'DOW'},
-      {proName:'TVC:VIX', title:'VIX'},
+      {proName:'AMEX:VIXY', title:'VIX'},
       {proName:'TVC:GOLD', title:'GOLD'},
       {proName:'TVC:SILVER', title:'SILVER'},
       {proName:'TVC:USOIL', title:'WTI'},
-      {proName:'TVC:DXY', title:'DXY'},
+      {proName:'AMEX:UUP', title:'DXY'},
       {proName:'NASDAQ:SPCX', title:'SPCX'},
       {proName:'NASDAQ:NVDA', title:'NVDA'},
       {proName:'NASDAQ:TSLA', title:'TSLA'}
@@ -512,14 +512,14 @@ async function refreshAll(){
     ...COINS.map(loadCoin),
     loadDerivs(), loadGlobal(), loadFNG(), loadDXY(),
     loadNews('news-crypto',[
-      'https://www.coindesk.com/arc/outboundfeeds/rss/',
-      'https://cointelegraph.com/rss'
-    ],'https://www.coindesk.com'),
+      'https://cointelegraph.com/rss',
+      'https://www.coindesk.com/arc/outboundfeeds/rss/'
+    ],'https://cointelegraph.com'),
     loadNews('news-global',[
-      'http://feeds.marketwatch.com/marketwatch/topstories/',
       'https://www.investing.com/rss/news.rss',
+      'http://feeds.marketwatch.com/marketwatch/topstories/',
       'https://finance.yahoo.com/news/rssindex'
-    ],'https://www.marketwatch.com/markets')
+    ],'https://www.investing.com/news/')
   ]);
   const now = new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata'});
   $('lastupd').textContent = 'updated '+now+' IST';

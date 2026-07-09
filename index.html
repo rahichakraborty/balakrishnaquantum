@@ -148,23 +148,6 @@
   .stat-row .k{color:var(--muted);}
   .stat-row .v{font-family:var(--mono);font-weight:600;}
 
-  /* liquidation feed */
-  .liq-feed{height:190px;overflow-y:auto;font-family:var(--mono);font-size:12px;}
-  .liq-row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px dashed var(--line-soft);}
-  .liq-row.long{color:var(--red);}
-  .liq-row.short{color:var(--green);}
-  .liq-empty{color:var(--muted-2);font-size:12.5px;padding:12px 0;text-align:center;}
-
-  .liq-hist{display:flex;align-items:flex-end;gap:2px;height:70px;margin-top:10px;}
-  .liq-hist .bar{flex:1;background:var(--muted-2);border-radius:2px 2px 0 0;min-height:2px;}
-  .liq-hist .bar.long{background:var(--red);}
-  .liq-hist .bar.short{background:var(--green);}
-  .liq-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
-  .liq-stat{border:1px solid var(--line-soft);border-radius:6px;padding:8px 10px;background:var(--panel-2);}
-  .liq-stat-label{font-family:var(--mono);font-size:10px;color:var(--muted-2);letter-spacing:.08em;}
-  .liq-stat-val{font-family:var(--mono);font-size:13px;font-weight:600;margin-top:2px;}
-  .liq-stats-note{font-size:11px;color:var(--muted-2);margin:8px 0;line-height:1.5;}
-
   /* social feeds */
   .feed-frame{width:100%;height:420px;border:none;border-radius:6px;background:var(--panel-2);}
   .feed-note{font-size:12px;color:var(--muted-2);margin-top:8px;line-height:1.5;}
@@ -318,29 +301,14 @@
     </div>
   </div>
 
-  <!-- Liquidation heatmap + Max pain detail -->
-  <div class="row2">
-    <div class="term">
-      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">liquidations.live — binance forceOrder stream</span></div>
-      <div class="term-body">
-        <div class="liq-stats" id="liq-stats">
-          <div class="liq-stat"><div class="liq-stat-label">1H</div><div class="liq-stat-val" id="liq-1h">$0 · 0 events</div></div>
-          <div class="liq-stat"><div class="liq-stat-label">12H</div><div class="liq-stat-val" id="liq-12h">$0 · 0 events</div></div>
-          <div class="liq-stat"><div class="liq-stat-label">24H</div><div class="liq-stat-val" id="liq-24h">$0 · 0 events</div></div>
-        </div>
-        <div class="liq-stats-note">Rolling totals captured live since this dashboard tab was opened — not historical (no free API exposes true past 24h liquidation totals; that data is what Coinglass sells). Leave the tab open and these windows fill in for real.</div>
-        <div class="liq-hist" id="liq-hist"></div>
-        <div class="liq-feed" id="liq-feed"><div class="liq-empty">Connecting to live liquidation stream…</div></div>
-      </div>
-    </div>
-    <div class="term">
-      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">options.maxpain — deribit BTC</span></div>
-      <div class="term-body" id="maxpain-body">
-        <div class="stat-row"><span class="k">Nearest expiry</span><span class="v" id="mp-expiry">—</span></div>
-        <div class="stat-row"><span class="k">Max pain strike</span><span class="v" id="mp-strike">—</span></div>
-        <div class="stat-row"><span class="k">Spot vs. max pain</span><span class="v" id="mp-diff">—</span></div>
-        <div class="stat-row"><span class="k">Total OI (contracts)</span><span class="v" id="mp-oi">—</span></div>
-      </div>
+  <!-- Max pain detail -->
+  <div class="term" style="margin-bottom:16px;">
+    <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">options.maxpain — deribit BTC</span></div>
+    <div class="term-body" id="maxpain-body" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+      <div class="stat-row"><span class="k">Nearest expiry</span><span class="v" id="mp-expiry">—</span></div>
+      <div class="stat-row"><span class="k">Max pain strike</span><span class="v" id="mp-strike">—</span></div>
+      <div class="stat-row"><span class="k">Spot vs. max pain</span><span class="v" id="mp-diff">—</span></div>
+      <div class="stat-row"><span class="k">Total OI (contracts)</span><span class="v" id="mp-oi">—</span></div>
     </div>
   </div>
 
@@ -728,72 +696,6 @@ async function loadMaxPain(){
 }
 loadMaxPain(); setInterval(loadMaxPain, 600000);
 
-/* ---------------- Live liquidation stream (Binance forceOrder) ---------------- */
-const liqFeedEl = document.getElementById('liq-feed');
-const liqHistEl = document.getElementById('liq-hist');
-const LIQ_STORE_KEY = 'bkq_liq_events_v1';
-let liqEvents = [];
-try{
-  const saved = JSON.parse(localStorage.getItem(LIQ_STORE_KEY) || '[]');
-  const cutoff = Date.now() - 24*60*60*1000;
-  liqEvents = saved.filter(e => e.ts >= cutoff);
-}catch(e){ liqEvents = []; }
-
-function persistLiq(){
-  try{ localStorage.setItem(LIQ_STORE_KEY, JSON.stringify(liqEvents.slice(0,2000))); }catch(e){}
-}
-function renderLiqFeed(){
-  if(!liqEvents.length) return;
-  liqFeedEl.innerHTML = liqEvents.slice(0,40).map(e=>{
-    const side = e.side==='SELL' ? 'long':'short'; // a forced SELL liquidates a long position
-    const sign = side==='long' ? 'LIQ LONG' : 'LIQ SHORT';
-    return '<div class="liq-row '+side+'"><span>'+e.symbol+' · '+sign+'</span><span>$'+Math.round(e.value).toLocaleString()+'</span></div>';
-  }).join('');
-}
-function renderLiqHist(){
-  const buckets = liqEvents.slice(0,24).reverse();
-  liqHistEl.innerHTML = buckets.map(e=>{
-    const side = e.side==='SELL' ? 'long':'short';
-    const h = Math.min(70, Math.max(4, Math.log10(e.value+1)*10));
-    return '<div class="bar '+side+'" style="height:'+h+'px" title="$'+Math.round(e.value).toLocaleString()+'"></div>';
-  }).join('');
-}
-function renderLiqStats(){
-  const now = Date.now();
-  [['1h',1],['12h',12],['24h',24]].forEach(([id,hours])=>{
-    const cutoff = now - hours*60*60*1000;
-    const inWindow = liqEvents.filter(e => e.ts >= cutoff);
-    const total = inWindow.reduce((s,e)=>s+e.value,0);
-    const el = document.getElementById('liq-'+id);
-    if(el) el.textContent = '$'+Math.round(total).toLocaleString()+' · '+inWindow.length+' events';
-  });
-}
-renderLiqFeed(); renderLiqHist(); renderLiqStats();
-setInterval(renderLiqStats, 30000); // age windows out even with no new events
-try{
-  const ws = new WebSocket('wss://fstream.binance.com/ws/!forceOrder@arr');
-  const liqTimeout = setTimeout(()=>{
-    if(!liqEvents.length){
-      liqFeedEl.innerHTML = '<div class="liq-empty">No liquidations >$10k in the last few seconds — feed is live, just quiet. Leave this open; entries appear as they happen.</div>';
-    }
-  }, 15000);
-  ws.onmessage = (msg)=>{
-    clearTimeout(liqTimeout);
-    try{
-      const payload = JSON.parse(msg.data);
-      const o = payload.o;
-      if(!o) return;
-      const value = parseFloat(o.ap) * parseFloat(o.q);
-      liqEvents.unshift({symbol:o.s, side:o.S, value:value, ts:Date.now()});
-      const cutoff = Date.now() - 24*60*60*1000;
-      liqEvents = liqEvents.filter(e => e.ts >= cutoff).slice(0,2000);
-      renderLiqFeed(); renderLiqHist(); renderLiqStats(); persistLiq();
-    }catch(e){}
-  };
-  ws.onerror = ()=>{ liqFeedEl.innerHTML = '<div class="liq-empty">Live stream unavailable right now.</div>'; };
-}catch(e){
-  liqFeedEl.innerHTML = '<div class="liq-empty">WebSocket unsupported in this context.</div>';
-}
 </script>
 
 </body>

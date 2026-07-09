@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BKQ Orderflow — Balakrishna Quantum</title>
+<style>
+:root {
+  --bg0:#060608;--bg1:#0c0c10;--bg2:#111118;
+  --border:#1e1e2a;--border2:#2a2a38;
+  --text-dim:#3a3a50;--text-mid:#7a7a9a;--text-hi:#d8d8f0;--text-bright:#ffffff;
+  --green:#00e57a;--green-dim:rgba(0,229,122,0.13);
+  --red:#ff3a5c;--red-dim:rgba(255,58,92,0.13);
+  --amber:#ffb300;--blue:#4d8fff;
+  --font:'SF Mono','Fira Code','Cascadia Code','Courier New',monospace;
+  --xs:clamp(10px,1vw,12px);--sm:clamp(12px,1.2vw,14px);
+  --md:clamp(14px,1.4vw,17px);--lg:clamp(17px,1.8vw,22px);
+  --xl:clamp(22px,2.4vw,30px);--xxl:clamp(26px,3vw,40px);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;overflow:hidden;background:var(--bg0);}
+body{font-family:var(--font);color:var(--text-hi);}
+#app{display:grid;grid-template-rows:auto 1fr auto;grid-template-columns:1fr clamp(180px,17vw,240px);
+  width:100vw;height:100vh;gap:1px;background:var(--border);}
+
+/* TOP BAR */
+#topbar{grid-column:1/-1;background:var(--bg1);
+  padding:clamp(7px,0.9vh,12px) clamp(12px,1.4vw,20px);
+  display:flex;align-items:center;gap:clamp(8px,1vw,16px);
+  border-bottom:1px solid var(--border2);overflow:hidden;}
+.tb-logo{font-size:var(--xs);color:var(--text-dim);letter-spacing:3px;
+  border-right:1px solid var(--border2);padding-right:12px;white-space:nowrap;}
+.tb-logo span{color:var(--amber);}
+.sym-wrap{position:relative;display:flex;align-items:center;}
+#sym-select{background:var(--bg2);border:1px solid var(--border2);color:var(--text-bright);
+  font-family:var(--font);font-size:var(--md);font-weight:700;
+  padding:4px 26px 4px 10px;border-radius:4px;cursor:pointer;
+  -webkit-appearance:none;appearance:none;outline:none;min-width:150px;}
+#sym-select:hover{border-color:var(--amber);color:var(--amber);}
+.sym-arrow{position:absolute;right:8px;pointer-events:none;color:var(--amber);font-size:10px;}
+.tb-price{font-size:var(--xxl);font-weight:700;color:var(--green);
+  letter-spacing:2px;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.tb-badge{font-size:var(--sm);padding:3px 10px;border-radius:3px;font-weight:700;white-space:nowrap;}
+.up{background:var(--green-dim);color:var(--green);border:1px solid rgba(0,229,122,0.35);}
+.dn{background:var(--red-dim);color:var(--red);border:1px solid rgba(255,58,92,0.35);}
+.fl{background:#1a1a2a;color:var(--text-mid);border:1px solid var(--border2);}
+.tb-sep{width:1px;height:clamp(18px,2.5vh,30px);background:var(--border2);flex-shrink:0;}
+.tf-group{display:flex;gap:2px;}
+.tf-btn{padding:clamp(4px,0.5vh,7px) clamp(10px,1vw,14px);border:1px solid var(--border2);
+  background:transparent;color:var(--text-mid);cursor:pointer;border-radius:3px;
+  font-size:var(--sm);font-family:var(--font);transition:all 0.15s;}
+.tf-btn:hover{border-color:var(--blue);color:var(--blue);}
+.tf-btn.active{background:rgba(77,143,255,0.15);border-color:var(--blue);color:var(--blue);}
+.tb-clock{font-size:var(--sm);color:var(--text-hi);letter-spacing:1px;margin-left:auto;white-space:nowrap;}
+.status-group{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.sdot{width:9px;height:9px;border-radius:50%;background:var(--red);flex-shrink:0;}
+.sdot.live{background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s infinite;}
+.sdot.demo{background:var(--amber);box-shadow:0 0 6px var(--amber);}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+.stxt{font-size:var(--sm);color:var(--text-mid);letter-spacing:1px;white-space:nowrap;}
+
+/* CONNECTION STATUS BANNER */
+#conn-banner{
+  display:none;grid-column:1/-1;
+  background:#1a0a00;border-bottom:1px solid #3a2000;
+  padding:6px 16px;font-size:var(--xs);color:var(--amber);
+  display:flex;align-items:center;gap:12px;
+}
+#conn-banner.hidden{display:none;}
+
+/* MAIN PANEL */
+#main-panel{background:var(--bg0);display:flex;flex-direction:column;overflow:hidden;min-width:0;}
+#chart-label-row{display:flex;align-items:center;gap:clamp(6px,0.8vw,14px);
+  padding:clamp(5px,0.6vh,9px) clamp(10px,1.2vw,16px);
+  border-bottom:1px solid var(--border);background:var(--bg1);flex-shrink:0;}
+.clr-badge{font-size:var(--sm);color:var(--text-mid);letter-spacing:2px;white-space:nowrap;}
+.clr-badge span{color:var(--amber);}
+.clr-group{display:flex;flex-direction:column;gap:1px;}
+.clr-label{font-size:var(--xs);color:var(--text-dim);letter-spacing:1.5px;text-transform:uppercase;}
+.clr-val{font-size:var(--md);font-weight:700;white-space:nowrap;}
+#canvas-wrap{flex:1;position:relative;min-height:0;}
+#footprint-canvas{position:absolute;top:0;left:0;width:100%;height:100%;display:block;}
+#watermark{position:absolute;bottom:clamp(20px,3vh,40px);left:50%;transform:translateX(-50%);
+  font-size:clamp(20px,3vw,42px);font-weight:700;color:rgba(255,255,255,0.022);
+  letter-spacing:8px;pointer-events:none;user-select:none;white-space:nowrap;}
+
+/* CVD */
+#cvd-panel{height:clamp(80px,13vh,130px);background:var(--bg1);border-top:1px solid var(--border2);position:relative;flex-shrink:0;}
+#cvd-canvas{display:block;width:100%;height:100%;}
+.cvd-hdr{position:absolute;top:7px;left:12px;display:flex;align-items:center;gap:10px;z-index:2;pointer-events:none;}
+.cvd-title{font-size:var(--sm);color:var(--text-mid);letter-spacing:2px;}
+#cvd-value{font-size:var(--lg);font-weight:700;font-variant-numeric:tabular-nums;}
+.cvd-hint{font-size:var(--xs);color:var(--text-dim);}
+
+/* DOM */
+#dom-panel{grid-row:2/4;background:var(--bg1);border-left:1px solid var(--border2);display:flex;flex-direction:column;overflow:hidden;}
+#dom-header{padding:clamp(6px,0.8vh,10px) clamp(10px,1.2vw,14px);border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;flex-shrink:0;background:var(--bg2);}
+.dom-title{font-size:var(--sm);color:var(--text-hi);letter-spacing:2px;font-weight:700;}
+#dom-imb{font-size:var(--sm);font-weight:700;}
+#dom-asks{flex:1;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:0;}
+#dom-mid{padding:clamp(4px,0.5vh,7px) 10px;background:var(--bg0);text-align:center;
+  font-size:var(--lg);font-weight:700;color:var(--text-bright);
+  border-top:1px solid var(--red);border-bottom:1px solid var(--green);flex-shrink:0;
+  font-variant-numeric:tabular-nums;letter-spacing:1px;}
+#dom-bids{flex:1;overflow:hidden;display:flex;flex-direction:column;min-height:0;}
+.dom-row{display:flex;align-items:center;padding:clamp(1px,0.2vh,3px) clamp(8px,1vw,12px);position:relative;font-size:var(--xs);flex-shrink:0;}
+.dom-row .bar{position:absolute;top:0;bottom:0;left:0;opacity:0.2;}
+.dom-row .ask-bar{background:var(--red);}
+.dom-row .bid-bar{background:var(--green);}
+.dom-row .pc{width:clamp(60px,5.5vw,85px);z-index:1;font-variant-numeric:tabular-nums;}
+.dom-row .sc{flex:1;text-align:right;z-index:1;font-variant-numeric:tabular-nums;}
+.ask-row .pc{color:var(--red);}
+.bid-row .pc{color:var(--green);}
+.lask .sc{color:var(--red);font-weight:700;}
+.lbid .sc{color:var(--green);font-weight:700;}
+.wask{background:rgba(255,58,92,0.07);}
+.wbid{background:rgba(0,229,122,0.07);}
+
+/* HUD */
+#hud{grid-column:1/-1;background:var(--bg2);border-top:1px solid var(--border2);
+  padding:clamp(6px,0.8vh,11px) clamp(12px,1.4vw,20px);
+  display:flex;gap:clamp(10px,1.2vw,22px);align-items:center;overflow:hidden;}
+.hi{display:flex;flex-direction:column;gap:3px;flex-shrink:0;}
+.hl{font-size:var(--xs);color:var(--text-mid);letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;}
+.hv{font-size:var(--lg);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.hdiv{width:1px;height:clamp(28px,3.5vh,42px);background:var(--border2);flex-shrink:0;}
+.bull{color:var(--green);}.bear{color:var(--red);}.neutral{color:var(--text-mid);}.amb{color:var(--amber);}
+#signal-box{margin-left:auto;padding:clamp(5px,0.7vh,10px) clamp(12px,1.4vw,20px);
+  border-radius:4px;font-size:var(--md);font-weight:700;letter-spacing:2px;white-space:nowrap;flex-shrink:0;transition:all 0.3s;}
+.sig-short{background:rgba(255,58,92,0.18);color:var(--red);border:1px solid rgba(255,58,92,0.6);}
+.sig-long{background:rgba(0,229,122,0.18);color:var(--green);border:1px solid rgba(0,229,122,0.6);}
+.sig-neutral{background:rgba(106,106,136,0.1);color:var(--text-mid);border:1px solid var(--border2);}
+
+/* TOOLTIPS */
+[data-tip]{position:relative;}
+[data-tip]::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  background:#1a1a2e;color:var(--text-bright);font-size:11px;font-family:var(--font);
+  padding:7px 11px;border-radius:4px;border:1px solid var(--border2);white-space:pre-line;
+  pointer-events:none;z-index:999;opacity:0;transition:opacity 0.15s;
+  min-width:170px;max-width:270px;box-shadow:0 6px 24px rgba(0,0,0,0.7);line-height:1.6;}
+[data-tip]:hover::after{opacity:1;}
+#topbar [data-tip]::after{bottom:auto;top:calc(100% + 8px);}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+</style>
+</head>
+<body>
+<div id="app">
+
+<div id="topbar">
+  <a href="index.html" style="font-size:var(--xs);color:var(--blue);letter-spacing:2px;text-decoration:none;border:1px solid var(--border2);padding:4px 10px;border-radius:3px;white-space:nowrap;">← HOME</a>
+  <div class="tb-logo">BKQ <span>▲</span></div>
+  <div class="sym-wrap" data-tip="All Binance USDT-M Perps&#10;Populated live from exchange">
+    <select id="sym-select" onchange="changeSymbol(this.value)">
+      <option value="BTCUSDT">BTC / USDT PERP</option>
+    </select>
+    <span class="sym-arrow">▾</span>
+  </div>
+  <span class="tb-price" id="live-price" data-tip="Last traded price — live">---</span>
+  <span class="tb-badge fl" id="delta-badge" data-tip="Candle Delta = Buy Vol − Sell Vol">DELTA: ---</span>
+  <div class="tb-sep"></div>
+  <div class="tf-group" data-tip="Timeframe — use 5m for reading, 1m after entry">
+    <button class="tf-btn active" onclick="setTF(1)"  id="tf-1m">1m</button>
+    <button class="tf-btn"        onclick="setTF(5)"  id="tf-5m">5m</button>
+    <button class="tf-btn"        onclick="setTF(15)" id="tf-15m">15m</button>
+  </div>
+  <div class="tb-sep"></div>
+  <span class="tb-clock" id="session-label">-- IST</span>
+  <div class="status-group">
+    <div class="sdot" id="sdot"></div>
+    <span class="stxt" id="stxt">connecting…</span>
+  </div>
+</div>
+
+<div id="main-panel">
+  <div id="chart-label-row">
+    <span class="clr-badge">FOOTPRINT <span>ORDERFLOW</span></span>
+    <div class="tb-sep"></div>
+    <div class="clr-group" data-tip="Point of Control&#10;Highest-volume price in current candle&#10;Use as limit entry target">
+      <span class="clr-label">POC</span>
+      <span class="clr-val amb" id="poc-label">---</span>
+    </div>
+    <div class="tb-sep"></div>
+    <div class="clr-group" data-tip="Candle Imbalance&#10;+50%+ = buyers dominant&#10;−50%− = sellers dominant">
+      <span class="clr-label">IMBALANCE</span>
+      <span class="clr-val" id="chart-imb">---</span>
+    </div>
+    <div class="tb-sep"></div>
+    <div class="clr-group" data-tip="Book Pressure&#10;Bid vs Ask ratio in L2">
+      <span class="clr-label">BOOK PRES.</span>
+      <span class="clr-val" id="chart-book">---</span>
+    </div>
+    <span class="clr-badge neutral" id="candle-count" style="margin-left:auto;font-size:var(--xs)">0 candles</span>
+  </div>
+  <div id="canvas-wrap">
+    <canvas id="footprint-canvas"></canvas>
+    <div id="watermark">BALAKRISHNA QUANTUM</div>
+  </div>
+  <div id="cvd-panel">
+    <canvas id="cvd-canvas"></canvas>
+    <div class="cvd-hdr">
+      <span class="cvd-title" data-tip="Cumulative Volume Delta&#10;Falling CVD + rising price = BEARISH DIVERGENCE&#10;Primary BKQ short signal">CVD</span>
+      <span id="cvd-value" class="neutral">0</span>
+      <span class="cvd-hint">↑↓ trend</span>
+    </div>
+  </div>
+</div>
+
+<div id="dom-panel">
+  <div id="dom-header">
+    <span class="dom-title" data-tip="Level 2 Order Book&#10;Bar = relative size | 🐋 = whale">ORDER BOOK</span>
+    <span id="dom-imb" data-tip="Book Imbalance&#10;+ve = bid-heavy | −ve = ask-heavy">IMB: --</span>
+  </div>
+  <div id="dom-asks"></div>
+  <div id="dom-mid">---</div>
+  <div id="dom-bids"></div>
+</div>
+
+<div id="hud">
+  <div class="hi" data-tip="Aggressive market buys this candle">
+    <span class="hl">Buy Vol</span><span class="hv bull" id="hud-buy">--</span>
+  </div>
+  <div class="hdiv"></div>
+  <div class="hi" data-tip="Aggressive market sells this candle">
+    <span class="hl">Sell Vol</span><span class="hv bear" id="hud-sell">--</span>
+  </div>
+  <div class="hdiv"></div>
+  <div class="hi" data-tip="Net Delta: Buy − Sell for current candle">
+    <span class="hl">Net Delta</span><span class="hv" id="hud-delta">--</span>
+  </div>
+  <div class="hdiv"></div>
+  <div class="hi" data-tip="Cumulative Volume Delta since session start&#10;Falling CVD + rising price = short signal">
+    <span class="hl">CVD</span><span class="hv" id="hud-cvd">--</span>
+  </div>
+  <div class="hdiv"></div>
+  <div class="hi" data-tip="Buy vs sell ratio in current candle">
+    <span class="hl">Imbalance</span><span class="hv" id="hud-imb">--</span>
+  </div>
+  <div class="hdiv"></div>
+  <div class="hi" data-tip="Active session (IST)&#10;LONDON 13:00–18:00 | LDN-NY 18:00–22:00&#10;ASIA 02:00–13:00 → avoid">
+    <span class="hl">Session</span><span class="hv" id="hud-session">--</span>
+  </div>
+  <div class="hdiv"></div>
+  <div class="hi" data-tip="L2 bid vs ask ratio&#10;+ve = support | −ve = resistance">
+    <span class="hl">Book Pres.</span><span class="hv" id="hud-book">--</span>
+  </div>
+  <div id="signal-box" class="sig-neutral"
+       data-tip="BKQ Signal: CVD + Delta + Book aligned&#10;SHORT = all 3 bearish | LONG = all 3 bullish">NEUTRAL</div>
+</div>
+
+</div><!-- #app -->
+
+<script>
+// ══════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════
+const S = {
+  symbol:'BTCUSDT', tf:1,
+  candles:[], cur:null,
+  cvdHist:[], cvd:0,
+  ob:{asks:[],bids:[]},
+  ws:null, wsOB:null,
+  simMode:false, connected:false
+};
+const TF={1:60000,5:300000,15:900000};
+
+// ══════════════════════════════════════════════
+// SYMBOL LIST — hardcoded full Binance USDT-M list (300+ symbols)
+// Will attempt live fetch; falls back to this list instantly
+// ══════════════════════════════════════════════
+const SYMBOL_LIST = [
+  // TOP TIER
+  'BTCUSDT','ETHUSDT','SOLUSDT','XRPUSDT','BNBUSDT',
+  'DOGEUSDT','ADAUSDT','AVAXUSDT','DOTUSDT','LINKUSDT',
+  'LTCUSDT','ATOMUSDT','NEARUSDT','UNIUSDT','AAVEUSDT',
+  'MATICUSDT','FILUSDT','APTUSDT','ARBUSDT','OPUSDT',
+  'INJUSDT','SUIUSDT','SEIUSDT','TIAUSDT','STXUSDT',
+  'RUNEUSDT','WLDUSDT','FETUSDT','RENDERUSDT','JUPUSDT',
+  'WIFUSDT','BONKUSDT','PEPEUSDT','FLOKIUSDT','SHIBUSDT',
+  // LAYER 1 / LAYER 2
+  'TRXUSDT','XLMUSDT','ALGOUSDT','ICPUSDT','HBARUSDT',
+  'VETUSDT','EOSUSDT','NEOUSDT','XTZUSDT','ZECUSDT',
+  'DASHUSDT','ETCUSDT','BCHUSDT','XMRUSDT','EGLDUSDT',
+  'FLOWUSDT','THETAUSDT','FTMUSDT','ONTUSDT','ZILUSDT',
+  'IOTAUSDT','MINAUSDT','QNTUSDT','CFXUSDT','COREUSDT',
+  'KASUSDT','TONUSDT','MOVEUSDT','VIRTUALUSDT','POLUSDT',
+  // DEFI
+  'GMXUSDT','DYDXUSDT','SNXUSDT','COMPUSDT','MKRUSDT',
+  'CRVUSDT','YFIUSDT','BALUSDT','SUSHIUSDT','1INCHUSDT',
+  'LDOUSDT','RPLUSDT','STRKUSDT','EIGENUSDT','ENAUSDT',
+  'PENDLEUSDT','ETHFIUSDT','REZUSDT','BOMEUSDT','SAGAUSDT',
+  // GAMING / NFT / META
+  'AXSUSDT','SANDUSDT','MANAUSDT','ENJUSDT','GALAUSDT',
+  'IMXUSDT','YGGUSDT','SLPUSDT','ALICEUSDT','RAREUSDT',
+  'BEAMUSDT','PIXELUSDT','PORTOUSDT','LPTUSDT','RDNTUSDT',
+  // AI / DATA
+  'OCEANUSDT','AGIXUSDT','NMEROUSDT','CTXCUSDT','IOTXUSDT',
+  'AIUSDT','TAOУСДТ','АГИУСДТ','ARKMUSDT','XAIUSDT',
+  // EXCHANGE / CEX
+  'CKBUSDT','STMXUSDT','GTCUSDT','DNTUSDT','MTLUSDT',
+  // MEME
+  'DOGSUSDT','MEMEUSDT','BRETTUSDT','NEIROUSDT','MOODENGUSDT',
+  // INFRA / STORAGE
+  'ARUSDT','STORJUSDT','BLZUSDT','SCUSDT','HNTUSDT',
+  // MISC
+  'GALAUSDT','PENDLEUSDT','CYBERUSDT','ARKUSDT','POWRUSDT',
+  'LOOMUSDT','BNTUSDT','NMRUSDT','COTIUSDT','DENTUSDT',
+  'SPELLUSDT','WOOUSDT','LEVERUSDT','IDUSDT','TUSDT',
+  'HIGHUSDT','QTUMUSDT','WAVESUSDT','HOTUSDT','BANDUSDT',
+  'KAVAUSDT','ANKRUSDT','CELRUSDT','CHZUSDT','RVNUSDT',
+  'OGNUSDT','NKNUSDT','STPTUSDT','DGBUSDT','MDTUSDT',
+  'KEYUSDT','FTTUSDT','ROSEUSDT','DUSKUSDT','LITUSDT',
+  'UNFIUSDT','XEMUSDT','CTSIUSDT','TLMUSDT','KLAYUSDT',
+  'CVCUSDT','XVSUSDT','BAKEUSDT','OXTUSDT','C98USDT',
+];
+
+const MAJORS=['BTCUSDT','ETHUSDT','SOLUSDT','XRPUSDT','BNBUSDT','DOGEUSDT',
+  'ADAUSDT','AVAXUSDT','DOTUSDT','LINKUSDT','LTCUSDT','ATOMUSDT',
+  'NEARUSDT','UNIUSDT','AAVEUSDT','MATICUSDT','APTUSDT','ARBUSDT',
+  'OPUSDT','INJUSDT','SUIUSDT','WIFUSDT','PEPEUSDT','BONKUSDT'];
+
+function buildDropdown(syms){
+  const sel=document.getElementById('sym-select');
+  sel.innerHTML='';
+  const majInList=MAJORS.filter(s=>syms.includes(s));
+  const rest=syms.filter(s=>!MAJORS.includes(s)).sort();
+  const g1=document.createElement('optgroup');g1.label='── MAJORS ──';
+  majInList.forEach(s=>{const o=document.createElement('option');o.value=s;
+    o.textContent=s.replace('USDT',' / USDT PERP');if(s==='BTCUSDT')o.selected=true;g1.appendChild(o);});
+  sel.appendChild(g1);
+  if(rest.length){const g2=document.createElement('optgroup');g2.label='── ALL PERPS ──';
+    rest.forEach(s=>{const o=document.createElement('option');o.value=s;
+      o.textContent=s.replace('USDT',' / USDT PERP');g2.appendChild(o);});sel.appendChild(g2);}
+}
+
+async function loadSymbols(){
+  // Load hardcoded list immediately so dropdown is always ready
+  buildDropdown(SYMBOL_LIST);
+  // Then try to fetch live list in background
+  try{
+    const r=await fetch('https://fapi.binance.com/fapi/v1/exchangeInfo',{signal:AbortSignal.timeout(5000)});
+    if(r.ok){
+      const d=await r.json();
+      const live=d.symbols.filter(s=>s.contractType==='PERPETUAL'&&s.status==='TRADING'&&s.quoteAsset==='USDT').map(s=>s.symbol);
+      if(live.length>10)buildDropdown(live);
+    }
+  }catch(e){/* keep hardcoded list */}
+}
+
+// ══════════════════════════════════════════════
+// WEBSOCKET — 3 fallback endpoints
+// ══════════════════════════════════════════════
+const WS_HOSTS=[
+  'wss://fstream.binance.com',
+  'wss://stream.binancefuture.com',
+  'wss://fstream1.binance.com',
+];
+let wsIdx=0, wsRetries=0;
+
+function setStatus(state, text){
+  const dot=document.getElementById('sdot');
+  const txt=document.getElementById('stxt');
+  dot.className='sdot'+(state==='live'?' live':state==='demo'?' demo':'');
+  txt.textContent=text;
+}
+
+function connect(){
+  setStatus('','connecting…');
+  const sym=S.symbol.toLowerCase();
+  const host=WS_HOSTS[wsIdx%WS_HOSTS.length];
+  let opened=false;
+  const tout=setTimeout(()=>{
+    if(!opened){wsIdx++;wsRetries++;
+      if(wsRetries<WS_HOSTS.length*2)connect();else startDemo();}
+  },4000);
+  try{
+    if(S.ws){try{S.ws.close();}catch(e){}}
+    if(S.wsOB){try{S.wsOB.close();}catch(e){}}
+    S.ws=new WebSocket(`${host}/ws/${sym}@aggTrade`);
+    S.ws.onopen=()=>{clearTimeout(tout);opened=true;S.simMode=false;wsRetries=0;
+      setStatus('live','LIVE');};
+    S.ws.onmessage=(e)=>{
+      try{const d=JSON.parse(e.data);
+        const p=parseFloat(d.p),q=parseFloat(d.q),b=!d.m;
+        document.getElementById('live-price').textContent=fmtP(p);
+        tick(p,q,b,d.T);}catch(ex){}
+    };
+    S.ws.onerror=()=>{clearTimeout(tout);if(!opened){wsIdx++;wsRetries++;
+      if(wsRetries<WS_HOSTS.length*2)connect();else startDemo();}};
+    S.ws.onclose=()=>{if(!S.simMode){setStatus('','reconnecting…');
+      setTimeout(()=>{wsIdx=0;wsRetries=0;connect();},3000);}};
+    S.wsOB=new WebSocket(`${host}/ws/${sym}@depth20@100ms`);
+    S.wsOB.onmessage=(e)=>{
+      try{const d=JSON.parse(e.data);
+        S.ob.asks=d.asks.map(a=>[+a[0],+a[1]]).slice(0,15);
+        S.ob.bids=d.bids.map(b=>[+b[0],+b[1]]).slice(0,15);
+        renderDOM();}catch(ex){}
+    };
+  }catch(ex){clearTimeout(tout);startDemo();}
+}
+
+// ══════════════════════════════════════════════
+// DEMO MODE — realistic simulation
+// ══════════════════════════════════════════════
+let demoP=60500,demoTrend=-0.02,demoInterval=null;
+function startDemo(){
+  if(S.simMode)return;
+  S.simMode=true;
+  setStatus('demo','DEMO MODE');
+  // Set realistic starting price per symbol
+  const bases={BTCUSDT:60500,ETHUSDT:2850,SOLUSDT:142,XRPUSDT:0.48,BNBUSDT:580,
+    DOGEUSDT:0.12,ADAUSDT:0.38,AVAXUSDT:26,LINKUSDT:12,LTCUSDT:75};
+  demoP=bases[S.symbol]||100;
+  demoTrend=(Math.random()-0.52)*0.04;
+  if(demoInterval)clearInterval(demoInterval);
+  demoInterval=setInterval(()=>{
+    const volatility=demoP*0.0003;
+    demoP+=(Math.random()-0.5+demoTrend)*volatility*50;
+    demoP=Math.max(demoP*0.95,Math.min(demoP*1.05,demoP));
+    const q=Math.random()*0.8+0.01;
+    const b=Math.random()>(0.5-demoTrend*3);
+    document.getElementById('live-price').textContent=fmtP(demoP);
+    tick(demoP,q,b,Date.now());
+    demoOrderbook();
+    if(Math.random()<0.006)demoTrend*=-1;
+  },150);
+}
+
+function demoOrderbook(){
+  const m=demoP,asks=[],bids=[];
+  const spread=m*0.00015;
+  for(let i=0;i<15;i++){
+    asks.push([m+spread+(i+1)*spread*2+Math.random()*spread, Math.random()*4+0.05]);
+    bids.push([m-spread-(i+1)*spread*2-Math.random()*spread, Math.random()*4+0.05]);
+  }
+  if(Math.random()<0.07)asks[Math.floor(Math.random()*4)][1]=Math.random()*18+10;
+  if(Math.random()<0.07)bids[Math.floor(Math.random()*4)][1]=Math.random()*18+10;
+  S.ob.asks=asks;S.ob.bids=bids;renderDOM();
+}
+
+// ══════════════════════════════════════════════
+// TRADE / CANDLE PROCESSING
+// ══════════════════════════════════════════════
+function cs(ts){return Math.floor(ts/TF[S.tf])*TF[S.tf];}
+function newC(ts,p){return{t:cs(ts),o:p,h:p,l:p,c:p,bv:0,sv:0,d:0,lvls:{},n:0};}
+
+function tick(p,q,isBuy,ts){
+  const t=cs(ts);
+  if(!S.cur||S.cur.t!==t){
+    if(S.cur){S.candles.push({...S.cur});if(S.candles.length>50)S.candles.shift();}
+    S.cur=newC(ts,p);
+  }
+  const c=S.cur;
+  c.c=p;c.h=Math.max(c.h,p);c.l=Math.min(c.l,p);
+  if(isBuy){c.bv+=q;c.d+=q;S.cvd+=q;}else{c.sv+=q;c.d-=q;S.cvd-=q;}
+  // tick size adaptive to price
+  const tk=p<0.001?0.000001:p<0.01?0.00001:p<0.1?0.0001:p<1?0.001:
+            p<10?0.01:p<100?0.1:p<500?0.5:p<2000?1:p<10000?5:p<30000?10:p<60000?25:50;
+  const lv=Math.round(p/tk)*tk;
+  if(!c.lvls[lv])c.lvls[lv]={b:0,s:0};
+  if(isBuy)c.lvls[lv].b+=q;else c.lvls[lv].s+=q;
+  c.n++;
+  S.cvdHist.push({t:ts,v:S.cvd});
+  if(S.cvdHist.length>800)S.cvdHist.shift();
+  updateHUD();drawFP();drawCVD();
+}
+
+// ══════════════════════════════════════════════
+// DOM RENDER
+// ══════════════════════════════════════════════
+function renderDOM(){
+  const ob=S.ob;
+  if(!ob.asks.length||!ob.bids.length)return;
+  const all=[...ob.asks.map(a=>a[1]),...ob.bids.map(b=>b[1])];
+  const mx=Math.max(...all);
+  const tA=ob.asks.reduce((s,a)=>s+a[1],0);
+  const tB=ob.bids.reduce((s,b)=>s+b[1],0);
+  const imb=tA+tB>0?((tB-tA)/(tA+tB)*100).toFixed(0):0;
+  const ie=document.getElementById('dom-imb');
+  ie.textContent=`IMB: ${imb>0?'+':''}${imb}%`;
+  ie.style.color=imb>10?'var(--green)':imb<-10?'var(--red)':'var(--text-mid)';
+  if(ob.bids[0])document.getElementById('dom-mid').textContent=fmtP(ob.bids[0][0]);
+  const wt=mx*0.35;
+  const row=(p,s,t)=>{
+    const w=(s/mx*100).toFixed(1),wh=s>wt;
+    return `<div class="dom-row ${t}-row${wh?' w'+t+' l'+t:''}">
+      <div class="bar ${t}-bar" style="width:${w}%"></div>
+      <span class="pc">${fmtP(p)}</span>
+      <span class="sc">${s.toFixed(3)}${wh?' 🐋':''}</span></div>`;
+  };
+  document.getElementById('dom-asks').innerHTML=[...ob.asks].reverse().map(([p,s])=>row(p,s,'ask')).join('');
+  document.getElementById('dom-bids').innerHTML=ob.bids.map(([p,s])=>row(p,s,'bid')).join('');
+}
+
+// ══════════════════════════════════════════════
+// FORMAT
+// ══════════════════════════════════════════════
+function fmtP(p){
+  if(!p||isNaN(p))return '---';
+  if(p<0.0001)return p.toFixed(8);
+  if(p<0.01)return p.toFixed(6);
+  if(p<1)return p.toFixed(4);
+  if(p<100)return p.toFixed(3);
+  if(p<10000)return p.toFixed(2);
+  return p.toLocaleString('en-US',{minimumFractionDigits:1,maximumFractionDigits:1});
+}
+function fmtV(v){
+  const a=Math.abs(v);
+  if(a>=1e6)return(v/1e6).toFixed(2)+'M';
+  if(a>=1000)return(v/1000).toFixed(2)+'K';
+  return v.toFixed(3);
+}
+
+// ══════════════════════════════════════════════
+// HUD
+// ══════════════════════════════════════════════
+function poc(c){
+  if(!c?.lvls)return null;
+  let mx=0,p=null;
+  Object.entries(c.lvls).forEach(([pr,v])=>{const vol=v.b+v.s;if(vol>mx){mx=vol;p=+pr;}});
+  return p;
+}
+
+function updateHUD(){
+  const c=S.cur;if(!c)return;
+  const d=c.d,cv=S.cvd,tot=c.bv+c.sv;
+  const ip=tot>0?((c.bv-c.sv)/tot*100).toFixed(1):0;
+  const tA=S.ob.asks.reduce((s,a)=>s+a[1],0);
+  const tB=S.ob.bids.reduce((s,b)=>s+b[1],0);
+  const bi=tA+tB>0?(tB-tA)/(tA+tB):0;
+
+  document.getElementById('hud-buy').textContent=fmtV(c.bv);
+  document.getElementById('hud-sell').textContent=fmtV(c.sv);
+  const de=document.getElementById('hud-delta');
+  de.textContent=(d>=0?'+':'')+fmtV(d);de.className='hv '+(d>0?'bull':d<0?'bear':'neutral');
+  const ce=document.getElementById('hud-cvd');
+  ce.textContent=(cv>=0?'+':'')+fmtV(cv);ce.className='hv '+(cv>0?'bull':cv<0?'bear':'neutral');
+  document.getElementById('cvd-value').textContent=(cv>=0?'+':'')+fmtV(cv);
+  document.getElementById('cvd-value').className=cv>0?'bull':cv<0?'bear':'neutral';
+  const ie=document.getElementById('hud-imb');
+  ie.textContent=(ip>0?'+':'')+ip+'%';ie.className='hv '+(ip>15?'bull':ip<-15?'bear':'neutral');
+  const be=document.getElementById('hud-book');
+  be.textContent=(bi>=0?'+':'')+(bi*100).toFixed(1)+'%';be.className='hv '+(bi>0.08?'bull':bi<-0.08?'bear':'neutral');
+  document.getElementById('delta-badge').textContent=`DELTA: ${d>=0?'+':''}${fmtV(d)}`;
+  document.getElementById('delta-badge').className='tb-badge '+(d>0?'up':d<0?'dn':'fl');
+  // Chart row
+  const p=poc(c);
+  document.getElementById('poc-label').textContent=p?fmtP(p):'---';
+  const ci=document.getElementById('chart-imb');
+  ci.textContent=(ip>0?'+':'')+ip+'%';ci.className='clr-val '+(ip>15?'bull':ip<-15?'bear':'neutral');
+  const cb=document.getElementById('chart-book');
+  cb.textContent=(bi>=0?'+':'')+(bi*100).toFixed(1)+'%';cb.className='clr-val '+(bi>0.08?'bull':bi<-0.08?'bear':'neutral');
+  document.getElementById('candle-count').textContent=`${S.candles.length+1} candles`;
+  // Signal
+  const sig=document.getElementById('signal-box');
+  const ss=cv<0&&d<0&&bi<-0.08,sl=cv>0&&d>0&&bi>0.08;
+  const sss=cv<-0.5&&d<0&&bi<-0.15&&ip<-20,ssl=cv>0.5&&d>0&&bi>0.15&&ip>20;
+  if(sss){sig.className='sig-short';sig.textContent='⬇  STRONG SHORT';}
+  else if(ss){sig.className='sig-short';sig.textContent='⬇  SHORT BIAS';}
+  else if(ssl){sig.className='sig-long';sig.textContent='⬆  STRONG LONG';}
+  else if(sl){sig.className='sig-long';sig.textContent='⬆  LONG BIAS';}
+  else{sig.className='sig-neutral';sig.textContent='NEUTRAL';}
+  // Clock
+  const now=new Date();
+  const ist=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Kolkata'}));
+  const h=ist.getHours(),m=ist.getMinutes(),se=ist.getSeconds();
+  document.getElementById('session-label').textContent=
+    `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(se).padStart(2,'0')} IST`;
+  let sess='ASIA',sc='neutral';
+  if(h>=13&&h<18){sess='LONDON';sc='bull';}
+  else if(h>=18&&h<22){sess='LDN-NY';sc='bull';}
+  else if(h>=22||h<2){sess='NY';sc='neutral';}
+  const se2=document.getElementById('hud-session');
+  se2.textContent=sess;se2.className='hv '+sc;
+}
+
+// ══════════════════════════════════════════════
+// FOOTPRINT CANVAS
+// ══════════════════════════════════════════════
+function drawFP(){
+  const cv=document.getElementById('footprint-canvas');
+  const wr=document.getElementById('canvas-wrap');
+  const W=wr.clientWidth,H=wr.clientHeight;
+  if(!W||!H)return;
+  cv.width=W;cv.height=H;
+  const ctx=cv.getContext('2d');
+  ctx.fillStyle='#060608';ctx.fillRect(0,0,W,H);
+  const all=S.candles.slice(-28).concat(S.cur?[S.cur]:[]);
+  if(!all.length)return;
+  const ps=all.flatMap(c=>[c.h,c.l]).filter(Boolean);
+  if(!ps.length)return;
+  const pMn=Math.min(...ps),pMx=Math.max(...ps);
+  const pad=Math.max(50,(pMx-pMn)*0.08)||50;
+  const mn=pMn-pad,mx=pMx+pad,rng=mx-mn||1;
+  const rP=72;
+  const pY=p=>H-((p-mn)/rng)*H;
+  // Grid
+  const p0=ps[0];
+  const gs=p0<0.001?0.00001:p0<0.01?0.0001:p0<0.1?0.001:p0<1?0.01:
+            p0<10?0.1:p0<100?1:p0<500?5:p0<2000?10:p0<10000?50:p0<30000?200:500;
+  ctx.setLineDash([2,7]);ctx.strokeStyle='rgba(30,30,42,0.9)';ctx.lineWidth=1;
+  ctx.font=`${Math.max(9,Math.min(11,W*0.009))}px SF Mono,Fira Code,Courier New,monospace`;
+  ctx.textAlign='right';
+  for(let p=Math.ceil(mn/gs)*gs;p<mx;p+=gs){
+    const y=pY(p);if(y<0||y>H)continue;
+    ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W-rP,y);ctx.stroke();
+    ctx.fillStyle='#3a3a58';ctx.fillText(fmtP(p),W-4,y-2);
+  }
+  ctx.setLineDash([]);
+  const cW=Math.max(Math.floor((W-rP-10)/all.length)-3,18);
+  const fS=Math.max(7,Math.min(11,cW*0.23));
+  all.forEach((c,i)=>{
+    const x=8+i*(cW+3);
+    const g=c.c>=c.o;
+    const col=g?'#00e57a':'#ff3a5c';
+    const colD=g?'rgba(0,229,122,0.13)':'rgba(255,58,92,0.13)';
+    const bT=pY(Math.max(c.o,c.c)),bB=pY(Math.min(c.o,c.c));
+    const bH=Math.max(bB-bT,2),cx=x+cW/2;
+    ctx.strokeStyle=col;ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(cx,pY(c.h));ctx.lineTo(cx,pY(c.l));ctx.stroke();
+    ctx.fillStyle=colD;ctx.fillRect(x,bT,cW,bH);
+    ctx.strokeStyle=col;ctx.lineWidth=1.2;ctx.strokeRect(x,bT,cW,bH);
+    if(cW>22){
+      const lvls=Object.entries(c.lvls||{}).map(([p,v])=>[+p,v]).sort((a,b)=>b[0]-a[0]);
+      lvls.forEach(([p,v])=>{
+        const ly=pY(p);if(ly<bT-2||ly>bB+2)return;
+        const tot=v.b+v.s;if(!tot)return;
+        const br=v.b/tot;
+        if(Math.abs(br-0.5)>0.275&&tot>0.001){
+          ctx.fillStyle=br>0.5?'rgba(0,229,122,0.22)':'rgba(255,58,92,0.22)';
+          ctx.fillRect(x+1,ly-4,cW-2,8);
+        }
+        if(cW>30&&fS>=7){
+          const dv=v.b-v.s;
+          ctx.font=`${fS}px SF Mono,Fira Code,Courier New,monospace`;
+          ctx.textAlign='left';
+          ctx.fillStyle=v.b>v.s?'#00aa5a':'#cc2244';
+          ctx.fillText((dv>=0?'+':'')+dv.toFixed(2),x+2,ly+3);
+        }
+      });
+    }
+    ctx.font=`bold ${fS+1}px SF Mono,Fira Code,Courier New,monospace`;
+    ctx.textAlign='left';ctx.fillStyle=c.d>=0?'#00e57a':'#ff3a5c';
+    ctx.fillText((c.d>=0?'+':'')+fmtV(c.d),x,Math.min(bB+14,H-4));
+  });
+  const p=poc(S.cur);
+  if(p){const py=pY(p);
+    ctx.strokeStyle='#ffb300';ctx.setLineDash([4,4]);ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(0,py);ctx.lineTo(W-rP,py);ctx.stroke();
+    ctx.setLineDash([]);ctx.fillStyle='#ffb300';
+    ctx.font=`bold ${Math.max(9,fS+1)}px SF Mono,Fira Code,Courier New,monospace`;
+    ctx.textAlign='left';ctx.fillText('◆ POC',W-rP+4,py-2);}
+}
+
+// ══════════════════════════════════════════════
+// CVD CANVAS
+// ══════════════════════════════════════════════
+function drawCVD(){
+  const cv=document.getElementById('cvd-canvas');
+  const pn=document.getElementById('cvd-panel');
+  const W=pn.clientWidth,H=pn.clientHeight;
+  if(!W||!H)return;
+  cv.width=W;cv.height=H;
+  const ctx=cv.getContext('2d');
+  ctx.fillStyle='#0c0c10';ctx.fillRect(0,0,W,H);
+  const data=S.cvdHist.slice(-500);if(data.length<2)return;
+  const vals=data.map(d=>d.v);
+  const mn=Math.min(...vals),mx=Math.max(...vals),rng=mx-mn||1;
+  const pad=18;
+  const vY=v=>H-pad-((v-mn)/rng)*(H-pad*2);
+  ctx.strokeStyle='rgba(106,106,136,0.35)';ctx.lineWidth=1;ctx.setLineDash([2,5]);
+  ctx.beginPath();ctx.moveTo(0,vY(0));ctx.lineTo(W,vY(0));ctx.stroke();ctx.setLineDash([]);
+  const lv=data[data.length-1].v;
+  const lc=lv>0?'#00e57a':'#ff3a5c';
+  const fc=lv>0?'rgba(0,229,122,0.08)':'rgba(255,58,92,0.08)';
+  const st=(W-4)/(data.length-1);
+  ctx.beginPath();const z=vY(0);
+  data.forEach((d,i)=>{const x=2+i*st;if(i===0)ctx.moveTo(x,z);ctx.lineTo(x,vY(d.v));});
+  ctx.lineTo(2+(data.length-1)*st,z);ctx.closePath();ctx.fillStyle=fc;ctx.fill();
+  ctx.beginPath();
+  data.forEach((d,i)=>{const x=2+i*st;i===0?ctx.moveTo(x,vY(d.v)):ctx.lineTo(x,vY(d.v));});
+  ctx.strokeStyle=lc;ctx.lineWidth=1.5;ctx.stroke();
+  ctx.font='9px SF Mono,Fira Code,Courier New,monospace';
+  ctx.fillStyle='#3a3a58';ctx.textAlign='right';
+  ctx.fillText(fmtV(mx),W-4,pad);ctx.fillText(fmtV(mn),W-4,H-4);
+}
+
+// ══════════════════════════════════════════════
+// CONTROLS
+// ══════════════════════════════════════════════
+function setTF(tf){
+  S.tf=tf;[1,5,15].forEach(t=>document.getElementById('tf-'+t+'m').classList.toggle('active',t===tf));
+  S.candles=[];S.cur=null;S.cvdHist=[];S.cvd=0;drawFP();drawCVD();
+}
+
+function changeSymbol(sym){
+  S.symbol=sym;S.simMode=false;wsIdx=0;wsRetries=0;
+  S.candles=[];S.cur=null;S.cvdHist=[];S.cvd=0;
+  if(demoInterval){clearInterval(demoInterval);demoInterval=null;}
+  document.getElementById('live-price').textContent='---';
+  connect();
+}
+
+window.addEventListener('resize',()=>{drawFP();drawCVD();});
+setInterval(()=>{updateHUD();drawFP();drawCVD();},1000);
+
+// ── INIT ──
+loadSymbols();
+connect();
+</script>
+</body>
+</html>

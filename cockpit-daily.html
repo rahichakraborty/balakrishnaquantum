@@ -181,8 +181,8 @@
 <section>
   <h2>Wire — Crypto &amp; Global Markets</h2>
   <div class="newsgrid">
-    <div class="newscol"><h3>COINDESK</h3><div id="news-crypto"><div class="cardstate">loading…</div></div></div>
-    <div class="newscol"><h3>MARKETWATCH — GLOBAL MARKETS</h3><div id="news-global"><div class="cardstate">loading…</div></div></div>
+    <div class="newscol"><h3>CRYPTO WIRE <span id="news-crypto-ts" style="color:var(--dim);font-weight:400;letter-spacing:0;"></span></h3><div id="news-crypto"><div class="cardstate">loading…</div></div></div>
+    <div class="newscol"><h3>GLOBAL MARKETS WIRE <span id="news-global-ts" style="color:var(--dim);font-weight:400;letter-spacing:0;"></span></h3><div id="news-global"><div class="cardstate">loading…</div></div></div>
   </div>
 </section>
 
@@ -202,7 +202,7 @@ const COINS = [
 ];
 const SPOT_HOSTS = ['https://data-api.binance.vision','https://api.binance.com'];
 const FAPI = 'https://fapi.binance.com';
-const REFRESH_MS = 5*60*1000;
+const REFRESH_MS = 90*1000;
 
 /* ═══════════════ HELPERS ═══════════════ */
 const $ = id => document.getElementById(id);
@@ -355,18 +355,37 @@ async function loadDXY(){
 }
 
 /* ═══════════════ NEWS ═══════════════ */
-async function loadNews(id, rss, fallback){
+async function loadNews(id, rssList, fallback){
   const el = $(id);
-  try{
-    const d = await getJSON('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rss));
-    if(!d.items || !d.items.length) throw new Error('empty');
-    el.innerHTML = d.items.slice(0,8).map(i=>{
-      const when = i.pubDate ? new Date(i.pubDate).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'}) : '';
-      return `<div class="newsitem"><a href="${i.link}" target="_blank" rel="noopener">${i.title}</a><div class="when">${when} IST</div></div>`;
-    }).join('');
-  }catch(e){
-    el.innerHTML = `<div class="cardstate">feed unavailable right now — <a href="${fallback}" target="_blank" rel="noopener">open source directly →</a></div>`;
+  const tsEl = document.getElementById(id+'-ts');
+  const sources = Array.isArray(rssList) ? rssList : [rssList];
+  for(const rss of sources){
+    try{
+      const res = await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(rss), {signal:AbortSignal.timeout(8000)});
+      if(!res.ok) continue;
+      const xmlText = await res.text();
+      const doc = new DOMParser().parseFromString(xmlText, 'text/xml');
+      if(doc.querySelector('parsererror')) continue;
+      const items = Array.from(doc.querySelectorAll('item')).slice(0,8);
+      if(!items.length) continue;
+      el.innerHTML = items.map(it=>{
+        const title = it.querySelector('title')?.textContent || '';
+        const link = it.querySelector('link')?.textContent || '#';
+        const pubDate = it.querySelector('pubDate')?.textContent;
+        const when = pubDate ? new Date(pubDate).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'}) : '';
+        return `<div class="newsitem"><a href="${link}" target="_blank" rel="noopener">${title}</a><div class="when">${when} IST</div></div>`;
+      }).join('');
+      if(tsEl){
+        const firstPub = items[0].querySelector('pubDate')?.textContent;
+        const latest = firstPub ? new Date(firstPub) : null;
+        const fetchedAt = new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'});
+        tsEl.textContent = latest ? `· latest ${latest.toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'})} IST · checked ${fetchedAt}` : `· checked ${fetchedAt} IST`;
+      }
+      return;
+    }catch(e){ /* try next source */ }
   }
+  el.innerHTML = `<div class="cardstate">feed unavailable right now — <a href="${fallback}" target="_blank" rel="noopener">open source directly →</a></div>`;
+  if(tsEl) tsEl.textContent = '';
 }
 
 /* ═══════════════ TRADINGVIEW EMBEDS ═══════════════ */
@@ -440,8 +459,16 @@ async function refreshAll(){
   await Promise.allSettled([
     ...COINS.map(loadCoin),
     loadFunding(), loadGlobal(), loadFNG(), loadDXY(),
-    loadNews('news-crypto','https://www.coindesk.com/arc/outboundfeeds/rss/','https://www.coindesk.com'),
-    loadNews('news-global','http://feeds.marketwatch.com/marketwatch/topstories/','https://www.marketwatch.com/markets')
+    loadNews('news-crypto',[
+      'https://cointelegraph.com/rss',
+      'https://cryptopanic.com/news/rss/',
+      'https://www.coindesk.com/arc/outboundfeeds/rss/'
+    ],'https://cointelegraph.com'),
+    loadNews('news-global',[
+      'https://www.investing.com/rss/news.rss',
+      'http://feeds.marketwatch.com/marketwatch/topstories/',
+      'https://finance.yahoo.com/news/rssindex'
+    ],'https://www.investing.com/news/')
   ]);
   const now = new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata'});
   $('lastupd').textContent = 'updated '+now+' IST';

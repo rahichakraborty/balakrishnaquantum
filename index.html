@@ -106,7 +106,6 @@
   .nav-links a:hover{color:var(--gold-soft);}
   .nav-links .soon{opacity:.4;cursor:default;}
   @media(max-width:860px){
-    .ticker-wrap{max-height:44px;overflow:hidden;}
     .nav-links{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);flex-direction:column;
       align-items:flex-start;padding:90px 32px 24px;gap:22px;display:none;overflow-y:auto;z-index:9999;}
     .nav-links.open{display:flex;}
@@ -813,7 +812,7 @@ setInterval(updateClock,1000); updateClock();
       {proName:'NASDAQ:TSLA', title:'TSLA'},
       {proName:'NASDAQ:MSTR', title:'MSTR'}
     ],
-    showSymbolLogo: window.innerWidth > 700, isTransparent:true, displayMode:'adaptive', colorTheme:'dark', locale:'en'
+    showSymbolLogo:true, isTransparent:true, displayMode:'adaptive', colorTheme:'dark', locale:'en'
   });
   wrap.appendChild(s);
   host.appendChild(wrap);

@@ -200,8 +200,8 @@
 <section>
   <h2>Wire — Crypto &amp; Global Markets</h2>
   <div class="newsgrid">
-    <div class="newscol"><h3>COINDESK — CRYPTO</h3><div id="news-crypto"><div class="cardstate">loading…</div></div></div>
-    <div class="newscol"><h3>MARKETWATCH — GLOBAL MARKETS</h3><div id="news-global"><div class="cardstate">loading…</div></div></div>
+    <div class="newscol"><h3>COINDESK — CRYPTO <span id="news-crypto-ts" style="color:var(--muted);font-weight:400;letter-spacing:0;"></span></h3><div id="news-crypto"><div class="cardstate">loading…</div></div></div>
+    <div class="newscol"><h3>MARKETWATCH — GLOBAL MARKETS <span id="news-global-ts" style="color:var(--muted);font-weight:400;letter-spacing:0;"></span></h3><div id="news-global"><div class="cardstate">loading…</div></div></div>
   </div>
 </section>
 
@@ -482,6 +482,7 @@ function loadTV(){
 /* ═══════════ NEWS ═══════════ */
 async function loadNews(id, rssList, fallback){
   const el = $(id);
+  const tsEl = document.getElementById(id+'-ts');
   const sources = Array.isArray(rssList) ? rssList : [rssList];
   for(const rss of sources){
     try{
@@ -491,10 +492,16 @@ async function loadNews(id, rssList, fallback){
         const when = i.pubDate ? new Date(i.pubDate).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'}) : '';
         return `<div class="newsitem"><a href="${i.link}" target="_blank" rel="noopener">${i.title}</a><div class="when">${when} IST</div></div>`;
       }).join('');
+      if(tsEl){
+        const latest = d.items[0].pubDate ? new Date(d.items[0].pubDate) : null;
+        const fetchedAt = new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'});
+        tsEl.textContent = latest ? `· latest article ${latest.toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'})} IST · checked ${fetchedAt}` : `· checked ${fetchedAt} IST`;
+      }
       return;
     }catch(e){ /* try next source */ }
   }
   el.innerHTML = `<div class="cardstate">feed unavailable right now — <a href="${fallback}" target="_blank" rel="noopener">open source directly →</a></div>`;
+  if(tsEl) tsEl.textContent = '';
 }
 
 /* ═══════════ ORCHESTRATION ═══════════ */

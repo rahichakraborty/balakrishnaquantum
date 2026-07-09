@@ -159,6 +159,11 @@
   .liq-hist .bar{flex:1;background:var(--muted-2);border-radius:2px 2px 0 0;min-height:2px;}
   .liq-hist .bar.long{background:var(--red);}
   .liq-hist .bar.short{background:var(--green);}
+  .liq-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+  .liq-stat{border:1px solid var(--line-soft);border-radius:6px;padding:8px 10px;background:var(--panel-2);}
+  .liq-stat-label{font-family:var(--mono);font-size:10px;color:var(--muted-2);letter-spacing:.08em;}
+  .liq-stat-val{font-family:var(--mono);font-size:13px;font-weight:600;margin-top:2px;}
+  .liq-stats-note{font-size:11px;color:var(--muted-2);margin:8px 0;line-height:1.5;}
 
   /* social feeds */
   .feed-frame{width:100%;height:420px;border:none;border-radius:6px;background:var(--panel-2);}
@@ -318,6 +323,12 @@
     <div class="term">
       <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">liquidations.live — binance forceOrder stream</span></div>
       <div class="term-body">
+        <div class="liq-stats" id="liq-stats">
+          <div class="liq-stat"><div class="liq-stat-label">1H</div><div class="liq-stat-val" id="liq-1h">$0 · 0 events</div></div>
+          <div class="liq-stat"><div class="liq-stat-label">12H</div><div class="liq-stat-val" id="liq-12h">$0 · 0 events</div></div>
+          <div class="liq-stat"><div class="liq-stat-label">24H</div><div class="liq-stat-val" id="liq-24h">$0 · 0 events</div></div>
+        </div>
+        <div class="liq-stats-note">Rolling totals captured live since this dashboard tab was opened — not historical (no free API exposes true past 24h liquidation totals; that data is what Coinglass sells). Leave the tab open and these windows fill in for real.</div>
         <div class="liq-hist" id="liq-hist"></div>
         <div class="liq-feed" id="liq-feed"><div class="liq-empty">Connecting to live liquidation stream…</div></div>
       </div>
@@ -339,10 +350,12 @@
       <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">feed.x — curated list</span></div>
       <div class="term-body">
         <!--
-          X's embedded-timeline widget (widgets.js) is unreliable for List embeds — it intermittently
-          throws internally and never renders, with no clean way to detect/retry from our side.
-          Linking out directly is the reliable option instead of a flaky iframe.
+          Attempting a real live embed here: individual profile timelines (not a List) —
+          single-account timeline widgets are the standard, more-reliable use case for
+          X's widgets.js compared to List embeds, which throw internally more often.
+          If this area stays empty (X-side failure), the link list below still works either way.
         -->
+        <div id="x-live" style="margin-bottom:14px;"></div>
         <div id="x-linkout"></div>
       </div>
     </div>
@@ -350,10 +363,12 @@
       <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">feed.telegram — news channels</span></div>
       <div class="term-body">
         <!--
-          Telegram's t.me/s/ preview pages send X-Frame-Options that blocks third-party iframing
-          in most browsers — the iframe approach fails silently (blank/broken box). Linking out
-          directly is the reliable option instead.
+          Telegram's t.me/s/ pages block third-party iframing outright (X-Frame-Options),
+          so a true inline embed isn't possible here. Attempting actual message content instead
+          via RSSHub's public Telegram-channel-to-RSS bridge (poll-based, not push-live — refreshes
+          every 90s). Falls back to the link-out list per channel if RSSHub is unreachable.
         -->
+        <div id="tg-live"></div>
         <div id="tg-linkout"></div>
       </div>
     </div>
@@ -492,10 +507,9 @@ new TradingView.widget({
 });
 </script>
 
-<!-- (X timeline widget removed — unreliable for List embeds, replaced with direct links below) -->
-
+<script src="https://platform.twitter.com/widgets.js" async></script>
 <script>
-/* ---------------- Social feed link-outs (reliable — no fragile embeds) ---------------- */
+/* ---------------- Social feeds: attempt real live content, fall back to link-outs ---------------- */
 const X_ACCOUNTS = [
   {handle:'Whale_Alert', desc:'Large wallet moves, exchange in/outflows'},
   {handle:'WatcherGuru', desc:'Fastest crypto/macro breaking news'},
@@ -512,6 +526,17 @@ document.getElementById('x-linkout').innerHTML =
   '</div>' +
   '<a class="linkout-cta" href="https://twitter.com/i/lists/2074982525173370946" target="_blank" rel="noopener">View full BKQ Watchlist on X →</a>';
 
+// Real attempt: single-profile timeline widget (more reliable than List embeds) for the top account.
+// If X's widget genuinely fails to render within 6s, this area just stays empty — the link-out
+// grid above already covers the same accounts, so nothing is lost either way.
+(function(){
+  const el = document.getElementById('x-live');
+  el.innerHTML = '<a class="twitter-timeline" data-height="300" data-theme="dark" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/WatcherGuru?ref_src=twsrc%5Etfw">Tweets by WatcherGuru</a>';
+  setTimeout(()=>{
+    if(!el.querySelector('iframe')) el.style.display = 'none'; // widget failed — hide the empty slot, link-out list still covers it
+  }, 6000);
+})();
+
 const TG_CHANNELS = [
   {name:'WatcherGuru', desc:'Fastest general crypto/macro breaking news'},
   {name:'ForexLive', desc:'Fed/CPI/NFP macro headline breaks'},
@@ -526,6 +551,34 @@ document.getElementById('tg-linkout').innerHTML =
     <div class="go">Open →</div>
   </a>`).join('') +
   '</div>';
+
+// Real attempt: pull actual recent messages via RSSHub's public Telegram bridge (poll-based).
+// Telegram itself blocks iframe embedding outright, so this is the closest to "live content"
+// achievable for free. If RSSHub is down/rate-limited, this silently does nothing and the
+// link-out grid above (always rendered) is what's visible — no broken/empty box either way.
+async function loadTelegramLive(){
+  const el = document.getElementById('tg-live');
+  try{
+    const res = await fetch('https://rsshub.app/telegram/channel/WatcherGuru');
+    if(!res.ok) throw new Error('rsshub unavailable');
+    const xml = await res.text();
+    const doc = new DOMParser().parseFromString(xml, 'text/xml');
+    const items = Array.from(doc.querySelectorAll('item')).slice(0,6);
+    if(!items.length) throw new Error('empty');
+    el.innerHTML = '<div style="font-family:var(--mono);font-size:11px;color:var(--teal);margin-bottom:8px;">LIVE — @WatcherGuru (Telegram)</div>' +
+      items.map(i=>{
+        const title = i.querySelector('title')?.textContent || '';
+        const link = i.querySelector('link')?.textContent || '#';
+        const pubDate = i.querySelector('pubDate')?.textContent;
+        const when = pubDate ? new Date(pubDate).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'}) : '';
+        return `<div class="linkout-item" style="margin-bottom:6px;"><div><div class="desc" style="color:var(--text);">${title.slice(0,140)}</div><div class="desc">${when} IST</div></div><a class="go" href="${link}" target="_blank" rel="noopener">Open →</a></div>`;
+      }).join('');
+  }catch(e){
+    el.innerHTML = ''; // fall silently to the link-out grid below — no broken box shown
+  }
+}
+loadTelegramLive();
+setInterval(loadTelegramLive, 90000);
 
 /* ---------------- Session clock ---------------- */
 function pad(n){return n.toString().padStart(2,'0');}
@@ -560,14 +613,15 @@ setInterval(updateClock,1000); updateClock();
       {proName:'OANDA:SPX500USD', title:'SPX'},
       {proName:'OANDA:NAS100USD', title:'NDX'},
       {proName:'OANDA:US30USD', title:'DOW'},
-      {proName:'TVC:VIX', title:'VIX'},
-      {proName:'TVC:DXY', title:'DXY'},
+      {proName:'AMEX:VIXY', title:'VIX'},
+      {proName:'AMEX:UUP', title:'DXY'},
+      {proName:'OANDA:WTICOUSD', title:'CRUDE'},
       {proName:'NASDAQ:SPCX', title:'SPCX'},
       {proName:'NASDAQ:NVDA', title:'NVDA'},
       {proName:'NASDAQ:TSLA', title:'TSLA'},
       {proName:'NASDAQ:MSTR', title:'MSTR'}
     ],
-    showSymbolLogo:false, isTransparent:true, displayMode:'adaptive', colorTheme:'dark', locale:'en'
+    showSymbolLogo:true, isTransparent:true, displayMode:'adaptive', colorTheme:'dark', locale:'en'
   });
   wrap.appendChild(s);
   host.appendChild(wrap);
@@ -677,9 +731,17 @@ loadMaxPain(); setInterval(loadMaxPain, 600000);
 /* ---------------- Live liquidation stream (Binance forceOrder) ---------------- */
 const liqFeedEl = document.getElementById('liq-feed');
 const liqHistEl = document.getElementById('liq-hist');
+const LIQ_STORE_KEY = 'bkq_liq_events_v1';
 let liqEvents = [];
-let liqFirstMessage = true;
+try{
+  const saved = JSON.parse(localStorage.getItem(LIQ_STORE_KEY) || '[]');
+  const cutoff = Date.now() - 24*60*60*1000;
+  liqEvents = saved.filter(e => e.ts >= cutoff);
+}catch(e){ liqEvents = []; }
 
+function persistLiq(){
+  try{ localStorage.setItem(LIQ_STORE_KEY, JSON.stringify(liqEvents.slice(0,2000))); }catch(e){}
+}
 function renderLiqFeed(){
   if(!liqEvents.length) return;
   liqFeedEl.innerHTML = liqEvents.slice(0,40).map(e=>{
@@ -689,7 +751,6 @@ function renderLiqFeed(){
   }).join('');
 }
 function renderLiqHist(){
-  // bucket last 60 events by symbol size into a simple bar chart (most recent 24 buckets)
   const buckets = liqEvents.slice(0,24).reverse();
   liqHistEl.innerHTML = buckets.map(e=>{
     const side = e.side==='SELL' ? 'long':'short';
@@ -697,6 +758,18 @@ function renderLiqHist(){
     return '<div class="bar '+side+'" style="height:'+h+'px" title="$'+Math.round(e.value).toLocaleString()+'"></div>';
   }).join('');
 }
+function renderLiqStats(){
+  const now = Date.now();
+  [['1h',1],['12h',12],['24h',24]].forEach(([id,hours])=>{
+    const cutoff = now - hours*60*60*1000;
+    const inWindow = liqEvents.filter(e => e.ts >= cutoff);
+    const total = inWindow.reduce((s,e)=>s+e.value,0);
+    const el = document.getElementById('liq-'+id);
+    if(el) el.textContent = '$'+Math.round(total).toLocaleString()+' · '+inWindow.length+' events';
+  });
+}
+renderLiqFeed(); renderLiqHist(); renderLiqStats();
+setInterval(renderLiqStats, 30000); // age windows out even with no new events
 try{
   const ws = new WebSocket('wss://fstream.binance.com/ws/!forceOrder@arr');
   const liqTimeout = setTimeout(()=>{
@@ -711,9 +784,10 @@ try{
       const o = payload.o;
       if(!o) return;
       const value = parseFloat(o.ap) * parseFloat(o.q);
-      liqEvents.unshift({symbol:o.s, side:o.S, value:value});
-      liqEvents = liqEvents.slice(0,60);
-      renderLiqFeed(); renderLiqHist();
+      liqEvents.unshift({symbol:o.s, side:o.S, value:value, ts:Date.now()});
+      const cutoff = Date.now() - 24*60*60*1000;
+      liqEvents = liqEvents.filter(e => e.ts >= cutoff).slice(0,2000);
+      renderLiqFeed(); renderLiqHist(); renderLiqStats(); persistLiq();
     }catch(e){}
   };
   ws.onerror = ()=>{ liqFeedEl.innerHTML = '<div class="liq-empty">Live stream unavailable right now.</div>'; };

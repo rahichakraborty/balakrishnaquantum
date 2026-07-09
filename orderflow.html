@@ -151,9 +151,9 @@ body{font-family:var(--font);color:var(--text-hi);}
 <div id="topbar">
   <a href="index.html" style="font-size:var(--xs);color:var(--blue);letter-spacing:2px;text-decoration:none;border:1px solid var(--border2);padding:4px 10px;border-radius:3px;white-space:nowrap;">← HOME</a>
   <div class="tb-logo">BKQ <span>▲</span></div>
-  <div class="sym-wrap" data-tip="All Binance USDT-M Perps&#10;Populated live from exchange">
+  <div class="sym-wrap" data-tip="All Binance Spot USDT pairs&#10;Populated live from exchange">
     <select id="sym-select" onchange="changeSymbol(this.value)">
-      <option value="BTCUSDT">BTC / USDT PERP</option>
+      <option value="BTCUSDT">BTC / USDT SPOT</option>
     </select>
     <span class="sym-arrow">▾</span>
   </div>
@@ -327,11 +327,11 @@ function buildDropdown(syms){
   const rest=syms.filter(s=>!MAJORS.includes(s)).sort();
   const g1=document.createElement('optgroup');g1.label='── MAJORS ──';
   majInList.forEach(s=>{const o=document.createElement('option');o.value=s;
-    o.textContent=s.replace('USDT',' / USDT PERP');if(s==='BTCUSDT')o.selected=true;g1.appendChild(o);});
+    o.textContent=s.replace('USDT',' / USDT SPOT');if(s==='BTCUSDT')o.selected=true;g1.appendChild(o);});
   sel.appendChild(g1);
-  if(rest.length){const g2=document.createElement('optgroup');g2.label='── ALL PERPS ──';
+  if(rest.length){const g2=document.createElement('optgroup');g2.label='── ALL SPOT PAIRS ──';
     rest.forEach(s=>{const o=document.createElement('option');o.value=s;
-      o.textContent=s.replace('USDT',' / USDT PERP');g2.appendChild(o);});sel.appendChild(g2);}
+      o.textContent=s.replace('USDT',' / USDT SPOT');g2.appendChild(o);});sel.appendChild(g2);}
 }
 
 async function loadSymbols(){
@@ -339,10 +339,10 @@ async function loadSymbols(){
   buildDropdown(SYMBOL_LIST);
   // Then try to fetch live list in background
   try{
-    const r=await fetch('https://fapi.binance.com/fapi/v1/exchangeInfo',{signal:AbortSignal.timeout(5000)});
+    const r=await fetch('https://api.binance.com/api/v3/exchangeInfo',{signal:AbortSignal.timeout(5000)});
     if(r.ok){
       const d=await r.json();
-      const live=d.symbols.filter(s=>s.contractType==='PERPETUAL'&&s.status==='TRADING'&&s.quoteAsset==='USDT').map(s=>s.symbol);
+      const live=d.symbols.filter(s=>s.status==='TRADING'&&s.quoteAsset==='USDT'&&s.isSpotTradingAllowed).map(s=>s.symbol);
       if(live.length>10)buildDropdown(live);
     }
   }catch(e){/* keep hardcoded list */}
@@ -352,9 +352,9 @@ async function loadSymbols(){
 // WEBSOCKET — 3 fallback endpoints
 // ══════════════════════════════════════════════
 const WS_HOSTS=[
-  'wss://fstream.binance.com',
-  'wss://stream.binancefuture.com',
-  'wss://fstream1.binance.com',
+  'wss://stream.binance.com:9443',
+  'wss://stream.binance.com',
+  'wss://stream1.binance.com:9443',
 ];
 let wsIdx=0, wsRetries=0;
 
@@ -378,8 +378,8 @@ let restTradeTimer = null, restDepthTimer = null;
 async function pollTrades(){
   try{
     const url = lastAggTradeId
-      ? `https://fapi.binance.com/fapi/v1/aggTrades?symbol=${S.symbol}&fromId=${lastAggTradeId+1}&limit=1000`
-      : `https://fapi.binance.com/fapi/v1/aggTrades?symbol=${S.symbol}&limit=100`;
+      ? `https://api.binance.com/api/v3/aggTrades?symbol=${S.symbol}&fromId=${lastAggTradeId+1}&limit=1000`
+      : `https://api.binance.com/api/v3/aggTrades?symbol=${S.symbol}&limit=100`;
     const res = await fetch(url);
     if(!res.ok) throw new Error('rest trades failed');
     const trades = await res.json();
@@ -396,7 +396,7 @@ async function pollTrades(){
 }
 async function pollDepth(){
   try{
-    const res = await fetch(`https://fapi.binance.com/fapi/v1/depth?symbol=${S.symbol}&limit=20`);
+    const res = await fetch(`https://api.binance.com/api/v3/depth?symbol=${S.symbol}&limit=20`);
     if(!res.ok) return;
     const d = await res.json();
     S.ob.asks = d.asks.map(a=>[+a[0],+a[1]]).slice(0,15);

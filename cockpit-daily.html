@@ -105,6 +105,7 @@
 
 <header>
   <div class="brand">
+    <a href="index.html" style="color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1px;border:1px solid var(--line);padding:5px 10px;margin-right:6px;">← DASHBOARD</a>
     <span class="bkq">BKQ // DAILY COCKPIT</span>
     <span class="sub">BALAKRISHNA QUANTUM · INSTITUTIONAL BRIEF TERMINAL</span>
   </div>
@@ -146,12 +147,6 @@
   <div class="grid" id="cryptogrid"></div>
 </section>
 
-<!-- india -->
-<section>
-  <h2>Indian Indices — NSE / BSE</h2>
-  <div class="tvwrap tv-tall" id="tv-india"></div>
-</section>
-
 <!-- us -->
 <section>
   <h2>US Stocks &amp; Macro</h2>
@@ -184,10 +179,10 @@
 
 <!-- news -->
 <section>
-  <h2>Wire — Crypto &amp; Indian Markets</h2>
+  <h2>Wire — Crypto &amp; Global Markets</h2>
   <div class="newsgrid">
     <div class="newscol"><h3>COINDESK</h3><div id="news-crypto"><div class="cardstate">loading…</div></div></div>
-    <div class="newscol"><h3>ET MARKETS</h3><div id="news-india"><div class="cardstate">loading…</div></div></div>
+    <div class="newscol"><h3>MARKETWATCH — GLOBAL MARKETS</h3><div id="news-global"><div class="cardstate">loading…</div></div></div>
   </div>
 </section>
 
@@ -339,14 +334,24 @@ async function loadFNG(){
   }catch(e){ $('fng').textContent='n/a'; }
 }
 async function loadDXY(){
-  try{
-    const d = await getJSON('https://api.frankfurter.app/latest?from=USD&to=EUR,JPY,GBP,CAD,SEK,CHF');
-    const r = d.rates;
-    const dxy = 50.14348112
-      * Math.pow(1/r.EUR,-0.576) * Math.pow(r.JPY,0.136) * Math.pow(1/r.GBP,-0.119)
-      * Math.pow(r.CAD,0.091) * Math.pow(r.SEK,0.042) * Math.pow(r.CHF,0.036);
-    $('dxy').textContent = dxy.toFixed(2);
-  }catch(e){ $('dxy').textContent='n/a'; }
+  const hosts = [
+    'https://api.frankfurter.app/latest?from=USD&to=EUR,JPY,GBP,CAD,SEK,CHF',
+    'https://api.frankfurter.dev/v1/latest?from=USD&to=EUR,JPY,GBP,CAD,SEK,CHF',
+    'https://open.er-api.com/v6/latest/USD'
+  ];
+  for(const url of hosts){
+    try{
+      const d = await getJSON(url);
+      const r = d.rates;
+      if(!r || !r.EUR || !r.JPY || !r.GBP || !r.CAD || !r.SEK || !r.CHF) continue;
+      const dxy = 50.14348112
+        * Math.pow(1/r.EUR,-0.576) * Math.pow(r.JPY,0.136) * Math.pow(1/r.GBP,-0.119)
+        * Math.pow(r.CAD,0.091) * Math.pow(r.SEK,0.042) * Math.pow(r.CHF,0.036);
+      $('dxy').textContent = dxy.toFixed(2);
+      return;
+    }catch(e){ /* try next host */ }
+  }
+  $('dxy').textContent = 'n/a';
 }
 
 /* ═══════════════ NEWS ═══════════════ */
@@ -389,22 +394,12 @@ function mini(id, symbol){
     colorTheme:'dark', isTransparent:true, autosize:true, largeChartUrl:''
   });
 }
-function loadTV(){
-  tvWidget('tv-india','embed-widget-market-overview.js',{
-    colorTheme:'dark', dateRange:'1D', showChart:true, locale:'en', isTransparent:true,
-    width:'100%', height:'100%',
-    plotLineColorGrowing:'rgba(45,212,191,1)', plotLineColorFalling:'rgba(239,68,68,1)',
-    gridLineColor:'rgba(31,39,51,0)', scaleFontColor:'rgba(125,136,150,1)',
-    belowLineFillColorGrowing:'rgba(45,212,191,0.08)', belowLineFillColorFalling:'rgba(239,68,68,0.08)',
-    symbolActiveColor:'rgba(232,184,75,0.12)',
-    tabs:[{title:'Indices',symbols:[
-      {s:'NSE:NIFTY', d:'NIFTY 50'},
-      {s:'NSE:BANKNIFTY', d:'BANK NIFTY'},
-      {s:'NSE:CNXFINANCE', d:'FIN NIFTY'},
-      {s:'NSE:NIFTYMIDSELECT', d:'MIDCAP NIFTY'},
-      {s:'BSE:SENSEX', d:'SENSEX'}
-    ]}]
+function singleQuote(id, symbol){
+  tvWidget(id,'embed-widget-single-quote.js',{
+    symbol, width:'100%', height:'100%', locale:'en', colorTheme:'dark', isTransparent:true
   });
+}
+function loadTV(){
   tvWidget('tv-us','embed-widget-market-overview.js',{
     colorTheme:'dark', dateRange:'1D', showChart:true, locale:'en', isTransparent:true,
     width:'100%', height:'100%',
@@ -417,7 +412,7 @@ function loadTV(){
         {s:'OANDA:SPX500USD', d:'S&P 500'},
         {s:'OANDA:US30USD', d:'DOW'},
         {s:'OANDA:NAS100USD', d:'NASDAQ 100'},
-        {s:'TVC:VIX', d:'VIX'}
+        {s:'AMEX:VIXY', d:'VIX (proxy)'}
       ]},
       {title:'Stocks',symbols:[
         {s:'NASDAQ:SPCX', d:'SPACEX'},
@@ -433,7 +428,7 @@ function loadTV(){
   mini('tv-gold','TVC:GOLD');
   mini('tv-silver','TVC:SILVER');
   mini('tv-crude','TVC:USOIL');
-  mini('tv-dxy','TVC:DXY');
+  mini('tv-dxy','AMEX:UUP');
   mini('tv-spcx','NASDAQ:SPCX');
   mini('tv-btc','BINANCE:BTCUSDT');
 }
@@ -446,7 +441,7 @@ async function refreshAll(){
     ...COINS.map(loadCoin),
     loadFunding(), loadGlobal(), loadFNG(), loadDXY(),
     loadNews('news-crypto','https://www.coindesk.com/arc/outboundfeeds/rss/','https://www.coindesk.com'),
-    loadNews('news-india','https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms','https://economictimes.indiatimes.com/markets')
+    loadNews('news-global','http://feeds.marketwatch.com/marketwatch/topstories/','https://www.marketwatch.com/markets')
   ]);
   const now = new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata'});
   $('lastupd').textContent = 'updated '+now+' IST';

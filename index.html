@@ -223,13 +223,25 @@
 <body>
 
 <nav>
-  <div class="logo"><span class="dot"></span>Balakrishna Quantum</div>
+  <div class="logo">
+    <svg width="26" height="26" viewBox="0 0 100 100" style="margin-right:2px;">
+      <ellipse cx="50" cy="50" rx="42" ry="16" fill="none" stroke="var(--teal)" stroke-width="4" opacity="0.85" transform="rotate(-20 50 50)"/>
+      <ellipse cx="50" cy="50" rx="42" ry="16" fill="none" stroke="var(--orange)" stroke-width="4" opacity="0.65" transform="rotate(40 50 50)"/>
+      <circle cx="50" cy="50" r="11" fill="var(--gold)"/>
+      <circle cx="50" cy="50" r="11" fill="var(--gold-soft)" opacity="0.5">
+        <animate attributeName="r" values="11;19;11" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    Balakrishna Quantum
+  </div>
   <div class="nav-links">
     <a href="#dashboard">Dashboard</a>
     <a href="cockpit-global.html">Global Cockpit</a>
     <a href="cockpit-daily.html">Daily Cockpit</a>
     <a href="#indicators">Indicators</a>
     <a href="#pricing">Pricing</a>
+    <a href="#mentorship">Mentorship</a>
     <a href="#blog">Briefing</a>
     <a href="journal.html">Journal</a>
     <a href="orderflow.html">Orderflow</a>
@@ -255,7 +267,7 @@
   </div>
 
   <!-- Cockpit links -->
-  <div class="row3" style="grid-template-columns:repeat(4,1fr);">
+  <div class="row3" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr));">
     <a class="term" href="cockpit-global.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq global cockpit</span></div>
       <div class="term-body">
@@ -282,6 +294,13 @@
       <div class="term-body">
         <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">Setup-Tagged Trade Log →</div>
         <div style="color:var(--muted);font-size:13px;">Log every trade against the exact BKQ framework that generated it — win rate, R:R, expectancy, calendar heatmap, and behavior tagging.</div>
+      </div>
+    </a>
+    <a class="term" href="#mentorship" style="text-decoration:none;color:inherit;display:block;border-color:var(--gold);">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq mentorship</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">Click for Mentorship →</div>
+        <div style="color:var(--muted);font-size:13px;">Direct 1:1 feedback on your own trade log against the BKQ framework — for advanced traders with 6–9 months of existing data.</div>
       </div>
     </a>
   </div>
@@ -435,17 +454,16 @@
       </div>
     </div>
   </div>
-  <div class="section-sub" style="margin-top:16px;">Subscribe routes to the contact form for now — payment collection isn't wired up yet. Once live, this becomes a direct checkout.</div>
 
-  <div style="max-width:760px;margin-top:32px;">
+  <div id="mentorship" style="max-width:760px;margin-top:32px;">
     <div class="term" style="border-color:var(--gold);">
       <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">plan.mentorship — advanced traders only</span></div>
       <div class="term-body">
         <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;margin-bottom:10px;">
           <div>
             <div style="font-family:var(--mono);font-size:11px;color:var(--gold-soft);letter-spacing:.08em;margin-bottom:6px;">1:1 MENTORSHIP &amp; QUARTERLY FEEDBACK</div>
-            <div style="font-family:var(--mono);font-size:30px;font-weight:700;color:var(--gold-soft);">₹1,99,999</div>
-            <div style="font-size:12.5px;color:var(--muted-2);">for 3 sessions, one per quarter</div>
+            <div style="font-family:var(--mono);font-size:30px;font-weight:700;color:var(--gold-soft);">₹3,00,000</div>
+            <div style="font-size:12.5px;color:var(--muted-2);">combined price for all 3 sessions</div>
           </div>
         </div>
         <div style="font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:14px;">
@@ -473,7 +491,7 @@
   <div class="blog-list">
     <a class="blog-row" href="blog/2026-07-09-premarket.html">
       <span class="blog-date">Jul 09, 2026 · 12:00 IST</span>
-      <span class="blog-title">Range-bound chop into CPI week — BTC pinned under 63K, PAXG holding the bid</span>
+      <span class="blog-title">Iran ceasefire collapses, oil spikes — BTC holds $62K as risk sentiment turns defensive</span>
       <span class="blog-tag">pre-market</span>
     </a>
     <a class="blog-row" href="blog/index.html">

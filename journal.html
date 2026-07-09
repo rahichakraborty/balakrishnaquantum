@@ -94,7 +94,18 @@
 <body>
 
 <nav>
-  <div class="logo"><span class="dot"></span>BKQ Journal</div>
+  <div class="logo">
+    <svg width="22" height="22" viewBox="0 0 100 100" style="margin-right:2px;">
+      <ellipse cx="50" cy="50" rx="42" ry="16" fill="none" stroke="var(--teal)" stroke-width="4" opacity="0.85" transform="rotate(-20 50 50)"/>
+      <ellipse cx="50" cy="50" rx="42" ry="16" fill="none" stroke="var(--orange)" stroke-width="4" opacity="0.65" transform="rotate(40 50 50)"/>
+      <circle cx="50" cy="50" r="11" fill="var(--gold)"/>
+      <circle cx="50" cy="50" r="11" fill="var(--gold-soft)" opacity="0.5">
+        <animate attributeName="r" values="11;19;11" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    BKQ Journal
+  </div>
   <a class="back-link" href="index.html">← HOME</a>
 </nav>
 

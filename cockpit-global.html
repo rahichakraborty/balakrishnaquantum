@@ -484,35 +484,40 @@ async function loadNews(id, rssList, fallback){
   const el = $(id);
   const tsEl = document.getElementById(id+'-ts');
   const sources = Array.isArray(rssList) ? rssList : [rssList];
-  for(const rss of sources){
-    try{
-      // Direct XML fetch through a passthrough CORS bridge (no server-side caching layer,
-      // unlike rss2json which was serving hours-old cached responses regardless of source).
-      const res = await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(rss), {signal:AbortSignal.timeout(8000)});
-      if(!res.ok) continue;
-      const xmlText = await res.text();
-      const doc = new DOMParser().parseFromString(xmlText, 'text/xml');
-      if(doc.querySelector('parsererror')) continue;
-      const items = Array.from(doc.querySelectorAll('item')).slice(0,8);
-      if(!items.length) continue;
-      el.innerHTML = items.map(it=>{
-        const title = it.querySelector('title')?.textContent || '';
-        const link = it.querySelector('link')?.textContent || '#';
-        const pubDate = it.querySelector('pubDate')?.textContent;
-        const when = pubDate ? new Date(pubDate).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'}) : '';
-        return `<div class="newsitem"><a href="${link}" target="_blank" rel="noopener">${title}</a><div class="when">${when} IST</div></div>`;
-      }).join('');
-      if(tsEl){
-        const firstPub = items[0].querySelector('pubDate')?.textContent;
-        const latest = firstPub ? new Date(firstPub) : null;
-        const fetchedAt = new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'});
-        tsEl.textContent = latest ? `· latest article ${latest.toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'})} IST · checked ${fetchedAt}` : `· checked ${fetchedAt} IST`;
-      }
-      return;
-    }catch(e){ /* try next source */ }
+
+  const attempt = async (rss) => {
+    const res = await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(rss), {signal:AbortSignal.timeout(9000)});
+    if(!res.ok) throw new Error('bad response');
+    const xmlText = await res.text();
+    const doc = new DOMParser().parseFromString(xmlText, 'text/xml');
+    if(doc.querySelector('parsererror')) throw new Error('parse error');
+    const items = Array.from(doc.querySelectorAll('item')).slice(0,8);
+    if(!items.length) throw new Error('empty feed');
+    return items;
+  };
+
+  try{
+    // Race all sources in parallel — first one to succeed wins, instead of waiting
+    // through each source sequentially (which could take up to 3x as long).
+    const items = await Promise.any(sources.map(attempt));
+    el.innerHTML = items.map(it=>{
+      const title = it.querySelector('title')?.textContent || '';
+      const link = it.querySelector('link')?.textContent || '#';
+      const pubDate = it.querySelector('pubDate')?.textContent;
+      const when = pubDate ? new Date(pubDate).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'}) : '';
+      return `<div class="newsitem"><a href="${link}" target="_blank" rel="noopener">${title}</a><div class="when">${when} IST</div></div>`;
+    }).join('');
+    if(tsEl){
+      const firstPub = items[0].querySelector('pubDate')?.textContent;
+      const latest = firstPub ? new Date(firstPub) : null;
+      const fetchedAt = new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'});
+      tsEl.textContent = latest ? `· latest article ${latest.toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'})} IST · checked ${fetchedAt}` : `· checked ${fetchedAt} IST`;
+    }
+  }catch(e){
+    // Promise.any throws only when every single source failed
+    el.innerHTML = `<div class="cardstate">feed unavailable right now — <a href="${fallback}" target="_blank" rel="noopener">open source directly →</a></div>`;
+    if(tsEl) tsEl.textContent = '';
   }
-  el.innerHTML = `<div class="cardstate">feed unavailable right now — <a href="${fallback}" target="_blank" rel="noopener">open source directly →</a></div>`;
-  if(tsEl) tsEl.textContent = '';
 }
 
 /* ═══════════ ORCHESTRATION ═══════════ */

@@ -530,7 +530,7 @@
   <div class="blog-list">
     <a class="blog-row" href="blog/2026-07-09-premarket.html">
       <span class="blog-date">Jul 09, 2026 · 12:00 IST</span>
-      <span class="blog-title">Pre-market data update — BTC unavailable</span>
+      <span class="blog-title">Iran ceasefire collapses, oil spikes — BTC holds $62K as risk sentiment turns defensive</span>
       <span class="blog-tag">pre-market</span>
     </a>
     <a class="blog-row" href="blog/index.html">
@@ -848,18 +848,27 @@ setInterval(updateClock,1000); updateClock();
   host.appendChild(wrap);
 })();
 
-/* ---------------- Fear & Greed (Alternative.me) ---------------- */
+/* ---------------- Fear & Greed (CoinMarketCap primary, Alternative.me fallback) ---------------- */
 async function loadFearGreed(){
+  let v, cls;
   try{
-    const res = await fetch('https://api.alternative.me/fng/?limit=1');
+    const target = 'https://pro-api.coinmarketcap.com/public-api/v3/fear-and-greed/latest';
+    const res = await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(target), {signal:AbortSignal.timeout(9000)});
     const json = await res.json();
-    const v = parseInt(json.data[0].value);
-    const cls = json.data[0].value_classification;
-    document.getElementById('fg-num').textContent = v;
-    document.getElementById('fg-num').style.color = v<25?'var(--red)':v<45?'var(--orange)':v<55?'var(--muted)':v<75?'var(--teal)':'var(--green)';
-    document.getElementById('fg-label').textContent = cls;
-    document.getElementById('fg-marker').style.left = v+'%';
-  }catch(e){ console.warn('fear/greed fetch failed', e); }
+    v = parseInt(json.data.value);
+    cls = json.data.value_classification;
+  }catch(e){
+    try{
+      const res = await fetch('https://api.alternative.me/fng/?limit=1');
+      const json = await res.json();
+      v = parseInt(json.data[0].value);
+      cls = json.data[0].value_classification;
+    }catch(e2){ console.warn('fear/greed fetch failed on both sources', e2); return; }
+  }
+  document.getElementById('fg-num').textContent = v;
+  document.getElementById('fg-num').style.color = v<25?'var(--red)':v<45?'var(--orange)':v<55?'var(--muted)':v<75?'var(--teal)':'var(--green)';
+  document.getElementById('fg-label').textContent = cls;
+  document.getElementById('fg-marker').style.left = v+'%';
 }
 loadFearGreed(); setInterval(loadFearGreed, 300000);
 

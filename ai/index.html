@@ -732,18 +732,25 @@
   async function fetchBookCover(book){
     const key = book.title + '|' + book.author;
     if(bookCoverCache[key] !== undefined) return bookCoverCache[key];
-    try{
-      const q = encodeURIComponent(`intitle:${book.title} inauthor:${book.author}`);
-      const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${q}&maxResults=1`);
-      if(!res.ok) throw new Error('bad response');
+    // Plain-text search, not intitle:/inauthor: operators — those only scope the single
+    // next word without quotes, which badly mis-parses multi-word titles and multi-author
+    // strings like "James, Witten, Hastie, Tibshirani" and was why covers weren't loading.
+    async function tryQuery(q){
+      const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1`);
+      if(!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
       const item = data.items && data.items[0];
       const links = item && item.volumeInfo && item.volumeInfo.imageLinks;
       const thumb = links && (links.thumbnail || links.smallThumbnail);
-      const url = thumb ? thumb.replace('http://','https://') : null;
+      return thumb ? thumb.replace('http://','https://') : null;
+    }
+    try{
+      let url = await tryQuery(`${book.title} ${book.author}`);
+      if(!url) url = await tryQuery(book.title); // fallback: title alone, less noise from long author lists
       bookCoverCache[key] = url;
       return url;
     }catch(e){
+      console.warn('Book cover lookup failed for', book.title, e);
       bookCoverCache[key] = null;
       return null;
     }

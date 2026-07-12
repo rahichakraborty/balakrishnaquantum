@@ -178,6 +178,7 @@
     <a href="#courses">Courses</a>
     <a href="#books">Books</a>
     <a href="#journeys">Journeys</a>
+    <a href="#projects">Projects</a>
     <a href="#follow">Follow</a>
     <a href="#library">Library</a>
   </nav>
@@ -260,6 +261,15 @@
   </div>
   <div class="tabs" id="journey-tabs"></div>
   <div id="journey-panels"></div>
+</section>
+
+<section id="projects">
+  <div class="section-head">
+    <div><h2>Projects to Try</h2><p class="sub">Beyond the four milestone projects above — a broader catalog, tiered by difficulty. Each one names what it actually signals, not just what it builds.</p></div>
+    <span class="meta" id="projects-count"></span>
+  </div>
+  <div class="filters" id="project-filters"></div>
+  <div class="grid cols-3" id="projects-grid"></div>
 </section>
 
 <section id="follow">
@@ -748,6 +758,57 @@
   renderJourneyTabs('ops');
   renderJourneyPanels();
   showJourney('ops');
+
+  // =========================================================================
+  // Projects to Try
+  // =========================================================================
+  const PROJECTS = [
+    // --- Beginner ---
+    {difficulty:'Beginner', domain:'Classical ML', title:'A real classifier, done properly', desc:'Not just chasing accuracy on Titanic or Iris — proper train/val/test split, a confusion matrix, and an honest writeup of where it fails.', signal:'Shows you understand evaluation, not just model.fit()'},
+    {difficulty:'Beginner', domain:'NLP', title:'Sentiment analysis on real reviews', desc:'Scrape or download real product/app reviews — not a pre-cleaned academic dataset — and classify sentiment.', signal:'Shows you can handle messy, real-world text'},
+    {difficulty:'Beginner', domain:'NLP', title:'Spam / phishing email classifier', desc:'A genuinely useful binary classifier on real email data — practical, not toy.', signal:'Shows applied thinking over pure theory'},
+    {difficulty:'Beginner', domain:'GenAI', title:'Prompt eval harness', desc:'A small framework to A/B test prompts against a labeled test set — quantify what "better" actually means.', signal:'Shows rigor over vibes-based prompting'},
+    {difficulty:'Beginner', domain:'GenAI', title:'Document Q&A over your own PDFs', desc:'Chunk, embed, retrieve, answer — the canonical first RAG build, on documents you actually care about.', signal:'Shows retrieval + prompt-eval basics'},
+
+    // --- Intermediate ---
+    {difficulty:'Intermediate', domain:'GenAI', title:'Multi-document RAG with citations', desc:'Cross-document retrieval with citation tracing and an eval harness — not just "it answers questions," but "it answers correctly and shows its work."', signal:'Portfolio anchor for GCC delivery/GenAI roles'},
+    {difficulty:'Intermediate', domain:'GenAI', title:'Agent with real tool use', desc:'An agent that calls at least two real APIs (weather, search, a DB) and handles failure gracefully — not a scripted demo.', signal:'Shows planning + error handling, not just chaining calls'},
+    {difficulty:'Intermediate', domain:'Deep Learning', title:'Fine-tuned domain classifier vs. zero-shot', desc:'LoRA fine-tune on a niche dataset, benchmarked honestly against zero-shot prompting on the same task.', signal:'Shows you know when NOT to fine-tune, not just how to'},
+    {difficulty:'Intermediate', domain:'Time Series', title:'Forecasting on a real time series', desc:'Electricity demand, weather, or web traffic — proper backtesting, not a single train/test split that ignores time order.', signal:'Shows awareness of lookahead bias and temporal leakage'},
+    {difficulty:'Intermediate', domain:'Computer Vision', title:'Image classifier via transfer learning', desc:'Fine-tune a pretrained model (ResNet/EfficientNet) on a custom dataset you collected yourself.', signal:'Shows practical CV without needing to train from scratch'},
+    {difficulty:'Intermediate', domain:'Classical ML', title:'Recommendation system', desc:'Collaborative filtering on a real dataset like MovieLens — cold-start handling included, not just the happy path.', signal:'Shows you can handle sparse, real-world interaction data'},
+
+    // --- Advanced ---
+    {difficulty:'Advanced', domain:'GenAI', title:'Production RAG with CI/CD', desc:'A hardened RAG platform — automated eval on every change, guardrails, observability, not just a working notebook.', signal:'Shows you can ship, not just prototype'},
+    {difficulty:'Advanced', domain:'GenAI', title:'Multi-agent orchestration', desc:'Several specialized agents coordinating on a task via LangGraph or CrewAI — with visible failure modes handled, not hidden.', signal:'Shows systems thinking beyond a single agent loop'},
+    {difficulty:'Advanced', domain:'MLOps', title:'Model monitoring dashboard', desc:'Drift detection and alerting on a deployed model — ops-flavored ML, the unglamorous part that actually keeps systems alive.', signal:'Directly maps to Delivery/Ops-track roles, not just IC engineering'},
+    {difficulty:'Advanced', domain:'Deep Learning', title:'Custom fine-tuned LLM, deployed', desc:'LoRA/QLoRA fine-tune served behind an API with guardrails and rate limiting — the whole pipeline, not just the training step.', signal:'Shows end-to-end ownership from data to production'},
+    {difficulty:'Advanced', domain:'Quant ML', title:'BTC-direction classifier vs. your own indicator suite', desc:'A model trained on features derived from your BKQ indicators, walk-forward tested, compared honestly against your discretionary win rate.', signal:'Your most unique project — nobody else can build this one'},
+  ];
+
+  function renderProjects(filter){
+    const items = filter === 'All' ? PROJECTS : PROJECTS.filter(p => p.difficulty === filter);
+    document.getElementById('projects-grid').innerHTML = items.map(p => `
+      <div class="card">
+        <span class="tag">${p.domain}</span>
+        <span class="price-badge ${p.difficulty === 'Beginner' ? 'free' : (p.difficulty === 'Advanced' ? 'paid' : '')}" style="${p.difficulty === 'Intermediate' ? 'background:var(--ai-dim); color:var(--ai);' : ''}">${p.difficulty}</span>
+        <h3 style="margin-top:8px;">${p.title}</h3>
+        <p>${p.desc}</p>
+        <div class="foot"><span>${p.signal}</span></div>
+      </div>`).join('');
+  }
+  const PROJECT_DIFFICULTIES = ['All', 'Beginner', 'Intermediate', 'Advanced'];
+  document.getElementById('project-filters').innerHTML = PROJECT_DIFFICULTIES.map(d => `
+    <div class="filter-btn ${d==='All'?'active':''}" data-difficulty="${d}">${d}</div>`).join('');
+  document.getElementById('projects-count').textContent = PROJECTS.length + ' projects';
+  renderProjects('All');
+  document.querySelectorAll('#project-filters .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#project-filters .filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderProjects(btn.dataset.difficulty);
+    });
+  });
 
   // =========================================================================
   // Follow — YouTube, Twitter/X, Telegram

@@ -168,11 +168,25 @@ def fetch_models(max_results=10):
     return models
 
 
-def write_json(name, payload):
+def write_json(name, payload, error=None):
     out = {"generated_at": now_iso(), "items": payload}
+    if error:
+        out["error"] = error
     path = DATA_DIR / name
     path.write_text(json.dumps(out, indent=2, ensure_ascii=False))
-    print(f"wrote {path} ({len(payload)} items)")
+    print(f"wrote {path} ({len(payload)} items{', ERROR: ' + error if error else ''})")
+
+
+def fetch_with_retry(fn, attempts=2, delay=3):
+    last_err = None
+    for i in range(attempts):
+        try:
+            return fn(), None
+        except Exception as e:
+            last_err = f"{type(e).__name__}: {e}"
+            print(f"  attempt {i+1}/{attempts} failed: {last_err}")
+            time.sleep(delay)
+    return [], last_err
 
 
 def main():
@@ -183,12 +197,12 @@ def main():
         ("models.json", fetch_models),
     ]
     for filename, fn in jobs:
-        try:
-            write_json(filename, fn())
-        except Exception as e:
-            print(f"WARN: {filename} fetch failed: {e}")
-            # Don't crash the whole run if one source is flaky —
-            # leave the previous snapshot in place.
+        print(f"fetching {filename}...")
+        payload, error = fetch_with_retry(fn)
+        # Write every run, even on failure — a stale, silent file is
+        # undiagnosable from outside the Actions log. An explicit "error"
+        # field is visible just by opening the JSON.
+        write_json(filename, payload, error=error)
         time.sleep(1)  # be polite between sources
 
 

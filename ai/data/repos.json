@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T23:07:10+00:00",
+  "generated_at": "2026-07-12T23:09:38+00:00",
   "items": [
     {
       "name": "affaan-m/ECC",
@@ -7,7 +7,8 @@
       "url": "https://github.com/affaan-m/ECC",
       "stars": 228931,
       "language": "JavaScript",
-      "updated_at": "2026-07-09T07:53:52Z"
+      "updated_at": "2026-07-09T07:53:52Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/124439313?v=4"
     },
     {
       "name": "NousResearch/hermes-agent",
@@ -15,7 +16,8 @@
       "url": "https://github.com/NousResearch/hermes-agent",
       "stars": 213723,
       "language": "Python",
-      "updated_at": "2026-07-12T18:27:47Z"
+      "updated_at": "2026-07-12T18:27:47Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134168893?v=4"
     },
     {
       "name": "tensorflow/tensorflow",
@@ -23,7 +25,8 @@
       "url": "https://github.com/tensorflow/tensorflow",
       "stars": 196292,
       "language": "C++",
-      "updated_at": "2026-07-12T21:55:48Z"
+      "updated_at": "2026-07-12T21:55:48Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15658638?v=4"
     },
     {
       "name": "Significant-Gravitas/AutoGPT",
@@ -31,7 +34,8 @@
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
       "stars": 185496,
       "language": "Python",
-      "updated_at": "2026-07-11T20:00:23Z"
+      "updated_at": "2026-07-11T20:00:23Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/130738209?v=4"
     },
     {
       "name": "ollama/ollama",
@@ -39,7 +43,8 @@
       "url": "https://github.com/ollama/ollama",
       "stars": 175997,
       "language": "Go",
-      "updated_at": "2026-07-10T00:42:15Z"
+      "updated_at": "2026-07-10T00:42:15Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/151674099?v=4"
     },
     {
       "name": "f/prompts.chat",
@@ -47,7 +52,8 @@
       "url": "https://github.com/f/prompts.chat",
       "stars": 165564,
       "language": "HTML",
-      "updated_at": "2026-07-12T04:15:09Z"
+      "updated_at": "2026-07-12T04:15:09Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/196477?v=4"
     },
     {
       "name": "huggingface/transformers",
@@ -55,7 +61,8 @@
       "url": "https://github.com/huggingface/transformers",
       "stars": 162546,
       "language": "Python",
-      "updated_at": "2026-07-12T00:55:33Z"
+      "updated_at": "2026-07-12T00:55:33Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25720743?v=4"
     },
     {
       "name": "firecrawl/firecrawl",
@@ -63,23 +70,8 @@
       "url": "https://github.com/firecrawl/firecrawl",
       "stars": 149873,
       "language": "TypeScript",
-      "updated_at": "2026-07-12T13:18:12Z"
-    },
-    {
-      "name": "langgenius/dify",
-      "description": "Production-ready platform for agentic workflow development.",
-      "url": "https://github.com/langgenius/dify",
-      "stars": 148607,
-      "language": "TypeScript",
-      "updated_at": "2026-07-12T17:19:42Z"
-    },
-    {
-      "name": "langchain-ai/langchain",
-      "description": "The agent engineering platform.",
-      "url": "https://github.com/langchain-ai/langchain",
-      "stars": 141602,
-      "language": "Python",
-      "updated_at": "2026-07-12T21:59:21Z"
+      "updated_at": "2026-07-12T13:18:12Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/135057108?v=4"
     }
   ]
 }

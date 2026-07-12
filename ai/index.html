@@ -35,6 +35,17 @@
 
   @keyframes blink{ 0%,100%{opacity:1;} 50%{opacity:.25;} }
 
+  .logo-mark{ width:26px; height:26px; flex-shrink:0; }
+  .logo-mark .orbit-ring{ fill:none; stroke:var(--ai); stroke-width:1.4; opacity:0.85; }
+  .logo-mark .orbit-ring.spin{ animation:spin 40s linear infinite; transform-origin:50px 50px; }
+  .logo-mark .orbit-ring.spin-rev{ animation:spin-rev 60s linear infinite; transform-origin:50px 50px; opacity:0.5; }
+  .logo-mark .orbit-core{ fill:var(--gold); }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  @keyframes spin-rev{ to{ transform:rotate(-360deg); } }
+  @media (prefers-reduced-motion: reduce){
+    .logo-mark .orbit-ring.spin, .logo-mark .orbit-ring.spin-rev{ animation:none; }
+  }
+
   .hero{ padding:64px 32px 40px; max-width:900px; margin:0 auto; }
   .hero .eyebrow{
     font-family:var(--mono); font-size:12px; color:var(--ai); letter-spacing:.12em;
@@ -74,6 +85,31 @@
     margin-top:12px; padding-top:10px; border-top:1px solid var(--border);
     display:flex; justify-content:space-between; font-family:var(--mono); font-size:10.5px; color:var(--text-faint);
   }
+
+  /* Site favicons + avatars */
+  .card-head-row{ display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+  .favicon{
+    width:16px; height:16px; border-radius:3px; flex-shrink:0; background:var(--border);
+    object-fit:cover;
+  }
+  .avatar{
+    width:28px; height:28px; border-radius:6px; flex-shrink:0; background:var(--border);
+    object-fit:cover; border:1px solid var(--border);
+  }
+  .card-head-row .tag{ margin-bottom:0; }
+
+  /* Book covers */
+  .book-cover-wrap{
+    width:100%; aspect-ratio:2/3; border-radius:3px; overflow:hidden; margin-bottom:12px;
+    background:linear-gradient(135deg, var(--panel-2), var(--border));
+    display:flex; align-items:center; justify-content:center; position:relative;
+  }
+  .book-cover-wrap img{ width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
+  .book-cover-fallback{
+    font-family:var(--mono); font-size:11px; color:var(--text-faint); text-align:center; padding:12px;
+    line-height:1.4;
+  }
+  .book-cover-fallback .glyph{ font-size:22px; display:block; margin-bottom:6px; opacity:.5; }
 
   .loading-row{ font-family:var(--mono); font-size:12px; color:var(--text-faint); padding:12px 0; }
 
@@ -146,6 +182,7 @@
     padding:12px 16px; border-bottom:1px solid var(--border);
   }
   .channel-row:last-child{ border-bottom:none; }
+  .channel-row .name-cell{ display:flex; align-items:center; gap:10px; }
   .channel-row a{ font-size:13.5px; font-weight:600; text-decoration:none; }
   .channel-row a:hover{ color:var(--ai); }
   .channel-row .desc{ font-size:12px; color:var(--text-dim); flex:1; margin-left:14px; }
@@ -170,7 +207,14 @@
 <body>
 
 <header class="top">
-  <div class="brand"><span class="dot"></span> BKQ / AI-ML</div>
+  <div class="brand">
+    <svg class="logo-mark" viewBox="0 0 100 100">
+      <ellipse class="orbit-ring spin" cx="50" cy="50" rx="42" ry="16" transform="rotate(-20 50 50)"/>
+      <ellipse class="orbit-ring spin-rev" cx="50" cy="50" rx="42" ry="16" transform="rotate(40 50 50)"/>
+      <circle class="orbit-core" cx="50" cy="50" r="10"/>
+    </svg>
+    BKQ / AI-ML
+  </div>
   <nav>
     <a href="#prereqs">Prerequisites</a>
     <a href="#brief">Live Brief</a>
@@ -302,6 +346,22 @@
 
 <script>
   // =========================================================================
+  // Icon helpers
+  // =========================================================================
+  function faviconUrl(url){
+    try{
+      const host = new URL(url).hostname;
+      return `https://www.google.com/s2/favicons?domain=${host}&sz=64`;
+    }catch(e){ return ''; }
+  }
+  function faviconImg(url, size){
+    const s = size || 16;
+    const src = faviconUrl(url);
+    if(!src) return '';
+    return `<img class="favicon" src="${src}" width="${s}" height="${s}" alt="" loading="lazy" onerror="this.style.display='none'">`;
+  }
+
+  // =========================================================================
   // Prerequisites — Maths / Coding / Tools, checkable like journey steps
   // =========================================================================
   const PREREQUISITES = {
@@ -431,7 +491,7 @@
     el.innerHTML = data.items.map(p => `
       <div class="card">
         <a class="card-link" href="${p.link}" target="_blank" rel="noopener">
-          <span class="tag">${(p.category || 'paper').toUpperCase()}</span>
+          <div class="card-head-row">${faviconImg(p.link)}<span class="tag">${(p.category || 'paper').toUpperCase()}</span></div>
           <h3>${p.title}</h3>
           <p>${p.summary}</p>
           <div class="foot"><span>${(p.authors||[]).join(', ')}</span><span>${timeAgo(p.published)}</span></div>
@@ -444,7 +504,7 @@
     el.innerHTML = data.items.map(s => `
       <div class="card">
         <a class="card-link" href="${s.url}" target="_blank" rel="noopener">
-          <span class="tag">Discussion</span>
+          <div class="card-head-row">${faviconImg(s.url)}<span class="tag">Discussion</span></div>
           <h3>${s.title}</h3>
           <div class="foot"><span>▲ ${s.points} · ${s.comments} comments</span><span>${timeAgo(s.created_at)}</span></div>
         </a>
@@ -456,7 +516,10 @@
     el.innerHTML = data.items.map(r => `
       <div class="card">
         <a class="card-link" href="${r.url}" target="_blank" rel="noopener">
-          <span class="tag">${r.language || 'repo'}</span>
+          <div class="card-head-row">
+            ${r.avatar_url ? `<img class="avatar" src="${r.avatar_url}" alt="" loading="lazy" onerror="this.style.display='none'">` : faviconImg(r.url, 28)}
+            <span class="tag">${r.language || 'repo'}</span>
+          </div>
           <h3>${r.name}</h3>
           <p>${r.description || ''}</p>
           <div class="foot"><span>★ ${fmtNum(r.stars)}</span><span>${timeAgo(r.updated_at)}</span></div>
@@ -469,7 +532,7 @@
     el.innerHTML = data.items.map(m => `
       <div class="card">
         <a class="card-link" href="${m.url}" target="_blank" rel="noopener">
-          <span class="tag">${m.pipeline_tag || 'model'}</span>
+          <div class="card-head-row">${faviconImg(m.url)}<span class="tag">${m.pipeline_tag || 'model'}</span></div>
           <h3>${m.id}</h3>
           <div class="foot"><span>♥ ${fmtNum(m.likes)}</span><span>${fmtNum(m.downloads)} downloads</span></div>
         </a>
@@ -511,7 +574,7 @@
   document.getElementById('essentials-grid').innerHTML = ESSENTIALS.map(r => `
     <div class="card">
       <a class="card-link" href="${r.url}" target="_blank" rel="noopener">
-        <span class="tag">${r.tag}</span>
+        <div class="card-head-row">${faviconImg(r.url)}<span class="tag">${r.tag}</span></div>
         <h3>${r.title}</h3>
         <p>${r.desc}</p>
       </a>
@@ -569,7 +632,7 @@
     document.getElementById('courses-grid').innerHTML = items.map(c => `
       <div class="card">
         <a class="card-link" href="${c.url}" target="_blank" rel="noopener">
-          <span class="tag">${c.platform}</span>
+          <div class="card-head-row">${faviconImg(c.url)}<span class="tag">${c.platform}</span></div>
           <span class="price-badge ${c.price}">${c.price}</span>
           <h3 style="margin-top:8px;">${c.title}</h3>
           <p>${c.desc}</p>
@@ -616,11 +679,34 @@
     {category:'Context & Strategy', price:'paid', title:'Prediction Machines', author:'Agrawal, Gans, Goldfarb', desc:'Reframes AI as an economics problem — cheap prediction — genuinely useful for delivery/ops-track thinking.', url:'https://www.google.com/search?tbm=bks&q=Prediction+Machines+Agrawal+Gans+Goldfarb'},
     {category:'Context & Strategy', price:'paid', title:'AI Superpowers', author:'Kai-Fu Lee', desc:'US vs. China AI strategy from a former Google China head — useful context for where the industry is headed.', url:'https://www.google.com/search?tbm=bks&q=AI+Superpowers+Kai-Fu+Lee'},
   ];
+  const bookCoverCache = {};
+  async function fetchBookCover(book){
+    const key = book.title + '|' + book.author;
+    if(bookCoverCache[key] !== undefined) return bookCoverCache[key];
+    try{
+      const q = encodeURIComponent(`intitle:${book.title} inauthor:${book.author}`);
+      const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${q}&maxResults=1`);
+      if(!res.ok) throw new Error('bad response');
+      const data = await res.json();
+      const item = data.items && data.items[0];
+      const links = item && item.volumeInfo && item.volumeInfo.imageLinks;
+      const thumb = links && (links.thumbnail || links.smallThumbnail);
+      const url = thumb ? thumb.replace('http://','https://') : null;
+      bookCoverCache[key] = url;
+      return url;
+    }catch(e){
+      bookCoverCache[key] = null;
+      return null;
+    }
+  }
   function renderBooks(filter){
     const items = filter === 'All' ? BOOKS : BOOKS.filter(b => b.category === filter);
-    document.getElementById('books-grid').innerHTML = items.map(b => `
+    document.getElementById('books-grid').innerHTML = items.map((b, i) => `
       <div class="card">
         <a class="card-link" href="${b.url}" target="_blank" rel="noopener">
+          <div class="book-cover-wrap" id="cover-${filter.replace(/\s/g,'')}-${i}">
+            <div class="book-cover-fallback"><span class="glyph">📖</span>${b.title}</div>
+          </div>
           <span class="tag">${b.category}</span>
           <span class="price-badge ${b.price}">${b.price}</span>
           <h3 style="margin-top:8px;">${b.title}</h3>
@@ -628,6 +714,14 @@
           <p>${b.desc}</p>
         </a>
       </div>`).join('');
+
+    items.forEach((b, i) => {
+      fetchBookCover(b).then(url => {
+        if(!url) return;
+        const el = document.getElementById(`cover-${filter.replace(/\s/g,'')}-${i}`);
+        if(el) el.insertAdjacentHTML('beforeend', `<img src="${url}" alt="" loading="lazy" onerror="this.style.display='none'">`);
+      });
+    });
   }
   const BOOK_CATEGORIES = ['All', ...new Set(BOOKS.map(b => b.category))];
   document.getElementById('book-filters').innerHTML = BOOK_CATEGORIES.map(c => `
@@ -842,7 +936,10 @@
   function renderChannelList(elId, items, isTwitter){
     document.getElementById(elId).innerHTML = items.map(c => `
       <div class="channel-row">
-        <a href="${c.url}" target="_blank" rel="noopener">${c.name}${isTwitter ? ' <span style="color:var(--text-faint); font-weight:400;">' + c.handle + '</span>' : ''}</a>
+        <div class="name-cell">
+          ${faviconImg(c.url, 18)}
+          <a href="${c.url}" target="_blank" rel="noopener">${c.name}${isTwitter ? ' <span style="color:var(--text-faint); font-weight:400;">' + c.handle + '</span>' : ''}</a>
+        </div>
         <span class="desc">${c.desc}</span>
       </div>`).join('');
   }
@@ -889,7 +986,7 @@
     document.getElementById('library-grid').innerHTML = items.map(r => `
       <div class="card">
         <a class="card-link" href="${r.url}" target="_blank" rel="noopener">
-          <span class="tag">${r.type}</span>
+          <div class="card-head-row">${faviconImg(r.url)}<span class="tag">${r.type}</span></div>
           <h3>${r.title}</h3>
           <p>${r.desc}</p>
         </a>

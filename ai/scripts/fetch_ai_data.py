@@ -133,6 +133,7 @@ def fetch_repos(max_results=10):
         for item in data.get("items", []):
             name = item.get("full_name")
             if name and name not in seen:
+                owner = item.get("owner") or {}
                 seen[name] = {
                     "name": name,
                     "description": item.get("description"),
@@ -140,6 +141,7 @@ def fetch_repos(max_results=10):
                     "stars": item.get("stargazers_count"),
                     "language": item.get("language"),
                     "updated_at": item.get("pushed_at"),
+                    "avatar_url": owner.get("avatar_url"),
                 }
         time.sleep(0.5)  # stay well under GitHub's unauthenticated rate limit
 

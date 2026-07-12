@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-12T22:15:16+00:00",
+  "generated_at": "2026-07-12T23:07:10+00:00",
   "items": [
     {
       "name": "affaan-m/ECC",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 228927,
+      "stars": 228931,
       "language": "JavaScript",
       "updated_at": "2026-07-09T07:53:52Z"
     },
@@ -13,7 +13,7 @@
       "name": "NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 213714,
+      "stars": 213723,
       "language": "Python",
       "updated_at": "2026-07-12T18:27:47Z"
     },
@@ -21,7 +21,7 @@
       "name": "tensorflow/tensorflow",
       "description": "An Open Source Machine Learning Framework for Everyone",
       "url": "https://github.com/tensorflow/tensorflow",
-      "stars": 196326,
+      "stars": 196292,
       "language": "C++",
       "updated_at": "2026-07-12T21:55:48Z"
     },
@@ -37,7 +37,7 @@
       "name": "ollama/ollama",
       "description": "Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
       "url": "https://github.com/ollama/ollama",
-      "stars": 175994,
+      "stars": 175997,
       "language": "Go",
       "updated_at": "2026-07-10T00:42:15Z"
     },
@@ -45,7 +45,7 @@
       "name": "f/prompts.chat",
       "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
       "url": "https://github.com/f/prompts.chat",
-      "stars": 165561,
+      "stars": 165564,
       "language": "HTML",
       "updated_at": "2026-07-12T04:15:09Z"
     },
@@ -61,9 +61,25 @@
       "name": "firecrawl/firecrawl",
       "description": "The API to search, scrape, and interact with the web at scale. 🔥",
       "url": "https://github.com/firecrawl/firecrawl",
-      "stars": 149858,
+      "stars": 149873,
       "language": "TypeScript",
       "updated_at": "2026-07-12T13:18:12Z"
+    },
+    {
+      "name": "langgenius/dify",
+      "description": "Production-ready platform for agentic workflow development.",
+      "url": "https://github.com/langgenius/dify",
+      "stars": 148607,
+      "language": "TypeScript",
+      "updated_at": "2026-07-12T17:19:42Z"
+    },
+    {
+      "name": "langchain-ai/langchain",
+      "description": "The agent engineering platform.",
+      "url": "https://github.com/langchain-ai/langchain",
+      "stars": 141602,
+      "language": "Python",
+      "updated_at": "2026-07-12T21:59:21Z"
     }
   ]
 }

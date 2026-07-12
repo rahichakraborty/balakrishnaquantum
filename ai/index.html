@@ -193,6 +193,22 @@
   }
   .telegram-caution strong{ color:var(--gold); }
 
+  /* About */
+  .about-grid{ display:grid; grid-template-columns:200px 1fr; gap:32px; align-items:start; }
+  @media(max-width:760px){ .about-grid{ grid-template-columns:1fr; } }
+  .about-grid img{
+    width:100%; aspect-ratio:1; object-fit:cover; object-position:top center;
+    border-radius:8px; border:1px solid var(--border); background:#fff; display:block; margin-bottom:16px;
+  }
+  .about-stats{ border:1px solid var(--border); border-radius:4px; overflow:hidden; }
+  .about-stat-row{
+    display:flex; flex-direction:column; gap:2px; padding:10px 14px; border-bottom:1px solid var(--border); background:var(--panel);
+  }
+  .about-stat-row:last-child{ border-bottom:none; }
+  .about-stat-row .k{ font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-faint); }
+  .about-stat-row .v{ font-size:13px; color:var(--text); }
+  .about-grid p{ color:var(--text-dim); line-height:1.75; font-size:14px; margin-bottom:14px; }
+
   footer{
     border-top:1px solid var(--border); padding:32px; text-align:center;
     font-family:var(--mono); font-size:10px; letter-spacing:.15em; color:var(--text-faint); text-transform:uppercase;
@@ -225,6 +241,7 @@
     <a href="#projects">Projects</a>
     <a href="#follow">Follow</a>
     <a href="#library">Library</a>
+    <a href="#about">About</a>
   </nav>
   <a class="back" href="/">← balakrishnaquantum.com</a>
 </header>
@@ -340,6 +357,28 @@
   </div>
   <div class="filters" id="lib-filters"></div>
   <div class="grid cols-3" id="library-grid"></div>
+</section>
+
+<section id="about">
+  <div class="section-head">
+    <div><h2>About</h2><p class="sub">Built by someone obsessed with both markets and machines.</p></div>
+  </div>
+  <div class="about-grid">
+    <div>
+      <img src="../rahi-founder.png" alt="Rahi C., founder of BalakrishnaQuantum">
+      <div class="about-stats">
+        <div class="about-stat-row"><span class="k">Name</span><span class="v">Balakrishna Quantum (BKQ)</span></div>
+        <div class="about-stat-row"><span class="k">Founder</span><span class="v">Rahi C.</span></div>
+        <div class="about-stat-row"><span class="k">Base</span><span class="v">Bengaluru, IN</span></div>
+        <div class="about-stat-row"><span class="k">Background</span><span class="v">Ops &amp; Delivery, 10+ yrs</span></div>
+        <div class="about-stat-row"><span class="k">Building</span><span class="v">Quant Trading + AI/ML Hub</span></div>
+      </div>
+    </div>
+    <div>
+      <p>Rahi has a passion for AI/ML and Finance, and likes to build things. When he's not working on something new, he practices Zen meditation and plays games on his PlayStation.</p>
+      <p>Everything on this page started as something Rahi actually needed to learn — not content built to look busy. If you're here for AI/ML, the <a href="../finance.html" style="color:var(--ai);">trading dashboard</a> is worth a look too.</p>
+    </div>
+  </div>
 </section>
 
 <footer>Process Over Prediction — brief refreshed automatically twice daily</footer>
@@ -485,7 +524,8 @@
   function renderPapers(data){
     const el = document.getElementById('papers-grid');
     if(!data || !data.items || !data.items.length){
-      el.innerHTML = '<div class="loading-row">No data yet — runs on the first scheduled cycle after deploy, or trigger it manually from the Actions tab.</div>';
+      const errMsg = data && data.error ? ` Last error: <code style="color:var(--gold);">${data.error}</code>` : '';
+      el.innerHTML = `<div class="loading-row">No data yet — runs on the first scheduled cycle after deploy, or trigger it manually from the Actions tab.${errMsg}</div>`;
       return;
     }
     el.innerHTML = data.items.map(p => `
@@ -500,7 +540,10 @@
   }
   function renderHN(data){
     const el = document.getElementById('hn-grid');
-    if(!data || !data.items || !data.items.length){ el.innerHTML = '<div class="loading-row">No data yet.</div>'; return; }
+    if(!data || !data.items || !data.items.length){
+      const errMsg = data && data.error ? ' Last error: <code style="color:var(--gold);">' + data.error + '</code>' : '';
+      el.innerHTML = '<div class="loading-row">No data yet.' + errMsg + '</div>'; return;
+    }
     el.innerHTML = data.items.map(s => `
       <div class="card">
         <a class="card-link" href="${s.url}" target="_blank" rel="noopener">
@@ -512,7 +555,10 @@
   }
   function renderRepos(data){
     const el = document.getElementById('repos-grid');
-    if(!data || !data.items || !data.items.length){ el.innerHTML = '<div class="loading-row">No data yet.</div>'; return; }
+    if(!data || !data.items || !data.items.length){
+      const errMsg = data && data.error ? ' Last error: <code style="color:var(--gold);">' + data.error + '</code>' : '';
+      el.innerHTML = '<div class="loading-row">No data yet.' + errMsg + '</div>'; return;
+    }
     el.innerHTML = data.items.map(r => `
       <div class="card">
         <a class="card-link" href="${r.url}" target="_blank" rel="noopener">
@@ -528,7 +574,10 @@
   }
   function renderModels(data){
     const el = document.getElementById('models-grid');
-    if(!data || !data.items || !data.items.length){ el.innerHTML = '<div class="loading-row">No data yet.</div>'; return; }
+    if(!data || !data.items || !data.items.length){
+      const errMsg = data && data.error ? ' Last error: <code style="color:var(--gold);">' + data.error + '</code>' : '';
+      el.innerHTML = '<div class="loading-row">No data yet.' + errMsg + '</div>'; return;
+    }
     el.innerHTML = data.items.map(m => `
       <div class="card">
         <a class="card-link" href="${m.url}" target="_blank" rel="noopener">

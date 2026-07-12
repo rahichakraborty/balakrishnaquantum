@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BKQ AI/ML — Journeys, Milestones &amp; Resources</title>
+<style>
+  :root{
+    --bg:#0a0e14; --panel:#10141c; --panel-2:#141a24; --border:#1f2937;
+    --text:#e6e9ef; --text-dim:#8891a1; --text-faint:#4b5563;
+    --ai:#a78bfa; --ai-dim:rgba(167,139,250,0.12); --gold:#f5b942; --green:#34d399;
+    --display:'Space Grotesk',sans-serif; --body:'Inter',sans-serif; --mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{background:var(--bg); color:var(--text); font-family:var(--body); scroll-behavior:smooth;}
+  a{color:inherit;}
+
+  header.top{
+    position:sticky; top:0; z-index:30;
+    background:rgba(10,14,20,0.9); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+  }
+  header.top .brand{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--text-dim); display:flex; align-items:center; gap:10px;
+  }
+  header.top .brand .dot{ width:6px; height:6px; border-radius:50%; background:var(--ai); animation:blink 2s infinite; }
+  header.top nav{ display:flex; gap:24px; font-family:var(--mono); font-size:12px; }
+  header.top nav a{ color:var(--text-dim); text-decoration:none; transition:color .2s; }
+  header.top nav a:hover{ color:var(--ai); }
+  header.top .back{ font-family:var(--mono); font-size:11px; color:var(--text-faint); text-decoration:none; }
+  header.top .back:hover{ color:var(--gold); }
+
+  @keyframes blink{ 0%,100%{opacity:1;} 50%{opacity:.25;} }
+
+  .hero{ padding:80px 32px 56px; max-width:900px; margin:0 auto; }
+  .hero .eyebrow{
+    font-family:var(--mono); font-size:12px; color:var(--ai); letter-spacing:.12em;
+    text-transform:uppercase; margin-bottom:20px;
+  }
+  .hero h1{
+    font-family:var(--display); font-size:clamp(30px,4.6vw,50px); font-weight:600;
+    letter-spacing:-0.02em; line-height:1.1; margin-bottom:16px;
+  }
+  .hero p{ color:var(--text-dim); font-size:15px; max-width:560px; line-height:1.6; }
+
+  section{ max-width:1100px; margin:0 auto; padding:44px 32px; }
+  .section-head{
+    display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;
+    border-bottom:1px solid var(--border); padding-bottom:14px; flex-wrap:wrap; gap:8px;
+  }
+  .section-head h2{ font-family:var(--display); font-size:21px; font-weight:600; letter-spacing:-0.01em; }
+  .section-head p.sub{ font-size:13px; color:var(--text-dim); margin-top:6px; max-width:600px; }
+  .section-head .meta{ font-family:var(--mono); font-size:11px; color:var(--text-faint); }
+
+  /* Essential resources */
+  .grid{ display:grid; gap:14px; }
+  .grid.cols-3{ grid-template-columns:repeat(3,1fr); }
+  .card{
+    background:var(--panel); border:1px solid var(--border); border-radius:4px;
+    padding:18px; transition:border-color .2s, background .2s;
+  }
+  .card:hover{ border-color:var(--ai); background:var(--panel-2); }
+  .card a.card-link{ text-decoration:none; display:block; }
+  .card .tag{
+    font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.08em;
+    color:var(--ai); margin-bottom:8px; display:inline-block;
+  }
+  .card h3{ font-size:14px; font-weight:600; line-height:1.4; margin-bottom:6px; }
+  .card p{ font-size:12.5px; color:var(--text-dim); line-height:1.55; }
+
+  /* Journeys */
+  .journey-tabs{ display:flex; gap:8px; margin-bottom:24px; flex-wrap:wrap; }
+  .journey-tab{
+    font-family:var(--mono); font-size:11.5px; padding:10px 16px; border:1px solid var(--border);
+    border-radius:2px; cursor:pointer; color:var(--text-dim); background:var(--panel);
+    display:flex; align-items:center; gap:10px;
+  }
+  .journey-tab.active{ border-color:var(--ai); color:var(--ai); background:var(--ai-dim); }
+  .journey-tab .pct{
+    font-size:10px; background:var(--border); color:var(--text-dim); padding:2px 6px; border-radius:10px;
+  }
+  .journey-tab.active .pct{ background:var(--ai); color:var(--bg); }
+
+  .journey-panel{ display:none; }
+  .journey-panel.active{ display:block; }
+
+  .journey-intro{
+    background:var(--panel); border:1px solid var(--border); border-radius:4px;
+    padding:20px 22px; margin-bottom:20px;
+  }
+  .journey-intro h3{ font-size:16px; margin-bottom:8px; }
+  .journey-intro p{ font-size:13px; color:var(--text-dim); line-height:1.6; }
+
+  .progress-bar{
+    height:6px; background:var(--border); border-radius:3px; overflow:hidden; margin-top:14px;
+  }
+  .progress-fill{ height:100%; background:var(--ai); transition:width .3s ease; }
+
+  .roadmap-track{ border:1px solid var(--border); border-radius:4px; overflow:hidden; margin-bottom:16px; }
+  .roadmap-step{
+    display:flex; gap:14px; padding:16px 20px; border-bottom:1px solid var(--border); background:var(--panel);
+    align-items:flex-start; cursor:pointer; transition:background .15s;
+  }
+  .roadmap-step:hover{ background:var(--panel-2); }
+  .roadmap-step:last-child{ border-bottom:none; }
+  .roadmap-step .check{
+    width:18px; height:18px; border:1px solid var(--text-faint); border-radius:3px; flex-shrink:0; margin-top:2px;
+    display:flex; align-items:center; justify-content:center; font-size:11px; color:transparent;
+    transition:all .15s;
+  }
+  .roadmap-step.done .check{ background:var(--ai); border-color:var(--ai); color:var(--bg); }
+  .roadmap-step.done h4, .roadmap-step.done p{ color:var(--text-faint); }
+  .roadmap-step h4{ font-size:14px; margin-bottom:4px; }
+  .roadmap-step p{ font-size:12px; color:var(--text-dim); line-height:1.5; }
+
+  .milestone{
+    border:1px solid var(--gold); border-radius:4px; padding:20px 22px;
+    background:linear-gradient(135deg, rgba(245,185,66,0.06), transparent);
+  }
+  .milestone .tag{
+    font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.1em;
+    color:var(--gold); margin-bottom:10px; display:inline-block;
+  }
+  .milestone h4{ font-size:16px; margin-bottom:8px; }
+  .milestone p{ font-size:13px; color:var(--text-dim); line-height:1.6; }
+
+  /* Full resource library */
+  .lib-filters{ display:flex; gap:8px; margin-bottom:20px; flex-wrap:wrap; }
+  .lib-filter{
+    font-family:var(--mono); font-size:11px; padding:7px 13px; border:1px solid var(--border);
+    border-radius:2px; cursor:pointer; color:var(--text-dim); background:transparent;
+  }
+  .lib-filter.active{ border-color:var(--ai); color:var(--ai); background:var(--ai-dim); }
+
+  footer{
+    border-top:1px solid var(--border); padding:32px; text-align:center;
+    font-family:var(--mono); font-size:10px; letter-spacing:.15em; color:var(--text-faint); text-transform:uppercase;
+  }
+
+  @media (max-width:760px){
+    .grid.cols-3{ grid-template-columns:1fr; }
+    header.top nav{ display:none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brand"><span class="dot"></span> BKQ / AI-ML</div>
+  <nav>
+    <a href="#essentials">Essentials</a>
+    <a href="#journeys">Journeys</a>
+    <a href="#library">Full Library</a>
+  </nav>
+  <a class="back" href="/">← balakrishnaquantum.com</a>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Vertical 02 — Learn by Building</div>
+  <h1>Pick a journey. Finish a milestone.</h1>
+  <p>Four paths into AI/ML, each ending in one real project instead of an open-ended list of links. Track your own progress as you go.</p>
+</div>
+
+<section id="essentials">
+  <div class="section-head">
+    <div><h2>Essential Resources</h2><p class="sub">The short list — if you only bookmark six things, bookmark these.</p></div>
+  </div>
+  <div class="grid cols-3" id="essentials-grid"></div>
+</section>
+
+<section id="journeys">
+  <div class="section-head">
+    <div><h2>Journeys</h2><p class="sub">Pick the one closest to where you're starting from.</p></div>
+  </div>
+
+  <div class="journey-tabs" id="journey-tabs"></div>
+  <div id="journey-panels"></div>
+</section>
+
+<section id="library">
+  <div class="section-head">
+    <div><h2>Full Resource Library</h2><p class="sub">Everything, filterable by type.</p></div>
+    <span class="meta" id="library-count"></span>
+  </div>
+  <div class="lib-filters" id="lib-filters"></div>
+  <div class="grid cols-3" id="library-grid"></div>
+</section>
+
+<footer>Process Over Prediction — progress saved in this browser</footer>
+
+<script>
+  // ---------------------------------------------------------------------
+  // Data
+  // ---------------------------------------------------------------------
+  const ESSENTIALS = [
+    {tag:'Start here', title:'3Blue1Brown — Neural Networks', desc:'The single best visual intuition for how neural nets actually work, in under an hour.', url:'https://www.3blue1brown.com/topics/neural-networks'},
+    {tag:'Course', title:'Hugging Face LLM Course', desc:'Free, hands-on, maintained by the library authors. The fastest path to a working RAG app.', url:'https://huggingface.co/learn'},
+    {tag:'Reference', title:'Papers With Code', desc:'State-of-the-art tracked by task, every result linked to working code.', url:'https://paperswithcode.com/'},
+    {tag:'Docs', title:'LangChain / LlamaIndex', desc:'RAG and agent orchestration — read after you understand what they abstract away, not before.', url:'https://python.langchain.com/'},
+    {tag:'Paper', title:'Attention Is All You Need', desc:'The transformer paper. Read once you can follow the architecture diagram unaided.', url:'https://arxiv.org/abs/1706.03762'},
+    {tag:'Practice', title:'Kaggle', desc:'Real datasets, real leaderboards — the fastest feedback loop for classical ML.', url:'https://www.kaggle.com/'},
+  ];
+
+  const JOURNEYS = [
+    {
+      id:'ops',
+      label:'Ops / Delivery → AI/ML',
+      intro:'Team leadership on LLM-adjacent workflows, vendor management, cross-functional delivery — that\'s AI/ML operations experience, not a blank resume. This path gets you to one demonstrable build without requiring a CS degree first.',
+      steps:[
+        {title:'Reframe what you already have', desc:'Write down every AI/ML-adjacent thing in your current role — quality metrics, model-output review, cross-team delivery. This becomes your resume language.'},
+        {title:'LLM & RAG fundamentals — just enough to build', desc:'Tokenization, embeddings, retrieval, prompting. Depth of a practitioner, not a researcher.'},
+        {title:'Learn one orchestration framework', desc:'LangChain or LlamaIndex — pick one, ignore the other until you have a reason to switch.'},
+        {title:'Build the retrieval pipeline', desc:'Chunking strategy, vector store, retrieval quality checks — the part that\'s actually hard.'},
+        {title:'Wrap it in something demoable', desc:'A simple UI or CLI. It needs to be shown in an interview, not just described.'},
+      ],
+      milestone:{title:'Ship a working RAG document Q&A app', desc:'Point it at a real set of documents (your own resume history, a company\'s public filings, anything with substance). It should answer questions with citations. This is your primary interview artifact.'}
+    },
+    {
+      id:'dev',
+      label:'Developer → GenAI Engineer',
+      intro:'You already think in systems — this path compounds faster because the fundamentals map onto things you already know (APIs, state, error handling).',
+      steps:[
+        {title:'LLM fundamentals', desc:'Attention, context windows, sampling parameters — the mental model behind every framework you\'ll use.'},
+        {title:'RAG pipelines', desc:'Chunking, embeddings, vector stores — build one from raw API calls before reaching for a framework.'},
+        {title:'Function calling & tool use', desc:'Give a model access to real APIs and handle the failure cases — this is where most "agent" demos fall apart.'},
+        {title:'Multi-step agent planning', desc:'Chained reasoning, state across steps, knowing when a single call would have been simpler.'},
+        {title:'Production hardening', desc:'Guardrails, observability, cost and latency budgets — the gap between a demo and something a team ships.'},
+      ],
+      milestone:{title:'Build and deploy an agent with real tool-calling', desc:'Not a toy — an agent that calls at least two real APIs, handles a failure gracefully, and is deployed somewhere reachable by a URL.'}
+    },
+    {
+      id:'fresh',
+      label:'Fresh Start → ML / Data Science',
+      intro:'Resist the pull straight into LLMs. The fundamentals here compound — skipping them shows up later as a ceiling you can\'t explain.',
+      steps:[
+        {title:'Python & math foundations', desc:'Linear algebra, probability, and Python fluency — not mastery, just enough to stop fighting the tools.'},
+        {title:'Classical ML first', desc:'Regression, trees, ensembles. scikit-learn fluency before any deep learning.'},
+        {title:'Build a neural net from scratch', desc:'No PyTorch, no TensorFlow — forward pass, backprop, gradient descent by hand. This is the single highest-leverage exercise on this path.'},
+        {title:'Rebuild it with a framework', desc:'Same problem, PyTorch this time. The contrast is what makes the framework make sense.'},
+        {title:'One finished project, fully documented', desc:'A single well-documented project beats five half-built ones — this is what actually gets clicked on.'},
+      ],
+      milestone:{title:'Scratch-built MLP vs. scikit-learn, side by side', desc:'Implement a multi-layer perceptron with no ML framework, then the same model in scikit-learn. Write up what the framework actually saved you.'}
+    },
+    {
+      id:'quant',
+      label:'Trader → Quant ML',
+      intro:'The bridge back to your own trading system. This path only makes sense if you already understand market structure — which you do.',
+      steps:[
+        {title:'Time-series fundamentals for ML', desc:'Stationarity, lookahead bias, why standard train/test splits break on price data.'},
+        {title:'Feature engineering from your own indicators', desc:'Turn your existing BKQ indicator outputs into a labeled feature set instead of starting from raw OHLCV.'},
+        {title:'Classical models first', desc:'Gradient-boosted trees on your feature set before reaching for anything deep — establish a baseline that\'s hard to beat.'},
+        {title:'Sequence models', desc:'LSTM or a small transformer on the same data — compare honestly against the classical baseline, don\'t assume deep = better.'},
+        {title:'Backtest against your real system', desc:'Walk-forward validation against your actual trade log, not just historical accuracy — the only test that matters.'},
+      ],
+      milestone:{title:'BTC-direction classifier, backtested against your own indicator suite', desc:'A model trained on features derived from your BKQ indicators, walk-forward tested, compared honestly against your existing discretionary win rate. The result matters less than the rigor.'}
+    },
+  ];
+
+  const LIBRARY = [
+    {type:'Course', title:'CS231n — Deep Learning for Vision', desc:'Stanford\'s foundational course, free lecture notes and assignments.', url:'http://cs231n.stanford.edu/'},
+    {type:'Course', title:'fast.ai — Practical Deep Learning', desc:'Top-down, code-first path into deep learning.', url:'https://course.fast.ai/'},
+    {type:'Course', title:'Hugging Face LLM Course', desc:'Free, hands-on transformers and NLP course.', url:'https://huggingface.co/learn'},
+    {type:'Course', title:'Andrew Ng — Machine Learning Specialization', desc:'The classic, still one of the clearest intros to classical ML.', url:'https://www.coursera.org/specializations/machine-learning-introduction'},
+    {type:'Docs', title:'PyTorch Tutorials', desc:'Official docs, the fastest way to get unstuck on syntax.', url:'https://pytorch.org/tutorials/'},
+    {type:'Docs', title:'LangChain Documentation', desc:'RAG and agent orchestration framework docs.', url:'https://python.langchain.com/'},
+    {type:'Docs', title:'Hugging Face Hub Docs', desc:'Models, datasets, and Spaces — the practical reference.', url:'https://huggingface.co/docs'},
+    {type:'Paper', title:'Attention Is All You Need', desc:'The transformer paper.', url:'https://arxiv.org/abs/1706.03762'},
+    {type:'Paper', title:'LoRA: Low-Rank Adaptation', desc:'The paper behind most practical fine-tuning today.', url:'https://arxiv.org/abs/2106.09685'},
+    {type:'Reference', title:'Papers With Code', desc:'State-of-the-art tracking by task, linked to implementations.', url:'https://paperswithcode.com/'},
+    {type:'Reference', title:'3Blue1Brown — Neural Networks', desc:'Visual intuition for neural network fundamentals.', url:'https://www.3blue1brown.com/topics/neural-networks'},
+    {type:'Reference', title:'MIT OpenCourseWare — Linear Algebra', desc:'Gilbert Strang\'s course, the standard reference.', url:'https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/'},
+    {type:'Practice', title:'Kaggle', desc:'Real datasets, real leaderboards, fastest feedback loop.', url:'https://www.kaggle.com/'},
+    {type:'Practice', title:'Papers With Code — Trending', desc:'What\'s currently reproducible and state-of-the-art.', url:'https://paperswithcode.com/trending'},
+    {type:'Tool', title:'Weights & Biases', desc:'Experiment tracking — start using this from your first real project.', url:'https://wandb.ai/'},
+  ];
+
+  // ---------------------------------------------------------------------
+  // Progress persistence (falls back to in-memory if storage is blocked)
+  // ---------------------------------------------------------------------
+  let memoryStore = {};
+  function loadProgress(){
+    try{
+      return JSON.parse(localStorage.getItem('bkq_ai_journey_progress') || '{}');
+    }catch(e){ return memoryStore; }
+  }
+  function saveProgress(data){
+    try{
+      localStorage.setItem('bkq_ai_journey_progress', JSON.stringify(data));
+    }catch(e){ memoryStore = data; }
+  }
+  let progress = loadProgress();
+
+  // ---------------------------------------------------------------------
+  // Render: essentials
+  // ---------------------------------------------------------------------
+  document.getElementById('essentials-grid').innerHTML = ESSENTIALS.map(r => `
+    <div class="card">
+      <a class="card-link" href="${r.url}" target="_blank" rel="noopener">
+        <span class="tag">${r.tag}</span>
+        <h3>${r.title}</h3>
+        <p>${r.desc}</p>
+      </a>
+    </div>`).join('');
+
+  // ---------------------------------------------------------------------
+  // Render: journeys
+  // ---------------------------------------------------------------------
+  function journeyPct(journey){
+    const done = journey.steps.filter((s,i) => progress[journey.id + '_' + i]).length;
+    return Math.round((done / journey.steps.length) * 100);
+  }
+
+  function renderTabs(activeId){
+    document.getElementById('journey-tabs').innerHTML = JOURNEYS.map(j => `
+      <div class="journey-tab ${j.id===activeId?'active':''}" data-journey="${j.id}">
+        ${j.label} <span class="pct">${journeyPct(j)}%</span>
+      </div>`).join('');
+    document.querySelectorAll('.journey-tab').forEach(tab => {
+      tab.addEventListener('click', () => showJourney(tab.dataset.journey));
+    });
+  }
+
+  function renderPanels(){
+    document.getElementById('journey-panels').innerHTML = JOURNEYS.map(j => `
+      <div class="journey-panel" id="panel-${j.id}">
+        <div class="journey-intro">
+          <h3>${j.label}</h3>
+          <p>${j.intro}</p>
+          <div class="progress-bar"><div class="progress-fill" id="fill-${j.id}" style="width:${journeyPct(j)}%"></div></div>
+        </div>
+        <div class="roadmap-track">
+          ${j.steps.map((s,i) => `
+            <div class="roadmap-step ${progress[j.id+'_'+i]?'done':''}" data-journey="${j.id}" data-step="${i}">
+              <div class="check">✓</div>
+              <div><h4>${s.title}</h4><p>${s.desc}</p></div>
+            </div>`).join('')}
+        </div>
+        <div class="milestone">
+          <span class="tag">Milestone Project</span>
+          <h4>${j.milestone.title}</h4>
+          <p>${j.milestone.desc}</p>
+        </div>
+      </div>`).join('');
+
+    document.querySelectorAll('.roadmap-step').forEach(step => {
+      step.addEventListener('click', () => {
+        const key = step.dataset.journey + '_' + step.dataset.step;
+        progress[key] = !progress[key];
+        saveProgress(progress);
+        step.classList.toggle('done');
+        const j = JOURNEYS.find(j => j.id === step.dataset.journey);
+        document.getElementById('fill-' + j.id).style.width = journeyPct(j) + '%';
+        renderTabs(step.dataset.journey);
+      });
+    });
+  }
+
+  function showJourney(id){
+    document.querySelectorAll('.journey-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + id).classList.add('active');
+    renderTabs(id);
+  }
+
+  renderTabs('ops');
+  renderPanels();
+  showJourney('ops');
+
+  // ---------------------------------------------------------------------
+  // Render: full library
+  // ---------------------------------------------------------------------
+  const TYPES = ['All', ...new Set(LIBRARY.map(r => r.type))];
+  document.getElementById('lib-filters').innerHTML = TYPES.map(t => `
+    <div class="lib-filter ${t==='All'?'active':''}" data-type="${t}">${t}</div>`).join('');
+  document.getElementById('library-count').textContent = LIBRARY.length + ' resources';
+
+  function renderLibrary(filter){
+    const items = filter === 'All' ? LIBRARY : LIBRARY.filter(r => r.type === filter);
+    document.getElementById('library-grid').innerHTML = items.map(r => `
+      <div class="card">
+        <a class="card-link" href="${r.url}" target="_blank" rel="noopener">
+          <span class="tag">${r.type}</span>
+          <h3>${r.title}</h3>
+          <p>${r.desc}</p>
+        </a>
+      </div>`).join('');
+  }
+  renderLibrary('All');
+
+  document.querySelectorAll('.lib-filter').forEach(f => {
+    f.addEventListener('click', () => {
+      document.querySelectorAll('.lib-filter').forEach(x => x.classList.remove('active'));
+      f.classList.add('active');
+      renderLibrary(f.dataset.type);
+    });
+  });
+</script>
+
+</body>
+</html>

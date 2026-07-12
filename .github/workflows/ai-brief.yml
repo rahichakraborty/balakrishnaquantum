@@ -1,0 +1,32 @@
+name: AI/ML Live Data Refresh
+
+on:
+  schedule:
+    - cron: '0 3,15 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch live AI/ML data
+        run: python ai/scripts/fetch_ai_data.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "bkq-ai-brief-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add ai/data/*.json
+          git diff --cached --quiet || git commit -m "chore: refresh live AI/ML data [automated]"
+          git push

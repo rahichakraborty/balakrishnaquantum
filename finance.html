@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balakrishna Quantum by Rahi | BKQ Trading Systems</title>
+<meta name="description" content="BKQ — indicators, live cockpit, and daily briefings. Built by a trader, used by a trader, every session.">
+<link rel="canonical" href="https://balakrishnaquantum.com/">
+<meta property="og:title" content="Balakrishna Quantum by Rahi | BKQ Trading Systems">
+<meta property="og:description" content="Indicators, live market cockpit, trade journal, and daily briefings — built by a trader, used by a trader, every session.">
+<meta property="og:url" content="https://balakrishnaquantum.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://balakrishnaquantum.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Balakrishna Quantum by Rahi | BKQ Trading Systems">
+<meta name="twitter:description" content="Indicators, live market cockpit, trade journal, and daily briefings — built by a trader, used by a trader, every session.">
+<meta name="twitter:image" content="https://balakrishnaquantum.com/og-image.png">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0d12;
+    --panel:#11151c;
+    --panel-2:#161c25;
+    --line:#232b36;
+    --line-soft:#1a212b;
+    --gold:#d4a017;
+    --gold-soft:#f0c453;
+    --teal:#2dd4bf;
+    --orange:#f97316;
+    --text:#e7e6e2;
+    --muted:#8b93a1;
+    --muted-2:#5c6472;
+    --green:#22c55e;
+    --red:#ef4444;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'IBM Plex Sans', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    overflow-x:hidden;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(212,160,23,0.07), transparent 60%),
+      radial-gradient(ellipse 900px 600px at 90% 10%, rgba(45,212,191,0.06), transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--gold);color:#0a0d12;}
+
+  /* ---------- Terminal window chrome (signature element) ---------- */
+  .term{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .term-bar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 12px;
+    background:var(--panel-2);
+    border-bottom:1px solid var(--line);
+  }
+  .term-dot{width:9px;height:9px;border-radius:50%;}
+  .term-dot.gold{background:var(--gold);}
+  .term-dot.teal{background:var(--teal);}
+  .term-dot.orange{background:var(--orange);}
+  .term-title{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.06em;
+    color:var(--muted);
+    margin-left:6px;
+    text-transform:uppercase;
+  }
+  .term-body{padding:16px;}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 32px;
+    background:rgba(10,13,18,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .logo{
+    font-family:var(--mono);font-weight:700;font-size:17px;letter-spacing:.02em;
+    display:flex;align-items:center;gap:10px;
+  }
+  .logo .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);
+    box-shadow:0 0 8px var(--gold);animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  .nav-links{display:flex;gap:28px;font-family:var(--mono);font-size:13px;color:var(--muted);}
+  .nav-links a:hover{color:var(--gold-soft);}
+  .nav-links .soon{opacity:.4;cursor:default;}
+  @media(max-width:860px){
+    .nav-links{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);flex-direction:column;
+      align-items:flex-start;padding:90px 32px 24px;gap:22px;display:none;overflow-y:auto;z-index:9999;}
+    .nav-links.open{display:flex;}
+    .mobile-menu-btn{display:flex !important;position:relative;z-index:10000;}
+  }
+  .mobile-menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:6px;color:var(--text);
+    width:36px;height:36px;align-items:center;justify-content:center;cursor:pointer;font-size:16px;}
+
+  /* ---------- Ticker tape ---------- */
+  .ticker-wrap{
+    border-bottom:1px solid var(--line-soft);
+    background:var(--panel);
+    overflow:hidden;white-space:nowrap;
+    padding:9px 0;
+  }
+  .ticker{display:inline-block;animation:scroll 38s linear infinite;font-family:var(--mono);font-size:13px;}
+  .ticker span{margin-right:38px;color:var(--muted);}
+  .ticker span b{color:var(--text);margin-right:6px;}
+  .up{color:var(--green);}
+  .down{color:var(--red);}
+  @keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:56px 32px 24px;max-width:1400px;margin:0 auto;}
+  .hero-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:28px;}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--teal);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-family:var(--mono);font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.15;margin:0 0 12px;letter-spacing:-.01em;}
+  h1 .accent{color:var(--gold);}
+  .sub{color:var(--muted);font-size:15.5px;max-width:560px;line-height:1.6;}
+  .session-clock{
+    font-family:var(--mono);text-align:right;
+  }
+  .session-clock .label{font-size:11px;color:var(--muted-2);letter-spacing:.08em;text-transform:uppercase;}
+  .session-clock .time{font-size:22px;color:var(--gold-soft);font-weight:600;}
+  .session-clock .status{font-size:12px;margin-top:2px;}
+  .status.live{color:var(--green);}
+  .status.off{color:var(--muted-2);}
+
+  /* ---------- Dashboard grid ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:1.7fr 1fr;
+    gap:16px;
+    margin-bottom:16px;
+  }
+  @media(max-width:1000px){.grid{grid-template-columns:1fr;}}
+  .stack{display:flex;flex-direction:column;gap:16px;}
+  #tv_chart_container{height:720px;}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px;}
+  @media(max-width:900px){.row3{grid-template-columns:1fr;}}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  @media(max-width:900px){.row2{grid-template-columns:1fr;}}
+
+  /* Fear/Greed gauge */
+  .fg-num{font-family:var(--mono);font-size:44px;font-weight:700;text-align:center;margin:6px 0 2px;}
+  .fg-label{text-align:center;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-family:var(--mono);}
+  .fg-bar{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--red),var(--orange),var(--gold),var(--teal),var(--green));margin-top:14px;position:relative;}
+  .fg-bar .marker{position:absolute;top:-4px;width:2px;height:16px;background:#fff;border-radius:1px;}
+
+  /* stat rows */
+  .stat-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--line-soft);font-size:13.5px;}
+  .stat-row:last-child{border-bottom:none;}
+  .stat-row .k{color:var(--muted);}
+  .stat-row .v{font-family:var(--mono);font-weight:600;}
+
+  /* social feeds */
+  .feed-frame{width:100%;height:420px;border:none;border-radius:6px;background:var(--panel-2);}
+  .feed-note{font-size:12px;color:var(--muted-2);margin-top:8px;line-height:1.5;}
+  .feed-note code{background:var(--panel-2);padding:1px 5px;border-radius:4px;color:var(--gold-soft);}
+  .linkout-grid{display:flex;flex-direction:column;gap:8px;}
+  .linkout-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 14px;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;transition:border-color .15s;}
+  .linkout-item:hover{border-color:var(--gold);}
+  .linkout-item .name{font-family:var(--mono);font-size:13px;color:var(--text);}
+  .linkout-item .desc{font-size:11px;color:var(--muted-2);margin-top:2px;}
+  .linkout-item .go{font-family:var(--mono);font-size:11px;color:var(--gold-soft);white-space:nowrap;}
+  .linkout-cta{display:block;text-align:center;margin-top:10px;font-family:var(--mono);font-size:12px;color:var(--teal);border:1px solid var(--teal);border-radius:6px;padding:9px;}
+  .linkout-cta:hover{background:rgba(45,212,191,0.08);}
+
+  /* ---------- Section shells ---------- */
+  section{max-width:1400px;margin:0 auto;padding:64px 32px;}
+  .section-head{margin-bottom:36px;}
+  .section-head .eyebrow{margin-bottom:8px;}
+  h2{font-family:var(--mono);font-size:clamp(22px,3vw,30px);margin:0 0 10px;}
+  .section-sub{color:var(--muted);font-size:14.5px;max-width:600px;line-height:1.6;}
+
+  /* Philosophy pillars */
+  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  @media(max-width:900px){.pillars{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.pillars{grid-template-columns:1fr;}}
+  .pillar{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:22px 18px;}
+  .pillar .num{font-family:var(--mono);color:var(--gold);font-size:13px;margin-bottom:10px;}
+  .pillar h3{font-family:var(--mono);font-size:16px;margin:0 0 8px;}
+  .pillar p{color:var(--muted);font-size:13.5px;line-height:1.6;margin:0;}
+
+  /* Indicators grid */
+  .ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media(max-width:980px){.ind-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:640px){.ind-grid{grid-template-columns:1fr;}}
+  .ind-card{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s, transform .2s;}
+  .ind-card:hover{border-color:var(--gold);transform:translateY(-3px);}
+  .ind-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--teal);text-transform:uppercase;}
+  .ind-card h3{margin:0;font-size:16.5px;font-family:var(--mono);}
+  .ind-card p{color:var(--muted);font-size:13.5px;line-height:1.55;margin:0;flex-grow:1;}
+  .ind-links{display:flex;gap:14px;font-family:var(--mono);font-size:12px;margin-top:4px;}
+  .ind-links a{color:var(--gold-soft);border-bottom:1px solid transparent;}
+  .ind-links a:hover{border-color:var(--gold-soft);}
+
+  /* Blog preview */
+  .blog-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);}
+  .blog-row{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line-soft);}
+  .blog-row:last-child{border-bottom:none;}
+  .blog-row:hover{background:var(--panel-2);}
+  .blog-date{font-family:var(--mono);font-size:12px;color:var(--muted-2);min-width:170px;}
+  .blog-title{font-size:14.5px;flex-grow:1;padding:0 16px;}
+  .blog-tag{font-family:var(--mono);font-size:11px;color:var(--teal);border:1px solid var(--teal);border-radius:20px;padding:2px 10px;}
+
+  /* Founder / about */
+  .about-grid{display:grid;grid-template-columns:220px 1fr;gap:32px;align-items:start;}
+  @media(max-width:900px){.about-grid{grid-template-columns:1fr;}}
+  @media(max-width:640px){.pricing-grid{grid-template-columns:1fr !important;}}
+  @media(max-width:640px){.maxpain-grid{grid-template-columns:1fr 1fr !important;}}
+  @media(max-width:400px){.maxpain-grid{grid-template-columns:1fr !important;}}
+  .about-grid p{color:var(--muted);line-height:1.75;font-size:14.5px;margin:0 0 14px;}
+  .horizon{margin-top:22px;}
+  .horizon-track{height:6px;border-radius:3px;background:var(--line);position:relative;overflow:hidden;}
+  .horizon-fill{position:absolute;left:0;top:0;bottom:0;width:22%;background:linear-gradient(90deg,var(--gold),var(--teal));}
+  .horizon-labels{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted-2);margin-top:6px;}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line-soft);padding:40px 32px;}
+  .footer-inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .disclaimer{color:var(--muted-2);font-size:11.5px;line-height:1.6;max-width:640px;}
+  .foot-links{display:flex;gap:20px;font-family:var(--mono);font-size:12.5px;color:var(--muted);}
+  .foot-links a:hover{color:var(--gold-soft);}
+
+  ::-webkit-scrollbar{width:8px;height:8px;}
+  ::-webkit-scrollbar-track{background:var(--panel);}
+  ::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <svg width="26" height="26" viewBox="0 0 100 100" style="margin-right:2px;">
+      <ellipse cx="50" cy="50" rx="42" ry="16" fill="none" stroke="var(--teal)" stroke-width="4" opacity="0.85" transform="rotate(-20 50 50)"/>
+      <ellipse cx="50" cy="50" rx="42" ry="16" fill="none" stroke="var(--orange)" stroke-width="4" opacity="0.65" transform="rotate(40 50 50)"/>
+      <circle cx="50" cy="50" r="11" fill="var(--gold)"/>
+      <circle cx="50" cy="50" r="11" fill="var(--gold-soft)" opacity="0.5">
+        <animate attributeName="r" values="11;19;11" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    Balakrishna Quantum
+  </div>
+  <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+  <div class="nav-links" id="nav-links">
+    <a href="#dashboard">Dashboard</a>
+    <a href="/ai/">AI/ML</a>
+    <a href="cockpit-global.html">Global Cockpit</a>
+    <a href="cockpit-daily.html">Daily Cockpit</a>
+    <a href="#indicators">Indicators</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#mentorship">Mentorship</a>
+    <a href="#blog">Briefing</a>
+    <a href="journal.html">Journal</a>
+    <a href="orderflow.html">Orderflow</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="ticker-wrap" id="tv-ticker-tape"></div>
+
+<div class="hero" id="dashboard">
+  <div class="hero-top">
+    <div>
+      <div class="eyebrow">Live cockpit · updated in real time</div>
+      <h1>This is the exact desk I trade<br>from <span class="accent">every session.</span></h1>
+      <div class="sub">Chart, orderflow, liquidations, sentiment, and news — the same view I open at 13:00 IST every day. No mock data, no screenshots. What you see below is live.</div>
+    </div>
+    <div class="session-clock">
+      <div class="label">IST Session (13:00–21:00)</div>
+      <div class="time" id="clock">--:--:--</div>
+      <div class="status" id="session-status">checking…</div>
+    </div>
+  </div>
+
+  <!-- Cockpit links -->
+  <div class="row3" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr));">
+    <a class="term" href="cockpit-global.html" style="text-decoration:none;color:inherit;display:block;">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq global cockpit</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">BTC · US Equities · Gold →</div>
+        <div style="color:var(--muted);font-size:13px;">Full-page terminal: crypto deck, US indices/stocks, metals, liquidation intel, and a crypto + global markets news wire.</div>
+      </div>
+    </a>
+    <a class="term" href="cockpit-daily.html" style="text-decoration:none;color:inherit;display:block;">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq daily cockpit</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">Session Brief Terminal →</div>
+        <div style="color:var(--muted);font-size:13px;">Crypto perps, Indian indices, US stocks/macro, metals + SPCX focus, liquidation intel, and a crypto + India news wire.</div>
+      </div>
+    </a>
+    <a class="term" href="orderflow.html" style="text-decoration:none;color:inherit;display:block;">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq orderflow</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">Footprint · CVD · DOM →</div>
+        <div style="color:var(--muted);font-size:13px;">Live footprint chart with point-of-control, candle imbalance, book pressure, cumulative delta, and a real-time DOM ladder.</div>
+      </div>
+    </a>
+    <a class="term" href="journal.html" style="text-decoration:none;color:inherit;display:block;">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq journal</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">Setup-Tagged Trade Log →</div>
+        <div style="color:var(--muted);font-size:13px;">Log every trade against the exact BKQ framework that generated it — win rate, R:R, expectancy, calendar heatmap, and behavior tagging.</div>
+      </div>
+    </a>
+    <a class="term" href="#pricing" style="text-decoration:none;color:inherit;display:block;">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq pricing</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">Subscription Pricing →</div>
+        <div style="color:var(--muted);font-size:13px;">Full access to all 9 indicators, Playbook guidebooks, and BKQ Journal — one subscription, monthly or annual.</div>
+      </div>
+    </a>
+    <a class="term" href="#mentorship" style="text-decoration:none;color:inherit;display:block;border-color:var(--gold);">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">bkq mentorship</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:14px;color:var(--gold-soft);margin-bottom:6px;">Click for Mentorship →</div>
+        <div style="color:var(--muted);font-size:13px;">Direct 1:1 feedback on your own trade log against the BKQ framework — for advanced traders with 6–9 months of existing data.</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Chart + Watchlist -->
+  <div class="grid">
+    <div class="term">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">chart.tv — BTCUSDT</span></div>
+      <div class="term-body" style="padding:0;">
+        <div id="tv_chart_container"></div>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="term">
+        <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">sentiment.fg</span></div>
+        <div class="term-body">
+          <div class="fg-num" id="fg-num" style="color:var(--muted)">—</div>
+          <div class="fg-label" id="fg-label">Loading…</div>
+          <div class="fg-bar"><div class="marker" id="fg-marker" style="left:50%"></div></div>
+        </div>
+      </div>
+
+      <div class="term">
+        <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">derivatives.snapshot</span></div>
+        <div class="term-body">
+          <div class="stat-row"><span class="k">BTC Funding (8h)</span><span class="v" id="d-funding">—</span></div>
+          <div class="stat-row"><span class="k">Open Interest (BTC)</span><span class="v" id="d-oi">—</span></div>
+          <div class="stat-row"><span class="k">24h Volume</span><span class="v" id="d-vol">—</span></div>
+          <div class="stat-row"><span class="k">Max Pain (nearest exp.)</span><span class="v" id="d-maxpain">—</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Max pain detail -->
+  <div class="term" style="margin-bottom:16px;">
+    <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">options.maxpain — deribit BTC</span></div>
+    <div class="term-body maxpain-grid" id="maxpain-body" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+      <div class="stat-row"><span class="k">Nearest expiry</span><span class="v" id="mp-expiry">—</span></div>
+      <div class="stat-row"><span class="k">Max pain strike</span><span class="v" id="mp-strike">—</span></div>
+      <div class="stat-row"><span class="k">Spot vs. max pain</span><span class="v" id="mp-diff">—</span></div>
+      <div class="stat-row"><span class="k">Total OI (contracts)</span><span class="v" id="mp-oi">—</span></div>
+    </div>
+  </div>
+
+  <!-- Social feeds -->
+  <div class="row2">
+    <div class="term">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">feed.x — curated list</span></div>
+      <div class="term-body">
+        <!--
+          Attempting a real live embed here: individual profile timelines (not a List) —
+          single-account timeline widgets are the standard, more-reliable use case for
+          X's widgets.js compared to List embeds, which throw internally more often.
+          If this area stays empty (X-side failure), the link list below still works either way.
+        -->
+        <div id="x-live" style="margin-bottom:14px;"></div>
+        <div id="x-linkout"></div>
+      </div>
+    </div>
+    <div class="term">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">feed.telegram — news channels</span></div>
+      <div class="term-body">
+        <!--
+          Telegram's t.me/s/ pages block third-party iframing outright (X-Frame-Options),
+          so a true inline embed isn't possible here. Attempting actual message content instead
+          via RSSHub's public Telegram-channel-to-RSS bridge (poll-based, not push-live — refreshes
+          every 90s). Falls back to the link-out list per channel if RSSHub is unreachable.
+        -->
+        <div id="tg-live"></div>
+        <div id="tg-linkout"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Philosophy -->
+<section id="philosophy">
+  <div class="section-head">
+    <div class="eyebrow">Method</div>
+    <h2>Process over prediction</h2>
+    <div class="section-sub">Every tool on this site is built around four rules — the same ones enforced in every BKQ indicator and every trade logged here.</div>
+  </div>
+  <div class="pillars">
+    <div class="pillar"><div class="num">01</div><h3>Session discipline</h3><p>Trades are restricted to a defined window. Off-session activity is where the data shows the most damage — so the tools enforce it structurally, not just as a reminder.</p></div>
+    <div class="pillar"><div class="num">02</div><h3>R:R before entry</h3><p>Every setup defines its stop and target before the trade exists. Win rate is not the constraint most traders think it is — reward-to-risk is.</p></div>
+    <div class="pillar"><div class="num">03</div><h3>Two-tranche exits</h3><p>Partial profit-taking with a trailed remainder, encoded directly into the indicator logic rather than left to in-the-moment judgment.</p></div>
+    <div class="pillar"><div class="num">04</div><h3>Logged, not remembered</h3><p>Every session, win or loss, gets written down. The journal is the feedback loop — memory alone is not a strategy.</p></div>
+  </div>
+</section>
+
+<!-- Indicators -->
+<section id="indicators">
+  <div class="section-head">
+    <div class="eyebrow">Toolkit</div>
+    <h2>The BKQ indicator suite</h2>
+    <div class="section-sub">Nine tools, one house logic. Each ships with a Playbook field guide and a link to the live TradingView script.</div>
+  </div>
+  <div class="ind-grid">
+    <div class="ind-card"><div class="ind-tag">Crypto · Scalping</div><h3>BKQ Paroshpathar Scalper 2.0</h3><p>The foundational system — EMA/RSI/ADX/volume/ATR confluence with Bollinger squeeze detection, IST session filter, and two-tranche exits.</p><div class="ind-links"><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">TradingView →</a><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Crypto · Trend</div><h3>BKQ BTC Unified v3.0</h3><p>Orderflow-aware trend system built on CVD and absorption logic, tuned for the 13:00–21:00 IST session.</p><div class="ind-links"><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">TradingView →</a><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Multi-asset</div><h3>BKQ 5 EMA Pro v2.0</h3><p>Alert-candle breakout system with a 0–5 confluence quality score, structure-based stops, and configurable R:R targets.</p><div class="ind-links"><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">TradingView →</a><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Metals</div><h3>BKQ Metal Scalper v2.0</h3><p>COMEX/London session clock, AM/PM fix markers, COT proxy, DXY correlation, and a real-yield panel for PAXG and silver.</p><div class="ind-links"><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">TradingView →</a><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">US Equities/Index</div><h3>BKQ US Stocks &amp; Index Scalper</h3><p>Session-aware scalper covering SPX, NDX, and named large caps, with corrected pre-market/Power Hour labeling.</p><div class="ind-links"><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">TradingView →</a><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Swing</div><h3>BKQ Pullback System v2.0</h3><p>Arm→trigger state machine: EMA regime plus ADX arms at the 21 EMA, a rejection candle with volume confirms the trigger.</p><div class="ind-links"><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">TradingView →</a><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Equities · Scalp</div><h3>BKQ SMB Momentum Suite v1.0</h3><p>9 EMA Continuation, Fashionably Late, and Backside setups encoded with A+/B/C confluence auto-grading.</p><div class="ind-links"><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">TradingView →</a><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Orderflow</div><h3>BKQ Orderflow 4-Stage v1.0</h3><p>Balance vs. imbalance, trend model, and mean reversion model — Fabio Valentini's framework encoded for chart use.</p><div class="ind-links"><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">TradingView →</a><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+    <div class="ind-card"><div class="ind-tag">Options</div><h3>BKQ Indian Options v1.0</h3><p>12-point scoring engine for CE/PE buying signals across Nifty, Bank Nifty, Fin Nifty, Midcap Nifty, and Sensex.</p><div class="ind-links"><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">TradingView →</a><a href="#contact" class="prefill-link" data-subject="BKQ Indicators, Guidebooks Query" data-message="">Guidebook →</a><a href="#pricing" style="color:var(--teal);">Subscribe →</a></div></div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing">
+  <div class="section-head">
+    <div class="eyebrow">Subscribe</div>
+    <h2>One plan, full access</h2>
+    <div class="section-sub">All 9 indicators, all Playbook guidebooks, and BKQ Journal access, one subscription. No per-indicator pricing — the whole suite or nothing.</div>
+  </div>
+  <div class="pricing-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;">
+    <div class="term">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">plan.annual</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:11px;color:var(--teal);letter-spacing:.08em;margin-bottom:6px;">BILLED ANNUALLY</div>
+        <div style="font-family:var(--mono);font-size:34px;font-weight:700;color:var(--gold-soft);">$99<span style="font-size:14px;color:var(--muted);font-weight:400;">/mo</span></div>
+        <div style="font-size:12.5px;color:var(--muted-2);margin-bottom:2px;">(≈ ₹6,999/mo)</div>
+        <div style="font-size:12.5px;color:var(--muted-2);margin-bottom:16px;">$1,188 charged once a year (≈ ₹83,988)</div>
+        <ul style="list-style:none;padding:0;margin:0 0 20px;font-size:13.5px;color:var(--muted);line-height:2;">
+          <li>✓ All 9 BKQ indicators</li>
+          <li>✓ All Playbook field guides</li>
+          <li>✓ Live TradingView script access</li>
+          <li>✓ BKQ Journal — trade log &amp; analytics</li>
+          <li>✓ Free updates on new indicators &amp; Playbooks</li>
+          <li>✓ 24/7 priority support on all products</li>
+          <li>✓ 50% discount vs. monthly</li>
+        </ul>
+        <a href="#contact" class="prefill-link" data-subject="Subscription" data-message="Subscription details : Plan Annual" style="display:block;text-align:center;background:var(--gold);color:#0a0d12;border-radius:6px;padding:11px;font-family:var(--mono);font-size:13px;font-weight:700;text-decoration:none;">SUBSCRIBE →</a>
+      </div>
+    </div>
+    <div class="term">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">plan.monthly</span></div>
+      <div class="term-body">
+        <div style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em;margin-bottom:6px;">BILLED MONTHLY</div>
+        <div style="font-family:var(--mono);font-size:34px;font-weight:700;color:var(--text);">$199<span style="font-size:14px;color:var(--muted);font-weight:400;">/mo</span></div>
+        <div style="font-size:12.5px;color:var(--muted-2);margin-bottom:16px;">(≈ ₹11,999/mo) · cancel any time, no lock-in</div>
+        <ul style="list-style:none;padding:0;margin:0 0 20px;font-size:13.5px;color:var(--muted);line-height:2;">
+          <li>✓ All 9 BKQ indicators</li>
+          <li>✓ All Playbook field guides</li>
+          <li>✓ Live TradingView script access</li>
+          <li>✓ BKQ Journal — trade log &amp; analytics</li>
+          <li>✓ Monthly email support</li>
+          <li>✓ Switch to annual any time</li>
+        </ul>
+        <a href="#contact" class="prefill-link" data-subject="Subscription" data-message="Subscription details : Plan Monthly" style="display:block;text-align:center;background:var(--panel-2);border:1px solid var(--line);color:var(--text);border-radius:6px;padding:11px;font-family:var(--mono);font-size:13px;font-weight:700;text-decoration:none;">SUBSCRIBE →</a>
+      </div>
+    </div>
+  </div>
+  <div class="section-sub" style="margin-top:14px;max-width:760px;">USD shown as the primary figure; INR is an approximate conversion at current rates, not the exact billed amount.</div>
+
+  <div id="mentorship" style="max-width:760px;margin-top:32px;">
+    <div class="term" style="border-color:var(--gold);">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">plan.mentorship — advanced traders only</span></div>
+      <div class="term-body">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;margin-bottom:10px;">
+          <div>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--gold-soft);letter-spacing:.08em;margin-bottom:6px;">1:1 MENTORSHIP &amp; QUARTERLY FEEDBACK</div>
+            <div style="font-family:var(--mono);font-size:30px;font-weight:700;color:var(--gold-soft);">$2,999</div>
+            <div style="font-size:12.5px;color:var(--muted-2);">(≈ ₹3,00,000) combined price for all 3 sessions</div>
+          </div>
+        </div>
+        <div style="font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:14px;">
+          For traders who already have a real track record — a minimum of <b style="color:var(--text);">6–9 months of logged trade data</b> going in, since these sessions are built around reviewing your actual execution, not teaching from scratch. Each session is a direct 1:1 review of your log against the BKQ framework: R:R discipline, session adherence, and specific, personalized feedback on what's actually costing you money.
+        </div>
+        <ul style="list-style:none;padding:0;margin:0 0 20px;font-size:13.5px;color:var(--muted);line-height:2;">
+          <li>✓ 3 sessions, one per quarter (roughly every 3 months)</li>
+          <li>✓ Direct 1:1 review of your own trade log</li>
+          <li>✓ Personalized feedback, not generic framework teaching</li>
+          <li>✓ Requires 6–9 months of existing trade log data to apply</li>
+        </ul>
+        <a href="#contact" class="prefill-link" data-subject="Mentorship Application" data-message="Name:%0ATrading Style:%0ADocumented Trading logs:%0AWhich instrument you are currently trading:%0ATrading experience in years:" style="display:block;text-align:center;background:var(--gold);color:#0a0d12;border-radius:6px;padding:11px;font-family:var(--mono);font-size:13px;font-weight:700;text-decoration:none;max-width:280px;">APPLY FOR MENTORSHIP →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog -->
+<section id="blog">
+  <div class="section-head">
+    <div class="eyebrow">Every day, 12:00 PM IST</div>
+    <h2>Pre-market briefing</h2>
+    <div class="section-sub">Auto-generated before the session opens — BTC/ETH/SOL, PAXG/silver, crude, SPX/NDX and the named US names, sentiment, and a one-line session bias. No manual step, published straight from the data.</div>
+  </div>
+  <div class="blog-list">
+    <a class="blog-row" href="blog/2026-07-12-premarket.html">
+      <span class="blog-date">Jul 12, 2026 · 12:00 IST</span>
+      <span class="blog-title">Pre-market data update — BTC $63,964 (-0.38% 24h)</span>
+      <span class="blog-tag">pre-market</span>
+    </a>
+    <a class="blog-row" href="blog/index.html">
+      <span class="blog-date">All briefings</span>
+      <span class="blog-title">Full archive, filed by date</span>
+      <span class="blog-tag">index →</span>
+    </a>
+  </div>
+</section>
+
+<!-- About / Founder -->
+<section id="about">
+  <div class="section-head">
+    <div class="eyebrow">Founder</div>
+    <h2>Built by a trader, not a vendor</h2>
+  </div>
+  <div class="about-grid">
+    <div>
+      <div style="margin-bottom:16px;">
+        <img src="rahi-founder.png" alt="Rahi C., founder of BalakrishnaQuantum" style="width:200px;height:200px;object-fit:cover;object-position:top center;border-radius:10px;border:1px solid var(--line);display:block;background:#ffffff;">
+      </div>
+      <div class="term">
+        <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">whoami</span></div>
+        <div class="term-body">
+          <div class="stat-row" style="flex-direction:column;align-items:flex-start;gap:2px;"><span class="k" style="font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;">Name</span><span class="v">Balakrishna Quantum (BKQ)</span></div>
+          <div class="stat-row" style="flex-direction:column;align-items:flex-start;gap:2px;"><span class="k" style="font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;">Founder</span><span class="v">Rahi C.</span></div>
+          <div class="stat-row" style="flex-direction:column;align-items:flex-start;gap:2px;"><span class="k" style="font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;">Base</span><span class="v">Bengaluru, IN</span></div>
+          <div class="stat-row" style="flex-direction:column;align-items:flex-start;gap:2px;"><span class="k" style="font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;">Session</span><span class="v">13:00–21:00 IST</span></div>
+          <div class="stat-row" style="flex-direction:column;align-items:flex-start;gap:2px;"><span class="k" style="font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;">Focus</span><span class="v">BTC · Metals · US Index</span></div>
+        </div>
+      </div>
+      <div class="horizon">
+        <div class="section-sub" style="margin-bottom:8px;">Long-term horizon</div>
+        <div class="horizon-track"><div class="horizon-fill"></div></div>
+        <div class="horizon-labels"><span>2026</span><span>2030</span></div>
+      </div>
+    </div>
+    <div>
+      <p>BalakrishnaQuantum started as a personal trading system by Rahi C. — a way to bring session discipline and real reward-to-risk math to BTC perpetual futures trading, after realizing win rate was never the actual problem.</p>
+      <p>Every indicator here started as a fix for a specific, documented mistake: fee drag, off-session losses, cutting winners early. The dashboard above is the same one used to trade every day — nothing on this site is a demo built for show.</p>
+      <p>The trade journal (setup-tagged to these exact frameworks) and the crypto-focused orderflow tool are both live now — built the same way everything else here was: used first, shipped second.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="section-head">
+    <div class="eyebrow">Get in touch</div>
+    <h2>Contact</h2>
+    <div class="section-sub">Questions about an indicator, a bug on this site, or just want to talk trading — reach out directly.</div>
+  </div>
+  <div style="max-width:560px;">
+    <div class="term">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">contact.form</span></div>
+      <div class="term-body">
+        <form id="contact-form" action="https://formsubmit.co/rahic.official@gmail.com" method="POST">
+          <input type="hidden" name="_subject" id="cf-hidden-subject" value="New message from BalakrishnaQuantum.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <div style="margin-bottom:12px;">
+            <label style="display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:5px;">NAME</label>
+            <input type="text" name="name" required style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;">
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:5px;">YOUR EMAIL</label>
+            <input type="email" name="email" required style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;">
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:5px;">SUBJECT</label>
+            <input type="text" name="subject" id="cf-subject" required style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;">
+          </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:5px;">MESSAGE</label>
+            <textarea name="message" id="cf-message" required rows="4" style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;resize:vertical;"></textarea>
+          </div>
+          <button type="submit" style="width:100%;background:var(--gold);color:#0a0d12;border:none;border-radius:6px;padding:11px;font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.04em;cursor:pointer;">SEND MESSAGE →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="disclaimer">
+      Trading and investing carry substantial risk. Nothing on this site is financial advice. Indicators, dashboards, and briefings are educational and informational tools reflecting the founder's own systematic approach — they do not constitute a recommendation to buy, sell, or hold any asset. Past performance, including any results referenced, does not guarantee future outcomes. Data shown is sourced from public exchange and market APIs (Binance, Deribit, Alternative.me) and may be delayed or incomplete.
+    </div>
+    <div class="foot-links">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#indicators">Indicators</a>
+      <a href="#blog">Briefing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- TradingView widget -->
+<script src="https://s3.tradingview.com/tv.js"></script>
+<script>
+new TradingView.widget({
+  "width": "100%",
+  "height": 720,
+  "symbol": "BINANCE:BTCUSDT",
+  "interval": "60",
+  "timezone": "Asia/Kolkata",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#11151c",
+  "withdateranges": true,
+  "hide_side_toolbar": false,
+  "allow_symbol_change": true,
+  "details": false,
+  "watchlist": [
+    "AMEX:UUP","OANDA:USB10YUSD",
+    "OANDA:SPX500USD","OANDA:NAS100USD","OANDA:US30USD","AMEX:VIXY",
+    "OANDA:WTICOUSD","OANDA:XAUUSD","OANDA:XAGUSD",
+    "CRYPTOCAP:BTC.D","CRYPTOCAP:USDT.D",
+    "BINANCE:BTCUSDT","BINANCE:ETHUSDT","BINANCE:SOLUSDT",
+    "NASDAQ:MSTR","NASDAQ:NVDA","NASDAQ:TSLA","NASDAQ:AAPL",
+    "NASDAQ:MSFT","NASDAQ:AMZN","NASDAQ:META","NASDAQ:SPCX","NASDAQ:GOOGL"
+  ],
+  "container_id": "tv_chart_container"
+});
+</script>
+
+<script src="https://platform.twitter.com/widgets.js" async></script>
+<script>
+/* ---------------- Social feeds: attempt real live content, fall back to link-outs ---------------- */
+const X_ACCOUNTS = [
+  {handle:'Whale_Alert', desc:'Large wallet moves, exchange in/outflows'},
+  {handle:'WatcherGuru', desc:'Fastest crypto/macro breaking news'},
+  {handle:'DeItaone', desc:'Fed/macro headlines, often first'},
+  {handle:'FirstSquawk', desc:'Fast macro/Fed headline feed'},
+  {handle:'Cointelegraph', desc:'Crypto news outlet'}
+];
+document.getElementById('x-linkout').innerHTML =
+  '<div class="linkout-grid">' +
+  X_ACCOUNTS.map(a => `<a class="linkout-item" href="https://twitter.com/${a.handle}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
+    <div><div class="name">@${a.handle}</div><div class="desc">${a.desc}</div></div>
+    <div class="go">Open →</div>
+  </a>`).join('') +
+  '</div>' +
+  '<a class="linkout-cta" href="https://twitter.com/i/lists/2074982525173370946" target="_blank" rel="noopener">View full BKQ Watchlist on X →</a>';
+
+// Real attempt: single-profile timeline widget (more reliable than List embeds) for the top account.
+// If X's widget genuinely fails to render within 6s, this area just stays empty — the link-out
+// grid above already covers the same accounts, so nothing is lost either way.
+(function(){
+  const el = document.getElementById('x-live');
+  el.innerHTML = '<a class="twitter-timeline" data-height="300" data-theme="dark" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/WatcherGuru?ref_src=twsrc%5Etfw">Tweets by WatcherGuru</a>';
+  setTimeout(()=>{
+    if(!el.querySelector('iframe')) el.style.display = 'none'; // widget failed — hide the empty slot, link-out list still covers it
+  }, 6000);
+})();
+
+const TG_CHANNELS = [
+  {name:'WatcherGuru', desc:'Fastest general crypto/macro breaking news'},
+  {name:'ForexLive', desc:'Fed/CPI/NFP macro headline breaks'},
+  {name:'WhaleAlert', desc:'Large transaction/liquidation-adjacent flow'},
+  {name:'tradingeconomics', desc:'Economic calendar — rates, inflation prints'},
+  {name:'Cointelegraph', desc:'Steady crypto-specific news feed'}
+];
+document.getElementById('tg-linkout').innerHTML =
+  '<div class="linkout-grid">' +
+  TG_CHANNELS.map(c => `<a class="linkout-item" href="https://t.me/${c.name}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
+    <div><div class="name">${c.name}</div><div class="desc">${c.desc}</div></div>
+    <div class="go">Open →</div>
+  </a>`).join('') +
+  '</div>';
+
+// Real attempt: pull actual recent messages via RSSHub's public Telegram bridge (poll-based).
+// Telegram itself blocks iframe embedding outright, so this is the closest to "live content"
+// achievable for free. If RSSHub is down/rate-limited, this silently does nothing and the
+// link-out grid above (always rendered) is what's visible — no broken/empty box either way.
+async function loadTelegramLive(){
+  const el = document.getElementById('tg-live');
+  try{
+    const res = await fetch('https://rsshub.app/telegram/channel/WatcherGuru');
+    if(!res.ok) throw new Error('rsshub unavailable');
+    const xml = await res.text();
+    const doc = new DOMParser().parseFromString(xml, 'text/xml');
+    const items = Array.from(doc.querySelectorAll('item')).slice(0,6);
+    if(!items.length) throw new Error('empty');
+    el.innerHTML = '<div style="font-family:var(--mono);font-size:11px;color:var(--teal);margin-bottom:8px;">LIVE — @WatcherGuru (Telegram)</div>' +
+      items.map(i=>{
+        const title = i.querySelector('title')?.textContent || '';
+        const link = i.querySelector('link')?.textContent || '#';
+        const pubDate = i.querySelector('pubDate')?.textContent;
+        const when = pubDate ? new Date(pubDate).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'short'}) : '';
+        return `<div class="linkout-item" style="margin-bottom:6px;"><div><div class="desc" style="color:var(--text);">${title.slice(0,140)}</div><div class="desc">${when} IST</div></div><a class="go" href="${link}" target="_blank" rel="noopener">Open →</a></div>`;
+      }).join('');
+  }catch(e){
+    el.innerHTML = ''; // fall silently to the link-out grid below — no broken box shown
+  }
+}
+loadTelegramLive();
+setInterval(loadTelegramLive, 90000);
+
+/* ---------------- Prefill contact form from indicator/pricing/mentorship links ---------------- */
+document.querySelectorAll('.prefill-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const subject = link.dataset.subject || '';
+    const message = (link.dataset.message || '').split('%0A').join('\n');
+    const subjectField = document.getElementById('cf-subject');
+    const hiddenSubjectField = document.getElementById('cf-hidden-subject');
+    const messageField = document.getElementById('cf-message');
+    if(subjectField) subjectField.value = subject;
+    if(hiddenSubjectField) hiddenSubjectField.value = subject ? (subject + ' — BalakrishnaQuantum.com') : 'New message from BalakrishnaQuantum.com';
+    if(messageField) messageField.value = message;
+  });
+});
+
+/* ---------------- Mobile nav toggle ---------------- */
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const navLinksEl = document.getElementById('nav-links');
+function openMobileMenu(){
+  document.body.style.overflow = 'hidden';
+  document.querySelectorAll('body > *').forEach(el=>{
+    if(el.id !== 'nav-links' && el.id !== 'mobile-menu-btn' && el.tagName !== 'NAV' && el.tagName !== 'SCRIPT'){
+      el.dataset.bkqPrevDisplay = el.style.display || '';
+      el.style.display = 'none';
+    }
+  });
+  navLinksEl.style.cssText = `
+    display:flex !important; flex-direction:column !important; align-items:flex-start !important;
+    position:fixed !important; top:0 !important; left:0 !important; right:0 !important; bottom:0 !important;
+    background:var(--bg) !important;
+    min-height:100vh !important; min-height:100dvh !important;
+    padding:100px 32px 24px !important; gap:26px !important; overflow-y:auto !important;
+    z-index:99999 !important; box-sizing:border-box !important;
+  `;
+  navLinksEl.querySelectorAll('a, span').forEach(el=>{
+    el.style.fontSize = '20px';
+    el.style.padding = '4px 0';
+  });
+  mobileBtn.textContent = '✕';
+  mobileBtn.style.cssText = 'display:flex !important; position:relative !important; z-index:100000 !important;';
+}
+function closeMobileMenu(){
+  document.body.style.overflow = '';
+  document.querySelectorAll('body > *').forEach(el=>{
+    if(el.dataset.bkqPrevDisplay !== undefined){
+      el.style.display = el.dataset.bkqPrevDisplay;
+      delete el.dataset.bkqPrevDisplay;
+    }
+  });
+  navLinksEl.removeAttribute('style');
+  navLinksEl.querySelectorAll('a, span').forEach(el=>{
+    el.style.fontSize = '';
+    el.style.padding = '';
+  });
+  mobileBtn.textContent = '☰';
+}
+if(mobileBtn && navLinksEl){
+  let menuOpen = false;
+  mobileBtn.addEventListener('click', ()=>{
+    menuOpen = !menuOpen;
+    if(menuOpen) openMobileMenu(); else closeMobileMenu();
+  });
+  navLinksEl.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      menuOpen = false;
+      closeMobileMenu();
+    });
+  });
+}
+
+/* ---------------- Session clock ---------------- */
+function pad(n){return n.toString().padStart(2,'0');}
+function updateClock(){
+  const now = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Kolkata'}));
+  document.getElementById('clock').textContent = pad(now.getHours())+':'+pad(now.getMinutes())+':'+pad(now.getSeconds());
+  const h = now.getHours();
+  const statusEl = document.getElementById('session-status');
+  if(h>=13 && h<21){statusEl.textContent='● LIVE SESSION';statusEl.className='status live';}
+  else{statusEl.textContent='○ off session';statusEl.className='status off';}
+}
+setInterval(updateClock,1000); updateClock();
+
+/* ---------------- Ticker tape (TradingView widget — OANDA/CFD feeds for indices, freely embeddable) ---------------- */
+(function loadTickerTape(){
+  const host = document.getElementById('tv-ticker-tape');
+  const wrap = document.createElement('div');
+  wrap.className = 'tradingview-widget-container';
+  const inner = document.createElement('div');
+  inner.className = 'tradingview-widget-container__widget';
+  wrap.appendChild(inner);
+  const s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+  s.async = true;
+  s.innerHTML = JSON.stringify({
+    symbols:[
+      {proName:'BINANCE:BTCUSDT', title:'BTC'},
+      {proName:'BINANCE:ETHUSDT', title:'ETH'},
+      {proName:'BINANCE:SOLUSDT', title:'SOL'},
+      {proName:'OANDA:XAUUSD', title:'PAXG/GOLD'},
+      {proName:'OANDA:SPX500USD', title:'SPX'},
+      {proName:'OANDA:NAS100USD', title:'NDX'},
+      {proName:'OANDA:US30USD', title:'DOW'},
+      {proName:'AMEX:VIXY', title:'VIX'},
+      {proName:'AMEX:UUP', title:'DXY'},
+      {proName:'OANDA:WTICOUSD', title:'CRUDE'},
+      {proName:'NASDAQ:SPCX', title:'SPCX'},
+      {proName:'NASDAQ:NVDA', title:'NVDA'},
+      {proName:'NASDAQ:TSLA', title:'TSLA'},
+      {proName:'NASDAQ:MSTR', title:'MSTR'}
+    ],
+    showSymbolLogo:true, isTransparent:true, displayMode:'adaptive', colorTheme:'dark', locale:'en'
+  });
+  wrap.appendChild(s);
+  host.appendChild(wrap);
+})();
+
+/* ---------------- Fear & Greed (CoinMarketCap primary, Alternative.me fallback) ---------------- */
+async function loadFearGreed(){
+  let v, cls;
+  try{
+    const target = 'https://pro-api.coinmarketcap.com/public-api/v3/fear-and-greed/latest';
+    const res = await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(target), {signal:AbortSignal.timeout(9000)});
+    const json = await res.json();
+    v = parseInt(json.data.value);
+    cls = json.data.value_classification;
+  }catch(e){
+    try{
+      const res = await fetch('https://api.alternative.me/fng/?limit=1');
+      const json = await res.json();
+      v = parseInt(json.data[0].value);
+      cls = json.data[0].value_classification;
+    }catch(e2){ console.warn('fear/greed fetch failed on both sources', e2); return; }
+  }
+  document.getElementById('fg-num').textContent = v;
+  document.getElementById('fg-num').style.color = v<25?'var(--red)':v<45?'var(--orange)':v<55?'var(--muted)':v<75?'var(--teal)':'var(--green)';
+  document.getElementById('fg-label').textContent = cls;
+  document.getElementById('fg-marker').style.left = v+'%';
+}
+loadFearGreed(); setInterval(loadFearGreed, 300000);
+
+/* ---------------- Derivatives snapshot (Binance Futures) ---------------- */
+async function loadDerivatives(){
+  try{
+    const fr = await fetch('https://fapi.binance.com/fapi/v1/premiumIndex?symbol=BTCUSDT');
+    const frj = await fr.json();
+    document.getElementById('d-funding').textContent = (parseFloat(frj.lastFundingRate)*100).toFixed(4)+'%';
+  }catch(e){}
+  try{
+    const oi = await fetch('https://fapi.binance.com/fapi/v1/openInterest?symbol=BTCUSDT');
+    const oij = await oi.json();
+    document.getElementById('d-oi').textContent = parseFloat(oij.openInterest).toLocaleString(undefined,{maximumFractionDigits:0})+' BTC';
+  }catch(e){}
+  try{
+    const v = await fetch('https://fapi.binance.com/fapi/v1/ticker/24hr?symbol=BTCUSDT');
+    const vj = await v.json();
+    document.getElementById('d-vol').textContent = '$'+(parseFloat(vj.quoteVolume)/1e9).toFixed(2)+'B';
+  }catch(e){}
+}
+loadDerivatives(); setInterval(loadDerivatives, 60000);
+
+/* ---------------- Max Pain (Deribit BTC options) ---------------- */
+async function loadMaxPain(){
+  try{
+    const instRes = await fetch('https://www.deribit.com/api/v2/public/get_instruments?currency=BTC&kind=option&expired=false');
+    const instJson = await instRes.json();
+    const instruments = instJson.result;
+    if(!instruments || !instruments.length) return;
+    // group by expiry, pick nearest
+    const expiries = {};
+    instruments.forEach(i=>{
+      expiries[i.expiration_timestamp] = expiries[i.expiration_timestamp] || [];
+      expiries[i.expiration_timestamp].push(i);
+    });
+    const nearest = Object.keys(expiries).map(Number).sort((a,b)=>a-b)[0];
+    const chain = expiries[nearest];
+    document.getElementById('mp-expiry').textContent = new Date(nearest).toUTCString().slice(0,16);
+
+    // fetch open interest for each instrument (batched, limited to keep it light)
+    const strikes = {};
+    const subset = chain.slice(0, 60); // cap requests
+    await Promise.all(subset.map(async inst=>{
+      try{
+        const r = await fetch('https://www.deribit.com/api/v2/public/get_book_summary_by_instrument?instrument_name='+inst.instrument_name);
+        const j = await r.json();
+        const s = j.result && j.result[0];
+        if(!s) return;
+        const strike = inst.strike;
+        strikes[strike] = strikes[strike] || {call:0, put:0};
+        if(inst.option_type === 'call') strikes[strike].call += (s.open_interest||0);
+        else strikes[strike].put += (s.open_interest||0);
+      }catch(e){}
+    }));
+
+    // compute max pain: strike where total option value to holders is minimized
+    let bestStrike=null, bestPain=Infinity, totalOI=0;
+    Object.keys(strikes).forEach(k=>{
+      totalOI += strikes[k].call + strikes[k].put;
+    });
+    Object.keys(strikes).forEach(strikeStr=>{
+      const strike = parseFloat(strikeStr);
+      let pain = 0;
+      Object.keys(strikes).forEach(k2=>{
+        const s2 = parseFloat(k2);
+        const oi = strikes[k2];
+        pain += Math.max(0, strike - s2) * oi.call;   // call ITM loss to seller side proxy
+        pain += Math.max(0, s2 - strike) * oi.put;    // put ITM loss to seller side proxy
+      });
+      if(pain < bestPain){ bestPain = pain; bestStrike = strike; }
+    });
+
+    if(bestStrike){
+      document.getElementById('mp-strike').textContent = '$'+bestStrike.toLocaleString();
+      document.getElementById('d-maxpain').textContent = '$'+bestStrike.toLocaleString();
+      document.getElementById('mp-oi').textContent = totalOI.toLocaleString(undefined,{maximumFractionDigits:0})+' ctr';
+
+      // spot for diff
+      const spotRes = await fetch('https://www.deribit.com/api/v2/public/get_index_price?index_name=btc_usd');
+      const spotJson = await spotRes.json();
+      const spot = spotJson.result.index_price;
+      const diff = (((spot - bestStrike)/bestStrike)*100).toFixed(2);
+      document.getElementById('mp-diff').textContent = (diff>=0?'+':'')+diff+'%';
+    }
+  }catch(e){ console.warn('max pain calc failed', e); }
+}
+loadMaxPain(); setInterval(loadMaxPain, 600000);
+
+</script>
+
+</body>
+</html>

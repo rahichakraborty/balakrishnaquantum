@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-07-12T22:15:16+00:00",
+  "items": [
+    {
+      "name": "affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 228927,
+      "language": "JavaScript",
+      "updated_at": "2026-07-09T07:53:52Z"
+    },
+    {
+      "name": "NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "stars": 213714,
+      "language": "Python",
+      "updated_at": "2026-07-12T18:27:47Z"
+    },
+    {
+      "name": "tensorflow/tensorflow",
+      "description": "An Open Source Machine Learning Framework for Everyone",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "stars": 196326,
+      "language": "C++",
+      "updated_at": "2026-07-12T21:55:48Z"
+    },
+    {
+      "name": "Significant-Gravitas/AutoGPT",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "stars": 185496,
+      "language": "Python",
+      "updated_at": "2026-07-11T20:00:23Z"
+    },
+    {
+      "name": "ollama/ollama",
+      "description": "Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+      "url": "https://github.com/ollama/ollama",
+      "stars": 175994,
+      "language": "Go",
+      "updated_at": "2026-07-10T00:42:15Z"
+    },
+    {
+      "name": "f/prompts.chat",
+      "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "url": "https://github.com/f/prompts.chat",
+      "stars": 165561,
+      "language": "HTML",
+      "updated_at": "2026-07-12T04:15:09Z"
+    },
+    {
+      "name": "huggingface/transformers",
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+      "url": "https://github.com/huggingface/transformers",
+      "stars": 162546,
+      "language": "Python",
+      "updated_at": "2026-07-12T00:55:33Z"
+    },
+    {
+      "name": "firecrawl/firecrawl",
+      "description": "The API to search, scrape, and interact with the web at scale. 🔥",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "stars": 149858,
+      "language": "TypeScript",
+      "updated_at": "2026-07-12T13:18:12Z"
+    }
+  ]
+}

@@ -587,10 +587,13 @@
     <div class="term">
       <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">contact.form</span></div>
       <div class="term-body">
-        <form id="contact-form" action="https://formsubmit.co/rahic.official@gmail.com" method="POST">
-          <input type="hidden" name="_subject" id="cf-hidden-subject" value="New message from BalakrishnaQuantum.com">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Get your free access key at https://web3forms.com/ (email verification only, no password) and paste it below -->
+          <input type="hidden" name="access_key" value="533b6ac3-c251-485e-9692-dc7b5103b580">
+          <input type="hidden" name="subject" id="cf-hidden-subject" value="New message from BalakrishnaQuantum.com">
+          <input type="hidden" name="from_name" value="BalakrishnaQuantum.com">
+          <input type="hidden" name="redirect" value="https://balakrishnaquantum.com/finance.html?sent=1#contact">
+          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
           <div style="margin-bottom:12px;">
             <label style="display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:5px;">NAME</label>
             <input type="text" name="name" required style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;">
@@ -601,13 +604,14 @@
           </div>
           <div style="margin-bottom:12px;">
             <label style="display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:5px;">SUBJECT</label>
-            <input type="text" name="subject" id="cf-subject" required style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;">
+            <input type="text" name="subject_line" id="cf-subject" required style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;">
           </div>
           <div style="margin-bottom:14px;">
             <label style="display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:5px;">MESSAGE</label>
             <textarea name="message" id="cf-message" required rows="4" style="width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 11px;color:var(--text);font-family:var(--sans);font-size:13.5px;resize:vertical;"></textarea>
           </div>
-          <button type="submit" style="width:100%;background:var(--gold);color:#0a0d12;border:none;border-radius:6px;padding:11px;font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.04em;cursor:pointer;">SEND MESSAGE →</button>
+          <button type="submit" id="cf-submit-btn" style="width:100%;background:var(--gold);color:#0a0d12;border:none;border-radius:6px;padding:11px;font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.04em;cursor:pointer;">SEND MESSAGE →</button>
+          <div id="cf-status" style="margin-top:10px;font-family:var(--mono);font-size:12px;display:none;"></div>
         </form>
       </div>
     </div>
@@ -731,6 +735,58 @@ async function loadTelegramLive(){
 }
 loadTelegramLive();
 setInterval(loadTelegramLive, 90000);
+
+/* ---------------- Contact form — Web3Forms, AJAX submit ---------------- */
+/* Web3Forms explicitly documents and supports client-side fetch() with proper CORS —
+   unlike FormSubmit, which was unreliable here. Also keeps a "redirect" fallback field
+   in the form itself in case JavaScript fails to run at all. */
+const contactForm = document.getElementById('contact-form');
+const cfStatus = document.getElementById('cf-status');
+const cfSubmitBtn = document.getElementById('cf-submit-btn');
+if(contactForm){
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    cfSubmitBtn.disabled = true;
+    cfSubmitBtn.textContent = 'SENDING...';
+    cfStatus.style.display = 'none';
+
+    // Make the real outgoing email subject reflect what the visitor typed
+    const typedSubject = document.getElementById('cf-subject')?.value;
+    const hiddenSubjectField = document.getElementById('cf-hidden-subject');
+    if(typedSubject && hiddenSubjectField) hiddenSubjectField.value = typedSubject + ' — BalakrishnaQuantum.com';
+
+    try{
+      const formData = new FormData(contactForm);
+      const payload = Object.fromEntries(formData);
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const result = await res.json();
+      if(!res.ok || !result.success) throw new Error(result.message || ('HTTP ' + res.status));
+      cfStatus.textContent = "Message sent — I'll get back to you soon.";
+      cfStatus.style.color = 'var(--teal)';
+      contactForm.reset();
+    }catch(err){
+      cfStatus.textContent = 'Something went wrong sending this — please email rahic.official@gmail.com directly instead.';
+      cfStatus.style.color = 'var(--orange)';
+    }finally{
+      cfStatus.style.display = 'block';
+      cfSubmitBtn.disabled = false;
+      cfSubmitBtn.textContent = 'SEND MESSAGE →';
+    }
+  });
+}
+// If JS never ran and the browser fell back to a plain POST + redirect, show confirmation
+if(new URLSearchParams(window.location.search).get('sent') === '1'){
+  if(cfStatus){
+    cfStatus.textContent = "Message sent — I'll get back to you soon.";
+    cfStatus.style.color = 'var(--teal)';
+    cfStatus.style.display = 'block';
+  }
+  history.replaceState(null, '', window.location.pathname + '#contact');
+}
 
 /* ---------------- Prefill contact form from indicator/pricing/mentorship links ---------------- */
 document.querySelectorAll('.prefill-link').forEach(link => {

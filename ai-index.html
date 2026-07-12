@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BKQ AI/ML — Live Brief, Courses, Journeys &amp; Resources</title>
+<style>
+  :root{
+    --bg:#0a0e14; --panel:#10141c; --panel-2:#141a24; --border:#1f2937;
+    --text:#e6e9ef; --text-dim:#8891a1; --text-faint:#4b5563;
+    --ai:#a78bfa; --ai-dim:rgba(167,139,250,0.12); --gold:#f5b942; --green:#34d399;
+    --display:'Space Grotesk',sans-serif; --body:'Inter',sans-serif; --mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{background:var(--bg); color:var(--text); font-family:var(--body); scroll-behavior:smooth;}
+  a{color:inherit;}
+
+  header.top{
+    position:sticky; top:0; z-index:30;
+    background:rgba(10,14,20,0.9); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+  }
+  header.top .brand{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--text-dim); display:flex; align-items:center; gap:10px;
+  }
+  header.top .brand .dot{ width:6px; height:6px; border-radius:50%; background:var(--ai); animation:blink 2s infinite; }
+  header.top nav{ display:flex; gap:20px; font-family:var(--mono); font-size:11.5px; flex-wrap:wrap; }
+  header.top nav a{ color:var(--text-dim); text-decoration:none; transition:color .2s; }
+  header.top nav a:hover{ color:var(--ai); }
+  header.top .back{ font-family:var(--mono); font-size:11px; color:var(--text-faint); text-decoration:none; }
+  header.top .back:hover{ color:var(--gold); }
+
+  @keyframes blink{ 0%,100%{opacity:1;} 50%{opacity:.25;} }
+
+  .logo-mark{ width:26px; height:26px; flex-shrink:0; }
+  .logo-mark .orbit-ring{ fill:none; stroke:var(--ai); stroke-width:1.4; opacity:0.85; }
+  .logo-mark .orbit-ring.spin{ animation:spin 40s linear infinite; transform-origin:50px 50px; }
+  .logo-mark .orbit-ring.spin-rev{ animation:spin-rev 60s linear infinite; transform-origin:50px 50px; opacity:0.5; }
+  .logo-mark .orbit-core{ fill:var(--gold); }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  @keyframes spin-rev{ to{ transform:rotate(-360deg); } }
+  @media (prefers-reduced-motion: reduce){
+    .logo-mark .orbit-ring.spin, .logo-mark .orbit-ring.spin-rev{ animation:none; }
+  }
+
+  .hero{ padding:64px 32px 40px; max-width:900px; margin:0 auto; }
+  .hero .eyebrow{
+    font-family:var(--mono); font-size:12px; color:var(--ai); letter-spacing:.12em;
+    text-transform:uppercase; margin-bottom:20px;
+  }
+  .hero h1{
+    font-family:var(--display); font-size:clamp(30px,4.6vw,50px); font-weight:600;
+    letter-spacing:-0.02em; line-height:1.1; margin-bottom:16px;
+  }
+  .hero p{ color:var(--text-dim); font-size:15px; max-width:560px; line-height:1.6; }
+
+  section{ max-width:1100px; margin:0 auto; padding:40px 32px; }
+  .section-head{
+    display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;
+    border-bottom:1px solid var(--border); padding-bottom:14px; flex-wrap:wrap; gap:8px;
+  }
+  .section-head h2{ font-family:var(--display); font-size:21px; font-weight:600; letter-spacing:-0.01em; }
+  .section-head p.sub{ font-size:13px; color:var(--text-dim); margin-top:6px; max-width:600px; }
+  .section-head .meta{ font-family:var(--mono); font-size:11px; color:var(--text-faint); }
+
+  .grid{ display:grid; gap:14px; }
+  .grid.cols-3{ grid-template-columns:repeat(3,1fr); }
+  .grid.cols-2{ grid-template-columns:repeat(2,1fr); }
+  .card{
+    background:var(--panel); border:1px solid var(--border); border-radius:4px;
+    padding:18px; transition:border-color .2s, background .2s;
+  }
+  .card:hover{ border-color:var(--ai); background:var(--panel-2); }
+  .card a.card-link{ text-decoration:none; display:block; }
+  .card .tag{
+    font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.08em;
+    color:var(--ai); margin-bottom:8px; display:inline-block;
+  }
+  .card h3{ font-size:14px; font-weight:600; line-height:1.4; margin-bottom:6px; }
+  .card p{ font-size:12.5px; color:var(--text-dim); line-height:1.55; }
+  .card .foot{
+    margin-top:12px; padding-top:10px; border-top:1px solid var(--border);
+    display:flex; justify-content:space-between; font-family:var(--mono); font-size:10.5px; color:var(--text-faint);
+  }
+
+  /* Site favicons + avatars */
+  .card-head-row{ display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+  .favicon{
+    width:16px; height:16px; border-radius:3px; flex-shrink:0; background:var(--border);
+    object-fit:cover;
+  }
+  .avatar{
+    width:28px; height:28px; border-radius:6px; flex-shrink:0; background:var(--border);
+    object-fit:cover; border:1px solid var(--border);
+  }
+  .card-head-row .tag{ margin-bottom:0; }
+
+  /* Book covers */
+  .book-cover-wrap{
+    width:100%; aspect-ratio:2/3; border-radius:3px; overflow:hidden; margin-bottom:12px;
+    background:linear-gradient(135deg, var(--panel-2), var(--border));
+    display:flex; align-items:center; justify-content:center; position:relative;
+  }
+  .book-cover-wrap img{ width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
+  .book-cover-fallback{
+    font-family:var(--mono); font-size:11px; color:var(--text-faint); text-align:center; padding:12px;
+    line-height:1.4;
+  }
+  .book-cover-fallback .glyph{ font-size:22px; display:block; margin-bottom:6px; opacity:.5; }
+
+  .loading-row{ font-family:var(--mono); font-size:12px; color:var(--text-faint); padding:12px 0; }
+
+  /* Tabs (shared pattern: brief, courses, journeys, follow) */
+  .tabs{ display:flex; gap:8px; margin-bottom:20px; flex-wrap:wrap; }
+  .tab{
+    font-family:var(--mono); font-size:11.5px; padding:9px 15px; border:1px solid var(--border);
+    border-radius:2px; cursor:pointer; color:var(--text-dim); background:var(--panel);
+    display:flex; align-items:center; gap:8px;
+  }
+  .tab.active{ border-color:var(--ai); color:var(--ai); background:var(--ai-dim); }
+  .tab .pct{ font-size:10px; background:var(--border); color:var(--text-dim); padding:2px 6px; border-radius:10px; }
+  .tab.active .pct{ background:var(--ai); color:var(--bg); }
+  .tab-panel{ display:none; }
+  .tab-panel.active{ display:block; }
+
+  /* Journeys specific */
+  .journey-intro{
+    background:var(--panel); border:1px solid var(--border); border-radius:4px;
+    padding:20px 22px; margin-bottom:20px;
+  }
+  .journey-intro h3{ font-size:16px; margin-bottom:8px; }
+  .journey-intro p{ font-size:13px; color:var(--text-dim); line-height:1.6; }
+  .progress-bar{ height:6px; background:var(--border); border-radius:3px; overflow:hidden; margin-top:14px; }
+  .progress-fill{ height:100%; background:var(--ai); transition:width .3s ease; }
+  .roadmap-track{ border:1px solid var(--border); border-radius:4px; overflow:hidden; margin-bottom:16px; }
+  .roadmap-step{
+    display:flex; gap:14px; padding:16px 20px; border-bottom:1px solid var(--border); background:var(--panel);
+    align-items:flex-start; cursor:pointer; transition:background .15s;
+  }
+  .roadmap-step:hover{ background:var(--panel-2); }
+  .roadmap-step:last-child{ border-bottom:none; }
+  .roadmap-step .check{
+    width:18px; height:18px; border:1px solid var(--text-faint); border-radius:3px; flex-shrink:0; margin-top:2px;
+    display:flex; align-items:center; justify-content:center; font-size:11px; color:transparent;
+    transition:all .15s;
+  }
+  .roadmap-step.done .check{ background:var(--ai); border-color:var(--ai); color:var(--bg); }
+  .roadmap-step.done h4, .roadmap-step.done p{ color:var(--text-faint); }
+  .roadmap-step h4{ font-size:14px; margin-bottom:4px; }
+  .roadmap-step p{ font-size:12px; color:var(--text-dim); line-height:1.5; }
+  .milestone{
+    border:1px solid var(--gold); border-radius:4px; padding:20px 22px;
+    background:linear-gradient(135deg, rgba(245,185,66,0.06), transparent);
+  }
+  .milestone .tag{
+    font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.1em;
+    color:var(--gold); margin-bottom:10px; display:inline-block;
+  }
+  .milestone h4{ font-size:16px; margin-bottom:8px; }
+  .milestone p{ font-size:13px; color:var(--text-dim); line-height:1.6; }
+
+  /* Filters (courses, library) */
+  .filters{ display:flex; gap:8px; margin-bottom:20px; flex-wrap:wrap; }
+  .filter-btn{
+    font-family:var(--mono); font-size:11px; padding:7px 13px; border:1px solid var(--border);
+    border-radius:2px; cursor:pointer; color:var(--text-dim); background:transparent;
+  }
+  .filter-btn.active{ border-color:var(--ai); color:var(--ai); background:var(--ai-dim); }
+
+  .price-badge{
+    font-family:var(--mono); font-size:9.5px; padding:2px 7px; border-radius:9px; text-transform:uppercase;
+  }
+  .price-badge.free{ background:rgba(52,211,153,0.12); color:var(--green); }
+  .price-badge.paid{ background:rgba(245,185,66,0.12); color:var(--gold); }
+
+  /* Follow / channels */
+  .channel-row{
+    display:flex; justify-content:space-between; align-items:center; gap:16px;
+    padding:12px 16px; border-bottom:1px solid var(--border);
+  }
+  .channel-row:last-child{ border-bottom:none; }
+  .channel-row .name-cell{ display:flex; align-items:center; gap:10px; }
+  .channel-row a{ font-size:13.5px; font-weight:600; text-decoration:none; }
+  .channel-row a:hover{ color:var(--ai); }
+  .channel-row .desc{ font-size:12px; color:var(--text-dim); flex:1; margin-left:14px; }
+  .channel-list{ border:1px solid var(--border); border-radius:4px; overflow:hidden; }
+  .telegram-caution{
+    font-family:var(--mono); font-size:11px; color:var(--text-faint); padding:14px 0 0;
+    border-top:none; line-height:1.6;
+  }
+  .telegram-caution strong{ color:var(--gold); }
+
+  /* About */
+  .about-grid{ display:grid; grid-template-columns:200px 1fr; gap:32px; align-items:start; }
+  @media(max-width:760px){ .about-grid{ grid-template-columns:1fr; } }
+  .about-grid img{
+    width:100%; aspect-ratio:1; object-fit:cover; object-position:top center;
+    border-radius:8px; border:1px solid var(--border); background:#fff; display:block; margin-bottom:16px;
+  }
+  .about-stats{ border:1px solid var(--border); border-radius:4px; overflow:hidden; }
+  .about-stat-row{
+    display:flex; flex-direction:column; gap:2px; padding:10px 14px; border-bottom:1px solid var(--border); background:var(--panel);
+  }
+  .about-stat-row:last-child{ border-bottom:none; }
+  .about-stat-row .k{ font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-faint); }
+  .about-stat-row .v{ font-size:13px; color:var(--text); }
+  .about-grid p{ color:var(--text-dim); line-height:1.75; font-size:14px; margin-bottom:14px; }
+
+  footer{
+    border-top:1px solid var(--border); padding:32px; text-align:center;
+    font-family:var(--mono); font-size:10px; letter-spacing:.15em; color:var(--text-faint); text-transform:uppercase;
+  }
+
+  @media (max-width:760px){
+    .grid.cols-3, .grid.cols-2{ grid-template-columns:1fr; }
+    header.top nav{ display:none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <svg class="logo-mark" viewBox="0 0 100 100">
+      <ellipse class="orbit-ring spin" cx="50" cy="50" rx="42" ry="16" transform="rotate(-20 50 50)"/>
+      <ellipse class="orbit-ring spin-rev" cx="50" cy="50" rx="42" ry="16" transform="rotate(40 50 50)"/>
+      <circle class="orbit-core" cx="50" cy="50" r="10"/>
+    </svg>
+    BKQ / AI-ML
+  </div>
+  <nav>
+    <a href="#prereqs">Prerequisites</a>
+    <a href="#brief">Live Brief</a>
+    <a href="#essentials">Essentials</a>
+    <a href="#courses">Courses</a>
+    <a href="#books">Books</a>
+    <a href="#journeys">Journeys</a>
+    <a href="#projects">Projects</a>
+    <a href="#follow">Follow</a>
+    <a href="#library">Library</a>
+    <a href="#about">About</a>
+  </nav>
+  <a class="back" href="/">← balakrishnaquantum.com</a>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Vertical 02 — Learn by Building</div>
+  <h1>Live signal. Real paths. One milestone at a time.</h1>
+  <p>What shipped in AI/ML this week, four journeys that end in a real project instead of an endless list, and the courses and people actually worth following.</p>
+</div>
+
+<section id="prereqs">
+  <div class="section-head">
+    <div><h2>Prerequisites</h2><p class="sub">Before picking a journey — what you actually need going in, not what a syllabus pads out to look thorough.</p></div>
+  </div>
+  <div class="tabs" id="prereq-tabs">
+    <div class="tab active" data-panel="math">Maths</div>
+    <div class="tab" data-panel="coding">Coding</div>
+    <div class="tab" data-panel="tools">Tools &amp; Environment</div>
+  </div>
+  <div class="tab-panel active" id="prereq-panel-math"><div class="roadmap-track" id="prereq-math-list"></div></div>
+  <div class="tab-panel" id="prereq-panel-coding"><div class="roadmap-track" id="prereq-coding-list"></div></div>
+  <div class="tab-panel" id="prereq-panel-tools"><div class="roadmap-track" id="prereq-tools-list"></div></div>
+</section>
+
+<section id="brief">
+  <div class="section-head">
+    <h2>Live AI Brief</h2>
+    <span class="meta" id="brief-updated">syncing…</span>
+  </div>
+  <div class="tabs" id="brief-tabs">
+    <div class="tab active" data-panel="papers">Papers</div>
+    <div class="tab" data-panel="hn">Discussion</div>
+    <div class="tab" data-panel="repos">Repos</div>
+    <div class="tab" data-panel="models">Models</div>
+  </div>
+  <div class="tab-panel active" id="brief-panel-papers">
+    <div class="grid cols-2" id="papers-grid"><div class="loading-row">Loading latest arXiv submissions…</div></div>
+  </div>
+  <div class="tab-panel" id="brief-panel-hn">
+    <div class="grid cols-2" id="hn-grid"><div class="loading-row">Loading Hacker News discussion…</div></div>
+  </div>
+  <div class="tab-panel" id="brief-panel-repos">
+    <div class="grid cols-2" id="repos-grid"><div class="loading-row">Loading trending repos…</div></div>
+  </div>
+  <div class="tab-panel" id="brief-panel-models">
+    <div class="grid cols-2" id="models-grid"><div class="loading-row">Loading trending models…</div></div>
+  </div>
+</section>
+
+<section id="essentials">
+  <div class="section-head">
+    <div><h2>Essential Resources</h2><p class="sub">The short list — if you only bookmark six things, bookmark these.</p></div>
+  </div>
+  <div class="grid cols-3" id="essentials-grid"></div>
+</section>
+
+<section id="courses">
+  <div class="section-head">
+    <div><h2>Courses — Free &amp; Paid</h2><p class="sub">Curated across Google, DeepLearning.AI, Coursera, Udemy, and a few university originals. Not everything — the ones worth your time.</p></div>
+    <span class="meta" id="courses-count"></span>
+  </div>
+  <div class="filters" id="course-filters"></div>
+  <div class="grid cols-3" id="courses-grid"></div>
+</section>
+
+<section id="books">
+  <div class="section-head">
+    <div><h2>Essential Books</h2><p class="sub">Fewer, better. Free PDFs linked directly where the authors publish them themselves.</p></div>
+    <span class="meta" id="books-count"></span>
+  </div>
+  <div class="filters" id="book-filters"></div>
+  <div class="grid cols-3" id="books-grid"></div>
+</section>
+
+<section id="journeys">
+  <div class="section-head">
+    <div><h2>Journeys</h2><p class="sub">Pick the one closest to where you're starting from.</p></div>
+  </div>
+  <div class="tabs" id="journey-tabs"></div>
+  <div id="journey-panels"></div>
+</section>
+
+<section id="projects">
+  <div class="section-head">
+    <div><h2>Projects to Try</h2><p class="sub">Beyond the four milestone projects above — a broader catalog, tiered by difficulty. Each one names what it actually signals, not just what it builds.</p></div>
+    <span class="meta" id="projects-count"></span>
+  </div>
+  <div class="filters" id="project-filters"></div>
+  <div class="grid cols-3" id="projects-grid"></div>
+</section>
+
+<section id="follow">
+  <div class="section-head">
+    <div><h2>Follow</h2><p class="sub">Where the actual signal is — not engagement bait.</p></div>
+  </div>
+  <div class="tabs" id="follow-tabs">
+    <div class="tab active" data-panel="youtube">YouTube</div>
+    <div class="tab" data-panel="twitter">Twitter / X</div>
+    <div class="tab" data-panel="telegram">Telegram</div>
+  </div>
+  <div class="tab-panel active" id="follow-panel-youtube"><div class="channel-list" id="youtube-list"></div></div>
+  <div class="tab-panel" id="follow-panel-twitter"><div class="channel-list" id="twitter-list"></div></div>
+  <div class="tab-panel" id="follow-panel-telegram">
+    <div class="channel-list" id="telegram-list"></div>
+    <div class="telegram-caution"><strong>Note:</strong> Telegram AI channels are far less vetted than YouTube or X — quality and legitimacy vary widely, and channels get renamed, sold, or repurposed. Treat these as a starting point, not a trusted source by default, and be especially wary of any channel that pivots into "AI trading signals" or investment pitches.</div>
+  </div>
+</section>
+
+<section id="library">
+  <div class="section-head">
+    <div><h2>Full Resource Library</h2><p class="sub">Everything else, filterable by type.</p></div>
+    <span class="meta" id="library-count"></span>
+  </div>
+  <div class="filters" id="lib-filters"></div>
+  <div class="grid cols-3" id="library-grid"></div>
+</section>
+
+<section id="about">
+  <div class="section-head">
+    <div><h2>About</h2><p class="sub">Built by someone obsessed with both markets and machines.</p></div>
+  </div>
+  <div class="about-grid">
+    <div>
+      <img src="../rahi-founder.png" alt="Rahi C., founder of BalakrishnaQuantum">
+      <div class="about-stats">
+        <div class="about-stat-row"><span class="k">Name</span><span class="v">Balakrishna Quantum (BKQ)</span></div>
+        <div class="about-stat-row"><span class="k">Founder</span><span class="v">Rahi C.</span></div>
+        <div class="about-stat-row"><span class="k">Base</span><span class="v">Bengaluru, IN</span></div>
+        <div class="about-stat-row"><span class="k">Background</span><span class="v">Ops &amp; Delivery, 10+ yrs</span></div>
+        <div class="about-stat-row"><span class="k">Building</span><span class="v">Quant Trading + AI/ML Hub</span></div>
+      </div>
+    </div>
+    <div>
+      <p>Rahi has a passion for AI/ML and Finance, and likes to build things. When he's not working on something new, he practices Zen meditation and plays games on his PlayStation.</p>
+      <p>Everything on this page started as something Rahi actually needed to learn — not content built to look busy. If you're here for AI/ML, the <a href="../finance.html" style="color:var(--ai);">trading dashboard</a> is worth a look too.</p>
+    </div>
+  </div>
+</section>
+
+<footer>Process Over Prediction — brief refreshed automatically twice daily</footer>
+
+<script>
+  // =========================================================================
+  // Icon helpers
+  // =========================================================================
+  function faviconUrl(url){
+    try{
+      const host = new URL(url).hostname;
+      return `https://www.google.com/s2/favicons?domain=${host}&sz=64`;
+    }catch(e){ return ''; }
+  }
+  function faviconImg(url, size){
+    const s = size || 16;
+    const src = faviconUrl(url);
+    if(!src) return '';
+    return `<img class="favicon" src="${src}" width="${s}" height="${s}" alt="" loading="lazy" onerror="this.style.display='none'">`;
+  }
+
+  // =========================================================================
+  // Prerequisites — Maths / Coding / Tools, checkable like journey steps
+  // =========================================================================
+  const PREREQUISITES = {
+    math: [
+      {title:'Linear algebra — vectors, matrices, eigenvalues', desc:'The language every ML model is written in. 3Blue1Brown builds the intuition visually; IIT Madras\' free NPTEL course covers it applied to data science.', links:[
+        {label:'3Blue1Brown — Essence of Linear Algebra', url:'https://www.3blue1brown.com/topics/linear-algebra'},
+        {label:'IIT Madras — Statistics for Data Science I (NPTEL, free)', url:'https://onlinecourses.nptel.ac.in/noc26_cs65/preview'},
+      ]},
+      {title:'Calculus — derivatives, gradients, chain rule', desc:'This is what "training" a model actually means mechanically: following a gradient downhill.', links:[
+        {label:'3Blue1Brown — Essence of Calculus', url:'https://www.3blue1brown.com/topics/calculus'},
+      ]},
+      {title:'Probability & statistics', desc:'Distributions, mean/variance, hypothesis testing — needed to read any model\'s output honestly, not just its accuracy score.', links:[
+        {label:'IIT Madras — Statistics for Data Science I (NPTEL, free)', url:'https://onlinecourses.nptel.ac.in/noc26_cs65/preview'},
+      ]},
+      {title:'Optimization intuition', desc:'Loss functions, gradient descent, why training can get stuck — mechanical understanding, not proofs.', links:[
+        {label:'Google ML Crash Course — Linear Regression module', url:'https://developers.google.com/machine-learning/crash-course'},
+      ]},
+    ],
+    coding: [
+      {title:'Python fundamentals', desc:'Functions, loops, data structures, exceptions — fluency, not mastery. Nearly everything else on this site assumes this.', links:[
+        {label:'CS50P — Python (Harvard, free)', url:'https://cs50.harvard.edu/python/'},
+      ]},
+      {title:'Programming logic & CS thinking', desc:'How to break a problem down before writing any code — the actual skill CS50 teaches, independent of language.', links:[
+        {label:'CS50x — Intro to Computer Science (Harvard, free)', url:'https://cs50.harvard.edu/x/'},
+      ]},
+      {title:'Data manipulation — NumPy / Pandas', desc:'Every real dataset arrives messy. This is the unglamorous 80% of the actual job.', links:[
+        {label:'IIT Madras — Python for Data Science (NPTEL, free)', url:'https://nptel.ac.in/courses/106106212'},
+        {label:'Kaggle Learn — Python', url:'https://www.kaggle.com/learn/python'},
+      ]},
+      {title:'Basic data structures & algorithms', desc:'Not for whiteboard interviews — for knowing why one approach is slow before you\'ve run it.', links:[
+        {label:'CS50x — continued', url:'https://cs50.harvard.edu/x/'},
+      ]},
+    ],
+    tools: [
+      {title:'Command line basics', desc:'Navigating, running scripts, managing files without a GUI — assumed baseline for every course past the beginner stage.', links:[
+        {label:'Codecademy — Learn the Command Line (free tier)', url:'https://www.codecademy.com/learn/learn-the-command-line'},
+      ]},
+      {title:'Git & GitHub', desc:'Version control isn\'t optional once you\'re building projects you\'ll show anyone — including yourself in six months.', links:[
+        {label:'GitHub Skills — interactive Git lessons (free, official)', url:'https://skills.github.com/'},
+      ]},
+      {title:'Notebooks — Jupyter / Google Colab', desc:'Where almost all exploratory ML work actually happens, free GPU access included on Colab.', links:[
+        {label:'Google Colab', url:'https://colab.research.google.com/'},
+      ]},
+      {title:'Virtual environments & package management', desc:'pip, venv or conda — avoiding the "it worked yesterday" problem before it costs you an afternoon.', links:[
+        {label:'Python docs — venv', url:'https://docs.python.org/3/library/venv.html'},
+      ]},
+    ],
+  };
+
+  let prereqProgress = {};
+  (function loadPrereqProgress(){
+    try{ prereqProgress = JSON.parse(localStorage.getItem('bkq_ai_prereq_progress') || '{}'); }
+    catch(e){ prereqProgress = {}; }
+  })();
+  function savePrereqProgress(){
+    try{ localStorage.setItem('bkq_ai_prereq_progress', JSON.stringify(prereqProgress)); }catch(e){}
+  }
+  function renderPrereqList(category, elId){
+    const items = PREREQUISITES[category];
+    document.getElementById(elId).innerHTML = items.map((item, i) => {
+      const key = category + '_' + i;
+      const linksHtml = item.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener" style="color:var(--ai); text-decoration:none;" onclick="event.stopPropagation()">${l.label}</a>`).join(' · ');
+      return `
+        <div class="roadmap-step ${prereqProgress[key]?'done':''}" data-key="${key}">
+          <div class="check">✓</div>
+          <div>
+            <h4>${item.title}</h4>
+            <p>${item.desc}</p>
+            <p style="margin-top:6px; font-family:var(--mono); font-size:11px;">${linksHtml}</p>
+          </div>
+        </div>`;
+    }).join('');
+    document.querySelectorAll('#' + elId + ' .roadmap-step').forEach(step => {
+      step.addEventListener('click', () => {
+        const key = step.dataset.key;
+        prereqProgress[key] = !prereqProgress[key];
+        savePrereqProgress();
+        step.classList.toggle('done');
+      });
+    });
+  }
+  renderPrereqList('math', 'prereq-math-list');
+  renderPrereqList('coding', 'prereq-coding-list');
+  renderPrereqList('tools', 'prereq-tools-list');
+
+  document.querySelectorAll('#prereq-tabs .tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('#prereq-tabs .tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('#prereqs .tab-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('prereq-panel-' + tab.dataset.panel).classList.add('active');
+    });
+  });
+
+  // =========================================================================
+  // Live Brief — reads JSON written by scripts/fetch_ai_data.py via GitHub Actions
+  // =========================================================================
+  function timeAgo(iso){
+    if(!iso) return '';
+    const diff = Date.now() - new Date(iso).getTime();
+    const h = Math.floor(diff/3600000);
+    if(h < 1) return 'just now';
+    if(h < 24) return h + 'h ago';
+    return Math.floor(h/24) + 'd ago';
+  }
+  function fmtNum(n){
+    if(n === undefined || n === null) return '';
+    if(n >= 1000) return (n/1000).toFixed(1) + 'k';
+    return n;
+  }
+  async function loadJSON(path){
+    try{
+      const res = await fetch(path, {cache:'no-store'});
+      if(!res.ok) throw new Error('fetch failed: ' + path);
+      return await res.json();
+    }catch(e){
+      console.warn('Could not load', path, e);
+      return null;
+    }
+  }
+  function renderPapers(data){
+    const el = document.getElementById('papers-grid');
+    if(!data || !data.items || !data.items.length){
+      const errMsg = data && data.error ? ` Last error: <code style="color:var(--gold);">${data.error}</code>` : '';
+      el.innerHTML = `<div class="loading-row">No data yet — runs on the first scheduled cycle after deploy, or trigger it manually from the Actions tab.${errMsg}</div>`;
+      return;
+    }
+    el.innerHTML = data.items.map(p => `
+      <div class="card">
+        <a class="card-link" href="${p.link}" target="_blank" rel="noopener">
+          <div class="card-head-row">${faviconImg(p.link)}<span class="tag">${(p.category || 'paper').toUpperCase()}</span></div>
+          <h3>${p.title}</h3>
+          <p>${p.summary}</p>
+          <div class="foot"><span>${(p.authors||[]).join(', ')}</span><span>${timeAgo(p.published)}</span></div>
+        </a>
+      </div>`).join('');
+  }
+  function renderHN(data){
+    const el = document.getElementById('hn-grid');
+    if(!data || !data.items || !data.items.length){
+      const errMsg = data && data.error ? ' Last error: <code style="color:var(--gold);">' + data.error + '</code>' : '';
+      el.innerHTML = '<div class="loading-row">No data yet.' + errMsg + '</div>'; return;
+    }
+    el.innerHTML = data.items.map(s => `
+      <div class="card">
+        <a class="card-link" href="${s.url}" target="_blank" rel="noopener">
+          <div class="card-head-row">${faviconImg(s.url)}<span class="tag">Discussion</span></div>
+          <h3>${s.title}</h3>
+          <div class="foot"><span>▲ ${s.points} · ${s.comments} comments</span><span>${timeAgo(s.created_at)}</span></div>
+        </a>
+      </div>`).join('');
+  }
+  function renderRepos(data){
+    const el = document.getElementById('repos-grid');
+    if(!data || !data.items || !data.items.length){
+      const errMsg = data && data.error ? ' Last error: <code style="color:var(--gold);">' + data.error + '</code>' : '';
+      el.innerHTML = '<div class="loading-row">No data yet.' + errMsg + '</div>'; return;
+    }
+    el.innerHTML = data.items.map(r => `
+      <div class="card">
+        <a class="card-link" href="${r.url}" target="_blank" rel="noopener">
+          <div class="card-head-row">
+            ${r.avatar_url ? `<img class="avatar" src="${r.avatar_url}" alt="" loading="lazy" onerror="this.style.display='none'">` : faviconImg(r.url, 28)}
+            <span class="tag">${r.language || 'repo'}</span>
+          </div>
+          <h3>${r.name}</h3>
+          <p>${r.description || ''}</p>
+          <div class="foot"><span>★ ${fmtNum(r.stars)}</span><span>${timeAgo(r.updated_at)}</span></div>
+        </a>
+      </div>`).join('');
+  }
+  function renderModels(data){
+    const el = document.getElementById('models-grid');
+    if(!data || !data.items || !data.items.length){
+      const errMsg = data && data.error ? ' Last error: <code style="color:var(--gold);">' + data.error + '</code>' : '';
+      el.innerHTML = '<div class="loading-row">No data yet.' + errMsg + '</div>'; return;
+    }
+    el.innerHTML = data.items.map(m => `
+      <div class="card">
+        <a class="card-link" href="${m.url}" target="_blank" rel="noopener">
+          <div class="card-head-row">${faviconImg(m.url)}<span class="tag">${m.pipeline_tag || 'model'}</span></div>
+          <h3>${m.id}</h3>
+          <div class="foot"><span>♥ ${fmtNum(m.likes)}</span><span>${fmtNum(m.downloads)} downloads</span></div>
+        </a>
+      </div>`).join('');
+  }
+  async function initBrief(){
+    const [papers, hn, repos, models] = await Promise.all([
+      loadJSON('data/papers.json'), loadJSON('data/hn.json'),
+      loadJSON('data/repos.json'), loadJSON('data/models.json'),
+    ]);
+    renderPapers(papers); renderHN(hn); renderRepos(repos); renderModels(models);
+    const latest = [papers, hn, repos, models].filter(Boolean).map(d => d.generated_at).sort().pop();
+    document.getElementById('brief-updated').textContent = latest ? ('updated ' + timeAgo(latest)) : 'awaiting first sync';
+  }
+  initBrief();
+
+  document.querySelectorAll('#brief-tabs .tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('#brief-tabs .tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('#brief .tab-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('brief-panel-' + tab.dataset.panel).classList.add('active');
+    });
+  });
+
+  // =========================================================================
+  // Essential Resources
+  // =========================================================================
+  const ESSENTIALS = [
+    {tag:'Start here', title:'3Blue1Brown — Neural Networks', desc:'The single best visual intuition for how neural nets actually work, in under an hour.', url:'https://www.3blue1brown.com/topics/neural-networks'},
+    {tag:'Course', title:'CS50 AI with Python (Harvard)', desc:'Free, rigorous — search algorithms, classification, neural nets, hands-on in Python.', url:'https://cs50.harvard.edu/ai/'},
+    {tag:'Course', title:'Hugging Face LLM Course', desc:'Free, hands-on, maintained by the library authors. The fastest path to a working RAG app.', url:'https://huggingface.co/learn'},
+    {tag:'Course', title:'CS50P — Python (Harvard)', desc:'Free, self-paced. If Python fluency is the actual gap, this closes it fast.', url:'https://cs50.harvard.edu/python/'},
+    {tag:'Reference', title:'Papers With Code', desc:'State-of-the-art tracked by task, every result linked to working code.', url:'https://paperswithcode.com/'},
+    {tag:'Docs', title:'LangChain / LlamaIndex', desc:'RAG and agent orchestration — read after you understand what they abstract away.', url:'https://python.langchain.com/'},
+    {tag:'Paper', title:'Attention Is All You Need', desc:'The transformer paper. Read once you can follow the architecture diagram unaided.', url:'https://arxiv.org/abs/1706.03762'},
+    {tag:'Practice', title:'Kaggle', desc:'Real datasets, real leaderboards — the fastest feedback loop for classical ML.', url:'https://www.kaggle.com/'},
+  ];
+  document.getElementById('essentials-grid').innerHTML = ESSENTIALS.map(r => `
+    <div class="card">
+      <a class="card-link" href="${r.url}" target="_blank" rel="noopener">
+        <div class="card-head-row">${faviconImg(r.url)}<span class="tag">${r.tag}</span></div>
+        <h3>${r.title}</h3>
+        <p>${r.desc}</p>
+      </a>
+    </div>`).join('');
+
+  // =========================================================================
+  // Courses — Free & Paid, across platforms
+  // =========================================================================
+  const COURSES = [
+    // --- Google (free) ---
+    {platform:'Google', price:'free', title:'Machine Learning Crash Course', desc:'Google\'s own 15-hour self-study course — regression, classification, neural nets, LLM basics, now updated for generative AI.', url:'https://developers.google.com/machine-learning/crash-course'},
+    {platform:'Google', price:'free', title:'Google AI Essentials', desc:'Zero-experience-required intro to using AI tools productively. Certificate available.', url:'https://www.coursera.org/specializations/ai-essentials-google'},
+    {platform:'Google', price:'free', title:'Introduction to AI (Google)', desc:'Foundational AI concepts and how generative AI actually works, from Google.', url:'https://www.coursera.org/learn/google-introduction-to-ai'},
+    {platform:'Google', price:'free', title:'Google Cloud Skills Boost — ML & AI', desc:'Hands-on labs across Vertex AI, TensorFlow, and generative AI, from beginner to advanced.', url:'https://www.cloudskillsboost.google/paths'},
+    {platform:'Google', price:'free', title:'Machine Learning & AI Courses (Google Cloud Training)', desc:'Structured learning paths for engineers building production ML on Google Cloud.', url:'https://cloud.google.com/learn/training/machinelearning-ai'},
+    {platform:'Google', price:'free', title:'Grow with Google — AI Skills Hub', desc:'Curated tutorials, explainers, and demos across Google\'s AI education programs.', url:'https://ai.google/learn-ai-skills/'},
+
+    // --- DeepLearning.AI (via Coursera) ---
+    {platform:'DeepLearning.AI', price:'paid', title:'Machine Learning Specialization', desc:'Andrew Ng\'s current flagship — the modern successor to the original Stanford ML course. 4.9/5, 4.8M+ learners.', url:'https://www.coursera.org/specializations/machine-learning-introduction'},
+    {platform:'DeepLearning.AI', price:'paid', title:'Deep Learning Specialization', desc:'Neural networks, CNNs, sequence models, and how to structure ML projects — the standard deep learning path.', url:'https://www.coursera.org/specializations/deep-learning'},
+    {platform:'DeepLearning.AI', price:'paid', title:'Natural Language Processing Specialization', desc:'Classification through transformers, co-taught by a co-author of "Attention Is All You Need."', url:'https://www.coursera.org/specializations/natural-language-processing'},
+    {platform:'DeepLearning.AI', price:'paid', title:'TensorFlow Developer Professional Certificate', desc:'Practical TensorFlow — computer vision, NLP, time series, from the DeepLearning.AI team.', url:'https://www.coursera.org/professional-certificates/tensorflow-in-practice'},
+    {platform:'DeepLearning.AI', price:'paid', title:'Generative AI with Large Language Models', desc:'Prompt engineering, fine-tuning, and deployment of LLMs — built with AWS.', url:'https://www.coursera.org/learn/generative-ai-with-llms'},
+    {platform:'DeepLearning.AI', price:'free', title:'AI For Everyone', desc:'Non-technical, free to audit — how AI actually works and where it fits in a business. 4.8/5, 1.3M+ learners.', url:'https://www.coursera.org/learn/ai-for-everyone'},
+    {platform:'DeepLearning.AI', price:'free', title:'DeepLearning.AI Short Courses', desc:'Free 1-2 hour hands-on courses on specific tools — LangChain, agents, fine-tuning, RAG, and more, updated constantly.', url:'https://www.deeplearning.ai/short-courses/'},
+
+    // --- Coursera (broader, non-DL.AI) ---
+    {platform:'Coursera', price:'paid', title:'IBM AI Engineering Professional Certificate', desc:'Job-focused: PyTorch, Keras, TensorFlow, and deploying ML models in production.', url:'https://www.coursera.org/professional-certificates/ai-engineer'},
+    {platform:'Coursera', price:'paid', title:'IBM Data Science Professional Certificate', desc:'Broad, structured path into data science — Python, SQL, visualization, and applied ML.', url:'https://www.coursera.org/professional-certificates/ibm-data-science'},
+    {platform:'Coursera', price:'free', title:'Artificial Intelligence: an Overview Specialization', desc:'Conceptual grounding across the AI landscape before committing to a technical track.', url:'https://www.coursera.org/courses?query=artificial+intelligence'},
+    {platform:'Coursera', price:'paid', title:'Stanford CS230 — Deep Learning (Online)', desc:'University-caliber, flipped-classroom deep learning course, co-taught by Andrew Ng.', url:'https://www.coursera.org/courses?query=deep+learning'},
+
+    // --- Udemy ---
+    {platform:'Udemy', price:'paid', title:'Machine Learning A-Z: AI, Python & R', desc:'Udemy\'s bestselling ML course — 1M+ students, Python and R implementations side by side.', url:'https://www.udemy.com/courses/search/?q=Machine%20Learning%20A-Z%20AI%20Python%20%26%20R'},
+    {platform:'Udemy', price:'paid', title:'The AI Engineer Course 2026', desc:'Ed Donner\'s full LLM engineering pipeline, transformer architecture through production apps. 200K+ students.', url:'https://www.udemy.com/courses/search/?q=The%20AI%20Engineer%20Course%202026%20Ed%20Donner'},
+    {platform:'Udemy', price:'paid', title:'LLM Engineering: Master AI, LLMs & Agents', desc:'Also Ed Donner — 14 hands-on projects across LangChain, LangGraph, CrewAI, AutoGen, and MCP.', url:'https://www.udemy.com/courses/search/?q=LLM%20Engineering%20Master%20AI%20LLMs%20Agents'},
+    {platform:'Udemy', price:'paid', title:'Deep Learning A-Z', desc:'CNNs, RNNs, GANs, and hands-on TensorFlow/Keras — the deep learning companion to Machine Learning A-Z.', url:'https://www.udemy.com/courses/search/?q=Deep%20Learning%20A-Z'},
+    {platform:'Udemy', price:'paid', title:'Artificial Intelligence A-Z', desc:'Reinforcement learning, Q-learning, and the wider AI landscape beyond LLMs.', url:'https://www.udemy.com/courses/search/?q=Artificial%20Intelligence%20A-Z'},
+    {platform:'Udemy', price:'paid', title:'Complete A.I. & Machine Learning, Data Science Bootcamp', desc:'Beginner-friendly, comprehensive — TensorFlow, Pandas, real datasets. Live community of 900K+.', url:'https://www.udemy.com/courses/search/?q=Complete%20AI%20Machine%20Learning%20Data%20Science%20Bootcamp'},
+    {platform:'Udemy', price:'paid', title:'The Data Science Course: Complete Data Science Bootcamp', desc:'Fundamentals through deep learning, structured for absolute beginners.', url:'https://www.udemy.com/courses/search/?q=The%20Data%20Science%20Course%20Complete%20Bootcamp'},
+    {platform:'Udemy', price:'paid', title:'Complete Python Bootcamp (Jose Portilla)', desc:'The Python foundation most ML courses assume you already have. 1.2M+ students.', url:'https://www.udemy.com/courses/search/?q=Complete%20Python%20Bootcamp%20Jose%20Portilla'},
+
+    // --- Other / University originals ---
+    {platform:'Other', price:'free', title:'Stanford CS229 — Machine Learning', desc:'The classic graduate-level ML course, full lecture notes and materials, free.', url:'https://cs229.stanford.edu/'},
+    {platform:'Other', price:'free', title:'Stanford CS231n — Deep Learning for Vision', desc:'Foundational computer vision course, free lecture notes and assignments.', url:'http://cs231n.stanford.edu/'},
+    {platform:'Other', price:'free', title:'MIT 6.S191 — Introduction to Deep Learning', desc:'MIT\'s official intro deep learning course, updated annually, fully free.', url:'http://introtodeeplearning.com/'},
+    {platform:'Other', price:'free', title:'fast.ai — Practical Deep Learning', desc:'Top-down, code-first — build real models before the theory catches up.', url:'https://course.fast.ai/'},
+    {platform:'Other', price:'free', title:'Kaggle Learn', desc:'Short, hands-on micro-courses — Python, ML, deep learning — with real notebooks.', url:'https://www.kaggle.com/learn'},
+    {platform:'Other', price:'free', title:'NVIDIA Deep Learning Institute', desc:'GPU-focused hands-on workshops — transfer learning, computer vision, NLP with real infrastructure.', url:'https://www.nvidia.com/en-us/training/'},
+    {platform:'Other', price:'free', title:'CS50x — Intro to Computer Science (Harvard)', desc:'The real foundation before anything else — free, self-paced, no experience assumed.', url:'https://cs50.harvard.edu/x/'},
+  ];
+
+  function renderCourses(filter){
+    const items = filter === 'All' ? COURSES : COURSES.filter(c => c.platform === filter);
+    document.getElementById('courses-grid').innerHTML = items.map(c => `
+      <div class="card">
+        <a class="card-link" href="${c.url}" target="_blank" rel="noopener">
+          <div class="card-head-row">${faviconImg(c.url)}<span class="tag">${c.platform}</span></div>
+          <span class="price-badge ${c.price}">${c.price}</span>
+          <h3 style="margin-top:8px;">${c.title}</h3>
+          <p>${c.desc}</p>
+        </a>
+      </div>`).join('');
+  }
+  const COURSE_PLATFORMS = ['All', ...new Set(COURSES.map(c => c.platform))];
+  document.getElementById('course-filters').innerHTML = COURSE_PLATFORMS.map(p => `
+    <div class="filter-btn ${p==='All'?'active':''}" data-platform="${p}">${p}</div>`).join('');
+  document.getElementById('courses-count').textContent = COURSES.length + ' courses';
+  renderCourses('All');
+  document.querySelectorAll('#course-filters .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#course-filters .filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderCourses(btn.dataset.platform);
+    });
+  });
+
+  // =========================================================================
+  // Essential Books
+  // =========================================================================
+  const BOOKS = [
+    // --- Foundations & Classical ML ---
+    {category:'Foundations', price:'paid', title:'Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow', author:'Aurélien Géron', desc:'The gold standard practitioner book — real code, real pipelines, from linear regression through deep learning.', url:'https://www.google.com/search?tbm=bks&q=Hands-On+Machine+Learning+with+Scikit-Learn+Keras+and+TensorFlow+Geron'},
+    {category:'Foundations', price:'free', title:'An Introduction to Statistical Learning (ISLR)', author:'James, Witten, Hastie, Tibshirani', desc:'The best bridge between practical ML and the statistics underneath it. Free PDF, R and Python labs.', url:'https://www.statlearning.com/'},
+    {category:'Foundations', price:'free', title:'The Elements of Statistical Learning', author:'Hastie, Tibshirani, Friedman', desc:'ISLR\'s denser, more rigorous sibling — read this once ISLR stops being enough.', url:'https://hastie.su.domains/ElemStatLearn/'},
+    {category:'Foundations', price:'paid', title:'The Hundred-Page Machine Learning Book', author:'Andriy Burkov', desc:'Compresses the whole field into a fast, dense overview of algorithms and evaluation — read before Bishop, not instead of it.', url:'https://www.google.com/search?tbm=bks&q=The+Hundred-Page+Machine+Learning+Book+Burkov'},
+
+    // --- Deep Learning & LLMs ---
+    {category:'Deep Learning & LLMs', price:'free', title:'Deep Learning', author:'Goodfellow, Bengio, Courville', desc:'The reference text — dense, academic, essential once "how does this work" stops being optional. Full text free online.', url:'https://www.deeplearningbook.org/'},
+    {category:'Deep Learning & LLMs', price:'paid', title:'Deep Learning with Python', author:'François Chollet', desc:'From the creator of Keras — the clearest practical bridge from theory to working models.', url:'https://www.google.com/search?tbm=bks&q=Deep+Learning+with+Python+Chollet'},
+    {category:'Deep Learning & LLMs', price:'paid', title:'Grokking Deep Learning', author:'Andrew W. Trask', desc:'Builds neural networks from scratch with intuition-first explanations — the best on-ramp if Goodfellow feels too dense.', url:'https://www.google.com/search?tbm=bks&q=Grokking+Deep+Learning+Andrew+Trask'},
+    {category:'Deep Learning & LLMs', price:'free', title:'Speech and Language Processing', author:'Jurafsky & Martin', desc:'The standard NLP reference, from tokenization through modern language models. Free draft, updated regularly.', url:'https://web.stanford.edu/~jurafsky/slp3/'},
+    {category:'Deep Learning & LLMs', price:'paid', title:'Natural Language Processing with Transformers', author:'Tunstall, von Werra, Wolf', desc:'Written by the Hugging Face team — the practical companion to their free course.', url:'https://www.google.com/search?tbm=bks&q=Natural+Language+Processing+with+Transformers+Tunstall'},
+    {category:'Deep Learning & LLMs', price:'paid', title:'Build a Large Language Model (From Scratch)', author:'Sebastian Raschka', desc:'Genuinely current — implements a GPT-style model from the ground up in PyTorch, line by line.', url:'https://www.google.com/search?tbm=bks&q=Build+a+Large+Language+Model+From+Scratch+Raschka'},
+
+    // --- Data Science Practice ---
+    {category:'Data Science Practice', price:'paid', title:'Python for Data Analysis', author:'Wes McKinney', desc:'Written by the creator of pandas — the definitive reference for the library everyone uses and few read the manual for.', url:'https://www.google.com/search?tbm=bks&q=Python+for+Data+Analysis+Wes+McKinney'},
+    {category:'Data Science Practice', price:'paid', title:'Data Science from Scratch', author:'Joel Grus', desc:'Implements core data science concepts in plain Python, no libraries — good for understanding what the libraries hide.', url:'https://www.google.com/search?tbm=bks&q=Data+Science+from+Scratch+Joel+Grus'},
+    {category:'Data Science Practice', price:'paid', title:'Storytelling with Data', author:'Cole Nussbaumer Knaflic', desc:'The most underrated skill in this whole list — turning a model output into a decision someone else acts on.', url:'https://www.google.com/search?tbm=bks&q=Storytelling+with+Data+Cole+Nussbaumer+Knaflic'},
+
+    // --- Context & Strategy (non-technical) ---
+    {category:'Context & Strategy', price:'paid', title:'Prediction Machines', author:'Agrawal, Gans, Goldfarb', desc:'Reframes AI as an economics problem — cheap prediction — genuinely useful for delivery/ops-track thinking.', url:'https://www.google.com/search?tbm=bks&q=Prediction+Machines+Agrawal+Gans+Goldfarb'},
+    {category:'Context & Strategy', price:'paid', title:'AI Superpowers', author:'Kai-Fu Lee', desc:'US vs. China AI strategy from a former Google China head — useful context for where the industry is headed.', url:'https://www.google.com/search?tbm=bks&q=AI+Superpowers+Kai-Fu+Lee'},
+  ];
+  const bookCoverCache = {};
+  async function fetchBookCover(book){
+    const key = book.title + '|' + book.author;
+    if(bookCoverCache[key] !== undefined) return bookCoverCache[key];
+    try{
+      const q = encodeURIComponent(`intitle:${book.title} inauthor:${book.author}`);
+      const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${q}&maxResults=1`);
+      if(!res.ok) throw new Error('bad response');
+      const data = await res.json();
+      const item = data.items && data.items[0];
+      const links = item && item.volumeInfo && item.volumeInfo.imageLinks;
+      const thumb = links && (links.thumbnail || links.smallThumbnail);
+      const url = thumb ? thumb.replace('http://','https://') : null;
+      bookCoverCache[key] = url;
+      return url;
+    }catch(e){
+      bookCoverCache[key] = null;
+      return null;
+    }
+  }
+  function renderBooks(filter){
+    const items = filter === 'All' ? BOOKS : BOOKS.filter(b => b.category === filter);
+    document.getElementById('books-grid').innerHTML = items.map((b, i) => `
+      <div class="card">
+        <a class="card-link" href="${b.url}" target="_blank" rel="noopener">
+          <div class="book-cover-wrap" id="cover-${filter.replace(/\s/g,'')}-${i}">
+            <div class="book-cover-fallback"><span class="glyph">📖</span>${b.title}</div>
+          </div>
+          <span class="tag">${b.category}</span>
+          <span class="price-badge ${b.price}">${b.price}</span>
+          <h3 style="margin-top:8px;">${b.title}</h3>
+          <p style="font-family:var(--mono); font-size:11px; color:var(--text-faint); margin-bottom:6px;">${b.author}</p>
+          <p>${b.desc}</p>
+        </a>
+      </div>`).join('');
+
+    items.forEach((b, i) => {
+      fetchBookCover(b).then(url => {
+        if(!url) return;
+        const el = document.getElementById(`cover-${filter.replace(/\s/g,'')}-${i}`);
+        if(el) el.insertAdjacentHTML('beforeend', `<img src="${url}" alt="" loading="lazy" onerror="this.style.display='none'">`);
+      });
+    });
+  }
+  const BOOK_CATEGORIES = ['All', ...new Set(BOOKS.map(b => b.category))];
+  document.getElementById('book-filters').innerHTML = BOOK_CATEGORIES.map(c => `
+    <div class="filter-btn ${c==='All'?'active':''}" data-category="${c}">${c}</div>`).join('');
+  document.getElementById('books-count').textContent = BOOKS.length + ' books';
+  renderBooks('All');
+  document.querySelectorAll('#book-filters .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#book-filters .filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderBooks(btn.dataset.category);
+    });
+  });
+
+  // =========================================================================
+  // Journeys
+  // =========================================================================
+  const JOURNEYS = [
+    {
+      id:'ops', label:'Ops / Delivery → AI/ML',
+      intro:'Team leadership on LLM-adjacent workflows, vendor management, cross-functional delivery — that\'s AI/ML operations experience, not a blank resume. This path gets you to one demonstrable build without requiring a CS degree first.',
+      steps:[
+        {title:'Reframe what you already have', desc:'Write down every AI/ML-adjacent thing in your current role — quality metrics, model-output review, cross-team delivery. This becomes your resume language.'},
+        {title:'LLM & RAG fundamentals — just enough to build', desc:'Tokenization, embeddings, retrieval, prompting. Depth of a practitioner, not a researcher.'},
+        {title:'Learn one orchestration framework', desc:'LangChain or LlamaIndex — pick one, ignore the other until you have a reason to switch.'},
+        {title:'Build the retrieval pipeline', desc:'Chunking strategy, vector store, retrieval quality checks — the part that\'s actually hard.'},
+        {title:'Wrap it in something demoable', desc:'A simple UI or CLI. It needs to be shown in an interview, not just described.'},
+      ],
+      milestone:{title:'Ship a working RAG document Q&A app', desc:'Point it at a real set of documents. It should answer questions with citations. This is your primary interview artifact.'}
+    },
+    {
+      id:'dev', label:'Developer → GenAI Engineer',
+      intro:'You already think in systems — this path compounds faster because the fundamentals map onto things you already know (APIs, state, error handling).',
+      steps:[
+        {title:'LLM fundamentals', desc:'Attention, context windows, sampling parameters — the mental model behind every framework you\'ll use.'},
+        {title:'RAG pipelines', desc:'Chunking, embeddings, vector stores — build one from raw API calls before reaching for a framework.'},
+        {title:'Function calling & tool use', desc:'Give a model access to real APIs and handle the failure cases — this is where most "agent" demos fall apart.'},
+        {title:'Multi-step agent planning', desc:'Chained reasoning, state across steps, knowing when a single call would have been simpler.'},
+        {title:'Production hardening', desc:'Guardrails, observability, cost and latency budgets — the gap between a demo and something a team ships.'},
+      ],
+      milestone:{title:'Build and deploy an agent with real tool-calling', desc:'An agent that calls at least two real APIs, handles a failure gracefully, and is deployed somewhere reachable by a URL.'}
+    },
+    {
+      id:'fresh', label:'Fresh Start → ML / Data Science',
+      intro:'Resist the pull straight into LLMs. The fundamentals here compound — skipping them shows up later as a ceiling you can\'t explain.',
+      steps:[
+        {title:'Python & math foundations', desc:'Linear algebra, probability, and Python fluency — not mastery, just enough to stop fighting the tools.'},
+        {title:'Classical ML first', desc:'Regression, trees, ensembles. scikit-learn fluency before any deep learning.'},
+        {title:'Build a neural net from scratch', desc:'No PyTorch, no TensorFlow — forward pass, backprop, gradient descent by hand.'},
+        {title:'Rebuild it with a framework', desc:'Same problem, PyTorch this time. The contrast is what makes the framework make sense.'},
+        {title:'One finished project, fully documented', desc:'A single well-documented project beats five half-built ones.'},
+      ],
+      milestone:{title:'Scratch-built MLP vs. scikit-learn, side by side', desc:'Implement a multi-layer perceptron with no ML framework, then the same model in scikit-learn. Write up what the framework actually saved you.'}
+    },
+    {
+      id:'quant', label:'Trader → Quant ML',
+      intro:'The bridge back to your own trading system. This path only makes sense if you already understand market structure — which you do.',
+      steps:[
+        {title:'Time-series fundamentals for ML', desc:'Stationarity, lookahead bias, why standard train/test splits break on price data.'},
+        {title:'Feature engineering from your own indicators', desc:'Turn your existing BKQ indicator outputs into a labeled feature set instead of starting from raw OHLCV.'},
+        {title:'Classical models first', desc:'Gradient-boosted trees on your feature set before reaching for anything deep — establish a baseline that\'s hard to beat.'},
+        {title:'Sequence models', desc:'LSTM or a small transformer on the same data — compare honestly against the classical baseline.'},
+        {title:'Backtest against your real system', desc:'Walk-forward validation against your actual trade log, not just historical accuracy.'},
+      ],
+      milestone:{title:'BTC-direction classifier, backtested against your own indicator suite', desc:'A model trained on features derived from your BKQ indicators, walk-forward tested, compared honestly against your existing discretionary win rate.'}
+    },
+  ];
+
+  let journeyProgress = {};
+  (function loadProgress(){
+    try{ journeyProgress = JSON.parse(localStorage.getItem('bkq_ai_journey_progress') || '{}'); }
+    catch(e){ journeyProgress = {}; }
+  })();
+  function saveProgress(){
+    try{ localStorage.setItem('bkq_ai_journey_progress', JSON.stringify(journeyProgress)); }catch(e){}
+  }
+  function journeyPct(journey){
+    const done = journey.steps.filter((s,i) => journeyProgress[journey.id + '_' + i]).length;
+    return Math.round((done / journey.steps.length) * 100);
+  }
+  function renderJourneyTabs(activeId){
+    document.getElementById('journey-tabs').innerHTML = JOURNEYS.map(j => `
+      <div class="tab ${j.id===activeId?'active':''}" data-journey="${j.id}">
+        ${j.label} <span class="pct">${journeyPct(j)}%</span>
+      </div>`).join('');
+    document.querySelectorAll('#journey-tabs .tab').forEach(tab => {
+      tab.addEventListener('click', () => showJourney(tab.dataset.journey));
+    });
+  }
+  function renderJourneyPanels(){
+    document.getElementById('journey-panels').innerHTML = JOURNEYS.map(j => `
+      <div class="tab-panel" id="journey-panel-${j.id}">
+        <div class="journey-intro">
+          <h3>${j.label}</h3>
+          <p>${j.intro}</p>
+          <div class="progress-bar"><div class="progress-fill" id="fill-${j.id}" style="width:${journeyPct(j)}%"></div></div>
+        </div>
+        <div class="roadmap-track">
+          ${j.steps.map((s,i) => `
+            <div class="roadmap-step ${journeyProgress[j.id+'_'+i]?'done':''}" data-journey="${j.id}" data-step="${i}">
+              <div class="check">✓</div>
+              <div><h4>${s.title}</h4><p>${s.desc}</p></div>
+            </div>`).join('')}
+        </div>
+        <div class="milestone">
+          <span class="tag">Milestone Project</span>
+          <h4>${j.milestone.title}</h4>
+          <p>${j.milestone.desc}</p>
+        </div>
+      </div>`).join('');
+    document.querySelectorAll('#journey-panels .roadmap-step').forEach(step => {
+      step.addEventListener('click', () => {
+        const key = step.dataset.journey + '_' + step.dataset.step;
+        journeyProgress[key] = !journeyProgress[key];
+        saveProgress();
+        step.classList.toggle('done');
+        const j = JOURNEYS.find(j => j.id === step.dataset.journey);
+        document.getElementById('fill-' + j.id).style.width = journeyPct(j) + '%';
+        renderJourneyTabs(step.dataset.journey);
+      });
+    });
+  }
+  function showJourney(id){
+    document.querySelectorAll('#journey-panels .tab-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('journey-panel-' + id).classList.add('active');
+    renderJourneyTabs(id);
+  }
+  renderJourneyTabs('ops');
+  renderJourneyPanels();
+  showJourney('ops');
+
+  // =========================================================================
+  // Projects to Try
+  // =========================================================================
+  const PROJECTS = [
+    // --- Beginner ---
+    {difficulty:'Beginner', domain:'Classical ML', title:'A real classifier, done properly', desc:'Not just chasing accuracy on Titanic or Iris — proper train/val/test split, a confusion matrix, and an honest writeup of where it fails.', signal:'Shows you understand evaluation, not just model.fit()'},
+    {difficulty:'Beginner', domain:'NLP', title:'Sentiment analysis on real reviews', desc:'Scrape or download real product/app reviews — not a pre-cleaned academic dataset — and classify sentiment.', signal:'Shows you can handle messy, real-world text'},
+    {difficulty:'Beginner', domain:'NLP', title:'Spam / phishing email classifier', desc:'A genuinely useful binary classifier on real email data — practical, not toy.', signal:'Shows applied thinking over pure theory'},
+    {difficulty:'Beginner', domain:'GenAI', title:'Prompt eval harness', desc:'A small framework to A/B test prompts against a labeled test set — quantify what "better" actually means.', signal:'Shows rigor over vibes-based prompting'},
+    {difficulty:'Beginner', domain:'GenAI', title:'Document Q&A over your own PDFs', desc:'Chunk, embed, retrieve, answer — the canonical first RAG build, on documents you actually care about.', signal:'Shows retrieval + prompt-eval basics'},
+
+    // --- Intermediate ---
+    {difficulty:'Intermediate', domain:'GenAI', title:'Multi-document RAG with citations', desc:'Cross-document retrieval with citation tracing and an eval harness — not just "it answers questions," but "it answers correctly and shows its work."', signal:'Portfolio anchor for GCC delivery/GenAI roles'},
+    {difficulty:'Intermediate', domain:'GenAI', title:'Agent with real tool use', desc:'An agent that calls at least two real APIs (weather, search, a DB) and handles failure gracefully — not a scripted demo.', signal:'Shows planning + error handling, not just chaining calls'},
+    {difficulty:'Intermediate', domain:'Deep Learning', title:'Fine-tuned domain classifier vs. zero-shot', desc:'LoRA fine-tune on a niche dataset, benchmarked honestly against zero-shot prompting on the same task.', signal:'Shows you know when NOT to fine-tune, not just how to'},
+    {difficulty:'Intermediate', domain:'Time Series', title:'Forecasting on a real time series', desc:'Electricity demand, weather, or web traffic — proper backtesting, not a single train/test split that ignores time order.', signal:'Shows awareness of lookahead bias and temporal leakage'},
+    {difficulty:'Intermediate', domain:'Computer Vision', title:'Image classifier via transfer learning', desc:'Fine-tune a pretrained model (ResNet/EfficientNet) on a custom dataset you collected yourself.', signal:'Shows practical CV without needing to train from scratch'},
+    {difficulty:'Intermediate', domain:'Classical ML', title:'Recommendation system', desc:'Collaborative filtering on a real dataset like MovieLens — cold-start handling included, not just the happy path.', signal:'Shows you can handle sparse, real-world interaction data'},
+
+    // --- Advanced ---
+    {difficulty:'Advanced', domain:'GenAI', title:'Production RAG with CI/CD', desc:'A hardened RAG platform — automated eval on every change, guardrails, observability, not just a working notebook.', signal:'Shows you can ship, not just prototype'},
+    {difficulty:'Advanced', domain:'GenAI', title:'Multi-agent orchestration', desc:'Several specialized agents coordinating on a task via LangGraph or CrewAI — with visible failure modes handled, not hidden.', signal:'Shows systems thinking beyond a single agent loop'},
+    {difficulty:'Advanced', domain:'MLOps', title:'Model monitoring dashboard', desc:'Drift detection and alerting on a deployed model — ops-flavored ML, the unglamorous part that actually keeps systems alive.', signal:'Directly maps to Delivery/Ops-track roles, not just IC engineering'},
+    {difficulty:'Advanced', domain:'Deep Learning', title:'Custom fine-tuned LLM, deployed', desc:'LoRA/QLoRA fine-tune served behind an API with guardrails and rate limiting — the whole pipeline, not just the training step.', signal:'Shows end-to-end ownership from data to production'},
+    {difficulty:'Advanced', domain:'Quant ML', title:'BTC-direction classifier vs. your own indicator suite', desc:'A model trained on features derived from your BKQ indicators, walk-forward tested, compared honestly against your discretionary win rate.', signal:'Your most unique project — nobody else can build this one'},
+  ];
+
+  function renderProjects(filter){
+    const items = filter === 'All' ? PROJECTS : PROJECTS.filter(p => p.difficulty === filter);
+    document.getElementById('projects-grid').innerHTML = items.map(p => `
+      <div class="card">
+        <span class="tag">${p.domain}</span>
+        <span class="price-badge ${p.difficulty === 'Beginner' ? 'free' : (p.difficulty === 'Advanced' ? 'paid' : '')}" style="${p.difficulty === 'Intermediate' ? 'background:var(--ai-dim); color:var(--ai);' : ''}">${p.difficulty}</span>
+        <h3 style="margin-top:8px;">${p.title}</h3>
+        <p>${p.desc}</p>
+        <div class="foot"><span>${p.signal}</span></div>
+      </div>`).join('');
+  }
+  const PROJECT_DIFFICULTIES = ['All', 'Beginner', 'Intermediate', 'Advanced'];
+  document.getElementById('project-filters').innerHTML = PROJECT_DIFFICULTIES.map(d => `
+    <div class="filter-btn ${d==='All'?'active':''}" data-difficulty="${d}">${d}</div>`).join('');
+  document.getElementById('projects-count').textContent = PROJECTS.length + ' projects';
+  renderProjects('All');
+  document.querySelectorAll('#project-filters .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#project-filters .filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderProjects(btn.dataset.difficulty);
+    });
+  });
+
+  // =========================================================================
+  // Follow — YouTube, Twitter/X, Telegram
+  // =========================================================================
+  const YOUTUBE = [
+    {name:'3Blue1Brown', desc:'Visual intuition for the math underneath ML — start here for linear algebra and neural nets.', url:'https://www.youtube.com/@3blue1brown'},
+    {name:'Andrej Karpathy', desc:'Former Tesla AI Director, OpenAI founding member. "Neural Networks: Zero to Hero" builds GPT from scratch in raw Python.', url:'https://www.youtube.com/@AndrejKarpathy'},
+    {name:'StatQuest with Josh Starmer', desc:'The math behind ML algorithms, explained clearly with visuals. Essential for classical ML.', url:'https://www.youtube.com/@statquest'},
+    {name:'Two Minute Papers', desc:'AI research breakthroughs distilled into short, enthusiastic explainers — good for broad awareness.', url:'https://www.youtube.com/@TwoMinutePapers'},
+    {name:'Yannic Kilcher', desc:'Deep, technical paper walkthroughs — motivation, methodology, results. Assumes working ML knowledge.', url:'https://www.youtube.com/@YannicKilcher'},
+    {name:'sentdex', desc:'Hands-on Python and ML coding tutorials — good for learning by building alongside the video.', url:'https://www.youtube.com/@sentdex'},
+    {name:'freeCodeCamp.org', desc:'Full-length free courses, including complete ML and TensorFlow/PyTorch walkthroughs.', url:'https://www.youtube.com/@freecodecamp'},
+    {name:'DeepLearning.AI', desc:'Official channel — course previews, talks, and interviews from Andrew Ng and team.', url:'https://www.youtube.com/@Deeplearningai'},
+  ];
+  const TWITTER = [
+    {name:'Andrej Karpathy', handle:'@karpathy', desc:'Clear thinking on deep learning and LLMs — when he posts, it\'s worth reading.', url:'https://x.com/karpathy'},
+    {name:'Andrew Ng', handle:'@AndrewYNg', desc:'Reliable, calm signal on applied ML and data-centric AI — founder of DeepLearning.AI.', url:'https://x.com/AndrewYNg'},
+    {name:'Yann LeCun', handle:'@ylecun', desc:'Chief AI Scientist at Meta — the main counterweight to mainstream AGI-hype narratives.', url:'https://x.com/ylecun'},
+    {name:'François Chollet', handle:'@fchollet', desc:'Creator of Keras — skeptical, well-argued takes on benchmarks and what LLMs actually are.', url:'https://x.com/fchollet'},
+    {name:'Sebastian Raschka', handle:'@rasbt', desc:'Hands-on implementation breakdowns of new architectures — best for understanding LLM training at the code level.', url:'https://x.com/rasbt'},
+    {name:'Lilian Weng', handle:'@lilianweng', desc:'Research Scientist at DeepMind, formerly OpenAI Safety. Widely-cited posts on RLHF and agents.', url:'https://x.com/lilianweng'},
+    {name:'Jack Clark', handle:'@jackclarkSF', desc:'Anthropic co-founder — writes the Import AI newsletter, measured policy and research lens.', url:'https://x.com/jackclarkSF'},
+    {name:'Simon Willison', handle:'@simonw', desc:'Running commentary on what new LLMs can and can\'t actually do — his blog is mandatory reading.', url:'https://x.com/simonw'},
+    {name:'Santiago Valdarrama', handle:'@svpino', desc:'Practical ML through clear posts — strong on system design and toy-vs-production ML.', url:'https://x.com/svpino'},
+    {name:'Anthropic', handle:'@AnthropicAI', desc:'Official account — Claude model releases and interpretability/safety research.', url:'https://x.com/AnthropicAI'},
+  ];
+  const TELEGRAM = [
+    {name:'Artificial Intelligence & Deep Learning', desc:'Daily updates on AI/ML/CV/NLP research and open-source releases.', url:'https://t.me/DeepLearning_ai'},
+    {name:'Machine Learning Research News', desc:'Community sharing news and articles on ML/AI applications, posted daily.', url:'https://t.me/machinelearningresearchnews'},
+  ];
+  function renderChannelList(elId, items, isTwitter){
+    document.getElementById(elId).innerHTML = items.map(c => `
+      <div class="channel-row">
+        <div class="name-cell">
+          ${faviconImg(c.url, 18)}
+          <a href="${c.url}" target="_blank" rel="noopener">${c.name}${isTwitter ? ' <span style="color:var(--text-faint); font-weight:400;">' + c.handle + '</span>' : ''}</a>
+        </div>
+        <span class="desc">${c.desc}</span>
+      </div>`).join('');
+  }
+  renderChannelList('youtube-list', YOUTUBE, false);
+  renderChannelList('twitter-list', TWITTER, true);
+  renderChannelList('telegram-list', TELEGRAM, false);
+
+  document.querySelectorAll('#follow-tabs .tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('#follow-tabs .tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('#follow .tab-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('follow-panel-' + tab.dataset.panel).classList.add('active');
+    });
+  });
+
+  // =========================================================================
+  // Full Resource Library
+  // =========================================================================
+  const LIBRARY = [
+    {type:'Course', title:'CS50x — Intro to Computer Science (Harvard)', desc:'The real foundation before anything else — free, self-paced.', url:'https://cs50.harvard.edu/x/'},
+    {type:'Course', title:'CS50P — Python (Harvard)', desc:'Python specifically, free and self-paced.', url:'https://cs50.harvard.edu/python/'},
+    {type:'Course', title:'CS50 AI with Python (Harvard)', desc:'Search, classification, neural nets — hands-on in Python, free to audit.', url:'https://cs50.harvard.edu/ai/'},
+    {type:'Course', title:'CS231n — Deep Learning for Vision', desc:'Stanford\'s foundational course, free lecture notes and assignments.', url:'http://cs231n.stanford.edu/'},
+    {type:'Course', title:'fast.ai — Practical Deep Learning', desc:'Top-down, code-first path into deep learning.', url:'https://course.fast.ai/'},
+    {type:'Docs', title:'PyTorch Tutorials', desc:'Official docs, the fastest way to get unstuck on syntax.', url:'https://pytorch.org/tutorials/'},
+    {type:'Docs', title:'LangChain Documentation', desc:'RAG and agent orchestration framework docs.', url:'https://python.langchain.com/'},
+    {type:'Docs', title:'Hugging Face Hub Docs', desc:'Models, datasets, and Spaces — the practical reference.', url:'https://huggingface.co/docs'},
+    {type:'Paper', title:'Attention Is All You Need', desc:'The transformer paper.', url:'https://arxiv.org/abs/1706.03762'},
+    {type:'Paper', title:'LoRA: Low-Rank Adaptation', desc:'The paper behind most practical fine-tuning today.', url:'https://arxiv.org/abs/2106.09685'},
+    {type:'Reference', title:'Papers With Code', desc:'State-of-the-art tracking by task, linked to implementations.', url:'https://paperswithcode.com/'},
+    {type:'Reference', title:'3Blue1Brown — Neural Networks', desc:'Visual intuition for neural network fundamentals.', url:'https://www.3blue1brown.com/topics/neural-networks'},
+    {type:'Reference', title:'MIT OpenCourseWare — Linear Algebra', desc:'Gilbert Strang\'s course, the standard reference.', url:'https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/'},
+    {type:'Practice', title:'Kaggle', desc:'Real datasets, real leaderboards, fastest feedback loop.', url:'https://www.kaggle.com/'},
+    {type:'Practice', title:'Papers With Code — Trending', desc:'What\'s currently reproducible and state-of-the-art.', url:'https://paperswithcode.com/trending'},
+    {type:'Tool', title:'Weights & Biases', desc:'Experiment tracking — start using this from your first real project.', url:'https://wandb.ai/'},
+  ];
+  const TYPES = ['All', ...new Set(LIBRARY.map(r => r.type))];
+  document.getElementById('lib-filters').innerHTML = TYPES.map(t => `
+    <div class="filter-btn ${t==='All'?'active':''}" data-type="${t}">${t}</div>`).join('');
+  document.getElementById('library-count').textContent = LIBRARY.length + ' resources';
+  function renderLibrary(filter){
+    const items = filter === 'All' ? LIBRARY : LIBRARY.filter(r => r.type === filter);
+    document.getElementById('library-grid').innerHTML = items.map(r => `
+      <div class="card">
+        <a class="card-link" href="${r.url}" target="_blank" rel="noopener">
+          <div class="card-head-row">${faviconImg(r.url)}<span class="tag">${r.type}</span></div>
+          <h3>${r.title}</h3>
+          <p>${r.desc}</p>
+        </a>
+      </div>`).join('');
+  }
+  renderLibrary('All');
+  document.querySelectorAll('#lib-filters .filter-btn').forEach(f => {
+    f.addEventListener('click', () => {
+      document.querySelectorAll('#lib-filters .filter-btn').forEach(x => x.classList.remove('active'));
+      f.classList.add('active');
+      renderLibrary(f.dataset.type);
+    });
+  });
+</script>
+
+</body>
+</html>

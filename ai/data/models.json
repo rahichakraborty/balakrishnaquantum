@@ -1,4 +1,75 @@
 {
-  "generated_at": "2026-07-12T22:16:39+00:00",
-  "items": []
+  "generated_at": "2026-07-13T00:08:43+00:00",
+  "items": [
+    {
+      "id": "tencent/Hy3",
+      "url": "https://huggingface.co/tencent/Hy3",
+      "downloads": 8655,
+      "likes": 718,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
+      "url": "https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
+      "downloads": 1967677,
+      "likes": 2045,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "zai-org/GLM-5.2",
+      "url": "https://huggingface.co/zai-org/GLM-5.2",
+      "downloads": 441413,
+      "likes": 3856,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "bottlecapai/ThinkingCap-Qwen3.6-27B",
+      "url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B",
+      "downloads": 4463,
+      "likes": 265,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "InternScience/Agents-A1",
+      "url": "https://huggingface.co/InternScience/Agents-A1",
+      "downloads": 29038,
+      "likes": 509,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "conradlocke/krea2-identity-edit",
+      "url": "https://huggingface.co/conradlocke/krea2-identity-edit",
+      "downloads": 0,
+      "likes": 211,
+      "pipeline_tag": null
+    },
+    {
+      "id": "froggeric/Qwen-Fixed-Chat-Templates",
+      "url": "https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates",
+      "downloads": 0,
+      "likes": 864,
+      "pipeline_tag": null
+    },
+    {
+      "id": "baidu/Unlimited-OCR",
+      "url": "https://huggingface.co/baidu/Unlimited-OCR",
+      "downloads": 1430656,
+      "likes": 1943,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking-GGUF",
+      "url": "https://huggingface.co/GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking-GGUF",
+      "downloads": 49268,
+      "likes": 201,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "unsloth/DeepSeek-V4-Flash-GGUF",
+      "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-GGUF",
+      "downloads": 44614,
+      "likes": 152,
+      "pipeline_tag": null
+    }
+  ]
 }

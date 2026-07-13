@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-12T23:18:14+00:00",
+  "generated_at": "2026-07-13T00:08:42+00:00",
   "items": [
     {
       "name": "affaan-m/ECC",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 228936,
+      "stars": 228940,
       "language": "JavaScript",
       "updated_at": "2026-07-09T07:53:52Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/124439313?v=4"
@@ -14,7 +14,7 @@
       "name": "NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 213724,
+      "stars": 213729,
       "language": "Python",
       "updated_at": "2026-07-12T18:27:47Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/134168893?v=4"
@@ -45,6 +45,51 @@
       "language": "Go",
       "updated_at": "2026-07-10T00:42:15Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/151674099?v=4"
+    },
+    {
+      "name": "f/prompts.chat",
+      "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "url": "https://github.com/f/prompts.chat",
+      "stars": 165565,
+      "language": "HTML",
+      "updated_at": "2026-07-12T04:15:09Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/196477?v=4"
+    },
+    {
+      "name": "huggingface/transformers",
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+      "url": "https://github.com/huggingface/transformers",
+      "stars": 162546,
+      "language": "Python",
+      "updated_at": "2026-07-12T00:55:33Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25720743?v=4"
+    },
+    {
+      "name": "firecrawl/firecrawl",
+      "description": "The API to search, scrape, and interact with the web at scale. 🔥",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "stars": 149878,
+      "language": "TypeScript",
+      "updated_at": "2026-07-12T13:18:12Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/135057108?v=4"
+    },
+    {
+      "name": "langgenius/dify",
+      "description": "Production-ready platform for agentic workflow development.",
+      "url": "https://github.com/langgenius/dify",
+      "stars": 148608,
+      "language": "TypeScript",
+      "updated_at": "2026-07-12T17:19:42Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127165244?v=4"
+    },
+    {
+      "name": "langchain-ai/langchain",
+      "description": "The agent engineering platform.",
+      "url": "https://github.com/langchain-ai/langchain",
+      "stars": 141603,
+      "language": "Python",
+      "updated_at": "2026-07-12T21:59:21Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126733545?v=4"
     }
   ]
 }

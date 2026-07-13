@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://balakrishnaquantum.com/sitemap.xml

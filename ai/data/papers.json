@@ -1,4 +1,150 @@
 {
-  "generated_at": "2026-07-12T22:16:39+00:00",
-  "items": []
+  "generated_at": "2026-07-13T06:10:38+00:00",
+  "items": [
+    {
+      "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
+      "summary": "Current electroencephalography (EEG)-based dream detection relies on power spectral density (PSD) and statistical moment features, achieving a state-of-the-art area under the receiver operating characteristic curve (AUC) of approximately 0.70 on the DREAM database (Wong et al., 2…",
+      "authors": [
+        "Ren Takahashi",
+        "Emre Yusuf",
+        "Jayabrata Bhaduri"
+      ],
+      "link": "http://arxiv.org/abs/2607.09662v1",
+      "published": "2026-07-10T17:59:45Z",
+      "category": "q-bio.NC"
+    },
+    {
+      "title": "Scalable Visual Pretraining for Language Intelligence",
+      "summary": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, where figures, typeset equations, and page layouts carry rich information that can…",
+      "authors": [
+        "Yiming Zhang",
+        "Zhonghan Zhao",
+        "Wenwei Zhang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.09657v1",
+      "published": "2026-07-10T17:57:03Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
+      "summary": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactions or behaviors, only a handful of non-curated human descriptions as a benchmark…",
+      "authors": [
+        "Shravan Murlidaran",
+        "Miguel P. Eckstein"
+      ],
+      "link": "http://arxiv.org/abs/2607.09654v1",
+      "published": "2026-07-10T17:53:37Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+      "summary": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While recent adoptions of Large Language Model (LLM) agents have …",
+      "authors": [
+        "Katherine Swinea",
+        "Kshitiz Aryal",
+        "Lopamudra Praharaj",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.09653v1",
+      "published": "2026-07-10T17:52:29Z",
+      "category": "cs.CR"
+    },
+    {
+      "title": "ConceptSMILE: Auditing the Trustworthiness of Concept-Based Explainable AI",
+      "summary": "Concept-based explainable artificial intelligence (AI) can make model reasoning more human-understandable, but concept-level outputs are not automatically trustworthy. We introduce ConceptSMILE, a model-agnostic perturbation-based auditing framework for evaluating the reliability…",
+      "authors": [
+        "Mohadeseh Mollapour",
+        "Koorosh Aslansefat",
+        "Zeinab Dehghani",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.09649v1",
+      "published": "2026-07-10T17:47:38Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Deep Gaussian Processes on Directed Acyclic Graphs",
+      "summary": "Many real-world processes can be represented as compositions of functions along a directed acyclic graph (DAG). In causal modelling, these correspond to the underlying mechanisms; in engineering, to multiple fidelity levels; and in gene-regulatory networks, to transcription facto…",
+      "authors": [
+        "Federico L. Perlino",
+        "Oliver Hamelijnck",
+        "Adam M. Johansen",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.09645v1",
+      "published": "2026-07-10T17:41:11Z",
+      "category": "stat.ML"
+    },
+    {
+      "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+      "summary": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdiction with customer friction. To overcome this without distortiv…",
+      "authors": [
+        "Cláudio Lúcio do Val Lopes",
+        "Lucca Machado da Silva"
+      ],
+      "link": "http://arxiv.org/abs/2607.09641v1",
+      "published": "2026-07-10T17:39:00Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Lean-QIT: Towards a Formal Infrastructure for Quantum Information Theory",
+      "summary": "Quantum information theory (QIT) characterizes the capabilities and fundamental limits of quantum information processing, underpinning quantum communication, computation, and error correction. Formalizing its coding theorems requires connecting finite-block protocols, analytic in…",
+      "authors": [
+        "Chengkai Zhu",
+        "Ziao Tang",
+        "Guocheng Zhen",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.09632v1",
+      "published": "2026-07-10T17:28:26Z",
+      "category": "quant-ph"
+    },
+    {
+      "title": "4DR360: State Reasoning for Joint 3D Detection and Occupancy Prediction in 4D Radar-Camera Full-Scene Perception",
+      "summary": "Reliable autonomous driving requires full-scene perception that couples foreground objects with dense semantic layout. Recently, 4D millimeter-wave radar has emerged as a robust and affordable sensor, yet its sparse returns make radar-camera fusion necessary for comprehensive sce…",
+      "authors": [
+        "Xiaokai Bai",
+        "Lianqing Zheng",
+        "Runwei Guan",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.09629v1",
+      "published": "2026-07-10T17:26:19Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Task-Specific Multimodal Question Answering Agents via Confidence Calibration and Incremental Reasoning for QANTA 2026",
+      "summary": "We present our submission to the QANTA 2026 shared challenge at the ICML 2026 Workshop on Efficient Multimodal Question Answering (EMM-QA). Quanta evaluates multimodal quizbowl systems that answer pyramid-style questions from incrementally revealed text and accompanying images wh…",
+      "authors": [
+        "Nirjhar Das",
+        "Md. Al-Mamun Provath"
+      ],
+      "link": "http://arxiv.org/abs/2607.09623v1",
+      "published": "2026-07-10T17:22:49Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "LLM for EDA in Front-End Design: Challenges and Opportunities",
+      "summary": "As chip complexity increases and time-to-market pressures grow, front-end design has become a critical bottleneck in chip development. Recently, Large Language Models (LLMs) have shown great potential in Electronic Design Automation (EDA). Beyond specification understanding, LLMs…",
+      "authors": [
+        "Kangwei Xu",
+        "Bing Li",
+        "Ulf Schlichtmann"
+      ],
+      "link": "http://arxiv.org/abs/2607.09616v1",
+      "published": "2026-07-10T17:15:54Z",
+      "category": "cs.ET"
+    },
+    {
+      "title": "Toward Real-Time Sentence-Level Sign Language Translation",
+      "summary": "Most sign language understanding systems operate at the level of isolated signs, limiting their usefulness in natural communication. We study sentence-level sign language translation (SLT) with the primary goal of real-time deployment rather than proposing a new translation archi…",
+      "authors": [
+        "Thanh-Hoang Nguyen Doan"
+      ],
+      "link": "http://arxiv.org/abs/2607.09611v1",
+      "published": "2026-07-10T17:11:03Z",
+      "category": "cs.CL"
+    }
+  ]
 }

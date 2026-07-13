@@ -1,4 +1,20 @@
 {
-  "generated_at": "2026-07-13T00:05:31+00:00",
-  "covers": {}
+  "generated_at": "2026-07-13T06:10:56+00:00",
+  "covers": {
+    "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow|Aurélien Géron": null,
+    "An Introduction to Statistical Learning (ISLR)|James, Witten, Hastie, Tibshirani": null,
+    "The Elements of Statistical Learning|Hastie, Tibshirani, Friedman": null,
+    "The Hundred-Page Machine Learning Book|Andriy Burkov": null,
+    "Deep Learning|Goodfellow, Bengio, Courville": null,
+    "Deep Learning with Python|François Chollet": null,
+    "Grokking Deep Learning|Andrew W. Trask": null,
+    "Speech and Language Processing|Jurafsky & Martin": null,
+    "Natural Language Processing with Transformers|Tunstall, von Werra, Wolf": null,
+    "Build a Large Language Model (From Scratch)|Sebastian Raschka": null,
+    "Python for Data Analysis|Wes McKinney": null,
+    "Data Science from Scratch|Joel Grus": null,
+    "Storytelling with Data|Cole Nussbaumer Knaflic": null,
+    "Prediction Machines|Agrawal, Gans, Goldfarb": null,
+    "AI Superpowers|Kai-Fu Lee": null
+  }
 }

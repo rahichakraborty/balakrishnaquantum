@@ -168,6 +168,64 @@ def fetch_models(max_results=10):
     return models
 
 
+# ---------------------------------------------------------------------------
+# 5. Book covers — Google Books, fetched server-side to avoid any browser
+#    CORS/rate-limit uncertainty. Mirrors the BOOKS list in ai/index.html —
+#    keep both in sync if the book list changes.
+# ---------------------------------------------------------------------------
+BOOKS = [
+    ("Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow", "Aurélien Géron"),
+    ("An Introduction to Statistical Learning (ISLR)", "James, Witten, Hastie, Tibshirani"),
+    ("The Elements of Statistical Learning", "Hastie, Tibshirani, Friedman"),
+    ("The Hundred-Page Machine Learning Book", "Andriy Burkov"),
+    ("Deep Learning", "Goodfellow, Bengio, Courville"),
+    ("Deep Learning with Python", "François Chollet"),
+    ("Grokking Deep Learning", "Andrew W. Trask"),
+    ("Speech and Language Processing", "Jurafsky & Martin"),
+    ("Natural Language Processing with Transformers", "Tunstall, von Werra, Wolf"),
+    ("Build a Large Language Model (From Scratch)", "Sebastian Raschka"),
+    ("Python for Data Analysis", "Wes McKinney"),
+    ("Data Science from Scratch", "Joel Grus"),
+    ("Storytelling with Data", "Cole Nussbaumer Knaflic"),
+    ("Prediction Machines", "Agrawal, Gans, Goldfarb"),
+    ("AI Superpowers", "Kai-Fu Lee"),
+]
+
+
+def fetch_one_book_cover(title, author):
+    def try_query(q):
+        url = "https://www.googleapis.com/books/v1/volumes?" + urllib.parse.urlencode(
+            {"q": q, "maxResults": 1}
+        )
+        data = json.loads(fetch(url))
+        items = data.get("items") or []
+        if not items:
+            return None
+        links = items[0].get("volumeInfo", {}).get("imageLinks", {})
+        thumb = links.get("thumbnail") or links.get("smallThumbnail")
+        return thumb.replace("http://", "https://") if thumb else None
+
+    result = try_query(f"{title} {author}")
+    if not result:
+        result = try_query(title)  # fallback: title alone
+    return result
+
+
+def fetch_book_covers():
+    covers = {}
+    for title, author in BOOKS:
+        key = f"{title}|{author}"
+        try:
+            url = fetch_one_book_cover(title, author)
+            covers[key] = url
+            print(f"  cover for '{title}': {'found' if url else 'not found'}")
+        except Exception as e:
+            print(f"  WARN: cover lookup failed for '{title}': {e}")
+            covers[key] = None
+        time.sleep(0.5)  # stay well under Google's per-second burst limit
+    return covers
+
+
 def write_json(name, payload, error=None):
     out = {"generated_at": now_iso(), "items": payload}
     if error:
@@ -204,6 +262,20 @@ def main():
         # field is visible just by opening the JSON.
         write_json(filename, payload, error=error)
         time.sleep(1)  # be polite between sources
+
+    print("fetching book_covers.json...")
+    try:
+        covers = fetch_book_covers()
+        cover_error = None
+    except Exception as e:
+        covers = {}
+        cover_error = f"{type(e).__name__}: {e}"
+    out = {"generated_at": now_iso(), "covers": covers}
+    if cover_error:
+        out["error"] = cover_error
+    (DATA_DIR / "book_covers.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))
+    found = sum(1 for v in covers.values() if v)
+    print(f"wrote book_covers.json ({found}/{len(BOOKS)} covers found)")
 
 
 if __name__ == "__main__":

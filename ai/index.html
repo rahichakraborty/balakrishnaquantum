@@ -731,33 +731,10 @@
     {category:'Context & Strategy', price:'paid', title:'Prediction Machines', author:'Agrawal, Gans, Goldfarb', desc:'Reframes AI as an economics problem — cheap prediction — genuinely useful for delivery/ops-track thinking.', url:'https://www.google.com/search?tbm=bks&q=Prediction+Machines+Agrawal+Gans+Goldfarb'},
     {category:'Context & Strategy', price:'paid', title:'AI Superpowers', author:'Kai-Fu Lee', desc:'US vs. China AI strategy from a former Google China head — useful context for where the industry is headed.', url:'https://www.google.com/search?tbm=bks&q=AI+Superpowers+Kai-Fu+Lee'},
   ];
-  const bookCoverCache = {};
-  async function fetchBookCover(book){
-    const key = book.title + '|' + book.author;
-    if(bookCoverCache[key] !== undefined) return bookCoverCache[key];
-    // Plain-text search, not intitle:/inauthor: operators — those only scope the single
-    // next word without quotes, which badly mis-parses multi-word titles and multi-author
-    // strings like "James, Witten, Hastie, Tibshirani" and was why covers weren't loading.
-    async function tryQuery(q){
-      const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1`);
-      if(!res.ok) throw new Error('HTTP ' + res.status);
-      const data = await res.json();
-      const item = data.items && data.items[0];
-      const links = item && item.volumeInfo && item.volumeInfo.imageLinks;
-      const thumb = links && (links.thumbnail || links.smallThumbnail);
-      return thumb ? thumb.replace('http://','https://') : null;
-    }
-    try{
-      let url = await tryQuery(`${book.title} ${book.author}`);
-      if(!url) url = await tryQuery(book.title); // fallback: title alone, less noise from long author lists
-      bookCoverCache[key] = url;
-      return url;
-    }catch(e){
-      console.warn('Book cover lookup failed for', book.title, e);
-      bookCoverCache[key] = null;
-      return null;
-    }
-  }
+  let bookCoverMap = {};
+  let bookCoversLoaded = loadJSON('data/book_covers.json').then(data => {
+    bookCoverMap = (data && data.covers) || {};
+  });
   function renderBooks(filter){
     const items = filter === 'All' ? BOOKS : BOOKS.filter(b => b.category === filter);
     document.getElementById('books-grid').innerHTML = items.map((b, i) => `
@@ -774,8 +751,13 @@
         </a>
       </div>`).join('');
 
-    items.forEach((b, i) => {
-      fetchBookCover(b).then(url => {
+    // Covers come from data/book_covers.json (fetched server-side by the same
+    // GitHub Action that populates the Live Brief) — no browser-side API calls,
+    // so no CORS or rate-limit risk here at all.
+    bookCoversLoaded.then(() => {
+      items.forEach((b, i) => {
+        const key = b.title + '|' + b.author;
+        const url = bookCoverMap[key];
         if(!url) return;
         const el = document.getElementById(`cover-${filter.replace(/\s/g,'')}-${i}`);
         if(el) el.insertAdjacentHTML('beforeend', `<img src="${url}" alt="" loading="lazy" onerror="this.style.display='none'">`);

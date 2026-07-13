@@ -209,6 +209,26 @@
   .about-stat-row .v{ font-size:13px; color:var(--text); }
   .about-grid p{ color:var(--text-dim); line-height:1.75; font-size:14px; margin-bottom:14px; }
 
+  /* Contact */
+  .contact-form-wrap{ max-width:560px; }
+  .contact-form-wrap .field{ margin-bottom:12px; }
+  .contact-form-wrap label{
+    display:block; font-family:var(--mono); font-size:11px; color:var(--text-faint);
+    text-transform:uppercase; letter-spacing:.05em; margin-bottom:5px;
+  }
+  .contact-form-wrap input[type="text"],
+  .contact-form-wrap input[type="email"],
+  .contact-form-wrap textarea{
+    width:100%; background:var(--panel-2); border:1px solid var(--border); border-radius:4px;
+    padding:9px 11px; color:var(--text); font-family:var(--body); font-size:13.5px;
+  }
+  .contact-form-wrap textarea{ resize:vertical; }
+  .contact-form-wrap button{
+    width:100%; background:var(--ai); color:var(--bg); border:none; border-radius:4px;
+    padding:11px; font-family:var(--mono); font-size:13px; font-weight:700; letter-spacing:.04em; cursor:pointer;
+  }
+  .contact-form-wrap button:disabled{ opacity:.6; cursor:default; }
+
   footer{
     border-top:1px solid var(--border); padding:32px; text-align:center;
     font-family:var(--mono); font-size:10px; letter-spacing:.15em; color:var(--text-faint); text-transform:uppercase;
@@ -242,6 +262,7 @@
     <a href="#follow">Follow</a>
     <a href="#library">Library</a>
     <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
   <a class="back" href="/">← balakrishnaquantum.com</a>
 </header>
@@ -378,6 +399,39 @@
       <p>Rahi has a passion for AI/ML and Finance, and likes to build things. When he's not working on something new, he practices Zen meditation and plays games on his PlayStation.</p>
       <p>Everything on this page started as something Rahi actually needed to learn — not content built to look busy. If you're here for AI/ML, the <a href="../finance.html" style="color:var(--ai);">trading dashboard</a> is worth a look too.</p>
     </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-head">
+    <div><h2>Contact</h2><p class="sub">Questions about a resource, a bug on this page, or want to talk AI/ML transition — reach out directly.</p></div>
+  </div>
+  <div class="contact-form-wrap">
+    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="533b6ac3-c251-485e-9692-dc7b5103b580">
+      <input type="hidden" name="subject" id="cf-hidden-subject" value="New message from balakrishnaquantum.com/ai/">
+      <input type="hidden" name="from_name" value="balakrishnaquantum.com/ai/">
+      <input type="hidden" name="redirect" value="https://balakrishnaquantum.com/ai/?sent=1#contact">
+      <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+      <div class="field">
+        <label>Name</label>
+        <input type="text" name="name" required>
+      </div>
+      <div class="field">
+        <label>Your email</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="field">
+        <label>Subject</label>
+        <input type="text" name="subject_line" id="cf-subject" required>
+      </div>
+      <div class="field">
+        <label>Message</label>
+        <textarea name="message" id="cf-message" required rows="4"></textarea>
+      </div>
+      <button type="submit" id="cf-submit-btn">SEND MESSAGE →</button>
+      <div id="cf-status" style="margin-top:10px; font-family:var(--mono); font-size:12px; display:none;"></div>
+    </form>
   </div>
 </section>
 
@@ -1042,6 +1096,54 @@
       renderLibrary(f.dataset.type);
     });
   });
+  // =========================================================================
+  // Contact form — Web3Forms, AJAX submit (same setup as finance.html)
+  // =========================================================================
+  const contactForm = document.getElementById('contact-form');
+  const cfStatus = document.getElementById('cf-status');
+  const cfSubmitBtn = document.getElementById('cf-submit-btn');
+  if(contactForm){
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      cfSubmitBtn.disabled = true;
+      cfSubmitBtn.textContent = 'SENDING...';
+      cfStatus.style.display = 'none';
+
+      const typedSubject = document.getElementById('cf-subject')?.value;
+      const hiddenSubjectField = document.getElementById('cf-hidden-subject');
+      if(typedSubject && hiddenSubjectField) hiddenSubjectField.value = typedSubject + ' — balakrishnaquantum.com/ai/';
+
+      try{
+        const formData = new FormData(contactForm);
+        const payload = Object.fromEntries(formData);
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await res.json();
+        if(!res.ok || !result.success) throw new Error(result.message || ('HTTP ' + res.status));
+        cfStatus.textContent = "Message sent — I'll get back to you soon.";
+        cfStatus.style.color = 'var(--ai)';
+        contactForm.reset();
+      }catch(err){
+        cfStatus.textContent = 'Something went wrong sending this — please email rahic.official@gmail.com directly instead.';
+        cfStatus.style.color = 'var(--gold)';
+      }finally{
+        cfStatus.style.display = 'block';
+        cfSubmitBtn.disabled = false;
+        cfSubmitBtn.textContent = 'SEND MESSAGE →';
+      }
+    });
+  }
+  if(new URLSearchParams(window.location.search).get('sent') === '1'){
+    if(cfStatus){
+      cfStatus.textContent = "Message sent — I'll get back to you soon.";
+      cfStatus.style.color = 'var(--ai)';
+      cfStatus.style.display = 'block';
+    }
+    history.replaceState(null, '', window.location.pathname + '#contact');
+  }
 </script>
 
 </body>

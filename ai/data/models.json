@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-07-13T17:10:15+00:00",
+  "generated_at": "2026-07-14T05:24:25+00:00",
   "items": [
-    {
-      "id": "tencent/Hy3",
-      "url": "https://huggingface.co/tencent/Hy3",
-      "downloads": 9157,
-      "likes": 748,
-      "pipeline_tag": "text-generation"
-    },
     {
       "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
       "url": "https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
       "downloads": 1985221,
-      "likes": 2069,
+      "likes": 2094,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "tencent/Hy3",
+      "url": "https://huggingface.co/tencent/Hy3",
+      "downloads": 9157,
+      "likes": 757,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
       "downloads": 464914,
-      "likes": 3885,
+      "likes": 3909,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "bottlecapai/ThinkingCap-Qwen3.6-27B",
       "url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B",
       "downloads": 4909,
-      "likes": 292,
+      "likes": 314,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "conradlocke/krea2-identity-edit",
       "url": "https://huggingface.co/conradlocke/krea2-identity-edit",
       "downloads": 0,
-      "likes": 235,
+      "likes": 265,
       "pipeline_tag": null
     },
     {
       "id": "froggeric/Qwen-Fixed-Chat-Templates",
       "url": "https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates",
       "downloads": 0,
-      "likes": 883,
+      "likes": 890,
       "pipeline_tag": null
     },
     {
       "id": "InternScience/Agents-A1",
       "url": "https://huggingface.co/InternScience/Agents-A1",
       "downloads": 29801,
-      "likes": 521,
+      "likes": 527,
       "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "baidu/Unlimited-OCR",
-      "url": "https://huggingface.co/baidu/Unlimited-OCR",
-      "downloads": 1506937,
-      "likes": 1959,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking-GGUF",
       "url": "https://huggingface.co/GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking-GGUF",
       "downloads": 68714,
-      "likes": 216,
+      "likes": 222,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "OpenMOSS-Team/MOSS-Transcribe-Diarize",
       "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize",
       "downloads": 39509,
-      "likes": 153,
+      "likes": 162,
       "pipeline_tag": "audio-text-to-text"
+    },
+    {
+      "id": "baidu/Unlimited-OCR",
+      "url": "https://huggingface.co/baidu/Unlimited-OCR",
+      "downloads": 1506937,
+      "likes": 1964,
+      "pipeline_tag": "image-text-to-text"
     }
   ]
 }

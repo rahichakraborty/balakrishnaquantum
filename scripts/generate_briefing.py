@@ -432,7 +432,14 @@ else:
     btc_txt = f"${btc['price']:,.0f} ({btc['change']:+.2f}% 24h)" if btc else "unavailable"
     headline = f"Daily market data update — BTC {btc_txt}"
 
-    macro_html = "<p>Automated macro synthesis unavailable this run — see headlines feeding this page's data sources directly.</p>"
+    macro_bullets = []
+    for h in (macro_headlines[:2] + geopolitical_headlines[:2]):
+        if h:
+            macro_bullets.append(f"<li>{h}</li>")
+    if macro_bullets:
+        macro_html = "<ul>" + "".join(macro_bullets) + "</ul>"
+    else:
+        macro_html = "<p>No macro headlines available this run.</p>"
 
     crypto_bullets = []
     if btc:

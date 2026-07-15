@@ -1,34 +1,61 @@
 {
-  "generated_at": "2026-07-15T14:24:13+00:00",
+  "generated_at": "2026-07-15T16:03:38+00:00",
   "covers": {
-    "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow|Aurélien Géron": null,
+    "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow|Aurélien Géron": "https://covers.openlibrary.org/b/id/9388208-M.jpg",
     "An Introduction to Statistical Learning (ISLR)|James, Witten, Hastie, Tibshirani": null,
-    "The Elements of Statistical Learning|Hastie, Tibshirani, Friedman": null,
-    "The Hundred-Page Machine Learning Book|Andriy Burkov": null,
-    "Deep Learning|Goodfellow, Bengio, Courville": null,
-    "Deep Learning with Python|François Chollet": null,
-    "Grokking Deep Learning|Andrew W. Trask": null,
-    "Speech and Language Processing|Jurafsky & Martin": null,
-    "Natural Language Processing with Transformers|Tunstall, von Werra, Wolf": null,
-    "Build a Large Language Model (From Scratch)|Sebastian Raschka": null,
-    "Python for Data Analysis|Wes McKinney": null,
-    "Data Science from Scratch|Joel Grus": null,
-    "Storytelling with Data|Cole Nussbaumer Knaflic": null,
-    "Prediction Machines|Agrawal, Gans, Goldfarb": null,
-    "AI Superpowers|Kai-Fu Lee": null
+    "The Elements of Statistical Learning|Hastie, Tibshirani, Friedman": "https://covers.openlibrary.org/b/id/8643962-M.jpg",
+    "The Hundred-Page Machine Learning Book|Andriy Burkov": "https://covers.openlibrary.org/b/id/10390246-M.jpg",
+    "Deep Learning|Goodfellow, Bengio, Courville": "https://covers.openlibrary.org/b/id/8086288-M.jpg",
+    "Deep Learning with Python|François Chollet": "https://covers.openlibrary.org/b/id/8507718-M.jpg",
+    "Grokking Deep Learning|Andrew W. Trask": "https://covers.openlibrary.org/b/id/8507791-M.jpg",
+    "Speech and Language Processing|Jurafsky & Martin": "https://covers.openlibrary.org/b/id/85431-M.jpg",
+    "Natural Language Processing with Transformers|Tunstall, von Werra, Wolf": "https://covers.openlibrary.org/b/id/14559602-M.jpg",
+    "Build a Large Language Model (From Scratch)|Sebastian Raschka": "https://covers.openlibrary.org/b/id/15225524-M.jpg",
+    "Python for Data Analysis|Wes McKinney": "https://covers.openlibrary.org/b/id/7548132-M.jpg",
+    "Data Science from Scratch|Joel Grus": "https://covers.openlibrary.org/b/id/12672936-M.jpg",
+    "Storytelling with Data|Cole Nussbaumer Knaflic": "https://covers.openlibrary.org/b/id/7932707-M.jpg",
+    "Prediction Machines|Agrawal, Gans, Goldfarb": "https://covers.openlibrary.org/b/id/12508574-M.jpg",
+    "AI Superpowers|Kai-Fu Lee": "https://covers.openlibrary.org/b/id/8276796-M.jpg"
   },
   "_debug_samples": [
     {
+      "source": "openlibrary",
+      "query": "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow Aurélien Géron",
+      "num_found": 0,
+      "docs_returned": 0,
+      "result": "no cover_i"
+    },
+    {
+      "source": "openlibrary",
       "query": "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow",
-      "exception": "HTTPError: HTTP Error 429: Too Many Requests"
+      "num_found": 1,
+      "docs_returned": 1,
+      "result": "found cover_i=9388208"
     },
     {
+      "source": "openlibrary",
+      "query": "An Introduction to Statistical Learning (ISLR) James, Witten, Hastie, Tibshirani",
+      "num_found": 0,
+      "docs_returned": 0,
+      "result": "no cover_i"
+    },
+    {
+      "source": "openlibrary",
       "query": "An Introduction to Statistical Learning (ISLR)",
+      "num_found": 0,
+      "docs_returned": 0,
+      "result": "no cover_i"
+    },
+    {
+      "source": "google_books",
       "exception": "HTTPError: HTTP Error 429: Too Many Requests"
     },
     {
-      "query": "The Elements of Statistical Learning",
-      "exception": "HTTPError: HTTP Error 429: Too Many Requests"
+      "source": "openlibrary",
+      "query": "The Elements of Statistical Learning Hastie, Tibshirani, Friedman",
+      "num_found": 1,
+      "docs_returned": 1,
+      "result": "found cover_i=8643962"
     }
   ]
 }

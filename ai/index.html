@@ -239,7 +239,7 @@
   .about-grid{ display:grid; grid-template-columns:200px 1fr; gap:32px; align-items:start; }
   @media(max-width:760px){ .about-grid{ grid-template-columns:1fr; } }
   .about-grid img{
-    width:100%; aspect-ratio:1; object-fit:cover; object-position:top center;
+    width:100%; max-width:200px; aspect-ratio:1; object-fit:cover; object-position:top center;
     border-radius:8px; border:1px solid var(--border); background:#fff; display:block; margin-bottom:16px;
   }
   .about-stats{ border:1px solid var(--border); border-radius:4px; overflow:hidden; }
@@ -303,6 +303,7 @@
     BKQ / AI-ML
   </div>
   <nav id="main-nav">
+    <a href="/finance.html">Finance</a>
     <a href="#prereqs">Prerequisites</a>
     <a href="#brief">Live Brief</a>
     <a href="#essentials">Essentials</a>

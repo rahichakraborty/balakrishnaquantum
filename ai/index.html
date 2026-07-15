@@ -1201,16 +1201,52 @@
   // =========================================================================
   const mobileBtn = document.getElementById('mobile-menu-btn');
   const mainNav = document.getElementById('main-nav');
+  function openMobileMenu(){
+    document.body.style.overflow = 'hidden';
+    document.querySelectorAll('body > *').forEach(el => {
+      if(el.id !== 'main-nav' && el.id !== 'mobile-menu-btn' && el.tagName !== 'HEADER' && el.tagName !== 'SCRIPT'){
+        el.dataset.bkqPrevDisplay = el.style.display || '';
+        el.style.display = 'none';
+      }
+    });
+    // Inline, !important, and explicit min-height — position:fixed alone isn't
+    // enough here since header.top's backdrop-filter creates a containing
+    // block for fixed descendants, making top:0/bottom:0 resolve against the
+    // slim header bar instead of the real viewport. min-height forces it full
+    // regardless of what bottom:0 actually resolves against.
+    mainNav.style.cssText = `
+      display:flex !important; flex-direction:column !important; flex-wrap:nowrap !important;
+      align-items:flex-start !important;
+      position:fixed !important; top:0 !important; left:0 !important; right:0 !important; bottom:0 !important;
+      background:var(--bg) !important;
+      min-height:100vh !important; min-height:100dvh !important;
+      padding:100px 32px 24px !important; gap:26px !important; overflow-y:auto !important;
+      z-index:99999 !important; box-sizing:border-box !important;
+    `;
+    mainNav.querySelectorAll('a').forEach(a => { a.style.fontSize = '20px'; a.style.padding = '4px 0'; });
+    mobileBtn.textContent = '✕';
+    mobileBtn.style.cssText = 'display:flex !important; position:relative !important; z-index:100000 !important;';
+  }
+  function closeMobileMenu(){
+    document.body.style.overflow = '';
+    document.querySelectorAll('body > *').forEach(el => {
+      if(el.dataset.bkqPrevDisplay !== undefined){
+        el.style.display = el.dataset.bkqPrevDisplay;
+        delete el.dataset.bkqPrevDisplay;
+      }
+    });
+    mainNav.removeAttribute('style');
+    mainNav.querySelectorAll('a').forEach(a => { a.style.fontSize = ''; a.style.padding = ''; });
+    mobileBtn.textContent = '☰';
+  }
   if(mobileBtn && mainNav){
+    let menuOpen = false;
     mobileBtn.addEventListener('click', () => {
-      const isOpen = mainNav.classList.toggle('open');
-      mobileBtn.textContent = isOpen ? '✕' : '☰';
+      menuOpen = !menuOpen;
+      if(menuOpen) openMobileMenu(); else closeMobileMenu();
     });
     mainNav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        mainNav.classList.remove('open');
-        mobileBtn.textContent = '☰';
-      });
+      a.addEventListener('click', () => { menuOpen = false; closeMobileMenu(); });
     });
   }
 </script>

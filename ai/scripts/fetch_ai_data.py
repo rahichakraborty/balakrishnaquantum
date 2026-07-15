@@ -20,6 +20,7 @@ import json
 import time
 import urllib.request
 import urllib.parse
+import urllib.error
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -251,7 +252,45 @@ def fetch_one_book_cover_google(title, author, debug_sink=None):
     return result
 
 
+# Direct ISBN overrides for specific books where title/author search doesn't
+# resolve well (e.g. an acronym in the title confuses matching) — ISBN lookup
+# is exact, no search ambiguity at all. Add more entries here if another book
+# consistently comes up blank.
+ISBN_OVERRIDES = {
+    "An Introduction to Statistical Learning (ISLR)|James, Witten, Hastie, Tibshirani": "9781461471370",
+}
+
+
+def fetch_cover_by_isbn(isbn):
+    """Open Library's ISBN endpoint returns a real image directly — if the ISBN
+    has no cover, it returns a tiny 1x1 placeholder GIF rather than a 404, so we
+    check the response size to tell the difference."""
+    url = f"https://covers.openlibrary.org/b/isbn/{isbn}-M.jpg?default=false"
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    try:
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
+            if resp.status == 200:
+                return url
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return None
+        raise
+    return None
+
+
 def fetch_one_book_cover(title, author, debug_sink=None):
+    key = f"{title}|{author}"
+    if key in ISBN_OVERRIDES:
+        try:
+            result = fetch_cover_by_isbn(ISBN_OVERRIDES[key])
+            if debug_sink is not None:
+                debug_sink.append({"source": "isbn_override", "isbn": ISBN_OVERRIDES[key], "result": "found" if result else "not found"})
+            if result:
+                return result
+        except Exception as e:
+            if debug_sink is not None:
+                debug_sink.append({"source": "isbn_override", "exception": f"{type(e).__name__}: {e}"})
+
     result = fetch_one_book_cover_openlibrary(title, author, debug_sink=debug_sink)
     if not result:
         try:

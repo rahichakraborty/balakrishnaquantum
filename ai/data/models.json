@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-15T16:03:19+00:00",
+  "generated_at": "2026-07-15T16:16:41+00:00",
   "items": [
     {
       "id": "prism-ml/Ternary-Bonsai-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf",
       "downloads": 23,
-      "likes": 372,
+      "likes": 373,
       "pipeline_tag": "text-generation"
     },
     {
@@ -19,7 +19,14 @@
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
       "downloads": 489611,
-      "likes": 3973,
+      "likes": 3975,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "prism-ml/Bonsai-27B-gguf",
+      "url": "https://huggingface.co/prism-ml/Bonsai-27B-gguf",
+      "downloads": 513,
+      "likes": 226,
       "pipeline_tag": "text-generation"
     },
     {
@@ -28,13 +35,6 @@
       "downloads": 6208,
       "likes": 362,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "prism-ml/Bonsai-27B-gguf",
-      "url": "https://huggingface.co/prism-ml/Bonsai-27B-gguf",
-      "downloads": 513,
-      "likes": 224,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "tencent/Hy3",

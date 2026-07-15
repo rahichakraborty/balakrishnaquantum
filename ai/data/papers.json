@@ -1,153 +1,152 @@
 {
-  "generated_at": "2026-07-14T16:10:48+00:00",
+  "generated_at": "2026-07-15T05:25:39+00:00",
   "items": [
     {
-      "title": "Requential Coding: Pushing the Limits of Model Compression with Self-Generated Training Data",
-      "summary": "Compression is fundamental to intelligence. A model that can represent its training data as a short code has discovered regularities that enable generalization. Large neural networks may learn functions far simpler than their parameter counts suggest, but it is challenging to con…",
+      "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution",
+      "summary": "Large language model (LLM) agents increasingly automate multi-step engineering and informatics workflows, yet they rarely ask how much effort a task actually requires. They often follow a maximum-context-first strategy--re-reading files and dependencies they have already seen--tu…",
       "authors": [
-        "Shikai Qiu",
-        "Marc Finzi",
-        "Yujia Zheng",
+        "Junjie Yin",
+        "Xinyu Feng"
+      ],
+      "link": "http://arxiv.org/abs/2607.13034v1",
+      "published": "2026-07-14T17:59:31Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "The Seriality Gap in Video Diffusion Models",
+      "summary": "When one ball strikes another, then another, video models should predict the consequences of each bounce. In controlled experiments on multi-ball hard-sphere dynamics, we find that the performance of standard bidirectional video diffusion degrades as the causal chain lengthens, e…",
+      "authors": [
+        "Jorge Diaz Chao",
+        "Konpat Preechakul",
+        "Yuxi Liu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.11883v1",
-      "published": "2026-07-13T17:58:50Z",
+      "link": "http://arxiv.org/abs/2607.13031v1",
+      "published": "2026-07-14T17:59:22Z",
       "category": "cs.LG"
     },
     {
-      "title": "Metacognition in LLMs: Foundations, Progress, and Opportunities",
-      "summary": "Metacognition is a foundational component of intelligence critical to effective learning, problem solving, decision-making, communication, and more. In recent years, it has become increasingly recognized as a cornerstone of capable, transparent AI systems. Yet while LLMs have mad…",
+      "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
+      "summary": "Training robust autonomous driving agents requires a simulator that is fast enough for reinforcement learning at scale, realistic enough to ground behavior in real-world map structure, and diverse enough to cover the safety-critical long tail that logged data rarely contains. We …",
       "authors": [
-        "Gabrielle Kaili-May Liu",
-        "Areeb Gani",
-        "Jacqueline Lu",
+        "Zhouchonghao Wu",
+        "Akshay Rangesh",
+        "Weixin Li",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.11881v1",
-      "published": "2026-07-13T17:58:37Z",
+      "link": "http://arxiv.org/abs/2607.13028v1",
+      "published": "2026-07-14T17:59:02Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
+      "summary": "Large Language Model (LLM) agents have moved beyond generating responses to executing multi-step tasks by calling tools, observing the results, and iteratively deciding the next action. Most agent systems run on desktops or servers, which support tool use and task automation. Mob…",
+      "authors": [
+        "Hongru Cai",
+        "Yongqi Li",
+        "Ran Wei",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.13027v1",
+      "published": "2026-07-14T17:58:57Z",
       "category": "cs.CL"
     },
     {
-      "title": "Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks",
-      "summary": "We present a theoretical framework to explain the emergence of inductive reasoning abilities in Transformer language models. While previous works on Transformer learning dynamics have so far been mostly tied to specific tasks, we study a generalized class of inductive tasks that …",
+      "title": "A Shortcut to Statistically Steady-State Turbulence with Flow Matching",
+      "summary": "Many nonlinear physical systems exhibit an initial transient phase in which perturbations grow before nonlinear interactions lead to a statistically steady state. While this saturated regime is of primary interest, direct numerical simulations must resolve the full transient dyna…",
       "authors": [
-        "Tiberiu Musat",
-        "Tiago Pimentel",
-        "Nicholas Zucchet",
+        "Gianluca Galletti",
+        "Gerald Gutenbrunner",
+        "William Hornsby",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.11875v1",
-      "published": "2026-07-13T17:56:11Z",
+      "link": "http://arxiv.org/abs/2607.13022v1",
+      "published": "2026-07-14T17:58:13Z",
+      "category": "physics.plasm-ph"
+    },
+    {
+      "title": "Audio-Native Speech Recognition with a Frozen Discrete-Diffusion Language Model",
+      "summary": "Automatic speech recognition is dominated by autoregressive decoders that emit one token at a time. We ask whether a discrete diffusion language model can transcribe speech instead, refining a whole transcript in parallel over a small number of denoising steps. We train an audio-…",
+      "authors": [
+        "Harsha Vardhan Khurdula",
+        "Abhinav Kumar Singh",
+        "Yoeven D Khemlani",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.13013v1",
+      "published": "2026-07-14T17:53:22Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Dynamic Resource Allocation for Ensemble Determinization MCTS",
+      "summary": "Simulation-based algorithms are especially suited for high-uncertainty environments such as adversarial board games with significant elements of randomness and hidden information. In particular, several Monte Carlo Tree Search (MCTS) variants are commonly used in such domains. In…",
+      "authors": [
+        "Jakub Kowalski",
+        "Adam Ciężkowski",
+        "Artur Krzyżyński",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.13007v1",
+      "published": "2026-07-14T17:51:15Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "The Spectrum Is Not Enough: When Context Helps Time-Series Forecasting",
+      "summary": "A growing family of indices scores how predictable a series is from its spectrum. Practitioners increasingly read these scores as answering a different question: whether \\emph{adding context}, a longer lookback, a retrieval plug-in, or a pretrained model, will help. These are not…",
+      "authors": [
+        "Mert Onur Cakiroglu",
+        "Mehmet Dalkilic",
+        "Hasan Kurban"
+      ],
+      "link": "http://arxiv.org/abs/2607.13006v1",
+      "published": "2026-07-14T17:50:28Z",
       "category": "cs.LG"
     },
     {
-      "title": "A Minimalist Retargeting-Guided Reinforcement Learning Recipe for Dexterous Manipulation",
-      "summary": "Recent work in humanoid whole-body control has found success with a simple recipe: retarget human motion to robot kinematic references, then train policies via reinforcement learning (RL) to track them. But how does this recipe transfer to dexterous manipulation? The answer is no…",
+      "title": "Watermark Forensics for Generative Models: An Information-Theoretic Perspective",
+      "summary": "A watermark in a generative model's output is usually asked only whether a text is machine-made. The same mark can do more: attribute it to the user who produced it, extract a hidden payload, or localize the part that survives editing. These form a forensic ladder, and we ask wha…",
       "authors": [
-        "Yunhai Feng",
-        "Natalie Leung",
-        "Jiaxuan Wang",
+        "Xiaoyu Li",
+        "Zheng Gao",
+        "Xiaoyan Feng",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.11874v1",
-      "published": "2026-07-13T17:56:08Z",
-      "category": "cs.RO"
+      "link": "http://arxiv.org/abs/2607.13003v1",
+      "published": "2026-07-14T17:49:52Z",
+      "category": "cs.CR"
     },
     {
-      "title": "A Durability and Cross-Language Transfer Benchmark for a Validated Teaching-Feedback Classification Protocol",
-      "summary": "Institutions collect far more open-ended teaching-evaluation feedback than they read. A prior study introduced a validated protocol for classifying such comments by thematic category and sentiment, built from a documented annotation guide, an intra-annotator reliability measureme…",
+      "title": "Win by Silence: Deletion Non-Monotonicity, Autonomous Exploitation, and Typed-State Gating in LLM Plan Evaluation",
+      "summary": "Plan evaluators can reward a strategic plan for becoming less explicit. This paper studies that failure in a staged expected-value scorer for LLM-generated venture routes. Proposition 1 gives the score change from deleting an interior transition while retargeting its predecessor …",
       "authors": [
-        "Esteban U. Vega Barajas"
+        "Aleh Manchuliantsau"
       ],
-      "link": "http://arxiv.org/abs/2607.11873v1",
-      "published": "2026-07-13T17:56:05Z",
-      "category": "cs.CL"
+      "link": "http://arxiv.org/abs/2607.12986v1",
+      "published": "2026-07-14T17:29:28Z",
+      "category": "cs.AI"
     },
     {
-      "title": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
-      "summary": "Existing studies of LLM-as-judge scoring bias work predominantly at the input-output level: they perturb inputs, measure score deltas, and propose prompt-level mitigations. We argue that the same biases admit a representation-level account in the judge's hidden state, complementa…",
+      "title": "Resist and Update: Counterfactual Report Coordinates for Incentive-Compatible LLMs",
+      "summary": "Aligned language models routinely misreport under non-evidential incentive pressure: they agree with a confident user or overstate certainty even when their internal belief is unchanged. We cast this as a failure of internal incentive-compatibility (IC) and present a method for l…",
       "authors": [
-        "Zixiang Xu",
-        "Sixian Li",
-        "Huaxing Liu",
-        "et al."
+        "Sen Yang",
+        "Yuen-Hei Yeung"
       ],
-      "link": "http://arxiv.org/abs/2607.11871v1",
-      "published": "2026-07-13T17:55:19Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2607.12985v1",
+      "published": "2026-07-14T17:28:25Z",
+      "category": "cs.AI"
     },
     {
-      "title": "Evidence-Backed Video Question Answering",
-      "summary": "Current Video Large Language Models (Video LLMs) excel in question answering (QA) but largely operate as black boxes, providing textual answers without verifiable visual grounding. Existing explainability efforts rely on textual rationales or sparse bounding boxes, which struggle…",
+      "title": "FormalAnalyticGeo: A Neural-Symbolic Based Framework for Multimodal Analytic Geometry Problem Generation",
+      "summary": "Math reasoning has achieved significant progress with the rapid advancement of Multimodal Large Language Models (MLLMs), however analytic geometry remains largely underexplored, primarily due to the scarcity of annotated samples. Existing diagram generation approaches struggle wi…",
       "authors": [
-        "Shijie Wang",
-        "Honglu Zhou",
-        "Ziyang Wang",
-        "et al."
+        "Ruoran Xu",
+        "Wending Gao",
+        "Qiufeng Wang"
       ],
-      "link": "http://arxiv.org/abs/2607.11862v1",
-      "published": "2026-07-13T17:49:10Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "AdvancedMathBench: A Benchmark Suite for Advanced Mathematical Proof Generation and Verification",
-      "summary": "Large language models (LLMs) have achieved remarkable performance on high-school and olympiad-style mathematics, yet their capabilities on advanced mathematics remain poorly understood. Existing benchmarks, however, fall short in both scope and evaluation granularity: they provid…",
-      "authors": [
-        "Lingkai Kong",
-        "Zijian Wu",
-        "Yuzhe Gu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.11849v1",
-      "published": "2026-07-13T17:38:22Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Input-Aware Dynamic Backdoor Attack Against Quantum Neural Networks",
-      "summary": "Quantum Neural Networks (QNNs) are a promising framework for quantum machine learning on near-term quantum devices, but their security risks remain insufficiently understood. Studies have shown that QNNs are vulnerable to backdoor attacks, yet existing quantum backdoors mostly re…",
-      "authors": [
-        "Junrui Zhang",
-        "Zemin Chen",
-        "Lusi Li",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.11843v1",
-      "published": "2026-07-13T17:34:17Z",
-      "category": "quant-ph"
-    },
-    {
-      "title": "LoRA-Based Cascaded Multimodal Fusion for Action Recognition in Medical Training Environments",
-      "summary": "This paper presents a cascaded Low-Rank Adaptation (LoRA)-based multimodal fusion framework for action and activity recognition in healthcare-oriented training environments. The proposed architecture combines parameter-efficient modality-specific adaptation with sequential fusion…",
-      "authors": [
-        "Divya Mereddy",
-        "Jeevan Beedareddy"
-      ],
-      "link": "http://arxiv.org/abs/2607.11839v1",
-      "published": "2026-07-13T17:27:58Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Transformer-Guided Swarm Intelligence for Frugal Neural Architecture Search",
-      "summary": "Neural Architecture Search (NAS) has automated the design of deep learning models but traditionally requires massive computational resources, often measured in thousands of GPU-days. In this paper, we propose a frugal and memetic NAS framework designed to democratize architecture…",
-      "authors": [
-        "Romain Amigon"
-      ],
-      "link": "http://arxiv.org/abs/2607.11826v1",
-      "published": "2026-07-13T17:18:24Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "MM-ToolSandBox: A Unified Framework for Evaluating Visual Tool-Calling Agents",
-      "summary": "We introduce MM-ToolSandBox, a benchmark and evaluation framework for visually grounded tool-calling agents. The framework provides a stateful execution environment spanning 500+ tools across 16 application domains, supporting multi-image, multi-turn tasks where agents must groun…",
-      "authors": [
-        "Kaixin Ma",
-        "Di Feng",
-        "Alexander Metz",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.11818v1",
-      "published": "2026-07-13T17:13:09Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2607.12982v1",
+      "published": "2026-07-14T17:24:57Z",
+      "category": "cs.AI"
     }
   ]
 }

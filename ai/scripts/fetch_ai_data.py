@@ -192,17 +192,33 @@ BOOKS = [
 ]
 
 
-def fetch_one_book_cover(title, author):
+def fetch_one_book_cover(title, author, debug_sink=None):
     def try_query(q):
         url = "https://www.googleapis.com/books/v1/volumes?" + urllib.parse.urlencode(
             {"q": q, "maxResults": 1}
         )
-        data = json.loads(fetch(url))
+        raw = fetch(url)
+        data = json.loads(raw)
         items = data.get("items") or []
+        info = {
+            "query": q,
+            "total_items_field": data.get("totalItems"),
+            "items_returned": len(items),
+        }
         if not items:
+            info["result"] = "no items"
+            if debug_sink is not None:
+                debug_sink.append(info)
             return None
-        links = items[0].get("volumeInfo", {}).get("imageLinks", {})
+        volume_info = items[0].get("volumeInfo", {})
+        links = volume_info.get("imageLinks", {})
+        info["has_volumeInfo"] = bool(volume_info)
+        info["has_imageLinks"] = bool(links)
+        info["imageLinks_keys"] = list(links.keys())
         thumb = links.get("thumbnail") or links.get("smallThumbnail")
+        info["result"] = "found thumbnail" if thumb else "item found, no imageLinks"
+        if debug_sink is not None:
+            debug_sink.append(info)
         return thumb.replace("http://", "https://") if thumb else None
 
     result = try_query(f"{title} {author}")
@@ -213,17 +229,23 @@ def fetch_one_book_cover(title, author):
 
 def fetch_book_covers():
     covers = {}
-    for title, author in BOOKS:
+    debug_samples = []
+    for idx, (title, author) in enumerate(BOOKS):
         key = f"{title}|{author}"
+        # Capture full diagnostic detail for the first 3 books only — enough to
+        # diagnose a systematic failure without bloating the JSON file.
+        sink = debug_samples if idx < 3 else None
         try:
-            url = fetch_one_book_cover(title, author)
+            url = fetch_one_book_cover(title, author, debug_sink=sink)
             covers[key] = url
             print(f"  cover for '{title}': {'found' if url else 'not found'}")
         except Exception as e:
             print(f"  WARN: cover lookup failed for '{title}': {e}")
             covers[key] = None
+            if sink is not None:
+                sink.append({"query": title, "exception": f"{type(e).__name__}: {e}"})
         time.sleep(0.5)  # stay well under Google's per-second burst limit
-    return covers
+    return covers, debug_samples
 
 
 def write_json(name, payload, error=None):
@@ -265,12 +287,13 @@ def main():
 
     print("fetching book_covers.json...")
     try:
-        covers = fetch_book_covers()
+        covers, debug_samples = fetch_book_covers()
         cover_error = None
     except Exception as e:
         covers = {}
+        debug_samples = []
         cover_error = f"{type(e).__name__}: {e}"
-    out = {"generated_at": now_iso(), "covers": covers}
+    out = {"generated_at": now_iso(), "covers": covers, "_debug_samples": debug_samples}
     if cover_error:
         out["error"] = cover_error
     (DATA_DIR / "book_covers.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))

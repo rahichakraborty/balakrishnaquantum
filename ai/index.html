@@ -274,8 +274,7 @@
     font-family:var(--mono); font-size:10px; letter-spacing:.15em; color:var(--text-faint); text-transform:uppercase;
   }
 
-  @media (max-width:760px){
-    .grid.cols-3, .grid.cols-2{ grid-template-columns:1fr; }
+  @media (max-width:860px){
     header.top nav{
       position:fixed; top:0; left:0; right:0; bottom:0; background:var(--bg);
       flex-direction:column; align-items:flex-start; padding:90px 32px 24px; gap:22px;
@@ -284,6 +283,9 @@
     header.top nav.open{ display:flex; }
     header.top nav a{ font-size:15px; }
     .mobile-menu-btn{ display:flex !important; position:relative; z-index:10000; }
+  }
+  @media (max-width:760px){
+    .grid.cols-3, .grid.cols-2{ grid-template-columns:1fr; }
   }
 </style>
 </head>

@@ -192,7 +192,39 @@ BOOKS = [
 ]
 
 
-def fetch_one_book_cover(title, author, debug_sink=None):
+def fetch_one_book_cover_openlibrary(title, author, debug_sink=None):
+    """Primary source. No API key, and not on the same shared unauthenticated
+    quota that got Google Books rate-limited (HTTP 429) from GitHub Actions'
+    IP range in testing."""
+    def try_query(q):
+        params = {"q": q, "fields": "key,title,cover_i", "limit": 1}
+        url = "https://openlibrary.org/search.json?" + urllib.parse.urlencode(params)
+        raw = fetch(url)
+        data = json.loads(raw)
+        docs = data.get("docs") or []
+        info = {"source": "openlibrary", "query": q, "num_found": data.get("numFound"), "docs_returned": len(docs)}
+        if not docs or not docs[0].get("cover_i"):
+            info["result"] = "no cover_i"
+            if debug_sink is not None:
+                debug_sink.append(info)
+            return None
+        cover_id = docs[0]["cover_i"]
+        info["result"] = f"found cover_i={cover_id}"
+        if debug_sink is not None:
+            debug_sink.append(info)
+        return f"https://covers.openlibrary.org/b/id/{cover_id}-M.jpg"
+
+    result = try_query(f"{title} {author}")
+    if not result:
+        result = try_query(title)
+    return result
+
+
+def fetch_one_book_cover_google(title, author, debug_sink=None):
+    """Secondary fallback only — Google's unauthenticated Books API shares a
+    quota across all unauthenticated traffic hitting it from the same IP
+    range, which GitHub Actions runners share with countless other jobs;
+    it returned HTTP 429 on the very first request in testing."""
     def try_query(q):
         url = "https://www.googleapis.com/books/v1/volumes?" + urllib.parse.urlencode(
             {"q": q, "maxResults": 1}
@@ -200,21 +232,13 @@ def fetch_one_book_cover(title, author, debug_sink=None):
         raw = fetch(url)
         data = json.loads(raw)
         items = data.get("items") or []
-        info = {
-            "query": q,
-            "total_items_field": data.get("totalItems"),
-            "items_returned": len(items),
-        }
+        info = {"source": "google_books", "query": q, "items_returned": len(items)}
         if not items:
             info["result"] = "no items"
             if debug_sink is not None:
                 debug_sink.append(info)
             return None
-        volume_info = items[0].get("volumeInfo", {})
-        links = volume_info.get("imageLinks", {})
-        info["has_volumeInfo"] = bool(volume_info)
-        info["has_imageLinks"] = bool(links)
-        info["imageLinks_keys"] = list(links.keys())
+        links = items[0].get("volumeInfo", {}).get("imageLinks", {})
         thumb = links.get("thumbnail") or links.get("smallThumbnail")
         info["result"] = "found thumbnail" if thumb else "item found, no imageLinks"
         if debug_sink is not None:
@@ -223,7 +247,18 @@ def fetch_one_book_cover(title, author, debug_sink=None):
 
     result = try_query(f"{title} {author}")
     if not result:
-        result = try_query(title)  # fallback: title alone
+        result = try_query(title)
+    return result
+
+
+def fetch_one_book_cover(title, author, debug_sink=None):
+    result = fetch_one_book_cover_openlibrary(title, author, debug_sink=debug_sink)
+    if not result:
+        try:
+            result = fetch_one_book_cover_google(title, author, debug_sink=debug_sink)
+        except Exception as e:
+            if debug_sink is not None:
+                debug_sink.append({"source": "google_books", "exception": f"{type(e).__name__}: {e}"})
     return result
 
 

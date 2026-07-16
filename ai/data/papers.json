@@ -1,152 +1,152 @@
 {
-  "generated_at": "2026-07-15T16:16:34+00:00",
+  "generated_at": "2026-07-16T05:35:08+00:00",
   "items": [
     {
-      "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution",
-      "summary": "Large language model (LLM) agents increasingly automate multi-step engineering and informatics workflows, yet they rarely ask how much effort a task actually requires. They often follow a maximum-context-first strategy--re-reading files and dependencies they have already seen--tu…",
+      "title": "Leveraging unlabelled data for generalizable neural population decoding",
+      "summary": "Robust and accurate neural decoders are integral to neurotechnologies such as brain-computer interfaces and closed-loop experiments. Recent work has shown that tokenizing neural data at the spike level facilitates multi-session pretraining and delivers state-of-the-art decoding p…",
       "authors": [
-        "Junjie Yin",
-        "Xinyu Feng"
-      ],
-      "link": "http://arxiv.org/abs/2607.13034v1",
-      "published": "2026-07-14T17:59:31Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "The Seriality Gap in Video Diffusion Models",
-      "summary": "When one ball strikes another, then another, video models should predict the consequences of each bounce. In controlled experiments on multi-ball hard-sphere dynamics, we find that the performance of standard bidirectional video diffusion degrades as the causal chain lengthens, e…",
-      "authors": [
-        "Jorge Diaz Chao",
-        "Konpat Preechakul",
-        "Yuxi Liu",
+        "Ximeng Mao",
+        "Nanda H. Krishna",
+        "Avery Hee-Woon Ryoo",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.13031v1",
-      "published": "2026-07-14T17:59:22Z",
+      "link": "http://arxiv.org/abs/2607.14086v1",
+      "published": "2026-07-15T17:58:00Z",
       "category": "cs.LG"
     },
     {
-      "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
-      "summary": "Training robust autonomous driving agents requires a simulator that is fast enough for reinforcement learning at scale, realistic enough to ground behavior in real-world map structure, and diverse enough to cover the safety-critical long tail that logged data rarely contains. We …",
+      "title": "Linear Independent Component Analysis via Optimal Transport",
+      "summary": "Linear Independent Component Analysis (ICA) recovers jointly independent source signals from their linear mixtures. To achieve this, classical ICA algorithms attempt to maximize non-Gaussianity, measured by negentropy, which is linked to independence by information theory. Becaus…",
       "authors": [
-        "Zhouchonghao Wu",
-        "Akshay Rangesh",
-        "Weixin Li",
-        "et al."
+        "Ashutosh Jha",
+        "Michel Besserve",
+        "Simon Buchholz"
       ],
-      "link": "http://arxiv.org/abs/2607.13028v1",
-      "published": "2026-07-14T17:59:02Z",
+      "link": "http://arxiv.org/abs/2607.14081v1",
+      "published": "2026-07-15T17:56:11Z",
       "category": "cs.LG"
     },
     {
-      "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
-      "summary": "Large Language Model (LLM) agents have moved beyond generating responses to executing multi-step tasks by calling tools, observing the results, and iteratively deciding the next action. Most agent systems run on desktops or servers, which support tool use and task automation. Mob…",
+      "title": "MetaPerch: Learning from metadata for bioacoustics foundation models",
+      "summary": "Bioacoustic foundation models rely on large-scale citizen science platforms like Xeno-Canto for geographically and ecologically diverse data. Recent work has shown that supervision alone can produce SotA species detection models when trained on this large-scale data -- however, t…",
       "authors": [
-        "Hongru Cai",
-        "Yongqi Li",
-        "Ran Wei",
+        "Mustafa Chasmai",
+        "Vincent Dumoulin",
+        "Jenny Hamer"
+      ],
+      "link": "http://arxiv.org/abs/2607.14072v1",
+      "published": "2026-07-15T17:42:41Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Screening of Biosecurity Features in Metagenomic Data with Evo 2 Probes",
+      "summary": "Genomic foundation models such as Evo 2 learn rich sequence representations, but their value for biosecurity screening is largely unexplored. We ask how much biosecurity-relevant signal is linearly accessible in these representations by training minimal linear and attention probe…",
+      "authors": [
+        "Jeremy Guntoro",
+        "Alexander Dack",
+        "Dylan Danno",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.13027v1",
-      "published": "2026-07-14T17:58:57Z",
+      "link": "http://arxiv.org/abs/2607.14070v1",
+      "published": "2026-07-15T17:38:02Z",
+      "category": "q-bio.GN"
+    },
+    {
+      "title": "Hindcast: Replaying Prediction Markets to Evaluate LLM Forecasters",
+      "summary": "Forecasters are evaluated by backtesting, which replays resolved questions and grades the probability the system would have assigned before the outcome was known. For LLMs, two channels leak the answer into this test. A model that retrieves can surface reports written after the e…",
+      "authors": [
+        "Xiao Ye",
+        "Jacob Dineen",
+        "Evan Zhu",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.14051v1",
+      "published": "2026-07-15T17:21:43Z",
       "category": "cs.CL"
     },
     {
-      "title": "A Shortcut to Statistically Steady-State Turbulence with Flow Matching",
-      "summary": "Many nonlinear physical systems exhibit an initial transient phase in which perturbations grow before nonlinear interactions lead to a statistically steady state. While this saturated regime is of primary interest, direct numerical simulations must resolve the full transient dyna…",
+      "title": "Deep Interaction: An Efficient Human-AI Interaction Method for Large Reasoning Models",
+      "summary": "The emergence of Chain-of-Thought (CoT) reasoning has significantly enhanced the ability of large language models (LLMs) to tackle complex, multi-step tasks. However, when errors occur, current interaction approaches typically involve re-generating another response that may make …",
       "authors": [
-        "Gianluca Galletti",
-        "Gerald Gutenbrunner",
-        "William Hornsby",
+        "Hefeng Zhou",
+        "Jinxuan Zhang",
+        "Jiong Lou",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.13022v1",
-      "published": "2026-07-14T17:58:13Z",
-      "category": "physics.plasm-ph"
-    },
-    {
-      "title": "Audio-Native Speech Recognition with a Frozen Discrete-Diffusion Language Model",
-      "summary": "Automatic speech recognition is dominated by autoregressive decoders that emit one token at a time. We ask whether a discrete diffusion language model can transcribe speech instead, refining a whole transcript in parallel over a small number of denoising steps. We train an audio-…",
-      "authors": [
-        "Harsha Vardhan Khurdula",
-        "Abhinav Kumar Singh",
-        "Yoeven D Khemlani",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.13013v1",
-      "published": "2026-07-14T17:53:22Z",
+      "link": "http://arxiv.org/abs/2607.14049v1",
+      "published": "2026-07-15T17:16:43Z",
       "category": "cs.AI"
     },
     {
-      "title": "Dynamic Resource Allocation for Ensemble Determinization MCTS",
-      "summary": "Simulation-based algorithms are especially suited for high-uncertainty environments such as adversarial board games with significant elements of randomness and hidden information. In particular, several Monte Carlo Tree Search (MCTS) variants are commonly used in such domains. In…",
+      "title": "Earthquaker-AI: A Retrieval-Augmented Generation Framework with Rubric-Based Assessment for Primary School Earthquake Education",
+      "summary": "This paper presents Earthquaker-AI, a hybrid educational framework building upon a previously implemented educational robotics project by integrating a conversational AI assistant based on Retrieval-Augmented Generation. It aims to enhance earthquake preparedness and conscious ac…",
       "authors": [
-        "Jakub Kowalski",
-        "Adam Ciężkowski",
-        "Artur Krzyżyński",
+        "Xanthi Kokkinou",
+        "Chaido Mizeli",
+        "Nafsika Koulaxidou",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.13007v1",
-      "published": "2026-07-14T17:51:15Z",
+      "link": "http://arxiv.org/abs/2607.14046v1",
+      "published": "2026-07-15T17:15:16Z",
       "category": "cs.AI"
     },
     {
-      "title": "The Spectrum Is Not Enough: When Context Helps Time-Series Forecasting",
-      "summary": "A growing family of indices scores how predictable a series is from its spectrum. Practitioners increasingly read these scores as answering a different question: whether \\emph{adding context}, a longer lookback, a retrieval plug-in, or a pretrained model, will help. These are not…",
+      "title": "AI-accelerated End-to-End Framework for Rapid Professional Upskilling",
+      "summary": "By 2030, 59 of every 100 workers will need reskilling or upskilling, yet the average time to close an enterprise skills gap grew from roughly 3 days in 2014 to 36 days in 2018. Most current frameworks accelerate single stages of upskilling programs and generally lack industry val…",
       "authors": [
-        "Mert Onur Cakiroglu",
-        "Mehmet Dalkilic",
-        "Hasan Kurban"
+        "Tam Nguyen",
+        "Hung Nguyen",
+        "Robert Ogburn"
       ],
-      "link": "http://arxiv.org/abs/2607.13006v1",
-      "published": "2026-07-14T17:50:28Z",
+      "link": "http://arxiv.org/abs/2607.14044v1",
+      "published": "2026-07-15T17:14:03Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Multi-Expert Routing for Multi-Domain Low-Resource OCR: A Manchu Case Study",
+      "summary": "Historical Manchu OCR must accommodate various visually distinct writing styles, including regular script, running script, and the semi-cursive chancery hand used in palace memorials, despite limited labeled data. We study a multi-expert system that reuses checkpoints from an ite…",
+      "authors": [
+        "Zhan Chen",
+        "Jiqiao Ma",
+        "Chih-wen Kuo"
+      ],
+      "link": "http://arxiv.org/abs/2607.14041v1",
+      "published": "2026-07-15T17:12:37Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Can an Old Dog Be Taught New Tricks? Taking LLMs Beyond Sentence Level Translation",
+      "summary": "Automatic translation systems, from CAT tools to MT, overwhelmingly treat translation as a sentence-by-sentence act. This paper asks whether LLMs can be moved beyond that paradigm through whole-document, corpus-informed translation. We present PAT (Pragmatic Auto-Translator), a R…",
+      "authors": [
+        "Alaina Brandt"
+      ],
+      "link": "http://arxiv.org/abs/2607.14040v1",
+      "published": "2026-07-15T17:10:24Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Early Adoption of Agentic Coding Tools by GitHub Projects",
+      "summary": "Agentic coding tools are increasingly capable of generating and submitting pull requests (PRs) to software projects, introducing new forms of human-agent collaboration in software development. While prior studies have examined PR-level outcomes of agent-generated contributions, l…",
+      "authors": [
+        "Maliha Noushin Raida",
+        "Daqing Hou"
+      ],
+      "link": "http://arxiv.org/abs/2607.14037v1",
+      "published": "2026-07-15T17:05:06Z",
+      "category": "cs.SE"
+    },
+    {
+      "title": "Improving Wind and Solar Power Prediction with Efficient Wrapper-based Feature Selection: An Empirical Study",
+      "summary": "With rising global energy demand and growing awareness of climate change and its impacts, the share of renewable energies in the global energy mix continues to grow. Unlike conventional power generation, the output of renewable energy sources cannot be controlled as consistently …",
+      "authors": [
+        "Daniel Grillmeyer",
+        "Marius Hadry",
+        "Michael Stenger",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.14024v1",
+      "published": "2026-07-15T16:55:42Z",
       "category": "cs.LG"
-    },
-    {
-      "title": "Watermark Forensics for Generative Models: An Information-Theoretic Perspective",
-      "summary": "A watermark in a generative model's output is usually asked only whether a text is machine-made. The same mark can do more: attribute it to the user who produced it, extract a hidden payload, or localize the part that survives editing. These form a forensic ladder, and we ask wha…",
-      "authors": [
-        "Xiaoyu Li",
-        "Zheng Gao",
-        "Xiaoyan Feng",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.13003v1",
-      "published": "2026-07-14T17:49:52Z",
-      "category": "cs.CR"
-    },
-    {
-      "title": "Win by Silence: Deletion Non-Monotonicity, Autonomous Exploitation, and Typed-State Gating in LLM Plan Evaluation",
-      "summary": "Plan evaluators can reward a strategic plan for becoming less explicit. This paper studies that failure in a staged expected-value scorer for LLM-generated venture routes. Proposition 1 gives the score change from deleting an interior transition while retargeting its predecessor …",
-      "authors": [
-        "Aleh Manchuliantsau"
-      ],
-      "link": "http://arxiv.org/abs/2607.12986v1",
-      "published": "2026-07-14T17:29:28Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Resist and Update: Counterfactual Report Coordinates for Incentive-Compatible LLMs",
-      "summary": "Aligned language models routinely misreport under non-evidential incentive pressure: they agree with a confident user or overstate certainty even when their internal belief is unchanged. We cast this as a failure of internal incentive-compatibility (IC) and present a method for l…",
-      "authors": [
-        "Sen Yang",
-        "Yuen-Hei Yeung"
-      ],
-      "link": "http://arxiv.org/abs/2607.12985v1",
-      "published": "2026-07-14T17:28:25Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "FormalAnalyticGeo: A Neural-Symbolic Based Framework for Multimodal Analytic Geometry Problem Generation",
-      "summary": "Math reasoning has achieved significant progress with the rapid advancement of Multimodal Large Language Models (MLLMs), however analytic geometry remains largely underexplored, primarily due to the scarcity of annotated samples. Existing diagram generation approaches struggle wi…",
-      "authors": [
-        "Ruoran Xu",
-        "Wending Gao",
-        "Qiufeng Wang"
-      ],
-      "link": "http://arxiv.org/abs/2607.12982v1",
-      "published": "2026-07-14T17:24:57Z",
-      "category": "cs.AI"
     }
   ]
 }

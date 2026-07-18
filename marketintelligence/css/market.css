@@ -1,1 +1,348 @@
 
+/* =======================================================
+   BKQ Market Intelligence
+   Version 1.0
+======================================================= */
+
+:root{
+
+    --bg:#0b1220;
+    --card:#141d2d;
+    --card2:#1b2738;
+
+    --border:#273549;
+
+    --text:#edf2f7;
+    --muted:#9fb3c8;
+
+    --green:#22c55e;
+    --red:#ef4444;
+    --orange:#f59e0b;
+    --blue:#38bdf8;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:Inter,sans-serif;
+
+    line-height:1.6;
+
+}
+
+/* Navbar */
+
+.navbar{
+
+    backdrop-filter:blur(12px);
+
+    background:#111827!important;
+
+}
+
+.navbar-brand{
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+}
+
+.nav-link{
+
+    color:#cbd5e1!important;
+
+}
+
+.nav-link:hover{
+
+    color:white!important;
+
+}
+
+/* Hero */
+
+.hero{
+
+    padding:40px 0;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.hero h1{
+
+    font-weight:800;
+
+}
+
+.hero p{
+
+    color:var(--muted)!important;
+
+}
+
+/* Cards */
+
+.summary-card,
+.asset-card,
+.metric-card,
+.analysis-card,
+.update-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:24px;
+
+    transition:all .25s ease;
+
+    height:100%;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.summary-card:hover,
+.asset-card:hover,
+.metric-card:hover,
+.analysis-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#3b82f6;
+
+}
+
+/* Titles */
+
+h1,h2,h3,h4,h5{
+
+    font-weight:700;
+
+}
+
+h6{
+
+    color:var(--muted);
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    font-size:.75rem;
+
+}
+
+/* Paragraph */
+
+p{
+
+    color:var(--muted);
+
+}
+
+/* Asset cards */
+
+.asset-card h3{
+
+    margin-bottom:5px;
+
+}
+
+.asset-card hr{
+
+    border-color:var(--border);
+
+}
+
+/* Progress */
+
+.progress{
+
+    height:12px;
+
+    background:#243447;
+
+    border-radius:50px;
+
+}
+
+.progress-bar{
+
+    border-radius:50px;
+
+}
+
+/* Metric */
+
+.metric-card{
+
+    text-align:center;
+
+}
+
+.metric-card .display-5{
+
+    margin-top:15px;
+
+    font-weight:800;
+
+}
+
+/* Analysis */
+
+.analysis-card ul{
+
+    list-style:none;
+
+    padding-left:0;
+
+}
+
+.analysis-card li{
+
+    margin-bottom:12px;
+
+}
+
+/* Event */
+
+.event{
+
+    padding:10px 0;
+
+}
+
+/* Footer */
+
+footer{
+
+    border-top:1px solid var(--border);
+
+    margin-top:60px;
+
+    padding:40px 0;
+
+    color:var(--muted);
+
+}
+
+/* Badge */
+
+.badge-live{
+
+    background:var(--green);
+
+    color:black;
+
+    padding:6px 12px;
+
+    border-radius:50px;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+}
+
+/* Pulse Animation */
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(34,197,94,.6);
+
+}
+
+70%{
+
+box-shadow:0 0 0 12px rgba(34,197,94,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(34,197,94,0);
+
+}
+
+}
+
+.live-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    display:inline-block;
+
+    background:var(--green);
+
+    animation:pulse 2s infinite;
+
+}
+
+/* Numbers */
+
+.display-5{
+
+    letter-spacing:-1px;
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.hero{
+
+text-align:center;
+
+}
+
+.update-card{
+
+margin-top:25px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.summary-card,
+.asset-card,
+.metric-card,
+.analysis-card{
+
+margin-bottom:20px;
+
+}
+
+.display-4{
+
+font-size:2rem;
+
+}
+
+}

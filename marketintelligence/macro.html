@@ -44,7 +44,10 @@
 
   /* ---------- Layout ---------- */
   .layout{ display:flex; min-height:calc(100vh - 90px); }
-  aside{ width:212px; flex-shrink:0; border-right:1px solid var(--line); padding:20px 12px 40px; background:var(--bg); overflow-y:auto; }
+  aside{ width:212px; flex-shrink:0; border-right:1px solid var(--line); padding:20px 12px 40px; background:var(--bg); overflow-y:auto; transition:transform .25s ease; }
+  .menu-btn{ display:none; width:34px; height:34px; border-radius:8px; background:var(--panel); border:1px solid var(--line); color:var(--text); align-items:center; justify-content:center; cursor:pointer; font-size:16px; flex-shrink:0; margin-right:6px; }
+  .aside-backdrop{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:39; }
+  .aside-backdrop.open{ display:block; }
   .nav-group{ margin-bottom:22px; }
   .nav-label{ font-size:10px; letter-spacing:1.6px; color:var(--text-faint); text-transform:uppercase; padding:0 10px 8px; font-weight:600; }
   .nav-item{ display:flex; align-items:center; gap:10px; padding:8px 10px; border-radius:7px; font-size:13px; color:var(--text-dim); cursor:pointer; transition:background .15s,color .15s; margin-bottom:2px; }
@@ -268,7 +271,32 @@
     .asset-grid,.corr-grid{ grid-template-columns:repeat(3,1fr); }
     .top-grid,.cb-grid,.edu-grid{ grid-template-columns:1fr; }
     .who-grid{ grid-template-columns:repeat(2,1fr); }
-    aside{ display:none; }
+  }
+
+  @media (max-width:900px){
+    .menu-btn{ display:flex; }
+    .header-search{ display:none; }
+    header{ padding:12px 14px; gap:8px; }
+    .brand-text .sub{ display:none; }
+    .session-pill{ display:none; }
+    aside{ position:fixed; top:0; left:0; bottom:0; z-index:40; transform:translateX(-100%); box-shadow:0 0 40px rgba(0,0,0,0.5); width:78vw; max-width:280px; }
+    aside.open{ transform:translateX(0); }
+    main{ padding:16px 14px 50px; }
+  }
+
+  @media (max-width:640px){
+    .summary-grid,.mini-grid,.asset-grid,.corr-grid,.fx-grid,.who-grid{ grid-template-columns:1fr; }
+    .cb-grid{ grid-template-columns:1fr; }
+    .page-title{ font-size:18px; }
+    .page-desc{ font-size:12.5px; }
+    .card{ padding:16px 15px; }
+    .table-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .data-table{ min-width:640px; }
+    .modal{ max-width:calc(100vw - 24px); max-height:85vh; overflow-y:auto; padding:22px 18px 18px; }
+    .clock{ font-size:10.5px; }
+    .gauge-wrap svg.gauge{ width:190px; height:108px; }
+    .tabs{ gap:6px; }
+    .tab-pill{ padding:6px 11px; font-size:11px; }
   }
 </style>
 </head>
@@ -283,17 +311,17 @@
       {"proName": "BITSTAMP:BTCUSD", "title": "BTC/USD"},
       {"proName": "BITSTAMP:ETHUSD", "title": "ETH/USD"},
       {"proName": "COINBASE:SOLUSD", "title": "SOL/USD"},
-      {"proName": "TVC:GOLD", "title": "XAU/USD"},
-      {"proName": "TVC:USOIL", "title": "WTI"},
-      {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
-      {"proName": "NASDAQ:NDX", "title": "NASDAQ 100"},
-      {"proName": "TVC:DJI", "title": "DOW"},
+      {"proName": "OANDA:XAUUSD", "title": "XAU/USD"},
+      {"proName": "OANDA:XAGUSD", "title": "XAG/USD"},
+      {"proName": "OANDA:SPX500USD", "title": "S&P 500"},
+      {"proName": "OANDA:NAS100USD", "title": "NASDAQ 100"},
+      {"proName": "OANDA:US30USD", "title": "DOW"},
       {"proName": "TVC:DXY", "title": "DXY"},
-      {"proName": "TVC:US10Y", "title": "US10Y"},
       {"proName": "FX:EURUSD", "title": "EUR/USD"},
       {"proName": "FX:GBPUSD", "title": "GBP/USD"},
+      {"proName": "OANDA:USDINR", "title": "USD/INR"},
       {"proName": "NSE:NIFTY", "title": "NIFTY 50"},
-      {"proName": "BSE:SENSEX", "title": "SENSEX"}
+      {"proName": "NSE:INDIAVIX", "title": "INDIA VIX"}
     ],
     "showSymbolLogo": true,
     "isTransparent": false,
@@ -304,6 +332,7 @@
   </script>
 
   <header>
+    <div class="menu-btn" id="menuBtn">☰</div>
     <div class="brand" onclick="go('macro')">
       <div class="brand-mark">BQ</div>
       <div class="brand-text">
@@ -319,17 +348,12 @@
     </div>
   </header>
 
+  <div class="aside-backdrop" id="asideBackdrop"></div>
   <div class="layout">
-    <aside>
-      <div class="nav-group">
-        <div class="nav-label">BKQ Site</div>
-        <a class="nav-item" href="../index.html"><span class="dot"></span>← Home</a>
-        <a class="nav-item" href="../finance.html"><span class="dot"></span>Finance Cockpit</a>
-        <a class="nav-item" href="index.html"><span class="dot"></span>Market Intelligence</a>
-      </div>
+    <aside id="sidebarAside">
       <div class="nav-group">
         <div class="nav-label">Core</div>
-        <div class="nav-item active" data-route="macro"><span class="dot"></span>Macro Dashboard</div>
+        <div class="nav-item" data-route="macro"><span class="dot"></span>Macro Dashboard</div>
         <div class="nav-item" data-route="confluence"><span class="dot"></span>Confluence Engine</div>
         <div class="nav-item" data-route="bullbear"><span class="dot"></span>Bull/Bear Scanner</div>
         <div class="nav-item" data-route="regime"><span class="dot"></span>Market-Regime Matrix</div>
@@ -549,10 +573,10 @@
         <div class="page-title">Bull/Bear Scanner <span class="ref-tag" id="bullbearTag">REFERENCE</span></div>
         <div class="page-desc">Every tracked instrument in one table, ranked by bias score. Crypto, gold, silver, and the dollar are computed from live prices; equity/index rows stay reference until a Twelve Data key is added in Settings (⚙).</div>
         <div class="card">
-          <table class="data-table">
+          <div class="table-scroll"><table class="data-table">
             <thead><tr><th>Instrument</th><th>Price</th><th>Δ</th><th>Bias Score</th><th>Signal</th><th>Source</th></tr></thead>
             <tbody id="scannerBody"></tbody>
-          </table>
+          </table></div>
         </div>
       </section>
 
@@ -629,10 +653,10 @@
         <div class="page-title">Economic Calendar <span class="ref-tag">REFERENCE</span></div>
         <div class="page-desc">Upcoming macro releases this cycle. Dates are illustrative reference — wire this to a licensed calendar feed (or your own release-date list) for exact, guaranteed-accurate timing.</div>
         <div class="card">
-          <table class="data-table">
+          <div class="table-scroll"><table class="data-table">
             <thead><tr><th>Date</th><th>Event</th><th>Prior</th><th>Forecast</th><th>Impact</th><th>Why It Matters</th></tr></thead>
             <tbody id="calendarBody"></tbody>
-          </table>
+          </table></div>
         </div>
       </section>
 
@@ -651,7 +675,7 @@
           </div>
           <div class="card">
             <div class="card-eyebrow">Meeting-by-Meeting Cut Odds (reference)</div>
-            <table class="data-table">
+            <div class="table-scroll"><table class="data-table">
               <thead><tr><th>Meeting</th><th>Hold</th><th>-25bp</th><th>-50bp</th></tr></thead>
               <tbody>
                 <tr><td>Jul 29, 2026</td><td>38%</td><td>62%</td><td>0%</td></tr>
@@ -659,7 +683,7 @@
                 <tr><td>Oct 29, 2026</td><td>44%</td><td>49%</td><td>7%</td></tr>
                 <tr><td>Dec 10, 2026</td><td>52%</td><td>41%</td><td>7%</td></tr>
               </tbody>
-            </table>
+            </table></div>
           </div>
         </div>
       </section>
@@ -929,6 +953,10 @@
 
   /* ================= Router ================= */
   const routes = ['macro','banking','cbs','news','charts','edu','confluence','bullbear','regime','usecon','gdp','inflation','labour','calendar','fed','yield','forex','geo','socio','sentiment','assets'];
+  function closeMobileDrawer(){
+    document.getElementById('sidebarAside').classList.remove('open');
+    document.getElementById('asideBackdrop').classList.remove('open');
+  }
   function go(route){
     document.querySelectorAll('.nav-item').forEach(el=>el.classList.toggle('active', el.dataset.route===route));
     document.querySelectorAll('.page-section').forEach(el=>el.classList.remove('active'));
@@ -941,12 +969,19 @@
     }
     location.hash = route;
     window.scrollTo(0,0);
+    closeMobileDrawer();
   }
-  document.querySelectorAll('.nav-item[data-route]').forEach(el=>{
+  document.querySelectorAll('.nav-item').forEach(el=>{
     el.addEventListener('click', ()=>go(el.dataset.route));
   });
   window.addEventListener('hashchange', ()=>go(location.hash.replace('#','')||'macro'));
   go(location.hash.replace('#','') || 'macro');
+
+  document.getElementById('menuBtn').addEventListener('click', ()=>{
+    document.getElementById('sidebarAside').classList.add('open');
+    document.getElementById('asideBackdrop').classList.add('open');
+  });
+  document.getElementById('asideBackdrop').addEventListener('click', closeMobileDrawer);
 
   /* ================= Asset bias (Macro Dashboard) ================= */
   const assets = [
@@ -1219,11 +1254,14 @@
     newsItems = merged.map((m,i)=>{
       const cats = categorize(m.title);
       const sent = classifySentiment(m.title);
-      const impact = HIGH_IMPACT_WORDS.some(w=>m.title.toLowerCase().includes(w)) ? (3 + (i<5?1:0)) : 2;
-      const ageMin = (now - new Date(m.pubDate.replace(' ','T')+'Z').getTime())/60000;
+      const t = m.title.toLowerCase();
+      const matchCount = HIGH_IMPACT_WORDS.filter(w=>t.includes(w)).length;
+      const impact = matchCount>=2 ? 5 : matchCount===1 ? 4 : 2;
+      let ageMin = (now - new Date(m.pubDate.replace(' ','T')+'Z').getTime())/60000;
+      if(isNaN(ageMin)) ageMin = 9999; // unparsable date shouldn't silently exclude the item from "All"
       return {
         title:m.title, link:m.link, pubDate:m.pubDate, desk:m.desk, cats,
-        sent, impact: Math.min(5,impact), breaking: ageMin < 360,
+        sent, impact, breaking: (ageMin < 1440) || (i < 8), // under 24h OR simply one of the 8 newest
       };
     });
     document.getElementById('newsTag').className = 'live-tag';
@@ -1613,61 +1651,82 @@
   document.getElementById('gaugeSentiment').innerHTML = gaugeSVG(50);
   function renderSentimentLive(){
     const btc = tickers.find(x=>x.key==='BTC');
-    if(!btc || !btc.live) return;
+    const readout = document.getElementById('sentimentReadout');
+    if(!btc || !btc.live){
+      if(readout && readout.textContent.includes('Checking')) readout.textContent = 'Waiting on live BTC data…';
+      return;
+    }
     const b = biasFromChange(btc.chg, 6);
     document.getElementById('gaugeSentiment').innerHTML = gaugeSVG(b.pct);
     const label = b.pct>=65?'Greed':b.pct>=53?'Mild Greed':b.pct<=35?'Fear':b.pct<=47?'Mild Fear':'Neutral';
-    document.getElementById('sentimentReadout').textContent = `${label} · ${b.pct}/100`;
+    readout.textContent = `${label} · ${b.pct}/100`;
   }
 
   async function fetchCboeSentimentLive(){
     // CBOE genuinely publishes this for free — but their CDN doesn't send an
     // Access-Control-Allow-Origin header, so most browsers will block the read.
     // We attempt it for real rather than assuming; if it fails, we say so honestly.
-    const [vix, vix9d, vix3m, vix6m] = await Promise.all([
-      safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX.json'),
-      safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX9D.json'),
-      safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX3M.json'),
-      safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX6M.json'),
-    ]);
-    // Put/call file is dated by trading day — walk back a few days to cover weekends/holidays.
-    let pc = null;
-    for(let i=0; i<5 && !pc; i++){
-      const ds = new Date(Date.now() - i*86400000).toISOString().slice(0,10);
-      const r = await safeFetchJSON(`https://cdn.cboe.com/data/us/options/market_statistics/daily/${ds}_daily_options`);
-      if(r?.ratios) pc = r;
-    }
-    const gotVix = vix?.data?.current_price && vix9d?.data?.current_price && vix3m?.data?.current_price && vix6m?.data?.current_price;
-    const gotPC = pc?.ratios && pc.ratios.length;
+    // Everything is wrapped so the page can never get stuck showing "Checking…".
+    let gotVix = false, gotPC = false;
+    try{
+      const [vix, vix9d, vix3m, vix6m] = await Promise.all([
+        safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX.json'),
+        safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX9D.json'),
+        safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX3M.json'),
+        safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX6M.json'),
+      ]);
+      // Put/call file is dated by trading day — walk back a few days to cover weekends/holidays.
+      let pc = null;
+      for(let i=0; i<5 && !pc; i++){
+        const ds = new Date(Date.now() - i*86400000).toISOString().slice(0,10);
+        const r = await safeFetchJSON(`https://cdn.cboe.com/data/us/options/market_statistics/daily/${ds}_daily_options`);
+        if(r?.ratios) pc = r;
+      }
+      gotVix = !!(vix?.data?.current_price && vix9d?.data?.current_price && vix3m?.data?.current_price && vix6m?.data?.current_price);
+      gotPC = !!(pc?.ratios && pc.ratios.length);
 
-    if(gotVix){
-      document.getElementById('vixSpotVal').textContent = vix.data.current_price.toFixed(2);
-      document.getElementById('vix9dVal').textContent = vix9d.data.current_price.toFixed(2);
-      document.getElementById('vix3mVal').textContent = vix3m.data.current_price.toFixed(2);
-      document.getElementById('vix6mVal').textContent = vix6m.data.current_price.toFixed(2);
-      const contango = vix9d.data.current_price < vix.data.current_price && vix.data.current_price < vix3m.data.current_price;
-      const el = document.getElementById('vixTermVal');
-      el.textContent = contango ? 'Contango (calm)' : 'Backwardated (stressed)';
-      el.className = 'v ' + (contango ? 'good' : 'bad');
-    }
-    if(gotPC){
-      const total = pc.ratios.find(r=>r.name.includes('TOTAL PUT/CALL'));
-      const equity = pc.ratios.find(r=>r.name.includes('EQUITY PUT/CALL'));
-      if(total){ document.getElementById('putCallVal').textContent = total.value; }
-      if(equity){ document.getElementById('putCallEqVal').textContent = equity.value; }
-    }
-
-    const cboeTag = document.getElementById('cboeTag');
-    const pageTag = document.getElementById('sentimentPageTag');
-    const desc = document.getElementById('sentimentDesc');
-    if(gotVix || gotPC){
-      cboeTag.className = 'live-tag'; cboeTag.innerHTML = '<span class="lp"></span>LIVE — CBOE';
-      pageTag.className = 'live-tag'; pageTag.innerHTML = '<span class="lp"></span>PARTIALLY LIVE';
-      desc.innerHTML = "Crypto fear/greed is computed live from real BTC momentum. VIX term structure and put/call ratio are pulled live and direct from CBOE — this browser was able to reach their CDN. AAII's bull/bear survey has no public feed at all, so that one stays reference.";
-    } else {
-      cboeTag.className = 'ref-tag'; cboeTag.textContent = 'REFERENCE — CORS blocked';
-      pageTag.className = 'ref-tag'; pageTag.textContent = 'PARTIALLY LIVE';
-      desc.innerHTML = "Crypto fear/greed is computed live from real BTC momentum. CBOE genuinely publishes VIX term structure and put/call data for free, but their CDN doesn't send the CORS header a browser needs to read it directly — this attempt got blocked, so those numbers below are the last-known reference values. A small server-side proxy (a few lines on Cloudflare Workers or Vercel) would unblock this; ask if you want it built. AAII's bull/bear survey has no public feed at all either way.";
+      if(gotVix){
+        document.getElementById('vixSpotVal').textContent = vix.data.current_price.toFixed(2);
+        document.getElementById('vix9dVal').textContent = vix9d.data.current_price.toFixed(2);
+        document.getElementById('vix3mVal').textContent = vix3m.data.current_price.toFixed(2);
+        document.getElementById('vix6mVal').textContent = vix6m.data.current_price.toFixed(2);
+        const contango = vix9d.data.current_price < vix.data.current_price && vix.data.current_price < vix3m.data.current_price;
+        const el = document.getElementById('vixTermVal');
+        el.textContent = contango ? 'Contango (calm)' : 'Backwardated (stressed)';
+        el.className = 'v ' + (contango ? 'good' : 'bad');
+      }
+      if(gotPC){
+        const total = pc.ratios.find(r=>r.name.includes('TOTAL PUT/CALL'));
+        const equity = pc.ratios.find(r=>r.name.includes('EQUITY PUT/CALL'));
+        if(total){ document.getElementById('putCallVal').textContent = total.value; }
+        if(equity){ document.getElementById('putCallEqVal').textContent = equity.value; }
+      }
+    }catch(e){
+      gotVix = false; gotPC = false;
+    }finally{
+      const cboeTag = document.getElementById('cboeTag');
+      const pageTag = document.getElementById('sentimentPageTag');
+      const desc = document.getElementById('sentimentDesc');
+      if(gotVix || gotPC){
+        cboeTag.className = 'live-tag'; cboeTag.innerHTML = '<span class="lp"></span>LIVE — CBOE';
+        pageTag.className = 'live-tag'; pageTag.innerHTML = '<span class="lp"></span>PARTIALLY LIVE';
+        desc.innerHTML = "Crypto fear/greed is computed live from real BTC momentum. VIX term structure and put/call ratio are pulled live and direct from CBOE — this browser was able to reach their CDN. AAII's bull/bear survey has no public feed at all, so that one stays reference.";
+      } else {
+        // Set fallback reference values so nothing is left blank or stuck on "checking…"
+        ['vixSpotVal','vix9dVal','vix3mVal','vix6mVal'].forEach(id=>{
+          const el = document.getElementById(id);
+          if(el && el.textContent.includes('checking')) el.textContent = '—';
+        });
+        const termEl = document.getElementById('vixTermVal');
+        if(termEl && termEl.textContent.includes('checking')){ termEl.textContent = 'Contango (calm) — reference'; termEl.className = 'v good'; }
+        const pcEl = document.getElementById('putCallVal');
+        if(pcEl && pcEl.textContent.includes('checking')) pcEl.textContent = '0.97 — reference';
+        const pcEqEl = document.getElementById('putCallEqVal');
+        if(pcEqEl && pcEqEl.textContent.includes('checking')) pcEqEl.textContent = '0.87 — reference';
+        cboeTag.className = 'ref-tag'; cboeTag.textContent = 'REFERENCE — CORS blocked';
+        pageTag.className = 'ref-tag'; pageTag.textContent = 'PARTIALLY LIVE';
+        desc.innerHTML = "Crypto fear/greed is computed live from real BTC momentum. CBOE genuinely publishes VIX term structure and put/call data for free, but their CDN doesn't send the CORS header a browser needs to read it directly — this attempt got blocked, so those numbers below are the last-known reference values. A small server-side proxy (a few lines on Cloudflare Workers or Vercel) would unblock this; ask if you want it built. AAII's bull/bear survey has no public feed at all either way.";
+      }
     }
   }
 

@@ -1,42 +1,42 @@
 {
   "last_updated": {
     "date": "18 Jul 2026",
-    "time": "11:37 IST",
-    "iso": "2026-07-18T11:37:02.564176+00:00"
+    "time": "11:52 IST",
+    "iso": "2026-07-18T11:52:43.049907+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udfe2",
-    "bias": "Mild Bullish",
-    "confidence": 56,
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 53,
     "todays_trade": "Wait For Confirmation",
-    "preferred_asset": "ETH",
+    "preferred_asset": "BTC",
     "risk_level": "Medium",
     "risk_note": "Watch Headlines",
-    "conviction": 56
+    "conviction": 53
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bullish",
-      "confidence": 61,
+      "confidence": 62,
       "support": 61848.88,
       "resistance": 65385.07,
       "trade_plan": "Buy pullbacks while above support."
     },
     "ETH": {
       "name": "Ethereum",
-      "bias": "Bullish",
-      "confidence": 77,
+      "bias": "Neutral",
+      "confidence": 50,
       "support": 1755.9,
       "resistance": 1931.03,
-      "trade_plan": "Buy pullbacks while above support."
+      "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
     "macro": 48,
     "flow": 57,
-    "technical": 69,
-    "risk": 43
+    "technical": 56,
+    "risk": 42
   },
   "drivers": [
     {

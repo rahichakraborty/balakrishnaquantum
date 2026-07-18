@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-07-17T16:10:43+00:00",
+  "generated_at": "2026-07-18T05:19:55+00:00",
   "items": [
     {
       "id": "thinkingmachines/Inkling",
       "url": "https://huggingface.co/thinkingmachines/Inkling",
       "downloads": 7870,
-      "likes": 916,
+      "likes": 972,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "prism-ml/Ternary-Bonsai-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf",
       "downloads": 200774,
-      "likes": 657,
+      "likes": 686,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "prism-ml/Bonsai-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Bonsai-27B-gguf",
       "downloads": 1045182,
-      "likes": 377,
+      "likes": 403,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
       "url": "https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
       "downloads": 2096147,
-      "likes": 2267,
+      "likes": 2281,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
       "downloads": 534698,
-      "likes": 4061,
+      "likes": 4078,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "bottlecapai/ThinkingCap-Qwen3.6-27B",
       "url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B",
       "downloads": 9383,
-      "likes": 405,
+      "likes": 417,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "conradlocke/krea2-identity-edit",
       "url": "https://huggingface.co/conradlocke/krea2-identity-edit",
       "downloads": 0,
-      "likes": 335,
+      "likes": 352,
       "pipeline_tag": null
     },
     {
       "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
       "url": "https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
       "downloads": 2295313,
-      "likes": 2818,
+      "likes": 2834,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "ATH-MaaS/OvisOCR2",
+      "url": "https://huggingface.co/ATH-MaaS/OvisOCR2",
+      "downloads": 10795,
+      "likes": 153,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "OpenMOSS-Team/MOSS-Transcribe-Diarize",
       "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize",
       "downloads": 83160,
-      "likes": 246,
+      "likes": 250,
       "pipeline_tag": "audio-text-to-text"
-    },
-    {
-      "id": "tencent/Hy3",
-      "url": "https://huggingface.co/tencent/Hy3",
-      "downloads": 12719,
-      "likes": 819,
-      "pipeline_tag": "text-generation"
     }
   ]
 }

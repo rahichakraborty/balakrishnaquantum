@@ -1,87 +1,125 @@
-// BKQ Market Intelligence
-// Version 1.0
+/*
+===========================================
+BKQ Market Intelligence
+Version 1.1
+Author: BKQ
+===========================================
+*/
 
 async function loadMarketData() {
 
     try {
 
-        const response = await fetch("data/market.json");
+        const response = await fetch("./data/market.json");
+
+        if (!response.ok) {
+            throw new Error("Unable to load market.json");
+        }
 
         const data = await response.json();
 
-        document.getElementById("lastUpdated").innerHTML = data.updated;
+        /* -------------------------
+           General
+        --------------------------*/
 
-        document.getElementById("overallBias").innerHTML = data.overallBias;
+        setText("lastUpdated", data.updated);
 
-        document.getElementById("confidence").innerHTML = data.confidence + "%";
+        setText("overallBias", data.overallBias);
 
-        document.getElementById("conviction").innerHTML = data.conviction + "%";
+        setText("confidence", data.confidence + "%");
 
-        document.getElementById("convictionBar").style.width =
-            data.conviction + "%";
+        setText("tradePlan", data.tradePlan);
 
-        document.getElementById("tradePlan").innerHTML =
-            data.tradePlan;
+        setText("riskLevel", data.risk);
 
-        document.getElementById("riskLevel").innerHTML =
-            data.risk;
+        setText("conviction", data.conviction + "%");
 
-        // BTC
+        const convictionBar = document.getElementById("convictionBar");
 
-        document.getElementById("btcBias").innerHTML =
-            data.btc.bias;
+        if (convictionBar) {
+            convictionBar.style.width = data.conviction + "%";
+        }
 
-        document.getElementById("btcConfidence").innerHTML =
-            data.btc.confidence + "%";
+        /* -------------------------
+           BTC
+        --------------------------*/
 
-        document.getElementById("btcSupport").innerHTML =
-            data.btc.support;
+        setText("btcBias", data.btc.bias);
 
-        document.getElementById("btcResistance").innerHTML =
-            data.btc.resistance;
+        setText("btcConfidence", data.btc.confidence + "%");
 
-        document.getElementById("btcTrade").innerHTML =
-            data.btc.trade;
+        setText("btcSupport", data.btc.support);
 
-        // ETH
+        setText("btcResistance", data.btc.resistance);
 
-        document.getElementById("ethBias").innerHTML =
-            data.eth.bias;
+        setText("btcTrade", data.btc.trade);
 
-        document.getElementById("ethConfidence").innerHTML =
-            data.eth.confidence + "%";
+        /* -------------------------
+           ETH
+        --------------------------*/
 
-        document.getElementById("ethSupport").innerHTML =
-            data.eth.support;
+        setText("ethBias", data.eth.bias);
 
-        document.getElementById("ethResistance").innerHTML =
-            data.eth.resistance;
+        setText("ethConfidence", data.eth.confidence + "%");
 
-        document.getElementById("ethTrade").innerHTML =
-            data.eth.trade;
+        setText("ethSupport", data.eth.support);
 
-        // Scores
+        setText("ethResistance", data.eth.resistance);
 
-        document.getElementById("macroScore").innerHTML =
-            data.scores.macro + "%";
+        setText("ethTrade", data.eth.trade);
 
-        document.getElementById("flowScore").innerHTML =
-            data.scores.flows + "%";
+        /* -------------------------
+           Scores
+        --------------------------*/
 
-        document.getElementById("technicalScore").innerHTML =
-            data.scores.technical + "%";
+        setScore("macroScore", data.scores.macro);
 
-        document.getElementById("riskScore").innerHTML =
-            data.scores.risk + "%";
+        setScore("flowScore", data.scores.flows);
+
+        setScore("technicalScore", data.scores.technical);
+
+        setScore("riskScore", data.scores.risk);
+
+        console.log("✅ BKQ Market Intelligence Loaded");
 
     }
 
-    catch(error){
+    catch (error) {
 
-        console.log(error);
+        console.error(error);
+
+        alert("Unable to load market data.");
 
     }
 
 }
 
-loadMarketData();
+/* =======================================
+   Helpers
+======================================= */
+
+function setText(id, value) {
+
+    const el = document.getElementById(id);
+
+    if (el) {
+
+        el.innerHTML = value;
+
+    }
+
+}
+
+function setScore(id, value) {
+
+    const el = document.getElementById(id);
+
+    if (el) {
+
+        el.innerHTML = value + "%";
+
+    }
+
+}
+
+document.addEventListener("DOMContentLoaded", loadMarketData);

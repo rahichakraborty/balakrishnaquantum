@@ -1,1 +1,33 @@
+{
+  "updated": "18 Jul 2026 09:00 IST",
 
+  "overallBias": "🟢 Mild Bullish",
+  "confidence": 78,
+  "conviction": 78,
+
+  "tradePlan": "Buy Pullbacks",
+  "risk": "Medium",
+
+  "btc": {
+    "bias": "Bullish",
+    "confidence": 76,
+    "support": 63850,
+    "resistance": 64150,
+    "trade": "Buy pullbacks while above support."
+  },
+
+  "eth": {
+    "bias": "Neutral Bullish",
+    "confidence": 69,
+    "support": 1840,
+    "resistance": 1846,
+    "trade": "Wait for confirmed breakout."
+  },
+
+  "scores": {
+    "macro": 84,
+    "flows": 73,
+    "technical": 81,
+    "risk": 34
+  }
+}

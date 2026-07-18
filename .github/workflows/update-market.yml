@@ -1,0 +1,38 @@
+name: Update BKQ Market Intelligence
+
+on:
+  schedule:
+    # 03:30 UTC = 09:00 IST
+    - cron: "30 3 * * *"
+  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-market:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        working-directory: marketintelligence/python
+        run: pip install -r requirements.txt
+
+      - name: Run BKQ engine
+        working-directory: marketintelligence/python
+        run: python3 engine.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "bkq-bot"
+          git config user.email "bot@balakrishnaquantum.com"
+          git add marketintelligence/data/market.json marketintelligence/data/history/*.json
+          git diff --cached --quiet || git commit -m "Auto-update market intelligence data [skip ci]"
+          git push

@@ -74,6 +74,9 @@
   }
   .top-bar .brand{ color:var(--muted); text-transform:uppercase; display:flex; align-items:center; gap:10px; }
   .top-bar .clock{ color:var(--muted-2); }
+  .quick-links{ pointer-events:auto; display:flex; gap:18px; font-family:var(--mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; }
+  .quick-links a{ color:var(--muted); transition:color 0.2s ease; }
+  .quick-links a:hover{ color:var(--gold-soft); }
 
   .brand-logo{ width:22px; height:22px; }
   .brand-logo .ring{ fill:none; stroke-width:4; }
@@ -173,6 +176,7 @@
     .divider{ display:none; }
     .top-bar{ padding:16px 20px; }
     .top-bar .brand span.label{ display:none; }
+    .quick-links{ gap:10px; font-size:9.5px; }
   }
   @media (prefers-reduced-motion: reduce){
     .dot, .orbit-ring.spin, .orbit-ring.spin-rev, .cursor-line{ animation:none; }
@@ -191,6 +195,10 @@
       </svg>
       <span class="label">Balakrishna Quantum</span>
     </span>
+    <nav class="quick-links">
+      <a href="marketintelligence/index.html">Market Intel</a>
+      <a href="marketintelligence/macro.html">Macro</a>
+    </nav>
     <span class="clock" id="clock">IST —:—:—</span>
   </div>
 

@@ -1,0 +1,22 @@
+[
+  {
+    "label": "CPI",
+    "date": "2026-07-23",
+    "note": "US CPI inflation print"
+  },
+  {
+    "label": "Fed Speakers",
+    "date": "2026-07-19",
+    "note": "FOMC member public remarks"
+  },
+  {
+    "label": "Jobs Report",
+    "date": "2026-07-26",
+    "note": "US Non-Farm Payrolls"
+  },
+  {
+    "label": "CLARITY Act",
+    "status": "Awaiting Senate",
+    "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+  }
+]

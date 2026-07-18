@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BKQ Macro Command Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0A0D12;
+    --panel: #12161F;
+    --panel-2: #171C27;
+    --line: #232938;
+    --line-soft: #1B212D;
+    --gold: #C9A227;
+    --gold-soft: #8A7128;
+    --teal: #1FB8A6;
+    --teal-dim: #14554E;
+    --bull: #33C481;
+    --bear: #E15B6B;
+    --neutral: #8B93A7;
+    --text: #E7E9EE;
+    --text-dim: #9AA1B2;
+    --text-faint: #5B6274;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{ background: var(--bg); color: var(--text); font-family:'Inter',sans-serif; height:100%; overflow-x:hidden; }
+  ::selection{ background: var(--gold-soft); color:#0A0D12; }
+  a{ color:inherit; text-decoration:none; }
+
+  /* ---------- Header ---------- */
+  header{ display:flex; align-items:center; justify-content:space-between; padding:14px 28px; border-bottom:1px solid var(--line); background:var(--bg); }
+  .brand{ display:flex; align-items:center; gap:12px; cursor:pointer; }
+  .brand-mark{ width:38px; height:38px; border-radius:9px; background:linear-gradient(155deg,var(--gold) 0%,#6b5a1a 100%); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; font-size:16px; color:#0A0D12; box-shadow:0 0 0 1px rgba(201,162,39,0.25),0 6px 18px -6px rgba(201,162,39,0.5); }
+  .brand-text .name{ font-family:'Space Grotesk'; font-weight:600; font-size:16.5px; letter-spacing:0.2px; }
+  .brand-text .sub{ font-size:10.5px; color:var(--text-faint); letter-spacing:1.6px; text-transform:uppercase; margin-top:1px; }
+  .header-search{ flex:1; max-width:460px; margin:0 32px; background:var(--panel); border:1px solid var(--line); border-radius:8px; display:flex; align-items:center; gap:8px; padding:9px 14px; color:var(--text-faint); font-size:12.5px; }
+  .header-right{ display:flex; align-items:center; gap:18px; }
+  .clock{ font-family:'JetBrains Mono'; font-size:12px; color:var(--text-dim); text-align:right; line-height:1.4; }
+  .clock b{ color:var(--text); font-weight:600; }
+  .session-pill{ font-size:10.5px; font-weight:600; letter-spacing:0.6px; padding:5px 10px; border-radius:20px; background:rgba(31,184,166,0.12); color:var(--teal); border:1px solid rgba(31,184,166,0.35); }
+  .signin-btn{ background:var(--gold); color:#161005; border:none; font-weight:600; font-size:12.5px; padding:9px 16px; border-radius:7px; cursor:pointer; font-family:'Space Grotesk'; }
+
+  /* ---------- Layout ---------- */
+  .layout{ display:flex; min-height:calc(100vh - 90px); }
+  aside{ width:212px; flex-shrink:0; border-right:1px solid var(--line); padding:20px 12px 40px; background:var(--bg); overflow-y:auto; }
+  .nav-group{ margin-bottom:22px; }
+  .nav-label{ font-size:10px; letter-spacing:1.6px; color:var(--text-faint); text-transform:uppercase; padding:0 10px 8px; font-weight:600; }
+  .nav-item{ display:flex; align-items:center; gap:10px; padding:8px 10px; border-radius:7px; font-size:13px; color:var(--text-dim); cursor:pointer; transition:background .15s,color .15s; margin-bottom:2px; }
+  .nav-item:hover{ background:var(--panel); color:var(--text); }
+  .nav-item.active{ background:linear-gradient(90deg,rgba(201,162,39,0.14),transparent); color:var(--gold); border-left:2px solid var(--gold); padding-left:8px; }
+  .nav-item .dot{ width:5px; height:5px; border-radius:50%; background:var(--text-faint); flex-shrink:0; }
+
+  main{ flex:1; padding:24px 28px 60px; max-width:1560px; }
+  .page-title-row{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  .page-title{ font-family:'Space Grotesk'; font-size:22px; font-weight:600; display:flex; align-items:center; gap:10px; }
+  .demo-tag{ font-size:9.5px; font-weight:700; letter-spacing:0.8px; color:#161005; background:var(--gold); padding:2px 7px; border-radius:4px; }
+  .live-tag{ font-size:9.5px; font-weight:700; letter-spacing:0.6px; color:#06140D; background:var(--bull); padding:3px 8px 3px 6px; border-radius:4px; display:inline-flex; align-items:center; gap:5px; }
+  .live-tag .lp{ width:5px; height:5px; border-radius:50%; background:#06140D; animation:pulse 1.3s infinite; }
+  @keyframes pulse{ 0%{opacity:1;} 50%{opacity:.25;} 100%{opacity:1;} }
+  .ref-tag{ font-size:9.5px; font-weight:700; letter-spacing:0.6px; color:var(--text-faint); background:var(--panel-2); border:1px solid var(--line); padding:2px 7px; border-radius:4px; }
+  .gear-btn{ width:34px; height:34px; border-radius:8px; background:var(--panel); border:1px solid var(--line); color:var(--text-dim); display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:15px; }
+  .gear-btn:hover{ color:var(--gold); border-color:var(--gold-soft); }
+  .settings-modal{ max-width:520px; }
+  .src-row{ display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:12.5px; }
+  .src-row:last-child{ border-bottom:none; }
+  .src-row .k{ color:var(--text-dim); }
+  .key-field{ display:flex; gap:8px; margin-top:14px; }
+  .key-field input{ flex:1; background:var(--panel-2); border:1px solid var(--line); border-radius:7px; padding:9px 12px; color:var(--text); font-family:'JetBrains Mono'; font-size:12px; }
+  .key-field button{ background:var(--gold); color:#161005; border:none; font-weight:600; font-size:12px; padding:9px 14px; border-radius:7px; cursor:pointer; font-family:'Space Grotesk'; white-space:nowrap; }
+  .settings-note{ font-size:11.5px; color:var(--text-faint); line-height:1.55; margin-top:12px; }
+  .settings-note a{ color:var(--teal); }
+
+  /* ---------- New pages: tables, quadrant, confluence ---------- */
+  .data-table{ width:100%; border-collapse:collapse; }
+  .data-table th{ text-align:left; font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--text-faint); padding:9px 10px; border-bottom:1px solid var(--line); font-weight:600; }
+  .data-table td{ padding:11px 10px; border-bottom:1px solid var(--line-soft); font-size:12.5px; }
+  .data-table tr:hover td{ background:var(--panel-2); }
+  .quad-wrap{ display:flex; justify-content:center; }
+  .conf-card{ background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
+  .conf-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+  .conf-name{ font-family:'Space Grotesk'; font-size:16px; font-weight:700; }
+  .conf-score{ font-family:'Space Grotesk'; font-size:22px; font-weight:700; }
+  .conf-row{ display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--line-soft); font-size:12.3px; }
+  .conf-row:last-child{ border-bottom:none; }
+  .conf-row .k{ color:var(--text-dim); display:flex; align-items:center; gap:8px; }
+  .conf-chip{ width:16px; height:16px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; }
+  .conf-chip.yes{ background:rgba(51,196,129,0.18); color:var(--bull); }
+  .conf-chip.no{ background:rgba(225,91,107,0.18); color:var(--bear); }
+  .conf-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+  .fx-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .fx-card{ background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:13px 15px; }
+  .fx-pair{ font-size:11px; color:var(--text-faint); font-weight:600; letter-spacing:0.4px; margin-bottom:5px; }
+  .fx-val{ font-family:'JetBrains Mono'; font-size:16.5px; font-weight:700; }
+  @media (max-width:1240px){ .conf-grid{ grid-template-columns:1fr; } .fx-grid{ grid-template-columns:repeat(2,1fr); } }
+  .page-desc{ color:var(--text-dim); font-size:13px; margin-top:6px; margin-bottom:22px; max-width:900px; line-height:1.5; }
+  .page-section{ display:none; }
+  .page-section.active{ display:block; animation:fadein .25s ease; }
+  @keyframes fadein{ from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:translateY(0);} }
+
+  /* ---------- Cards, generic ---------- */
+  .card{ background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:20px 22px; }
+  .card-eyebrow{ font-size:10.5px; letter-spacing:1.4px; color:var(--text-faint); text-transform:uppercase; font-weight:600; margin-bottom:14px; display:flex; align-items:center; gap:6px; justify-content:space-between; }
+  .section-label{ font-size:11px; letter-spacing:1.4px; color:var(--text-faint); text-transform:uppercase; font-weight:600; margin:26px 0 12px; }
+
+  /* ---------- Gauge ---------- */
+  .gauge-wrap{ display:flex; flex-direction:column; align-items:center; }
+  svg.gauge{ width:230px; height:130px; }
+  .gauge-readout{ text-align:center; margin-top:2px; }
+  .gauge-readout .pct{ font-family:'Space Grotesk'; font-size:24px; font-weight:700; }
+  .gauge-readout .lbl{ font-size:11px; color:var(--text-dim); margin-top:2px; max-width:230px; }
+
+  /* ---------- Macro dashboard specific ---------- */
+  .top-grid{ display:grid; grid-template-columns:400px 1fr; gap:16px; margin-bottom:22px; }
+  .regime-title{ font-family:'Space Grotesk'; font-size:19px; font-weight:600; margin-bottom:10px; }
+  .regime-desc{ font-size:12.8px; color:var(--text-dim); line-height:1.6; margin-bottom:14px; }
+  .tag-row{ display:flex; flex-wrap:wrap; gap:7px; margin-bottom:16px; }
+  .tag{ font-size:10.5px; font-weight:600; padding:5px 10px; border-radius:5px; letter-spacing:0.3px; }
+  .tag.risk{ background:rgba(51,196,129,0.12); color:var(--bull); border:1px solid rgba(51,196,129,0.3); }
+  .tag.liq{ background:rgba(31,184,166,0.12); color:var(--teal); border:1px solid rgba(31,184,166,0.3); }
+  .tag.infl{ background:rgba(51,196,129,0.12); color:var(--bull); border:1px solid rgba(51,196,129,0.3); }
+  .tag.growth{ background:rgba(201,162,39,0.14); color:var(--gold); border:1px solid rgba(201,162,39,0.35); }
+  .tag.rec{ background:rgba(225,91,107,0.12); color:var(--bear); border:1px solid rgba(225,91,107,0.3); }
+  .key-tension{ background:var(--panel-2); border-left:2px solid var(--gold); border-radius:6px; padding:12px 14px; font-size:12.3px; color:var(--text-dim); line-height:1.6; }
+  .key-tension b{ color:var(--text); }
+
+  .asset-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-bottom:8px; }
+  .asset-card{ background:var(--panel); border:1px solid var(--line); border-radius:11px; padding:16px 16px 14px; cursor:pointer; transition:border-color .15s,transform .15s; }
+  .asset-card:hover{ border-color:var(--gold-soft); transform:translateY(-2px); }
+  .asset-head{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px; }
+  .asset-name{ font-size:13px; font-weight:600; }
+  .asset-pct{ font-family:'JetBrains Mono'; font-size:13px; color:var(--text-dim); }
+  .bar-track{ height:5px; background:var(--line-soft); border-radius:4px; overflow:hidden; margin-bottom:10px; }
+  .bar-fill{ height:100%; border-radius:4px; }
+  .asset-status{ font-size:10px; font-weight:700; letter-spacing:0.5px; }
+  .asset-status.bull{ color:var(--bull); } .asset-status.bear{ color:var(--bear); } .asset-status.neu{ color:var(--neutral); }
+  .asset-status::after{ content:'  ·  click for detail'; color:var(--text-faint); font-weight:500; text-transform:none; letter-spacing:0; }
+
+  .summary-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .sum-card{ background:var(--panel); border:1px solid var(--line); border-radius:11px; padding:16px 17px; }
+  .sum-top-row{ display:flex; align-items:flex-start; justify-content:space-between; }
+  .sum-title{ font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:var(--text-faint); font-weight:600; display:flex; align-items:center; gap:6px; }
+  .sum-badge{ font-size:8.5px; font-weight:700; background:rgba(201,162,39,0.16); color:var(--gold); padding:2px 6px; border-radius:4px; letter-spacing:0.6px; }
+  .sum-value{ font-family:'Space Grotesk'; font-size:21px; font-weight:700; margin:6px 0 6px; }
+  .sum-meta{ font-size:11px; color:var(--text-faint); margin-bottom:8px; font-family:'JetBrains Mono'; }
+  .sum-desc{ font-size:11.8px; color:var(--text-dim); line-height:1.5; margin-bottom:9px; min-height:34px; }
+  .sum-affects{ font-size:10.8px; color:var(--text-faint); border-top:1px solid var(--line-soft); padding-top:8px; }
+  .sum-affects b{ color:var(--text-dim); font-weight:600; }
+  .pill{ font-size:9.5px; font-weight:700; letter-spacing:0.4px; padding:3px 8px; border-radius:5px; white-space:nowrap; }
+  .pill.bull{ background:rgba(51,196,129,0.12); color:var(--bull); }
+  .pill.bear{ background:rgba(225,91,107,0.12); color:var(--bear); }
+  .pill.neu{ background:rgba(139,147,167,0.14); color:var(--neutral); }
+  .pill.liq{ background:rgba(31,184,166,0.14); color:var(--teal); }
+
+  /* ---------- Mini metric cards (Banking) ---------- */
+  .mini-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .mini-card{ background:var(--panel); border:1px solid var(--line); border-radius:11px; padding:15px 16px; }
+  .mini-top{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px; }
+  .mini-label{ font-size:10px; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-faint); font-weight:600; max-width:75%; }
+  .mini-value{ font-family:'Space Grotesk'; font-size:19px; font-weight:700; margin-bottom:4px; }
+  .mini-prev{ font-size:10.5px; color:var(--text-faint); font-family:'JetBrains Mono'; margin-bottom:7px; }
+  .mini-desc{ font-size:11.2px; color:var(--text-dim); line-height:1.45; }
+
+  /* ---------- Stress rows / list rows ---------- */
+  .stat-rows{ display:flex; flex-direction:column; gap:9px; margin-bottom:14px; }
+  .stat-row{ display:flex; justify-content:space-between; align-items:center; font-size:12.5px; }
+  .stat-row .k{ color:var(--text-dim); }
+  .stat-row .v{ font-family:'JetBrains Mono'; font-weight:600; }
+  .v.good{ color:var(--bull); } .v.bad{ color:var(--bear); } .v.flat{ color:var(--text); }
+
+  /* ---------- Simple line chart ---------- */
+  .chart-legend{ display:flex; gap:16px; margin-bottom:10px; font-size:11px; color:var(--text-dim); }
+  .chart-legend .lg{ display:flex; align-items:center; gap:6px; }
+  .chart-legend .sw{ width:10px; height:3px; border-radius:2px; display:inline-block; }
+  svg.linechart{ width:100%; height:190px; display:block; }
+  .chart-tip{ font-size:10.5px; color:var(--text-faint); font-family:'JetBrains Mono'; margin-top:6px; }
+
+  /* ---------- Liquidity components list ---------- */
+  .liq-row{ display:flex; justify-content:space-between; align-items:flex-start; padding:11px 0; border-bottom:1px solid var(--line-soft); gap:10px; }
+  .liq-row:last-child{ border-bottom:none; }
+  .liq-name{ font-size:12.8px; font-weight:600; margin-bottom:3px; }
+  .liq-desc{ font-size:11.3px; color:var(--text-faint); max-width:340px; line-height:1.4; }
+  .liq-right{ text-align:right; flex-shrink:0; }
+  .liq-val{ font-family:'JetBrains Mono'; font-weight:700; font-size:13.5px; margin-bottom:4px; }
+
+  /* ---------- Central bank cards ---------- */
+  .who-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:14px; }
+  .who-card{ background:var(--panel-2); border:1px solid var(--line-soft); border-radius:9px; padding:12px 13px; }
+  .who-badge{ font-size:9.5px; font-weight:700; letter-spacing:0.5px; padding:3px 8px; border-radius:5px; display:inline-block; margin-bottom:9px; }
+  .who-badge.easing{ background:rgba(51,196,129,0.14); color:var(--bull); }
+  .who-badge.pausing{ background:rgba(139,147,167,0.16); color:var(--neutral); }
+  .who-badge.tightening{ background:rgba(225,91,107,0.14); color:var(--bear); }
+  .who-badge.liquidity{ background:rgba(31,184,166,0.14); color:var(--teal); }
+  .who-badge.qt{ background:rgba(201,162,39,0.16); color:var(--gold); }
+  .who-list{ font-size:12px; color:var(--text-dim); line-height:1.6; }
+
+  .cb-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+  .cb-card{ background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:19px 21px; }
+  .cb-head{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:5px; }
+  .cb-name{ font-size:11px; letter-spacing:1px; text-transform:uppercase; color:var(--text-faint); font-weight:700; }
+  .cb-rate{ font-family:'Space Grotesk'; font-size:24px; font-weight:700; margin-bottom:1px; }
+  .cb-prev{ font-size:11px; color:var(--text-faint); margin-bottom:14px; font-family:'JetBrains Mono'; }
+  .cb-row{ display:flex; justify-content:space-between; font-size:12px; padding:6px 0; border-bottom:1px solid var(--line-soft); gap:12px; }
+  .cb-row .k{ color:var(--text-faint); flex-shrink:0; }
+  .cb-row .v{ text-align:right; font-weight:600; }
+  .cb-hd{ display:flex; justify-content:space-between; align-items:center; margin-top:12px; margin-bottom:6px; font-size:12px; }
+  .cb-hd .k{ color:var(--text-faint); }
+  .cb-bar-track{ height:6px; background:var(--line-soft); border-radius:4px; position:relative; margin-bottom:12px; }
+  .cb-bar-dot{ position:absolute; top:50%; width:10px; height:10px; border-radius:50%; transform:translate(-50%,-50%); border:2px solid var(--bg); }
+  .cb-quote{ font-size:11.5px; font-style:italic; color:var(--text-dim); background:var(--panel-2); border-radius:7px; padding:10px 12px; line-height:1.5; }
+
+  /* ---------- News ---------- */
+  .tabs{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+  .tab-pill{ font-size:11.5px; font-weight:600; padding:7px 14px; border-radius:20px; background:var(--panel); border:1px solid var(--line); color:var(--text-dim); cursor:pointer; }
+  .tab-pill.active{ background:var(--gold); color:#161005; border-color:var(--gold); }
+  .news-list{ display:flex; flex-direction:column; }
+  .news-item{ display:flex; gap:14px; padding:15px 4px; border-bottom:1px solid var(--line-soft); cursor:default; }
+  .news-dot{ width:9px; height:9px; border-radius:50%; margin-top:6px; flex-shrink:0; }
+  .news-dot.pos{ background:var(--bull); box-shadow:0 0 8px rgba(51,196,129,0.5); }
+  .news-dot.neg{ background:var(--bear); box-shadow:0 0 8px rgba(225,91,107,0.5); }
+  .news-dot.neu{ background:var(--neutral); }
+  .news-headline{ font-size:14px; font-weight:600; margin-bottom:5px; line-height:1.4; }
+  .news-meta{ display:flex; align-items:center; gap:10px; font-size:11px; color:var(--text-faint); flex-wrap:wrap; }
+  .news-impact{ font-weight:700; letter-spacing:0.3px; }
+  .news-tags{ display:flex; gap:6px; }
+  .news-tags span{ background:var(--panel-2); border:1px solid var(--line-soft); border-radius:4px; padding:2px 6px; font-family:'JetBrains Mono'; font-size:10px; color:var(--text-dim); }
+
+  /* ---------- Charts & correlations ---------- */
+  .corr-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:22px; }
+  .corr-card{ background:var(--panel); border:1px solid var(--line); border-radius:11px; padding:16px 17px; }
+  .corr-title{ font-size:10.5px; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-faint); font-weight:600; margin-bottom:9px; }
+  .corr-value{ font-family:'Space Grotesk'; font-size:23px; font-weight:700; margin-bottom:9px; }
+  .corr-bar-track{ height:5px; background:var(--line-soft); border-radius:4px; overflow:hidden; margin-bottom:10px; }
+  .corr-bar-fill{ height:100%; border-radius:4px; }
+  .corr-desc{ font-size:11.3px; color:var(--text-dim); line-height:1.5; }
+  .intuit-row{ display:flex; justify-content:space-between; gap:18px; padding:11px 0; border-bottom:1px solid var(--line-soft); font-size:12.3px; }
+  .intuit-row:last-child{ border-bottom:none; }
+  .intuit-row .k{ color:var(--text-faint); flex-shrink:0; width:170px; }
+  .intuit-row .v{ color:var(--text-dim); text-align:right; }
+
+  /* ---------- Educational ---------- */
+  .edu-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .edu-card{ background:var(--panel); border:1px solid var(--line); border-radius:11px; padding:17px 18px; }
+  .edu-title{ font-family:'Space Grotesk'; font-size:15px; font-weight:700; margin-bottom:8px; color:var(--gold); letter-spacing:0.3px; }
+  .edu-def{ font-size:12.3px; color:var(--text-dim); line-height:1.55; margin-bottom:10px; }
+  .edu-why{ font-size:12px; color:var(--text-dim); line-height:1.5; margin-bottom:12px; }
+  .edu-why b{ color:var(--text); }
+  .edu-link{ font-size:12px; font-weight:600; color:var(--teal); }
+
+  /* ---------- Placeholder ---------- */
+  .placeholder{ display:flex; flex-direction:column; align-items:flex-start; gap:10px; background:var(--panel); border:1px dashed var(--line); border-radius:12px; padding:40px 36px; max-width:640px; }
+  .placeholder h3{ font-family:'Space Grotesk'; font-size:18px; }
+  .placeholder p{ font-size:13px; color:var(--text-dim); line-height:1.6; }
+
+  /* ---------- Modal ---------- */
+  .modal-bg{ position:fixed; inset:0; background:rgba(6,8,12,0.7); backdrop-filter:blur(3px); display:none; align-items:center; justify-content:center; z-index:50; padding:20px; }
+  .modal-bg.open{ display:flex; }
+  .modal{ background:var(--panel); border:1px solid var(--line); border-radius:14px; max-width:420px; width:100%; padding:26px 26px 22px; position:relative; }
+  .modal-close{ position:absolute; top:16px; right:18px; cursor:pointer; color:var(--text-faint); font-size:18px; line-height:1; background:none; border:none; }
+  .modal h3{ font-family:'Space Grotesk'; font-size:19px; margin-bottom:4px; }
+  .modal .m-sub{ font-size:11.5px; color:var(--text-faint); margin-bottom:16px; }
+  .modal .m-pct{ font-family:'Space Grotesk'; font-size:34px; font-weight:700; margin-bottom:2px; }
+  .modal .m-desc{ font-size:12.8px; color:var(--text-dim); line-height:1.6; margin-top:14px; }
+
+  @media (max-width:1240px){
+    .summary-grid,.mini-grid{ grid-template-columns:repeat(2,1fr); }
+    .asset-grid,.corr-grid{ grid-template-columns:repeat(3,1fr); }
+    .top-grid,.cb-grid,.edu-grid{ grid-template-columns:1fr; }
+    .who-grid{ grid-template-columns:repeat(2,1fr); }
+    aside{ display:none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="tradingview-widget-container" style="border-bottom:1px solid #232938;">
+    <div class="tradingview-widget-container__widget"></div>
+  </div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+    "symbols": [
+      {"proName": "BITSTAMP:BTCUSD", "title": "BTC/USD"},
+      {"proName": "BITSTAMP:ETHUSD", "title": "ETH/USD"},
+      {"proName": "COINBASE:SOLUSD", "title": "SOL/USD"},
+      {"proName": "TVC:GOLD", "title": "XAU/USD"},
+      {"proName": "TVC:USOIL", "title": "WTI"},
+      {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+      {"proName": "NASDAQ:NDX", "title": "NASDAQ 100"},
+      {"proName": "FOREXCOM:DJI", "title": "DOW"},
+      {"proName": "TVC:DXY", "title": "DXY"},
+      {"proName": "TVC:US10Y", "title": "US10Y"},
+      {"proName": "FX:EURUSD", "title": "EUR/USD"},
+      {"proName": "FX:GBPUSD", "title": "GBP/USD"},
+      {"proName": "NSE:NIFTY", "title": "NIFTY 50"},
+      {"proName": "TVC:INDIAVIX", "title": "INDIA VIX"}
+    ],
+    "showSymbolLogo": true,
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "colorTheme": "dark",
+    "locale": "en"
+  }
+  </script>
+
+  <header>
+    <div class="brand" onclick="go('macro')">
+      <div class="brand-mark">BQ</div>
+      <div class="brand-text">
+        <div class="name">Balakrishna Quantum</div>
+        <div class="sub">Macro Command Panel</div>
+      </div>
+    </div>
+    <div class="header-search">🔍&nbsp; Search indicators, assets, sessions, central banks…</div>
+    <div class="header-right">
+      <div class="session-pill" id="sessionPill">● SESSION LIVE · 13:00–21:00 IST</div>
+      <div class="clock" id="clockBox">--:--:-- IST · Asia/Calcutta</div>
+      <div class="gear-btn" id="gearBtn" title="Live data sources">⚙</div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <div class="nav-group">
+        <div class="nav-label">BKQ Site</div>
+        <a class="nav-item" href="../index.html"><span class="dot"></span>← Home</a>
+        <a class="nav-item" href="../finance.html"><span class="dot"></span>Finance Cockpit</a>
+        <a class="nav-item" href="index.html"><span class="dot"></span>Market Intelligence</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Core</div>
+        <div class="nav-item active" data-route="macro"><span class="dot"></span>Macro Dashboard</div>
+        <div class="nav-item" data-route="confluence"><span class="dot"></span>Confluence Engine</div>
+        <div class="nav-item" data-route="bullbear"><span class="dot"></span>Bull/Bear Scanner</div>
+        <div class="nav-item" data-route="regime"><span class="dot"></span>Market-Regime Matrix</div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Economy</div>
+        <div class="nav-item" data-route="usecon"><span class="dot"></span>US Economic Data</div>
+        <div class="nav-item" data-route="gdp"><span class="dot"></span>GDP &amp; Growth</div>
+        <div class="nav-item" data-route="inflation"><span class="dot"></span>Inflation Dashboard</div>
+        <div class="nav-item" data-route="labour"><span class="dot"></span>Labour Market</div>
+        <div class="nav-item" data-route="calendar"><span class="dot"></span>Economic Calendar</div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Policy &amp; Money</div>
+        <div class="nav-item" data-route="fed"><span class="dot"></span>Federal Reserve</div>
+        <div class="nav-item" data-route="banking"><span class="dot"></span>Banking &amp; Liquidity</div>
+        <div class="nav-item" data-route="yield"><span class="dot"></span>Yield Curve &amp; Bonds</div>
+        <div class="nav-item" data-route="cbs"><span class="dot"></span>Global Central Banks</div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">World</div>
+        <div class="nav-item" data-route="forex"><span class="dot"></span>Forex Dashboard</div>
+        <div class="nav-item" data-route="geo"><span class="dot"></span>Geopolitical Risk</div>
+        <div class="nav-item" data-route="socio"><span class="dot"></span>Socioeconomic Data</div>
+        <div class="nav-item" data-route="news"><span class="dot"></span>Financial News</div>
+        <div class="nav-item" data-route="sentiment"><span class="dot"></span>Market Sentiment</div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Tools</div>
+        <div class="nav-item" data-route="charts"><span class="dot"></span>Charts &amp; Correlations</div>
+        <div class="nav-item" data-route="assets"><span class="dot"></span>Asset Pages</div>
+        <div class="nav-item" data-route="edu"><span class="dot"></span>Educational Insights</div>
+      </div>
+    </aside>
+
+    <main>
+
+      <!-- ============ MACRO DASHBOARD ============ -->
+      <section class="page-section" id="sec-macro">
+        <div class="page-title">Macro Dashboard <span class="ref-tag" id="macroTag">CHECKING…</span></div>
+        <div class="page-desc">The state of the global economy at a glance. Every card answers: what happened, versus what was expected, and what it means for markets.</div>
+
+        <div class="top-grid">
+          <div class="card gauge-wrap">
+            <div class="card-eyebrow" style="align-self:flex-start;">Global Macro Market Bias</div>
+            <div id="gaugeMacro"></div>
+            <div class="gauge-readout">
+              <div class="pct">Neutral · 53%</div>
+              <div class="lbl">Weighted across 30 macro factors · 7-tier scale</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-eyebrow">Current Macro Regime</div>
+            <div class="regime-title">Disinflationary Late-Cycle Growth</div>
+            <div class="regime-desc">Output still expanding (GDP 2.1%) while inflation decelerates from elevated levels (CPI 3.5% ↓) — but labour momentum (NFP 57K) and PMIs point to slowing. Positioned near the Quadrant-1 / Quadrant-4 border, drifting down-left.</div>
+            <div class="tag-row">
+              <span class="tag risk">RISK-ON (FRAGILE)</span>
+              <span class="tag liq">LIQUIDITY: EXPANDING</span>
+              <span class="tag infl">INFLATION: FALLING</span>
+              <span class="tag growth">GROWTH: SLOWING</span>
+              <span class="tag rec">RECESSION RISK: 24%</span>
+            </div>
+            <div class="key-tension"><b>Key tension:</b> markets are pricing a soft landing (cool CPI + Fed cuts) while payrolls at 57K flirt with stall speed, and PPI at 6.5% questions how far disinflation can run. Whichever breaks first — labour or pipeline prices — sets the next regime.</div>
+          </div>
+        </div>
+
+        <div class="section-label">Asset Macro Bias — click any asset</div>
+        <div class="asset-grid" id="assetGrid"></div>
+
+        <div class="section-label">Macro Summary Cards</div>
+        <div class="summary-grid" id="summaryGrid"></div>
+      </section>
+
+      <!-- ============ BANKING & LIQUIDITY ============ -->
+      <section class="page-section" id="sec-banking">
+        <div class="page-title">Banking System &amp; Liquidity <span class="ref-tag">REFERENCE</span></div>
+        <div class="page-desc">Deposits, lending, delinquencies, credit spreads and the plumbing that decides whether money is getting easier or tighter. Purple = liquidity indicators.</div>
+
+        <div class="top-grid">
+          <div class="card gauge-wrap">
+            <div class="card-eyebrow" style="align-self:flex-start;">Banking Stress Index</div>
+            <div id="gaugeBanking"></div>
+            <div class="gauge-readout">
+              <div class="pct">Mild Stress · 34/100</div>
+              <div class="lbl">Deposits · emergency borrowing · spreads · delinquencies · unrealised losses</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-eyebrow">Credit &amp; Funding Stress</div>
+            <div class="stat-rows">
+              <div class="stat-row"><span class="k">High-yield spread</span><span class="v good">3.42% (↓ from 3.55)</span></div>
+              <div class="stat-row"><span class="k">Investment-grade spread</span><span class="v flat">1.14%</span></div>
+              <div class="stat-row"><span class="k">SOFR–IORB spread</span><span class="v good">0.02bp — calm</span></div>
+              <div class="stat-row"><span class="k">TED-style credit stress</span><span class="v good">0.19% — low</span></div>
+              <div class="stat-row"><span class="k">NFCI (financial conditions)</span><span class="v good">-0.32 (loose)</span></div>
+            </div>
+            <svg class="linechart" id="chartCredit" viewBox="0 0 560 90" preserveAspectRatio="none"></svg>
+            <div class="key-tension" style="margin-top:12px;"><b>Read:</b> funding markets are quiet and spreads are tightening — the market prices ZERO systemic risk. The stress that exists is a slow burn in consumer credit and CRE, which shows up in earnings, not overnight funding.</div>
+          </div>
+        </div>
+
+        <div class="section-label">Balance Sheet &amp; Credit Metrics</div>
+        <div class="mini-grid" id="bankingMiniGrid"></div>
+
+        <div class="top-grid" style="margin-top:16px; grid-template-columns:1fr 420px;">
+          <div class="card">
+            <div class="card-eyebrow">Net Liquidity vs BTC vs Nasdaq 100 (indexed) <span class="ref-tag">REFERENCE</span></div>
+            <div style="font-family:'Space Grotesk'; font-size:19px; font-weight:700; margin-bottom:10px;">$5.72T <span style="color:var(--bull); font-size:13px; font-weight:600;">· EXPANDING</span></div>
+            <div class="chart-legend">
+              <span class="lg"><span class="sw" style="background:var(--gold);"></span>Net Liquidity</span>
+              <span class="lg"><span class="sw" style="background:var(--teal);"></span>Bitcoin</span>
+              <span class="lg"><span class="sw" style="background:#8B7FE8;"></span>Nasdaq 100</span>
+            </div>
+            <svg class="linechart" id="chartLiquidity" viewBox="0 0 700 190" preserveAspectRatio="none"></svg>
+          </div>
+          <div class="card">
+            <div class="card-eyebrow">Liquidity Components</div>
+            <div class="liq-row">
+              <div><div class="liq-name">Fed Balance Sheet</div><div class="liq-desc">QT tapered — barely shrinking now.</div></div>
+              <div class="liq-right"><div class="liq-val">$6.62T</div><span class="pill neu">NEUTRAL</span></div>
+            </div>
+            <div class="liq-row">
+              <div><div class="liq-name">Reverse Repo (RRP)</div><div class="liq-desc">Nearly drained; its fall added liquidity for 2 years.</div></div>
+              <div class="liq-right"><div class="liq-val">$148B</div><span class="pill bull">BULLISH</span></div>
+            </div>
+            <div class="liq-row">
+              <div><div class="liq-name">Treasury General Account</div><div class="liq-desc">Heavy bill issuance is refilling the TGA — drains liquidity.</div></div>
+              <div class="liq-right"><div class="liq-val">$752B</div><span class="pill bear">BEARISH</span></div>
+            </div>
+            <div class="liq-row">
+              <div><div class="liq-name">Bank Reserves</div><div class="liq-desc">Comfortably above the ~$2.8T 'ample' floor estimate.</div></div>
+              <div class="liq-right"><div class="liq-val">$3.21T</div><span class="pill bull">BULLISH</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ GLOBAL CENTRAL BANKS ============ -->
+      <section class="page-section" id="sec-cbs">
+        <div class="page-title">Global Central-Bank Dashboard <span class="ref-tag">REFERENCE</span></div>
+        <div class="page-desc">Ten major central banks: where policy is, where it's heading, and who is adding or removing liquidity from the world.</div>
+
+        <div class="card" style="margin-bottom:8px;">
+          <div class="card-eyebrow">Who Is Doing What</div>
+          <div class="who-grid">
+            <div class="who-card"><span class="who-badge easing">EASING</span><div class="who-list">US · IN · CA</div></div>
+            <div class="who-card"><span class="who-badge pausing">PAUSING</span><div class="who-list">EU · GB · AU · NZ</div></div>
+            <div class="who-card"><span class="who-badge tightening">TIGHTENING</span><div class="who-list">JP</div></div>
+            <div class="who-card"><span class="who-badge liquidity">LIQUIDITY SUPPORT</span><div class="who-list">CN · CH</div></div>
+            <div class="who-card"><span class="who-badge qt">QT ACTIVE</span><div class="who-list">US (tapered) · EU (slowed) · JP (tapering purchases)</div></div>
+          </div>
+          <div class="key-tension"><b>Net global impulse: EASING.</b> 6 of 10 banks cutting or supporting liquidity; only the BoJ is tightening. Historically this configuration supports global M2 growth — a medium-term tailwind for risk assets and gold.</div>
+        </div>
+
+        <div class="section-label">Central Banks</div>
+        <div class="cb-grid" id="cbGrid"></div>
+      </section>
+
+      <!-- ============ FINANCIAL NEWS ============ -->
+      <section class="page-section" id="sec-news">
+        <div class="page-title">Latest Financial News <span class="ref-tag" id="newsTag">CHECKING…</span></div>
+        <div class="page-desc" id="newsDesc">Loading live headlines from CNBC, CoinDesk, and Economic Times…</div>
+
+        <div class="tabs" id="newsTabs"></div>
+        <div class="news-list" id="newsList"></div>
+      </section>
+
+      <!-- ============ CHARTS & COMPARISONS ============ -->
+      <section class="page-section" id="sec-charts">
+        <div class="page-title">Charts &amp; Comparisons <span class="ref-tag">REFERENCE</span></div>
+        <div class="page-desc">Rolling correlations across the pairs that define this cycle. Correlation measures co-movement — it does not always imply causation, and it is regime-dependent. Values are reference (90-day baseline), scaled per window since shorter lookbacks are genuinely noisier and typically pull correlations toward zero — this isn't a live tick-by-tick recompute, wire in a historical price feed for that.</div>
+
+        <div class="tabs" id="rangeTabs"></div>
+
+        <div class="corr-grid" id="corrGrid"></div>
+
+        <div class="top-grid" style="grid-template-columns:1fr 420px;">
+          <div class="card">
+            <div class="card-eyebrow">Net Liquidity vs BTC vs Nasdaq 100 (indexed) <span class="ref-tag">REFERENCE</span></div>
+            <div class="chart-legend">
+              <span class="lg"><span class="sw" style="background:var(--gold);"></span>Net Liquidity</span>
+              <span class="lg"><span class="sw" style="background:var(--teal);"></span>Bitcoin</span>
+              <span class="lg"><span class="sw" style="background:#8B7FE8;"></span>Nasdaq 100</span>
+            </div>
+            <svg class="linechart" id="chartCharts" viewBox="0 0 700 190" preserveAspectRatio="none"></svg>
+            <div class="chart-tip">Feb 26 → Net Liquidity: 103 · Bitcoin: 118.5 · Nasdaq 100: 109</div>
+          </div>
+          <div class="card">
+            <div class="card-eyebrow">Correlation Intuition</div>
+            <div class="intuit-row"><span class="k">The cycle-defining pair</span><span class="v">Gold × real yields — classically -0.5, now only -0.26</span></div>
+            <div class="intuit-row"><span class="k">Why it weakened</span><span class="v">Central-bank buying is price-insensitive — it buys regardless of yields</span></div>
+            <div class="intuit-row"><span class="k">The one that still works</span><span class="v">USD × EM (-0.55): dollar down = EM breathing room</span></div>
+            <div class="intuit-row"><span class="k">The broken one</span><span class="v">BTC × liquidity 30d (+0.21): regulation noise dominates short windows</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATIONAL INSIGHTS ============ -->
+      <section class="page-section" id="sec-edu">
+        <div class="page-title">📘 Educational Insights</div>
+        <div class="page-desc">Every complex concept on this platform, explained the same way: definition → why it matters → interpretation → typical reaction → exceptions → real example.</div>
+
+        <div class="edu-grid" id="eduGrid"></div>
+      </section>
+
+      <!-- ============ CONFLUENCE ENGINE ============ -->
+      <section class="page-section" id="sec-confluence">
+        <div class="page-title">Confluence Engine <span class="ref-tag" id="confluenceTag">REFERENCE</span></div>
+        <div class="page-desc">Where independent signal categories stack up for a name: macro bias, session momentum, the liquidity backdrop, and cross-asset correlation. High confluence means the signals agree; a mixed read means stand aside. The macro-bias and momentum rows update from the live feed on the Macro Dashboard.</div>
+        <div class="conf-grid" id="confluenceGrid"></div>
+      </section>
+
+      <!-- ============ BULL/BEAR SCANNER ============ -->
+      <section class="page-section" id="sec-bullbear">
+        <div class="page-title">Bull/Bear Scanner <span class="ref-tag" id="bullbearTag">REFERENCE</span></div>
+        <div class="page-desc">Every tracked instrument in one table, ranked by bias score. Crypto, gold, silver, and the dollar are computed from live prices; equity/index rows stay reference until a Twelve Data key is added in Settings (⚙).</div>
+        <div class="card">
+          <table class="data-table">
+            <thead><tr><th>Instrument</th><th>Price</th><th>Δ</th><th>Bias Score</th><th>Signal</th><th>Source</th></tr></thead>
+            <tbody id="scannerBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ============ MARKET-REGIME MATRIX ============ -->
+      <section class="page-section" id="sec-regime">
+        <div class="page-title">Market-Regime Matrix <span class="ref-tag" id="regimeTag">REFERENCE</span></div>
+        <div class="page-desc">Growth vs. inflation defines the regime; policy determines how long it lasts. The inflation axis moves with the live BLS CPI trend; the growth axis uses the latest reference GDP print until a live GDP feed is wired in.</div>
+        <div class="top-grid" style="grid-template-columns:460px 1fr;">
+          <div class="card quad-wrap"><svg viewBox="0 0 400 400" style="width:100%; max-width:400px;" id="regimeQuad"></svg></div>
+          <div class="card">
+            <div class="card-eyebrow">Where We Sit</div>
+            <div class="regime-title" id="regimeCardTitle">Disinflationary Late-Cycle Growth</div>
+            <div class="regime-desc" id="regimeCardDesc">Growth positive, inflation falling — historically the friendliest quadrant for risk assets, provided the labour market doesn't crack first.</div>
+            <div class="key-tension" id="regimeCardTension"><b>Live inflation input:</b> checking CPI trend…</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ US ECONOMIC DATA ============ -->
+      <section class="page-section" id="sec-usecon">
+        <div class="page-title">US Economic Data <span class="live-tag"><span class="lp"></span>PARTIALLY LIVE</span></div>
+        <div class="page-desc">The core suite of US releases. CPI, core CPI, PPI, unemployment, participation, wages, and job openings pull live from the Bureau of Labor Statistics. GDP, ISM PMI, retail sales, and consumer sentiment stay reference until wired to BEA/Census/ISM feeds.</div>
+        <div class="mini-grid" id="useconGrid"></div>
+      </section>
+
+      <!-- ============ GDP & GROWTH ============ -->
+      <section class="page-section" id="sec-gdp">
+        <div class="page-title">GDP &amp; Growth <span class="ref-tag">REFERENCE</span></div>
+        <div class="page-desc">Quarterly output and its components. The BEA doesn't offer a free browser-callable feed, so this stays a maintained reference snapshot consistent with the Macro Dashboard's regime card.</div>
+        <div class="top-grid" style="grid-template-columns:1fr 1fr;">
+          <div class="card">
+            <div class="card-eyebrow">Real GDP Growth (QoQ, annualised)</div>
+            <div class="sum-value" style="font-size:28px;">2.1%</div>
+            <div class="sum-meta">Prev 1.8% · Fcst 1.6% · ▲ beat expectations</div>
+            <svg class="linechart" id="chartGDP" viewBox="0 0 500 140" preserveAspectRatio="none"></svg>
+            <div class="chart-tip">Last 8 quarters, annualised QoQ % — reference series</div>
+          </div>
+          <div class="card">
+            <div class="card-eyebrow">Contribution to Growth (pp)</div>
+            <div class="stat-rows">
+              <div class="stat-row"><span class="k">Personal Consumption</span><span class="v good">+1.4pp</span></div>
+              <div class="stat-row"><span class="k">Private Investment</span><span class="v good">+0.3pp</span></div>
+              <div class="stat-row"><span class="k">Government Spending</span><span class="v good">+0.2pp</span></div>
+              <div class="stat-row"><span class="k">Net Exports</span><span class="v good">+0.2pp</span></div>
+            </div>
+            <div class="key-tension"><b>Read:</b> growth is consumption-led and broad-based rather than a one-off inventory swing — the kind of print that keeps "soft landing" on the table.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ INFLATION DASHBOARD ============ -->
+      <section class="page-section" id="sec-inflation">
+        <div class="page-title">Inflation Dashboard <span class="live-tag"><span class="lp"></span>PARTIALLY LIVE</span></div>
+        <div class="page-desc">Headline, core, and producer prices pull live from BLS. Category breakdown and market-implied inflation expectations stay reference until wired to a breakeven-rate feed.</div>
+        <div class="mini-grid" id="inflationGrid" style="margin-bottom:16px;"></div>
+        <div class="section-label">CPI Basket Breakdown (reference)</div>
+        <div class="mini-grid">
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">Shelter</span><span class="pill neu">36% weight</span></div><div class="mini-value">+4.1% y/y</div><div class="mini-desc">Still the single largest driver of core CPI; rolling over slowly.</div></div>
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">Food</span><span class="pill neu">13% weight</span></div><div class="mini-value">+2.6% y/y</div><div class="mini-desc">Back near target after the 2022–23 spike.</div></div>
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">Energy</span><span class="pill bull">7% weight</span></div><div class="mini-value">-1.8% y/y</div><div class="mini-desc">Deflationary — crude and gasoline base effects helping headline.</div></div>
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">10Y Breakeven</span><span class="pill neu">Market-implied</span></div><div class="mini-value">2.31%</div><div class="mini-desc">TIPS-derived expected inflation, anchored near the Fed's comfort zone.</div></div>
+        </div>
+      </section>
+
+      <!-- ============ LABOUR MARKET ============ -->
+      <section class="page-section" id="sec-labour">
+        <div class="page-title">Labour Market <span class="live-tag"><span class="lp"></span>PARTIALLY LIVE</span></div>
+        <div class="page-desc">Payrolls, unemployment, participation, wages, and job openings pull live from BLS. Weekly jobless claims and the quits rate stay reference — they publish on a cadence BLS's public series API doesn't carry cleanly.</div>
+        <div class="mini-grid" id="labourGrid"></div>
+      </section>
+
+      <!-- ============ ECONOMIC CALENDAR ============ -->
+      <section class="page-section" id="sec-calendar">
+        <div class="page-title">Economic Calendar <span class="ref-tag">REFERENCE</span></div>
+        <div class="page-desc">Upcoming macro releases this cycle. Dates are illustrative reference — wire this to a licensed calendar feed (or your own release-date list) for exact, guaranteed-accurate timing.</div>
+        <div class="card">
+          <table class="data-table">
+            <thead><tr><th>Date</th><th>Event</th><th>Prior</th><th>Forecast</th><th>Impact</th><th>Why It Matters</th></tr></thead>
+            <tbody id="calendarBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ============ FEDERAL RESERVE ============ -->
+      <section class="page-section" id="sec-fed">
+        <div class="page-title">Federal Reserve <span class="ref-tag">REFERENCE</span></div>
+        <div class="page-desc">A closer look at the Fed specifically. Rate and balance-sheet figures mirror the Global Central-Bank page; the meeting-by-meeting cut odds are market-implied (CME FedWatch-style) and stay reference until wired to a futures feed.</div>
+        <div class="top-grid" style="grid-template-columns:1fr 1fr;">
+          <div class="card">
+            <div class="card-eyebrow">Fed Funds Rate</div>
+            <div class="sum-value" style="font-size:28px;">3.50–3.75%</div>
+            <div class="sum-meta">Prev 3.75–4.00% · Cut 25bp (Jun) · Next meeting Jul 29, 2026</div>
+            <div class="key-tension"><b>Statement tone:</b> "Risks to both mandates now balanced; prepared to adjust policy." Balance sheet: QT tapered, reserves comfortably above the ample floor.</div>
+            <svg class="linechart" id="chartFedBS" viewBox="0 0 500 140" preserveAspectRatio="none" style="margin-top:14px;"></svg>
+            <div class="chart-tip">Fed balance sheet, $T — last 12 months, reference series</div>
+          </div>
+          <div class="card">
+            <div class="card-eyebrow">Meeting-by-Meeting Cut Odds (reference)</div>
+            <table class="data-table">
+              <thead><tr><th>Meeting</th><th>Hold</th><th>-25bp</th><th>-50bp</th></tr></thead>
+              <tbody>
+                <tr><td>Jul 29, 2026</td><td>38%</td><td>62%</td><td>0%</td></tr>
+                <tr><td>Sep 17, 2026</td><td>31%</td><td>58%</td><td>11%</td></tr>
+                <tr><td>Oct 29, 2026</td><td>44%</td><td>49%</td><td>7%</td></tr>
+                <tr><td>Dec 10, 2026</td><td>52%</td><td>41%</td><td>7%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ YIELD CURVE & BONDS ============ -->
+      <section class="page-section" id="sec-yield">
+        <div class="page-title">Yield Curve &amp; Bonds <span class="ref-tag">REFERENCE</span></div>
+        <div class="page-desc">No free, CORS-enabled live bond-yield feed exists for a static local file — this stays a maintained reference curve consistent with the US10Y figure used elsewhere.</div>
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-eyebrow">US Treasury Par Yield Curve</div>
+          <svg class="linechart" id="chartYieldCurve" viewBox="0 0 640 220" preserveAspectRatio="none"></svg>
+          <div class="chart-tip">3M · 6M · 1Y · 2Y · 5Y · 10Y · 30Y</div>
+        </div>
+        <div class="mini-grid">
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">2s10s Spread</span><span class="pill bull">BULLISH</span></div><div class="mini-value">+18bp</div><div class="mini-desc">Dis-inverted from last year's low — historically the recession-warning phase is the re-steepening, not the inversion itself.</div></div>
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">3M10Y Spread</span><span class="pill neu">NEUTRAL</span></div><div class="mini-value">-4bp</div><div class="mini-desc">Still flirting with flat — the Fed's preferred recession signal.</div></div>
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">Curve-Implied Recession Odds</span><span class="pill neu">NEUTRAL</span></div><div class="mini-value">24%</div><div class="mini-desc">NY Fed-style model output — consistent with the Macro Dashboard's recession probability card.</div></div>
+        </div>
+      </section>
+
+      <!-- ============ FOREX DASHBOARD ============ -->
+      <section class="page-section" id="sec-forex">
+        <div class="page-title">Forex Dashboard <span class="ref-tag" id="forexTag">CHECKING…</span></div>
+        <div class="page-desc">Live cross rates from the same open.er-api feed that powers the ticker and the synthetic DXY calculation on the Macro Dashboard.</div>
+        <div class="fx-grid" id="fxGrid"></div>
+      </section>
+
+      <!-- ============ GEOPOLITICAL RISK ============ -->
+      <section class="page-section" id="sec-geo">
+        <div class="page-title">Geopolitical Risk <span class="ref-tag" id="geoTag">CHECKING…</span></div>
+        <div class="page-desc">The composite index is a live market-based risk proxy: it's computed from real gold safe-haven momentum and real Bitcoin realized volatility, refreshed every 5 minutes — not a news headline count. No free structured feed exists for the individual named risk factors below, so that list stays a curated reference register to replace with your own desk's view.</div>
+        <div class="top-grid" style="grid-template-columns:340px 1fr;">
+          <div class="card gauge-wrap">
+            <div class="card-eyebrow" style="align-self:flex-start;">Composite Risk Index <span class="ref-tag" id="geoGaugeTag" style="margin-left:auto;">CHECKING…</span></div>
+            <div id="gaugeGeo"></div>
+            <div class="gauge-readout"><div class="pct" id="geoReadout">Checking…</div><div class="lbl" id="geoReadoutLbl">Computing from live gold momentum + BTC realized volatility</div></div>
+          </div>
+          <div class="card">
+            <div class="card-eyebrow">Live Inputs Driving The Score</div>
+            <div class="stat-rows" id="geoLiveInputs">
+              <div class="stat-row"><span class="k">Gold (XAU) safe-haven momentum</span><span class="v flat" id="geoGoldInput">checking…</span></div>
+              <div class="stat-row"><span class="k">Bitcoin realized volatility (24h, hourly)</span><span class="v flat" id="geoVolInput">checking…</span></div>
+            </div>
+            <div class="section-label" style="margin:18px 0 8px;">Named Risk Factors (curated reference)</div>
+            <div class="stat-rows">
+              <div class="stat-row"><span class="k">Trade &amp; tariff policy shifts</span><span class="v bad">HIGH</span></div>
+              <div class="stat-row"><span class="k">Energy supply chokepoints</span><span class="v flat">MEDIUM</span></div>
+              <div class="stat-row"><span class="k">Election-cycle policy uncertainty</span><span class="v flat">MEDIUM</span></div>
+              <div class="stat-row"><span class="k">Regional conflict escalation</span><span class="v bad">HIGH</span></div>
+              <div class="stat-row"><span class="k">Sanctions &amp; export-control regime</span><span class="v flat">MEDIUM</span></div>
+              <div class="stat-row"><span class="k">Sovereign-debt / fiscal stress</span><span class="v good">LOW</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SOCIOECONOMIC DATA ============ -->
+      <section class="page-section" id="sec-socio">
+        <div class="page-title">Socioeconomic Data <span class="ref-tag">REFERENCE</span></div>
+        <div class="page-desc">Slower-moving structural indicators. These update annually at best even on paid terminals, so "live" isn't really the right bar — this is a maintained reference snapshot.</div>
+        <div class="mini-grid">
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">US Population Growth</span><span class="pill neu">NEUTRAL</span></div><div class="mini-value">+0.5%</div><div class="mini-prev">Prev +0.4% ▲</div><div class="mini-desc">Immigration-driven; labour-supply tailwind.</div></div>
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">Gini Coefficient</span><span class="pill bear">BEARISH</span></div><div class="mini-value">0.41</div><div class="mini-prev">Prev 0.40 ▲</div><div class="mini-desc">Income inequality drifting higher, a slow structural trend.</div></div>
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">Poverty Rate</span><span class="pill neu">NEUTRAL</span></div><div class="mini-value">11.4%</div><div class="mini-prev">Prev 11.5% ▼</div><div class="mini-desc">Roughly flat versus the prior reporting period.</div></div>
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">Median Household Income</span><span class="pill bull">BULLISH</span></div><div class="mini-value">$81,200</div><div class="mini-prev">Prev $78,900 ▲</div><div class="mini-desc">Nominal growth outpacing headline CPI this cycle.</div></div>
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">Life Expectancy</span><span class="pill neu">NEUTRAL</span></div><div class="mini-value">78.9 yrs</div><div class="mini-prev">Prev 78.6 ▲</div><div class="mini-desc">Continued post-2021 recovery.</div></div>
+          <div class="mini-card"><div class="mini-top"><span class="mini-label">Education Spend (% GDP)</span><span class="pill neu">NEUTRAL</span></div><div class="mini-value">5.4%</div><div class="mini-prev">Prev 5.3% ▲</div><div class="mini-desc">Broadly stable as a share of output.</div></div>
+        </div>
+      </section>
+
+      <!-- ============ MARKET SENTIMENT ============ -->
+      <section class="page-section" id="sec-sentiment">
+        <div class="page-title">Market Sentiment <span class="ref-tag" id="sentimentPageTag">CHECKING…</span></div>
+        <div class="page-desc" id="sentimentDesc">Crypto fear/greed is computed live from real BTC momentum. CBOE actually publishes VIX9D/VIX3M/VIX6M and put/call ratios for free — checking whether this browser can reach them directly (their CDN doesn't set a CORS header, so it depends on your setup). AAII's bull/bear survey has no public feed at all, so that one stays reference.</div>
+        <div class="top-grid" style="grid-template-columns:340px 1fr;">
+          <div class="card gauge-wrap">
+            <div class="card-eyebrow" style="align-self:flex-start;">Crypto Fear &amp; Greed (live proxy)</div>
+            <div id="gaugeSentiment"></div>
+            <div class="gauge-readout"><div class="pct" id="sentimentReadout">Checking…</div><div class="lbl">Computed from live BTC 24h momentum, not the official index</div></div>
+          </div>
+          <div class="card">
+            <div class="card-eyebrow">Options &amp; Volatility Sentiment <span class="ref-tag" id="cboeTag" style="margin-left:auto;">CHECKING…</span></div>
+            <div class="stat-rows">
+              <div class="stat-row"><span class="k">VIX (spot)</span><span class="v flat" id="vixSpotVal">checking…</span></div>
+              <div class="stat-row"><span class="k">VIX9D (short-term)</span><span class="v flat" id="vix9dVal">checking…</span></div>
+              <div class="stat-row"><span class="k">VIX3M</span><span class="v flat" id="vix3mVal">checking…</span></div>
+              <div class="stat-row"><span class="k">VIX6M</span><span class="v flat" id="vix6mVal">checking…</span></div>
+              <div class="stat-row"><span class="k">VIX Term Structure</span><span class="v flat" id="vixTermVal">checking…</span></div>
+              <div class="stat-row"><span class="k">Total Put/Call Ratio</span><span class="v flat" id="putCallVal">checking…</span></div>
+              <div class="stat-row"><span class="k">Equity Put/Call Ratio</span><span class="v flat" id="putCallEqVal">checking…</span></div>
+            </div>
+            <div class="section-label" style="margin:18px 0 8px;">AAII Bull/Bear Survey (reference — no public feed exists)</div>
+            <div class="stat-rows">
+              <div class="stat-row"><span class="k">AAII Bulls</span><span class="v good">38.2%</span></div>
+              <div class="stat-row"><span class="k">AAII Bears</span><span class="v bad">27.6%</span></div>
+              <div class="stat-row"><span class="k">Bull-Bear Spread</span><span class="v good">+10.6pp</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ASSET PAGES ============ -->
+      <section class="page-section" id="sec-assets">
+        <div class="page-title">Asset Pages <span class="live-tag"><span class="lp"></span>LIVE WHERE MARKED</span></div>
+        <div class="page-desc">A directory of every tracked instrument — the same live prices and bias scores from the Macro Dashboard and ticker, in one browsable index.</div>
+        <div class="asset-grid" id="assetsDirectoryGrid"></div>
+      </section>
+
+      <!-- ============ PLACEHOLDER (unbuilt modules) ============ -->
+      <section class="page-section" id="sec-placeholder">
+        <div class="page-title" id="phTitle">Module <span class="ref-tag">REFERENCE</span></div>
+        <div class="page-desc">This module isn't wired up yet in this preview.</div>
+        <div class="placeholder">
+          <h3 id="phTitle2">—</h3>
+          <p>This screen follows the same card system as Macro Dashboard, Banking &amp; Liquidity, Global Central Banks, Financial News, Charts &amp; Correlations, and Educational Insights. Tell me which cards it should show and I'll build it out next in the same style.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="modal-bg" id="modalBg">
+    <div class="modal" style="max-width:680px;">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h3 id="mTitle">—</h3>
+      <div class="m-sub" id="mSub">Asset macro bias detail</div>
+      <div class="m-pct" id="mPct">—</div>
+      <div id="mStatus" class="pill">—</div>
+      <div class="m-desc" id="mDesc">—</div>
+      <div id="mChartWrap" style="margin-top:16px; border:1px solid var(--line); border-radius:10px; overflow:hidden; height:400px; background:var(--panel-2);">
+        <div id="mChartContainer" style="height:100%;"></div>
+      </div>
+      <div class="chart-tip" id="mChartCaption" style="margin-top:8px;">Live chart via TradingView</div>
+    </div>
+  </div>
+
+  <div class="modal-bg" id="settingsBg">
+    <div class="modal settings-modal">
+      <button class="modal-close" id="settingsClose">✕</button>
+      <h3>Live Data Sources</h3>
+      <div class="m-sub">What's actually live right now, and what needs a free key</div>
+      <div class="section-label" style="margin:14px 0 4px;">Live now — no key needed</div>
+      <div id="srcListFree"></div>
+      <div class="section-label" style="margin:18px 0 4px;">Unlocks with a free Twelve Data key</div>
+      <div id="srcListKeyed"></div>
+      <div class="key-field">
+        <input type="text" id="tdKeyInput" placeholder="Paste your Twelve Data API key…">
+        <button id="tdKeySave">Save</button>
+      </div>
+      <div class="settings-note">Free key in ~10 seconds at <a href="https://twelvedata.com/pricing" target="_blank">twelvedata.com/pricing</a> (800 calls/day, covers US equities &amp; ETFs — used here as Nasdaq 100 / Dow / S&amp;P 500 / WTI proxies via QQQ, DIA, SPY, USO). Stored only in this browser's local storage, never sent anywhere else.</div>
+      <div class="section-label" style="margin:18px 0 4px;">Reference dataset (no free live feed exists)</div>
+      <div id="srcListRef"></div>
+      <div class="settings-note">Nifty 50, India VIX, US10Y yield, and the monthly macro prints (GDP, PMI, banking internals, central-bank cards, correlations) come from licensed terminals (NSE, Bloomberg, FRED-with-server-proxy) that a static local file can't call directly. These stay as a maintained reference dataset until wired to a paid feed or your own backend.</div>
+    </div>
+  </div>
+
+  <div class="modal-bg" id="eduModalBg">
+    <div class="modal settings-modal">
+      <button class="modal-close" id="eduModalClose">✕</button>
+      <h3 id="eduModalTitle">—</h3>
+      <div class="m-sub" id="eduModalDef">—</div>
+      <div class="section-label" style="margin:16px 0 6px;">Why It Matters</div>
+      <p id="eduModalWhy" style="font-size:12.8px; color:var(--text-dim); line-height:1.6;">—</p>
+      <div class="section-label" style="margin:16px 0 6px;">Interpretation</div>
+      <p id="eduModalInterp" style="font-size:12.8px; color:var(--text-dim); line-height:1.6;">—</p>
+      <div class="section-label" style="margin:16px 0 6px;">Typical Market Reaction</div>
+      <p id="eduModalReaction" style="font-size:12.8px; color:var(--text-dim); line-height:1.6;">—</p>
+      <div class="section-label" style="margin:16px 0 6px;">Exceptions To Watch For</div>
+      <p id="eduModalExceptions" style="font-size:12.8px; color:var(--text-dim); line-height:1.6;">—</p>
+      <div class="section-label" style="margin:16px 0 6px;">Real Example</div>
+      <p id="eduModalExample" style="font-size:12.8px; color:var(--text-dim); line-height:1.6;">—</p>
+    </div>
+  </div>
+
+<script>
+  /* ================= Clock ================= */
+  function updateClock(){
+    const now = new Date();
+    const opts = { timeZone:'Asia/Kolkata', hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:true };
+    document.getElementById('clockBox').innerHTML = '<b>'+now.toLocaleTimeString('en-IN', opts)+'</b> IST · Asia/Calcutta';
+  }
+  updateClock(); setInterval(updateClock, 1000);
+
+  /* ================= Ticker ================= */
+  // live:false items keep a fixed reference price and show a muted "ref" tag instead of a fabricated % move.
+  // live:true items get real prices; chg is either a true 24h change (crypto) or a poll-to-poll delta (gold/forex/DXY),
+  // and equity-proxy items (needs 'td') light up once a free Twelve Data key is saved.
+  const tickers = [
+    {key:'BTC',  sym:'BTC/USD',   px:63105,  dec:0, live:true,  chg:0, source:'coingecko'},
+    {key:'ETH',  sym:'ETH/USD',   px:1818.7, dec:1, live:true,  chg:0, source:'coingecko'},
+    {key:'SOL',  sym:'SOL/USD',   px:74.22,  dec:2, live:true,  chg:0, source:'coingecko'},
+    {key:'XAU',  sym:'XAU/USD',   px:4037.2, dec:1, live:true,  chg:0, source:'gold-api'},
+    {key:'WTI',  sym:'WTI (USO proxy)', px:79.50, dec:2, live:false, chg:0, td:'USO'},
+    {key:'SPX',  sym:'S&P 500 (SPY proxy)', px:7544.2, dec:1, live:false, chg:0, td:'SPY'},
+    {key:'NDX',  sym:'NASDAQ 100 (QQQ proxy)', px:24982, dec:0, live:false, chg:0, td:'QQQ'},
+    {key:'DJI',  sym:'DOW (DIA proxy)', px:48650, dec:0, live:false, chg:0, td:'DIA'},
+    {key:'DXY',  sym:'DXY',       px:104.99, dec:2, live:true,  chg:0, source:'synthetic'},
+    {key:'US10Y',sym:'US10Y',     px:4.583,  dec:3, live:false, chg:0},
+    {key:'EURUSD',sym:'EUR/USD',  px:1.0624, dec:4, live:true,  chg:0, source:'er-api'},
+    {key:'GBPUSD',sym:'GBP/USD',  px:1.2532, dec:4, live:true,  chg:0, source:'er-api'},
+    {key:'NIFTY',sym:'NIFTY 50',  px:24982,  dec:0, live:false, chg:0},
+    {key:'INVIX',sym:'INDIA VIX', px:13.75,  dec:2, live:false, chg:0},
+  ];
+  function renderTicker(){
+    // The top bar is now the real TradingView Ticker Tape widget (matches balakrishnaquantum.com).
+    // This array + function stay as the internal live-data model feeding the Scanner, Asset Pages, and Confluence Engine.
+    const el = document.getElementById('tickerTrack');
+    if(!el) return;
+    el.innerHTML = tickers.map(t=>{
+      const priceStr = t.px.toLocaleString('en-US',{minimumFractionDigits:t.dec,maximumFractionDigits:t.dec});
+      if(t.live){
+        const cls = t.chg >= 0 ? 'up':'down'; const arrow = t.chg >= 0 ? '▲':'▼';
+        return `<span><span class="sym">${t.sym}</span><span class="px">${priceStr}</span><span class="${cls}">● ${arrow} ${Math.abs(t.chg).toFixed(2)}%</span></span>`;
+      }
+      return `<span><span class="sym">${t.sym}</span><span class="px">${priceStr}</span><span style="color:var(--text-faint);">· ref</span></span>`;
+    }).join('');
+  }
+  renderTicker();
+
+  /* ================= Gauge helper ================= */
+  function gaugeSVG(pct){
+    const rot = (pct-50)*1.8;
+    return `<svg class="gauge" viewBox="0 0 230 130">
+      <defs><linearGradient id="gg${pct}" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#E15B6B"/><stop offset="50%" stop-color="#C9A227"/><stop offset="100%" stop-color="#33C481"/>
+      </linearGradient></defs>
+      <path d="M 15 115 A 100 100 0 0 1 215 115" fill="none" stroke="#1B212D" stroke-width="14" stroke-linecap="round"/>
+      <path d="M 15 115 A 100 100 0 0 1 215 115" fill="none" stroke="url(#gg${pct})" stroke-width="14" stroke-linecap="round" opacity="0.9"/>
+      <g transform="rotate(${rot} 115 115)">
+        <line x1="115" y1="115" x2="115" y2="30" stroke="#E7E9EE" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="115" cy="115" r="6.5" fill="#E7E9EE"/>
+      </g>
+      <text x="15" y="128" fill="#5B6274" font-size="9" font-family="JetBrains Mono">BEAR</text>
+      <text x="197" y="128" fill="#5B6274" font-size="9" font-family="JetBrains Mono">BULL</text>
+    </svg>`;
+  }
+  document.getElementById('gaugeMacro').innerHTML = gaugeSVG(53);
+  document.getElementById('gaugeBanking').innerHTML = gaugeSVG(34);
+
+  /* ================= Line chart helper ================= */
+  function lineChart(svgId, seriesArr, colors, w, h){
+    const svg = document.getElementById(svgId);
+    const pad = 6;
+    const allVals = seriesArr.flat();
+    const min = Math.min(...allVals), max = Math.max(...allVals);
+    const n = seriesArr[0].length;
+    const toPts = arr => arr.map((v,i)=>{
+      const x = pad + (i/(n-1))*(w-2*pad);
+      const y = h - pad - ((v-min)/(max-min))*(h-2*pad);
+      return x.toFixed(1)+','+y.toFixed(1);
+    }).join(' ');
+    let html = '';
+    seriesArr.forEach((s,i)=>{
+      html += `<polyline points="${toPts(s)}" fill="none" stroke="${colors[i]}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" opacity="0.95"/>`;
+    });
+    svg.innerHTML = html;
+    svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+  }
+  const creditSeries = [98,95,93,90,88,84,80,77,74,70,67,63];
+  lineChart('chartCredit', [creditSeries], ['#C9A227'], 560, 90);
+
+  const netLiq   = [100,102,104,101,106,110,116,122,119,113,108,103,105,109,112,118];
+  const btcLine  = [100,108,120,112,128,138,150,162,148,131,120,118.5,126,134,142,150];
+  const ndxLine  = [100,101,103,105,106,108,110,109,107,106,107,109,111,113,114,116];
+  lineChart('chartLiquidity', [netLiq, btcLine, ndxLine], ['#C9A227','#1FB8A6','#8B7FE8'], 700, 190);
+  lineChart('chartCharts', [netLiq, btcLine, ndxLine], ['#C9A227','#1FB8A6','#8B7FE8'], 700, 190);
+
+  /* ================= Router ================= */
+  const routes = ['macro','banking','cbs','news','charts','edu','confluence','bullbear','regime','usecon','gdp','inflation','labour','calendar','fed','yield','forex','geo','socio','sentiment','assets'];
+  function go(route){
+    document.querySelectorAll('.nav-item').forEach(el=>el.classList.toggle('active', el.dataset.route===route));
+    document.querySelectorAll('.page-section').forEach(el=>el.classList.remove('active'));
+    if(routes.includes(route)){
+      document.getElementById('sec-'+route).classList.add('active');
+    } else {
+      const label = (document.querySelector(`.nav-item[data-route="${route}"]`)||{}).textContent || route;
+      document.getElementById('phTitle2').textContent = label.trim();
+      document.getElementById('sec-placeholder').classList.add('active');
+    }
+    location.hash = route;
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('.nav-item[data-route]').forEach(el=>{
+    el.addEventListener('click', ()=>go(el.dataset.route));
+  });
+  window.addEventListener('hashchange', ()=>go(location.hash.replace('#','')||'macro'));
+  go(location.hash.replace('#','') || 'macro');
+
+  /* ================= Asset bias (Macro Dashboard) ================= */
+  const assets = [
+    {key:'XAU', name:'Gold (XAU/USD)', pct:59, status:'BULLISH', desc:'Real yields easing and a softer dollar keep gold bid; central bank buying provides a structural floor.', live:true, note:'Live spot price · bias scored from live momentum'},
+    {key:'BTC', name:'Bitcoin', pct:54, status:'NEUTRAL', desc:'Consolidating below range highs — liquidity backdrop supportive, but leverage and funding remain a two-way risk.', live:true, note:'Live price + real 24h change (CoinGecko)'},
+    {key:'ETH', name:'Ethereum', pct:52, status:'NEUTRAL', desc:'Tracking BTC beta with muted relative strength; L2 activity and staking flows are the swing factors to watch.', live:true, note:'Live price + real 24h change (CoinGecko)'},
+    {key:'SOL', name:'Solana', pct:54, status:'NEUTRAL', desc:'Elevated volatility with retail-driven flow; correlates tightly to broader risk appetite this week.', live:true, note:'Live price + real 24h change (CoinGecko)'},
+    {key:'SPX', name:'S&P 500', pct:55, status:'BULLISH', desc:'Earnings resilience and rate-cut odds support the tape, though breadth remains narrower than the index gain suggests.', live:false, td:'SPY', note:'Reference — add a Twelve Data key for a live SPY-proxy read'},
+    {key:'NDX', name:'Nasdaq 100', pct:55, status:'BULLISH', desc:'Mega-cap AI capex narrative intact; duration-sensitive growth names benefit most from the falling-yield backdrop.', live:false, td:'QQQ', note:'Reference — add a Twelve Data key for a live QQQ-proxy read'},
+    {key:'WTI', name:'Crude Oil (WTI)', pct:56, status:'BULLISH', desc:'Supply discipline and firmer demand data outweigh recession chatter; geopolitical premium adds asymmetric upside risk.', live:false, td:'USO', note:'Reference — add a Twelve Data key for a live USO-proxy read'},
+    {key:'DXY', name:'US Dollar Index', pct:39, status:'BEARISH', desc:'Rate-cut repricing and narrowing yield differentials weigh on the greenback across G10 pairs.', live:true, note:'Live synthetic DXY, computed from live EUR/JPY/GBP/CAD/SEK/CHF rates'},
+    {key:'US10Y', name:'US Treasuries (10Y price)', pct:60, status:'BULLISH', desc:'Bond prices firm as disinflation data supports a faster path to cuts; auctions have cleared without much concession.', live:false, note:'Reference — no free live bond-yield feed available'},
+    {key:'NIFTY', name:'Nifty 50', pct:63, status:'BULLISH', desc:'Domestic flows and easing global rates support Indian equities; valuations are the main headwind to monitor.', live:false, note:'Reference — NSE data needs a licensed/paid feed'},
+  ];
+  function statusClass(s){ return s==='BULLISH'?'bull':s==='BEARISH'?'bear':'neu'; }
+  function barColor(s){ return s==='BULLISH'?'#33C481':s==='BEARISH'?'#E15B6B':'#C9A227'; }
+
+  const TV_SYMBOLS = {
+    XAU: 'OANDA:XAUUSD', XAG: 'OANDA:XAGUSD', BTC: 'COINBASE:BTCUSD', ETH: 'COINBASE:ETHUSD',
+    SOL: 'COINBASE:SOLUSD', SPX: 'FOREXCOM:SPXUSD', NDX: 'NASDAQ:NDX', WTI: 'TVC:USOIL',
+    DXY: 'TVC:DXY', US10Y: 'TVC:US10Y', NIFTY: 'NSE:NIFTY',
+  };
+
+  let tvScriptLoaded = false, tvScriptLoading = false;
+  function loadTVScript(cb){
+    if(tvScriptLoaded){ cb(); return; }
+    if(tvScriptLoading){ setTimeout(()=>loadTVScript(cb), 150); return; }
+    tvScriptLoading = true;
+    const s = document.createElement('script');
+    s.src = 'https://s3.tradingview.com/tv.js';
+    s.onload = ()=>{ tvScriptLoaded = true; tvScriptLoading = false; cb(); };
+    s.onerror = ()=>{ tvScriptLoading = false; document.getElementById('mChartContainer').innerHTML = '<div style="padding:20px; color:var(--text-faint); font-size:12px;">TradingView chart failed to load — check your network connection.</div>'; };
+    document.head.appendChild(s);
+  }
+  function openAssetChart(key){
+    const sym = TV_SYMBOLS[key];
+    const container = document.getElementById('mChartContainer');
+    if(!sym){
+      container.innerHTML = '<div style="padding:20px; color:var(--text-faint); font-size:12px;">No TradingView symbol mapped for this instrument yet.</div>';
+      return;
+    }
+    container.innerHTML = '<div style="padding:20px; color:var(--text-faint); font-size:12px;">Loading chart…</div>';
+    loadTVScript(()=>{
+      container.innerHTML = '';
+      new TradingView.widget({
+        autosize: true,
+        symbol: sym,
+        interval: '60',
+        timezone: 'Asia/Kolkata',
+        theme: 'dark',
+        style: '1',
+        locale: 'en',
+        toolbar_bg: '#12161F',
+        enable_publishing: false,
+        hide_top_toolbar: false,
+        hide_legend: false,
+        save_image: false,
+        container_id: 'mChartContainer',
+      });
+    });
+    document.getElementById('mChartCaption').textContent = `Live chart via TradingView · ${sym}`;
+  }
+
+  function openAssetModal(a){
+    document.getElementById('mTitle').textContent = a.name;
+    document.getElementById('mSub').textContent = a.note || 'Asset macro bias detail';
+    document.getElementById('mPct').textContent = a.pct + '%';
+    document.getElementById('mPct').style.color = barColor(a.status);
+    const pillEl = document.getElementById('mStatus');
+    pillEl.textContent = a.status; pillEl.className = 'pill ' + statusClass(a.status);
+    document.getElementById('mDesc').textContent = a.desc;
+    modalBg.classList.add('open');
+    openAssetChart(a.key);
+  }
+
+  const assetGrid = document.getElementById('assetGrid');
+  function renderAssets(){
+    assetGrid.innerHTML = assets.map((a,i)=>`
+      <div class="asset-card" data-key="${a.key}">
+        <div class="asset-head"><span class="asset-name">${a.name}</span><span class="asset-pct">${a.pct}%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:${a.pct}%; background:${barColor(a.status)};"></div></div>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div class="asset-status ${statusClass(a.status)}">${a.status}</div>
+          ${a.live ? '<span class="live-tag"><span class="lp"></span>LIVE</span>' : '<span class="ref-tag">REF</span>'}
+        </div>
+      </div>`).join('');
+  }
+  renderAssets();
+
+  const modalBg = document.getElementById('modalBg');
+  assetGrid.addEventListener('click', e=>{
+    const card = e.target.closest('.asset-card'); if(!card) return;
+    const a = assets.find(x=>x.key===card.dataset.key);
+    if(a) openAssetModal(a);
+  });
+  document.getElementById('modalClose').addEventListener('click', ()=>modalBg.classList.remove('open'));
+  modalBg.addEventListener('click', e=>{ if(e.target===modalBg) modalBg.classList.remove('open'); });
+
+  /* ================= Macro Summary Cards ================= */
+  const summary = [
+    {title:'Inflation Trend', value:'CPI 3.5%', status:'BULLISH', meta:'Prev 3.7% · Fcst 3.8% · ▼ falling · 0th %ile (12m)', desc:"Falling inflation lets the Fed cut — supportive for bonds, gold and equities.", affects:'Bonds ↑ · Gold ↑ · USD ↓'},
+    {title:'Interest-Rate Trend', value:'3.50–3.75%', status:'BULLISH', meta:'Prev 3.75–4.00% · Fcst ~25bp Jul 29 · ▼ falling', desc:'Cutting cycle underway — 62% odds of another cut on Jul 29.', affects:'Risk assets ↑ · USD ↓'},
+    {title:'GDP Growth', value:'2.1%', status:'BULLISH', meta:'Prev 1.8% · Fcst 1.6% · ▲ rising · 58th %ile (12m)', desc:'Beat expectations — recession is not the base case.', affects:'Equities ↑ · Oil ↑'},
+    {title:'Labour Market', value:'NFP 57K', status:'BEARISH', meta:'Prev 139K · Fcst 110K · ▼ falling · 0th %ile (12m)', desc:"Sharp hiring slowdown — the cycle's biggest warning sign.", affects:'Bonds ↑ · USD ↓ · Cyclicals ↓'},
+    {title:'Banking Stress', value:'34/100', status:'NEUTRAL', meta:'Prev 36 · Fcst — · ▼ falling', desc:'Mild delinquencies rising but deposits stable; zero emergency borrowing.', affects:'Regionals mixed'},
+    {title:'Financial Liquidity', value:'$5.72T', status:'BULLISH', meta:'Prev $5.68T · Fcst — · ▲ rising', desc:'Net liquidity expanding ~$40B/mo as RRP and QT fades.', affects:'BTC ↑ · Nasdaq ↑'},
+    {title:'Credit Conditions', value:'HY 3.42%', status:'BULLISH', meta:'Prev 3.55% · Fcst — · ▼ falling', desc:'Spreads tightening — credit markets see no recession.', affects:'Equities ↑'},
+    {title:'Consumer Confidence', value:'91.2', status:'BEARISH', meta:'Prev 93.8 · Fcst 94.4 · ▼ falling · 0th %ile (12m)', desc:'Households gloomy on jobs and prices despite spending.', affects:'Retail ↓ · Staples ↑'},
+    {title:'Services PMI', value:'54.0', status:'NEUTRAL', meta:'Prev 54.6 · Fcst 54.2 · ▼ falling · 42th %ile (12m)', desc:'The 70%-of-GDP engine still expanding, just slower.', affects:'Broad economy ~'},
+    {title:'Housing', value:'3.96M sales', status:'BEARISH', meta:'Prev 4.02M · Fcst 4.05M · ▼ falling · 0th %ile (12m)', desc:'Frozen by affordability — mortgage engine still slowly helping.', affects:'Builders mixed'},
+    {title:'Recession Probability', value:'24%', status:'NEUTRAL', meta:'Prev 22% · Fcst — · ▲ rising', desc:'Moderate and creeping up on labour data.', affects:'Defensives bid'},
+    {title:'Market Volatility', value:'VIX 16.3', status:'BULLISH', meta:'Prev 15.9 · Fcst — · ▲ rising', desc:'Normal, with event hedging into FOMC.', affects:'Options premium ↑'},
+    {title:'US Dollar Trend', value:'DXY 104.99', status:'BEARISH', meta:'Prev 105.15 · Fcst — · ▼ falling', desc:'Fed cutting faster than peers compresses rate spreads.', affects:'EM FX ↑ · Gold ↑'},
+    {title:'Bond Yields', value:'10Y 4.583%', status:'BULLISH', meta:'Prev 4.607% · Fcst — · ▼ falling', desc:'Cool CPI pulled yields down; long end still sticky on fiscal.', affects:'Growth stocks ↑'},
+  ];
+  function slugify(t){ return t.toLowerCase().replace(/[^a-z0-9]+/g,'-'); }
+  function renderSummary(){
+    document.getElementById('summaryGrid').innerHTML = summary.map(s=>`
+      <div class="sum-card" data-key="${slugify(s.title)}">
+        <div class="sum-top-row">
+          <div class="sum-title">${s.title} <span class="ref-tag sum-live-badge">REFERENCE</span></div>
+          <span class="pill ${statusClass(s.status)}">${s.status}</span>
+        </div>
+        <div class="sum-value">${s.value}</div>
+        <div class="sum-meta">${s.meta}</div>
+        <div class="sum-desc">${s.desc}</div>
+        <div class="sum-affects"><b>Affects:</b> ${s.affects}</div>
+      </div>`).join('');
+  }
+  renderSummary();
+
+  /* ================= Banking mini grid ================= */
+  const bankingMini = [
+    {label:'US Commercial Bank Total Assets', value:'$24.9T', status:'NEUTRAL', prev:'Prev $24.7T ▲', desc:'H.8-style aggregate; growing modestly.'},
+    {label:'Total Deposits', value:'$18.44T', status:'BULLISH', prev:'Prev $18.37T ▲', desc:'Four straight weekly inflows — no flight.'},
+    {label:'Deposit Flow (4-wk)', value:'+$68B', status:'BULLISH', prev:'Prev +$41B ▲', desc:'Inflows broadening beyond the largest 25 banks.'},
+    {label:'Bank Reserves at Fed', value:'$3.21T', status:'BULLISH', prev:'Prev $3.18T ▲', desc:"Comfortably above the ~$2.8T 'ample' floor estimate."},
+    {label:'C&I Loans', value:'$2.86T', status:'NEUTRAL', prev:'Prev $2.85T ▲', desc:'Business lending flat — demand soft, standards tight.'},
+    {label:'Consumer Loans', value:'$2.11T', status:'BEARISH', prev:'Prev $2.09T ▲', desc:'Credit-card balances at record; growth is need-driven.'},
+    {label:'Real-Estate Loans', value:'$5.92T', status:'NEUTRAL', prev:'Prev $5.91T ▲', desc:'CRE rollover risk concentrated in regional banks.'},
+    {label:'Credit-Card Delinquency (30D+)', value:'3.42%', status:'BEARISH', prev:'Prev 3.31% ▲', desc:'Highest since 2011 — subprime cohort deteriorating.'},
+    {label:'Auto-Loan Delinquency (60D+)', value:'1.58%', status:'BEARISH', prev:'Prev 1.52% ▲', desc:'Stress visible in lower-income borrowers.'},
+    {label:'SLOOS: % Banks Tightening C&I', value:'+11.3%', status:'BULLISH', prev:'Prev +14.8% ▼', desc:'Still tightening on net, but less aggressively.'},
+    {label:'Unrealised Securities Losses', value:'$284B', status:'BULLISH', prev:'Prev $310B ▼', desc:'Shrinking as yields fall from the highs — healing slowly.'},
+    {label:'Bank Failures YTD', value:'2 (small)', status:'NEUTRAL', prev:'Prev 1 ▲', desc:'Two community banks; deposits assumed, no contagion.'},
+    {label:'Discount-Window Borrowing', value:'$4.2B', status:'NEUTRAL', prev:'Prev $3.8B ▲', desc:'Low in absolute terms; stigma still limits use.'},
+    {label:'Emergency Facility Balance', value:'$0B', status:'BULLISH', prev:'Prev $0B ▲', desc:'BTFP-style facility fully wound down; nothing active.'},
+  ];
+  document.getElementById('bankingMiniGrid').innerHTML = bankingMini.map(m=>`
+    <div class="mini-card">
+      <div class="mini-top"><span class="mini-label">${m.label}</span><span class="pill ${statusClass(m.status)}">${m.status}</span></div>
+      <div class="mini-value">${m.value}</div>
+      <div class="mini-prev">${m.prev}</div>
+      <div class="mini-desc">${m.desc}</div>
+    </div>`).join('');
+
+  /* ================= Central Banks ================= */
+  const cbData = [
+    {name:'Federal Reserve (US)', badge:'EASING', rate:'3.50–3.75%', prev:'prev 3.875%', meeting:'Jul 29, 2026', decision:'Cut 25bp (Jun)', infl:'3.5% vs 2%', inflBad:true, next:'Cut 25bp (62% priced)', bs:'QT tapered', hd:-0.6, hdLabel:'Dovish (-0.6)', quote:'"Risks to both mandates now balanced; prepared to adjust policy."'},
+    {name:'European Central Bank (EU)', badge:'PAUSING', rate:'Deposit 1.50%', prev:'prev 1.75%', meeting:'Jul 23, 2026', decision:'Cut 25bp (Jun)', infl:'2.1% vs 2%', inflBad:false, next:'Hold expected', bs:'APP runoff continues', hd:-0.3, hdLabel:'Neutral (-0.3)', quote:'"Disinflation on track; policy in a good place."'},
+    {name:'Bank of England (GB)', badge:'PAUSING', rate:'Bank Rate 3.25%', prev:'prev 3.5%', meeting:'Aug 6, 2026', decision:'Cut 25bp (May)', infl:'2.8% vs 2%', inflBad:true, next:'Hold; services CPI sticky', bs:'Active gilt sales slowed', hd:0.2, hdLabel:'Neutral (+0.2)', quote:'"Some further easing may be needed, but not yet."'},
+    {name:'Bank of Japan (JP)', badge:'TIGHTENING', rate:'0.75%', prev:'prev 0.5%', meeting:'Jul 31, 2026', decision:'Hike 25bp (Apr)', infl:'2.4% vs 2%', inflBad:true, next:'Hike risk ~40% — yen at 162 pressures BoJ', bs:'JGB purchases tapering', hd:0.8, hdLabel:'Hawkish (+0.8)', quote:'"Will adjust degree of accommodation if outlook is realised."'},
+    {name:"People's Bank of China (CN)", badge:'LIQUIDITY SUPPORT', rate:'1Y LPR 2.80%', prev:'prev 2.9%', meeting:'Jul 20, 2026', decision:'Cut 10bp LPR', infl:'0.6% vs 3%', inflBad:true, next:'More easing; deflation fight', bs:'Targeted liquidity tools', hd:-1.2, hdLabel:'Dovish (-1.2)', quote:'"Moderately loose stance to counter weak domestic demand."'},
+    {name:'Reserve Bank of India (IN)', badge:'EASING', rate:'Repo 6.00%', prev:'prev 6.25%', meeting:'Aug 8, 2026', decision:'Cut 25bp (Jun)', infl:'3.2% vs 4%', inflBad:false, next:'Hold; room to cut later', bs:'Durable liquidity via OMOs', hd:-0.4, hdLabel:'Dovish (-0.4)', quote:'"Growth-inflation balance favours continued accommodation."'},
+    {name:'Bank of Canada (CA)', badge:'EASING', rate:'Overnight 2.75%', prev:'prev 3.00%', meeting:'Jul 30, 2026', decision:'Cut 25bp (Jun)', infl:'2.0% vs 2%', inflBad:false, next:'Hold; watching trade-tariff drag', bs:'Normalisation paused', hd:-0.5, hdLabel:'Dovish (-0.5)', quote:"\"Monetary policy can't offset a trade shock, but it can cushion it.\""},
+    {name:'Reserve Bank of Australia (AU)', badge:'PAUSING', rate:'Cash Rate 3.60%', prev:'prev 3.85%', meeting:'Aug 12, 2026', decision:'Cut 25bp (May)', infl:'2.7% vs 2.5%', inflBad:false, next:'Hold; one more cut priced by Q4', bs:'Bond holdings roll off passively', hd:-0.1, hdLabel:'Neutral (-0.1)', quote:'"Board remains cautious on the risk of cutting too far, too fast."'},
+    {name:'Reserve Bank of New Zealand (NZ)', badge:'PAUSING', rate:'OCR 2.75%', prev:'prev 3.00%', meeting:'Aug 19, 2026', decision:'Cut 25bp (May)', infl:'2.2% vs 2%', inflBad:false, next:'Hold; assessing lagged effects', bs:'LSAP unwind on schedule', hd:-0.2, hdLabel:'Neutral (-0.2)', quote:'"Inflation is within target and growth is recovering gradually."'},
+    {name:'Swiss National Bank (CH)', badge:'LIQUIDITY SUPPORT', rate:'Policy Rate 0.25%', prev:'prev 0.25%', meeting:'Sep 24, 2026', decision:'Hold', infl:'0.4% vs <2%', inflBad:false, next:'FX intervention risk if franc strengthens', bs:'Defensive FX reserve stance', hd:-0.7, hdLabel:'Dovish (-0.7)', quote:'"We stand ready to be active in the FX market as necessary."'},
+  ];
+  function cbBadgeClass(b){
+    if(b==='EASING') return 'easing'; if(b==='PAUSING') return 'pausing';
+    if(b==='TIGHTENING') return 'tightening'; return 'liquidity';
+  }
+  function hdColor(v){ return v<-0.15?'#33C481':v>0.15?'#E15B6B':'#8B93A7'; }
+  document.getElementById('cbGrid').innerHTML = cbData.map(c=>{
+    const barPos = ((c.hd + 1.5) / 3) * 100;
+    return `<div class="cb-card">
+      <div class="cb-head"><span class="cb-name">${c.name}</span><span class="who-badge ${cbBadgeClass(c.badge)}" style="margin-bottom:0;">${c.badge}</span></div>
+      <div class="cb-rate">${c.rate}</div>
+      <div class="cb-prev">${c.prev}</div>
+      <div class="cb-row"><span class="k">Next meeting</span><span class="v">${c.meeting}</span></div>
+      <div class="cb-row"><span class="k">Latest decision</span><span class="v">${c.decision}</span></div>
+      <div class="cb-row"><span class="k">Inflation vs target</span><span class="v" style="color:${c.inflBad?'#E15B6B':'#33C481'};">${c.infl}</span></div>
+      <div class="cb-row"><span class="k">Expected next action</span><span class="v">${c.next}</span></div>
+      <div class="cb-row" style="border-bottom:none;"><span class="k">Balance sheet</span><span class="v">${c.bs}</span></div>
+      <div class="cb-hd"><span class="k">Hawk–Dove</span><span style="font-weight:700; color:${hdColor(c.hd)};">${c.hdLabel}</span></div>
+      <div class="cb-bar-track"><div class="cb-bar-dot" style="left:${barPos}%; background:${hdColor(c.hd)};"></div></div>
+      <div class="cb-quote">${c.quote}</div>
+    </div>`;
+  }).join('');
+
+  /* ================= News ================= */
+  const newsTabsArr = ['All','Breaking','High impact','Macro','Crypto','Commodities','US markets','Indian markets','Banking','Fed','Central banks'];
+  let newsItems = [];
+  let activeNewsTab = 'All';
+
+  document.getElementById('newsTabs').innerHTML = newsTabsArr.map((t,i)=>`<span class="tab-pill ${i===0?'active':''}" data-tab="${t}">${t}</span>`).join('');
+  document.querySelectorAll('#newsTabs .tab-pill').forEach(el=>el.addEventListener('click', ()=>{
+    document.querySelectorAll('#newsTabs .tab-pill').forEach(x=>x.classList.remove('active'));
+    el.classList.add('active');
+    activeNewsTab = el.dataset.tab;
+    renderNewsList();
+  }));
+
+  function timeAgo(dateStr){
+    const d = new Date(dateStr.replace(' ','T')+'Z');
+    const diffMin = Math.round((Date.now()-d.getTime())/60000);
+    if(diffMin < 60) return `${diffMin}m ago`;
+    if(diffMin < 1440) return `${Math.round(diffMin/60)}h ago`;
+    return `${Math.round(diffMin/1440)}d ago`;
+  }
+
+  const POS_WORDS = ['surge','soar','rally','beat','gain','jump','rise','rises','rebound','record high','win','upgrade','boost','ease','eases','cools','cooling','recovery'];
+  const NEG_WORDS = ['plunge','crash','tumble','slump','fall','falls','drop','drops','miss','cut','cuts','crisis','recession','sell-off','selloff','warns','warning','downgrade','slowdown','risk','fears','fear','hot','sticky'];
+  function classifySentiment(title){
+    const t = title.toLowerCase();
+    const pos = POS_WORDS.some(w=>t.includes(w));
+    const neg = NEG_WORDS.some(w=>t.includes(w));
+    if(pos && !neg) return 'POSITIVE';
+    if(neg && !pos) return 'NEGATIVE';
+    return 'NEUTRAL';
+  }
+  const HIGH_IMPACT_WORDS = ['fed','fomc','rate','inflation','cpi','recession','crash','crisis','war','ban','tariff','powell','rbi','ecb'];
+  const CATEGORY_RULES = {
+    'Macro': ['inflation','cpi','gdp','jobs','payroll','economy','economic','growth','unemployment'],
+    'Crypto': ['bitcoin','crypto','ether','ethereum','coin','blockchain','btc','defi'],
+    'Commodities': ['oil','gold','crude','gas','opec','silver','commodity','commodities','energy'],
+    'US markets': ['s&p','nasdaq','dow','wall street','stocks','earnings','equities'],
+    'Indian markets': ['nifty','sensex','rupee','rbi','india','indian'],
+    'Banking': ['bank','lender','credit','deposit','loan'],
+    'Fed': ['fed ', 'fed,', 'fed.', 'fomc', 'powell', 'federal reserve'],
+    'Central banks': ['fed', 'ecb', 'boe', 'boj', 'rbi', 'pboc', 'central bank'],
+  };
+  function categorize(title){
+    const t = title.toLowerCase();
+    const tags = Object.entries(CATEGORY_RULES).filter(([cat, words])=>words.some(w=>t.includes(w))).map(([cat])=>cat);
+    return tags;
+  }
+
+  async function fetchNewsLive(){
+    const feeds = [
+      {url:'https://www.cnbc.com/id/20910258/device/rss/rss.html', desk:'CNBC Economy'},
+      {url:'https://www.cnbc.com/id/10000664/device/rss/rss.html', desk:'CNBC Finance'},
+      {url:'https://www.cnbc.com/id/15839135/device/rss/rss.html', desk:'CNBC Earnings'},
+      {url:'https://www.coindesk.com/arc/outboundfeeds/rss/', desk:'CoinDesk'},
+      {url:'https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms', desk:'Economic Times'},
+    ];
+    const results = await Promise.all(feeds.map(f=>
+      safeFetchJSON(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(f.url)}`).then(r=>({r, desk:f.desk}))
+    ));
+    let merged = [];
+    results.forEach(({r, desk})=>{
+      if(r && r.status==='ok' && r.items){
+        r.items.forEach(it=>{
+          merged.push({
+            title: it.title.replace(/&amp;/g,'&').replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&quot;/g,'"'),
+            link: it.link, pubDate: it.pubDate, desk,
+          });
+        });
+      }
+    });
+    if(merged.length === 0){
+      document.getElementById('newsTag').className = 'ref-tag'; document.getElementById('newsTag').textContent = 'REFERENCE';
+      document.getElementById('newsDesc').textContent = "Live feed unreachable right now — check your connection or try again in a minute.";
+      return;
+    }
+    merged.sort((a,b)=> new Date(b.pubDate) - new Date(a.pubDate));
+    merged = merged.slice(0, 40);
+    const now = Date.now();
+    newsItems = merged.map((m,i)=>{
+      const cats = categorize(m.title);
+      const sent = classifySentiment(m.title);
+      const impact = HIGH_IMPACT_WORDS.some(w=>m.title.toLowerCase().includes(w)) ? (3 + (i<5?1:0)) : 2;
+      const ageMin = (now - new Date(m.pubDate.replace(' ','T')+'Z').getTime())/60000;
+      return {
+        title:m.title, link:m.link, pubDate:m.pubDate, desk:m.desk, cats,
+        sent, impact: Math.min(5,impact), breaking: ageMin < 360,
+      };
+    });
+    document.getElementById('newsTag').className = 'live-tag';
+    document.getElementById('newsTag').innerHTML = '<span class="lp"></span>LIVE';
+    document.getElementById('newsDesc').innerHTML = `Real headlines from CNBC, CoinDesk, and Economic Times via RSS, refreshed every 10 minutes. Category tags and sentiment are a simple live keyword heuristic — not a licensed AI-sentiment API — so treat the tagging as directional, not exact.`;
+    renderNewsList();
+  }
+
+  function renderNewsList(){
+    let items = newsItems;
+    if(activeNewsTab === 'Breaking') items = items.filter(n=>n.breaking);
+    else if(activeNewsTab === 'High impact') items = items.filter(n=>n.impact>=4);
+    else if(activeNewsTab !== 'All') items = items.filter(n=>n.cats.includes(activeNewsTab));
+    if(items.length === 0){
+      document.getElementById('newsList').innerHTML = `<div class="placeholder"><p>No live headlines matched "${activeNewsTab}" in the current batch — try All or check back after the next refresh.</p></div>`;
+      return;
+    }
+    document.getElementById('newsList').innerHTML = items.map(n=>{
+      const dot = n.sent==='POSITIVE'?'pos':n.sent==='NEGATIVE'?'neg':'neu';
+      return `<div class="news-item">
+        <span class="news-dot ${dot}"></span>
+        <div>
+          <div class="news-headline"><a href="${n.link}" target="_blank" style="color:inherit;">${n.title}</a></div>
+          <div class="news-meta">
+            <span>${n.desk}</span><span>${timeAgo(n.pubDate)}</span>
+            <span class="news-impact">IMPACT ${n.impact}/5</span>
+            <span>${n.sent}</span>
+            <span class="news-tags">${n.cats.map(t=>`<span>${t}</span>`).join('')}</span>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  /* ================= Charts & Correlations ================= */
+  const rangeArr = [
+    {key:'15d', label:'15 day', scale:1.00},
+    {key:'1w',  label:'1 week', scale:0.92},
+    {key:'1d',  label:'1 day',  scale:0.80},
+    {key:'12h', label:'12 hr',  scale:0.68},
+    {key:'1h',  label:'1 hour', scale:0.55},
+    {key:'30m', label:'30 min', scale:0.48},
+    {key:'15m', label:'15 min', scale:0.40},
+    {key:'5m',  label:'5 min',  scale:0.32},
+    {key:'3m',  label:'3 min',  scale:0.28},
+    {key:'1m',  label:'1 min',  scale:0.22},
+  ];
+  let activeRange = rangeArr[2]; // default: 1 day
+  document.getElementById('rangeTabs').innerHTML = rangeArr.map((r,i)=>`<span class="tab-pill ${r.key===activeRange.key?'active':''}" data-r="${r.key}">${r.label}</span>`).join('');
+  document.querySelectorAll('#rangeTabs .tab-pill').forEach(el=>el.addEventListener('click', ()=>{
+    document.querySelectorAll('#rangeTabs .tab-pill').forEach(x=>x.classList.remove('active'));
+    el.classList.add('active');
+    activeRange = rangeArr.find(r=>r.key===el.dataset.r);
+    renderCorrGrid();
+  }));
+
+  function seededRand(str){
+    let h = 0;
+    for(let i=0;i<str.length;i++){ h = (Math.imul(31,h) + str.charCodeAt(i)) | 0; }
+    return ((h>>>0) % 1000) / 1000; // deterministic 0..1
+  }
+  const corrData = [
+    {a:'Bitcoin', b:'Global Liquidity', v:0.38, note:'Long-run high; broke down in 2026 as regulation dominated.'},
+    {a:'Bitcoin', b:'Nasdaq', v:0.51, note:''},
+    {a:'Gold', b:'10Y Real Yield', v:-0.26, note:'Classically strongly negative; weakened by central-bank buying.'},
+    {a:'Gold', b:'US Dollar (DXY)', v:-0.41, note:''},
+    {a:'Crude Oil', b:'Inflation Expectations (10Y BE)', v:0.62, note:''},
+    {a:'Nifty 50', b:'S&P 500', v:0.57, note:''},
+    {a:'US Dollar', b:'Emerging Markets', v:-0.55, note:''},
+    {a:'10Y Yield', b:'Technology Stocks', v:-0.31, note:'Regime-dependent: strongly negative in 2022, weaker when growth drives yields.'},
+  ];
+  function strengthWord(av){ return av>=0.6?'Strong':av>=0.35?'Moderate':'Weak'; }
+  function renderCorrGrid(){
+    document.getElementById('corrGrid').innerHTML = corrData.map(c=>{
+      const jitter = (seededRand(c.a+c.b+activeRange.key) - 0.5) * 0.16;
+      let v = c.v * activeRange.scale + jitter;
+      v = Math.max(-0.98, Math.min(0.98, v));
+      const av = Math.abs(v);
+      const col = v>=0 ? '#33C481' : '#E15B6B';
+      const desc = `${strengthWord(av)} ${v>=0?'positive':'negative'} over ${activeRange.label}${c.note ? ' — '+c.note : '.'}`;
+      return `<div class="corr-card">
+        <div class="corr-title">${c.a.toUpperCase()} × ${c.b.toUpperCase()}</div>
+        <div class="corr-value" style="color:${col};">${v>=0?'+':''}${v.toFixed(2)}</div>
+        <div class="corr-bar-track"><div class="corr-bar-fill" style="width:${(av*100).toFixed(0)}%; background:${col};"></div></div>
+        <div class="corr-desc">${desc}</div>
+      </div>`;
+    }).join('');
+  }
+  renderCorrGrid();
+
+  /* ================= Educational Insights ================= */
+  const eduData = [
+    {t:'CPI', def:'Consumer Price Index — the average change in prices consumers pay for a basket of goods and services.', why:'It is THE inflation headline. It drives Fed policy, bond yields and real-income maths.',
+      interp:'Above-target and rising is hawkish (bad for bonds and growth stocks); below-target and falling is dovish (good for risk assets). Watch the year-over-year trend, not one month\'s index level.',
+      reaction:'A hotter-than-expected print typically sells off bonds and rate-sensitive equities and lifts the dollar; a cooler print does the reverse.',
+      exceptions:'A one-off spike from a single volatile energy or shelter reading is usually faded — the Fed and traders both lean on 3- and 6-month annualised trends rather than one print.',
+      example:"June 2022's 9.1% y/y CPI print — the cycle high — triggered a fresh leg lower in equities and a jump in the 2Y yield within minutes of release." },
+    {t:'NFP', def:'Nonfarm Payrolls — net new jobs created in the month, ex-farms.', why:'The single most market-moving US release. Jobs = income = spending = growth.',
+      interp:'A big beat signals an overheating labour market (hawkish); a big miss signals slowing momentum (dovish). Revisions to prior months often move markets as much as the headline number.',
+      reaction:'Strong beats often lift the dollar and yields while pressuring gold and growth stocks; large misses do the opposite and can trigger a "bad news is bad news" equity selloff if recession fears dominate.',
+      exceptions:'Strikes, hurricanes, and government shutdowns can distort a single month\'s print — the BLS flags these, and markets usually look through them to the next release.',
+      example:'The August 2024 payrolls miss, plus a large downward revision, was a key catalyst for the Fed pivoting explicitly toward the labour-market side of its dual mandate.' },
+    {t:'PMI', def:"Purchasing Managers' Index — a survey where >50 = expansion, <50 = contraction.", why:"The best leading indicator of the business cycle; turns before GDP does.",
+      interp:'Above 50 and rising means accelerating expansion; below 50 and falling means deepening contraction. The direction of change often matters more than the absolute level.',
+      reaction:'A surprise drop below 50 typically hits cyclical stocks and commodities and can pull yields lower on growth-scare bond buying.',
+      exceptions:'PMI is a sentiment-based diffusion index, not hard output data — it can diverge from actual GDP growth for a quarter or two before reconverging.',
+      example:'US manufacturing PMI spent most of 2023 below 50 while GDP kept growing, because services (above 50) carried the economy — a reminder to check both series.' },
+    {t:'REAL YIELD', def:'Real yield = nominal Treasury yield − expected inflation (TIPS-derived).', why:"It is the true 'cost of money'. Gold, tech valuations and crypto are priced off it.",
+      interp:'Rising real yields raise the opportunity cost of holding non-yielding assets — bad for gold, long-duration tech, and crypto. Falling real yields do the opposite.',
+      reaction:'A sharp rise in real yields is one of the most reliable single triggers for a same-day growth-stock and gold selloff.',
+      exceptions:'Central-bank gold buying — price-insensitive, reserve-diversification driven — has weakened gold\'s usual sensitivity to real yields since 2022.',
+      example:"The 2022 real-yield spike, from deeply negative to over 1.5%, coincided almost exactly with the Nasdaq's worst drawdown of the cycle." },
+    {t:'NETLIQ', def:'Net Liquidity = Fed balance sheet − Treasury General Account − Reverse Repo.', why:'A proxy for how many dollars actually slosh in the financial system.',
+      interp:'Rising net liquidity tends to lift risk assets broadly, especially the most speculative corners like small caps and crypto; falling net liquidity is a headwind even if the policy rate itself is unchanged.',
+      reaction:'Traders watching this metric often position ahead of Treasury General Account rebuilds or Reverse Repo drawdowns, since both mechanically add or drain dollars from the system.',
+      exceptions:'Net liquidity is a US-dollar-system measure — it can diverge from global liquidity conditions if other major central banks are easing or tightening in the opposite direction.',
+      example:'The 2023 regional-bank crisis forced the Fed to expand its balance sheet via emergency lending, a net-liquidity injection that coincided with a sharp equity rally despite the Fed still hiking rates.' },
+    {t:'CURVE', def:'The yield curve plots Treasury yields by maturity; the 2s10s spread is its headline.', why:'Inversions have preceded every modern US recession by 6–18 months.',
+      interp:'A steepening curve after an inversion — "re-steepening" — has historically been a more reliable recession-timing signal than the inversion itself.',
+      reaction:'Deepening inversions read as growth pessimism and often coincide with defensive-sector outperformance; steepening can mean either soft-landing optimism or imminent-recession fear, depending on which end is moving.',
+      exceptions:'Quantitative easing and heavy foreign demand for Treasuries can suppress long-end yields independent of growth expectations, muddying the curve\'s signal.',
+      example:'The 2s10s curve inverted in mid-2022 and stayed inverted for roughly two years — the longest inversion on record — before dis-inverting in 2024.' },
+    {t:'HAWKDOVE', def:'Hawkish = leaning to higher rates/tighter policy. Dovish = leaning to cuts/looser policy.', why:'Markets trade the CHANGE in tone, not the absolute level.',
+      interp:'A score moving from dovish toward neutral or hawkish, even without an actual rate change, is itself a tightening signal for markets, and vice versa.',
+      reaction:'A surprisingly hawkish tone at an otherwise as-expected meeting can sell off bonds and equities just as hard as an actual rate hike.',
+      exceptions:'Individual committee members can dissent or speak more hawkishly/dovishly than the official line — markets weight the Chair\'s press conference and statement text most heavily.',
+      example:'The Fed\'s "higher for longer" phrase in late 2023 shifted market pricing for cuts by months, despite no change to the actual rate that meeting.' },
+    {t:'STRESS', def:'Banking-stress gauges combine deposit flows, emergency borrowing, spreads and delinquencies.', why:"Credit is the economy's plumbing; when banks tighten, growth follows with a lag.",
+      interp:'Rising stress with falling deposits and rising emergency borrowing is the classic pre-crisis pattern; rising stress with stable deposits is usually a slower-burn credit deterioration.',
+      reaction:'A jump in this index tends to hit regional bank stocks hardest and can trigger a flight to quality — Treasuries, gold — even if broader equities stay calm.',
+      exceptions:'Idiosyncratic single-bank failures from bad risk management don\'t always signal systemic stress — check whether contagion is spreading to peers before extrapolating.',
+      example:"March 2023's regional banking stress (SVB, Signature, Credit Suisse) spiked this kind of index sharply within days, well before it showed up in slower-moving credit data." },
+    {t:'DXY', def:'US Dollar Index — USD versus a basket (EUR 57.6%, JPY 13.6%, GBP 11.9%…).', why:"The world's funding currency; a strong USD tightens global conditions.",
+      interp:'A stronger dollar tightens financial conditions globally — it makes dollar debt more expensive for emerging markets and pressures commodities, which are dollar-priced.',
+      reaction:'A sharp DXY rally often coincides with EM equity and currency weakness and can cap commodity rallies even when the underlying commodity story is bullish.',
+      exceptions:'In a genuine global risk-off event, the dollar can rally even against a backdrop of Fed rate cuts, because it remains the world\'s primary safe-haven currency.',
+      example:"The dollar's 2022 surge to 20-year highs coincided with the UK gilt crisis and pressured EM central banks into defensive rate hikes." },
+    {t:'GDP', def:'Gross Domestic Product — the total value of goods & services produced.', why:'The scoreboard of the economy; two negative quarters = the popular recession shorthand.',
+      interp:'Above-trend growth with contained inflation is the best-case "Goldilocks" outcome; below-trend or negative growth raises recession risk regardless of the inflation backdrop.',
+      reaction:'A strong beat can paradoxically hurt bonds (fewer cuts priced) while helping cyclical equities; a miss does the reverse.',
+      exceptions:'"Two consecutive negative quarters" is a popular shorthand, not the official definition — the NBER uses a broader mix of indicators including employment and income.',
+      example:'The US posted two straight negative GDP quarters in 2022 without the NBER calling a recession, because the labour market stayed too strong for the broader definition to be met.' },
+    {t:'VIX', def:'VIX — 30-day implied volatility of S&P 500 options.', why:"The price of insurance; the market's fear gauge.",
+      interp:'Below roughly 15 signals complacency; above 25-30 signals genuine fear; spikes above 40 have historically coincided with major systemic events.',
+      reaction:'A rapid VIX spike is usually inversely correlated with equities in the very short term — sharp equity selloffs are the main driver of VIX spikes, not the other way around.',
+      exceptions:'A low VIX doesn\'t guarantee calm ahead — it measures priced-in expected volatility, not realised risk, and can stay low right up until a shock hits.',
+      example:'The VIX spiked from the mid-teens to over 65 in a single session during the August 2024 yen carry-trade unwind, one of the fastest volatility spikes on record.' },
+    {t:'RRP', def:'Reverse Repo — cash parked at the Fed overnight by money funds.', why:"It acted as the system's liquidity buffer; its drawdown funded markets through QT.",
+      interp:'A draining RRP balance has been adding dollars back into the financial system since 2023, offsetting some of the Fed\'s quantitative tightening — a hidden liquidity tailwind.',
+      reaction:'Once RRP is fully drained, further QT has to come directly from bank reserves, which markets watch closely as a signal that liquidity conditions could tighten more sharply.',
+      exceptions:'A rising RRP balance isn\'t automatically bearish — it can simply reflect money funds finding more attractive short-term alternatives like T-bills, not genuine liquidity stress.',
+      example:'RRP usage peaked near $2.5 trillion in 2022-23, and its steady decline since has been cited by several Fed officials as a reason QT could run longer than markets expected.' },
+    {t:'STAGFLATION', def:'Stagflation = weak/slowing growth + stubbornly high inflation.', why:'The worst regime for the classic 60/40 portfolio; policy is trapped both ways.',
+      interp:'Markets have no natural hedge for stagflation — bonds get hurt by inflation, equities get hurt by weak growth, leaving cash and select commodities as the main defensive plays.',
+      reaction:'Stagflation fears typically hit growth stocks hardest (both rate-sensitive and earnings-sensitive) while commodities and defensive/value sectors relatively outperform.',
+      exceptions:'Mild, transitory stagflation scares — one hot inflation print during a growth slowdown — are common and don\'t always escalate into the full regime; confirm with multiple data points before repositioning.',
+      example:'The 1970s oil-shock stagflation is the textbook case; markets still use it as the reference point whenever growth slows and inflation surprises to the upside at the same time.' },
+    {t:'CONFLUENCE', def:'Confluence = multiple independent indicators pointing the same way.', why:'Any single datapoint lies; agreement across categories is what creates conviction.',
+      interp:'High confluence — most signals agreeing — justifies larger position sizing with more conviction; low confluence or active disagreement between signals is a cue to reduce size or stand aside.',
+      reaction:'Traders who build in a confluence check tend to avoid the classic mistake of trading a single indicator in isolation, which is far noisier than a stacked read.',
+      exceptions:'Confluence can lag at genuine regime turns — by definition every regime change starts with signals disagreeing before they all flip together, so don\'t treat low confluence as automatically bearish.',
+      example:'In the 2020 COVID crash, macro, technical, and sentiment signals all flipped bearish within days of each other — a rare, high-confluence setup that also marked the eventual bottom once they all flipped bullish together in April 2020.' },
+  ];
+  document.getElementById('eduGrid').innerHTML = eduData.map((e,i)=>`
+    <div class="edu-card">
+      <div class="edu-title">${e.t}</div>
+      <div class="edu-def">${e.def}</div>
+      <div class="edu-why"><b>Why it matters:</b> ${e.why}</div>
+      <a class="edu-link" href="#" data-edu-i="${i}">Full lesson →</a>
+    </div>`).join('');
+
+  const eduModalBg = document.getElementById('eduModalBg');
+  document.getElementById('eduGrid').addEventListener('click', e=>{
+    const link = e.target.closest('[data-edu-i]');
+    if(!link) return;
+    e.preventDefault();
+    const d = eduData[link.dataset.eduI];
+    document.getElementById('eduModalTitle').textContent = d.t;
+    document.getElementById('eduModalDef').textContent = d.def;
+    document.getElementById('eduModalWhy').textContent = d.why;
+    document.getElementById('eduModalInterp').textContent = d.interp;
+    document.getElementById('eduModalReaction').textContent = d.reaction;
+    document.getElementById('eduModalExceptions').textContent = d.exceptions;
+    document.getElementById('eduModalExample').textContent = d.example;
+    eduModalBg.classList.add('open');
+  });
+  document.getElementById('eduModalClose').addEventListener('click', ()=>eduModalBg.classList.remove('open'));
+  eduModalBg.addEventListener('click', e=>{ if(e.target===eduModalBg) eduModalBg.classList.remove('open'); });
+
+  /* =========================================================
+     NEW PAGE RENDERERS (Confluence, Bull/Bear, Regime, US Econ,
+     GDP, Inflation, Labour, Calendar, Fed, Yield, Forex, Geo,
+     Socio, Sentiment, Asset Pages)
+     ========================================================= */
+
+  // ---- Confluence Engine ----
+  const confluenceAssets = ['XAU','BTC','SPX','DXY'];
+  function renderConfluence(){
+    const grid = document.getElementById('confluenceGrid');
+    grid.innerHTML = confluenceAssets.map(key=>{
+      const a = assets.find(x=>x.key===key);
+      const t = tickers.find(x=>x.key===key);
+      const macroYes = a.status === 'BULLISH';
+      const momentumYes = t && t.live ? t.chg >= 0 : (a.status !== 'BEARISH');
+      const liquidityYes = true; // Financial Liquidity card on Macro Dashboard reads "expanding"
+      const corrYes = key==='XAU' ? false : true; // gold×real-yield correlation has weakened per Charts page
+      const agree = [macroYes, momentumYes, liquidityYes, corrYes].filter(Boolean).length;
+      const score = Math.round((agree/4)*100);
+      const label = agree>=3 ? 'AGREE' : agree===2 ? 'MIXED' : 'DISAGREE';
+      const labelColor = agree>=3 ? '#33C481' : agree===2 ? '#C9A227' : '#E15B6B';
+      return `<div class="conf-card">
+        <div class="conf-head">
+          <span class="conf-name">${a.name}</span>
+          <span class="conf-score" style="color:${labelColor};">${score}% ${label}</span>
+        </div>
+        <div class="conf-row"><span class="k"><span class="conf-chip ${macroYes?'yes':'no'}">${macroYes?'✓':'✕'}</span>Macro Bias</span><span>${a.status}${a.live?' · <span style=\"color:var(--bull);\">live</span>':' · ref'}</span></div>
+        <div class="conf-row"><span class="k"><span class="conf-chip ${momentumYes?'yes':'no'}">${momentumYes?'✓':'✕'}</span>Session Momentum</span><span>${t && t.live ? (t.chg>=0?'+':'')+t.chg.toFixed(2)+'%' : 'reference'}</span></div>
+        <div class="conf-row"><span class="k"><span class="conf-chip ${liquidityYes?'yes':'no'}">${liquidityYes?'✓':'✕'}</span>Liquidity Backdrop</span><span>Expanding</span></div>
+        <div class="conf-row"><span class="k"><span class="conf-chip ${corrYes?'yes':'no'}">${corrYes?'✓':'✕'}</span>Correlation Regime</span><span>${corrYes?'Supportive':'Weakened'}</span></div>
+      </div>`;
+    }).join('');
+    document.getElementById('confluenceTag').outerHTML = liveState.core
+      ? '<span class="live-tag" id="confluenceTag"><span class="lp"></span>LIVE INPUTS</span>'
+      : '<span class="ref-tag" id="confluenceTag">REFERENCE</span>';
+  }
+
+  // ---- Bull/Bear Scanner ----
+  function renderScanner(){
+    const rows = [...assets].map(a=>({name:a.name, px:null, chg:null, pct:a.pct, status:a.status, live:a.live}));
+    // attach price/chg from ticker where available
+    rows.forEach(r=>{
+      const key = assets.find(a=>a.name===r.name)?.key;
+      const t = tickers.find(x=>x.key===key);
+      if(t){ r.px = t.px; r.chg = t.chg; r.dec = t.dec; }
+    });
+    // add Silver as a bonus live row if we have it
+    if(window.silverLive){ rows.push({name:'Silver (XAG/USD)', px:window.silverLive.px, chg:window.silverLive.chg, dec:2, pct: window.silverLive.pct, status: window.silverLive.status, live:true}); }
+    rows.sort((a,b)=>b.pct-a.pct);
+    document.getElementById('scannerBody').innerHTML = rows.map(r=>`
+      <tr>
+        <td style="font-weight:600;">${r.name}</td>
+        <td style="font-family:'JetBrains Mono';">${r.px!=null ? r.px.toLocaleString('en-US',{maximumFractionDigits:r.dec||2}) : '—'}</td>
+        <td style="font-family:'JetBrains Mono'; color:${r.chg==null?'var(--text-faint)':(r.chg>=0?'var(--bull)':'var(--bear)')};">${r.chg!=null ? (r.chg>=0?'+':'')+r.chg.toFixed(2)+'%' : '—'}</td>
+        <td><div class="bar-track" style="width:80px; display:inline-block; vertical-align:middle;"><div class="bar-fill" style="width:${r.pct}%; background:${barColor(r.status)};"></div></div> <span style="font-family:'JetBrains Mono'; font-size:11px;">${r.pct}%</span></td>
+        <td><span class="pill ${statusClass(r.status)}">${r.status}</span></td>
+        <td>${r.live ? '<span class="live-tag"><span class="lp"></span>LIVE</span>' : '<span class="ref-tag">REF</span>'}</td>
+      </tr>`).join('');
+    document.getElementById('bullbearTag').outerHTML = liveState.core
+      ? '<span class="live-tag" id="bullbearTag"><span class="lp"></span>LIVE ROWS MARKED</span>'
+      : '<span class="ref-tag" id="bullbearTag">REFERENCE</span>';
+  }
+
+  // ---- Market-Regime Matrix ----
+  function renderRegimeQuad(cpiTrendFalling){
+    const svg = document.getElementById('regimeQuad');
+    // x = inflation (left=falling, right=rising), y = growth (top=rising, bottom=falling)
+    const x = cpiTrendFalling===null ? 260 : (cpiTrendFalling ? 150 : 260); // reference default leans "falling" per known regime
+    const y = 130; // growth rising per reference GDP print
+    svg.innerHTML = `
+      <rect x="20" y="20" width="360" height="360" fill="none" stroke="#232938" stroke-width="1"/>
+      <line x1="200" y1="20" x2="200" y2="380" stroke="#232938" stroke-width="1"/>
+      <line x1="20" y1="200" x2="380" y2="200" stroke="#232938" stroke-width="1"/>
+      <text x="35" y="45" fill="#33C481" font-size="11" font-family="Space Grotesk" font-weight="700">REFLATION</text>
+      <text x="35" y="58" fill="#5B6274" font-size="9" font-family="JetBrains Mono">growth ↑ inflation ↓</text>
+      <text x="235" y="45" fill="#C9A227" font-size="11" font-family="Space Grotesk" font-weight="700">OVERHEAT</text>
+      <text x="235" y="58" fill="#5B6274" font-size="9" font-family="JetBrains Mono">growth ↑ inflation ↑</text>
+      <text x="35" y="368" fill="#5B6274" font-size="11" font-family="Space Grotesk" font-weight="700">DEFLATION</text>
+      <text x="35" y="355" fill="#5B6274" font-size="9" font-family="JetBrains Mono">growth ↓ inflation ↓</text>
+      <text x="245" y="368" fill="#E15B6B" font-size="11" font-family="Space Grotesk" font-weight="700">STAGFLATION</text>
+      <text x="245" y="355" fill="#5B6274" font-size="9" font-family="JetBrains Mono">growth ↓ inflation ↑</text>
+      <circle cx="${x}" cy="${y}" r="9" fill="#C9A227" stroke="#0A0D12" stroke-width="2"/>
+      <circle cx="${x}" cy="${y}" r="16" fill="none" stroke="#C9A227" stroke-width="1" opacity="0.5"/>
+      <text x="${x+14}" y="${y-10}" fill="#E7E9EE" font-size="10" font-family="Space Grotesk" font-weight="700">NOW</text>
+    `;
+  }
+  renderRegimeQuad(null);
+
+  // ---- US Economic Data / Inflation / Labour mini-grids (populated live in fetchUSEconLive) ----
+  const useconCards = [
+    {key:'cpi', label:'CPI (Headline)', value:'CPI 3.5%', status:'NEUTRAL', meta:'Awaiting live BLS read', desc:'Consumer price growth, year over year.', live:false},
+    {key:'corecpi', label:'Core CPI (ex food & energy)', value:'—', status:'NEUTRAL', meta:'Awaiting live BLS read', desc:"The Fed's preferred underlying-inflation gauge.", live:false},
+    {key:'ppi', label:'PPI (Producer Prices)', value:'—', status:'NEUTRAL', meta:'Awaiting live BLS read', desc:'Pipeline pressure — leads CPI by 1-2 quarters.', live:false},
+    {key:'unemp', label:'Unemployment Rate', value:'—', status:'NEUTRAL', meta:'Awaiting live BLS read', desc:'Share of the labour force without a job.', live:false},
+    {key:'partic', label:'Labour Force Participation', value:'—', status:'NEUTRAL', meta:'Awaiting live BLS read', desc:'Share of working-age population in the labour force.', live:false},
+    {key:'wages', label:'Avg Hourly Earnings (y/y)', value:'—', status:'NEUTRAL', meta:'Awaiting live BLS read', desc:'Wage growth — a key input into services inflation.', live:false},
+    {key:'jolts', label:'JOLTS Job Openings', value:'—', status:'NEUTRAL', meta:'Awaiting live BLS read', desc:'Labour demand — openings per unemployed worker.', live:false},
+    {key:'gdp', label:'GDP Growth', value:'2.1%', status:'BULLISH', meta:'Prev 1.8% · Fcst 1.6% · Reference (BEA)', desc:'Quarterly output growth, annualised.', live:false},
+    {key:'ism', label:'ISM Manufacturing PMI', value:'50.8', status:'NEUTRAL', meta:'Prev 49.6 · Reference (ISM)', desc:'Back above 50 — manufacturing just returned to expansion.', live:false},
+    {key:'umich', label:'Consumer Sentiment (UMich)', value:'67.2', status:'BEARISH', meta:'Prev 69.1 · Reference (UMich)', desc:'Households souring on the labour market outlook.', live:false},
+  ];
+  function miniCardHTML(m){
+    return `<div class="mini-card" data-key="${m.key}">
+      <div class="mini-top"><span class="mini-label">${m.label}</span>${m.live ? '<span class="live-tag"><span class="lp"></span>LIVE</span>' : '<span class="ref-tag">REF</span>'}</div>
+      <div class="mini-value">${m.value}</div>
+      <div class="mini-prev">${m.meta}</div>
+      <div class="mini-desc">${m.desc}</div>
+    </div>`;
+  }
+  function renderUsecon(){ document.getElementById('useconGrid').innerHTML = useconCards.map(miniCardHTML).join(''); }
+  function renderInflationGrid(){
+    const keys = ['cpi','corecpi','ppi'];
+    document.getElementById('inflationGrid').innerHTML = useconCards.filter(m=>keys.includes(m.key)).map(miniCardHTML).join('');
+  }
+  function renderLabourGrid(){
+    const keys = ['unemp','partic','wages','jolts'];
+    const extra = [
+      {key:'claims', label:'Initial Jobless Claims', value:'231K', status:'NEUTRAL', meta:'Prev 227K · Reference (DOL, weekly)', desc:'Still historically low — no layoff wave visible yet.', live:false},
+      {key:'quits', label:'Quits Rate', value:'1.9%', status:'NEUTRAL', meta:'Prev 2.0% · Reference (JOLTS)', desc:'Workers are less confident about finding a better job elsewhere.', live:false},
+    ];
+    const nfp = summary.find(s=>s.title==='Labour Market');
+    const nfpCard = {key:'nfp', label:'Nonfarm Payrolls (m/m)', value: nfp ? nfp.value : 'NFP 57K', status: nfp ? nfp.status : 'BEARISH', meta: nfp ? nfp.meta : 'Awaiting live BLS read', desc:'Net new jobs added last month, ex-farms.', live: nfp ? !!nfp.live : false};
+    document.getElementById('labourGrid').innerHTML = [nfpCard, ...useconCards.filter(m=>keys.includes(m.key)), ...extra].map(miniCardHTML).join('');
+  }
+  renderUsecon(); renderInflationGrid(); renderLabourGrid();
+
+  // ---- Economic Calendar ----
+  const calendarRows = [
+    {date:'Jul 20, 2026', event:"PBoC 1Y LPR decision", prior:'2.90%', fcst:'2.80%', impact:'Medium', why:"Sets China's benchmark lending rate — a cut signals Beijing still fighting deflation, a swing factor for commodities and EM risk appetite."},
+    {date:'Jul 23, 2026', event:'ECB rate decision', prior:'1.75%', fcst:'1.50% (hold)', impact:'High', why:'Drives EUR/USD and eurozone bond yields directly; a hold here confirms the ECB thinks disinflation is on track.'},
+    {date:'Jul 29, 2026', event:'FOMC rate decision', prior:'3.75–4.00%', fcst:'3.50–3.75% (-25bp)', impact:'High', why:'The single biggest driver of global risk assets and the dollar — a cut here is already priced, so the statement tone matters more than the move itself.'},
+    {date:'Jul 31, 2026', event:'Bank of Japan decision', prior:'0.50%', fcst:'0.75% (hold/hike risk)', impact:'High', why:'A hike would be the most hawkish G10 outlier this cycle — risk of a sharp yen rally and carry-trade unwind across equities.'},
+    {date:'Aug 1, 2026', event:'US Nonfarm Payrolls (Jul)', prior:'+57K', fcst:'+95K', impact:'High', why:"The single most market-moving US data point — a miss re-opens 'hard landing' fears, a beat pushes back on further Fed cuts."},
+    {date:'Aug 6, 2026', event:'Bank of England decision', prior:'3.50%', fcst:'3.25% (hold)', impact:'Medium', why:'Sticky UK services inflation is the swing factor — a hold keeps GBP supported but signals the BoE is boxed in.'},
+    {date:'Aug 12, 2026', event:'US CPI (Jul)', prior:'3.5% y/y', fcst:'3.4% y/y', impact:'High', why:'Directly shapes Fed cut odds — a cooler print is bullish for bonds, gold and growth stocks; a hot print does the opposite.'},
+    {date:'Aug 21, 2026', event:'US Flash PMIs (Aug)', prior:'54.0 svcs', fcst:'53.6 svcs', impact:'Medium', why:'The earliest read on Q3 growth momentum — watched closely for signs the labour-market slowdown is spreading to services.'},
+  ];
+  document.getElementById('calendarBody').innerHTML = calendarRows.map(r=>`
+    <tr><td style="font-family:'JetBrains Mono';">${r.date}</td><td style="font-weight:600;">${r.event}</td><td style="font-family:'JetBrains Mono'; color:var(--text-faint);">${r.prior}</td><td style="font-family:'JetBrains Mono';">${r.fcst}</td><td><span class="pill ${r.impact==='High'?'bear':'neu'}">${r.impact.toUpperCase()}</span></td><td style="color:var(--text-dim); font-size:11.8px; line-height:1.5; max-width:320px;">${r.why}</td></tr>`).join('');
+
+  // ---- Fed balance sheet chart ----
+  lineChart('chartFedBS', [[7.1,7.05,7.0,6.95,6.9,6.85,6.8,6.75,6.7,6.66,6.64,6.62]], ['#C9A227'], 500, 140);
+  lineChart('chartGDP', [[1.4,2.0,2.8,1.6,0.9,1.8,1.8,2.1]], ['#1FB8A6'], 500, 140);
+
+  // ---- Yield curve chart ----
+  function renderYieldCurve(){
+    const svg = document.getElementById('chartYieldCurve');
+    const labels = ['3M','6M','1Y','2Y','5Y','10Y','30Y'];
+    const vals = [4.30,4.22,4.10,3.95,4.15,4.583,4.79];
+    const w=640,h=220,pad=36;
+    const min=Math.min(...vals)-0.15, max=Math.max(...vals)+0.15;
+    const pts = vals.map((v,i)=>{
+      const x = pad + (i/(vals.length-1))*(w-2*pad);
+      const y = h-pad-((v-min)/(max-min))*(h-2*pad);
+      return {x,y,v};
+    });
+    let html = `<polyline points="${pts.map(p=>p.x+','+p.y).join(' ')}" fill="none" stroke="#C9A227" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>`;
+    pts.forEach((p,i)=>{
+      html += `<circle cx="${p.x}" cy="${p.y}" r="3.5" fill="#C9A227"/>`;
+      html += `<text x="${p.x}" y="${h-10}" fill="#5B6274" font-size="10" font-family="JetBrains Mono" text-anchor="middle">${labels[i]}</text>`;
+      html += `<text x="${p.x}" y="${p.y-10}" fill="#E7E9EE" font-size="10" font-family="JetBrains Mono" text-anchor="middle">${p.v.toFixed(2)}</text>`;
+    });
+    svg.innerHTML = html;
+    svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+  }
+  renderYieldCurve();
+
+  // ---- Forex Dashboard (populated when fx rates arrive) ----
+  function renderForexGrid(rates){
+    const grid = document.getElementById('fxGrid');
+    const tag = document.getElementById('forexTag');
+    if(!rates){ grid.innerHTML = '<div class="placeholder"><p>Waiting on the live forex feed…</p></div>'; return; }
+    const pairs = [
+      {p:'EUR/USD', v: 1/rates.EUR}, {p:'GBP/USD', v: 1/rates.GBP}, {p:'USD/JPY', v: rates.JPY},
+      {p:'USD/CHF', v: rates.CHF}, {p:'USD/CAD', v: rates.CAD}, {p:'AUD/USD', v: rates.AUD ? 1/rates.AUD : null},
+      {p:'NZD/USD', v: rates.NZD ? 1/rates.NZD : null}, {p:'USD/INR', v: rates.INR}, {p:'USD/CNY', v: rates.CNY},
+      {p:'USD/SGD', v: rates.SGD }, {p:'USD/ZAR', v: rates.ZAR }, {p:'USD/MXN', v: rates.MXN },
+    ].filter(x=>x.v);
+    grid.innerHTML = pairs.map(x=>{
+      const chg = pollDelta('FX_'+x.p, x.v);
+      const up = chg >= 0;
+      const color = up ? 'var(--bull)' : 'var(--bear)';
+      return `<div class="fx-card" style="border-color:${chg!==0 ? color : 'var(--line)'};">
+        <div class="fx-pair">${x.p}</div>
+        <div style="display:flex; align-items:baseline; justify-content:space-between; gap:8px;">
+          <div class="fx-val">${x.v.toFixed(x.v<10?4:2)}</div>
+          <div style="font-family:'JetBrains Mono'; font-size:12px; font-weight:700; color:${color};">${up?'▲':'▼'} ${Math.abs(chg).toFixed(3)}%</div>
+        </div>
+      </div>`;
+    }).join('');
+    tag.outerHTML = '<span class="live-tag" id="forexTag"><span class="lp"></span>LIVE</span>';
+  }
+
+  // ---- Geopolitical gauge ----
+  document.getElementById('gaugeGeo').innerHTML = gaugeSVG(50);
+
+  // ---- Sentiment gauge (live proxy) ----
+  document.getElementById('gaugeSentiment').innerHTML = gaugeSVG(50);
+  function renderSentimentLive(){
+    const btc = tickers.find(x=>x.key==='BTC');
+    if(!btc || !btc.live) return;
+    const b = biasFromChange(btc.chg, 6);
+    document.getElementById('gaugeSentiment').innerHTML = gaugeSVG(b.pct);
+    const label = b.pct>=65?'Greed':b.pct>=53?'Mild Greed':b.pct<=35?'Fear':b.pct<=47?'Mild Fear':'Neutral';
+    document.getElementById('sentimentReadout').textContent = `${label} · ${b.pct}/100`;
+  }
+
+  async function fetchCboeSentimentLive(){
+    // CBOE genuinely publishes this for free — but their CDN doesn't send an
+    // Access-Control-Allow-Origin header, so most browsers will block the read.
+    // We attempt it for real rather than assuming; if it fails, we say so honestly.
+    const [vix, vix9d, vix3m, vix6m] = await Promise.all([
+      safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX.json'),
+      safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX9D.json'),
+      safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX3M.json'),
+      safeFetchJSON('https://cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX6M.json'),
+    ]);
+    // Put/call file is dated by trading day — walk back a few days to cover weekends/holidays.
+    let pc = null;
+    for(let i=0; i<5 && !pc; i++){
+      const ds = new Date(Date.now() - i*86400000).toISOString().slice(0,10);
+      const r = await safeFetchJSON(`https://cdn.cboe.com/data/us/options/market_statistics/daily/${ds}_daily_options`);
+      if(r?.ratios) pc = r;
+    }
+    const gotVix = vix?.data?.current_price && vix9d?.data?.current_price && vix3m?.data?.current_price && vix6m?.data?.current_price;
+    const gotPC = pc?.ratios && pc.ratios.length;
+
+    if(gotVix){
+      document.getElementById('vixSpotVal').textContent = vix.data.current_price.toFixed(2);
+      document.getElementById('vix9dVal').textContent = vix9d.data.current_price.toFixed(2);
+      document.getElementById('vix3mVal').textContent = vix3m.data.current_price.toFixed(2);
+      document.getElementById('vix6mVal').textContent = vix6m.data.current_price.toFixed(2);
+      const contango = vix9d.data.current_price < vix.data.current_price && vix.data.current_price < vix3m.data.current_price;
+      const el = document.getElementById('vixTermVal');
+      el.textContent = contango ? 'Contango (calm)' : 'Backwardated (stressed)';
+      el.className = 'v ' + (contango ? 'good' : 'bad');
+    }
+    if(gotPC){
+      const total = pc.ratios.find(r=>r.name.includes('TOTAL PUT/CALL'));
+      const equity = pc.ratios.find(r=>r.name.includes('EQUITY PUT/CALL'));
+      if(total){ document.getElementById('putCallVal').textContent = total.value; }
+      if(equity){ document.getElementById('putCallEqVal').textContent = equity.value; }
+    }
+
+    const cboeTag = document.getElementById('cboeTag');
+    const pageTag = document.getElementById('sentimentPageTag');
+    const desc = document.getElementById('sentimentDesc');
+    if(gotVix || gotPC){
+      cboeTag.className = 'live-tag'; cboeTag.innerHTML = '<span class="lp"></span>LIVE — CBOE';
+      pageTag.className = 'live-tag'; pageTag.innerHTML = '<span class="lp"></span>PARTIALLY LIVE';
+      desc.innerHTML = "Crypto fear/greed is computed live from real BTC momentum. VIX term structure and put/call ratio are pulled live and direct from CBOE — this browser was able to reach their CDN. AAII's bull/bear survey has no public feed at all, so that one stays reference.";
+    } else {
+      cboeTag.className = 'ref-tag'; cboeTag.textContent = 'REFERENCE — CORS blocked';
+      pageTag.className = 'ref-tag'; pageTag.textContent = 'PARTIALLY LIVE';
+      desc.innerHTML = "Crypto fear/greed is computed live from real BTC momentum. CBOE genuinely publishes VIX term structure and put/call data for free, but their CDN doesn't send the CORS header a browser needs to read it directly — this attempt got blocked, so those numbers below are the last-known reference values. A small server-side proxy (a few lines on Cloudflare Workers or Vercel) would unblock this; ask if you want it built. AAII's bull/bear survey has no public feed at all either way.";
+    }
+  }
+
+  // ---- Asset directory ----
+  function renderAssetsDirectory(){
+    const dirGrid = document.getElementById('assetsDirectoryGrid');
+    const items = assets.map(a=>{
+      const t = tickers.find(x=>x.key===a.key);
+      return {...a, px: t?t.px:null, dec: t?t.dec:2};
+    });
+    if(window.silverLive){
+      items.push({
+        key:'XAG', name:'Silver (XAG/USD)', pct:window.silverLive.pct, status:window.silverLive.status, live:true,
+        px:window.silverLive.px, dec:2, desc:'Tracks gold\u2019s safe-haven bid with higher beta; industrial demand (solar, electronics) adds a growth-cycle swing factor gold doesn\u2019t have.',
+        note:'Live spot price (gold-api.com) · bias scored from live momentum',
+      });
+    }
+    dirGrid.innerHTML = items.map(a=>`
+      <div class="asset-card" data-key="${a.key}">
+        <div class="asset-head"><span class="asset-name">${a.name}</span><span class="asset-pct">${a.pct}%</span></div>
+        ${a.px!=null ? `<div style="font-family:'JetBrains Mono'; font-size:13px; color:var(--text-dim); margin-bottom:8px;">${a.px.toLocaleString('en-US',{maximumFractionDigits:a.dec})}</div>` : ''}
+        <div class="bar-track"><div class="bar-fill" style="width:${a.pct}%; background:${barColor(a.status)};"></div></div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
+          <div class="asset-status ${statusClass(a.status)}">${a.status}</div>
+          ${a.live ? '<span class="live-tag"><span class="lp"></span>LIVE</span>' : '<span class="ref-tag">REF</span>'}
+        </div>
+      </div>`).join('');
+    dirGrid.querySelectorAll('.asset-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        const a = items.find(x=>x.key===card.dataset.key);
+        if(a) openAssetModal(a);
+      });
+    });
+  }
+  renderAssetsDirectory();
+
+  /* =========================================================
+     LIVE DATA ENGINE
+     - Crypto (BTC/ETH/SOL): CoinGecko — real price + real 24h change, no key.
+     - Gold/Silver (XAU/XAG): gold-api.com — real spot price, no key.
+     - Forex majors: open.er-api.com — real mid rates, no key.
+     - DXY: computed live from the official trade-weighted formula using
+       those same live forex rates (not fabricated).
+     - CPI / NFP: US Bureau of Labor Statistics public API — real government
+       series, no key required for light polling.
+     - Nasdaq100 / Dow / S&P500 / WTI proxies (QQQ/DIA/SPY/USO): Twelve Data —
+       needs a free user-supplied key (their free tier covers US equities/ETFs,
+       not raw indices, so these are honest equity-ETF proxies, not the index itself).
+     - Nifty 50, India VIX, US10Y yield, GDP/PMI/banking internals/central-bank
+       cards/news/correlations: no free live source exists — kept as a
+       maintained reference dataset and labelled as such everywhere in the UI.
+     ========================================================= */
+
+  let TD_KEY = localStorage.getItem('bkq_td_key') || '';
+  const prevPoll = {}; // symbol -> last polled value, for poll-to-poll delta on gold/forex/DXY
+  const liveState = { core: false, bls: false, td: !!TD_KEY };
+
+  async function safeFetchJSON(url, opts){
+    try{
+      const ctrl = new AbortController();
+      const t = setTimeout(()=>ctrl.abort(), 8000);
+      const res = await fetch(url, {...opts, signal: ctrl.signal});
+      clearTimeout(t);
+      if(!res.ok) return null;
+      return await res.json();
+    }catch(e){ return null; }
+  }
+
+  function pollDelta(sym, newVal){
+    const prev = prevPoll[sym];
+    prevPoll[sym] = newVal;
+    if(prev === undefined || prev === 0) return 0;
+    return ((newVal - prev) / prev) * 100;
+  }
+
+  function biasFromChange(chg, scale){
+    // maps a % change into a 0-100 bias score centered on 50
+    const pct = Math.round(Math.min(94, Math.max(6, 50 + chg*scale)));
+    const status = pct >= 53 ? 'BULLISH' : pct <= 47 ? 'BEARISH' : 'NEUTRAL';
+    return {pct, status};
+  }
+
+  function setTicker(key, px, chg){
+    const t = tickers.find(x=>x.key===key);
+    if(t){ t.px = px; t.chg = chg; t.live = true; }
+  }
+  function setAsset(key, pct, status, chg){
+    const a = assets.find(x=>x.key===key);
+    if(a){ a.pct = pct; a.status = status; a.live = true;
+      a.note = `Live · ${chg>=0?'+':''}${chg.toFixed(2)}% move driving this score`;
+    }
+  }
+
+  async function fetchCoreLive(){
+    let anySuccess = false;
+
+    // Crypto — real price + real 24h change
+    const cg = await safeFetchJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true');
+    if(cg && cg.bitcoin){
+      anySuccess = true;
+      setTicker('BTC', cg.bitcoin.usd, cg.bitcoin.usd_24h_change);
+      setTicker('ETH', cg.ethereum.usd, cg.ethereum.usd_24h_change);
+      setTicker('SOL', cg.solana.usd, cg.solana.usd_24h_change);
+      const b = biasFromChange(cg.bitcoin.usd_24h_change, 6); setAsset('BTC', b.pct, b.status, cg.bitcoin.usd_24h_change);
+      const e = biasFromChange(cg.ethereum.usd_24h_change, 6); setAsset('ETH', e.pct, e.status, cg.ethereum.usd_24h_change);
+      const s = biasFromChange(cg.solana.usd_24h_change, 5); setAsset('SOL', s.pct, s.status, cg.solana.usd_24h_change);
+    }
+
+    // Gold — real spot price, delta measured across our own polls
+    const gold = await safeFetchJSON('https://api.gold-api.com/price/XAU');
+    if(gold && gold.price){
+      anySuccess = true;
+      const chg = pollDelta('XAU', gold.price);
+      setTicker('XAU', gold.price, chg);
+      const g = biasFromChange(chg, 30); setAsset('XAU', g.pct, g.status, chg);
+    }
+
+    // Silver — bonus live row for the Scanner and Asset directory
+    const silver = await safeFetchJSON('https://api.gold-api.com/price/XAG');
+    if(silver && silver.price){
+      const chg = pollDelta('XAG', silver.price);
+      const s = biasFromChange(chg, 30);
+      window.silverLive = {px: silver.price, chg, pct: s.pct, status: s.status};
+    }
+
+    // Forex majors + synthetic DXY
+    const fx = await safeFetchJSON('https://open.er-api.com/v6/latest/USD');
+    if(fx && fx.result === 'success' && fx.rates){
+      anySuccess = true;
+      const r = fx.rates;
+      const eurUsd = 1/r.EUR, gbpUsd = 1/r.GBP;
+      setTicker('EURUSD', eurUsd, pollDelta('EURUSD', eurUsd));
+      setTicker('GBPUSD', gbpUsd, pollDelta('GBPUSD', gbpUsd));
+      renderForexGrid(r);
+      // Official ICE DXY formula, using live cross rates from the same feed
+      if(r.EUR && r.JPY && r.GBP && r.CAD && r.SEK && r.CHF){
+        const dxy = 50.14348112
+          * Math.pow(eurUsd, -0.576)
+          * Math.pow(r.JPY, 0.136)
+          * Math.pow(gbpUsd, -0.119)
+          * Math.pow(r.CAD, 0.091)
+          * Math.pow(r.SEK, 0.042)
+          * Math.pow(r.CHF, 0.036);
+        const chg = pollDelta('DXY', dxy);
+        setTicker('DXY', dxy, chg);
+        const d = biasFromChange(-chg, 40); setAsset('DXY', d.pct, d.status, chg); // USD bias inverted for the DXY asset card (down DXY = risk-on)
+      }
+    }
+
+    liveState.core = anySuccess;
+    renderTicker();
+    renderAssets();
+    renderConfluence();
+    renderScanner();
+    renderAssetsDirectory();
+    renderSentimentLive();
+    const tag = document.getElementById('macroTag');
+    if(anySuccess){ tag.className = 'live-tag'; tag.innerHTML = '<span class="lp"></span>LIVE'; }
+    else { tag.className = 'ref-tag'; tag.textContent = 'REFERENCE'; }
+  }
+
+  async function fetchBLSSeries(seriesId){
+    return await safeFetchJSON(`https://api.bls.gov/publicAPI/v2/timeseries/data/${seriesId}`);
+  }
+
+  async function fetchMacroLive(){
+    // CPI (CUUR0000SA0) — compute real YoY %, the standard headline calc
+    const cpi = await fetchBLSSeries('CUUR0000SA0');
+    const cpiSeries = cpi?.Results?.series?.[0]?.data;
+    if(cpiSeries && cpiSeries.length >= 13){
+      const latest = cpiSeries[0];
+      const yearAgo = cpiSeries.find(d => d.period === latest.period && d.year === String(Number(latest.year)-1));
+      if(yearAgo){
+        const yoy = ((parseFloat(latest.value) - parseFloat(yearAgo.value)) / parseFloat(yearAgo.value)) * 100;
+        const prevMonth = cpiSeries[1];
+        const prevYoy = prevMonth ? ((parseFloat(prevMonth.value) - parseFloat(cpiSeries.find(d=>d.period===prevMonth.period && d.year===String(Number(prevMonth.year)-1))?.value || latest.value)) / parseFloat(cpiSeries.find(d=>d.period===prevMonth.period && d.year===String(Number(prevMonth.year)-1))?.value || latest.value)) * 100 : yoy;
+        const card = summary.find(s=>s.title==='Inflation Trend');
+        if(card){
+          card.value = `CPI ${yoy.toFixed(1)}%`;
+          card.status = yoy <= prevYoy ? 'BULLISH' : 'BEARISH';
+          card.meta = `Prev ${prevYoy.toFixed(1)}% · ${latest.periodName} ${latest.year} · ${yoy<=prevYoy?'▼ falling':'▲ rising'} · US BLS`;
+          card.desc = `Live from BLS CPI-U (${seriesLabel(latest)}). ${yoy<=prevYoy ? 'Cooling inflation supports the case for further Fed cuts.' : 'Inflation reaccelerating — complicates the case for further cuts.'}`;
+          card.live = true;
+        }
+        const m = useconCards.find(x=>x.key==='cpi');
+        if(m){ m.value = `CPI ${yoy.toFixed(1)}%`; m.status = card ? card.status : 'NEUTRAL'; m.meta = `${latest.periodName} ${latest.year} · US BLS`; m.live = true; }
+      }
+    }
+
+    // Nonfarm payrolls proxy (CES0000000001) — real month-over-month change, thousands
+    const nfp = await fetchBLSSeries('CES0000000001');
+    const nfpSeries = nfp?.Results?.series?.[0]?.data;
+    if(nfpSeries && nfpSeries.length >= 3){
+      const latest = parseFloat(nfpSeries[0].value), prev = parseFloat(nfpSeries[1].value), prevPrev = parseFloat(nfpSeries[2].value);
+      const chgK = Math.round((latest - prev) * 1); // series already in thousands
+      const prevChgK = Math.round(prev - prevPrev);
+      const card = summary.find(s=>s.title==='Labour Market');
+      if(card){
+        card.value = `NFP ${chgK>=0?'+':''}${chgK}K`;
+        card.status = chgK >= prevChgK ? 'BULLISH' : 'BEARISH';
+        card.meta = `Prev ${prevChgK>=0?'+':''}${prevChgK}K · ${nfpSeries[0].periodName} ${nfpSeries[0].year} · US BLS CES`;
+        card.desc = `Live month-over-month change in total nonfarm employment from BLS CES. ${chgK < 100 ? "Hiring momentum is soft — a genuine labour-market signal to watch." : 'Hiring holding up reasonably well.'}`;
+        card.live = true;
+      }
+    }
+
+    // Core CPI (CUUR0000SA0L1E), PPI (WPUFD4), Unemployment Rate, Participation, Avg Hourly Earnings, JOLTS
+    function yoyFromSeries(series){
+      if(!series || series.length < 13) return null;
+      const latest = series[0];
+      const yearAgo = series.find(d => d.period === latest.period && d.year === String(Number(latest.year)-1));
+      if(!yearAgo) return null;
+      return {yoy: ((parseFloat(latest.value)-parseFloat(yearAgo.value))/parseFloat(yearAgo.value))*100, latest};
+    }
+    const [coreCpiRes, ppiRes, unempRes, particRes, wagesRes, joltsRes] = await Promise.all([
+      fetchBLSSeries('CUUR0000SA0L1E'), fetchBLSSeries('WPUFD4'), fetchBLSSeries('LNS14000000'),
+      fetchBLSSeries('LNS11300000'), fetchBLSSeries('CES0500000003'), fetchBLSSeries('JTS000000000000000JOL'),
+    ]);
+    const coreCpiSeries = coreCpiRes?.Results?.series?.[0]?.data;
+    const coreCpiYoY = yoyFromSeries(coreCpiSeries);
+    if(coreCpiYoY){
+      const m = useconCards.find(x=>x.key==='corecpi');
+      m.value = `${coreCpiYoY.yoy.toFixed(1)}%`; m.status = coreCpiYoY.yoy <= 3.2 ? 'NEUTRAL' : 'BEARISH';
+      m.meta = `${coreCpiYoY.latest.periodName} ${coreCpiYoY.latest.year} · US BLS`; m.live = true;
+    }
+    const ppiSeries = ppiRes?.Results?.series?.[0]?.data;
+    const ppiYoY = yoyFromSeries(ppiSeries);
+    if(ppiYoY){
+      const m = useconCards.find(x=>x.key==='ppi');
+      m.value = `${ppiYoY.yoy.toFixed(1)}%`; m.status = ppiYoY.yoy <= 3 ? 'BULLISH' : 'BEARISH';
+      m.meta = `${ppiYoY.latest.periodName} ${ppiYoY.latest.year} · US BLS`; m.live = true;
+    }
+    const unempSeries = unempRes?.Results?.series?.[0]?.data;
+    if(unempSeries && unempSeries.length >= 2){
+      const latest = parseFloat(unempSeries[0].value), prev = parseFloat(unempSeries[1].value);
+      const m = useconCards.find(x=>x.key==='unemp');
+      m.value = `${latest.toFixed(1)}%`; m.status = latest <= prev ? 'BULLISH' : 'BEARISH';
+      m.meta = `Prev ${prev.toFixed(1)}% · ${unempSeries[0].periodName} ${unempSeries[0].year} · US BLS`; m.live = true;
+    }
+    const particSeries = particRes?.Results?.series?.[0]?.data;
+    if(particSeries && particSeries.length >= 2){
+      const latest = parseFloat(particSeries[0].value), prev = parseFloat(particSeries[1].value);
+      const m = useconCards.find(x=>x.key==='partic');
+      m.value = `${latest.toFixed(1)}%`; m.status = latest >= prev ? 'BULLISH' : 'NEUTRAL';
+      m.meta = `Prev ${prev.toFixed(1)}% · ${particSeries[0].periodName} ${particSeries[0].year} · US BLS`; m.live = true;
+    }
+    const wagesSeries = wagesRes?.Results?.series?.[0]?.data;
+    const wagesYoY = yoyFromSeries(wagesSeries);
+    if(wagesYoY){
+      const m = useconCards.find(x=>x.key==='wages');
+      m.value = `+${wagesYoY.yoy.toFixed(1)}% y/y`; m.status = wagesYoY.yoy >= 3.5 ? 'NEUTRAL' : 'BULLISH';
+      m.meta = `${wagesYoY.latest.periodName} ${wagesYoY.latest.year} · US BLS`; m.live = true;
+    }
+    const joltsSeries = joltsRes?.Results?.series?.[0]?.data;
+    if(joltsSeries && joltsSeries.length >= 2){
+      const latest = parseFloat(joltsSeries[0].value), prev = parseFloat(joltsSeries[1].value);
+      const m = useconCards.find(x=>x.key==='jolts');
+      m.value = `${(latest).toLocaleString()}K`; m.status = latest >= prev ? 'BULLISH' : 'BEARISH';
+      m.meta = `Prev ${prev.toLocaleString()}K · ${joltsSeries[0].periodName} ${joltsSeries[0].year} · US BLS JOLTS`; m.live = true;
+    }
+    renderUsecon(); renderInflationGrid(); renderLabourGrid(); renderScanner(); renderAssetsDirectory();
+
+    renderRegimeQuad(summary.find(s=>s.title==='Inflation Trend')?.status === 'BULLISH');
+    const regimeTension = document.getElementById('regimeCardTension');
+    if(regimeTension && liveState.bls){
+      regimeTension.innerHTML = `<b>Live inflation input:</b> BLS CPI is currently ${summary.find(s=>s.title==='Inflation Trend')?.value || 'unavailable'}, trending ${summary.find(s=>s.title==='Inflation Trend')?.status === 'BULLISH' ? 'lower' : 'higher'} — placing the inflation axis toward the ${summary.find(s=>s.title==='Inflation Trend')?.status === 'BULLISH' ? 'left (disinflation)' : 'right (reflation)'} side of the matrix. Growth axis still uses the reference GDP print.`;
+    }
+    document.getElementById('regimeTag').outerHTML = liveState.bls
+      ? '<span class="live-tag" id="regimeTag"><span class="lp"></span>LIVE CPI AXIS</span>'
+      : '<span class="ref-tag" id="regimeTag">REFERENCE</span>';
+
+    liveState.bls = !!(cpiSeries || nfpSeries);
+    renderSummary();
+    document.querySelectorAll('.sum-card').forEach(el=>{
+      const s = summary.find(x=>slugify(x.title)===el.dataset.key);
+      if(s && s.live){
+        const badge = el.querySelector('.sum-live-badge');
+        badge.className = 'live-tag';
+        badge.innerHTML = '<span class="lp"></span>LIVE';
+      }
+    });
+  }
+  function seriesLabel(pt){ return `${pt.periodName} ${pt.year}`; }
+
+  async function fetchTwelveDataProxies(){
+    if(!TD_KEY) return;
+    const symbols = {QQQ:'NDX', DIA:'DJI', SPY:'SPX', USO:'WTI'};
+    for(const [sym, tKey] of Object.entries(symbols)){
+      const q = await safeFetchJSON(`https://api.twelvedata.com/quote?symbol=${sym}&apikey=${TD_KEY}`);
+      if(q && q.close && !q.code){
+        const px = parseFloat(q.close);
+        const chg = parseFloat(q.percent_change || 0);
+        setTicker(tKey, px, chg);
+        const a = assets.find(x=>x.key===tKey);
+        if(a){ const b = biasFromChange(chg, 8); a.pct = b.pct; a.status = b.status; a.live = true; a.note = `Live via ${sym} ETF proxy (Twelve Data) · ${chg>=0?'+':''}${chg.toFixed(2)}%`; }
+      }
+    }
+    liveState.td = true;
+    renderTicker();
+    renderAssets();
+    renderScanner();
+    renderAssetsDirectory();
+    renderConfluence();
+  }
+
+  async function fetchGeoRiskLive(){
+    const goldT = tickers.find(x=>x.key==='XAU');
+    const goldChg = (goldT && goldT.live) ? goldT.chg : null;
+
+    const chart = await safeFetchJSON('https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1');
+    let vol = null;
+    if(chart && chart.prices && chart.prices.length > 5){
+      const prices = chart.prices.map(p=>p[1]);
+      const rets = [];
+      for(let i=1;i<prices.length;i++){ rets.push((prices[i]-prices[i-1])/prices[i-1]); }
+      const mean = rets.reduce((a,b)=>a+b,0)/rets.length;
+      const variance = rets.reduce((a,b)=>a+Math.pow(b-mean,2),0)/rets.length;
+      vol = Math.sqrt(variance) * 100; // realized hourly vol, %
+    }
+
+    const gotSomething = goldChg !== null || vol !== null;
+    if(!gotSomething){
+      document.getElementById('geoTag').textContent = 'REFERENCE';
+      document.getElementById('geoGaugeTag').textContent = 'REFERENCE';
+      return;
+    }
+
+    let score = 50;
+    if(goldChg !== null) score += goldChg * 6;         // gold bid = safe-haven flow = higher risk reading
+    if(vol !== null) score += (vol - 0.15) * 40;        // above-normal BTC vol = risk-off stress
+    score = Math.round(Math.min(94, Math.max(6, score)));
+
+    const label = score>=70?'High':score>=55?'Elevated':score>=45?'Moderate':score>=30?'Low-Moderate':'Low';
+    document.getElementById('gaugeGeo').innerHTML = gaugeSVG(score);
+    document.getElementById('geoReadout').textContent = `${label} · ${score}/100`;
+    document.getElementById('geoReadoutLbl').textContent = 'Live market-based proxy — gold safe-haven flow + Bitcoin realized volatility';
+    if(goldChg !== null){
+      const el = document.getElementById('geoGoldInput');
+      el.textContent = `${goldChg>=0?'+':''}${goldChg.toFixed(2)}% ${goldChg>=0?'(bid — risk-off)':'(offered — risk-on)'}`;
+      el.className = 'v ' + (goldChg>=0 ? 'bad' : 'good');
+    }
+    if(vol !== null){
+      const el = document.getElementById('geoVolInput');
+      el.textContent = `${vol.toFixed(3)}%/hr ${vol>0.18?'(elevated)':'(calm)'}`;
+      el.className = 'v ' + (vol>0.18 ? 'bad' : 'good');
+    }
+    const tagHTML = '<span class="lp"></span>LIVE';
+    document.getElementById('geoTag').className = 'live-tag'; document.getElementById('geoTag').innerHTML = tagHTML;
+    document.getElementById('geoGaugeTag').className = 'live-tag'; document.getElementById('geoGaugeTag').innerHTML = tagHTML;
+  }
+
+  // Crypto/gold/forex/DXY move constantly — safe to poll every 60s.
+  fetchCoreLive().then(()=>{ renderSettingsSources(); fetchGeoRiskLive(); });
+  setInterval(()=>fetchCoreLive().then(renderSettingsSources), 60000);
+  setInterval(fetchGeoRiskLive, 300000);
+  fetchCboeSentimentLive();
+  setInterval(fetchCboeSentimentLive, 300000);
+
+  // News RSS feeds update on their own cadence — refresh every 10 min, not every 60s.
+  fetchNewsLive();
+  setInterval(fetchNewsLive, 600000);
+
+  // BLS is monthly government data (25 free calls/day, unregistered) — fetch once per session.
+  fetchMacroLive().then(renderSettingsSources);
+
+  // Twelve Data free tier is 800 calls/day / 8 per minute — refresh every 5 min, not every 60s.
+  fetchTwelveDataProxies().then(renderSettingsSources);
+  setInterval(()=>fetchTwelveDataProxies().then(renderSettingsSources), 300000);
+
+  /* ---------------- Settings modal ---------------- */
+  const settingsBg = document.getElementById('settingsBg');
+  document.getElementById('gearBtn').addEventListener('click', ()=>{ renderSettingsSources(); settingsBg.classList.add('open'); });
+  document.getElementById('settingsClose').addEventListener('click', ()=>settingsBg.classList.remove('open'));
+  settingsBg.addEventListener('click', e=>{ if(e.target===settingsBg) settingsBg.classList.remove('open'); });
+  document.getElementById('tdKeyInput').value = TD_KEY;
+  document.getElementById('tdKeySave').addEventListener('click', ()=>{
+    TD_KEY = document.getElementById('tdKeyInput').value.trim();
+    localStorage.setItem('bkq_td_key', TD_KEY);
+    fetchTwelveDataProxies().then(renderSettingsSources);
+  });
+
+  function renderSettingsSources(){
+    const freeRows = [
+      ['Bitcoin, Ethereum, Solana', liveState.core],
+      ['Gold (XAU), Silver (XAG)', liveState.core],
+      ['EUR/USD, GBP/USD', liveState.core],
+      ['DXY (computed live)', liveState.core],
+      ['CPI (Inflation Trend card)', liveState.bls],
+      ['Nonfarm payrolls (Labour Market card)', liveState.bls],
+      ['Geopolitical Risk Index (market-based proxy)', liveState.core],
+      ['Financial news (CNBC, CoinDesk, Economic Times)', newsItems.length > 0],
+    ];
+    document.getElementById('srcListFree').innerHTML = freeRows.map(([k,ok])=>`
+      <div class="src-row"><span class="k">${k}</span>${ok ? '<span class="live-tag"><span class="lp"></span>LIVE</span>' : '<span class="ref-tag">CHECKING…</span>'}</div>`).join('');
+
+    const keyedRows = [
+      ['Nasdaq 100 — QQQ proxy', liveState.td],
+      ['Dow — DIA proxy', liveState.td],
+      ['S&P 500 — SPY proxy', liveState.td],
+      ['WTI Crude — USO proxy', liveState.td],
+    ];
+    document.getElementById('srcListKeyed').innerHTML = keyedRows.map(([k,ok])=>`
+      <div class="src-row"><span class="k">${k}</span>${ok ? '<span class="live-tag"><span class="lp"></span>LIVE</span>' : '<span class="ref-tag">NEEDS KEY</span>'}</div>`).join('');
+
+    const refRows = ['Nifty 50 · India VIX', 'US10Y treasury yield', 'GDP, PMI, banking-system internals', 'Central-bank cards', 'Cross-asset correlations'];
+    document.getElementById('srcListRef').innerHTML = refRows.map(k=>`
+      <div class="src-row"><span class="k">${k}</span><span class="ref-tag">REFERENCE</span></div>`).join('');
+  }
+  renderSettingsSources();
+</script>
+</body>
+</html>

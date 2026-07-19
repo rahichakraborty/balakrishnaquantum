@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-18T15:51:54+00:00",
+  "generated_at": "2026-07-19T05:47:25+00:00",
   "covers": {
     "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow|Aurélien Géron": "https://covers.openlibrary.org/b/id/9388208-M.jpg",
-    "An Introduction to Statistical Learning (ISLR)|James, Witten, Hastie, Tibshirani": "https://covers.openlibrary.org/b/isbn/9781461471370-M.jpg?default=false",
+    "An Introduction to Statistical Learning (ISLR)|James, Witten, Hastie, Tibshirani": null,
     "The Elements of Statistical Learning|Hastie, Tibshirani, Friedman": "https://covers.openlibrary.org/b/id/8643962-M.jpg",
     "The Hundred-Page Machine Learning Book|Andriy Burkov": "https://covers.openlibrary.org/b/id/10390246-M.jpg",
     "Deep Learning|Goodfellow, Bengio, Courville": "https://covers.openlibrary.org/b/id/8086288-M.jpg",
@@ -34,8 +34,25 @@
     },
     {
       "source": "isbn_override",
-      "isbn": "9781461471370",
-      "result": "found"
+      "exception": "TimeoutError: The read operation timed out"
+    },
+    {
+      "source": "openlibrary",
+      "query": "An Introduction to Statistical Learning (ISLR) James, Witten, Hastie, Tibshirani",
+      "num_found": 0,
+      "docs_returned": 0,
+      "result": "no cover_i"
+    },
+    {
+      "source": "openlibrary",
+      "query": "An Introduction to Statistical Learning (ISLR)",
+      "num_found": 0,
+      "docs_returned": 0,
+      "result": "no cover_i"
+    },
+    {
+      "source": "google_books",
+      "exception": "HTTPError: HTTP Error 429: Too Many Requests"
     },
     {
       "source": "openlibrary",

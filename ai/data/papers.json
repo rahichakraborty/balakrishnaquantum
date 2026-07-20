@@ -1,157 +1,157 @@
 {
-  "generated_at": "2026-07-19T15:52:43+00:00",
+  "generated_at": "2026-07-20T06:12:29+00:00",
   "items": [
     {
-      "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
-      "summary": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution. If this interpretation holds, then LLM estimates should satisfy …",
+      "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+      "summary": "Mixture-of-Experts (MoE) is a popular class of large language models (LLMs), offering high efficiency and accuracy. However, in KV-cache-intensive serving scenarios, MoEs often exhibit a tension between the GPU memory requirements of the model weights and the growing KV cache. We…",
       "authors": [
-        "Patrik Wolf",
-        "Thomas Kleine Buening",
-        "Andreas Krause",
+        "Yuchen Yang",
+        "Yifan Zhao",
+        "Anisha Dasgupta",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.15277v1",
-      "published": "2026-07-16T17:59:31Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "RoboTTT: Context Scaling for Robot Policies",
-      "summary": "Recent robot foundation models operate with single-step or short-history visuomotor context. We introduce Test-Time-Training Robot Policies (RoboTTT), a robot model and training recipe that scale visuomotor context to 8K timesteps, three orders of magnitude beyond state-of-the-ar…",
-      "authors": [
-        "Yunfan Jiang",
-        "Yevgen Chebotar",
-        "Ruijie Zheng",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.15275v1",
-      "published": "2026-07-16T17:59:06Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
-      "summary": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation. Reinforcement learning (RL) has become a powerful way to align diffusion and flow models with human preferences and task-speci…",
-      "authors": [
-        "Yushi Huang",
-        "Xiangxin Zhou",
-        "Jun Zhang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.15273v1",
-      "published": "2026-07-16T17:59:02Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions",
-      "summary": "Editing the figures in a research paper is a routine and time-consuming part of everyday research practice: authors relabel components, rearrange panels, and restyle visuals as they revise their manuscripts. Automating this editing workflow under a natural-language instruction, h…",
-      "authors": [
-        "Yasheng Sun",
-        "Zezi Zeng",
-        "Yifan Yang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.15272v1",
-      "published": "2026-07-16T17:58:36Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Online Neural Space Time Memory for Dynamic Novel View Synthesis",
-      "summary": "Online novel view synthesis from multi-view streaming videos faces a fundamental trade-off: maintaining a persistent, long-horizon memory to reconstruct temporarily occluded regions while operating under strict real-time constraints. While Test-Time Training (TTT) offers a powerf…",
-      "authors": [
-        "Baback Elmieh",
-        "Lynn Tsai",
-        "Zeman Li",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.15271v1",
-      "published": "2026-07-16T17:58:18Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Pretraining Data Can Be Poisoned through Computational Propaganda",
-      "summary": "Poisoning pretraining data can introduce harmful behaviors to LMs that are difficult to detect and mitigate. Prior work on poisoning pretraining data has largely exploited established data sources such as Wikipedia, which do not represent the large scale and heterogeneity typical…",
-      "authors": [
-        "Victoria Graf",
-        "Hannaneh Hajishirzi",
-        "Noah A. Smith",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.15267v1",
-      "published": "2026-07-16T17:56:05Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
-      "summary": "We present SceneBind, an omni-modal representation of realistic scenes with joint semantic and 3D spatial understanding across vision, audio and language. Existing omni-modal encoders excel at instance-level semantics (i.e., what is present), but often lack explicit spatial struc…",
-      "authors": [
-        "Mingfei Chen",
-        "Zijun Cui",
-        "Ruoke Zhang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.15265v1",
-      "published": "2026-07-16T17:55:15Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
-      "summary": "Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completion. Such measurements are useful but incomplete: in operational security, every r…",
-      "authors": [
-        "Paul Kassianik",
-        "Blaine Nelson",
-        "Yaron Singer"
-      ],
-      "link": "http://arxiv.org/abs/2607.15263v1",
-      "published": "2026-07-16T17:54:47Z",
-      "category": "cs.CR"
-    },
-    {
-      "title": "Decoding Market Emotion from Blockchain Activity: A Data-Driven Sentiment Classifier",
-      "summary": "The growing use of Bitcoin as a decentralized digital asset and investment tool has sparked strong interest in understanding its market behavior. This study presents a new approach to analyze Bitcoin market sentiment by combining on-chain and financial data with social media post…",
-      "authors": [
-        "Arthur G. Bubolz",
-        "Abreu Quevedo",
-        "Giancarlo Lucca",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.15258v1",
-      "published": "2026-07-16T17:52:26Z",
+      "link": "http://arxiv.org/abs/2607.16184v1",
+      "published": "2026-07-17T17:58:29Z",
       "category": "cs.LG"
     },
     {
-      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
-      "summary": "Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents. However, as interaction histories grow, agents increasingly struggle to track task progress. When search attempts fail to yield useful evidence, current …",
+      "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
+      "summary": "To address the escalating energy and latency demands of machine-learning workloads, we introduce a blueprint for an energy-efficient and fast thermodynamic computing stack that leverages stochastic analog processes in physical hardware. In this work, we focus on energy-based ther…",
       "authors": [
-        "Yuyao Zhang",
-        "Junjie Gao",
-        "Zhengxian Wu",
+        "Owen Lockwood",
+        "Jérémy Béjanin",
+        "Joost Bus",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.15257v1",
-      "published": "2026-07-16T17:51:23Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2607.16183v1",
+      "published": "2026-07-17T17:57:49Z",
+      "category": "cs.LG"
     },
     {
-      "title": "teLLMe Why (Ain't Nothing but a Jam): Exploratory Causal Analysis of Urban Driving Data",
-      "summary": "Traffic agencies now have access to large volumes of video-derived data for studying safety and congestion. Most of these data are observational and collected without interventions, which makes causal questions such as \"How would rain change traffic density?\" difficult to answer.…",
+      "title": "Cluster-Aware Matching via Laplacian Optimal Transport",
+      "summary": "In many applications of matching, the point clouds to be matched are not merely unstructured sets of points but rather samples from distributions with an intrinsic cluster structure. In such cases, as individual points are often interchangeable within a coherent region, finding a…",
       "authors": [
-        "Qiwei Li",
-        "Jorge Ortiz"
+        "Gabriel Samberg",
+        "YoonHaeng Hur",
+        "Yuehaw Khoo",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.15254v1",
-      "published": "2026-07-16T17:49:28Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2607.16178v1",
+      "published": "2026-07-17T17:56:51Z",
+      "category": "stat.ML"
     },
     {
-      "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
-      "summary": "Retrieval systems are trained and evaluated on a static idea of usefulness: hand a document and a question to a reader model, see whether the answer improves, and score the document accordingly. The idea holds up when a document is read on its own. It breaks when a language model…",
+      "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
+      "summary": "Reinforcement learning (RL) has recently emerged as a promising feedback control strategy for nonlinear and complex dynamical systems. However, RL algorithms are sample inefficient and require a large number of interaction with the environment to synthesize optimal control strate…",
       "authors": [
-        "Debayan Mukhopadhyay",
-        "Utshab Kumar Ghosh",
-        "Shubham Chatterjee"
+        "Matteo Tomasetto",
+        "Nicolò Botteghi",
+        "Gabriele Bruni",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.15253v1",
-      "published": "2026-07-16T17:48:29Z",
-      "category": "cs.IR"
+      "link": "http://arxiv.org/abs/2607.16177v1",
+      "published": "2026-07-17T17:56:05Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+      "summary": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, where vulnerabilities can compromise assets, users, and vehicle operations. These …",
+      "authors": [
+        "Md Erfan",
+        "Ahmed Ryan",
+        "Md Kamal Hossain Chowdhury",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.16175v1",
+      "published": "2026-07-17T17:55:19Z",
+      "category": "cs.CR"
+    },
+    {
+      "title": "When Does Muon Help Agentic Reinforcement Learning?",
+      "summary": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through matched single-seed comparisons with AdamW on ALFWorld using Qwen2.5-0.5B-Instruct. U…",
+      "authors": [
+        "Kai Ruan",
+        "Jinghao Lin",
+        "Zihe Huang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.16169v1",
+      "published": "2026-07-17T17:49:05Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Behaviour-Conditioned Neural Processes for Adaptive Residential Short-Term Load Forecasting",
+      "summary": "Residential short-term load forecasting (STLF) is challenging because household demand is heterogeneous, temporally variable, and shaped by diverse behavioural routines. This work investigates whether inferred behavioural structure can be embedded within the forecasting mechanism…",
+      "authors": [
+        "Ramin Soleimani",
+        "Andrea Visentin",
+        "Dirk Pesch"
+      ],
+      "link": "http://arxiv.org/abs/2607.16168v1",
+      "published": "2026-07-17T17:48:22Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "An Exam for Active Observers",
+      "summary": "Human vision is a closed loop: gaze is continuously redirected by intermediate hypotheses rather than a single snapshot. Decades of psychophysics and cognitive science have argued that this active observation is essential for a wide range of tasks. Whether today's multimodal larg…",
+      "authors": [
+        "Jiarui Zhang",
+        "Muzi Tao",
+        "Shangshang Wang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.16165v1",
+      "published": "2026-07-17T17:46:23Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "PRISA: Proactive Infrastructure LiDAR Framework for Intersection Safety Assessment",
+      "summary": "Urban intersections are among the most hazardous locations in road networks, posing significant risks to vehicles and vulnerable road users (VRUs) such as pedestrians and cyclists. The complexity of multi-agent interactions demands continuous, real-time monitoring systems capable…",
+      "authors": [
+        "Tam Bang",
+        "Hussam Abubakr",
+        "Emiliano de la Garza Villarreal",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.16156v1",
+      "published": "2026-07-17T17:35:23Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Learning Standard Model structure from LHC data with Riemannian flow matching",
+      "summary": "In this work we demonstrate that a single transformer-based generative model can capture Standard Model structure spanning five decades of invariant mass, from the sub-GeV regime to the TeV continuum, a range that no single Monte Carlo sample covers. To achieve this we design \\te…",
+      "authors": [
+        "Midori Kato",
+        "Kevin A. Urquía-Calderón",
+        "Inar Timiryasov",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.16144v1",
+      "published": "2026-07-17T17:23:22Z",
+      "category": "hep-ph"
+    },
+    {
+      "title": "Improving Improved Kernel PLS",
+      "summary": "Improved Kernel Partial Least Squares (IKPLS) algorithms 1 and 2 are among the fastest PLS calibration algorithms. This article focuses on two shared steps, the computation of the $\\mathbf{X}$ rotations, $\\mathbf{R}$, and the $\\mathbf{Y}$ loadings, $\\mathbf{Q}$, and accelerates b…",
+      "authors": [
+        "Ole-Christian Galbo Engstrøm"
+      ],
+      "link": "http://arxiv.org/abs/2607.16138v1",
+      "published": "2026-07-17T17:19:04Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+      "summary": "LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks. However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsistently across settings. Here, we provide an information bottleneck perspective …",
+      "authors": [
+        "Wendi Yu",
+        "Lianhao Zhou",
+        "Xiangjue Dong",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.16133v1",
+      "published": "2026-07-17T17:13:44Z",
+      "category": "cs.LG"
     }
   ]
 }

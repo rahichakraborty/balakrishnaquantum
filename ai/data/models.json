@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-07-19T15:52:50+00:00",
+  "generated_at": "2026-07-20T06:12:36+00:00",
   "items": [
     {
       "id": "thinkingmachines/Inkling",
       "url": "https://huggingface.co/thinkingmachines/Inkling",
       "downloads": 13462,
-      "likes": 1121,
+      "likes": 1168,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "prism-ml/Ternary-Bonsai-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf",
       "downloads": 338945,
-      "likes": 772,
+      "likes": 804,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "prism-ml/Bonsai-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Bonsai-27B-gguf",
       "downloads": 1262894,
-      "likes": 474,
+      "likes": 508,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
       "downloads": 536177,
-      "likes": 4156,
+      "likes": 4179,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "baidu/Unlimited-OCR",
+      "url": "https://huggingface.co/baidu/Unlimited-OCR",
+      "downloads": 2122848,
+      "likes": 2219,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
       "url": "https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
       "downloads": 2118995,
-      "likes": 2330,
+      "likes": 2353,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "conradlocke/krea2-identity-edit",
       "url": "https://huggingface.co/conradlocke/krea2-identity-edit",
       "downloads": 0,
-      "likes": 413,
+      "likes": 429,
       "pipeline_tag": null
-    },
-    {
-      "id": "bottlecapai/ThinkingCap-Qwen3.6-27B",
-      "url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B",
-      "downloads": 10647,
-      "likes": 454,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "ATH-MaaS/OvisOCR2",
       "url": "https://huggingface.co/ATH-MaaS/OvisOCR2",
       "downloads": 14587,
-      "likes": 185,
+      "likes": 199,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "bottlecapai/ThinkingCap-Qwen3.6-27B",
+      "url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B",
+      "downloads": 10647,
+      "likes": 466,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
       "url": "https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
       "downloads": 2084530,
-      "likes": 2888,
+      "likes": 2906,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "OpenMOSS-Team/MOSS-Transcribe-Diarize",
-      "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize",
-      "downloads": 87533,
-      "likes": 273,
-      "pipeline_tag": "audio-text-to-text"
     }
   ]
 }

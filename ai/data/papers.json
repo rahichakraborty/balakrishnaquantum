@@ -1,157 +1,155 @@
 {
-  "generated_at": "2026-07-20T16:21:11+00:00",
+  "generated_at": "2026-07-21T05:45:20+00:00",
   "items": [
     {
-      "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-      "summary": "Mixture-of-Experts (MoE) is a popular class of large language models (LLMs), offering high efficiency and accuracy. However, in KV-cache-intensive serving scenarios, MoEs often exhibit a tension between the GPU memory requirements of the model weights and the growing KV cache. We…",
+      "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+      "summary": "Human visual similarity judgments are context-dependent. For example, two images may be similar in shape but distinct in color. Existing perceptual similarity metrics, however, collapse these nuances into a single scalar value, offering no mechanism to condition on specific aspec…",
       "authors": [
-        "Yuchen Yang",
-        "Yifan Zhao",
-        "Anisha Dasgupta",
+        "Sheng-Yu Wang",
+        "Yotam Nitzan",
+        "Aaron Hertzmann",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.16184v1",
-      "published": "2026-07-17T17:58:29Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
-      "summary": "To address the escalating energy and latency demands of machine-learning workloads, we introduce a blueprint for an energy-efficient and fast thermodynamic computing stack that leverages stochastic analog processes in physical hardware. In this work, we focus on energy-based ther…",
-      "authors": [
-        "Owen Lockwood",
-        "Jérémy Béjanin",
-        "Joost Bus",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.16183v1",
-      "published": "2026-07-17T17:57:49Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Cluster-Aware Matching via Laplacian Optimal Transport",
-      "summary": "In many applications of matching, the point clouds to be matched are not merely unstructured sets of points but rather samples from distributions with an intrinsic cluster structure. In such cases, as individual points are often interchangeable within a coherent region, finding a…",
-      "authors": [
-        "Gabriel Samberg",
-        "YoonHaeng Hur",
-        "Yuehaw Khoo",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.16178v1",
-      "published": "2026-07-17T17:56:51Z",
-      "category": "stat.ML"
-    },
-    {
-      "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-      "summary": "Reinforcement learning (RL) has recently emerged as a promising feedback control strategy for nonlinear and complex dynamical systems. However, RL algorithms are sample inefficient and require a large number of interaction with the environment to synthesize optimal control strate…",
-      "authors": [
-        "Matteo Tomasetto",
-        "Nicolò Botteghi",
-        "Gabriele Bruni",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.16177v1",
-      "published": "2026-07-17T17:56:05Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-      "summary": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, where vulnerabilities can compromise assets, users, and vehicle operations. These …",
-      "authors": [
-        "Md Erfan",
-        "Ahmed Ryan",
-        "Md Kamal Hossain Chowdhury",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.16175v1",
-      "published": "2026-07-17T17:55:19Z",
-      "category": "cs.CR"
-    },
-    {
-      "title": "When Does Muon Help Agentic Reinforcement Learning?",
-      "summary": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through matched single-seed comparisons with AdamW on ALFWorld using Qwen2.5-0.5B-Instruct. U…",
-      "authors": [
-        "Kai Ruan",
-        "Jinghao Lin",
-        "Zihe Huang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.16169v1",
-      "published": "2026-07-17T17:49:05Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Behaviour-Conditioned Neural Processes for Adaptive Residential Short-Term Load Forecasting",
-      "summary": "Residential short-term load forecasting (STLF) is challenging because household demand is heterogeneous, temporally variable, and shaped by diverse behavioural routines. This work investigates whether inferred behavioural structure can be embedded within the forecasting mechanism…",
-      "authors": [
-        "Ramin Soleimani",
-        "Andrea Visentin",
-        "Dirk Pesch"
-      ],
-      "link": "http://arxiv.org/abs/2607.16168v1",
-      "published": "2026-07-17T17:48:22Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "An Exam for Active Observers",
-      "summary": "Human vision is a closed loop: gaze is continuously redirected by intermediate hypotheses rather than a single snapshot. Decades of psychophysics and cognitive science have argued that this active observation is essential for a wide range of tasks. Whether today's multimodal larg…",
-      "authors": [
-        "Jiarui Zhang",
-        "Muzi Tao",
-        "Shangshang Wang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.16165v1",
-      "published": "2026-07-17T17:46:23Z",
+      "link": "http://arxiv.org/abs/2607.18237v1",
+      "published": "2026-07-20T17:59:51Z",
       "category": "cs.CV"
     },
     {
-      "title": "PRISA: Proactive Infrastructure LiDAR Framework for Intersection Safety Assessment",
-      "summary": "Urban intersections are among the most hazardous locations in road networks, posing significant risks to vehicles and vulnerable road users (VRUs) such as pedestrians and cyclists. The complexity of multi-agent interactions demands continuous, real-time monitoring systems capable…",
+      "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+      "summary": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones trained from scratch, sacrificing both fine-…",
       "authors": [
-        "Tam Bang",
-        "Hussam Abubakr",
-        "Emiliano de la Garza Villarreal",
+        "Gaoyue Zhou",
+        "Zichen Jeff Cui",
+        "Ada Langford",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.16156v1",
-      "published": "2026-07-17T17:35:23Z",
+      "link": "http://arxiv.org/abs/2607.18236v1",
+      "published": "2026-07-20T17:59:41Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "Automated Discovery Has No Universally Superior Harness",
+      "summary": "Autonomous discovery systems such as OpenEvolve and TTT-Discover are often used as general-purpose harnesses. However, in practice these are composite systems combining several design choices about archives, parent selection, exploration, and budget allocation into a single recip…",
+      "authors": [
+        "Akshat Gupta",
+        "Jermaine Lei",
+        "Alexander Lu",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.18235v1",
+      "published": "2026-07-20T17:59:37Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+      "summary": "Users frequently express their beliefs to large language models (LLMs). In some situations, the LLM should accept these contextual beliefs as true. In others, they should stick to their prior knowledge. Notably, users' expressions of belief (EoBs) can take linguistically diverse …",
+      "authors": [
+        "Kevin Du",
+        "Clara Kümpel",
+        "Michelle Wastl",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.18232v1",
+      "published": "2026-07-20T17:58:31Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs",
+      "summary": "Modern vision-language models (VLMs) have significantly improved image generation and editing capabilities, making pixel-level image tampering detection increasingly important yet challenging under cross-model and out-of-distribution shifts. This work studies domain generalizatio…",
+      "authors": [
+        "Yi Tang",
+        "Xinyi Shang",
+        "Jiacheng Cui",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.18230v1",
+      "published": "2026-07-20T17:58:13Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Logical Judgments Under Pressure: Diagnosing Syllogistic Stability with Learned Soft Prefixes",
+      "summary": "To test how correct logical judgments respond to learned context, we prepend a soft prefix to an exactly labeled syllogistic reasoning benchmark while keeping the model fixed. Soft prefixes are opaque continuous vectors, so we characterize them through the behavior they induce ac…",
+      "authors": [
+        "Brian K Chen"
+      ],
+      "link": "http://arxiv.org/abs/2607.18228v1",
+      "published": "2026-07-20T17:58:05Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Causal Discovery on Irregular Time Series",
+      "summary": "Causal discovery methods have shown strong performance in temporal systems, but they typically rely on regular and discrete lag structures, limiting their applicability to regularly sampled data. However, many real-world tasks require dealing with irregularly sampled streams of e…",
+      "authors": [
+        "Martim Penim",
+        "Ricardo Ribeiro Pereira",
+        "Jacopo Bono",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.18226v1",
+      "published": "2026-07-20T17:57:45Z",
       "category": "cs.LG"
     },
     {
-      "title": "Learning Standard Model structure from LHC data with Riemannian flow matching",
-      "summary": "In this work we demonstrate that a single transformer-based generative model can capture Standard Model structure spanning five decades of invariant mass, from the sub-GeV regime to the TeV continuum, a range that no single Monte Carlo sample covers. To achieve this we design \\te…",
+      "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+      "summary": "We propose one-step and two-step methods for policy learning with retrieval-augmented generation (RAG). We formulate RAG-based action selection under the potential outcome framework. In the two-step method, vector search retrieves action-specific neighboring evidence in an embedd…",
       "authors": [
-        "Midori Kato",
-        "Kevin A. Urquía-Calderón",
-        "Inar Timiryasov",
-        "et al."
+        "Masahiro Kato",
+        "Taka Kato"
       ],
-      "link": "http://arxiv.org/abs/2607.16144v1",
-      "published": "2026-07-17T17:23:22Z",
-      "category": "hep-ph"
+      "link": "http://arxiv.org/abs/2607.18225v1",
+      "published": "2026-07-20T17:57:20Z",
+      "category": "econ.EM"
     },
     {
-      "title": "Improving Improved Kernel PLS",
-      "summary": "Improved Kernel Partial Least Squares (IKPLS) algorithms 1 and 2 are among the fastest PLS calibration algorithms. This article focuses on two shared steps, the computation of the $\\mathbf{X}$ rotations, $\\mathbf{R}$, and the $\\mathbf{Y}$ loadings, $\\mathbf{Q}$, and accelerates b…",
+      "title": "GigaPath-Flash and GigaTIME-Flash: Efficient Pathology Foundation Models for Whole-Slide and Tumor Microenvironment Analysis",
+      "summary": "Foundation models have emerged as a driving force in computational pathology, with the potential to transform cancer diagnosis, prognosis, and treatment selection by learning transferable representations from large-scale histopathology data. A growing landscape of pathology found…",
       "authors": [
-        "Ole-Christian Galbo Engstrøm"
-      ],
-      "link": "http://arxiv.org/abs/2607.16138v1",
-      "published": "2026-07-17T17:19:04Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
-      "summary": "LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks. However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsistently across settings. Here, we provide an information bottleneck perspective …",
-      "authors": [
-        "Wendi Yu",
-        "Lianhao Zhou",
-        "Xiangjue Dong",
+        "Naoto Usuyama",
+        "Jeya Maria Jose Valanarasu",
+        "Sicong Yao",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.16133v1",
-      "published": "2026-07-17T17:13:44Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2607.18218v1",
+      "published": "2026-07-20T17:52:33Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+      "summary": "Pruning long context for coding agents has been a vital technology for efficient context management. While existing context pruning methods such as SWE-Pruner realize this by attaching a separate code classifier, we find the agent itself encodes internal representations indicatin…",
+      "authors": [
+        "Yuhang Wang",
+        "Yuling Shi",
+        "Shaoqiu Zhang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.18213v1",
+      "published": "2026-07-20T17:47:44Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Unveiling Invariant and Transferable Latent Factors Across Heterogeneous Environments via ATLAS",
+      "summary": "This paper considers a multi-environment factor model in which high-dimensional covariates are collected from heterogeneous environments, with auxiliary labels available in a subset of these environments. The joint distribution of the covariates may vary across environments, wher…",
+      "authors": [
+        "Yihong Gu",
+        "Katherine Liao",
+        "Tianxi Cai"
+      ],
+      "link": "http://arxiv.org/abs/2607.18209v1",
+      "published": "2026-07-20T17:44:57Z",
+      "category": "math.ST"
+    },
+    {
+      "title": "Learning Adaptive Safety Margins for Visual Navigation",
+      "summary": "Robots in cluttered indoor spaces often fail not because they cannot generate collision-free paths, but because a fixed safety margin is mis-calibrated: conservative margins cause detours and timeouts, while permissive margins lead to near-boundary shortcuts under perception bias…",
+      "authors": [
+        "Junyi Hu",
+        "Shuaihang Yuan",
+        "Geeta Chandra Raju Bethala",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.18200v1",
+      "published": "2026-07-20T17:40:25Z",
+      "category": "cs.RO"
     }
   ]
 }

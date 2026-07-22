@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-07-21T16:19:35+00:00",
+  "generated_at": "2026-07-22T05:44:43+00:00",
   "items": [
     {
       "id": "thinkingmachines/Inkling",
       "url": "https://huggingface.co/thinkingmachines/Inkling",
       "downloads": 16441,
-      "likes": 1326,
+      "likes": 1377,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "prism-ml/Ternary-Bonsai-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf",
       "downloads": 432196,
-      "likes": 885,
+      "likes": 903,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "baidu/Unlimited-OCR",
       "url": "https://huggingface.co/baidu/Unlimited-OCR",
       "downloads": 2237351,
-      "likes": 2567,
+      "likes": 2624,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "reteetzad/Kimi-K3",
+      "url": "https://huggingface.co/reteetzad/Kimi-K3",
+      "downloads": 0,
+      "likes": 483,
+      "pipeline_tag": null
     },
     {
       "id": "prism-ml/Bonsai-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Bonsai-27B-gguf",
       "downloads": 1404962,
-      "likes": 564,
+      "likes": 572,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
       "downloads": 545109,
-      "likes": 4256,
+      "likes": 4290,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "downloads": 62842,
-      "likes": 216,
+      "likes": 261,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "poolside/Laguna-S-2.1",
+      "url": "https://huggingface.co/poolside/Laguna-S-2.1",
+      "downloads": 3056,
+      "likes": 226,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+      "url": "https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+      "downloads": 1997690,
+      "likes": 2980,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
       "url": "https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
       "downloads": 2133420,
-      "likes": 2381,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "conradlocke/krea2-identity-edit",
-      "url": "https://huggingface.co/conradlocke/krea2-identity-edit",
-      "downloads": 0,
-      "likes": 469,
-      "pipeline_tag": null
-    },
-    {
-      "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
-      "url": "https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
-      "downloads": 1997690,
-      "likes": 2957,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "ATH-MaaS/OvisOCR2",
-      "url": "https://huggingface.co/ATH-MaaS/OvisOCR2",
-      "downloads": 17162,
-      "likes": 231,
+      "likes": 2393,
       "pipeline_tag": "image-text-to-text"
     }
   ]

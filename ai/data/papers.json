@@ -1,155 +1,157 @@
 {
-  "generated_at": "2026-07-21T16:19:28+00:00",
+  "generated_at": "2026-07-22T05:44:35+00:00",
   "items": [
     {
-      "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
-      "summary": "Human visual similarity judgments are context-dependent. For example, two images may be similar in shape but distinct in color. Existing perceptual similarity metrics, however, collapse these nuances into a single scalar value, offering no mechanism to condition on specific aspec…",
+      "title": "Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning",
+      "summary": "Large language models that generate step-by-step reasoning traces have achieved strong performance on complex tasks, and extending them to long-context settings has emerged as an important frontier. However, we identify a critical failure mode in this regime: \\emph{repetitive cop…",
       "authors": [
-        "Sheng-Yu Wang",
-        "Yotam Nitzan",
-        "Aaron Hertzmann",
+        "Lizhe Fang",
+        "Weizhou Shen",
+        "Tianyi Tang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.18237v1",
-      "published": "2026-07-20T17:59:51Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
-      "summary": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones trained from scratch, sacrificing both fine-…",
-      "authors": [
-        "Gaoyue Zhou",
-        "Zichen Jeff Cui",
-        "Ada Langford",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.18236v1",
-      "published": "2026-07-20T17:59:41Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Automated Discovery Has No Universally Superior Harness",
-      "summary": "Autonomous discovery systems such as OpenEvolve and TTT-Discover are often used as general-purpose harnesses. However, in practice these are composite systems combining several design choices about archives, parent selection, exploration, and budget allocation into a single recip…",
-      "authors": [
-        "Akshat Gupta",
-        "Jermaine Lei",
-        "Alexander Lu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.18235v1",
-      "published": "2026-07-20T17:59:37Z",
+      "link": "http://arxiv.org/abs/2607.19345v1",
+      "published": "2026-07-21T17:59:21Z",
       "category": "cs.CL"
     },
     {
-      "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
-      "summary": "Users frequently express their beliefs to large language models (LLMs). In some situations, the LLM should accept these contextual beliefs as true. In others, they should stick to their prior knowledge. Notably, users' expressions of belief (EoBs) can take linguistically diverse …",
+      "title": "Appearance Pointers -- Multimodal Region Control of Diffusion Transformers",
+      "summary": "Controllable image generation remains challenging for creative professionals, who often require precise regional control over materials, object identities, and spatial arrangements that cannot be reliably achieved through text prompting alone. Diffusion Transformers (DiTs) can na…",
       "authors": [
-        "Kevin Du",
-        "Clara Kümpel",
-        "Michelle Wastl",
+        "Rahul Sajnani",
+        "Yulia Gryaditskaya",
+        "Radomír Měch",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.18232v1",
-      "published": "2026-07-20T17:58:31Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs",
-      "summary": "Modern vision-language models (VLMs) have significantly improved image generation and editing capabilities, making pixel-level image tampering detection increasingly important yet challenging under cross-model and out-of-distribution shifts. This work studies domain generalizatio…",
-      "authors": [
-        "Yi Tang",
-        "Xinyi Shang",
-        "Jiacheng Cui",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.18230v1",
-      "published": "2026-07-20T17:58:13Z",
+      "link": "http://arxiv.org/abs/2607.19344v1",
+      "published": "2026-07-21T17:59:12Z",
       "category": "cs.CV"
     },
     {
-      "title": "Logical Judgments Under Pressure: Diagnosing Syllogistic Stability with Learned Soft Prefixes",
-      "summary": "To test how correct logical judgments respond to learned context, we prepend a soft prefix to an exactly labeled syllogistic reasoning benchmark while keeping the model fixed. Soft prefixes are opaque continuous vectors, so we characterize them through the behavior they induce ac…",
+      "title": "CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents",
+      "summary": "Coding agents increasingly operate in executable environments where a failed attempt produces actionable feedback rather than merely an incorrect answer. Existing cost-aware systems typically treat such failures as cascade decisions: try a cheap model first, then escalate hard ca…",
       "authors": [
-        "Brian K Chen"
+        "Qijia He",
+        "Jiayi Cheng",
+        "Chenqian Le",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.18228v1",
-      "published": "2026-07-20T17:58:05Z",
+      "link": "http://arxiv.org/abs/2607.19338v1",
+      "published": "2026-07-21T17:56:49Z",
       "category": "cs.AI"
     },
     {
-      "title": "Causal Discovery on Irregular Time Series",
-      "summary": "Causal discovery methods have shown strong performance in temporal systems, but they typically rely on regular and discrete lag structures, limiting their applicability to regularly sampled data. However, many real-world tasks require dealing with irregularly sampled streams of e…",
+      "title": "Agents in the Wild: Where Research Meets Deployment",
+      "summary": "Agentic systems large language model (LLM) based architectures capable of reasoning, planning, acting, and coordinating with tools and other agents are rapidly transitioning from research prototypes to production scale deployments across domains such as software engineering, scie…",
       "authors": [
-        "Martim Penim",
-        "Ricardo Ribeiro Pereira",
-        "Jacopo Bono",
+        "Grace Hui Yang",
+        "Pranav N. Venkit",
+        "Hooman Sedghamiz",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.18226v1",
-      "published": "2026-07-20T17:57:45Z",
+      "link": "http://arxiv.org/abs/2607.19336v1",
+      "published": "2026-07-21T17:55:10Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "1-Lipschitz Neural Networks on Hadamard Manifolds",
+      "summary": "Controlling the Lipschitz constant of a neural network is a standard way to promote robustness and stability. Most existing constraining strategies are designed for Euclidean spaces. In this work, we construct and analyze a class of 1-Lipschitz neural networks on Hadamard manifol…",
+      "authors": [
+        "Davide Murari",
+        "Marta Ghirardelli",
+        "Ben Adcock",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.19335v1",
+      "published": "2026-07-21T17:54:34Z",
+      "category": "math.NA"
+    },
+    {
+      "title": "Fundamental limits of distributed multiclass classification from simple binary decisions",
+      "summary": "We consider the problem of constructing a $K$-class classifier from the combination of $O(\\log K)$ simple binary classifiers -- this is a natural paradigm to construct a sophisticated classifier in a distributed manner with each agent performing a relatively straightforward task.…",
+      "authors": [
+        "Ioannis Papageorgiou",
+        "Srinivas Nomula",
+        "Ayalvadi Ganesh",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.19334v1",
+      "published": "2026-07-21T17:53:44Z",
+      "category": "stat.ML"
+    },
+    {
+      "title": "Provable diffusion-based posterior sampling for linear inverse problems via DDIM",
+      "summary": "Diffusion-based methods have achieved remarkable empirical success in solving inverse problems. However, many existing posterior samplers either lack rigorous theoretical guarantees or incur substantial computational overhead. We propose a simple and efficient algorithm, called \\…",
+      "authors": [
+        "Yuchen Jiao",
+        "Na Li",
+        "Changxiao Cai",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.19333v1",
+      "published": "2026-07-21T17:53:36Z",
       "category": "cs.LG"
     },
     {
-      "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
-      "summary": "We propose one-step and two-step methods for policy learning with retrieval-augmented generation (RAG). We formulate RAG-based action selection under the potential outcome framework. In the two-step method, vector search retrieves action-specific neighboring evidence in an embedd…",
+      "title": "ROMS-IMLE: A Minimalist Approach to Competitive Single-Step Generative Modelling",
+      "summary": "Generative models have undergone many generations of evolution, from VAEs/GANs to diffusion/flow matching. Along the way, the underlying techniques have become more complicated and various beliefs about what drives strong empirical performance have taken hold. Due to the success …",
       "authors": [
-        "Masahiro Kato",
-        "Taka Kato"
+        "Chirag Vashist",
+        "Ke Li"
       ],
-      "link": "http://arxiv.org/abs/2607.18225v1",
-      "published": "2026-07-20T17:57:20Z",
-      "category": "econ.EM"
+      "link": "http://arxiv.org/abs/2607.19332v1",
+      "published": "2026-07-21T17:51:38Z",
+      "category": "cs.LG"
     },
     {
-      "title": "GigaPath-Flash and GigaTIME-Flash: Efficient Pathology Foundation Models for Whole-Slide and Tumor Microenvironment Analysis",
-      "summary": "Foundation models have emerged as a driving force in computational pathology, with the potential to transform cancer diagnosis, prognosis, and treatment selection by learning transferable representations from large-scale histopathology data. A growing landscape of pathology found…",
+      "title": "ISO: An RLVR-Native Optimization Stack",
+      "summary": "Reinforcement learning with verifiable rewards (RLVR) is rapidly advancing the reasoning capabilities of language models, yet the optimization layer that converts reward feedback into weight-space updates remains poorly understood. Building on our prior analysis (Zhu et al., 2025…",
       "authors": [
-        "Naoto Usuyama",
-        "Jeya Maria Jose Valanarasu",
-        "Sicong Yao",
+        "Hanqing Zhu",
+        "Wenyan Cong",
+        "Zhizhou Sha",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.18218v1",
-      "published": "2026-07-20T17:52:33Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2607.19331v1",
+      "published": "2026-07-21T17:51:36Z",
+      "category": "cs.LG"
     },
     {
-      "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
-      "summary": "Pruning long context for coding agents has been a vital technology for efficient context management. While existing context pruning methods such as SWE-Pruner realize this by attaching a separate code classifier, we find the agent itself encodes internal representations indicatin…",
+      "title": "Associative Emotional Learning in Convolutional Neural Networks",
+      "summary": "Associative emotional learning enables organisms to adaptively link pleasant or unpleasant outcomes to the presence of predictive stimuli. Whereas computational models such as the Rescorla-Wagner model have shed light on this important function, the limitations of these models ar…",
       "authors": [
-        "Yuhang Wang",
-        "Yuling Shi",
-        "Shaoqiu Zhang",
+        "Seowung Leem",
+        "Andreas Keil",
+        "Mingzhou Ding",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.18213v1",
-      "published": "2026-07-20T17:47:44Z",
+      "link": "http://arxiv.org/abs/2607.19327v1",
+      "published": "2026-07-21T17:49:19Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Selective State-Space Adaptation and Retrieval for Language Model Reasoning",
+      "summary": "Low-rank adaptation introduces a static learned update applied identically to every input. The update provides task-level adaptation but does not explicitly represent token-level or instance-level state variation. A family of adapters is proposed that introduces selective state-s…",
+      "authors": [
+        "Atahan Dokme",
+        "Larry Heck"
+      ],
+      "link": "http://arxiv.org/abs/2607.19326v1",
+      "published": "2026-07-21T17:47:57Z",
       "category": "cs.CL"
     },
     {
-      "title": "Unveiling Invariant and Transferable Latent Factors Across Heterogeneous Environments via ATLAS",
-      "summary": "This paper considers a multi-environment factor model in which high-dimensional covariates are collected from heterogeneous environments, with auxiliary labels available in a subset of these environments. The joint distribution of the covariates may vary across environments, wher…",
+      "title": "Two-Level Meta-Rubrics for Evaluating Open-Ended Generation: GAMUT, a Benchmark for Factual Completeness",
+      "summary": "Evaluating the factuality of long-form generations has focused predominantly on precision, measuring whether the claims a model makes are correct. The dominant decompose-search-verify pipeline catches incorrect claims well but says little about whether a response contains all the…",
       "authors": [
-        "Yihong Gu",
-        "Katherine Liao",
-        "Tianxi Cai"
-      ],
-      "link": "http://arxiv.org/abs/2607.18209v1",
-      "published": "2026-07-20T17:44:57Z",
-      "category": "math.ST"
-    },
-    {
-      "title": "Learning Adaptive Safety Margins for Visual Navigation",
-      "summary": "Robots in cluttered indoor spaces often fail not because they cannot generate collision-free paths, but because a fixed safety margin is mis-calibrated: conservative margins cause detours and timeouts, while permissive margins lead to near-boundary shortcuts under perception bias…",
-      "authors": [
-        "Junyi Hu",
-        "Shuaihang Yuan",
-        "Geeta Chandra Raju Bethala",
+        "Xilun Chen",
+        "Zhaleh Feizollahi",
+        "Ross Goodwin",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.18200v1",
-      "published": "2026-07-20T17:40:25Z",
-      "category": "cs.RO"
+      "link": "http://arxiv.org/abs/2607.19322v1",
+      "published": "2026-07-21T17:42:50Z",
+      "category": "cs.CL"
     }
   ]
 }

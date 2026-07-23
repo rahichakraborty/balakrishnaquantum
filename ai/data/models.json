@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-07-23T05:49:15+00:00",
+  "generated_at": "2026-07-23T16:23:26+00:00",
   "items": [
-    {
-      "id": "thinkingmachines/Inkling",
-      "url": "https://huggingface.co/thinkingmachines/Inkling",
-      "downloads": 16441,
-      "likes": 1468,
-      "pipeline_tag": "image-text-to-text"
-    },
     {
       "id": "baidu/Unlimited-OCR",
       "url": "https://huggingface.co/baidu/Unlimited-OCR",
-      "downloads": 2237351,
-      "likes": 2773,
+      "downloads": 2414259,
+      "likes": 2837,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "prism-ml/Ternary-Bonsai-27B-gguf",
-      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf",
-      "downloads": 432196,
-      "likes": 953,
-      "pipeline_tag": "text-generation"
+      "id": "thinkingmachines/Inkling",
+      "url": "https://huggingface.co/thinkingmachines/Inkling",
+      "downloads": 24669,
+      "likes": 1488,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "poolside/Laguna-S-2.1",
       "url": "https://huggingface.co/poolside/Laguna-S-2.1",
-      "downloads": 3056,
-      "likes": 416,
+      "downloads": 13285,
+      "likes": 478,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "prism-ml/Ternary-Bonsai-27B-gguf",
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf",
+      "downloads": 576083,
+      "likes": 969,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
-      "downloads": 62842,
-      "likes": 337,
+      "downloads": 334847,
+      "likes": 376,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "upstage/Solar-Open2-250B",
       "url": "https://huggingface.co/upstage/Solar-Open2-250B",
-      "downloads": 0,
-      "likes": 350,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "prism-ml/Bonsai-27B-gguf",
-      "url": "https://huggingface.co/prism-ml/Bonsai-27B-gguf",
-      "downloads": 1404962,
-      "likes": 602,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "zai-org/GLM-5.2",
-      "url": "https://huggingface.co/zai-org/GLM-5.2",
-      "downloads": 545109,
-      "likes": 4346,
+      "downloads": 362,
+      "likes": 396,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://huggingface.co/Nanbeige/Nanbeige4.2-3B",
-      "downloads": 0,
-      "likes": 254,
+      "downloads": 4532,
+      "likes": 296,
       "pipeline_tag": "text-generation"
     },
     {
-      "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
-      "url": "https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
-      "downloads": 1997690,
-      "likes": 3011,
-      "pipeline_tag": "image-text-to-text"
+      "id": "zai-org/GLM-5.2",
+      "url": "https://huggingface.co/zai-org/GLM-5.2",
+      "downloads": 596442,
+      "likes": 4358,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "prism-ml/Bonsai-27B-gguf",
+      "url": "https://huggingface.co/prism-ml/Bonsai-27B-gguf",
+      "downloads": 1910116,
+      "likes": 612,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "conradlocke/krea2-identity-edit",
+      "url": "https://huggingface.co/conradlocke/krea2-identity-edit",
+      "downloads": 0,
+      "likes": 515,
+      "pipeline_tag": null
     }
   ]
 }

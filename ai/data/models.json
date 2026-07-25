@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-07-25T05:39:30+00:00",
+  "generated_at": "2026-07-25T16:00:08+00:00",
   "items": [
     {
       "id": "baidu/Unlimited-OCR",
       "url": "https://huggingface.co/baidu/Unlimited-OCR",
-      "downloads": 2500391,
-      "likes": 3026,
+      "downloads": 2564264,
+      "likes": 3069,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "poolside/Laguna-S-2.1",
       "url": "https://huggingface.co/poolside/Laguna-S-2.1",
-      "downloads": 28992,
-      "likes": 617,
+      "downloads": 45260,
+      "likes": 646,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "upstage/Solar-Open2-250B",
+      "url": "https://huggingface.co/upstage/Solar-Open2-250B",
+      "downloads": 2784,
+      "likes": 555,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "thinkingmachines/Inkling",
       "url": "https://huggingface.co/thinkingmachines/Inkling",
-      "downloads": 27883,
-      "likes": 1547,
+      "downloads": 31575,
+      "likes": 1560,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "upstage/Solar-Open2-250B",
-      "url": "https://huggingface.co/upstage/Solar-Open2-250B",
-      "downloads": 1106,
-      "likes": 543,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
-      "downloads": 407421,
-      "likes": 494,
+      "downloads": 483845,
+      "likes": 519,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://huggingface.co/Nanbeige/Nanbeige4.2-3B",
-      "downloads": 8169,
-      "likes": 374,
+      "downloads": 11573,
+      "likes": 388,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "prism-ml/Ternary-Bonsai-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf",
-      "downloads": 595415,
-      "likes": 1008,
+      "downloads": 611685,
+      "likes": 1020,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
-      "downloads": 667403,
-      "likes": 4420,
+      "downloads": 707029,
+      "likes": 4437,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "microsoft/Mage-Flow",
       "url": "https://huggingface.co/microsoft/Mage-Flow",
-      "downloads": 891,
-      "likes": 240,
+      "downloads": 1156,
+      "likes": 260,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "prism-ml/Bonsai-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Bonsai-27B-gguf",
-      "downloads": 2028115,
-      "likes": 632,
+      "downloads": 2114963,
+      "likes": 636,
       "pipeline_tag": "text-generation"
     }
   ]

@@ -1,5 +1,5 @@
 // ===== PNL Analytics page logic (Delta Exchange account_analytics-style dashboard) =====
-let netEquityChart, equityChart, realizedChart, volumeChart, feesChart;
+let netEquityChart, equityChart, realizedChart, netBarChart, volumeChart, feesChart;
 let activeRange = "all";     // "7" | "30" | "90" | "all" | "custom" — for the Trading Equity chart
 let activeInstr = "all";     // "all" | "futures" | "options" — for the bottom charts
 let customRange = null;      // {type:"fixed", start, end} | {type:"last", days} — set via the Customize popover
@@ -123,6 +123,7 @@ function render() {
   document.getElementById("d-rr").className = "stat-value " + (rr != null ? (rr >= 1.5 ? "up" : rr < 1 ? "down" : "") : "");
 
   renderRealizedChart(instrTrades);
+  renderNetBarChart(instrTrades);
   renderVolumeChart(instrTrades);
   renderFeesChart(instrTrades);
 }
@@ -218,6 +219,29 @@ function renderRealizedChart(trades) {
   };
   if (realizedChart) { realizedChart.data = data; realizedChart.options = opts; realizedChart.update(); }
   else realizedChart = new Chart(ctx, { type: "bar", data, options: opts });
+}
+
+function renderNetBarChart(trades) {
+  const ctx = document.getElementById("netBarChart");
+  const rows = bucketWeekly(trades, t => t.pnl - (t.fees || 0));
+  const data = {
+    labels: rows.length ? rows.map(r => r.label) : ["—"],
+    datasets: [{
+      data: rows.length ? rows.map(r => r.value) : [0],
+      backgroundColor: rows.map(r => (r.value >= 0 ? "#2dd4bf" : "#f87171")),
+      borderRadius: 3,
+    }]
+  };
+  const opts = {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
+      y: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { color: "#232b36" } }
+    }
+  };
+  if (netBarChart) { netBarChart.data = data; netBarChart.options = opts; netBarChart.update(); }
+  else netBarChart = new Chart(ctx, { type: "bar", data, options: opts });
 }
 
 function renderVolumeChart(trades) {

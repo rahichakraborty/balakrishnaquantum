@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PNL Analytics — Balakrishna Quantum</title>
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=9">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
   .tab-btn{ font-family:var(--mono); font-size:12px; font-weight:600; color:var(--text-dim); background:transparent; border:1px solid var(--border); border-radius:var(--radius-sm); padding:7px 14px; cursor:pointer; }
@@ -202,18 +202,26 @@
   <div class="grid grid-2" style="gap:18px;">
     <div class="card">
       <h3 style="margin-top:0;">Realized PNL</h3>
+      <div class="mini-note" style="margin-top:-8px;margin-bottom:10px;">Gross — before fees</div>
       <canvas id="realizedChart" height="150"></canvas>
     </div>
+    <div class="card">
+      <h3 style="margin-top:0;">Net PNL</h3>
+      <div class="mini-note" style="margin-top:-8px;margin-bottom:10px;">After fees — what you actually kept</div>
+      <canvas id="netBarChart" height="150"></canvas>
+    </div>
+  </div>
+  <div class="grid grid-2" style="gap:18px;margin-top:18px;">
     <div class="card">
       <h3 style="margin-top:0;">Volume Traded</h3>
       <canvas id="volumeChart" height="150"></canvas>
     </div>
+    <div class="card">
+      <h3 style="margin-top:0;">Fees Paid</h3>
+      <canvas id="feesChart" height="150"></canvas>
+    </div>
   </div>
-  <div class="card" style="margin-top:18px;">
-    <h3 style="margin-top:0;">Fees Paid</h3>
-    <canvas id="feesChart" height="120"></canvas>
-    <div class="mini-note">Funding-rate history isn't included in a Delta order-history export, so a Funding chart (shown on Delta's own page) can't be reproduced here from this file.</div>
-  </div>
+  <div class="mini-note" style="margin-top:10px;">Funding-rate history isn't included in a Delta order-history export, so a Funding chart (shown on Delta's own page) can't be reproduced here from this file.</div>
 </section>
 
 <footer class="container">
@@ -224,6 +232,6 @@
 </footer>
 
 <script src="shared.js?v=8"></script>
-<script src="pnl-analytics.js?v=8"></script>
+<script src="pnl-analytics.js?v=9"></script>
 </body>
 </html>

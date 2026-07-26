@@ -4,6 +4,8 @@ let equityModalChart;
 let equityTrades = []; // parallel array to the equity chart's points, for tooltip lookups
 let calViewYear, calViewMonth; // 0-indexed month, initialized on first render from trade data
 let calDayIndex = {}; // date (YYYY-MM-DD) -> trades on that date, rebuilt every render
+let lastAllTrades = []; // full (unfiltered) trade list from the last render(), used by column filters
+let columnFilters = {}; // { date, symbol, side, session, setup, tag, pnl, source } -> current filter value
 
 const MONTH_NAMES = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
@@ -144,39 +146,10 @@ function render() {
 
   document.getElementById("tradeCountPill").textContent = `${stats.total} trades`;
 
-  // Table
-  const tbody = document.getElementById("tradeTableBody");
-  tbody.innerHTML = "";
-  const emptyState = document.getElementById("emptyState");
-  if (!trades.length) {
-    emptyState.style.display = "block";
-  } else {
-    emptyState.style.display = "none";
-    trades.slice().reverse().forEach(t => {
-      const tr = document.createElement("tr");
-      const sourceLabel = t.source === "delta_import" ? "Delta CSV" : t.source === "demo" ? "Demo" : "Manual";
-      const netPnl = t.pnl - (t.fees || 0);
-      tr.innerHTML = `
-        <td>${t.date}</td>
-        <td>${t.entryTime || "—"}</td>
-        <td>${t.exitTime || "—"}</td>
-        <td>${t.symbol}</td>
-        <td>${t.side}</td>
-        <td>${t.size != null ? t.size : "—"}</td>
-        <td>${t.entry != null ? t.entry : "—"}</td>
-        <td>${t.exit != null ? t.exit : "—"}</td>
-        <td>${t.duration || "—"}</td>
-        <td>${t.session ? `<span class="tag">${t.session}</span>` : "—"}</td>
-        <td>${t.setup || "—"}</td>
-        <td>${t.mistake && t.mistake !== "None" ? `<span class="tag">${t.mistake}</span>` : "—"}</td>
-        <td class="${netPnl >= 0 ? 'up' : 'down'}">${fmtDual(netPnl)}</td>
-        <td>${t.fees != null ? fmtDualPlain(t.fees) : "—"}</td>
-        <td><span class="tag">${sourceLabel}</span></td>
-        <td><button class="btn btn-ghost btn-sm" data-id="${t.id}" onclick="removeTrade(${t.id})">✕</button></td>
-      `;
-      tbody.appendChild(tr);
-    });
-  }
+  // Table (filterable — see renderTradeTable)
+  lastAllTrades = trades;
+  populateTagFilterOptions(trades);
+  renderTradeTable(trades);
 
   // Equity curve (net of fees — reflects true account balance change)
   let running = 0;
@@ -252,6 +225,93 @@ function render() {
   renderInsights(trades);
   renderCalendar(trades);
 }
+
+// ---- Trade Log column filters ----
+function populateTagFilterOptions(trades) {
+  const select = document.querySelector('.col-filter[data-col="tag"]');
+  if (!select) return;
+  const current = select.value;
+  const tags = Array.from(new Set(trades.map(t => t.mistake).filter(m => m && m !== "None"))).sort();
+  select.innerHTML = `<option value="">All</option>` + tags.map(tag => `<option value="${tag}">${tag}</option>`).join("");
+  if (tags.includes(current)) select.value = current;
+}
+
+function applyColumnFilters(trades) {
+  return trades.filter(t => {
+    if (columnFilters.date && !t.date.toLowerCase().includes(columnFilters.date.toLowerCase())) return false;
+    if (columnFilters.symbol && !(t.symbol || "").toLowerCase().includes(columnFilters.symbol.toLowerCase())) return false;
+    if (columnFilters.side && t.side !== columnFilters.side) return false;
+    if (columnFilters.session && t.session !== columnFilters.session) return false;
+    if (columnFilters.setup && !(t.setup || "").toLowerCase().includes(columnFilters.setup.toLowerCase())) return false;
+    if (columnFilters.tag && t.mistake !== columnFilters.tag) return false;
+    if (columnFilters.pnl) {
+      const netPnl = t.pnl - (t.fees || 0);
+      if (columnFilters.pnl === "win" && netPnl < 0) return false;
+      if (columnFilters.pnl === "loss" && netPnl >= 0) return false;
+    }
+    if (columnFilters.source) {
+      const sourceLabel = t.source === "delta_import" ? "CSV Import" : t.source === "demo" ? "Demo" : "Manual";
+      if (sourceLabel !== columnFilters.source) return false;
+    }
+    return true;
+  });
+}
+
+function renderTradeTable(allTrades) {
+  const trades = applyColumnFilters(allTrades);
+  const tbody = document.getElementById("tradeTableBody");
+  tbody.innerHTML = "";
+  const emptyState = document.getElementById("emptyState");
+  const hasActiveFilters = Object.values(columnFilters).some(v => v);
+  if (!trades.length) {
+    emptyState.style.display = "block";
+    emptyState.textContent = allTrades.length && hasActiveFilters
+      ? "No trades match the current filters."
+      : "No trades logged yet. Add one above, import your CSV, or load demo trades to explore the dashboard.";
+  } else {
+    emptyState.style.display = "none";
+    trades.slice().reverse().forEach(t => {
+      const tr = document.createElement("tr");
+      const sourceLabel = t.source === "delta_import" ? "CSV Import" : t.source === "demo" ? "Demo" : "Manual";
+      const netPnl = t.pnl - (t.fees || 0);
+      tr.innerHTML = `
+        <td>${t.date}</td>
+        <td>${t.entryTime || "—"}</td>
+        <td>${t.exitTime || "—"}</td>
+        <td>${t.symbol}</td>
+        <td>${t.side}</td>
+        <td>${t.size != null ? t.size : "—"}</td>
+        <td>${t.entry != null ? t.entry : "—"}</td>
+        <td>${t.exit != null ? t.exit : "—"}</td>
+        <td>${t.duration || "—"}</td>
+        <td>${t.session ? `<span class="tag">${t.session}</span>` : "—"}</td>
+        <td>${t.setup || "—"}</td>
+        <td>${t.mistake && t.mistake !== "None" ? `<span class="tag">${t.mistake}</span>` : "—"}</td>
+        <td class="${netPnl >= 0 ? 'up' : 'down'}">${fmtDual(netPnl)}</td>
+        <td>${t.fees != null ? fmtDualPlain(t.fees) : "—"}</td>
+        <td><span class="tag">${sourceLabel}</span></td>
+        <td><button class="btn btn-ghost btn-sm" data-id="${t.id}" onclick="removeTrade(${t.id})">✕</button></td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+  const pill = document.getElementById("tradeCountPill");
+  if (pill && hasActiveFilters) pill.textContent = `${trades.length} of ${allTrades.length} trades`;
+  else if (pill) pill.textContent = `${allTrades.length} trades`;
+}
+
+document.querySelectorAll(".col-filter").forEach(el => {
+  const evt = el.tagName === "SELECT" ? "change" : "input";
+  el.addEventListener(evt, () => {
+    columnFilters[el.dataset.col] = el.value;
+    renderTradeTable(lastAllTrades);
+  });
+});
+document.getElementById("clearFiltersBtn").addEventListener("click", () => {
+  columnFilters = {};
+  document.querySelectorAll(".col-filter").forEach(el => { el.value = ""; });
+  renderTradeTable(lastAllTrades);
+});
 
 // ---- Equity curve expand modal ----
 function openEquityModal() {

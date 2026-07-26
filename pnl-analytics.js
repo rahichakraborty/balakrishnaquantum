@@ -190,7 +190,7 @@ function renderNetEquityChart(trades) {
 function renderEquityChart(trades) {
   const ctx = document.getElementById("equityChart");
   let running = 0;
-  const points = trades.map(t => { running += t.pnl; return running; }); // gross, to mirror Delta's own chart
+  const points = trades.map(t => { running += (t.pnl - (t.fees || 0)); return running; }); // net of fees
   const data = {
     labels: trades.length ? trades.map(t => t.date) : ["Start"],
     datasets: [{
@@ -213,7 +213,10 @@ function renderEquityChart(trades) {
           label: (item) => {
             const t = trades[item.dataIndex];
             if (!t) return `Trading Equity: ${fmtDualPlain(item.parsed.y)}`;
-            return [`Trade Gross P&L: ${fmtDual(t.pnl)}`, `Cumulative Trading Equity: ${fmtDualPlain(item.parsed.y)}`];
+            return [
+              `Trade Net P&L: ${fmtDual(t.pnl - (t.fees || 0))}`,
+              `Cumulative Net Equity: ${fmtDualPlain(item.parsed.y)}`,
+            ];
           }
         }
       }

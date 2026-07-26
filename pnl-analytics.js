@@ -1,7 +1,8 @@
 // ===== PNL Analytics page logic (Delta Exchange account_analytics-style dashboard) =====
 let netEquityChart, equityChart, realizedChart, volumeChart, feesChart;
-let activeRange = "all";     // "7" | "30" | "all" — for the Trading Equity chart
+let activeRange = "all";     // "7" | "30" | "90" | "all" | "custom" — for the Trading Equity chart
 let activeInstr = "all";     // "all" | "futures" | "options" — for the bottom charts
+let customRange = null;      // {type:"fixed", start, end} | {type:"last", days} — set via the Customize popover
 
 const isOption = (symbol) => /^[CP]-/.test(symbol || "");
 
@@ -34,13 +35,38 @@ function filterByInstrument(trades) {
 }
 
 function filterByRange(trades) {
-  if (activeRange === "all" || !trades.length) return trades;
-  const days = activeRange === "7" ? 7 : 30;
+  if (!trades.length) return trades;
+
+  if (activeRange === "custom" && customRange) {
+    if (customRange.type === "fixed") {
+      const { start, end } = customRange;
+      return trades.filter(t => (!start || t.date >= start) && (!end || t.date <= end));
+    }
+    if (customRange.type === "last") {
+      const maxDate = trades.reduce((m, t) => (t.date > m ? t.date : m), trades[0].date);
+      const cutoff = new Date(maxDate + "T00:00:00");
+      cutoff.setDate(cutoff.getDate() - customRange.days);
+      const cutoffStr = cutoff.toISOString().slice(0, 10);
+      return trades.filter(t => t.date >= cutoffStr);
+    }
+  }
+
+  if (activeRange === "all") return trades;
+  const days = activeRange === "7" ? 7 : activeRange === "30" ? 30 : activeRange === "90" ? 90 : 30;
   const maxDate = trades.reduce((m, t) => (t.date > m ? t.date : m), trades[0].date);
   const cutoff = new Date(maxDate + "T00:00:00");
   cutoff.setDate(cutoff.getDate() - days);
   const cutoffStr = cutoff.toISOString().slice(0, 10);
   return trades.filter(t => t.date >= cutoffStr);
+}
+
+function rangeLabelText() {
+  if (activeRange === "custom" && customRange) {
+    if (customRange.type === "fixed") return `${customRange.start || "…"} → ${customRange.end || "…"}`;
+    if (customRange.type === "last") return `Last ${customRange.days} days`;
+  }
+  if (activeRange === "all") return "";
+  return `Last ${activeRange} days`;
 }
 
 function render() {
@@ -68,19 +94,24 @@ function render() {
   // ---------- Delta-style: Trading Equity (date-range filtered, gross) ----------
   const rangeTrades = filterByRange(allTrades);
   renderEquityChart(rangeTrades);
+  const rlEl = document.getElementById("rangeLabel");
+  if (rlEl) rlEl.textContent = rangeLabelText();
 
-  // ---------- Delta-style: summary stats row (mirrors Delta's card, gross-based) ----------
-  const instrTrades = filterByInstrument(allTrades);
+  // ---------- Delta-style: summary stats row (range + instrument filtered, gross-based) ----------
+  const instrTrades = filterByInstrument(rangeTrades);
   const wins = instrTrades.filter(t => t.pnl > 0);
   const losses = instrTrades.filter(t => t.pnl <= 0);
   const instrGross = instrTrades.reduce((s, t) => s + t.pnl, 0);
   const instrFees = instrTrades.reduce((s, t) => s + (t.fees || 0), 0);
+  const instrNet = instrGross - instrFees;
   const avgWin = wins.length ? wins.reduce((s, t) => s + t.pnl, 0) / wins.length : 0;
   const avgLoss = losses.length ? losses.reduce((s, t) => s + t.pnl, 0) / losses.length : 0;
   const volume = instrTrades.reduce((s, t) => s + (t.notional || 0), 0);
 
   document.getElementById("d-realized").textContent = fmtDualPlain(instrGross);
   document.getElementById("d-realized").className = "stat-value " + (instrGross >= 0 ? "up" : "down");
+  document.getElementById("d-net").textContent = fmtDualPlain(instrNet);
+  document.getElementById("d-net").className = "stat-value " + (instrNet >= 0 ? "up" : "down");
   document.getElementById("d-winrate").textContent = instrTrades.length ? `${(wins.length / instrTrades.length * 100).toFixed(1)}%` : "0%";
   document.getElementById("d-avgwin").textContent = fmtDualPlain(avgWin);
   document.getElementById("d-avgloss").textContent = fmtDualPlain(avgLoss);
@@ -235,15 +266,78 @@ function renderFeesChart(trades) {
   else feesChart = new Chart(ctx, { type: "bar", data, options: opts });
 }
 
+// ---- Currency toggle (INR / Both / USD) ----
+document.querySelectorAll(".curr-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".curr-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    setCurrencyMode(btn.dataset.mode);
+    render();
+  });
+});
+
 // ---- Range / instrument tab wiring ----
 document.querySelectorAll('.tab-btn[data-range]').forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll('.tab-btn[data-range]').forEach(b => b.classList.remove("active"));
+    document.getElementById("customizeBtn").classList.remove("active");
     btn.classList.add("active");
     activeRange = btn.dataset.range;
+    customRange = null;
     render();
   });
 });
+
+// ---- Customize popover (Fixed start/end date, or Last N days) ----
+const customizeBtn = document.getElementById("customizeBtn");
+const customizePopover = document.getElementById("customizePopover");
+const custTabFixed = document.getElementById("custTabFixed");
+const custTabLast = document.getElementById("custTabLast");
+const custFixedPanel = document.getElementById("custFixedPanel");
+const custLastPanel = document.getElementById("custLastPanel");
+
+customizeBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  customizePopover.style.display = customizePopover.style.display === "none" ? "block" : "none";
+});
+custTabFixed.addEventListener("click", () => {
+  custTabFixed.classList.add("active");
+  custTabLast.classList.remove("active");
+  custFixedPanel.style.display = "block";
+  custLastPanel.style.display = "none";
+});
+custTabLast.addEventListener("click", () => {
+  custTabLast.classList.add("active");
+  custTabFixed.classList.remove("active");
+  custLastPanel.style.display = "block";
+  custFixedPanel.style.display = "none";
+});
+document.getElementById("custCancel").addEventListener("click", () => {
+  customizePopover.style.display = "none";
+});
+document.getElementById("custApply").addEventListener("click", () => {
+  const usingLast = custTabLast.classList.contains("active");
+  if (usingLast) {
+    const days = parseInt(document.getElementById("custDays").value, 10) || 1;
+    customRange = { type: "last", days };
+  } else {
+    const start = document.getElementById("custStart").value;
+    const end = document.getElementById("custEnd").value;
+    if (!start && !end) { customizePopover.style.display = "none"; return; }
+    customRange = { type: "fixed", start, end };
+  }
+  activeRange = "custom";
+  document.querySelectorAll('.tab-btn[data-range]').forEach(b => b.classList.remove("active"));
+  customizeBtn.classList.add("active");
+  customizePopover.style.display = "none";
+  render();
+});
+document.addEventListener("click", (e) => {
+  if (!e.target.closest("#customizePopover") && e.target !== customizeBtn) {
+    customizePopover.style.display = "none";
+  }
+});
+
 document.querySelectorAll('.tab-btn[data-instr]').forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll('.tab-btn[data-instr]').forEach(b => b.classList.remove("active"));

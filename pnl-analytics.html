@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PNL Analytics — Balakrishna Quantum</title>
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
   .tab-btn{ font-family:var(--mono); font-size:12px; font-weight:600; color:var(--text-dim); background:transparent; border:1px solid var(--border); border-radius:var(--radius-sm); padding:7px 14px; cursor:pointer; }
@@ -13,6 +13,9 @@
   .range-row{ display:flex; gap:8px; margin-bottom:16px; }
   .net-hero{ border:1px solid var(--amber-glow); background:linear-gradient(180deg, var(--amber-soft), transparent); }
   .mini-note{ font-size:11.5px; color:var(--text-faint); margin-top:6px; }
+  .curr-btn{ font-family:var(--mono); font-size:11.5px; }
+  .curr-btn.active{ background:var(--amber); color:#0a0d12; }
+  .curr-btn.active:hover{ color:#0a0d12; border-color:var(--amber); }
 </style>
 </head>
 <body>
@@ -32,9 +35,18 @@
 </nav>
 
 <header class="section-sm container">
-  <div class="eyebrow">PNL Analytics · Delta-Style Dashboard</div>
-  <h1 style="font-size:30px;">Your real edge, net of fees — first.</h1>
-  <p style="max-width:680px;">Delta Exchange's own analytics page labels this number "Realized PNL," but it's actually gross — fees aren't subtracted. Drop your Delta order-history CSV below and the first thing you'll see is what you actually kept. Everything below that mirrors Delta's own dashboard layout.</p>
+  <div class="flex-between" style="flex-wrap:wrap;gap:12px;">
+    <div>
+      <div class="eyebrow">PNL Analytics · Delta-Style Dashboard</div>
+      <h1 style="font-size:30px;margin-bottom:8px;">Your real edge, net of fees — first.</h1>
+      <p style="max-width:680px;margin-bottom:0;">Delta Exchange's own analytics page labels this number "Realized PNL," but it's actually gross — fees aren't subtracted. Drop your Delta order-history CSV below and the first thing you'll see is what you actually kept. Everything below that mirrors Delta's own dashboard layout.</p>
+    </div>
+    <div class="currency-toggle" id="currencyToggle" style="display:flex;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;flex-shrink:0;">
+      <button type="button" class="btn btn-ghost btn-sm curr-btn" data-mode="inr" style="border-radius:0;border:none;">INR</button>
+      <button type="button" class="btn btn-ghost btn-sm curr-btn active" data-mode="dual" style="border-radius:0;border:none;border-left:1px solid var(--border);border-right:1px solid var(--border);">Both</button>
+      <button type="button" class="btn btn-ghost btn-sm curr-btn" data-mode="usd" style="border-radius:0;border:none;">USD</button>
+    </div>
+  </div>
 </header>
 
 <section class="container section-sm" style="padding-top:0;">
@@ -103,13 +115,37 @@
   <div class="eyebrow" style="margin-bottom:14px;">Same layout as Delta's PNL Analytics page</div>
 
   <div class="card" style="margin-bottom:18px;">
-    <div class="range-row">
+    <div class="range-row" style="position:relative;">
       <button class="tab-btn" data-range="7">Last 7 days</button>
       <button class="tab-btn" data-range="30">Last 30 days</button>
+      <button class="tab-btn" data-range="90">Last 90 days</button>
       <button class="tab-btn active" data-range="all">All</button>
+      <button class="tab-btn" id="customizeBtn">Customize</button>
+
+      <div id="customizePopover" style="display:none;position:absolute;top:calc(100% + 8px);left:0;z-index:50;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;width:270px;box-shadow:0 10px 30px -8px rgba(0,0,0,.6);">
+        <div class="range-row" style="margin-bottom:12px;">
+          <button class="tab-btn active" id="custTabFixed" style="flex:1;">Fixed</button>
+          <button class="tab-btn" id="custTabLast" style="flex:1;">Last</button>
+        </div>
+        <div id="custFixedPanel">
+          <label style="font-size:11px;color:var(--text-dim);display:block;margin-bottom:4px;">Start Date</label>
+          <input type="date" id="custStart" style="width:100%;margin-bottom:10px;background:var(--card-soft);border:1px solid var(--border);border-radius:6px;padding:7px;color:var(--text);font-family:var(--sans);">
+          <label style="font-size:11px;color:var(--text-dim);display:block;margin-bottom:4px;">End Date</label>
+          <input type="date" id="custEnd" style="width:100%;margin-bottom:10px;background:var(--card-soft);border:1px solid var(--border);border-radius:6px;padding:7px;color:var(--text);font-family:var(--sans);">
+        </div>
+        <div id="custLastPanel" style="display:none;">
+          <label style="font-size:11px;color:var(--text-dim);display:block;margin-bottom:4px;">Days Count</label>
+          <input type="number" id="custDays" min="1" value="14" style="width:100%;margin-bottom:10px;background:var(--card-soft);border:1px solid var(--border);border-radius:6px;padding:7px;color:var(--text);font-family:var(--sans);">
+        </div>
+        <div class="flex gap-8" style="justify-content:flex-end;">
+          <button class="btn btn-ghost btn-sm" id="custCancel">Cancel</button>
+          <button class="btn btn-primary btn-sm" id="custApply">Apply</button>
+        </div>
+      </div>
     </div>
     <div class="flex-between" style="margin-bottom:10px;">
       <h3 style="margin:0;">Trading Equity</h3>
+      <span class="muted" style="font-size:12px;" id="rangeLabel"></span>
     </div>
     <canvas id="equityChart" height="120"></canvas>
     <div class="mini-note">Cumulative gross realized P&amp;L from trades in this file. Delta's own chart also plots deposits/withdrawals/liquidation fees — those aren't present in an order-history export, so this line reflects trading activity only.</div>
@@ -120,6 +156,10 @@
       <div class="stat-label">Total Realized PNL</div>
       <div class="stat-value" id="d-realized">₹0</div>
     </div>
+    <div class="stat-card" style="border-color:var(--amber-glow);">
+      <div class="stat-label">Net PNL (after fees)</div>
+      <div class="stat-value" id="d-net">₹0</div>
+    </div>
     <div class="stat-card">
       <div class="stat-label">Win Rate</div>
       <div class="stat-value" id="d-winrate">0%</div>
@@ -128,12 +168,17 @@
       <div class="stat-label">Average Win</div>
       <div class="stat-value" id="d-avgwin">₹0</div>
     </div>
+  </div>
+  <div class="grid grid-4" style="margin-bottom:18px;">
     <div class="stat-card">
       <div class="stat-label">Average Loss</div>
       <div class="stat-value" id="d-avgloss">₹0</div>
     </div>
-  </div>
-  <div class="grid grid-4" style="margin-bottom:18px;">
+    <div class="stat-card">
+      <div class="stat-label">Avg R:R</div>
+      <div class="stat-value" id="d-rr">—</div>
+      <div class="stat-sub">Avg win ÷ avg loss</div>
+    </div>
     <div class="stat-card">
       <div class="stat-label"># Trades</div>
       <div class="stat-value" id="d-trades">0</div>
@@ -142,15 +187,10 @@
       <div class="stat-label">Total Fees Paid</div>
       <div class="stat-value" id="d-fees">₹0</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-label">Volume Traded</div>
-      <div class="stat-value" id="d-volume">₹0</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-label">Avg R:R</div>
-      <div class="stat-value" id="d-rr">—</div>
-      <div class="stat-sub">Avg win ÷ avg loss</div>
-    </div>
+  </div>
+  <div class="stat-card" style="margin-bottom:18px;">
+    <div class="stat-label">Volume Traded</div>
+    <div class="stat-value" id="d-volume">₹0</div>
   </div>
 
   <div class="range-row">
@@ -183,7 +223,7 @@
   </div>
 </footer>
 
-<script src="shared.js?v=7"></script>
-<script src="pnl-analytics.js?v=7"></script>
+<script src="shared.js?v=8"></script>
+<script src="pnl-analytics.js?v=8"></script>
 </body>
 </html>

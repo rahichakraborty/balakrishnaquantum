@@ -1,5 +1,6 @@
 // ===== BKQ Journal page logic =====
 let equityChart;
+let equityModalChart;
 let equityTrades = []; // parallel array to the equity chart's points, for tooltip lookups
 let calViewYear, calViewMonth; // 0-indexed month, initialized on first render from trade data
 let calDayIndex = {}; // date (YYYY-MM-DD) -> trades on that date, rebuilt every render
@@ -183,13 +184,21 @@ function render() {
   const labels = trades.map(t => t.date);
   equityTrades = trades; // used by the tooltip callback below to look up per-point trade detail
   const ctx = document.getElementById("equityChart");
+  // Color each segment/point green when that trade was a net win, red when a net loss —
+  // makes the curve read at a glance instead of a flat single-color line.
+  const netAt = (i) => { const t = equityTrades[i]; return t ? (t.pnl - (t.fees || 0)) : 0; };
+  const segmentColor = (segCtx) => (netAt(segCtx.p1DataIndex) >= 0 ? "#22c55e" : "#ef4444");
+  const pointColor = (dataCtx) => (netAt(dataCtx.dataIndex) >= 0 ? "#22c55e" : "#ef4444");
   const data = {
     labels: labels.length ? labels : ["Start"],
     datasets: [{
       label: "Equity",
       data: points.length ? points : [0],
-      borderColor: "#d4a017",
-      backgroundColor: "rgba(212,160,23,.12)",
+      borderColor: "#8b93a7",
+      backgroundColor: "rgba(139,147,167,.08)",
+      segment: { borderColor: segmentColor },
+      pointBackgroundColor: pointColor,
+      pointBorderColor: pointColor,
       fill: true,
       tension: 0.25,
       pointRadius: 0,
@@ -243,6 +252,55 @@ function render() {
   renderInsights(trades);
   renderCalendar(trades);
 }
+
+// ---- Equity curve expand modal ----
+function openEquityModal() {
+  if (document.getElementById("equityModalHolder")) return;
+  const holder = document.createElement("div");
+  holder.id = "equityModalHolder";
+  holder.innerHTML = `
+    <div class="modal-backdrop" onclick="closeEquityModal(event)">
+      <div class="modal-box" style="max-width:960px;width:92vw;" onclick="event.stopPropagation();">
+        <div class="flex-between" style="margin-bottom:16px;">
+          <h3 style="margin:0;">Equity Curve</h3>
+          <button class="btn btn-ghost btn-sm" onclick="closeEquityModal(event)">✕</button>
+        </div>
+        <canvas id="equityChartExpanded" height="110"></canvas>
+      </div>
+    </div>`;
+  document.body.appendChild(holder);
+
+  const ctx = document.getElementById("equityChartExpanded");
+  const netAt = (i) => { const t = equityTrades[i]; return t ? (t.pnl - (t.fees || 0)) : 0; };
+  const segmentColor = (segCtx) => (netAt(segCtx.p1DataIndex) >= 0 ? "#22c55e" : "#ef4444");
+  const pointColor = (dataCtx) => (netAt(dataCtx.dataIndex) >= 0 ? "#22c55e" : "#ef4444");
+  if (equityModalChart) { equityModalChart.destroy(); equityModalChart = null; }
+  equityModalChart = new Chart(ctx, {
+    type: "line",
+    data: JSON.parse(JSON.stringify(equityChart.data)),
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false }, tooltip: equityChart.options.plugins.tooltip },
+      scales: {
+        x: { ticks: { color: "#5b6472", maxTicksLimit: 10, font:{family:"JetBrains Mono", size:11} }, grid: { color: "#232b36" } },
+        y: { ticks: { color: "#5b6472", font:{family:"JetBrains Mono", size:11} }, grid: { color: "#232b36" } }
+      }
+    }
+  });
+  // JSON round-trip drops function-valued options (segment/point callbacks) — reapply them directly.
+  equityModalChart.data.datasets[0].segment = { borderColor: segmentColor };
+  equityModalChart.data.datasets[0].pointBackgroundColor = pointColor;
+  equityModalChart.data.datasets[0].pointBorderColor = pointColor;
+  equityModalChart.update();
+}
+function closeEquityModal(e) {
+  if (e) e.stopPropagation();
+  const holder = document.getElementById("equityModalHolder");
+  if (holder) holder.remove();
+  if (equityModalChart) { equityModalChart.destroy(); equityModalChart = null; }
+}
+document.getElementById("equityExpandBtn").addEventListener("click", openEquityModal);
+document.getElementById("equityChart").addEventListener("click", openEquityModal);
 
 function insightRow(label, value, sub) {
   return `<div class="stat-card">

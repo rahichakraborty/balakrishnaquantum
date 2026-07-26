@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BKQ Journal — Setup-Tagged Trade Log</title>
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 </head>
 <body>
@@ -59,9 +59,12 @@
     <div class="card">
       <div class="flex-between" style="margin-bottom:14px;">
         <h3 style="margin:0;">Equity Curve</h3>
-        <span class="pill" id="tradeCountPill">0 trades</span>
+        <div class="flex gap-8" style="align-items:center;">
+          <span class="pill" id="tradeCountPill">0 trades</span>
+          <button class="btn btn-ghost btn-sm" id="equityExpandBtn" title="Expand">⤢</button>
+        </div>
       </div>
-      <canvas id="equityChart" height="180"></canvas>
+      <canvas id="equityChart" height="180" style="cursor:pointer;"></canvas>
     </div>
 
     <div class="card">
@@ -216,7 +219,7 @@
   </div>
 </footer>
 
-<script src="shared.js?v=5"></script>
-<script src="journal.js?v=5"></script>
+<script src="shared.js?v=6"></script>
+<script src="journal.js?v=6"></script>
 </body>
 </html>

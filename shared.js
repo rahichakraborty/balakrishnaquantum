@@ -193,15 +193,24 @@ function fmtMoneyPlain(n) {
 
 // ===== INR / USD dual display (Delta Exchange conversion rate: ₹85 = $1) =====
 const INR_RATE = 85;
+// CURRENCY_MODE: "dual" (₹ with $ in brackets, default/original behavior) | "inr" | "usd" —
+// toggled by the Currency switch on the Journal page; read live by every fmtDual*/call site,
+// so flipping it + re-rendering reformats stat cards, tables, calendar, insights, tooltips, etc.
+let CURRENCY_MODE = "dual";
+function setCurrencyMode(mode) { CURRENCY_MODE = mode; }
 function fmtDual(usd) {
   const sign = usd < 0 ? "-" : "+";
   const absInr = Math.abs(Math.round(usd * INR_RATE));
   const absUsd = Math.abs(Math.round(usd));
+  if (CURRENCY_MODE === "inr") return `${sign}₹${absInr.toLocaleString("en-IN")}`;
+  if (CURRENCY_MODE === "usd") return `${sign}$${absUsd.toLocaleString()}`;
   return `${sign}₹${absInr.toLocaleString("en-IN")} (${sign}$${absUsd.toLocaleString()})`;
 }
 function fmtDualPlain(usd) {
   const absInr = Math.abs(Math.round(usd * INR_RATE));
   const absUsd = Math.abs(Math.round(usd));
+  if (CURRENCY_MODE === "inr") return `₹${absInr.toLocaleString("en-IN")}`;
+  if (CURRENCY_MODE === "usd") return `$${absUsd.toLocaleString()}`;
   return `₹${absInr.toLocaleString("en-IN")} ($${absUsd.toLocaleString()})`;
 }
 

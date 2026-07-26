@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinAI — Balakrishna Quantum</title>
+<link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="dot">BK</span> BKQ <span class="brand-sub">/ FinAI</span></a>
+    <div class="nav-links">
+      <a href="journal.html">Journal</a>
+      <a href="backtest.html">Backtesting</a>
+      <a href="finai.html" class="active">FinAI</a>
+      <a href="https://balakrishnaquantum.com/finance.html">↩ BKQ Home</a>
+    </div>
+    <a href="journal.html" class="nav-cta">Log a Trade</a>
+  </div>
+</nav>
+
+<header class="section-sm container">
+  <div class="eyebrow">◆ FinAI · Your Trading Partner</div>
+  <h1 style="font-size:30px;">Ask anything. It already knows your trades.</h1>
+  <p style="max-width:640px;">FinAI reads the trades you've logged or imported in the Journal — no re-explaining, no screenshots. Answers below are computed live from your local data (or demo data if you haven't logged any trades yet). This is the finance-desk assistant — separate from the main AI/ML hub.</p>
+</header>
+
+<section class="container">
+  <div class="grid grid-2" style="grid-template-columns:1.3fr .7fr;align-items:start;">
+
+    <div>
+      <div class="chat-window" id="chatWindow"></div>
+      <div class="flex gap-8" style="flex-wrap:wrap;margin:14px 0;">
+        <span class="suggest-chip" data-q="friday">Why do I keep losing on Fridays?</span>
+        <span class="suggest-chip" data-q="setup">Show me my best performing setup.</span>
+        <span class="suggest-chip" data-q="revenge">Am I revenge trading?</span>
+        <span class="suggest-chip" data-q="score">What's my BKQ Score?</span>
+      </div>
+      <form id="chatForm" class="flex gap-8">
+        <input type="text" id="chatInput" placeholder="Ask FinAI anything about your trades..." style="flex:1;">
+        <button class="btn btn-primary" type="submit">Ask</button>
+      </form>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:20px;">
+        <div class="flex-between" style="margin-bottom:10px;">
+          <h3 style="margin:0;font-size:14px;">Import Trades</h3>
+        </div>
+        <div class="dropzone" id="aiDropzone">
+          <div class="dz-title">Drop your Delta Exchange CSV here</div>
+          <div class="dz-sub">or click to browse</div>
+          <input type="file" id="aiCsvInput" accept=".csv" style="display:none;">
+        </div>
+        <div id="aiImportStatus" class="muted" style="font-size:12px;margin-top:8px;"></div>
+      </div>
+
+      <div class="card" style="margin-bottom:20px;">
+        <div class="flex-between" style="margin-bottom:10px;">
+          <h3 style="margin:0;font-size:14px;">Behavior Alerts</h3>
+          <span class="pill live">Live</span>
+        </div>
+        <div id="alertsBox"></div>
+      </div>
+
+      <div class="card">
+        <div class="flex-between" style="margin-bottom:10px;">
+          <h3 style="margin:0;font-size:14px;">Active Agents</h3>
+        </div>
+        <div id="agentsBox" class="grid" style="gap:10px;"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="container">
+  <div class="footer-inner">
+    <div class="brand"><span class="dot">BK</span> BKQ <span class="brand-sub">/ FinAI</span></div>
+    <div class="footer-note">FinAI here is a rule-based demo — it computes real stats from your locally logged/imported trades and answers a fixed set of question types. It is not a live LLM and not connected to any external service.</div>
+  </div>
+</footer>
+
+<script src="shared.js?v=5"></script>
+<script src="finai.js?v=5"></script>
+</body>
+</html>

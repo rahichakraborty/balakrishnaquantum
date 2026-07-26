@@ -203,7 +203,21 @@ function renderEquityChart(trades) {
   };
   const opts = {
     responsive: true,
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: "#151a22", borderColor: "#232b36", borderWidth: 1, padding: 10,
+        titleFont: { family: "JetBrains Mono", size: 11 }, bodyFont: { family: "JetBrains Mono", size: 11 },
+        callbacks: {
+          title: (items) => { const t = trades[items[0].dataIndex]; return t ? `${t.symbol} · ${t.side} · ${t.date}` : ""; },
+          label: (item) => {
+            const t = trades[item.dataIndex];
+            if (!t) return `Trading Equity: ${fmtDualPlain(item.parsed.y)}`;
+            return [`Trade Gross P&L: ${fmtDual(t.pnl)}`, `Cumulative Trading Equity: ${fmtDualPlain(item.parsed.y)}`];
+          }
+        }
+      }
+    },
     scales: {
       x: { ticks: { color: "#5b6472", maxTicksLimit: 8, font: { family: "JetBrains Mono", size: 10 } }, grid: { color: "#232b36" } },
       y: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { color: "#232b36" } }

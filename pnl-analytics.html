@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PNL Analytics — Balakrishna Quantum</title>
+<link rel="stylesheet" href="style.css?v=7">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+  .tab-btn{ font-family:var(--mono); font-size:12px; font-weight:600; color:var(--text-dim); background:transparent; border:1px solid var(--border); border-radius:var(--radius-sm); padding:7px 14px; cursor:pointer; }
+  .tab-btn.active{ background:var(--amber); color:#0a0d12; border-color:var(--amber); }
+  .tab-btn:not(.active):hover{ border-color:var(--teal); color:var(--teal); }
+  .range-row{ display:flex; gap:8px; margin-bottom:16px; }
+  .net-hero{ border:1px solid var(--amber-glow); background:linear-gradient(180deg, var(--amber-soft), transparent); }
+  .mini-note{ font-size:11.5px; color:var(--text-faint); margin-top:6px; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="dot">BK</span> BKQ <span class="brand-sub">/ Journal</span></a>
+    <div class="nav-links">
+      <a href="journal.html">Journal</a>
+      <a href="backtest.html">Backtesting</a>
+      <a href="finai.html">FinAI</a>
+      <a href="pnl-analytics.html" class="active">PNL Analytics</a>
+      <a href="https://balakrishnaquantum.com/finance.html">↩ BKQ Home</a>
+    </div>
+    <a href="journal.html" class="nav-cta">Log a Trade</a>
+  </div>
+</nav>
+
+<header class="section-sm container">
+  <div class="eyebrow">PNL Analytics · Delta-Style Dashboard</div>
+  <h1 style="font-size:30px;">Your real edge, net of fees — first.</h1>
+  <p style="max-width:680px;">Delta Exchange's own analytics page labels this number "Realized PNL," but it's actually gross — fees aren't subtracted. Drop your Delta order-history CSV below and the first thing you'll see is what you actually kept. Everything below that mirrors Delta's own dashboard layout.</p>
+</header>
+
+<section class="container section-sm" style="padding-top:0;">
+  <div class="card">
+    <div class="flex-between" style="margin-bottom:14px;">
+      <h3 style="margin:0;">Import from Delta Exchange</h3>
+      <div class="flex gap-8" style="align-items:center;">
+        <span class="pill" id="tradeCountPill">0 trades</span>
+        <button class="btn btn-ghost btn-sm" id="clearBtn">Clear all</button>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;margin-top:0;margin-bottom:12px;">This reads the same local trade log as the Journal page. Already logged trades there will show up here automatically — no need to re-import. Drop a new CSV to add more, or clear everything below to start fresh.</p>
+    <div class="dropzone" id="dropzone">
+      <div class="dz-title">Drop your Delta Exchange OrderHistory CSV here</div>
+      <div class="dz-sub">or click to browse · same file format as the Journal import</div>
+      <input type="file" id="csvInput" accept=".csv" style="display:none;">
+    </div>
+    <div id="importStatus" class="muted" style="font-size:12.5px;margin-top:10px;"></div>
+  </div>
+</section>
+
+<!-- ===== NEW: Net P&L Analysis (first, on top) ===== -->
+<section class="container section-sm">
+  <div class="flex-between" style="margin-bottom:14px;">
+    <div>
+      <div class="eyebrow" style="margin-bottom:4px;">◆ Added by BKQ · Not on Delta's dashboard</div>
+      <h2 style="font-size:20px;margin:0;">Net P&amp;L Analysis</h2>
+    </div>
+    <span class="pill live">₹85 = $1</span>
+  </div>
+  <div class="card net-hero" style="margin-bottom:18px;">
+    <div class="grid grid-4">
+      <div class="stat-card" style="background:transparent;border:none;padding:0;">
+        <div class="stat-label">Net P&amp;L (after fees)</div>
+        <div class="stat-value" id="net-pnl" style="font-size:22px;">₹0</div>
+        <div class="stat-sub" id="net-pnl-sub">—</div>
+      </div>
+      <div class="stat-card" style="background:transparent;border:none;padding:0;">
+        <div class="stat-label">Gross Realized PNL</div>
+        <div class="stat-value" id="net-gross" style="font-size:22px;">₹0</div>
+        <div class="stat-sub">What Delta calls "Realized PNL"</div>
+      </div>
+      <div class="stat-card" style="background:transparent;border:none;padding:0;">
+        <div class="stat-label">Total Fees</div>
+        <div class="stat-value" id="net-fees" style="font-size:22px;">₹0</div>
+        <div class="stat-sub" id="net-fees-sub">—</div>
+      </div>
+      <div class="stat-card" style="background:transparent;border:none;padding:0;">
+        <div class="stat-label">Fee Drag</div>
+        <div class="stat-value" id="net-drag" style="font-size:22px;">0%</div>
+        <div class="stat-sub">Of gross profit eaten by fees</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="flex-between" style="margin-bottom:14px;">
+      <h3 style="margin:0;">Net Equity Curve</h3>
+      <span class="muted" style="font-size:12px;">Green = winning trade, red = losing trade (after fees)</span>
+    </div>
+    <canvas id="netEquityChart" height="130"></canvas>
+  </div>
+</section>
+
+<!-- ===== Delta-style section (mirrors account_analytics) ===== -->
+<section class="container section-sm">
+  <div class="eyebrow" style="margin-bottom:14px;">Same layout as Delta's PNL Analytics page</div>
+
+  <div class="card" style="margin-bottom:18px;">
+    <div class="range-row">
+      <button class="tab-btn" data-range="7">Last 7 days</button>
+      <button class="tab-btn" data-range="30">Last 30 days</button>
+      <button class="tab-btn active" data-range="all">All</button>
+    </div>
+    <div class="flex-between" style="margin-bottom:10px;">
+      <h3 style="margin:0;">Trading Equity</h3>
+    </div>
+    <canvas id="equityChart" height="120"></canvas>
+    <div class="mini-note">Cumulative gross realized P&amp;L from trades in this file. Delta's own chart also plots deposits/withdrawals/liquidation fees — those aren't present in an order-history export, so this line reflects trading activity only.</div>
+  </div>
+
+  <div class="grid grid-4" style="margin-bottom:18px;" id="deltaStatsRow">
+    <div class="stat-card">
+      <div class="stat-label">Total Realized PNL</div>
+      <div class="stat-value" id="d-realized">₹0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Win Rate</div>
+      <div class="stat-value" id="d-winrate">0%</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Average Win</div>
+      <div class="stat-value" id="d-avgwin">₹0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Average Loss</div>
+      <div class="stat-value" id="d-avgloss">₹0</div>
+    </div>
+  </div>
+  <div class="grid grid-4" style="margin-bottom:18px;">
+    <div class="stat-card">
+      <div class="stat-label"># Trades</div>
+      <div class="stat-value" id="d-trades">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Total Fees Paid</div>
+      <div class="stat-value" id="d-fees">₹0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Volume Traded</div>
+      <div class="stat-value" id="d-volume">₹0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Avg R:R</div>
+      <div class="stat-value" id="d-rr">—</div>
+      <div class="stat-sub">Avg win ÷ avg loss</div>
+    </div>
+  </div>
+
+  <div class="range-row">
+    <button class="tab-btn active" data-instr="all">All</button>
+    <button class="tab-btn" data-instr="futures">Futures</button>
+    <button class="tab-btn" data-instr="options">Options</button>
+  </div>
+
+  <div class="grid grid-2" style="gap:18px;">
+    <div class="card">
+      <h3 style="margin-top:0;">Realized PNL</h3>
+      <canvas id="realizedChart" height="150"></canvas>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0;">Volume Traded</h3>
+      <canvas id="volumeChart" height="150"></canvas>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px;">
+    <h3 style="margin-top:0;">Fees Paid</h3>
+    <canvas id="feesChart" height="120"></canvas>
+    <div class="mini-note">Funding-rate history isn't included in a Delta order-history export, so a Funding chart (shown on Delta's own page) can't be reproduced here from this file.</div>
+  </div>
+</section>
+
+<footer class="container">
+  <div class="footer-inner">
+    <div class="brand"><span class="dot">BK</span> BKQ <span class="brand-sub">/ Journal</span></div>
+    <div class="footer-note">All trade data is parsed and stored locally in this browser — nothing is uploaded anywhere. Data here is shared with the Journal page (same local trade log).</div>
+  </div>
+</footer>
+
+<script src="shared.js?v=7"></script>
+<script src="pnl-analytics.js?v=7"></script>
+</body>
+</html>

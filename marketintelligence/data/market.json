@@ -1,24 +1,24 @@
 {
   "last_updated": {
     "date": "26 Jul 2026",
-    "time": "11:50 IST",
-    "iso": "2026-07-26T11:50:37.803403+00:00"
+    "time": "16:53 IST",
+    "iso": "2026-07-26T16:53:40.383583+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 51,
+    "confidence": 50,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "BTC",
-    "risk_level": "Low",
-    "risk_note": "Normal Conditions",
-    "conviction": 51
+    "risk_level": "Medium",
+    "risk_note": "Watch Headlines",
+    "conviction": 50
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Neutral Bullish",
-      "confidence": 51,
+      "confidence": 53,
       "support": 63800.12,
       "resistance": 66825.63,
       "trade_plan": "Buy pullbacks while above support."
@@ -33,12 +33,20 @@
     }
   },
   "scores": {
-    "macro": 46,
-    "flow": 54,
-    "technical": 50,
-    "risk": 34
+    "macro": 42,
+    "flow": 55,
+    "technical": 52,
+    "risk": 38
   },
   "drivers": [
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "South Korea\u2019s largest bank to launch payment service on JPMorgan\u2019s Kinexys"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "BitMart to wind down exchange, end trading by Aug. 26"
+    },
     {
       "emoji": "\ud83d\udd34",
       "text": "Binance \u2018red teams\u2019 its own staff every month to keep hackers out"
@@ -62,14 +70,6 @@
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
-    },
-    {
-      "emoji": "\u2705",
-      "text": "Fidelity joins push for Senate passage of CLARITY Act"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Dango\u2019s perp DEX taps out nearly 4 months after launch"
     }
   ],
   "events": [

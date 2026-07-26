@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-07-25T16:00:08+00:00",
+  "generated_at": "2026-07-26T05:55:53+00:00",
   "items": [
     {
       "id": "baidu/Unlimited-OCR",
       "url": "https://huggingface.co/baidu/Unlimited-OCR",
       "downloads": 2564264,
-      "likes": 3069,
+      "likes": 3121,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "poolside/Laguna-S-2.1",
       "url": "https://huggingface.co/poolside/Laguna-S-2.1",
       "downloads": 45260,
-      "likes": 646,
+      "likes": 668,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "upstage/Solar-Open2-250B",
       "url": "https://huggingface.co/upstage/Solar-Open2-250B",
       "downloads": 2784,
-      "likes": 555,
+      "likes": 573,
       "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "thinkingmachines/Inkling",
-      "url": "https://huggingface.co/thinkingmachines/Inkling",
-      "downloads": 31575,
-      "likes": 1560,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "downloads": 483845,
-      "likes": 519,
+      "likes": 558,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "thinkingmachines/Inkling",
+      "url": "https://huggingface.co/thinkingmachines/Inkling",
+      "downloads": 31575,
+      "likes": 1572,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://huggingface.co/Nanbeige/Nanbeige4.2-3B",
       "downloads": 11573,
-      "likes": 388,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "prism-ml/Ternary-Bonsai-27B-gguf",
-      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf",
-      "downloads": 611685,
-      "likes": 1020,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "zai-org/GLM-5.2",
-      "url": "https://huggingface.co/zai-org/GLM-5.2",
-      "downloads": 707029,
-      "likes": 4437,
+      "likes": 411,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "microsoft/Mage-Flow",
       "url": "https://huggingface.co/microsoft/Mage-Flow",
       "downloads": 1156,
-      "likes": 260,
+      "likes": 288,
       "pipeline_tag": "text-to-image"
     },
     {
-      "id": "prism-ml/Bonsai-27B-gguf",
-      "url": "https://huggingface.co/prism-ml/Bonsai-27B-gguf",
-      "downloads": 2114963,
-      "likes": 636,
+      "id": "prism-ml/Ternary-Bonsai-27B-gguf",
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf",
+      "downloads": 611685,
+      "likes": 1031,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "zai-org/GLM-5.2",
+      "url": "https://huggingface.co/zai-org/GLM-5.2",
+      "downloads": 707029,
+      "likes": 4449,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "Motif-Technologies/Motif-3-Beta",
+      "url": "https://huggingface.co/Motif-Technologies/Motif-3-Beta",
+      "downloads": 2270,
+      "likes": 192,
       "pipeline_tag": "text-generation"
     }
   ]

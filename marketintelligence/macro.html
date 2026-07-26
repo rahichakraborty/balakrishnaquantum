@@ -352,7 +352,11 @@
         <div class="sub">Macro Command Panel</div>
       </div>
     </div>
-    <div class="header-search">🔍&nbsp; Search indicators, assets, sessions, central banks…</div>
+    <div class="header-search" id="headerSearchWrap" style="position:relative;">
+      <span style="flex-shrink:0;">🔍</span>
+      <input type="text" id="headerSearchInput" placeholder="Search indicators, assets, sessions, central banks…" autocomplete="off" style="flex:1;background:transparent;border:none;outline:none;color:var(--text);font-size:12.5px;font-family:'Inter',sans-serif;">
+      <div id="headerSearchResults"></div>
+    </div>
     <div class="header-right">
       <a class="back-btn" id="backBtn" href="https://balakrishnaquantum.com/finance.html" title="Back to BKQ Home">↩ BKQ Home</a>
       <div class="session-pill" id="sessionPill">● SESSION LIVE · 13:00–21:00 IST</div>
@@ -2149,6 +2153,90 @@
       <div class="src-row"><span class="k">${k}</span><span class="ref-tag">REFERENCE</span></div>`).join('');
   }
   renderSettingsSources();
+</script>
+<style>
+  #headerSearchResults{ display:none; position:absolute; top:calc(100% + 8px); left:0; right:0; background:var(--panel); border:1px solid var(--line); border-radius:10px; max-height:340px; overflow-y:auto; box-shadow:0 14px 34px -10px rgba(0,0,0,.6); z-index:60; }
+  #headerSearchResults.open{ display:block; }
+  .sr-item{ display:flex; justify-content:space-between; align-items:center; gap:10px; padding:10px 14px; cursor:pointer; font-size:12.5px; border-bottom:1px solid var(--line-soft); }
+  .sr-item:last-child{ border-bottom:none; }
+  .sr-item:hover, .sr-item.hl{ background:var(--panel-2); }
+  .sr-item .sr-label{ color:var(--text); }
+  .sr-item .sr-type{ font-size:9.5px; letter-spacing:.5px; text-transform:uppercase; color:var(--text-faint); background:var(--panel-2); border:1px solid var(--line-soft); padding:2px 6px; border-radius:4px; flex-shrink:0; }
+  .sr-empty{ padding:14px; font-size:12px; color:var(--text-faint); text-align:center; }
+</style>
+<script>
+(function(){
+  const input = document.getElementById('headerSearchInput');
+  const results = document.getElementById('headerSearchResults');
+  if(!input || !results) return;
+
+  function buildIndex(){
+    const idx = [];
+    document.querySelectorAll('.nav-item[data-route]').forEach(el=>{
+      idx.push({ type:'page', label: el.textContent.trim(), action: ()=> go(el.dataset.route) });
+    });
+    if(typeof assets !== 'undefined'){
+      assets.forEach(a=>{
+        idx.push({ type:'asset', label: a.name, action: ()=>{ go('macro'); setTimeout(()=> openAssetModal(a), 50); } });
+      });
+    }
+    if(typeof cbData !== 'undefined'){
+      cbData.forEach(c=>{
+        idx.push({ type:'central bank', label: c.name, action: ()=> go('cbs') });
+      });
+    }
+    ['Asia session','London session','New York session','Sydney session'].forEach(s=>{
+      idx.push({ type:'session', label: s, action: ()=> go('forex') });
+    });
+    return idx;
+  }
+  const searchIndex = buildIndex();
+  let currentMatches = [];
+
+  function render(items, query){
+    if(!items.length){
+      results.innerHTML = `<div class="sr-empty">No matches for "${query}"</div>`;
+      results.classList.add('open');
+      return;
+    }
+    results.innerHTML = items.slice(0,8).map((it,i)=>`
+      <div class="sr-item${i===0?' hl':''}" data-idx="${i}">
+        <span class="sr-label">${it.label}</span>
+        <span class="sr-type">${it.type}</span>
+      </div>`).join('');
+    results.classList.add('open');
+  }
+
+  input.addEventListener('input', ()=>{
+    const q = input.value.trim().toLowerCase();
+    if(!q){ results.classList.remove('open'); currentMatches = []; return; }
+    currentMatches = searchIndex.filter(it => it.label.toLowerCase().includes(q));
+    render(currentMatches, input.value.trim());
+  });
+  input.addEventListener('keydown', (e)=>{
+    if(e.key === 'Enter' && currentMatches.length){
+      currentMatches[0].action();
+      results.classList.remove('open');
+      input.blur();
+    } else if(e.key === 'Escape'){
+      results.classList.remove('open');
+      input.blur();
+    }
+  });
+  results.addEventListener('click', (e)=>{
+    const item = e.target.closest('.sr-item');
+    if(!item) return;
+    const idx = parseInt(item.dataset.idx, 10);
+    if(currentMatches[idx]){
+      currentMatches[idx].action();
+      results.classList.remove('open');
+      input.value = '';
+    }
+  });
+  document.addEventListener('click', (e)=>{
+    if(!e.target.closest('#headerSearchWrap')) results.classList.remove('open');
+  });
+})();
 </script>
 </body>
 </html>

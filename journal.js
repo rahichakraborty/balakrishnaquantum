@@ -560,6 +560,16 @@ document.getElementById("tradeForm").addEventListener("submit", (e) => {
   render();
 });
 
+// ---- Currency toggle (INR / Both / USD) — affects every fee & P&L figure on the page ----
+document.querySelectorAll(".curr-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".curr-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    setCurrencyMode(btn.dataset.mode);
+    render();
+  });
+});
+
 document.getElementById("seedBtn").addEventListener("click", () => {
   Store.saveTrades(genDemoTrades());
   render();

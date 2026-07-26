@@ -28,6 +28,21 @@ function bucketWeekly(trades, valueFn) {
     .map(([label, value]) => ({ label, value }));
 }
 
+function dayLabel(dateStr) {
+  const [, mm, dd] = dateStr.split("-");
+  return `${mm}-${dd}`;
+}
+
+function bucketDaily(trades, valueFn) {
+  const buckets = {};
+  trades.forEach(t => {
+    buckets[t.date] = (buckets[t.date] || 0) + valueFn(t);
+  });
+  return Object.keys(buckets)
+    .sort()
+    .map(date => ({ label: dayLabel(date), value: buckets[date] }));
+}
+
 function filterByInstrument(trades) {
   if (activeInstr === "futures") return trades.filter(t => !isOption(t.symbol));
   if (activeInstr === "options") return trades.filter(t => isOption(t.symbol));
@@ -200,7 +215,7 @@ function renderEquityChart(trades) {
 
 function renderRealizedChart(trades) {
   const ctx = document.getElementById("realizedChart");
-  const rows = bucketWeekly(trades, t => t.pnl);
+  const rows = bucketDaily(trades, t => t.pnl);
   const data = {
     labels: rows.length ? rows.map(r => r.label) : ["—"],
     datasets: [{
@@ -213,7 +228,7 @@ function renderRealizedChart(trades) {
     responsive: true,
     plugins: { legend: { display: false } },
     scales: {
-      x: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
+      x: { ticks: { color: "#5b6472", maxTicksLimit: 12, font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
       y: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { color: "#232b36" } }
     }
   };
@@ -223,7 +238,7 @@ function renderRealizedChart(trades) {
 
 function renderNetBarChart(trades) {
   const ctx = document.getElementById("netBarChart");
-  const rows = bucketWeekly(trades, t => t.pnl - (t.fees || 0));
+  const rows = bucketDaily(trades, t => t.pnl - (t.fees || 0));
   const data = {
     labels: rows.length ? rows.map(r => r.label) : ["—"],
     datasets: [{
@@ -236,7 +251,7 @@ function renderNetBarChart(trades) {
     responsive: true,
     plugins: { legend: { display: false } },
     scales: {
-      x: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
+      x: { ticks: { color: "#5b6472", maxTicksLimit: 12, font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
       y: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { color: "#232b36" } }
     }
   };
@@ -246,7 +261,7 @@ function renderNetBarChart(trades) {
 
 function renderVolumeChart(trades) {
   const ctx = document.getElementById("volumeChart");
-  const rows = bucketWeekly(trades, t => t.notional || 0);
+  const rows = bucketDaily(trades, t => t.notional || 0);
   const data = {
     labels: rows.length ? rows.map(r => r.label) : ["—"],
     datasets: [{
@@ -259,7 +274,7 @@ function renderVolumeChart(trades) {
     responsive: true,
     plugins: { legend: { display: false } },
     scales: {
-      x: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
+      x: { ticks: { color: "#5b6472", maxTicksLimit: 12, font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
       y: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { color: "#232b36" } }
     }
   };
@@ -269,7 +284,7 @@ function renderVolumeChart(trades) {
 
 function renderFeesChart(trades) {
   const ctx = document.getElementById("feesChart");
-  const rows = bucketWeekly(trades, t => t.fees || 0);
+  const rows = bucketDaily(trades, t => t.fees || 0);
   const data = {
     labels: rows.length ? rows.map(r => r.label) : ["—"],
     datasets: [{
@@ -282,7 +297,7 @@ function renderFeesChart(trades) {
     responsive: true,
     plugins: { legend: { display: false } },
     scales: {
-      x: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
+      x: { ticks: { color: "#5b6472", maxTicksLimit: 12, font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
       y: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { color: "#232b36" } }
     }
   };

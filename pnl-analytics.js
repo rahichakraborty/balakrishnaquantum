@@ -226,7 +226,14 @@ function renderRealizedChart(trades) {
   };
   const opts = {
     responsive: true,
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: "#151a22", borderColor: "#232b36", borderWidth: 1, padding: 10,
+        titleFont: { family: "JetBrains Mono", size: 11 }, bodyFont: { family: "JetBrains Mono", size: 11 },
+        callbacks: { label: (item) => `Realized PNL: ${fmtDual(item.parsed.y)}` }
+      }
+    },
     scales: {
       x: { ticks: { color: "#5b6472", maxTicksLimit: 12, font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
       y: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { color: "#232b36" } }
@@ -249,7 +256,14 @@ function renderNetBarChart(trades) {
   };
   const opts = {
     responsive: true,
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: "#151a22", borderColor: "#232b36", borderWidth: 1, padding: 10,
+        titleFont: { family: "JetBrains Mono", size: 11 }, bodyFont: { family: "JetBrains Mono", size: 11 },
+        callbacks: { label: (item) => `Net PNL (after fees): ${fmtDual(item.parsed.y)}` }
+      }
+    },
     scales: {
       x: { ticks: { color: "#5b6472", maxTicksLimit: 12, font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
       y: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { color: "#232b36" } }
@@ -272,7 +286,14 @@ function renderVolumeChart(trades) {
   };
   const opts = {
     responsive: true,
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: "#151a22", borderColor: "#232b36", borderWidth: 1, padding: 10,
+        titleFont: { family: "JetBrains Mono", size: 11 }, bodyFont: { family: "JetBrains Mono", size: 11 },
+        callbacks: { label: (item) => `Volume: ${fmtDualPlain(item.parsed.y)}` }
+      }
+    },
     scales: {
       x: { ticks: { color: "#5b6472", maxTicksLimit: 12, font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
       y: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { color: "#232b36" } }
@@ -295,7 +316,14 @@ function renderFeesChart(trades) {
   };
   const opts = {
     responsive: true,
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: "#151a22", borderColor: "#232b36", borderWidth: 1, padding: 10,
+        titleFont: { family: "JetBrains Mono", size: 11 }, bodyFont: { family: "JetBrains Mono", size: 11 },
+        callbacks: { label: (item) => `Fees Paid: ${fmtDualPlain(item.parsed.y)}` }
+      }
+    },
     scales: {
       x: { ticks: { color: "#5b6472", maxTicksLimit: 12, font: { family: "JetBrains Mono", size: 10 } }, grid: { display: false } },
       y: { ticks: { color: "#5b6472", font: { family: "JetBrains Mono", size: 10 } }, grid: { color: "#232b36" } }

@@ -1,94 +1,94 @@
 {
-  "generated_at": "2026-07-26T15:57:58+00:00",
+  "generated_at": "2026-07-27T06:24:13+00:00",
   "items": [
     {
       "name": "affaan-m/ECC",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 233538,
+      "stars": 233749,
       "language": "JavaScript",
-      "updated_at": "2026-07-26T10:26:33Z",
+      "updated_at": "2026-07-27T04:56:28Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/124439313?v=4"
     },
     {
       "name": "NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 220786,
+      "stars": 221062,
       "language": "Python",
-      "updated_at": "2026-07-26T15:43:26Z",
+      "updated_at": "2026-07-27T06:23:50Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/134168893?v=4"
     },
     {
       "name": "tensorflow/tensorflow",
       "description": "An Open Source Machine Learning Framework for Everyone",
       "url": "https://github.com/tensorflow/tensorflow",
-      "stars": 196551,
+      "stars": 196561,
       "language": "C++",
-      "updated_at": "2026-07-26T15:46:11Z",
+      "updated_at": "2026-07-27T06:21:22Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/15658638?v=4"
     },
     {
       "name": "Significant-Gravitas/AutoGPT",
       "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "stars": 185699,
+      "stars": 185704,
       "language": "Python",
-      "updated_at": "2026-07-26T10:07:17Z",
+      "updated_at": "2026-07-26T17:49:58Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/130738209?v=4"
     },
     {
       "name": "ollama/ollama",
       "description": "Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
       "url": "https://github.com/ollama/ollama",
-      "stars": 176921,
+      "stars": 176962,
       "language": "Go",
-      "updated_at": "2026-07-25T16:09:58Z",
+      "updated_at": "2026-07-27T00:02:27Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/151674099?v=4"
     },
     {
       "name": "f/prompts.chat",
       "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
       "url": "https://github.com/f/prompts.chat",
-      "stars": 166387,
+      "stars": 166412,
       "language": "HTML",
-      "updated_at": "2026-07-25T04:04:54Z",
+      "updated_at": "2026-07-27T04:19:55Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/196477?v=4"
     },
     {
       "name": "huggingface/transformers",
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "url": "https://github.com/huggingface/transformers",
-      "stars": 162998,
+      "stars": 163020,
       "language": "Python",
-      "updated_at": "2026-07-26T00:53:06Z",
+      "updated_at": "2026-07-27T06:22:02Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/25720743?v=4"
     },
     {
       "name": "firecrawl/firecrawl",
       "description": "The API to search, scrape, and interact with the web at scale. 🔥",
       "url": "https://github.com/firecrawl/firecrawl",
-      "stars": 156302,
+      "stars": 156572,
       "language": "TypeScript",
-      "updated_at": "2026-07-26T13:04:33Z",
+      "updated_at": "2026-07-26T18:36:29Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/135057108?v=4"
     },
     {
       "name": "langgenius/dify",
       "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
       "url": "https://github.com/langgenius/dify",
-      "stars": 150308,
+      "stars": 150359,
       "language": "TypeScript",
-      "updated_at": "2026-07-26T14:23:40Z",
+      "updated_at": "2026-07-27T06:22:53Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/127165244?v=4"
     },
     {
       "name": "langchain-ai/langchain",
       "description": "The agent engineering platform.",
       "url": "https://github.com/langchain-ai/langchain",
-      "stars": 142621,
+      "stars": 142646,
       "language": "Python",
-      "updated_at": "2026-07-26T08:48:10Z",
+      "updated_at": "2026-07-27T01:24:03Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/126733545?v=4"
     }
   ]

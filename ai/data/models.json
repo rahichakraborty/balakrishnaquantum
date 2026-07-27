@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-07-26T15:57:59+00:00",
+  "generated_at": "2026-07-27T06:24:15+00:00",
   "items": [
     {
       "id": "baidu/Unlimited-OCR",
       "url": "https://huggingface.co/baidu/Unlimited-OCR",
       "downloads": 2593460,
-      "likes": 3172,
+      "likes": 3239,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "poolside/Laguna-S-2.1",
       "url": "https://huggingface.co/poolside/Laguna-S-2.1",
       "downloads": 56445,
-      "likes": 685,
+      "likes": 708,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "upstage/Solar-Open2-250B",
       "url": "https://huggingface.co/upstage/Solar-Open2-250B",
       "downloads": 3305,
-      "likes": 585,
+      "likes": 605,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "downloads": 552026,
-      "likes": 596,
+      "likes": 649,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://huggingface.co/Nanbeige/Nanbeige4.2-3B",
       "downloads": 14049,
-      "likes": 432,
+      "likes": 452,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "thinkingmachines/Inkling",
       "url": "https://huggingface.co/thinkingmachines/Inkling",
       "downloads": 34511,
-      "likes": 1576,
+      "likes": 1582,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "microsoft/Mage-Flow",
       "url": "https://huggingface.co/microsoft/Mage-Flow",
       "downloads": 1375,
-      "likes": 317,
+      "likes": 346,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
       "downloads": 827191,
-      "likes": 4462,
+      "likes": 4488,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "prism-ml/Ternary-Bonsai-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf",
       "downloads": 631970,
-      "likes": 1043,
+      "likes": 1053,
       "pipeline_tag": "text-generation"
     },
     {
-      "id": "unsloth/Laguna-S-2.1-GGUF",
-      "url": "https://huggingface.co/unsloth/Laguna-S-2.1-GGUF",
-      "downloads": 102684,
-      "likes": 193,
+      "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
+      "url": "https://huggingface.co/Kwaipilot/KAT-Coder-V2.5-Dev",
+      "downloads": 3764,
+      "likes": 203,
       "pipeline_tag": "text-generation"
     }
   ]

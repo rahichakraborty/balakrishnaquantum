@@ -1,150 +1,151 @@
 {
-  "generated_at": "2026-07-26T15:57:53+00:00",
+  "generated_at": "2026-07-27T06:24:08+00:00",
   "items": [
     {
-      "title": "3D-Aware VLMs with Implicit and Explicit Geometries",
-      "summary": "Despite rapid progress, most existing vision-language models (VLMs) built from 2D visual inputs often struggle when handling various 3D tasks that require fine-grained spatial understanding and reasoning. To bridge this gap, we present VLM-IE3D, a unified framework that enhances …",
+      "title": "SM4RT: Learning Structured Motion Geometry for 4D Reconstruction",
+      "summary": "Geometry Foundation Models (GFMs) have substantially advanced monocular 3D reconstruction, yet extending this capability to 4D dynamic understanding remains a fundamental challenge. Most existing motion perception methods (e.g., sparse tracking, dense point-wise flow) treat motio…",
       "authors": [
-        "Wenhao Li",
-        "Xueying Jiang",
-        "Quanhao Qian",
+        "Shing Ho J. Lin",
+        "Wenzhao Zheng",
+        "Dong Zhuo",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.21595v1",
-      "published": "2026-07-23T17:59:59Z",
+      "link": "http://arxiv.org/abs/2607.22534v1",
+      "published": "2026-07-24T17:59:51Z",
       "category": "cs.CV"
     },
     {
-      "title": "Expanding Flow Maps",
-      "summary": "Flow-based generative models have enabled remarkable progress in fast and controllable generation across continuous and discrete state spaces, yet existing parameterizations are constrained to fixed dimensions or fixed sequence lengths. Here, we introduce Expanding Generative Flo…",
+      "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
+      "summary": "LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-evolutionary methods face a fundamental dilemma between task diversity and verification reliability: environment-bound methods obtain precise feedback but confi…",
       "authors": [
-        "Sophia Tang",
-        "Pranam Chatterjee"
-      ],
-      "link": "http://arxiv.org/abs/2607.21585v1",
-      "published": "2026-07-23T17:57:38Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "GraphVid: Interactive Graph-Controllable Video Generation",
-      "summary": "Controllable video generation remains challenging due to the difficulty of specifying precise multi-object interactions using text prompts or motion-control inputs that primarily constrain pixel movement. In practice, trajectory-based control often requires users to draw accurate…",
-      "authors": [
-        "Vedant Shah",
-        "Onkar Susladkar",
-        "Tushar Prakash",
+        "Siyuan Huang",
+        "Pengyu Cheng",
+        "Haotian Liu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.21580v1",
-      "published": "2026-07-23T17:56:30Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Barzilai-Borwein Fails Superlinear Convergence on an Open Set of Quadratics for Every Dimension $n\\geq 4$",
-      "summary": "Barzilai--Borwein (BB) method has shown strong practical performance in continuous optimization, yet its convergence dynamics remains poorly understood. In particular, a central unresolved question is whether BB converges superlinearly for almost every strictly convex quadratic p…",
-      "authors": [
-        "Dawei Li",
-        "Xiaotian Jiang",
-        "Mingyi Hong"
-      ],
-      "link": "http://arxiv.org/abs/2607.21579v1",
-      "published": "2026-07-23T17:56:05Z",
-      "category": "math.OC"
-    },
-    {
-      "title": "Synthetic data generation framework for quality control automation in gravure printing",
-      "summary": "Quality control in printing, particularly in rotogravure printing, still depends on slow, costly, and subjective manual inspection. Automated surface defect detection is critical for maintaining high-quality standards in rotogravure printing. Deep learning models give prospects f…",
-      "authors": [
-        "Korota Arsène Coulibaly",
-        "Mohamed Hamlich",
-        "Khalid Hmali",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.21577v1",
-      "published": "2026-07-23T17:55:21Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Surprisal Theory is Tautological (without Rational Grounding)",
-      "summary": "Surprisal theory holds that the human processing difficulty of a linguistic unit in context is an affine function of its surprisal under some language model. I argue this claim is a tautology without further constraint: for any non-negative difficulty measure over units in contex…",
-      "authors": [
-        "Ryan Cotterell"
-      ],
-      "link": "http://arxiv.org/abs/2607.21574v1",
-      "published": "2026-07-23T17:54:37Z",
+      "link": "http://arxiv.org/abs/2607.22529v1",
+      "published": "2026-07-24T17:59:22Z",
       "category": "cs.CL"
     },
     {
-      "title": "Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity",
-      "summary": "Faithful explanations of time-series classifiers should identify subsequences that are not only sufficient to preserve a black-box model's prediction, but also necessary for maintaining it. However, existing sufficiency-oriented methods can assign high importance to spurious subs…",
+      "title": "Explainable Reinforcement Learning for assisting Air Traffic Controllers",
+      "summary": "To effectively integrate AI into high-stakes, critical environments such as healthcare, autonomous driving, and aviation--and to advance toward higher levels of automation and seamless human-AI collaboration--building trust in AI-driven solutions is essential. Trust, in turn, is …",
       "authors": [
-        "Hongnan Ma",
-        "Yiwei Shi",
-        "Mengyue Yang",
+        "Anduel Mehmeti",
+        "Gabriella Gigante",
+        "Salvatore Venticinque"
+      ],
+      "link": "http://arxiv.org/abs/2607.22525v1",
+      "published": "2026-07-24T17:56:38Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents",
+      "summary": "Adding procedural skills to an LLM agent is typically evaluated by average improvement in task success. However, this metric hides an important cost: skills can also make agents worse. We measure both sides by comparing agents with and without skills across nearly 6,000 runs span…",
+      "authors": [
+        "Darshan Tank",
+        "Baran Nama"
+      ],
+      "link": "http://arxiv.org/abs/2607.22520v1",
+      "published": "2026-07-24T17:50:03Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "PinEqualizer: Full Funnel Content Exploration and Debiasing System at Pinterest",
+      "summary": "In this paper, we propose a new solution for addressing the content cold-start problem in industry-scale search and recommender systems. Compared to prior approaches, we have made the following new contributions: 1) our solution spans the entire multi-stage funnel and generalizes…",
+      "authors": [
+        "Olafur Gudmundsson",
+        "Bo Zhao",
+        "Huayi Liao",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.21573v1",
-      "published": "2026-07-23T17:52:01Z",
+      "link": "http://arxiv.org/abs/2607.22518v1",
+      "published": "2026-07-24T17:41:28Z",
+      "category": "cs.IR"
+    },
+    {
+      "title": "Quantum Spectral Model: Data Reuploading with Input-Conditioned Frequency Support",
+      "summary": "A central design principle in modern machine learning and artificial intelligence is to align a model's inductive bias with the structure of its input data. For matrix-valued inputs, relevant matrix-level relationships can be characterised through spectral values and spectral sub…",
+      "authors": [
+        "Peiyong Wang",
+        "Udaya Parampalli",
+        "Casey R. Myers"
+      ],
+      "link": "http://arxiv.org/abs/2607.22516v1",
+      "published": "2026-07-24T17:39:14Z",
+      "category": "quant-ph"
+    },
+    {
+      "title": "Dysphagia Risk Stratification in Head and Neck Cancer via Two-Stage PRO-Clinical Stacking",
+      "summary": "Dysphagia is a debilitating late effect of head and neck cancer (HNC) treatment, yet timely identification of at-risk patients remains challenging in survivorship care. Definitive assessment relies on videofluoroscopic imaging, as captured by the Dynamic Imaging Grade of Swallowi…",
+      "authors": [
+        "Siyuan Zhao",
+        "Eric Ababio Anyimadu",
+        "Zachary G. Brumm",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.22514v1",
+      "published": "2026-07-24T17:34:26Z",
       "category": "cs.LG"
     },
     {
-      "title": "MedGame: Storytelling Gamification Empowered by Large Language Models for Medical Education",
-      "summary": "Large Language Models (LLMs) show promise for medical education, but most existing systems focus on localized interactions such as question answering or single-turn feedback, rather than organizing an entire clinical case into a decision-centered learning trajectory. We introduce…",
+      "title": "Opaque Epistemic Mediation: How LLM Deployment Configurations Shape the Validation of Pseudo-Science",
+      "summary": "Commercial large language models are increasingly used as knowledge references, yet their stance on contested scientific claims is neither stable nor transparent. We tested how four major LLM families (Claude, Grok, GPT, Gemini) evaluate ethnonationalist pseudo-science derived fr…",
       "authors": [
-        "Qian Wu",
-        "Xinrong Zhou",
-        "Zizhan Ma",
-        "et al."
+        "Davide Scarso",
+        "Hugo Noronha de Almeida",
+        "Joaquim Pina"
       ],
-      "link": "http://arxiv.org/abs/2607.21570v1",
-      "published": "2026-07-23T17:50:28Z",
-      "category": "cs.CL"
+      "link": "http://arxiv.org/abs/2607.22513v1",
+      "published": "2026-07-24T17:32:43Z",
+      "category": "cs.CY"
     },
     {
-      "title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
-      "summary": "Molecular property prediction from structure often uses a single representative conformation, even though many molecules exist as conformational ensembles in solution. We introduce EnsembleEGNN, a molecular ensemble foundation model that encodes an ensemble by first encoding each…",
+      "title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
+      "summary": "Automating theoretical research is constrained not only by the generation of candidate results, but also by their reliable evaluation. A common approach is to close the research loop with a large language model (LLM) reviewer. However, such reviewers remain empirically unreliable…",
       "authors": [
-        "Aaron Feller",
-        "Kris Deibler",
-        "Maxim Secor"
+        "Jiyuan Tan",
+        "Vasilis Syrgkanis"
       ],
-      "link": "http://arxiv.org/abs/2607.21561v1",
-      "published": "2026-07-23T17:42:51Z",
+      "link": "http://arxiv.org/abs/2607.22511v1",
+      "published": "2026-07-24T17:32:35Z",
+      "category": "stat.ML"
+    },
+    {
+      "title": "Interpretable EEG biomarkers with bag-of-waves: Spatial and temporal waveform dictionaries for low-data regimes",
+      "summary": "Electroencephalography (EEG) is widely used to diagnose neurological conditions, but its analysis usually relies on either predefined spectral features or deep neural networks. Predefined features carry a strong bias, since they fix in advance what counts as informative, while de…",
+      "authors": [
+        "Athanasios Papastathopoulos-Katsaros",
+        "Steven T. Lee",
+        "Lin Yao",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.22508v1",
+      "published": "2026-07-24T17:27:43Z",
       "category": "cs.LG"
     },
     {
-      "title": "Unsupervised Consensus-Based Anomaly Detection for Spatiotemporal Malaria Incidence in Ghana",
-      "summary": "A consensus anomaly detection framework was applied to monthly malaria surveillance data from Ghana (2014-2023) to identify atypical transmission patterns. Anomalies were highly structured in space and time. Ashanti and Northern Regions accounted for most recurrent anomalies, wit…",
+      "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting",
+      "summary": "Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle for volatility forecasting, and its two concrete implementatio…",
       "authors": [
-        "T. Ansah-Narh",
-        "Y. Asare Afrane"
+        "Aliaksei Kaliutau"
       ],
-      "link": "http://arxiv.org/abs/2607.21559v1",
-      "published": "2026-07-23T17:40:51Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2607.22491v1",
+      "published": "2026-07-24T17:03:08Z",
+      "category": "cs.LG"
     },
     {
-      "title": "Beyond Sycophancy: Structured Resistance and Compliance in LLM Moral Reasoning",
-      "summary": "Building socially calibrated large language models, which can learn from others without simply yielding to them, requires more than reducing sycophancy as a one-dimensional failure mode. Models must distinguish when to incorporate others' perspectives from when to maintain a well…",
+      "title": "\\k{appa}-LoRA: Condition Numbers Reveal Which LoRA Matrices Worth Updating",
+      "summary": "Low-Rank Adaptation (LoRA) has become a widely adopted technique for efficient neural network fine-tuning, decomposing model updates into low-rank matrices. However, LoRA remains computationally costly because it updates all matrices uniformly, regardless of their actual contribu…",
       "authors": [
-        "Baihui Wang",
-        "Bernard Koch"
-      ],
-      "link": "http://arxiv.org/abs/2607.21558v1",
-      "published": "2026-07-23T17:40:07Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
-      "summary": "Modern AI agents rely on elaborate inference harnesses such as Claude Code, Codex, and OpenClaw to drive multi-turn reasoning, tool use, and access to external systems. While powerful, these complex harnesses also make agents hard to train end-to-end with open infrastructure, who…",
-      "authors": [
-        "Xiao Yu",
-        "Baolin Peng",
-        "Ruize Xu",
+        "Jianghui Wang",
+        "Silong Yong",
+        "Francesco Orabona",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.21557v1",
-      "published": "2026-07-23T17:38:30Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2607.22489v1",
+      "published": "2026-07-24T17:00:40Z",
+      "category": "cs.LG"
     }
   ]
 }

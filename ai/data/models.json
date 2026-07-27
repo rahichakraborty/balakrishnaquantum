@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-07-27T06:24:15+00:00",
+  "generated_at": "2026-07-27T16:54:16+00:00",
   "items": [
+    {
+      "id": "moonshotai/Kimi-K3",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3",
+      "downloads": 2850,
+      "likes": 4982,
+      "pipeline_tag": "image-text-to-text"
+    },
     {
       "id": "baidu/Unlimited-OCR",
       "url": "https://huggingface.co/baidu/Unlimited-OCR",
-      "downloads": 2593460,
-      "likes": 3239,
+      "downloads": 2645773,
+      "likes": 3301,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "poolside/Laguna-S-2.1",
       "url": "https://huggingface.co/poolside/Laguna-S-2.1",
-      "downloads": 56445,
-      "likes": 708,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "upstage/Solar-Open2-250B",
-      "url": "https://huggingface.co/upstage/Solar-Open2-250B",
-      "downloads": 3305,
-      "likes": 605,
+      "downloads": 63605,
+      "likes": 735,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
-      "downloads": 552026,
-      "likes": 649,
+      "downloads": 634146,
+      "likes": 709,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "upstage/Solar-Open2-250B",
+      "url": "https://huggingface.co/upstage/Solar-Open2-250B",
+      "downloads": 3761,
+      "likes": 623,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://huggingface.co/Nanbeige/Nanbeige4.2-3B",
-      "downloads": 14049,
-      "likes": 452,
+      "downloads": 16518,
+      "likes": 478,
       "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "thinkingmachines/Inkling",
-      "url": "https://huggingface.co/thinkingmachines/Inkling",
-      "downloads": 34511,
-      "likes": 1582,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "microsoft/Mage-Flow",
       "url": "https://huggingface.co/microsoft/Mage-Flow",
-      "downloads": 1375,
-      "likes": 346,
+      "downloads": 1691,
+      "likes": 376,
       "pipeline_tag": "text-to-image"
+    },
+    {
+      "id": "thinkingmachines/Inkling",
+      "url": "https://huggingface.co/thinkingmachines/Inkling",
+      "downloads": 36196,
+      "likes": 1594,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
-      "downloads": 827191,
-      "likes": 4488,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "prism-ml/Ternary-Bonsai-27B-gguf",
-      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf",
-      "downloads": 631970,
-      "likes": 1053,
+      "downloads": 1003547,
+      "likes": 4523,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
       "url": "https://huggingface.co/Kwaipilot/KAT-Coder-V2.5-Dev",
-      "downloads": 3764,
-      "likes": 203,
+      "downloads": 5312,
+      "likes": 228,
       "pipeline_tag": "text-generation"
     }
   ]

@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-07-27T16:54:16+00:00",
+  "generated_at": "2026-07-28T05:42:13+00:00",
   "items": [
     {
       "id": "moonshotai/Kimi-K3",
       "url": "https://huggingface.co/moonshotai/Kimi-K3",
       "downloads": 2850,
-      "likes": 4982,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "baidu/Unlimited-OCR",
-      "url": "https://huggingface.co/baidu/Unlimited-OCR",
-      "downloads": 2645773,
-      "likes": 3301,
+      "likes": 6784,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "poolside/Laguna-S-2.1",
       "url": "https://huggingface.co/poolside/Laguna-S-2.1",
       "downloads": 63605,
-      "likes": 735,
+      "likes": 764,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "baidu/Unlimited-OCR",
+      "url": "https://huggingface.co/baidu/Unlimited-OCR",
+      "downloads": 2645773,
+      "likes": 3347,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "downloads": 634146,
-      "likes": 709,
+      "likes": 767,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "upstage/Solar-Open2-250B",
       "url": "https://huggingface.co/upstage/Solar-Open2-250B",
       "downloads": 3761,
-      "likes": 623,
+      "likes": 633,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://huggingface.co/Nanbeige/Nanbeige4.2-3B",
       "downloads": 16518,
-      "likes": 478,
+      "likes": 496,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "microsoft/Mage-Flow",
       "url": "https://huggingface.co/microsoft/Mage-Flow",
       "downloads": 1691,
-      "likes": 376,
+      "likes": 396,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "thinkingmachines/Inkling",
       "url": "https://huggingface.co/thinkingmachines/Inkling",
       "downloads": 36196,
-      "likes": 1594,
+      "likes": 1612,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
       "downloads": 1003547,
-      "likes": 4523,
+      "likes": 4559,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
       "url": "https://huggingface.co/Kwaipilot/KAT-Coder-V2.5-Dev",
       "downloads": 5312,
-      "likes": 228,
+      "likes": 245,
       "pipeline_tag": "text-generation"
     }
   ]

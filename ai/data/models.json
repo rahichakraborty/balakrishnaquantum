@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-07-28T16:30:17+00:00",
+  "generated_at": "2026-07-29T05:46:26+00:00",
   "items": [
     {
       "id": "moonshotai/Kimi-K3",
       "url": "https://huggingface.co/moonshotai/Kimi-K3",
       "downloads": 99214,
-      "likes": 7726,
+      "likes": 8184,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "poolside/Laguna-S-2.1",
-      "url": "https://huggingface.co/poolside/Laguna-S-2.1",
-      "downloads": 67286,
-      "likes": 788,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "baidu/Unlimited-OCR",
       "url": "https://huggingface.co/baidu/Unlimited-OCR",
       "downloads": 2694935,
-      "likes": 3389,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
-      "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
-      "downloads": 736692,
-      "likes": 819,
+      "likes": 3437,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "upstage/Solar-Open2-250B",
       "url": "https://huggingface.co/upstage/Solar-Open2-250B",
       "downloads": 4804,
-      "likes": 641,
+      "likes": 662,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
+      "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
+      "downloads": 736692,
+      "likes": 864,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "poolside/Laguna-S-2.1",
+      "url": "https://huggingface.co/poolside/Laguna-S-2.1",
+      "downloads": 67286,
+      "likes": 805,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://huggingface.co/Nanbeige/Nanbeige4.2-3B",
       "downloads": 18933,
-      "likes": 514,
+      "likes": 532,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "microsoft/Mage-Flow",
       "url": "https://huggingface.co/microsoft/Mage-Flow",
       "downloads": 2007,
-      "likes": 411,
+      "likes": 422,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
       "url": "https://huggingface.co/Kwaipilot/KAT-Coder-V2.5-Dev",
       "downloads": 6275,
-      "likes": 268,
+      "likes": 292,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "owensong/Inflect-Micro-v2",
+      "url": "https://huggingface.co/owensong/Inflect-Micro-v2",
+      "downloads": 645,
+      "likes": 272,
+      "pipeline_tag": "text-to-speech"
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
       "downloads": 1267198,
-      "likes": 4590,
+      "likes": 4612,
       "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "thinkingmachines/Inkling",
-      "url": "https://huggingface.co/thinkingmachines/Inkling",
-      "downloads": 39052,
-      "likes": 1623,
-      "pipeline_tag": "image-text-to-text"
     }
   ]
 }

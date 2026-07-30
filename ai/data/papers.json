@@ -1,152 +1,157 @@
 {
-  "generated_at": "2026-07-29T16:17:12+00:00",
+  "generated_at": "2026-07-30T05:35:06+00:00",
   "items": [
     {
-      "title": "Pass the Baton: Trajectory-Relayed On-Policy Distillation",
-      "summary": "On-policy distillation (OPD) grounds token-level supervision in the student's own trajectory, yet suffers from prefix failure: once the student commits to a wrong reasoning direction, all subsequent generation builds on this deviation, producing misdirected continuations that eli…",
+      "title": "Do You Really Need to Pretrain Q-Functions for Online RL Fine-Tuning?",
+      "summary": "Pre-training followed by fine-tuning has become the dominant recipe for learning performant policies, and in value-based reinforcement learning (RL) this raises a natural question: given a pretrained policy, should the Q-function be pretrained on offline data too? Conventional wi…",
       "authors": [
-        "Haolei Xu",
-        "Xiaowen Xu",
-        "Haiwen Hong",
+        "Perry Dong",
+        "Ron Polonsky",
+        "Dorsa Sadigh",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.26057v1",
-      "published": "2026-07-28T17:59:46Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "$π\\mathbf{R}^2$: Reactive Real-time Flow Policies",
-      "summary": "Generalist manipulation policies increasingly take the form of action-chunking flow policies built on large pretrained backbones. Such chunks run open-loop, so the policy cannot react to sensory input arriving mid-execution, sacrificing \\emph{reactivity}. Replanning more often wo…",
-      "authors": [
-        "Sungjae Park",
-        "Shubham Tulsiani"
-      ],
-      "link": "http://arxiv.org/abs/2607.26055v1",
-      "published": "2026-07-28T17:59:31Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Spend Experts Where You Are Unsure: Confidence-Adaptive Routing for Mixture-of-Experts LoRA",
-      "summary": "Mixture-of-Experts (MoE) variants of Low-Rank Adaptation (LoRA) route every token to a fixed number of experts $k$. Tokens differ in how uncertain the model is about them, so a single k over-spends on easy tokens and under-serves hard ones. We observe that the router's output dis…",
-      "authors": [
-        "Tom Saliencro",
-        "Rohan Desai",
-        "Priya Nair",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.26052v1",
-      "published": "2026-07-28T17:59:16Z",
+      "link": "http://arxiv.org/abs/2607.27203v1",
+      "published": "2026-07-29T17:59:51Z",
       "category": "cs.LG"
     },
     {
-      "title": "Re-thinking Mammography Transfer Learning: The Dataset-Informed Transfer Learning (DITL) Framework for Breast Cancer Screening and Lesion Diagnosis",
-      "summary": "Enhancing classification performance in mammography remains a persistent challenge across both small curated datasets and large-scale clinical cohorts. Conventional transfer learning approaches often neglect dataset-specific characteristics, while recent neighborhood-informed met…",
+      "title": "Mental World Modeling",
+      "summary": "World models enable a predictive substrate for planning and action, yet existing formulations merely answer a physical question: what/where it is, and how will it evolve. Human behavior, however, is driven by hidden mental state (what a person believes, wants, intends, feels, and…",
       "authors": [
-        "Adarsh Bhandary Panambur",
-        "Siming Bayer",
-        "Andreas Maier"
+        "Hao Fei",
+        "Yiran Zhao"
       ],
-      "link": "http://arxiv.org/abs/2607.26043v1",
-      "published": "2026-07-28T17:52:36Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "VetClaw: An Edge-Cloud Multimodal Agentic System for Veterinary Disease Screening",
-      "summary": "We present VetClaw, an edge-cloud multimodal agentic system for early veterinary disease screening. VetClaw uses a camera module as an edge sensing device and sends captured images, together with optional symptom descriptions, to a server-hosted vision-language model for zero-sho…",
-      "authors": [
-        "Syed Mhamudul Hasan",
-        "Anas AlSobeh",
-        "Hussein Zangoti",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.26042v1",
-      "published": "2026-07-28T17:50:25Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Desktop-Delta Bench: Do Computer-Use Models Understand Desktop GUI Transitions?",
-      "summary": "Computer-use agents (CUAs) increasingly act through desktop GUIs to complete long-horizon tasks. Current benchmarks primarily measure end-task success or single-frame grounding. Neither isolates whether a model can reconstruct the causal, task-relevant transition produced by an a…",
-      "authors": [
-        "Abhishek Pillai",
-        "Samir Kumar Nayak",
-        "Yuan Chen"
-      ],
-      "link": "http://arxiv.org/abs/2607.26041v1",
-      "published": "2026-07-28T17:49:51Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Reinformed Dreamer: An Asymmetric World Model Efficiently Trained through Latent Guidance",
-      "summary": "Much like humans benefit from guidance while learning, reinforcement learning algorithms may benefit from additional supervision beyond rewards. Leveraging additional information during training to learn better representations and behaviors has been the focus of asymmetric reinfo…",
-      "authors": [
-        "Gaspard Lambrechts",
-        "Adrien Bolland",
-        "Daniel Ebi",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.26040v1",
-      "published": "2026-07-28T17:49:29Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Falling Behind Drives Unsafe Development in an Idealised AI Race Experiment",
-      "summary": "Technological races create tension between speed and safety: actors may gain by moving faster than competitors, even when risky development is harmful. This is prominent in debates about artificial intelligence (AI), where competitive pressure is often argued to incentivise riski…",
-      "authors": [
-        "Elias Fernández Domingos",
-        "The Anh Han"
-      ],
-      "link": "http://arxiv.org/abs/2607.26034v1",
-      "published": "2026-07-28T17:44:03Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "CHARM: A Multimodal Graph Foundation Model with Hierarchical Context Modeling for Zero-Shot Transfer",
-      "summary": "Graph foundation models (GFMs) have emerged as a promising paradigm for transferring knowledge across graph domains and tasks. Real-world graphs associate nodes with text, images, and other modalities, making multimodal graphs essential for representing complex entities and relat…",
-      "authors": [
-        "Ankang Yang",
-        "Jitao Zhao",
-        "Di Jin",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.26023v1",
-      "published": "2026-07-28T17:35:26Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "UniMem: Complementary Episodic-to-Parametric Memory for Boundary-Agnostic Task Streams",
-      "summary": "Memory is essential for LLM agents to accumulate task experience and reuse task-specific execution strategies. However, real-world deployment over boundary-agnostic and evolving task streams exposes a fundamental stability-plasticity dilemma. External retrieval-based memory can r…",
-      "authors": [
-        "Siyu Xia",
-        "Chenheng Zhang",
-        "Yanting Wu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.26017v1",
-      "published": "2026-07-28T17:28:21Z",
+      "link": "http://arxiv.org/abs/2607.27201v1",
+      "published": "2026-07-29T17:59:39Z",
       "category": "cs.CL"
     },
     {
-      "title": "MDTransformer: A Hardware-Software Co-Design of Mode-Division Photonic Transformer Accelerator with Inverse-Designed Coherent Crossbar",
-      "summary": "Recently, photonic transformer accelerators (PTAs) have successfully achieved significant speedup and energy efficiency improvements over electronic accelerators for expediting Transformer inference. However, state-of-the-art rely on expensive multi-wavelength light generation an…",
+      "title": "From Classification to Regression: Using a Fruitfly to Solve Equations",
+      "summary": "We present a novel approach to regression tasks using classification which is motivated by the mechanism used by fruitflies to sense their environment. Specifically, we formulate a general framework for learning nonlinear input-output relationships by replacing complex global sur…",
       "authors": [
-        "Solomon Micheal Serunjogi",
-        "Rachmad Vidya Wicaksana Putra",
-        "Ayat Taha",
-        "et al."
+        "Shady E. Ahmed",
+        "Panos Stinis"
       ],
-      "link": "http://arxiv.org/abs/2607.26016v1",
-      "published": "2026-07-28T17:27:49Z",
-      "category": "cs.AR"
+      "link": "http://arxiv.org/abs/2607.27196v1",
+      "published": "2026-07-29T17:58:05Z",
+      "category": "cs.LG"
     },
     {
-      "title": "Instruction-Tuned Models Locally Reuse Human Syntax More Than Humans Do",
-      "summary": "Syntactic convergence (the tendency of speakers to adapt in language towards the grammatical profiles of their interlocutors) is a well-documented feature of human dialogue widely considered to operate below conscious awareness. Whether large language models exhibit analogous syn…",
+      "title": "Can AI agents conduct open-ended AI research? Early evidence from two case studies",
+      "summary": "Forecasts of explosive AI progress hinge on AI agents automating AI research. But evidence on whether agents can carry out open-ended AI research is thin. Current evaluations either test agents on narrow, verifiable tasks, which excludes open-ended research, or submit AI-generate…",
       "authors": [
-        "Zandi Eberstadt"
+        "Peter Kirgis",
+        "Sayash Kapoor",
+        "Andrew Schwartz",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.26015v1",
-      "published": "2026-07-28T17:27:47Z",
+      "link": "http://arxiv.org/abs/2607.27191v1",
+      "published": "2026-07-29T17:57:19Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "APEX-Accounting",
+      "summary": "We introduce APEX-Accounting, a benchmark built by Mercor in partnership with Ramp, to assess whether frontier models can do the real work of accountants. Tasks include reconciling accounts, accruing expenses, posting transactions, and producing reports. The private eval set comp…",
+      "authors": [
+        "Julien Benchek",
+        "Austin Bennett",
+        "Jasmin Kern",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.27189v1",
+      "published": "2026-07-29T17:56:49Z",
       "category": "cs.CL"
+    },
+    {
+      "title": "Inverse Learning of Latent Risk-Neutral Densities from Irregular Option Quotes",
+      "summary": "Accurate option prices do not imply accurate recovery of the latent risk-neutral density. We study this distinction with two complementary benchmarks. A controlled benchmark exposes simulator-truth densities for latent evaluation, while a chronological NIFTY benchmark tests only …",
+      "authors": [
+        "Lennon J. Shikhman",
+        "Michael Galarnyk",
+        "Aadi Dash",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.27188v1",
+      "published": "2026-07-29T17:56:20Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Pangram 4 Technical Report",
+      "summary": "We present Pangram 4, the latest deep-learning-based AI-text classification model from Pangram Labs. We achieve an AUROC of 0.9916 with a false positive rate of 0.0041% and a false negative rate of 0.3396%. In addition to its increased overall accuracy compared with Pangram 3, Pa…",
+      "authors": [
+        "Ben Glickenhaus",
+        "Katherine Thai",
+        "Jenna Russell",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.27183v1",
+      "published": "2026-07-29T17:53:01Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "The Social Cost of an AI Teammate: How an Artificial Teammate Reshapes Human-Human Communication in Small-Team Decision-Making",
+      "summary": "Conversational AI is increasingly positioned as a teammate rather than a tool, yet we know little about how its presence reshapes communication among the humans on the team. We examined sociocognitive communication dynamics in team decision-making using Group Communication Analys…",
+      "authors": [
+        "Nia Nixon",
+        "Jaeyoon Choi",
+        "Pedro Martins De Bastos",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.27179v1",
+      "published": "2026-07-29T17:51:32Z",
+      "category": "cs.HC"
+    },
+    {
+      "title": "DenseOn with the LateOn: Fully Open Dense and Late-Interaction Models for Multilingual, Long-Context, and Code Search",
+      "summary": "State-of-the-art retrieval models increasingly rely on closed training data, creating a reproducibility gap. We present an open end-to-end recipe for training retrieval models and study how English supervision transfers to multilingual retrieval through translate-train. We first …",
+      "authors": [
+        "Raphaël Sourty",
+        "Antoine Chaffin",
+        "Paulo Roberto Moura Junior",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.27178v1",
+      "published": "2026-07-29T17:50:51Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Partner Capability Estimation for Task-Agnostic Adaptation in Ad-Hoc Teamwork",
+      "summary": "Effective collaboration with novel and diverse partners is a crucial skill for autonomous agents. Most current ad-hoc teamwork (AHT) approaches assume that agents will collaborate on a single, fixed task and that the partner's capabilities, their ability to successfully execute t…",
+      "authors": [
+        "Peter Tisnikar",
+        "Maja Swieczkowska",
+        "Benteng Ma",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.27177v1",
+      "published": "2026-07-29T17:50:39Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Improving Item Discoverability in e-Commerce Search via Related Intent Generation",
+      "summary": "Traditional search systems are optimized to retrieve items that strictly match a query, often prioritizing precision over recall. In e-commerce marketplaces and particularly grocery, this paradigm is limiting, as user satisfaction and commercial outcomes depend heavily on the dis…",
+      "authors": [
+        "Ji Xin",
+        "Xiao Xiao",
+        "Ishan Bhatt",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.27172v1",
+      "published": "2026-07-29T17:46:35Z",
+      "category": "cs.IR"
+    },
+    {
+      "title": "When Do Learned Diffusion Proposals Help Constraint Solving? A Controlled Study on Continuous Algebraic Systems",
+      "summary": "Solving a continuous algebraic constraint system requires two decisions: which values satisfy the constraints, and which structural augmentation renders an unsolvable system solvable. Classical solvers answer the first well and the second only by enumeration. On that discrete dec…",
+      "authors": [
+        "Quang Bui",
+        "Sparsh Roy",
+        "Akash Gundimeda",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.27169v1",
+      "published": "2026-07-29T17:44:31Z",
+      "category": "cs.LG"
     }
   ]
 }

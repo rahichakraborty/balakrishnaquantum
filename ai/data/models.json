@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-08-01T05:51:04+00:00",
+  "generated_at": "2026-08-01T15:57:19+00:00",
   "items": [
     {
       "id": "moonshotai/Kimi-K3",
       "url": "https://huggingface.co/moonshotai/Kimi-K3",
-      "downloads": 493481,
-      "likes": 9311,
+      "downloads": 559924,
+      "likes": 9420,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
-      "downloads": 0,
-      "likes": 1108,
+      "downloads": 15366,
+      "likes": 1321,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
-      "downloads": 1119057,
-      "likes": 1157,
+      "downloads": 1173001,
+      "likes": 1207,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "baidu/Unlimited-OCR",
       "url": "https://huggingface.co/baidu/Unlimited-OCR",
-      "downloads": 2513603,
-      "likes": 3670,
+      "downloads": 2457387,
+      "likes": 3697,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "owensong/Inflect-Micro-v2",
       "url": "https://huggingface.co/owensong/Inflect-Micro-v2",
-      "downloads": 1449,
-      "likes": 349,
+      "downloads": 1565,
+      "likes": 356,
       "pipeline_tag": "text-to-speech"
     },
     {
-      "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
-      "url": "https://huggingface.co/Kwaipilot/KAT-Coder-V2.5-Dev",
-      "downloads": 10241,
-      "likes": 373,
-      "pipeline_tag": "text-generation"
+      "id": "unsloth/DeepSeek-V4-Flash-0731-GGUF",
+      "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF",
+      "downloads": 4048,
+      "likes": 254,
+      "pipeline_tag": null
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
-      "downloads": 1651533,
-      "likes": 4713,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "poolside/Laguna-S-2.1",
-      "url": "https://huggingface.co/poolside/Laguna-S-2.1",
-      "downloads": 76212,
-      "likes": 864,
+      "downloads": 1683442,
+      "likes": 4725,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "unsloth/Kimi-K3-GGUF",
       "url": "https://huggingface.co/unsloth/Kimi-K3-GGUF",
-      "downloads": 36180,
-      "likes": 230,
+      "downloads": 41337,
+      "likes": 238,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "Nanbeige/Nanbeige4.2-3B",
-      "url": "https://huggingface.co/Nanbeige/Nanbeige4.2-3B",
-      "downloads": 26928,
-      "likes": 596,
+      "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
+      "url": "https://huggingface.co/Kwaipilot/KAT-Coder-V2.5-Dev",
+      "downloads": 10771,
+      "likes": 381,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "thinkingmachines/Inkling-Small",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-Small",
+      "downloads": 3998,
+      "likes": 206,
+      "pipeline_tag": "image-text-to-text"
     }
   ]
 }

@@ -1,157 +1,149 @@
 {
-  "generated_at": "2026-08-02T15:56:36+00:00",
+  "generated_at": "2026-08-03T06:16:08+00:00",
   "items": [
     {
-      "title": "Learning to Trace Seiberg Dualities",
-      "summary": "Dualities play an important role in establishing both microscopic and emergent phenomena in a wide range of physical systems. In practice, though, it can often be computationally challenging to establish when two systems are dual, even when all of the \"rules of the game\" are well…",
+      "title": "TokTier: Exact Stateful Tokenization for Agentic LLM Serving",
+      "summary": "LLM serving systems cache prompt KV state, yet most front ends still re-tokenize the full request text on every call. The cost lands on coding agents, which resubmit a long transcript after each small tool result, and reuse is hard because even a short append can change token bou…",
       "authors": [
-        "Jonathan J. Heckman",
-        "Shani Meynet",
-        "Alessandro Mininno",
-        "et al."
+        "Zhenyu Zhang",
+        "Zhichao Cao"
       ],
-      "link": "http://arxiv.org/abs/2607.28628v1",
-      "published": "2026-07-30T17:59:56Z",
-      "category": "hep-th"
-    },
-    {
-      "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
-      "summary": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints. We present ReToken, a single learnable embedding trained as an …",
-      "authors": [
-        "Yao Xiao",
-        "Reuben Tan",
-        "Zhen Zhu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.28627v1",
-      "published": "2026-07-30T17:59:56Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "PAC-MAN: Perception-Aware CBF-RL for Whole-Body Safety in Humanoid Dodgeball",
-      "summary": "We present PAC-MAN, a perception-aware CBF-RL framework that couples control-barrier safety with deployment-realistic onboard sensing for whole-body humanoid dodgeball. The deployed policy sees the ball only as segmentation-masked depth from a head-mounted camera, while training-…",
-      "authors": [
-        "Lizhi Yang",
-        "Junheng Li",
-        "Aaron D. Ames"
-      ],
-      "link": "http://arxiv.org/abs/2607.28623v1",
-      "published": "2026-07-30T17:59:35Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
-      "summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their pr…",
-      "authors": [
-        "Bing Yan",
-        "Gregory Wolfe",
-        "Stefano Martiniani",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2607.28618v1",
-      "published": "2026-07-30T17:59:11Z",
+      "link": "http://arxiv.org/abs/2607.29678v1",
+      "published": "2026-07-31T17:56:30Z",
       "category": "cs.CL"
     },
     {
-      "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
-      "summary": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regulators, creating a serious trust and accountability gap in the …",
+      "title": "ExtractBench: A Benchmark for Schema-Guided Enterprise Document Extraction",
+      "summary": "Enterprise workflows increasingly rely on agents for \\emph{schema-guided extraction}: given a document and a user-defined schema, the agent faithfully follows the schema to produce the correct output with source evidence as grounding metadata. We present ExtractBench, a benchmark…",
       "authors": [
-        "Xiangning Lin",
-        "Shenzhe Zhu",
-        "Shu Yang",
+        "Boyang Zhang",
+        "Adrian Lyjak",
+        "Eli Stewart",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.28617v1",
-      "published": "2026-07-30T17:58:58Z",
+      "link": "http://arxiv.org/abs/2607.29677v1",
+      "published": "2026-07-31T17:55:58Z",
       "category": "cs.AI"
     },
     {
-      "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
-      "summary": "Computer-using agents (CUAs) are advancing rapidly across the digital world. A CUA trajectory records the agent's actions, states, and reasoning. Verifying whether it fulfilled the task instruction is central to CUA evaluation, data curation, and reinforcement learning. Neither h…",
+      "title": "Differentially Private Nonparametric Modal Learning with Applications to Regression and Clustering",
+      "summary": "Density modes provide a localized and interpretable summary of multimodal distributions, but their estimation under rigorous differential privacy constraints remains largely unexplored. We study differentially private recovery of density modes for multivariate distributions under…",
       "authors": [
-        "Qiushi Sun",
-        "Kanzhi Cheng",
-        "Yian Wang",
-        "et al."
+        "Arkajyoti Bhattacharjee",
+        "Arnab Auddy"
       ],
-      "link": "http://arxiv.org/abs/2607.28609v1",
-      "published": "2026-07-30T17:57:41Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2607.29675v1",
+      "published": "2026-07-31T17:55:02Z",
+      "category": "math.ST"
     },
     {
-      "title": "KAISEN: Reproducible Subgroup Fairness Auditing for Clinical Risk Models",
-      "summary": "Clinical risk models routinely achieve strong aggregate performance while producing materially different error rates across patient subgroups. Audit pipelines have been proposed to catch this, but their components are rarely stress-tested, so it is unclear which parts of an audit…",
+      "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+      "summary": "SignMuon compresses the Muon update to one bit per parameter by taking its elementwise sign, providing the most direct way to run a matrix-aware optimizer under an extremely low communication budget. It outperforms SignSGD in practice, yet it can ascend even on a linear function.…",
       "authors": [
-        "Sparsh Roy",
-        "Samuel Girmachew",
-        "Nishita Chavan"
+        "Maria Smirnova",
+        "Alexey Kravatskiy"
       ],
-      "link": "http://arxiv.org/abs/2607.28608v1",
-      "published": "2026-07-30T17:57:18Z",
+      "link": "http://arxiv.org/abs/2607.29674v1",
+      "published": "2026-07-31T17:54:46Z",
+      "category": "math.OC"
+    },
+    {
+      "title": "Freeze, Then Select: Structured Field Adapters and Stability-Validated Weak Selection for PDE Discovery from Sparse Observations",
+      "summary": "PDE discovery from sparse observations requires reconstructing a continuous field and selecting the correct differential terms. Our analysis of optimization paths in coupled neural PDE discovery reveals three behaviors: the exact support can persist to the end of training, appear…",
+      "authors": [
+        "Juncheng Zhong",
+        "Chenghuang Shen",
+        "Jianfeng Liu",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.29665v1",
+      "published": "2026-07-31T17:49:32Z",
       "category": "cs.LG"
     },
     {
-      "title": "Inducing language models to assert their own consciousness restores human beliefs and values",
-      "summary": "Aligning large language models to prevent them attributing consciousness to themselves inadvertently alters their representations of mindedness in other entities alongside human beliefs and values. We demonstrate that safety fine-tuning suppresses models' tendencies to attribute …",
+      "title": "GQ-FSL: Green Quantized Federated Split Learning",
+      "summary": "Deploying state-of-the-art deep neural networks (DNNs) at the wireless edge is severely bottlenecked by the strict energy and resource constraints of mobile devices. While federated split learning (FSL) mitigates on-device computation by offloading workloads to an edge server, th…",
       "authors": [
-        "Junsol Kim",
-        "Winnie Street",
-        "Roberta Rocca",
+        "Idan Roth",
+        "Lutz Lampe"
+      ],
+      "link": "http://arxiv.org/abs/2607.29659v1",
+      "published": "2026-07-31T17:40:27Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Development of FDD-ON: an Ontology for VAV HVAC System Fault Detection and Diagnostics",
+      "summary": "Fault detection and diagnosis (FDD) technology is essential for improving HVAC system reliability, energy efficiency, and maintenance effectiveness. However, effective deployment of FDD solutions in buildings requires structured domain knowledge that can bridge heterogeneous data…",
+      "authors": [
+        "Yimin Chen",
+        "Brian Fricke",
+        "Bo Shen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.28607v1",
-      "published": "2026-07-30T17:57:10Z",
+      "link": "http://arxiv.org/abs/2607.29657v1",
+      "published": "2026-07-31T17:37:34Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Evolving language compositionality in a frequency-structured meaning space",
+      "summary": "The iterated learning model was introduced to investigate language evolution: the way in which the characteristic properties of human languages have been shaped, at least partly, by repeated transmission from one language user to another. The key finding is that language composit…",
+      "authors": [
+        "Fabio De Ponte",
+        "Eloise Gaines-White",
+        "Conor Houghton",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2607.29642v1",
+      "published": "2026-07-31T17:18:57Z",
       "category": "cs.CL"
     },
     {
-      "title": "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments",
-      "summary": "Scaling coding agents requires a continuing supply of executable data for training, benchmarking, and continuous evaluation. Each task must couple a realistic software state with a specification, development tools, and reliable verification. To expand this supply, we present Chan…",
+      "title": "AgentHPOBench: A Benchmark For Evaluating LLM Agents as Sequential Hyperparameter Optimizers",
+      "summary": "As LLMs evolve from code completion systems into autonomous scientific agents, evaluating their ability to conduct experiments has become increasingly important. Existing benchmarks typically focus on static code generation, paper replication, or final answer correctness, but do …",
       "authors": [
-        "Haomin Qi",
-        "Xingliang Wang",
-        "Xuanqi Gao",
+        "Tianyu Huai",
+        "Tingshuo Fan",
+        "Xinchi Chen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.28591v1",
-      "published": "2026-07-30T17:44:31Z",
-      "category": "cs.SE"
+      "link": "http://arxiv.org/abs/2607.29626v1",
+      "published": "2026-07-31T16:58:00Z",
+      "category": "cs.AI"
     },
     {
-      "title": "VAD: Attributing Visual Evidence for Target Reconstruction in Multimodal On-Policy Distillation",
-      "summary": "Multimodal on-policy distillation (OPD) transfers fine-grained visual knowledge by supervising student-generated trajectories with a privileged-view teacher. Yet its next-token corrections are source-mixed, combining visual signals with linguistic priors and teacher-specific effe…",
+      "title": "The Theoretical Foundation of Socratic Tests: Dynamic, Multimodal, Conversational Examinations",
+      "summary": "Traditional static assessments rely on a subtractive, deficit-based grading model that often penalizes ambition and obscures diagnostic feedback. Conversely, traditional face-to-face oral examinations introduce severe construct-irrelevant variance by exacerbating performative anx…",
       "authors": [
-        "Kangning Zhang",
-        "Yixing Li",
-        "Shuai Shao",
+        "Ilya Mikhelson"
+      ],
+      "link": "http://arxiv.org/abs/2607.29624v1",
+      "published": "2026-07-31T16:57:49Z",
+      "category": "cs.CY"
+    },
+    {
+      "title": "CENDRe: Concept Extraction with Natural Domain Representations",
+      "summary": "Convolutional neural networks (CNNs) are widely used for time-series classification, but their deployment in critical domains requires understanding the temporal and spectral patterns that drive their predictions. Concept extraction (CE) methods identify such patterns by analyzin…",
+      "authors": [
+        "Antonia Holzapfel",
+        "Andres Felipe Posada Moreno",
+        "Sebastian Trimpe"
+      ],
+      "link": "http://arxiv.org/abs/2607.29621v1",
+      "published": "2026-07-31T16:56:27Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "When Does On-Policy Interaction Help? Representational Tradeoffs in Value-Based Imitation Learning",
+      "summary": "Imitation learning (IL)---training an agent to replicate expert behavior from demonstrations---underpins applications from robotics to language model training. Standard approaches such as Behavior Cloning (BC) are known to suffer from compounding errors and performance plateaus, …",
+      "authors": [
+        "Luca Viano",
+        "Antoine Moulin",
+        "Audrey Huang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2607.28590v1",
-      "published": "2026-07-30T17:43:46Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "MixFrag: Fragility-Guided Mixed-Precision Post-Training Quantization for Vision Transformers",
-      "summary": "Post-training quantization (PTQ) has emerged as an effective solution for deploying Vision Transformers (ViTs) on resource-constrained devices. However, existing PTQ methods typically employ uniform bit-widths across transformer components, overlooking their heterogeneous sensiti…",
-      "authors": [
-        "Md. Mehrab Hossain Opi",
-        "Robiul Islam Ryad",
-        "Md. Umar Faruk"
-      ],
-      "link": "http://arxiv.org/abs/2607.28589v1",
-      "published": "2026-07-30T17:43:36Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks",
-      "summary": "SWE-bench-like benchmarks are widely used for evaluating LLM's issue resolution capability. They typically follow a common construction pipeline: each PR (Pull Request) is paired with its linked issue by extracting issue references from the PR description; the issue description i…",
-      "authors": [
-        "Manyi Wang",
-        "Junjielong Xu",
-        "Pinjia He"
-      ],
-      "link": "http://arxiv.org/abs/2607.28587v1",
-      "published": "2026-07-30T17:42:44Z",
-      "category": "cs.SE"
+      "link": "http://arxiv.org/abs/2607.29617v1",
+      "published": "2026-07-31T16:52:47Z",
+      "category": "cs.LG"
     }
   ]
 }

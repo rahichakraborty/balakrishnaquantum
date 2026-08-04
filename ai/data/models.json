@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-08-03T17:06:24+00:00",
+  "generated_at": "2026-08-04T05:42:52+00:00",
   "items": [
     {
       "id": "moonshotai/Kimi-K3",
       "url": "https://huggingface.co/moonshotai/Kimi-K3",
       "downloads": 967622,
-      "likes": 9805,
+      "likes": 9878,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "downloads": 236076,
-      "likes": 1998,
+      "likes": 2107,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "MiniMaxAI/MiniMax-H3",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
       "downloads": 0,
-      "likes": 1252,
+      "likes": 1582,
       "pipeline_tag": "image-text-to-video"
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "downloads": 1550034,
-      "likes": 1410,
+      "likes": 1453,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "baidu/Unlimited-OCR",
-      "url": "https://huggingface.co/baidu/Unlimited-OCR",
-      "downloads": 2601062,
-      "likes": 3836,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "unsloth/DeepSeek-V4-Flash-0731-GGUF",
-      "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF",
-      "downloads": 69656,
-      "likes": 406,
-      "pipeline_tag": null
     },
     {
       "id": "Comfy-Org/MiniMax-H3",
       "url": "https://huggingface.co/Comfy-Org/MiniMax-H3",
       "downloads": 2,
-      "likes": 385,
+      "likes": 475,
       "pipeline_tag": null
     },
     {
-      "id": "unsloth/Kimi-K3-GGUF",
-      "url": "https://huggingface.co/unsloth/Kimi-K3-GGUF",
-      "downloads": 128215,
-      "likes": 278,
+      "id": "unsloth/DeepSeek-V4-Flash-0731-GGUF",
+      "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF",
+      "downloads": 69656,
+      "likes": 434,
+      "pipeline_tag": null
+    },
+    {
+      "id": "baidu/Unlimited-OCR",
+      "url": "https://huggingface.co/baidu/Unlimited-OCR",
+      "downloads": 2601062,
+      "likes": 3851,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "thinkingmachines/Inkling-Small",
       "url": "https://huggingface.co/thinkingmachines/Inkling-Small",
       "downloads": 8504,
-      "likes": 255,
+      "likes": 267,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "unsloth/Kimi-K3-GGUF",
+      "url": "https://huggingface.co/unsloth/Kimi-K3-GGUF",
+      "downloads": 128215,
+      "likes": 286,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
       "downloads": 2180509,
-      "likes": 4793,
+      "likes": 4800,
       "pipeline_tag": "text-generation"
     }
   ]

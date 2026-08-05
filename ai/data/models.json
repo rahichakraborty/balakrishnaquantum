@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-08-04T16:49:01+00:00",
+  "generated_at": "2026-08-05T05:41:31+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "downloads": 433284,
-      "likes": 2239,
+      "likes": 2346,
       "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "moonshotai/Kimi-K3",
-      "url": "https://huggingface.co/moonshotai/Kimi-K3",
-      "downloads": 1125935,
-      "likes": 9978,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "MiniMaxAI/MiniMax-H3",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
       "downloads": 0,
-      "likes": 1877,
+      "likes": 2100,
       "pipeline_tag": "image-text-to-video"
+    },
+    {
+      "id": "moonshotai/Kimi-K3",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3",
+      "downloads": 1125935,
+      "likes": 10025,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Comfy-Org/MiniMax-H3",
       "url": "https://huggingface.co/Comfy-Org/MiniMax-H3",
       "downloads": 2,
-      "likes": 566,
+      "likes": 644,
       "pipeline_tag": null
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "downloads": 1633405,
-      "likes": 1493,
+      "likes": 1526,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/DeepSeek-V4-Flash-0731-GGUF",
       "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF",
       "downloads": 111678,
-      "likes": 460,
+      "likes": 477,
       "pipeline_tag": null
     },
     {
       "id": "baidu/Unlimited-OCR",
       "url": "https://huggingface.co/baidu/Unlimited-OCR",
       "downloads": 2703366,
-      "likes": 3875,
+      "likes": 3886,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "thinkingmachines/Inkling-Small",
       "url": "https://huggingface.co/thinkingmachines/Inkling-Small",
       "downloads": 15500,
-      "likes": 278,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "unsloth/Kimi-K3-GGUF",
-      "url": "https://huggingface.co/unsloth/Kimi-K3-GGUF",
-      "downloads": 170055,
-      "likes": 300,
+      "likes": 291,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Audio8/Audio8-TTS-Preview-0.6b",
       "url": "https://huggingface.co/Audio8/Audio8-TTS-Preview-0.6b",
       "downloads": 11276,
-      "likes": 235,
+      "likes": 255,
       "pipeline_tag": "text-to-speech"
+    },
+    {
+      "id": "ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot",
+      "url": "https://huggingface.co/ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot",
+      "downloads": 0,
+      "likes": 200,
+      "pipeline_tag": "image-text-to-text"
     }
   ]
 }

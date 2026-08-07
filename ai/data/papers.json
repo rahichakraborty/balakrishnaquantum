@@ -1,151 +1,152 @@
 {
-  "generated_at": "2026-08-06T05:43:09+00:00",
+  "generated_at": "2026-08-07T04:50:38+00:00",
   "items": [
     {
-      "title": "Reasoning Core: Designing Broad Procedural Data for Completion-Supervised Reasoning Training",
-      "summary": "Procedural generators produce useful verifiable reasoning problems at scale, but have received less attention as data for completion-supervised fine-tuning. We introduce Reasoning Core, a collection of 50 generators spanning mathematics, logic, planning, state tracking, formal la…",
+      "title": "Learning When to Trust via Selective Context Preference Optimization",
+      "summary": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless wh…",
       "authors": [
-        "Damien Sileo",
-        "Valentin Lacombe",
-        "Dimitri Kachler"
+        "Xian Sun",
+        "Wei Chow",
+        "Yingshuo Wang",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.05148v1",
-      "published": "2026-08-05T17:59:44Z",
+      "link": "http://arxiv.org/abs/2608.06377v1",
+      "published": "2026-08-06T17:59:58Z",
       "category": "cs.CL"
     },
     {
-      "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
-      "summary": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified objective. We present Argus, a persistent, self-evolving runtime in which Manager, Pla…",
+      "title": "The Bitter Lesson of Tool Calling",
+      "summary": "Tool use transforms LLMs into agents that act beyond their training data, and for code-capable models, programmatic tool calling extends this further by replacing rigid JSON calls with scripts that chain and parallelize naturally. However, a systematic evaluation of tools as code…",
       "authors": [
-        "Boxiu Li",
-        "Zimo Wen",
-        "Yijia Fan",
+        "Ishan Patel",
+        "Sahil Sen",
+        "Elias Lumer",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.05144v1",
-      "published": "2026-08-05T17:58:58Z",
+      "link": "http://arxiv.org/abs/2608.06370v1",
+      "published": "2026-08-06T17:58:32Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
+      "summary": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fr…",
+      "authors": [
+        "Soorya Ram Shimgekar",
+        "Michelle Hu",
+        "Dorisa Shehi",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.06366v1",
+      "published": "2026-08-06T17:57:37Z",
       "category": "cs.AI"
     },
     {
-      "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
-      "summary": "Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora, however, are dominated by books, academic articles, and code repositories, whi…",
+      "title": "Investigating Artificial Intelligence Digital Sovereignty in Mobile Shopping Apps: A Case Study of Nigeria",
+      "summary": "The use of e-commerce mobile applications is expanding in Nigeria, creating both opportunities and risks, including fraud and reduced user control over digital technologies, raising concerns about digital sovereignty. This research examines how Artificial Intelligence (AI) in Nig…",
       "authors": [
-        "Indraneil Paul",
-        "Falko Helm",
-        "Goran Glavaš",
+        "George Grispos",
+        "Sajda Qureshi"
+      ],
+      "link": "http://arxiv.org/abs/2608.06364v1",
+      "published": "2026-08-06T17:57:28Z",
+      "category": "cs.CY"
+    },
+    {
+      "title": "An Optimal Agnostic PAC Algorithm",
+      "summary": "Let $H\\subseteq\\{-1,+1\\}^X$ be a class of finite VC dimension $d\\ge1$. Writing $L$ for the binary risk and $L^*=\\min_{h\\in H}L(h)$, we construct a learner achieving the statistically optimal risk bound: from an i.i.d.\\ sample of size $n$, for every $0<δ\\le 1/2$, with probability …",
+      "authors": [
+        "Markus Engelund Mathiasen",
+        "Jian Qian",
+        "Nikita Zhivotovskiy"
+      ],
+      "link": "http://arxiv.org/abs/2608.06363v1",
+      "published": "2026-08-06T17:57:25Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
+      "summary": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop befor…",
+      "authors": [
+        "Boning Li",
+        "Yu Chen",
+        "Longbo Huang"
+      ],
+      "link": "http://arxiv.org/abs/2608.06362v1",
+      "published": "2026-08-06T17:57:11Z",
+      "category": "cs.GT"
+    },
+    {
+      "title": "The Low Frequency Trap: Video Language Models Fail at Simple Event Bookkeeping",
+      "summary": "Real-world video benchmarks provide broad coverage, but their fixed clips entangle event count, rate, duration, and visual complexity, making failure modes hard to isolate. While existing programmatic benchmarks offer better control, they score only the final answer rather than a…",
+      "authors": [
+        "Sarvesh Baskar",
+        "Zikui Cai",
+        "Shayan Shabihi",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.05141v1",
-      "published": "2026-08-05T17:58:15Z",
+      "link": "http://arxiv.org/abs/2608.06361v1",
+      "published": "2026-08-06T17:57:06Z",
       "category": "cs.AI"
     },
     {
-      "title": "Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning",
-      "summary": "Long-horizon reasoning in recent LLMs demands that the model switch between distinct skills inside a reasoning chain, such as first doing a math derivation, then using the result to plan a schedule. We call such problems cross-skill long-horizon tasks: multi-step tasks whose step…",
+      "title": "Resourced Authority A Mechanism-Design Model for Participatory Governance of Deployed AI Agents",
+      "summary": "We give a formal mechanism design model for the continuous participatory governance of a deployed AI agent. The mechanism is built on the principle that governance should control an AI agent through resource allocation so as to make authorization self enforcing via compute budget…",
       "authors": [
-        "Yinghui He",
-        "Ling Yang",
-        "Jiarui Liu",
+        "Praphul Chandra",
+        "Sujit Gujar",
+        "Ganesh Ghalme"
+      ],
+      "link": "http://arxiv.org/abs/2608.06353v1",
+      "published": "2026-08-06T17:53:24Z",
+      "category": "cs.GT"
+    },
+    {
+      "title": "CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks",
+      "summary": "Training terminal agents requires executable and verifiable tasks that are not merely solvable, but appropriately challenging for learning. Executable validation establishes feasibility, yet does not reveal how a task behaves relative to a given solver setting. In this paper, we …",
+      "authors": [
+        "Fanzhe Meng",
+        "Guoxin Chen",
+        "Jiale Zhao",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.05139v1",
-      "published": "2026-08-05T17:57:16Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek across Specialist Domains",
-      "summary": "Modern Greek is absent from NVIDIA's Nemotron retrieval models and from major multilingual retrieval benchmarks, despite being important for retrieval-augmented generation (RAG) in legal, energy, financial, and medical applications. We present an end-to-end adaptation of the Nemo…",
-      "authors": [
-        "Ayoub Kirouane",
-        "Christos Petrocheilos"
-      ],
-      "link": "http://arxiv.org/abs/2608.05138v1",
-      "published": "2026-08-05T17:56:40Z",
-      "category": "eess.AS"
-    },
-    {
-      "title": "The Loss Does Not See the Basis, but Adam Does",
-      "summary": "Gradient descent on a factored model $W = UV^\\top$ is implicitly biased toward low-rank solutions, while Adam, starting from the same small initialization, is not. We trace the difference to the gauge symmetry of the loss, its invariance under $(U, V) \\mapsto (UQ, VQ)$. Gradient …",
-      "authors": [
-        "Devender Singh"
-      ],
-      "link": "http://arxiv.org/abs/2608.05136v1",
-      "published": "2026-08-05T17:56:26Z",
+      "link": "http://arxiv.org/abs/2608.06352v1",
+      "published": "2026-08-06T17:53:18Z",
       "category": "cs.LG"
     },
     {
-      "title": "Predicting Brain Morphometry with MT-GNN: Mesh Evolution in Continuous Time with Graph-Based Metric Tensor Embeddings",
-      "summary": "Predicting how a subcortical structure's shape will evolve from a few prior scans could support prognosis and clinical-trial enrichment. Existing longitudinal mesh predictors either extrapolate shape trajectories via high-dimensional embeddings or regress vertex deformations dire…",
+      "title": "Challenges in Evaluating Explanation Methods for Static and Evolving Data",
+      "summary": "This paper addresses the limitations of Explainable Artificial Intelligence (XAI) with respect to insufficient evaluation. They are illustrated through the DetoxAI image recognition system for bias detection and concept unlearning. Then, an example of a human-grounded evaluation …",
       "authors": [
-        "Hao Ding",
-        "Daniel Semchin",
-        "Paul M. Thompson",
-        "et al."
+        "Jerzy Stefanowski"
       ],
-      "link": "http://arxiv.org/abs/2608.05132v1",
-      "published": "2026-08-05T17:53:33Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2608.06351v1",
+      "published": "2026-08-06T17:53:10Z",
+      "category": "cs.AI"
     },
     {
-      "title": "OPD-V: Visual On-Policy Self-Distillation with Modality Balance",
-      "summary": "On-Policy Self-Distillation (OPSD) has become a standard post-training approach for improving visual reasoning in multimodal large language models (MLLMs). Existing methods draw privileged information from diverse input sources to guide self-distillation. Yet these designs overlo…",
+      "title": "RP-OPSD: Reasoning-Pivot-Guided On-Policy Self-Distillation for Multilingual Reasoning Transfer",
+      "summary": "Multilingual reasoning transfer is crucial for extending reasoning capabilities of large language models (LLMs) beyond high-resource languages. On-policy self-distillation (OPSD) and its variants have emerged as a promising paradigm, providing dense token-level supervision on stu…",
       "authors": [
-        " Aniri",
-        "Jinhe Bi",
-        "Peng Liao",
-        "et al."
+        "Xinye Wang",
+        "Junxiao Liu",
+        "Shujian Huang"
       ],
-      "link": "http://arxiv.org/abs/2608.05131v1",
-      "published": "2026-08-05T17:53:06Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "SSTQ:Privacy-Preserving Vector Quantization via Subsampled Stochastic TurboQuant",
-      "summary": "Achieving local differential privacy in distributed optimization while maintaining low communication cost remains challenging. Existing vector quantization methods, such as vqSGD, use high-dimensional geometric constructions but incur unfavorable dimension-dependent variance. In …",
-      "authors": [
-        "Adel Javanmard",
-        "David P. Woodruff",
-        "Vahab Mirrokni"
-      ],
-      "link": "http://arxiv.org/abs/2608.05127v1",
-      "published": "2026-08-05T17:51:25Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Spoken Function Calling: A New Perspective on Spoken Language Understanding for Large Audio Language Models",
-      "summary": "Spoken Language Understanding (SLU) is the core component of task-oriented dialogue systems and a pivotal link in achieving seamless human-agent interaction. While traditional SLU can effectively extract user semantics for closed-set tasks after in-domain supervised fine-tuning, …",
-      "authors": [
-        "Yuezhang Peng",
-        "Yuxin Liu",
-        "Changfeng Gao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.05126v1",
-      "published": "2026-08-05T17:50:31Z",
+      "link": "http://arxiv.org/abs/2608.06347v1",
+      "published": "2026-08-06T17:52:06Z",
       "category": "cs.CL"
     },
     {
-      "title": "Chained Recursive Language Models for Multi-Iteration Reasoning",
-      "summary": "Long context reasoning in large language models (LLMs) is usually constrained by the fact that a single inference trajectory has to simultaneously explore the context, store intermediate state, verify evidence, and produce the final answer. This becomes particularly difficult in …",
+      "title": "TRAJDEBUG: Tracing Error Lifecycle to Identify Critical Failures in Long-Horizon Agent Trajectories",
+      "summary": "LLM-based agentic systems have shown remarkable capabilities in complex domains, while suffering from cascading errors and difficulty in debugging. Critical error detection aims to locate the earliest error step in a failed trajectory that is responsible for the final failure. Ho…",
       "authors": [
-        "Purbesh Mitra",
-        "Sennur Ulukus"
+        "Yunjia Qi",
+        "Zehua Yin",
+        "Xintong Shi",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.05124v1",
-      "published": "2026-08-05T17:50:08Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "DASyR-LLM: Domain-Aware Symbolic Regression with LLMs for Kinetic Model Discovery",
-      "summary": "Kinetic model discovery is a central challenge in chemical engineering, as accurate rate expressions are essential for understanding and controlling chemical and biological processes. Symbolic regression (SR) has emerged as a powerful data-driven approach for identifying interpre…",
-      "authors": [
-        "Roberto Aliaga Medina",
-        "Paulina Quintanilla",
-        "Antonio del Rio Chanona"
-      ],
-      "link": "http://arxiv.org/abs/2608.05120v1",
-      "published": "2026-08-05T17:48:45Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2608.06346v1",
+      "published": "2026-08-06T17:51:20Z",
+      "category": "cs.AI"
     }
   ]
 }

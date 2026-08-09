@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-08-08T15:24:10+00:00",
+  "generated_at": "2026-08-09T04:14:30+00:00",
   "items": [
     {
       "id": "MiniMaxAI/MiniMax-H3",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
       "downloads": 26693,
-      "likes": 3055,
+      "likes": 3121,
       "pipeline_tag": "image-text-to-video"
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "downloads": 785771,
-      "likes": 2814,
+      "likes": 2865,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Comfy-Org/MiniMax-H3",
       "url": "https://huggingface.co/Comfy-Org/MiniMax-H3",
       "downloads": 3943176,
-      "likes": 987,
+      "likes": 1009,
       "pipeline_tag": null
     },
     {
       "id": "moonshotai/Kimi-K3",
       "url": "https://huggingface.co/moonshotai/Kimi-K3",
       "downloads": 1388105,
-      "likes": 10322,
+      "likes": 10346,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "larryvrh/MiniMax-H3-Turbo-Lora",
       "url": "https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora",
       "downloads": 0,
-      "likes": 460,
+      "likes": 493,
       "pipeline_tag": "text-to-video"
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "downloads": 2345190,
-      "likes": 1741,
+      "likes": 1767,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "LiquidAI/LFM2.5-2.6B",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
       "downloads": 81522,
-      "likes": 406,
+      "likes": 418,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot",
       "url": "https://huggingface.co/ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot",
       "downloads": 0,
-      "likes": 396,
+      "likes": 405,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/DeepSeek-V4-Flash-0731-GGUF",
       "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF",
       "downloads": 175093,
-      "likes": 601,
+      "likes": 608,
       "pipeline_tag": null
     },
     {
       "id": "deepgrove/maple-preview",
       "url": "https://huggingface.co/deepgrove/maple-preview",
       "downloads": 896,
-      "likes": 244,
+      "likes": 257,
       "pipeline_tag": "text-generation"
     }
   ]

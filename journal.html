@@ -17,6 +17,20 @@
   }
   .filter-row select.col-filter{ cursor:pointer; }
   .filter-row .col-filter:focus{ outline:none; border-color:var(--amber); }
+  .month-stats-row{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:14px;
+  }
+  .month-stat{
+    background:var(--card-soft); border:1px solid var(--border); border-radius:8px;
+    padding:10px 12px;
+  }
+  .month-stat-label{
+    font-size:9.5px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.08em;
+    font-family:var(--mono); margin-bottom:5px;
+  }
+  .month-stat-value{ font-size:15px; font-weight:700; font-family:var(--mono); letter-spacing:-.01em; }
+  .month-stat-sub{ font-size:10.5px; color:var(--text-faint); margin-top:2px; font-family:var(--mono); }
+  @media (max-width:560px){ .month-stats-row{ grid-template-columns:repeat(2,1fr); } }
 </style>
 </head>
 <body>
@@ -96,6 +110,28 @@
           <button class="btn btn-ghost btn-sm" id="calPrev">←</button>
           <span class="pill" id="calLabel">—</span>
           <button class="btn btn-ghost btn-sm" id="calNext">→</button>
+        </div>
+      </div>
+      <div class="month-stats-row">
+        <div class="month-stat">
+          <div class="month-stat-label">Net P&amp;L (after fees)</div>
+          <div class="month-stat-value" id="month-stat-pnl">$0</div>
+          <div class="month-stat-sub" id="month-stat-pnl-sub">—</div>
+        </div>
+        <div class="month-stat">
+          <div class="month-stat-label">Win Rate</div>
+          <div class="month-stat-value" id="month-stat-winrate">0%</div>
+          <div class="month-stat-sub" id="month-stat-winrate-sub">—</div>
+        </div>
+        <div class="month-stat">
+          <div class="month-stat-label">Profit Factor</div>
+          <div class="month-stat-value" id="month-stat-pf">0.0</div>
+          <div class="month-stat-sub">Gross profit ÷ gross loss</div>
+        </div>
+        <div class="month-stat">
+          <div class="month-stat-label">BKQ Score</div>
+          <div class="month-stat-value" id="month-stat-bkq">0<span class="muted" style="font-size:10px;">/100</span></div>
+          <div class="month-stat-sub" id="month-stat-bkq-sub">—</div>
         </div>
       </div>
       <div id="calendarGrid"></div>

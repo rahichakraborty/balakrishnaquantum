@@ -37,6 +37,44 @@ function renderCalendar(trades) {
 
   label.textContent = `${MONTH_NAMES[calViewMonth]} ${calViewYear}`;
 
+  // Monthly stat cards (Net P&L after fees, Win Rate, Profit Factor, BKQ Score) —
+  // scoped to whichever month is currently in view, recomputed on every render/nav.
+  const monthTrades = trades.filter(t => {
+    const y = parseInt(t.date.slice(0,4), 10);
+    const m = parseInt(t.date.slice(5,7), 10) - 1;
+    return y === calViewYear && m === calViewMonth;
+  });
+  const monthStats = computeStats(monthTrades);
+
+  const monthPnlEl = document.getElementById("month-stat-pnl");
+  if (monthPnlEl) {
+    monthPnlEl.textContent = fmtDual(monthStats.netPnl);
+    monthPnlEl.className = "month-stat-value " + (monthStats.netPnl >= 0 ? "up" : "down");
+  }
+  const monthPnlSubEl = document.getElementById("month-stat-pnl-sub");
+  if (monthPnlSubEl) {
+    monthPnlSubEl.textContent = monthTrades.length
+      ? `Gross ${fmtDualPlain(monthStats.grossPnl)} − Fees ${fmtDualPlain(monthStats.totalFees)}`
+      : "No trades this month";
+  }
+
+  const monthWrEl = document.getElementById("month-stat-winrate");
+  if (monthWrEl) monthWrEl.textContent = `${monthStats.winRate.toFixed(1)}%`;
+  const monthWrSubEl = document.getElementById("month-stat-winrate-sub");
+  if (monthWrSubEl) monthWrSubEl.textContent = `${monthStats.wins}W / ${monthStats.losses}L`;
+
+  const monthPfEl = document.getElementById("month-stat-pf");
+  if (monthPfEl) monthPfEl.textContent = monthStats.profitFactor.toFixed(2);
+
+  const monthBkqEl = document.getElementById("month-stat-bkq");
+  if (monthBkqEl) monthBkqEl.innerHTML = `${monthStats.bkqScore}<span class="muted" style="font-size:10px;">/100</span>`;
+  const monthBkqSubEl = document.getElementById("month-stat-bkq-sub");
+  if (monthBkqSubEl) {
+    monthBkqSubEl.textContent = !monthTrades.length ? "—" :
+      monthStats.bkqScore >= 70 ? "Strong, consistent edge" :
+      monthStats.bkqScore >= 45 ? "Developing, some leaks" : "High risk / inconsistent";
+  }
+
   const firstOfMonth = new Date(calViewYear, calViewMonth, 1);
   const startDow = firstOfMonth.getDay();
   const daysInMonth = new Date(calViewYear, calViewMonth + 1, 0).getDate();

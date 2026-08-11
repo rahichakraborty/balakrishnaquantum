@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-08-11T04:15:24+00:00",
+  "generated_at": "2026-08-11T15:55:41+00:00",
   "items": [
     {
       "id": "MiniMaxAI/MiniMax-H3",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
-      "downloads": 47468,
-      "likes": 3447,
+      "downloads": 59368,
+      "likes": 3533,
       "pipeline_tag": "image-text-to-video"
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
-      "downloads": 954441,
-      "likes": 3076,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "meta-models/Muse-Glimmer-30B",
       "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
       "downloads": 0,
-      "likes": 791,
+      "likes": 1005,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "Comfy-Org/MiniMax-H3",
-      "url": "https://huggingface.co/Comfy-Org/MiniMax-H3",
-      "downloads": 6009639,
-      "likes": 1156,
-      "pipeline_tag": null
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "downloads": 1048685,
+      "likes": 3124,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "larryvrh/MiniMax-H3-Turbo-Lora",
       "url": "https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora",
       "downloads": 0,
-      "likes": 603,
+      "likes": 635,
       "pipeline_tag": "text-to-video"
+    },
+    {
+      "id": "Comfy-Org/MiniMax-H3",
+      "url": "https://huggingface.co/Comfy-Org/MiniMax-H3",
+      "downloads": 6798796,
+      "likes": 1195,
+      "pipeline_tag": null
     },
     {
       "id": "LiquidAI/LFM2.5-2.6B",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
-      "downloads": 89680,
-      "likes": 493,
+      "downloads": 93668,
+      "likes": 529,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "moonshotai/Kimi-K3",
       "url": "https://huggingface.co/moonshotai/Kimi-K3",
-      "downloads": 1510032,
-      "likes": 10477,
+      "downloads": 1565484,
+      "likes": 10504,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
-      "downloads": 2439083,
-      "likes": 1865,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot",
-      "url": "https://huggingface.co/ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot",
-      "downloads": 0,
-      "likes": 441,
+      "downloads": 2521093,
+      "likes": 1885,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "deepgrove/maple-preview",
       "url": "https://huggingface.co/deepgrove/maple-preview",
-      "downloads": 1344,
-      "likes": 315,
+      "downloads": 2049,
+      "likes": 327,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "lightx2v/Minimax-h3-Turbo",
+      "url": "https://huggingface.co/lightx2v/Minimax-h3-Turbo",
+      "downloads": 20376,
+      "likes": 308,
+      "pipeline_tag": "image-to-video"
     }
   ]
 }

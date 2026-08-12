@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-08-11T15:55:41+00:00",
+  "generated_at": "2026-08-12T04:44:04+00:00",
   "items": [
     {
       "id": "MiniMaxAI/MiniMax-H3",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
       "downloads": 59368,
-      "likes": 3533,
+      "likes": 3606,
       "pipeline_tag": "image-text-to-video"
     },
     {
       "id": "meta-models/Muse-Glimmer-30B",
       "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
       "downloads": 0,
-      "likes": 1005,
+      "likes": 1121,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "downloads": 1048685,
-      "likes": 3124,
+      "likes": 3167,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "larryvrh/MiniMax-H3-Turbo-Lora",
       "url": "https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora",
       "downloads": 0,
-      "likes": 635,
+      "likes": 658,
       "pipeline_tag": "text-to-video"
     },
     {
       "id": "Comfy-Org/MiniMax-H3",
       "url": "https://huggingface.co/Comfy-Org/MiniMax-H3",
       "downloads": 6798796,
-      "likes": 1195,
+      "likes": 1221,
       "pipeline_tag": null
-    },
-    {
-      "id": "LiquidAI/LFM2.5-2.6B",
-      "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
-      "downloads": 93668,
-      "likes": 529,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "moonshotai/Kimi-K3",
       "url": "https://huggingface.co/moonshotai/Kimi-K3",
       "downloads": 1565484,
-      "likes": 10504,
+      "likes": 10535,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
-      "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
-      "downloads": 2521093,
-      "likes": 1885,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "deepgrove/maple-preview",
-      "url": "https://huggingface.co/deepgrove/maple-preview",
-      "downloads": 2049,
-      "likes": 327,
+      "id": "LiquidAI/LFM2.5-2.6B",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
+      "downloads": 93668,
+      "likes": 556,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "lightx2v/Minimax-h3-Turbo",
       "url": "https://huggingface.co/lightx2v/Minimax-h3-Turbo",
       "downloads": 20376,
-      "likes": 308,
+      "likes": 357,
       "pipeline_tag": "image-to-video"
+    },
+    {
+      "id": "DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
+      "url": "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF",
+      "downloads": 2521093,
+      "likes": 1908,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "unsloth/Muse-Glimmer-30B-GGUF",
+      "url": "https://huggingface.co/unsloth/Muse-Glimmer-30B-GGUF",
+      "downloads": 0,
+      "likes": 314,
+      "pipeline_tag": "image-text-to-text"
     }
   ]
 }

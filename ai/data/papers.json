@@ -1,155 +1,154 @@
 {
-  "generated_at": "2026-08-12T15:54:28+00:00",
+  "generated_at": "2026-08-13T04:47:10+00:00",
   "items": [
     {
-      "title": "Surgical WAM: A World-Action Model for Data-Efficient Surgical Robot Learning",
-      "summary": "Learning reliable surgical manipulation policies is bottlenecked by the scarcity of action-labeled demonstrations: teleoperated surgical robot (e.g., dVRK) trajectories with synchronized kinematics are costly to collect, while surgical tasks demand precise contact handling, long-…",
+      "title": "AVA-Encoder: Towards Agent-Native Video Representation Learning",
+      "summary": "Creative agents still lack an effective way to learn from high-quality human films, limiting their ability to produce cinematic-grade videos. A key challenge is the absence of a structured video representation that is both faithful to film content and directly usable for agentic …",
       "authors": [
-        "Wenrui Bao",
-        "Tianyun Jiang",
-        "Zhiben Chen",
+        "Chuyue Li",
+        "Jinpeng Yu",
+        "Haozhe Wang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.11204v1",
-      "published": "2026-08-11T17:59:13Z",
-      "category": "cs.RO"
+      "link": "http://arxiv.org/abs/2608.12313v1",
+      "published": "2026-08-12T17:58:02Z",
+      "category": "cs.CV"
     },
     {
-      "title": "ConVAWG: A Retrieval-Grounded Framework for Controlled Synthetic Dialogue Generation in Violence Against Women and Girls",
-      "summary": "Synthetic dialogue generation offers a way to study conversational dynamics in sensitive domains where real data are difficult to access, release, or annotate. The underlying abuse may occur online or offline: threats and coercion can appear directly in messages, while behaviours…",
+      "title": "DreamFly: Causal Memory and Receding-Horizon Diffusion Planning for Aerial Vision-Language Navigation",
+      "summary": "Aerial vision-language navigation (VLN) requires an embodied agent to integrate visual evidence over time, plan future actions, and determine when it has reached a navigation goal under partial observability. Although recent VLA models offer a promising perception-to-action parad…",
       "authors": [
-        "Chen Lyu",
-        "Xingwei Tan",
-        "Simon Cullen",
+        "Yan Deng",
+        "Fei Xu"
+      ],
+      "link": "http://arxiv.org/abs/2608.12308v1",
+      "published": "2026-08-12T17:54:33Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses",
+      "summary": "Recent work on distillation transfers the capabilities of large models to smaller ones often by updating the latter's parameters, through teacher forcing, on-policy distillation, and related training-time methods. In this paper, we ask whether such transfer can instead occur at t…",
+      "authors": [
+        "Cheng Qian",
+        "Wenting Zhao",
+        "Liangwei Yang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.11200v1",
-      "published": "2026-08-11T17:57:34Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Beyond a Bag of Features: Set-Level Instability in Sparse Autoencoders",
-      "summary": "Shani et al. (2026) show that LLM representations broadly recover human category boundaries, while failing to reflect fine-grained typicality structure. Their analysis uses cosine similarity over dense model representations. We revisit their approach using overlap over active spa…",
-      "authors": [
-        "Nikolai Bolik",
-        "Lennart Stöpler",
-        "Artur Andrzejak"
-      ],
-      "link": "http://arxiv.org/abs/2608.11197v1",
-      "published": "2026-08-11T17:55:59Z",
+      "link": "http://arxiv.org/abs/2608.12307v1",
+      "published": "2026-08-12T17:53:18Z",
       "category": "cs.LG"
     },
     {
-      "title": "Long-Horizon AI Research for Grothendieck Constant: A Case Study in Human-AI Mathematical Collaboration",
-      "summary": "AI agents are increasingly used in mathematics research, but it is often unclear how to use them effectively. Towards this, we present an extensive case study of how AI was used to improve bounds on the Grothendieck constant $K_G$, which captures the hardness between combinatoria…",
+      "title": "Redistribution-based Cost Inference Improves Sparse Safe Offline RL",
+      "summary": "Safe offline RL typically assumes access to dense per-step cost annotations, but in practice supervisors provide only trajectory-level stop-feedback: a binary signal at the first unsafe transition, with no per-step attribution. We frame this as a temporal credit assignment proble…",
       "authors": [
-        "Alan Li",
-        "Rahul Saha",
-        "Anton Xue",
+        "Ebenezer Gelo",
+        "Geraud Nangue Tasse",
+        "Steven James",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.11195v1",
-      "published": "2026-08-11T17:53:48Z",
+      "link": "http://arxiv.org/abs/2608.12306v1",
+      "published": "2026-08-12T17:53:15Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Constructing Dynamic Master Logic Models as Knowledge Graphs for Complex System Diagnostics Using Retrieval-Augmented Large Language Models",
+      "summary": "Dynamic Master Logic (DML) provides a hierarchical framework for representing system behavior by linking functional objectives to underlying structural elements. However, DML construction typically relies on expert interpretation of technical documentation, limiting scalability f…",
+      "authors": [
+        "Saman Marandi",
+        "Yu-Shu Hu",
+        "Mohammad Modarres"
+      ],
+      "link": "http://arxiv.org/abs/2608.12304v1",
+      "published": "2026-08-12T17:50:39Z",
       "category": "cs.AI"
     },
     {
-      "title": "Test-Time Self-Evolving GUI Visual Grounding via Reflection-Guided On-Policy Self-Distillation",
-      "summary": "GUI Visual Grounding is a fundamental capability for GUI agents. Existing models typically freeze their parameters after deployment, limiting their ability to adapt to unseen interfaces. Although recent methods attempt to adapt models via test-time reinforcement learning, they ca…",
+      "title": "A Framework for Designing Reward Functions: From Objectives to Features to Human-Aligned Reward Functions",
+      "summary": "We present a formal process to enable non-experts to instantiate and iterate on human-aligned reward functions, i.e. reward functions that adhere to a given preference ordering over trajectories. Given a task described in natural language, our process produces a linear reward fun…",
       "authors": [
-        "Shiyu Xuan",
-        "Zechao Li"
+        "Di Yang Shi",
+        "W. Bradley Knox"
       ],
-      "link": "http://arxiv.org/abs/2608.11191v1",
-      "published": "2026-08-11T17:50:25Z",
+      "link": "http://arxiv.org/abs/2608.12302v1",
+      "published": "2026-08-12T17:46:00Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Class Activation Mapping in Explainable Computer Vision: A Method-Centered Review of CNN, Transformer, and Foundation-Model-Era Visual Explanations",
+      "summary": "Class activation mapping (CAM) is one of the most widely used visual explanation families in explainable artificial intelligence. Its purpose is intuitive: it converts internal model evidence into a heatmap that highlights the image regions, convolutional channels, tokens, or pat…",
+      "authors": [
+        "AmirHossein Eshghi",
+        "Hamid Saadatfar",
+        "Seyyed Ali Hoseini",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.12299v1",
+      "published": "2026-08-12T17:45:03Z",
       "category": "cs.CV"
     },
     {
-      "title": "How to Verify Consistency of Probabilistic Claims",
-      "summary": "When a probabilistic predictor answers many conditional-probability queries, are its answers self-consistent, and can this be verified in polynomial time? This problem is of interest for AI safety, where safety is derived from honesty about probabilistic predictions of unwanted o…",
+      "title": "Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence",
+      "summary": "Modern black-box Image-to-Video (I2V) models offer powerful capabilities in automated content creation, yet their lack of fine-grained control and reliability presents significant challenges in professional workflows. Their inherent stochasticity causes minor variations in textua…",
       "authors": [
-        "Orr Paradise",
-        "Oliver Richardson",
-        "Yoshua Bengio",
+        "Aman Tyagi",
+        "Hemanth Boinpally",
+        "Jonathan Chen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.11181v1",
-      "published": "2026-08-11T17:41:39Z",
-      "category": "cs.CC"
+      "link": "http://arxiv.org/abs/2608.12290v1",
+      "published": "2026-08-12T17:35:16Z",
+      "category": "cs.CV"
     },
     {
-      "title": "A Quantum Roadmap for Softmax Attention: Exact Born-Rule Analogs for Softmax Attention on the Probability Simplex",
-      "summary": "The attention mechanism forms the foundation of many modern AI models such as the Transformer. In one subclass of problems where attention is used, inputs and outputs are bound to the probability simplex so that all outputs sum to one. In this setting, softmax attention admits an…",
+      "title": "Large Language Model-Driven Small-Capitalization Trading: Integrating Financial News Sentiment, Macroeconomic Indicators, and Technical Signals",
+      "summary": "Large language models can extract richer signals from financial news than fixed sentiment lexicons, and recent work has explored feeding such signals into portfolio construction. We study an uncertainty-aware construction that feeds model-predicted risk -- decomposed into aleator…",
       "authors": [
-        "Eric A. F. Reinhardt",
-        "Adam J. Hauser"
-      ],
-      "link": "http://arxiv.org/abs/2608.11173v1",
-      "published": "2026-08-11T17:32:30Z",
-      "category": "quant-ph"
-    },
-    {
-      "title": "From Interpretability to Control: Insights from Six Years of the TrustNLP Workshop",
-      "summary": "The Workshop on Trustworthy Natural Language Processing (TrustNLP), co-located with major ACL conferences since 2021, has grown from 8 proceedings papers to 41 over six editions, documenting a field-wide transition from post-hoc interpretability of static models to mechanistic un…",
-      "authors": [
-        "Rahul Gupta",
-        "Abhinav Mohanty",
-        "Anaelia Ovalle",
+        "Alireza Kargarzadeh",
+        "Nariman Khaledian",
+        "Navid Parvini",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.11171v1",
-      "published": "2026-08-11T17:30:16Z",
+      "link": "http://arxiv.org/abs/2608.12283v1",
+      "published": "2026-08-12T17:28:03Z",
+      "category": "q-fin.PM"
+    },
+    {
+      "title": "VAKRA: Evaluating Multi-Hop Reasoning Across APIs and Retrieval Under Tool-Use Policies",
+      "summary": "Agents deployed in enterprise settings must reason across structured APIs and document collections, yet existing benchmarks evaluate these capabilities in isolation. We introduce VAKRA (e\\textbf{V}aluating \\textbf{A}PI and \\textbf{K}nowledge \\textbf{R}etrieval \\textbf{A}gents), a…",
+      "authors": [
+        "Ankita Rajaram Naik",
+        "Anupama Murthi",
+        "Benjamin Elder",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.12282v1",
+      "published": "2026-08-12T17:27:27Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Structural Silence: When AI Infrastructure Fails Speakers of Underrepresented Languages",
+      "summary": "Artificial intelligence tools for education and language support are increasingly framed as scalable responses to access gaps in under-resourced communities. Yet the infrastructure underlying these tools, including training corpora, tokenization schemes, evaluation benchmarks, an…",
+      "authors": [
+        "Avijit Roy",
+        "Proma Roy"
+      ],
+      "link": "http://arxiv.org/abs/2608.12278v1",
+      "published": "2026-08-12T17:17:25Z",
       "category": "cs.CL"
     },
     {
-      "title": "MultiModal Code-Switching: Interleaving Visual Objects into Language for Explicit Object-Level Alignment",
-      "summary": "Existing Multimodal Large Language Models (MLLMs) predominantly rely on image-text pairs for modality alignment pretraining, mapping global image representations to long textual descriptions. However, this image-level alignment suffers from referential ambiguity: models struggle …",
+      "title": "A Neighborhood Attention Transformer Network for Enhanced 3D Segmentation of the Left Anterior Descending Artery",
+      "summary": "Background: Accurate segmentation of the Left Anterior Descending (LAD) artery in 3D free-breathing, non-contrast CT is critical for cardiac dose sparing in thoracic radiotherapy. The LAD is extremely small, has poor soft-tissue contrast, and varies substantially across patients;…",
       "authors": [
-        "Changhao Xiang",
-        "Shangyu Xing",
-        "Zhen Wu",
+        "Rafi Ibn Sultan",
+        "Chengyin Li",
+        "Yiannos Demetriou",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.11167v1",
-      "published": "2026-08-11T17:28:52Z",
+      "link": "http://arxiv.org/abs/2608.12274v1",
+      "published": "2026-08-12T17:13:59Z",
       "category": "cs.CV"
-    },
-    {
-      "title": "Hierarchical Empirical-Bayes Naive Bayes: Minimax Smoothing and Calibration with AODE Extension",
-      "summary": "The Naive Bayes (NB) classifier remains a standard choice for categorical data, yet its widely used smoothing rules, such as Laplace, Lidstone, Krichevsky-Trofimov, and the $m$-estimate, all prescribe a fixed smoothing strength that ignores feature cardinality, sample size, and c…",
-      "authors": [
-        "Nguyen Thai Anh",
-        "Truong Viet Vu",
-        "Tran Thien Thanh",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.11162v1",
-      "published": "2026-08-11T17:21:31Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Conditional Independence Tests for Constraint-Based Causal Discovery: A Survey",
-      "summary": "Conditional Independence (CI) tests are the statistical engine of constraint-based causal discovery: in algorithms such as PC (Peter-Clark) and FCI (Fast Causal Inference), skeleton pruning and key orientations follow directly from CI decisions. This survey reviews CI testing wit…",
-      "authors": [
-        "Pavel Averin",
-        "Theodoros Moysiadis",
-        "Ioannis Katakis"
-      ],
-      "link": "http://arxiv.org/abs/2608.11156v1",
-      "published": "2026-08-11T17:13:52Z",
-      "category": "stat.ML"
-    },
-    {
-      "title": "DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains",
-      "summary": "Detecting or attributing a supply-chain disruption is not the same as selecting the intervention that maximizes recoverable net value. We present CriticalSCM-Bench v1, a controlled synthetic benchmark with causal ground truth, paired factual/counterfactual rollouts, and an explic…",
-      "authors": [
-        "Shiqi Huang",
-        "Jiani He",
-        "Dingyan Shang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.11154v1",
-      "published": "2026-08-11T17:12:08Z",
-      "category": "cs.LG"
     }
   ]
 }

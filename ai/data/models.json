@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-08-13T04:47:17+00:00",
+  "generated_at": "2026-08-13T15:54:28+00:00",
   "items": [
     {
       "id": "meta-models/Muse-Glimmer-30B",
       "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
-      "downloads": 0,
-      "likes": 1316,
+      "downloads": 121042,
+      "likes": 1388,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "MiniMaxAI/MiniMax-H3",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
-      "downloads": 83484,
-      "likes": 3735,
+      "downloads": 1605940,
+      "likes": 3800,
       "pipeline_tag": "image-text-to-video"
-    },
-    {
-      "id": "larryvrh/MiniMax-H3-Turbo-Lora",
-      "url": "https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora",
-      "downloads": 0,
-      "likes": 703,
-      "pipeline_tag": "text-to-video"
     },
     {
       "id": "Qwen/Qwen3.8-2.4T-A95B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
-      "downloads": 978,
-      "likes": 573,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
-      "downloads": 1048685,
-      "likes": 3252,
+      "downloads": 1012,
+      "likes": 724,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 39,
-      "likes": 588,
+      "downloads": 57287,
+      "likes": 665,
+      "pipeline_tag": "image-to-video"
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "downloads": 1431587,
+      "likes": 3299,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "larryvrh/MiniMax-H3-Turbo-Lora",
+      "url": "https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora",
+      "downloads": 0,
+      "likes": 715,
+      "pipeline_tag": "text-to-video"
+    },
+    {
+      "id": "lightx2v/Minimax-h3-Turbo",
+      "url": "https://huggingface.co/lightx2v/Minimax-h3-Turbo",
+      "downloads": 91455,
+      "likes": 441,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "Comfy-Org/MiniMax-H3",
       "url": "https://huggingface.co/Comfy-Org/MiniMax-H3",
-      "downloads": 6798796,
-      "likes": 1264,
+      "downloads": 10365210,
+      "likes": 1278,
       "pipeline_tag": null
-    },
-    {
-      "id": "lightx2v/Minimax-h3-Turbo",
-      "url": "https://huggingface.co/lightx2v/Minimax-h3-Turbo",
-      "downloads": 20376,
-      "likes": 416,
-      "pipeline_tag": "image-to-video"
     },
     {
       "id": "unsloth/Muse-Glimmer-30B-GGUF",
       "url": "https://huggingface.co/unsloth/Muse-Glimmer-30B-GGUF",
-      "downloads": 0,
-      "likes": 370,
+      "downloads": 352023,
+      "likes": 381,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "moonshotai/Kimi-K3",
       "url": "https://huggingface.co/moonshotai/Kimi-K3",
-      "downloads": 1565484,
-      "likes": 10585,
+      "downloads": 1871575,
+      "likes": 10610,
       "pipeline_tag": "image-text-to-text"
     }
   ]

@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-08-14T15:45:18+00:00",
+  "generated_at": "2026-08-15T03:33:58+00:00",
   "items": [
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 2,
-      "likes": 8201,
+      "likes": 9140,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "meta-models/Muse-Glimmer-30B",
       "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
       "downloads": 165300,
-      "likes": 1483,
+      "likes": 1522,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Qwen/Qwen3.8-2.4T-A95B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
       "downloads": 3832,
-      "likes": 886,
+      "likes": 926,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "unsloth/Qwen3.8-27B-GGUF",
+      "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
+      "downloads": 0,
+      "likes": 866,
+      "pipeline_tag": null
     },
     {
       "id": "MiniMaxAI/MiniMax-H3",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
       "downloads": 1997541,
-      "likes": 3893,
+      "likes": 3925,
       "pipeline_tag": "image-text-to-video"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 207830,
-      "likes": 806,
+      "likes": 865,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "MiniMaxAI/MiniMax-Music3",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-Music3",
       "downloads": 63,
-      "likes": 583,
+      "likes": 665,
       "pipeline_tag": "text-to-audio"
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "downloads": 1606491,
-      "likes": 3365,
+      "likes": 3389,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+      "downloads": 245,
+      "likes": 440,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "unsloth/Muse-Glimmer-30B-GGUF",
       "url": "https://huggingface.co/unsloth/Muse-Glimmer-30B-GGUF",
       "downloads": 596774,
-      "likes": 407,
+      "likes": 417,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "lightx2v/Minimax-h3-Turbo",
-      "url": "https://huggingface.co/lightx2v/Minimax-h3-Turbo",
-      "downloads": 149865,
-      "likes": 485,
-      "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
-      "downloads": 245,
-      "likes": 403,
-      "pipeline_tag": "text-generation"
     }
   ]
 }

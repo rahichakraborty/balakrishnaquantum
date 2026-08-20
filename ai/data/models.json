@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-08-19T15:25:23+00:00",
+  "generated_at": "2026-08-20T03:41:20+00:00",
   "items": [
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 1006235,
-      "likes": 11378,
+      "likes": 11512,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
       "downloads": 4318134,
-      "likes": 1913,
+      "likes": 2109,
       "pipeline_tag": null
     },
     {
       "id": "MiniMaxAI/MiniMax-Music3",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-Music3",
       "downloads": 13138,
-      "likes": 1013,
+      "likes": 1050,
       "pipeline_tag": "text-to-audio"
-    },
-    {
-      "id": "Qwen/Qwen3.8-2.4T-A95B",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
-      "downloads": 12699,
-      "likes": 1085,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "Lightricks/LTX-2.5",
-      "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 555993,
-      "likes": 1281,
-      "pipeline_tag": "image-to-video"
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
       "downloads": 37583,
-      "likes": 620,
+      "likes": 642,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B-FP8",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
       "downloads": 1063646,
-      "likes": 588,
+      "likes": 602,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "orcarouter/Qwen3.8-27B-Uncensored-FP8",
       "url": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-FP8",
       "downloads": 60078,
-      "likes": 590,
+      "likes": 618,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "Lightricks/LTX-2.5",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5",
+      "downloads": 555993,
+      "likes": 1333,
+      "pipeline_tag": "image-to-video"
     },
     {
       "id": "orcarouter/Qwen3.8-27B-Uncensored-MLX",
       "url": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX",
       "downloads": 27,
-      "likes": 498,
+      "likes": 611,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "meta-models/Muse-Glimmer-30B",
-      "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
-      "downloads": 430313,
-      "likes": 1696,
-      "pipeline_tag": "image-text-to-text"
+      "id": "Qwen/Qwen3.8-2.4T-A95B",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "downloads": 12699,
+      "likes": 1103,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+      "url": "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+      "downloads": 766812,
+      "likes": 467,
+      "pipeline_tag": "text-generation"
     }
   ]
 }

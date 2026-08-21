@@ -1,154 +1,153 @@
 {
-  "generated_at": "2026-08-20T15:27:51+00:00",
+  "generated_at": "2026-08-21T03:45:39+00:00",
   "items": [
     {
-      "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
-      "summary": "Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, or frozen-verifier) keep the goal distribution fixed as the learner scales. We i…",
+      "title": "Information on trajectories: martingales and random times",
+      "summary": "Accounting for information flow on the path space of trajectories of a nonnegative martingale yields exact variational identities for it, even at arbitrary random times. This recovers the widely used classical concentration inequalities, from Ville to PAC-Bayes, and measures what…",
       "authors": [
-        "Bo Liu",
-        "Simon Yu",
-        "Yiding Jiang",
-        "et al."
+        "Akshay Balsubramani"
       ],
-      "link": "http://arxiv.org/abs/2608.19197v1",
-      "published": "2026-08-19T17:58:56Z",
+      "link": "http://arxiv.org/abs/2608.20337v1",
+      "published": "2026-08-20T17:59:57Z",
+      "category": "math.PR"
+    },
+    {
+      "title": "ConceptGuard: Benchmarking Context-Sensitive Unlearning in Large Language Models",
+      "summary": "Large Language Models (LLMs) increasingly require selective removal of harmful or sensitive knowledge, called unlearning, yet existing methods and benchmarks fail to evaluate this capability completely. Current approaches rely on disjoint forget and retain sets composed of indepe…",
+      "authors": [
+        "Sahil Kale",
+        "Ian Harris"
+      ],
+      "link": "http://arxiv.org/abs/2608.20338v1",
+      "published": "2026-08-20T17:59:57Z",
       "category": "cs.CL"
     },
     {
-      "title": "ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning",
-      "summary": "We introduce Accelerating Dexterity via Pre-Training (ADEPT), a large-scale reinforcement learning (RL) framework for learning sim-to-real transferable dexterity across high degree-of-freedom (DoF) robot embodiments that can solve long-horizon tasks directly from raw visuo-tactil…",
+      "title": "G-CARL: Grounded Checklist-Aligned Reward Learning for Patient-Oriented Medical Report Interpretation",
+      "summary": "Personalized interpretation of medical reports has emerged as an increasingly important need among patients. Addressing this need requires both evidence-grounded medical factuality and context-dependent patient communication, yet existing medical vision-language tasks do not adeq…",
       "authors": [
-        "Jayjun Lee",
-        "Jessica Yin",
-        "Asif Rana",
+        "Shiao Xie",
+        "Siyu Chen",
+        "Jianwei Lv",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.19182v1",
-      "published": "2026-08-19T17:55:06Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning",
-      "summary": "On-policy distillation (OPD) trains a student on its own responses using dense token-level guidance from a stronger teacher. In long-context tasks, however, token-level teacher support can favor locally plausible responses that omit evidence distributed across the input or violat…",
-      "authors": [
-        "Zhu Zhang",
-        "Jixun Wang",
-        "Xiaoang Xu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.19181v1",
-      "published": "2026-08-19T17:54:58Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Finetuning Strategies for Querying Sounds by Vocal Imitation",
-      "summary": "This technical report describes our winning submission to the AES AIMLA 2025 Challenge on querying sound effects by vocal imitation. We investigate two complementary fine-tuning strategies: contrastive learning with a frozen, pretrained CED encoder, and joint contrastive-triplet …",
-      "authors": [
-        "Aditya Bhattacharjee",
-        "Christos Plachouras",
-        "Sungkyun Chang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.19174v1",
-      "published": "2026-08-19T17:51:50Z",
-      "category": "cs.SD"
-    },
-    {
-      "title": "Lévy Attention: Single-Pass Predictive Uncertainty for Continuous-Time Attention",
-      "summary": "Deep models for irregularly-sampled time series answer queries at arbitrary continuous timestamps, yet report nothing about how far each answer should be trusted. We show the attention layer itself can close that gap: with the right stochastic formulation, the pass that makes eac…",
-      "authors": [
-        "Sotirios P. Chatzis",
-        "Loukas Papadoulas"
-      ],
-      "link": "http://arxiv.org/abs/2608.19171v1",
-      "published": "2026-08-19T17:50:16Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Learned, Then Lost: A Measured Single-Example Counterfactual in Pre-training",
-      "summary": "A single training example's contribution to a finished model is normally estimated rather than measured, because measuring it takes two expensive full pre-training runs that differ in one row of one batch. We ran that counterfactual 24 times at a small scale. We trained 32 GPT-2 …",
-      "authors": [
-        "Zachary Speck",
-        "Asa Shepard"
-      ],
-      "link": "http://arxiv.org/abs/2608.19168v1",
-      "published": "2026-08-19T17:46:08Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "ChildSafeAds Shared Task 2026: Commercial Content in Child-Facing YouTube Videos",
-      "summary": "ChildSafeAds is a shared task on commercial content in YouTube videos likely to reach children and teenagers. It contains 3,360 videos from 939 channels. Each instance begins with a segment submitted to SponsorBlock, an open-source crowdsourced browser extension whose users mark …",
-      "authors": [
-        "Thales Bertaglia",
-        "Catalina Goanta",
-        "Gerasimos Spanakis",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.19165v1",
-      "published": "2026-08-19T17:44:58Z",
+      "link": "http://arxiv.org/abs/2608.20331v1",
+      "published": "2026-08-20T17:59:46Z",
       "category": "cs.CL"
     },
     {
-      "title": "Interpretable AI predicts a 2026 summer dry anomaly in central China",
-      "summary": "Seasonal precipitation anomalies are largely regulated by atmospheric circulation, which dynamical models predict with greater reliability than precipitation itself. Here, we employ a deep learning model that translates dynamical circulation predictions into precipitation estimat…",
+      "title": "$TCP_α$: Margin-Controlled Confidence estimation for reliable Music Information Retrieval",
+      "summary": "Deep neural networks are often overconfident, assigning high confidence even to incorrect predictions. Consequently, users lack a reliable signal for deciding when a prediction can be trusted. Post-hoc confidence estimation addresses this by training a lightweight auxiliary head …",
       "authors": [
-        "Anran Wang",
-        "Wen Shi",
-        "Yong Luo",
+        "Parampreet Singh",
+        "Anushka Singh",
+        "Sumit Kumar",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.19163v1",
-      "published": "2026-08-19T17:43:49Z",
-      "category": "physics.ao-ph"
+      "link": "http://arxiv.org/abs/2608.20326v1",
+      "published": "2026-08-20T17:58:50Z",
+      "category": "eess.AS"
     },
     {
-      "title": "Beyond the Transcript: Detecting Covert Co ordination in Latent Multi-Agent Communication",
-      "summary": "Language-model agents can communicate through continuous hidden states that are invisible in public transcripts, creating opportunities for covert harmful coordination. We introduce Verifiable Latent Alignments (VLA), an activation-aware framework for monitoring and steering thes…",
+      "title": "A comparison between ceiling-mounted FMCW, IR-UWB and Wi-Fi radar for in-bedroom human activity monitoring and sleep interruption detection",
+      "summary": "Despite their growing importance for contact-free radio frequency (RF) based healthcare monitoring, different radio technologies such as frequency-modulated continuous wave (FMCW) radar, impulse radio ultra-wideband (IR-UWB), and Wi-Fi sensing are rarely compared under identical …",
       "authors": [
-        "Ramneet Kaur",
-        "Pradyumna Chari",
-        "Ramesh Raskar",
+        "Anton Lambrecht",
+        "Reda El Hail",
+        "Xianjun Jiao",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.19161v1",
-      "published": "2026-08-19T17:43:22Z",
+      "link": "http://arxiv.org/abs/2608.20322v1",
+      "published": "2026-08-20T17:58:22Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+      "summary": "Travel behavior research increasingly combines digital data collection with predictive modeling, yet these stages are often developed and evaluated separately. This study proposes a three-agent workflow integrating conversational data collection, structured data processing, and b…",
+      "authors": [
+        "Narges Ahmadi",
+        "Yubo Jiao",
+        "Jônatas Augusto Manzolli",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.20320v1",
+      "published": "2026-08-20T17:57:42Z",
       "category": "cs.AI"
     },
     {
-      "title": "Continuous-Time Reinforcement Learning for Controlled Hawkes Jump-Diffusions",
-      "summary": "We study stochastic control of multivariate Hawkes-driven stochastic differential equations with machine learning algorithms in a non-Markovian setting. Due to the path dependence of the memory of the Hawkes intensity, this problem does not fall within classical stochastic contro…",
+      "title": "Inducing Task Models from Computer-Use Traces",
+      "summary": "Naturalistic computer-use traces, passively recorded screenshots and mouse or keyboard actions, are a valuable resource for deriving symbolic, auditable, and reusable models of how everyday work is done. Such models matter as computer-use agents enter real work, where agents need…",
       "authors": [
-        "Tomasz R. Bielecki",
-        "Thibaut Mastrolia",
-        "Haoze Yan"
+        "Yucheng Jiang",
+        "Zora Zhiruo Wang",
+        "Ruishi Chen",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.19151v1",
-      "published": "2026-08-19T17:40:23Z",
+      "link": "http://arxiv.org/abs/2608.20319v1",
+      "published": "2026-08-20T17:57:00Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
+      "summary": "Recursive self-improvement (RSI) asks whether an AI system can improve the process that produces AI systems, so that the next system inherits the improvement. That process is the training algorithm: a better objective or update rule improves the compute\\mbox{-}capability exchange…",
+      "authors": [
+        "Yizhe Chi",
+        "Wenyi Li",
+        "Deyao Hong",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.20318v1",
+      "published": "2026-08-20T17:56:59Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Pandora's AI Model Routing Box: Efficient Allocation with Costly Value Estimation",
+      "summary": "Heterogeneous AI systems composed of multiple models, architectures, harnesses, or inference-time settings can improve quality and efficiency by routing queries to the specialist who can answer most effectively at the lowest cost. Routing requires estimating each specialist's exp…",
+      "authors": [
+        "Adam Fisch",
+        "Shubhendu Trivedi",
+        "Fantine Huot",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.20316v1",
+      "published": "2026-08-20T17:54:37Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Explainable Transformer Models for Clinical Prediction Tasks on Structured Electronic Health Records",
+      "summary": "Predictive models over structured electronic health records (EHRs) remain central to machine learning for healthcare, but few have jointly emphasized quantitative laboratory information and interpretability with respect to input medical events. We present BERT-LER, a BERT-style m…",
+      "authors": [
+        "Jun Ni Du",
+        "Lukas Adamek",
+        "Maxim Kryukov",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.20315v1",
+      "published": "2026-08-20T17:54:17Z",
       "category": "cs.LG"
     },
     {
-      "title": "Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets",
-      "summary": "Modern Intel AI PCs ship capable integrated GPUs and NPUs with 16+ GB of unified memory, and they spend considerable time idle. That is not enough memory to fit a large model such as a 70B-parameter LLM. We show that a handful of AIPCs, working together over an ordinary network, …",
+      "title": "MidTool: Mid-training Data Synthesis for Agentic Tool Use",
+      "summary": "Mid-training is increasingly recognized as a critical stage for shaping the capabilities of large language models. Recent work has shown that targeted mid-training can strengthen reasoning-intensive abilities such as math and science, and can also improve agentic capabilities in …",
       "authors": [
-        "Tate Berenbaum",
-        "Muthaiah Venkatachalam"
-      ],
-      "link": "http://arxiv.org/abs/2608.19147v1",
-      "published": "2026-08-19T17:33:28Z",
-      "category": "cs.DC"
-    },
-    {
-      "title": "Geometric Iterative Retrieval for Neural Audio Codec Resynthesis",
-      "summary": "Neural audio codecs based on Residual Vector Quantization (RVQ) have become the dominant discrete representation for token-based general audio generation, yet resynthesizing high-quality audio from coarse codec tokens remains an open problem and bounds the fidelity of every syste…",
-      "authors": [
-        "Leo Schmidt-Traub",
-        "Frédéric Berdoz",
-        "Luca A. Lanzendörfer",
+        "Fengqing Jiang",
+        "Yite Wang",
+        "Boyi Liu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.19141v1",
-      "published": "2026-08-19T17:29:56Z",
-      "category": "cs.SD"
+      "link": "http://arxiv.org/abs/2608.20314v1",
+      "published": "2026-08-20T17:53:59Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Physical-Support Confidence Sets for Highly Coherent Dictionaries",
+      "summary": "Sparse pursuit after dictionary learning can yield a precise atom support even when its physical interpretation is not justified by the calibration data, especially for highly coherent dictionaries where alternative calibration-compatible dictionaries may assign different physica…",
+      "authors": [
+        "Guan-Ju Peng"
+      ],
+      "link": "http://arxiv.org/abs/2608.20295v1",
+      "published": "2026-08-20T17:35:26Z",
+      "category": "cs.LG"
     }
   ]
 }

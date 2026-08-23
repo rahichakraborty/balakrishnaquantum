@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whale Liquidation Tracker | Balakrishna Quantum</title>
+<meta name="description" content="Live BTC/ETH market data and whale liquidation-proximity tracker, built on Hyperliquid's public order-book data. Part of the BKQ trading desk.">
+<link rel="canonical" href="https://balakrishnaquantum.com/whaletracker.html">
+<meta property="og:title" content="Whale Liquidation Tracker | Balakrishna Quantum">
+<meta property="og:description" content="Live BTC/ETH market data and whale liquidation-proximity tracker, built on Hyperliquid's public data.">
+<meta property="og:url" content="https://balakrishnaquantum.com/whaletracker.html">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0d12;
+    --panel:#11151c;
+    --panel-2:#161c25;
+    --line:#232b36;
+    --line-soft:#1a212b;
+    --gold:#d4a017;
+    --gold-soft:#f0c453;
+    --teal:#2dd4bf;
+    --orange:#f97316;
+    --text:#e7e6e2;
+    --muted:#8b93a1;
+    --muted-2:#5c6472;
+    --green:#22c55e;
+    --red:#ef4444;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'IBM Plex Sans', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    overflow-x:hidden;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(212,160,23,0.07), transparent 60%),
+      radial-gradient(ellipse 900px 600px at 90% 10%, rgba(45,212,191,0.06), transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--gold);color:#0a0d12;}
+
+  /* ---------- Terminal window chrome ---------- */
+  .term{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .term-bar{display:flex;align-items:center;gap:8px;padding:9px 12px;background:var(--panel-2);border-bottom:1px solid var(--line);}
+  .term-dot{width:9px;height:9px;border-radius:50%;}
+  .term-dot.gold{background:var(--gold);}
+  .term-dot.teal{background:var(--teal);}
+  .term-dot.orange{background:var(--orange);}
+  .term-title{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);margin-left:6px;text-transform:uppercase;}
+  .term-body{padding:16px;}
+
+  /* ---------- Nav ---------- */
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+    padding:14px 32px;background:rgba(10,13,18,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft);}
+  .logo{font-family:var(--mono);font-weight:700;font-size:17px;letter-spacing:.02em;display:flex;align-items:center;gap:10px;}
+  .logo .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  .nav-links{display:flex;gap:24px;font-family:var(--mono);font-size:13px;color:var(--muted);align-items:center;}
+  .nav-links a:hover{color:var(--gold-soft);}
+  .nav-links .back{color:var(--teal);border:1px solid var(--teal);border-radius:6px;padding:6px 12px;}
+  .nav-links .back:hover{background:rgba(45,212,191,0.1);color:var(--teal);}
+  .mobile-menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:6px;color:var(--text);
+    width:36px;height:36px;align-items:center;justify-content:center;font-size:18px;cursor:pointer;}
+  @media(max-width:860px){
+    .nav-links{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);flex-direction:column;
+      align-items:flex-start;padding:90px 32px 24px;gap:22px;display:none;overflow-y:auto;z-index:9999;}
+    .nav-links.open{display:flex;}
+    .mobile-menu-btn{display:flex !important;position:relative;z-index:10000;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{padding:44px 32px 8px;max-width:1400px;margin:0 auto;}
+  .hero-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:24px;}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--teal);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0 0 10px;font-weight:700;}
+  h1 .accent{color:var(--gold);}
+  .sub{color:var(--muted);font-size:14.5px;max-width:640px;line-height:1.6;}
+  .status-pill{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--muted);
+    background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:7px 14px;}
+  .status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);}
+  .status-dot.stale{background:var(--muted-2);box-shadow:none;}
+  .status-dot.loading{background:var(--gold);box-shadow:0 0 8px var(--gold);animation:pulse 1s infinite;}
+
+  .section{max-width:1400px;margin:0 auto;padding:20px 32px;}
+  .section-head{margin-bottom:14px;}
+  .section-head .eyebrow{margin-bottom:4px;}
+  .section-head h2{font-size:18px;margin:0;font-weight:700;}
+
+  .tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;}
+  .ticker-body{padding:16px;}
+  .ticker .sym{font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:.04em;color:var(--gold-soft);}
+  .ticker .px{font-size:24px;font-weight:600;margin-top:8px;font-family:var(--mono);}
+  .ticker .meta{display:flex;gap:16px;margin-top:10px;font-size:11.5px;color:var(--muted);font-family:var(--mono);}
+  .ticker .meta b{color:var(--text);font-weight:600;}
+  .fund-pos{color:var(--green);}
+  .fund-neg{color:var(--red);}
+
+  .controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px;}
+  .controls label{font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:8px;font-family:var(--mono);}
+  select,button.action{font-family:var(--mono);background:var(--panel-2);border:1px solid var(--line);color:var(--text);
+    padding:8px 14px;border-radius:6px;font-size:12.5px;cursor:pointer;}
+  select{padding:7px 10px;}
+  button.action:hover{border-color:var(--gold);color:var(--gold-soft);}
+  button.action:disabled{opacity:.5;cursor:not-allowed;}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;font-family:var(--mono);}
+  thead th{text-align:left;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+    font-weight:500;padding:11px 14px;border-bottom:1px solid var(--line);background:var(--panel-2);}
+  tbody td{padding:12px 14px;border-bottom:1px solid var(--line-soft);vertical-align:middle;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:var(--panel-2);}
+  .side-short{color:var(--red);font-weight:700;}
+  .side-long{color:var(--green);font-weight:700;}
+  .addr{color:var(--muted);}
+  .num{text-align:right;font-variant-numeric:tabular-nums;}
+
+  .gauge{position:relative;width:100%;min-width:110px;height:6px;background:var(--panel-2);border-radius:3px;}
+  .gauge-fill{position:absolute;left:0;top:0;height:100%;border-radius:3px;}
+  .gauge-label{font-size:10.5px;color:var(--muted);margin-top:5px;}
+
+  .empty,.err{padding:44px 20px;text-align:center;color:var(--muted);font-size:13.5px;line-height:1.7;font-family:var(--sans);}
+  .err{color:var(--red);}
+  .progress-note{padding:16px;font-size:12.5px;color:var(--muted);font-family:var(--mono);}
+  .scan-progress{height:3px;background:var(--panel-2);border-radius:2px;overflow:hidden;margin-top:10px;}
+  .scan-progress-fill{height:100%;background:var(--gold);transition:width .3s;}
+
+  .note{font-size:12.5px;color:var(--muted-2);line-height:1.8;margin-top:14px;}
+
+  footer{border-top:1px solid var(--line-soft);padding:40px 32px;margin-top:20px;}
+  .footer-inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .disclaimer{font-size:12px;color:var(--muted-2);max-width:760px;line-height:1.7;}
+  .foot-links{display:flex;gap:20px;font-family:var(--mono);font-size:12.5px;color:var(--muted);}
+  .foot-links a:hover{color:var(--gold-soft);}
+
+  ::-webkit-scrollbar{width:8px;height:8px;}
+  ::-webkit-scrollbar-track{background:var(--panel);}
+  ::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <svg width="26" height="26" viewBox="0 0 100 100" style="margin-right:2px;">
+      <ellipse cx="50" cy="50" rx="42" ry="16" fill="none" stroke="var(--teal)" stroke-width="4" opacity="0.85" transform="rotate(-20 50 50)"/>
+      <ellipse cx="50" cy="50" rx="42" ry="16" fill="none" stroke="var(--orange)" stroke-width="4" opacity="0.65" transform="rotate(40 50 50)"/>
+      <circle cx="50" cy="50" r="11" fill="var(--gold)"/>
+      <circle cx="50" cy="50" r="11" fill="var(--gold-soft)" opacity="0.5">
+        <animate attributeName="r" values="11;19;11" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    Balakrishna Quantum
+  </div>
+  <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+  <div class="nav-links" id="nav-links">
+    <a class="back" href="finance.html">&larr; Finance</a>
+    <a href="cockpit-global.html">Global Cockpit</a>
+    <a href="cockpit-daily.html">Daily Cockpit</a>
+    <a href="orderflow.html">Orderflow</a>
+    <a href="journal.html">Journal</a>
+    <a href="marketintelligence/index.html">Market Intel</a>
+    <a href="marketintelligence/macro.html">Macro</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-top">
+    <div>
+      <div class="eyebrow">Live · Hyperliquid public order-book data</div>
+      <h1>Whale <span class="accent">Liquidation</span> Tracker</h1>
+      <div class="sub">BTC/ETH live pricing plus a scan of the largest Hyperliquid accounts by equity, ranked by how close their open perp positions sit to liquidation. No mock data — every number below is a live API call.</div>
+    </div>
+    <div class="status-pill">
+      <div class="status-dot loading" id="statusDot"></div>
+      <span id="statusText">connecting&hellip;</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-head">
+    <div class="eyebrow">Live Markets</div>
+    <h2>BTC / ETH Perp</h2>
+  </div>
+  <div class="tickers" id="tickers">
+    <div class="term"><div class="ticker-body empty">Loading market data&hellip;</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-head">
+    <div class="eyebrow">Position Scan</div>
+    <h2>Closest to liquidation</h2>
+  </div>
+  <div class="controls">
+    <button class="action" id="scanBtn">Scan top accounts</button>
+    <label>Coin
+      <select id="coinFilter">
+        <option value="ALL">All</option>
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+      </select>
+    </label>
+    <label>Min position value
+      <select id="minValFilter">
+        <option value="0">Any</option>
+        <option value="100000">$100K+</option>
+        <option value="1000000" selected>$1M+</option>
+        <option value="5000000">$5M+</option>
+      </select>
+    </label>
+  </div>
+  <div class="term" id="tableWrap">
+    <div class="empty">Press "Scan top accounts" to pull live positions. This checks the largest Hyperliquid accounts by equity for open perp positions and ranks them by distance to liquidation.</div>
+  </div>
+  <div class="note">
+    A scan samples the top ~35 accounts by account value on Hyperliquid — it is a snapshot, not a full market scan, and wallets outside that set or split across multiple addresses won't appear.
+    Liquidation distance compares each position's liquidation price to the live mark price. This is informational only, not trading advice, and is unrelated to your own Delta Exchange positions.
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="disclaimer">
+      Trading and investing carry substantial risk. Nothing on this page is financial advice. Data shown is sourced from Hyperliquid's public API (leaderboard and clearinghouse-state endpoints) and may be delayed, incomplete, or reflect only a subset of large accounts. Past performance and any figures referenced do not guarantee future outcomes.
+    </div>
+    <div class="foot-links">
+      <a href="finance.html">&larr; Back to Finance</a>
+      <a href="marketintelligence/macro.html">Macro Panel</a>
+      <a href="finance.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const HL_API = 'https://api.hyperliquid.xyz/info';
+const LEADERBOARD_URL = 'https://stats-data.hyperliquid.xyz/Mainnet/leaderboard';
+
+let marketPrices = {};
+let leaderboardCache = null;
+
+const statusDot = document.getElementById('statusDot');
+const statusText = document.getElementById('statusText');
+
+function setStatus(mode, text){
+  statusDot.className = 'status-dot' + (mode === 'ok' ? '' : mode === 'loading' ? ' loading' : ' stale');
+  statusText.textContent = text;
+}
+
+function fmtUsd(n){
+  const abs = Math.abs(n);
+  if(abs >= 1e9) return (n/1e9).toFixed(2) + 'B';
+  if(abs >= 1e6) return (n/1e6).toFixed(2) + 'M';
+  if(abs >= 1e3) return (n/1e3).toFixed(1) + 'K';
+  return n.toFixed(0);
+}
+function fmtPx(n){
+  if(n >= 1000) return n.toLocaleString(undefined,{maximumFractionDigits:1});
+  if(n >= 1) return n.toFixed(3);
+  return n.toPrecision(4);
+}
+function shortAddr(a){ return a.slice(0,6) + '&hellip;' + a.slice(-4); }
+
+async function loadMarkets(){
+  try{
+    const res = await fetch(HL_API, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({type:'metaAndAssetCtxs'})
+    });
+    const data = await res.json();
+    const universe = data[0].universe;
+    const ctxs = data[1];
+    const watch = ['BTC','ETH'];
+    const rows = [];
+    watch.forEach(sym=>{
+      const idx = universe.findIndex(u=>u.name === sym);
+      if(idx === -1) return;
+      const ctx = ctxs[idx];
+      const mark = parseFloat(ctx.markPx);
+      marketPrices[sym] = mark;
+      const prev = parseFloat(ctx.prevDayPx);
+      const chg = ((mark - prev)/prev*100);
+      const funding = parseFloat(ctx.funding) * 100;
+      const oi = parseFloat(ctx.openInterest) * mark;
+      rows.push({sym, mark, chg, funding, oi});
+    });
+    renderTickers(rows);
+    setStatus('ok', 'live · ' + new Date().toLocaleTimeString());
+  }catch(e){
+    setStatus('stale', 'market feed unavailable');
+    document.getElementById('tickers').innerHTML = '<div class="term"><div class="ticker-body err">Could not reach Hyperliquid market data. Check your connection and try again.</div></div>';
+  }
+}
+
+function renderTickers(rows){
+  const el = document.getElementById('tickers');
+  el.innerHTML = rows.map(r => `
+    <div class="term">
+      <div class="term-bar"><span class="term-dot gold"></span><span class="term-dot teal"></span><span class="term-dot orange"></span><span class="term-title">${r.sym}-perp</span></div>
+      <div class="ticker-body">
+        <div class="sym">${r.sym}-PERP</div>
+        <div class="px">$${fmtPx(r.mark)} <span style="font-size:12px;font-weight:600;color:${r.chg>=0?'var(--green)':'var(--red)'}">${r.chg>=0?'+':''}${r.chg.toFixed(2)}%</span></div>
+        <div class="meta">
+          <span>Funding <b class="${r.funding>=0?'fund-pos':'fund-neg'}">${r.funding.toFixed(4)}%</b></span>
+          <span>OI <b>$${fmtUsd(r.oi)}</b></span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+async function fetchLeaderboard(){
+  if(leaderboardCache) return leaderboardCache;
+  const res = await fetch(LEADERBOARD_URL);
+  const data = await res.json();
+  leaderboardCache = data.leaderboardRows;
+  return leaderboardCache;
+}
+
+async function fetchPosition(address){
+  const res = await fetch(HL_API, {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({type:'clearinghouseState', user: address})
+  });
+  if(!res.ok) throw new Error('bad response');
+  return res.json();
+}
+
+async function scan(){
+  const btn = document.getElementById('scanBtn');
+  const tableWrap = document.getElementById('tableWrap');
+  btn.disabled = true;
+  setStatus('loading', 'fetching leaderboard&hellip;');
+  tableWrap.innerHTML = `<div class="progress-note">Fetching top accounts by equity&hellip;<div class="scan-progress"><div class="scan-progress-fill" id="scanFill" style="width:5%"></div></div></div>`;
+
+  let rows;
+  try{
+    rows = await fetchLeaderboard();
+  }catch(e){
+    tableWrap.innerHTML = '<div class="err">Could not fetch the leaderboard feed. It is a large file &mdash; try again in a moment.</div>';
+    btn.disabled = false;
+    setStatus('stale','leaderboard unavailable');
+    return;
+  }
+
+  const top = rows
+    .filter(r => parseFloat(r.accountValue) > 0)
+    .sort((a,b) => parseFloat(b.accountValue) - parseFloat(a.accountValue))
+    .slice(0, 35);
+
+  const results = [];
+  for(let i=0;i<top.length;i++){
+    const fill = document.getElementById('scanFill');
+    if(fill) fill.style.width = (10 + (i/top.length)*85) + '%';
+    setStatus('loading', `scanning account ${i+1}/${top.length}&hellip;`);
+    try{
+      const state = await fetchPosition(top[i].ethAddress);
+      (state.assetPositions || []).forEach(p => {
+        const pos = p.position;
+        if(!pos || !pos.liquidationPx) return;
+        const coin = pos.coin;
+        const mark = marketPrices[coin];
+        if(!mark) return;
+        const liq = parseFloat(pos.liquidationPx);
+        const size = parseFloat(pos.szi);
+        const side = size < 0 ? 'SHORT' : 'LONG';
+        const notional = Math.abs(size) * mark;
+        const distPct = Math.abs((liq - mark) / mark * 100);
+        results.push({
+          address: top[i].ethAddress,
+          coin, side, mark, liq, notional,
+          leverage: pos.leverage ? pos.leverage.value : null,
+          distPct,
+          unrealizedPnl: parseFloat(pos.unrealizedPnl || 0)
+        });
+      });
+    }catch(e){ /* skip and continue */ }
+    await new Promise(r => setTimeout(r, 60));
+  }
+
+  results.sort((a,b) => a.distPct - b.distPct);
+  window._bkqResults = results;
+  renderTable();
+  setStatus('ok', 'scan complete · ' + new Date().toLocaleTimeString());
+  btn.disabled = false;
+}
+
+function renderTable(){
+  const results = window._bkqResults || [];
+  const coinFilter = document.getElementById('coinFilter').value;
+  const minVal = parseFloat(document.getElementById('minValFilter').value);
+  const tableWrap = document.getElementById('tableWrap');
+
+  const filtered = results.filter(r =>
+    (coinFilter === 'ALL' || r.coin === coinFilter) && r.notional >= minVal
+  );
+
+  if(filtered.length === 0){
+    tableWrap.innerHTML = '<div class="empty">No matching positions in this scan. Try widening the filters, or run a new scan.</div>';
+    return;
+  }
+
+  const maxDist = 25;
+
+  tableWrap.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>Account</th><th>Coin</th><th>Side</th>
+          <th class="num">Position</th><th class="num">Mark</th><th class="num">Liq. Price</th>
+          <th>Distance to liquidation</th><th class="num">uPnL</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${filtered.map(r => {
+          const pct = Math.min(r.distPct, maxDist) / maxDist * 100;
+          const color = r.distPct < 3 ? 'var(--red)' : r.distPct < 10 ? 'var(--gold)' : 'var(--green)';
+          return `
+          <tr>
+            <td class="addr">${shortAddr(r.address)}</td>
+            <td>${r.coin}</td>
+            <td class="${r.side==='SHORT'?'side-short':'side-long'}">${r.side}${r.leverage?` ${r.leverage}x`:''}</td>
+            <td class="num">$${fmtUsd(r.notional)}</td>
+            <td class="num">$${fmtPx(r.mark)}</td>
+            <td class="num">$${fmtPx(r.liq)}</td>
+            <td>
+              <div class="gauge"><div class="gauge-fill" style="width:${pct}%;background:${color};"></div></div>
+              <div class="gauge-label">${r.distPct.toFixed(2)}% away</div>
+            </td>
+            <td class="num" style="color:${r.unrealizedPnl>=0?'var(--green)':'var(--red)'}">${r.unrealizedPnl>=0?'+':''}$${fmtUsd(r.unrealizedPnl)}</td>
+          </tr>`;
+        }).join('')}
+      </tbody>
+    </table>
+  `;
+}
+
+document.getElementById('scanBtn').addEventListener('click', scan);
+document.getElementById('coinFilter').addEventListener('change', renderTable);
+document.getElementById('minValFilter').addEventListener('change', renderTable);
+
+loadMarkets();
+setInterval(loadMarkets, 15000);
+
+/* ---------------- Mobile nav toggle (matches site pattern) ---------------- */
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const navLinksEl = document.getElementById('nav-links');
+function openMobileMenu(){
+  document.body.style.overflow = 'hidden';
+  document.querySelectorAll('body > *').forEach(el=>{
+    if(el.id !== 'nav-links' && el.id !== 'mobile-menu-btn' && el.tagName !== 'NAV' && el.tagName !== 'SCRIPT'){
+      el.dataset.bkqPrevDisplay = el.style.display || '';
+      el.style.display = 'none';
+    }
+  });
+  navLinksEl.style.cssText = `
+    display:flex !important; flex-direction:column !important; align-items:flex-start !important;
+    position:fixed !important; top:0 !important; left:0 !important; right:0 !important; bottom:0 !important;
+    background:var(--bg) !important;
+    min-height:100vh !important; min-height:100dvh !important;
+    padding:100px 32px 24px !important; gap:26px !important; overflow-y:auto !important;
+    z-index:99999 !important; box-sizing:border-box !important;
+  `;
+  navLinksEl.querySelectorAll('a, span').forEach(el=>{
+    el.style.fontSize = '20px';
+    el.style.padding = '4px 0';
+  });
+  mobileBtn.textContent = '✕';
+  mobileBtn.style.cssText = 'display:flex !important; position:relative !important; z-index:100000 !important;';
+}
+function closeMobileMenu(){
+  document.body.style.overflow = '';
+  document.querySelectorAll('body > *').forEach(el=>{
+    if(el.dataset.bkqPrevDisplay !== undefined){
+      el.style.display = el.dataset.bkqPrevDisplay;
+      delete el.dataset.bkqPrevDisplay;
+    }
+  });
+  navLinksEl.removeAttribute('style');
+  navLinksEl.querySelectorAll('a, span').forEach(el=>{
+    el.style.fontSize = '';
+    el.style.padding = '';
+  });
+  mobileBtn.textContent = '☰';
+}
+if(mobileBtn && navLinksEl){
+  let menuOpen = false;
+  mobileBtn.addEventListener('click', ()=>{
+    menuOpen = !menuOpen;
+    if(menuOpen) openMobileMenu(); else closeMobileMenu();
+  });
+  navLinksEl.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      menuOpen = false;
+      closeMobileMenu();
+    });
+  });
+}
+</script>
+</body>
+</html>

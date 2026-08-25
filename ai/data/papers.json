@@ -1,147 +1,154 @@
 {
-  "generated_at": "2026-08-24T15:33:57+00:00",
+  "generated_at": "2026-08-25T03:42:59+00:00",
   "items": [
     {
-      "title": "Primal Acceleration of Newton's Method",
-      "summary": "We develop a new direct accelerated Newton method for minimizing convex functions with Lipschitz continuous Hessian. The algorithm uses only primal variables and performs just one linear solve per iteration. With a simple predetermined choice of parameters, it achieves the global…",
+      "title": "How to Train a Critic Stably and Efficiently",
+      "summary": "Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token-level advantages from one response, but standard critic-based training recipes …",
       "authors": [
-        "Nikita Doikov"
+        "Penghui Qi",
+        "Xiangxin Zhou",
+        "Wee Sun Lee"
       ],
-      "link": "http://arxiv.org/abs/2608.21359v1",
-      "published": "2026-08-21T17:59:37Z",
-      "category": "math.OC"
-    },
-    {
-      "title": "VIALS: A Benchmark for Visual Interpretation of Artifacts in the Life Sciences",
-      "summary": "In professional life sciences workflows, scientists routinely interpret visual artifacts (gel blots, microscopy images, plasmid maps, flow cytometry plots, molecular structures, ...) to inform research decisions. We introduce VIALS, a visual question-answering benchmark with 161 …",
-      "authors": [
-        "Elaine Lau",
-        "Thanuka Udumulla",
-        "Lee Izhaki-Tavor",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.21357v1",
-      "published": "2026-08-21T17:59:26Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "AI with Authority, from Application to Silicon",
-      "summary": "For sixty years, machine verification has been a major cost overhead, affordable only for exceptional artifacts. Here we report that generative AI inverts this relationship: at AI speed, machine verification is not only economical but essential to productivity --- it is the incor…",
-      "authors": [
-        "Jason Hickey"
-      ],
-      "link": "http://arxiv.org/abs/2608.21356v1",
-      "published": "2026-08-21T17:59:16Z",
-      "category": "cs.SE"
-    },
-    {
-      "title": "PerturbRx: Learning Treatment-Conditioned Latent Transitions for Patient Drug Response Prediction",
-      "summary": "Scarce data and tumor heterogeneity limit patient-level cancer treatment-response prediction. Existing approaches predict response from pretreatment molecular profiles and drug representations, without explicitly modeling the molecular changes expected under treatment. We propose…",
-      "authors": [
-        "Yoshitaka Inoue",
-        "Minoh Jeong",
-        "Alfred Hero",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.21349v1",
-      "published": "2026-08-21T17:54:48Z",
-      "category": "q-bio.QM"
-    },
-    {
-      "title": "Truthful Calibration Measures for Sequential Prediction",
-      "summary": "Calibration requires probabilistic reports to be conditionally unbiased and reliably interpretable as probabilities. A calibration measure assigns numerical error to miscalibrated reports. Haghtalab et al. (2024) proposed an approximately truthful calibration measure for online p…",
-      "authors": [
-        "Anagha Gokul",
-        "Jason Hartline",
-        "Lunjia Hu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.21348v1",
-      "published": "2026-08-21T17:54:05Z",
-      "category": "cs.DS"
-    },
-    {
-      "title": "Asymmetric Capacity Allocation in Self-Refinement Pipelines",
-      "summary": "Self-refinement, typically structured as generation, critique, and revision, is a widely adopted paradigm for improving LLM generation and serves as a core mechanism in many LLM agents. While the three stages involve different cognitive demands, most existing approaches convenien…",
-      "authors": [
-        "Zhuoyi Yang",
-        "Ian G. Harris",
-        "Salar Hashemitaheri",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.21345v1",
-      "published": "2026-08-21T17:52:17Z",
+      "link": "http://arxiv.org/abs/2608.23566v1",
+      "published": "2026-08-24T17:59:39Z",
       "category": "cs.LG"
     },
     {
-      "title": "TurboBias 2.0: Streaming Context-Biasing for Production-Efficient ASR Systems",
-      "summary": "Contextualization is essential for production automatic speech recognition (ASR) systems, where user-provided phrases must be recognized accurately under strict latency constraints. Although many context-biasing methods improve recognition accuracy, they often do not address the …",
+      "title": "ReWorld: An Interactive World Model with Long-Horizon Memory",
+      "summary": "An interactive world model must follow the user's actions, remember the places it has shown, and stream in real time. The tension is structural: control wants a short horizon, memory wants an unbounded one. ReWorld separates the two during training and bounds them at inference. M…",
       "authors": [
-        "Vladimir Bataev",
-        "Lilit Grigoryan",
-        "Andrei Andrusenko",
+        "Zhifei Chen",
+        "Luozhou Wang",
+        "Guibao Shen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.21343v1",
-      "published": "2026-08-21T17:50:00Z",
-      "category": "eess.AS"
-    },
-    {
-      "title": "Across-Design Uncertainty in Short Pricing Panels: Evidence from Simulated Price Trajectories",
-      "summary": "Short observational pricing panels can contain many observations while offering only a small number of distinct price movements. This paper studies the inferential consequences of that distinction in a synthetic data-generating process calibrated to a sparse pricing regime. We se…",
-      "authors": [
-        "Pedro Cadahia Delgado"
-      ],
-      "link": "http://arxiv.org/abs/2608.21334v1",
-      "published": "2026-08-21T17:40:31Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Anatomy-Informed Neural Networks: Encoding Anatomic Priors in Loss and Architecture, with an SE(3) Formulation of Guidewire-Induced Aortoiliac Deformation",
-      "summary": "Deep-learning models of anatomy can be numerically plausible yet anatomically impossible, and they generalize poorly when data are scarce. We introduce Anatomy-Informed Neural Networks (AINN), in which soft anatomic priors enter as penalty terms in the loss (e.g., a branching pen…",
-      "authors": [
-        "David P. Stonko"
-      ],
-      "link": "http://arxiv.org/abs/2608.21332v1",
-      "published": "2026-08-21T17:38:42Z",
+      "link": "http://arxiv.org/abs/2608.23565v1",
+      "published": "2026-08-24T17:59:05Z",
       "category": "cs.AI"
     },
     {
-      "title": "Move by Move: Measuring and Steering How LLMs Conduct Psychotherapy",
-      "summary": "Users increasingly turn to large language models for emotional support, yet little is known about how these models actually conduct a psychotherapy interaction. We introduce an ontology of ten therapeutic moves: compact, function-based categories grounded in the MULTI-60 inventor…",
+      "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration?",
+      "summary": "Modern software systems accumulate technical debt over decades of development, which makes migration expensive and largely manual. As coding agents become increasingly capable at bug fixing, can they autonomously perform such migrations? Existing benchmarks cannot answer this que…",
       "authors": [
-        "Afonso Baldo",
-        "Hugo Pitorro",
-        "Areti Vassilopoulos",
+        "Deyao Hong",
+        "Yizhe Chi",
+        "Wenyi Li",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.21325v1",
-      "published": "2026-08-21T17:32:38Z",
+      "link": "http://arxiv.org/abs/2608.23564v1",
+      "published": "2026-08-24T17:59:04Z",
       "category": "cs.CL"
     },
     {
-      "title": "Time-Aware Tranformer-Based Prediction Model for AECOPD",
-      "summary": "The rapid symptom change of Acute exacerbation of chronic obstructive pulmonary disease (AECOPD) makes it critical to have time-sensitive prediction models. However, most current machine learning models studying AECOPD use clinical and laboratory data, which will inevitably cause…",
+      "title": "EG-ARSA: An Expert-Grounded Open Model for Visual Road Safety Auditing in Low-Resource Settings",
+      "summary": "Road traffic injuries remain a major challenge in low- and middle-income countries, where proactive road safety auditing is limited by incomplete crash records, shortages of qualified auditors, and the high cost of large-scale field inspections. To address this problem, we propos…",
       "authors": [
-        "Weihao Qu",
-        "Ling Zheng",
-        "Dongyang Wang",
+        "Md Thamed Bin Zaman Chowdhury",
+        "Moazzem Hossain"
+      ],
+      "link": "http://arxiv.org/abs/2608.23563v1",
+      "published": "2026-08-24T17:58:41Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Physics-Constrained Deep Learning Model for Contactless Blood Pressure Monitoring from Triaxial Bodyseismography",
+      "summary": "Ballistocardiography (BCG) is promising for unobtrusive long-term blood pressure (BP) monitoring in laboratory settings, but traditional BCG signals are vulnerable to the variations in body-bed interaction with shifted fiducial points in temporal or amplitude axis, and BP varies …",
+      "authors": [
+        "Yuanyuan Zhang",
+        "Yida Zhang",
+        "Jiahui Li",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.21324v1",
-      "published": "2026-08-21T17:31:23Z",
+      "link": "http://arxiv.org/abs/2608.23562v1",
+      "published": "2026-08-24T17:58:35Z",
+      "category": "eess.SP"
+    },
+    {
+      "title": "Provably adaptive sampling with uniform and remasking discrete diffusion models",
+      "summary": "Discrete diffusion models offer a promising alternative to autoregressive generation by enabling parallel updates, but their sampling efficiency can depend strongly on the choice of the forward process and the sampler. For the uniform forward process, existing lower bounds for th…",
+      "authors": [
+        "Daniil Dmitriev",
+        "Zhihan Huang",
+        "Yuting Wei"
+      ],
+      "link": "http://arxiv.org/abs/2608.23554v1",
+      "published": "2026-08-24T17:54:51Z",
       "category": "cs.LG"
     },
     {
-      "title": "Unified Branch-and-Bound Search for the Steiner Traveling Salesman Problem on Graphs of Convex Sets",
-      "summary": "We formalize the Steiner Traveling Salesman Problem (Steiner-TSP) on Graphs of Convex Sets (GCS), which seeks a minimum-cost closed trajectory through required convex sets while allowing optional transit vertices and revisits. To explore the resulting infinite solution space, we …",
+      "title": "Prime Agent: A Self-Improving RLM Harness",
+      "summary": "Language models are sequential processors, but long-horizon agency requires external information and computation beyond model weights and active context. Prime Agent is an open-source harness for long-horizon evaluation and coding-agent workflows. A persistent IPython REPL follow…",
       "authors": [
-        "Jingtao Tang",
-        "Hang Ma"
+        "Seth Karten",
+        "Alex L. Zhang",
+        "Kevin Thomas",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.21319v1",
-      "published": "2026-08-21T17:28:03Z",
+      "link": "http://arxiv.org/abs/2608.23552v1",
+      "published": "2026-08-24T17:54:19Z",
       "category": "cs.AI"
+    },
+    {
+      "title": "ConvergeFlow: Language Flow with Provable Convergence to Token Embeddings",
+      "summary": "Recent advances in continuous diffusion and flow-based language models (LMs) have achieved performance competitive with discrete LMs. However, existing continuous frameworks still rely on decoders supervised with cross entropy (CE) because the flow trajectories are not guaranteed…",
+      "authors": [
+        "Na Li",
+        "Yuchen Jiao",
+        "Changxiao Cai",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.23551v1",
+      "published": "2026-08-24T17:54:14Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Robustness of Anomaly Detection Models for Industrial Control Systems under Training-Time Data Contamination",
+      "summary": "Machine-learning-based anomaly detection is increasingly used in industrial control systems (ICS), yet most studies assume that detector training data is trustworthy. In practice, training data may be corrupted through compromised logs, labeling errors, manipulated historian reco…",
+      "authors": [
+        "Mustafa Umut Ozbek",
+        "Taiwo Ojo",
+        "Pooria Madani",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.23547v1",
+      "published": "2026-08-24T17:49:36Z",
+      "category": "cs.CR"
+    },
+    {
+      "title": "Inertial Manifold Neural Operator for Dissipative Time-Dependent Partial Differential Equations",
+      "summary": "In this paper, we introduce the Inertial Manifold Neural Operator (IMNO) for solving dissipative time-dependent partial differential equations (PDEs). The long-time dynamics of such systems often exhibit an effective low-dimensional structure due to dissipation. Unlike standard n…",
+      "authors": [
+        "Xiaoyang Xie",
+        "Clarence W. Rowley"
+      ],
+      "link": "http://arxiv.org/abs/2608.23546v1",
+      "published": "2026-08-24T17:49:30Z",
+      "category": "math.NA"
+    },
+    {
+      "title": "How AI Assistance Affects Human Skill Development: A Study of Learning with Logic Puzzles",
+      "summary": "While AI assistance can improve human task performance in the short term, it may also undermine the development of skills in the longer term. We examine this tension in a controlled logic-puzzle experiment involving on-demand AI assistance, where participants complete tasks befor…",
+      "authors": [
+        "Shang Wu",
+        "Catarina G Belem",
+        "Shuyuan Fu",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.23543v1",
+      "published": "2026-08-24T17:46:11Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "The Interaction Tax: When Communication Erases Diversity in Multi-Agent Teams",
+      "summary": "Does multi-agent LLM interaction help or hurt? Some work reports gains from debate (Du et al., 2024), critique loops (Chen et al., 2025), and mixture-of-agents synthesis (Wang et al., 2025), while other work finds that interaction adds cost without improving quality under equal b…",
+      "authors": [
+        "Summer Eunhyung Ann",
+        "Haokun Liu",
+        "Chenhao Tan"
+      ],
+      "link": "http://arxiv.org/abs/2608.23541v1",
+      "published": "2026-08-24T17:45:15Z",
+      "category": "cs.MA"
     }
   ]
 }

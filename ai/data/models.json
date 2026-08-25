@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-08-24T15:34:04+00:00",
+  "generated_at": "2026-08-25T03:43:06+00:00",
   "items": [
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 2645226,
-      "likes": 12452,
+      "likes": 12532,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
       "downloads": 7009063,
-      "likes": 2791,
+      "likes": 2844,
       "pipeline_tag": null
     },
     {
       "id": "orcarouter/Qwen3.8-27B-Uncensored-MLX",
       "url": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX",
       "downloads": 57947,
-      "likes": 1007,
+      "likes": 1036,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
       "url": "https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED",
       "downloads": 312627,
-      "likes": 678,
+      "likes": 700,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "orcarouter/Qwen3.8-27B-Uncensored-FP8",
       "url": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-FP8",
       "downloads": 224114,
-      "likes": 1077,
+      "likes": 1101,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
       "url": "https://huggingface.co/HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
       "downloads": 761975,
-      "likes": 567,
+      "likes": 586,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 790378,
-      "likes": 1697,
+      "likes": 1727,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "ornith-ai/Ornith-1.5-35B-A3B",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B",
       "downloads": 60294,
-      "likes": 380,
+      "likes": 402,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
       "url": "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
       "downloads": 1456700,
-      "likes": 672,
+      "likes": 692,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "MiniMaxAI/MiniMax-Music3",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-Music3",
       "downloads": 18065,
-      "likes": 1222,
+      "likes": 1229,
       "pipeline_tag": "text-to-audio"
     }
   ]

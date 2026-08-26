@@ -1,154 +1,147 @@
 {
-  "generated_at": "2026-08-25T15:36:39+00:00",
+  "generated_at": "2026-08-26T03:49:33+00:00",
   "items": [
     {
-      "title": "How to Train a Critic Stably and Efficiently",
-      "summary": "Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token-level advantages from one response, but standard critic-based training recipes …",
+      "title": "What FID Hides: Detecting, Ranking, and Diagnosing Deviations in Generative Evaluation",
+      "summary": "Generative models are commonly ranked by Fréchet Inception Distance (FID) and Kernel Inception Distance (KID), yet FID's first-two-moment summary can miss distributional differences, and a reported scalar gap alone is not a calibrated test against sampling variation. FID's moment…",
       "authors": [
-        "Penghui Qi",
-        "Xiangxin Zhou",
-        "Wee Sun Lee"
+        "Hao Chen"
       ],
-      "link": "http://arxiv.org/abs/2608.23566v1",
-      "published": "2026-08-24T17:59:39Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2608.24881v1",
+      "published": "2026-08-25T17:58:46Z",
+      "category": "stat.ML"
     },
     {
-      "title": "ReWorld: An Interactive World Model with Long-Horizon Memory",
-      "summary": "An interactive world model must follow the user's actions, remember the places it has shown, and stream in real time. The tension is structural: control wants a short horizon, memory wants an unbounded one. ReWorld separates the two during training and bounds them at inference. M…",
+      "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
+      "summary": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in which Working Memory …",
       "authors": [
-        "Zhifei Chen",
-        "Luozhou Wang",
-        "Guibao Shen",
+        "Zhaochen Yu",
+        "Yingcheng Wu",
+        "Zhenfei Yin",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.23565v1",
-      "published": "2026-08-24T17:59:05Z",
+      "link": "http://arxiv.org/abs/2608.24876v1",
+      "published": "2026-08-25T17:56:35Z",
       "category": "cs.AI"
     },
     {
-      "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration?",
-      "summary": "Modern software systems accumulate technical debt over decades of development, which makes migration expensive and largely manual. As coding agents become increasingly capable at bug fixing, can they autonomously perform such migrations? Existing benchmarks cannot answer this que…",
+      "title": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
+      "summary": "Group-relative reinforcement learning waits for sibling rollouts of the same prompt, which is costly for long and variable tool-use trajectories. Single-stream Policy Optimization (SPO) removes this dependency with a persistent prompt-level value estimate, but its recipe whitens …",
       "authors": [
-        "Deyao Hong",
-        "Yizhe Chi",
-        "Wenyi Li",
+        "Kai Ruan",
+        "Jinghao Lin",
+        "Qianshan Wei",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.23564v1",
-      "published": "2026-08-24T17:59:04Z",
+      "link": "http://arxiv.org/abs/2608.24870v1",
+      "published": "2026-08-25T17:52:19Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Parameterized Complexity of $L_p$-Lipschitz Constants for Input Convex Neural Networks and $L_p$-Norm Maximization over Zonotopes",
+      "summary": "Lipschitz constants are a standard way to quantify the sensitivity of neural networks to small input perturbations, but computing them is difficult even for shallow ReLU networks. We study this problem for two-layer input-convex neural networks (ICNNs), a restricted architecture …",
+      "authors": [
+        "Aritra Das",
+        "Vincent Froese",
+        "Moritz Grillo",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.24865v1",
+      "published": "2026-08-25T17:47:37Z",
+      "category": "cs.CC"
+    },
+    {
+      "title": "Improving Cross-Problem Vehicle Routing with Locally Augmented Preferences and Representation Disentanglement",
+      "summary": "Multi-task vehicle routing problem (VRP) solvers seek to handle multiple VRP variants within a single unified model, avoiding the need to train a separate model for every variant. In spite of recent progress, current approaches remain limited on two fronts. On the training side, …",
+      "authors": [
+        "Arthur Corrêa",
+        "Paulo Nascimento",
+        "Samuel Moniz"
+      ],
+      "link": "http://arxiv.org/abs/2608.24859v1",
+      "published": "2026-08-25T17:44:23Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Bellman Calibration for Marginalized Importance Weighting in Offline Reinforcement Learning",
+      "summary": "Marginalized importance weighting evaluates a target policy by reweighting offline state-action samples with its discounted occupancy ratio, characterized by an adjoint Bellman equation. Existing minimax, primal-dual, and fitted fixed-point estimators can leave residual occupancy…",
+      "authors": [
+        "Lars van der Laan",
+        "Nathan Kallus"
+      ],
+      "link": "http://arxiv.org/abs/2608.24858v1",
+      "published": "2026-08-25T17:44:02Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes",
+      "summary": "Web agents that act from rendered pixels avoid the fragility and heavy token cost of reading a page's HTML or accessibility tree, but training them depends on large amounts of high-quality interaction trajectories, and how to produce such data at scale remains an open problem. Pu…",
+      "authors": [
+        "Fei Tang",
+        "Huawen Shen",
+        "Zhiqiong Lu",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.24848v1",
+      "published": "2026-08-25T17:35:42Z",
       "category": "cs.CL"
     },
     {
-      "title": "EG-ARSA: An Expert-Grounded Open Model for Visual Road Safety Auditing in Low-Resource Settings",
-      "summary": "Road traffic injuries remain a major challenge in low- and middle-income countries, where proactive road safety auditing is limited by incomplete crash records, shortages of qualified auditors, and the high cost of large-scale field inspections. To address this problem, we propos…",
+      "title": "FedV-KGQA: Multi-Hop Question Answering over Vertically Partitioned Knowledge Graphs",
+      "summary": "Real-world data for knowledge graph question answering is often distributed across different organizations due to governance and data sovereignty constraints. While centralized systems exist, they cannot answer multi-hop questions when the required facts are split across vertical…",
       "authors": [
-        "Md Thamed Bin Zaman Chowdhury",
-        "Moazzem Hossain"
+        "Md Saikat Islam Khan Bappy",
+        "Oshani Seneviratne"
       ],
-      "link": "http://arxiv.org/abs/2608.23563v1",
-      "published": "2026-08-24T17:58:41Z",
+      "link": "http://arxiv.org/abs/2608.24846v1",
+      "published": "2026-08-25T17:34:27Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+      "summary": "We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a total duration of 10 million hours. The dataset is designed for multimodal pre-tr…",
+      "authors": [
+        "Andreas Hochlehnert",
+        "Marianna Nezhurina",
+        "Mehdi Cherti",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.24845v1",
+      "published": "2026-08-25T17:34:19Z",
       "category": "cs.CV"
     },
     {
-      "title": "Physics-Constrained Deep Learning Model for Contactless Blood Pressure Monitoring from Triaxial Bodyseismography",
-      "summary": "Ballistocardiography (BCG) is promising for unobtrusive long-term blood pressure (BP) monitoring in laboratory settings, but traditional BCG signals are vulnerable to the variations in body-bed interaction with shifted fiducial points in temporal or amplitude axis, and BP varies …",
+      "title": "Reading Is Not Using: Retrieval, Judgment, and the Design of AI Financial Research Workflows",
+      "summary": "Large language models (LLMs) are increasingly deployed as AI analysts to process financial disclosures and support AI-assisted investment decisions. Yet such systems are usually evaluated by what they can retrieve, not whether retrieved information affects their judgments. We ide…",
       "authors": [
-        "Yuanyuan Zhang",
-        "Yida Zhang",
-        "Jiahui Li",
-        "et al."
+        "Miao Liu",
+        "Zhizhe Liu"
       ],
-      "link": "http://arxiv.org/abs/2608.23562v1",
-      "published": "2026-08-24T17:58:35Z",
-      "category": "eess.SP"
-    },
-    {
-      "title": "Provably adaptive sampling with uniform and remasking discrete diffusion models",
-      "summary": "Discrete diffusion models offer a promising alternative to autoregressive generation by enabling parallel updates, but their sampling efficiency can depend strongly on the choice of the forward process and the sampler. For the uniform forward process, existing lower bounds for th…",
-      "authors": [
-        "Daniil Dmitriev",
-        "Zhihan Huang",
-        "Yuting Wei"
-      ],
-      "link": "http://arxiv.org/abs/2608.23554v1",
-      "published": "2026-08-24T17:54:51Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Prime Agent: A Self-Improving RLM Harness",
-      "summary": "Language models are sequential processors, but long-horizon agency requires external information and computation beyond model weights and active context. Prime Agent is an open-source harness for long-horizon evaluation and coding-agent workflows. A persistent IPython REPL follow…",
-      "authors": [
-        "Seth Karten",
-        "Alex L. Zhang",
-        "Kevin Thomas",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.23552v1",
-      "published": "2026-08-24T17:54:19Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "ConvergeFlow: Language Flow with Provable Convergence to Token Embeddings",
-      "summary": "Recent advances in continuous diffusion and flow-based language models (LMs) have achieved performance competitive with discrete LMs. However, existing continuous frameworks still rely on decoders supervised with cross entropy (CE) because the flow trajectories are not guaranteed…",
-      "authors": [
-        "Na Li",
-        "Yuchen Jiao",
-        "Changxiao Cai",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.23551v1",
-      "published": "2026-08-24T17:54:14Z",
+      "link": "http://arxiv.org/abs/2608.24842v1",
+      "published": "2026-08-25T17:31:25Z",
       "category": "cs.CL"
     },
     {
-      "title": "Robustness of Anomaly Detection Models for Industrial Control Systems under Training-Time Data Contamination",
-      "summary": "Machine-learning-based anomaly detection is increasingly used in industrial control systems (ICS), yet most studies assume that detector training data is trustworthy. In practice, training data may be corrupted through compromised logs, labeling errors, manipulated historian reco…",
+      "title": "A Dual-Dimensional LLM Framework for Automated Item Incidental Content Similarity Analysis in Large-Scale Assessments",
+      "summary": "The rapid expansion of large-scale assessments and the growing adoption of automatic item generation have intensified concerns about incidental content redundancy, where construct-irrelevant elements such as wording or contextual framing become unintentionally repetitive across i…",
       "authors": [
-        "Mustafa Umut Ozbek",
-        "Taiwo Ojo",
-        "Pooria Madani",
-        "et al."
+        "Jing Huang",
+        "Jihong Zhang",
+        "Hua-Hua Chang"
       ],
-      "link": "http://arxiv.org/abs/2608.23547v1",
-      "published": "2026-08-24T17:49:36Z",
-      "category": "cs.CR"
-    },
-    {
-      "title": "Inertial Manifold Neural Operator for Dissipative Time-Dependent Partial Differential Equations",
-      "summary": "In this paper, we introduce the Inertial Manifold Neural Operator (IMNO) for solving dissipative time-dependent partial differential equations (PDEs). The long-time dynamics of such systems often exhibit an effective low-dimensional structure due to dissipation. Unlike standard n…",
-      "authors": [
-        "Xiaoyang Xie",
-        "Clarence W. Rowley"
-      ],
-      "link": "http://arxiv.org/abs/2608.23546v1",
-      "published": "2026-08-24T17:49:30Z",
-      "category": "math.NA"
-    },
-    {
-      "title": "How AI Assistance Affects Human Skill Development: A Study of Learning with Logic Puzzles",
-      "summary": "While AI assistance can improve human task performance in the short term, it may also undermine the development of skills in the longer term. We examine this tension in a controlled logic-puzzle experiment involving on-demand AI assistance, where participants complete tasks befor…",
-      "authors": [
-        "Shang Wu",
-        "Catarina G Belem",
-        "Shuyuan Fu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.23543v1",
-      "published": "2026-08-24T17:46:11Z",
+      "link": "http://arxiv.org/abs/2608.24825v1",
+      "published": "2026-08-25T17:07:16Z",
       "category": "cs.AI"
     },
     {
-      "title": "The Interaction Tax: When Communication Erases Diversity in Multi-Agent Teams",
-      "summary": "Does multi-agent LLM interaction help or hurt? Some work reports gains from debate (Du et al., 2024), critique loops (Chen et al., 2025), and mixture-of-agents synthesis (Wang et al., 2025), while other work finds that interaction adds cost without improving quality under equal b…",
+      "title": "Constrained Entity Selection under Partial Knowledge for LLM-Based Knowledge Graph QA",
+      "summary": "Large language models are increasingly used for knowledge graph question answering (KGQA), but can fail to correctly ground answers in the underlying graph. Current approaches to LLM-based KGQA either rely on full semantic parsing into executable queries such as SPARQL, which is …",
       "authors": [
-        "Summer Eunhyung Ann",
-        "Haokun Liu",
-        "Chenhao Tan"
+        "Emanuel Kitzelmann"
       ],
-      "link": "http://arxiv.org/abs/2608.23541v1",
-      "published": "2026-08-24T17:45:15Z",
-      "category": "cs.MA"
+      "link": "http://arxiv.org/abs/2608.24824v1",
+      "published": "2026-08-25T17:04:32Z",
+      "category": "cs.AI"
     }
   ]
 }

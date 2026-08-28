@@ -1,157 +1,157 @@
 {
-  "generated_at": "2026-08-28T00:11:58+00:00",
+  "generated_at": "2026-08-28T14:48:53+00:00",
   "items": [
     {
-      "title": "VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning",
-      "summary": "Native visual reasoning treats visual generation as the medium of reasoning itself: visual states (i.e. images and videos) are not merely inputs to be understood or outputs to be rendered, but first-class substrates for problem solving beyond language. Yet progress remains bottle…",
+      "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
+      "summary": "Recent advances in inference-time scaling have significantly improved the reasoning performance of large language models (LLMs). However, these methods typically rely on repeated generation or external verification. To address this limitation, we introduce CritICL, a novel infere…",
       "authors": [
-        "Junxiang Xu",
-        "Ruisi Wang",
-        "Fanyi Pu",
+        "Yufan Wu",
+        "Yinghui He",
+        "Zhengyi Hu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.26105v1",
-      "published": "2026-08-26T17:59:51Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2608.27455v1",
+      "published": "2026-08-27T17:59:30Z",
+      "category": "cs.CL"
     },
     {
-      "title": "A Visual Dependence-Aware Framework for Multimodal Unsupervised Continual Post-Training",
-      "summary": "In this paper, we explore a novel task of Multimodal Unsupervised Continual Post-Training (MU-CPT), enabling deployed MLLMs to continually evolve from streaming unlabeled data. Existing unsupervised post-training methods for MLLMs typically optimize target tokens uniformly, overl…",
+      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+      "summary": "Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables agents to progressively adapt through interaction. However, the insights that g…",
       "authors": [
-        "Kaichen Li",
-        "Zhilin Zhu",
-        "Jianhao Huang",
+        "Liyan Tang",
+        "Cyrus Rashtchian",
+        "Chun-Sung Ferng",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.26095v1",
-      "published": "2026-08-26T17:57:04Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "MyoMechanix: Biomechanically-Grounded Compositional Skilled Activity Understanding and Coaching",
-      "summary": "Existing action quality assessment (AQA) datasets and methods rely primarily on visual inputs such as RGB and pose, overlooking physiological dynamics such as muscle mechanics and often modeling actions as monolithic patterns. These limitations hinder fine-grained, biomechanicall…",
-      "authors": [
-        "Hao Yin",
-        "Paritosh Parmar",
-        "Lijun Gu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.26094v1",
-      "published": "2026-08-26T17:56:33Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Agentic Autoresearch for Cell-Edge Power Control: Radically Redefining the Researcher's Role",
-      "summary": "Designing machine learning algorithms for wireless resource management is labour-intensive: the architecture, the loss function and the training recipe are all specified by hand. We demonstrate that this design layer can be surrendered to an autonomous agent in its entirety. We a…",
-      "authors": [
-        "Ahmad Khan",
-        "Akram Bin Sediq",
-        "Sara Azadegi Naeini",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.26093v1",
-      "published": "2026-08-26T17:56:00Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "PlanSightRAG: A Visual-First Multimodal RAG for Automating Question Answering and Compliance Checking for Civil Standard Plans",
-      "summary": "Civil infrastructure compliance checking has long relied on engineers manually reading legacy 2D plans; however, OCR-based automation strips away the geometry and layout essential for interpreting these plans. We present a Visual-First Multimodal Retrieval-Augmented Generation (R…",
-      "authors": [
-        "Nabaraj Subedi",
-        "Shuvo Dip Datta",
-        "Ahmed Abdelaty",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.26091v1",
-      "published": "2026-08-26T17:54:24Z",
-      "category": "cs.IR"
-    },
-    {
-      "title": "Finding and using interpretable latents in a neutrino foundation model with sparse autoencoders",
-      "summary": "We present a first application of sparse-autoencoder-based mechanistic interpretability to particle physics. Studying a neutrino foundation model pretrained on IceCube data and fine-tuned for direction reconstruction, we identify a validated atlas of physical concepts in the mode…",
-      "authors": [
-        "Raphaël Bonnet-Guerrini",
-        "Johann Ioannou-Nikolaides",
-        "Inar Timiryasov",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.26090v1",
-      "published": "2026-08-26T17:53:00Z",
-      "category": "astro-ph.HE"
-    },
-    {
-      "title": "Planetary Prediction Engine: Autonomous Geospatial Prediction via Intelligent Data Selection and Foundation Model Embeddings",
-      "summary": "Addressing critical global challenges, from food security and disaster risk to disease outbreaks and socio-economic vulnerability, demands high-fidelity geospatial modeling. However, building predictive planetary models remains bottlenecked by a fragmented data ecosystem, requiri…",
-      "authors": [
-        "Evelyn Ma",
-        "Rama Kumar Pasumarthi",
-        "Kishwar Shafin",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.26088v1",
-      "published": "2026-08-26T17:50:52Z",
+      "link": "http://arxiv.org/abs/2608.27454v1",
+      "published": "2026-08-27T17:59:11Z",
       "category": "cs.AI"
     },
     {
-      "title": "TraceML: An Empirical Analysis of Human-Agent Planning in Machine Learning Development",
-      "summary": "Large language models write correct code for isolated problems but remain far weaker at autonomous machine-learning development, where an agent must revise data pipelines, models, and validation over hours of feedback, and on most competitions still finishes below strong human co…",
+      "title": "SWE-Prime: Fewer Trajectories, Better Performance",
+      "summary": "To improve large language models' ability to resolve real-world software issues, prior work has focused on constructing large-scale agent trajectory datasets and performing supervised fine-tuning (SFT) on successful trajectories. However, task success does not guarantee high-qual…",
       "authors": [
-        "Jiarui Yan",
-        "Weiwei Sun",
-        "Sijie Li",
+        "Dewu Zheng",
+        "Ruizhe Ye",
+        "Yanlin Wang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.26086v1",
-      "published": "2026-08-26T17:50:13Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2608.27449v1",
+      "published": "2026-08-27T17:58:10Z",
+      "category": "cs.SE"
     },
     {
-      "title": "ICON Decomposition: Multivariate Concept-Level Explanations of Deep Representations for Model Auditing",
-      "summary": "Deep neural networks often exploit spurious associations in their training data, a failure known as shortcut learning. Concept-based explainability methods screen for shortcuts by testing whether concepts such as a patient's sex or scanner settings can be decoded from a network l…",
+      "title": "TTPO: Test-Time Policy Optimization",
+      "summary": "Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet their reliance on ground-truth labels precludes test-time training (TTT). Replac…",
       "authors": [
-        "Roshan Prakash Rane",
-        "Marco Simnacher",
-        "Manuel Pfeuffer",
+        "Aozhe Wang",
+        "Zhengxi Lu",
+        "Jianze Wang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.26083v1",
-      "published": "2026-08-26T17:47:49Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2608.27448v1",
+      "published": "2026-08-27T17:58:10Z",
+      "category": "cs.CL"
     },
     {
-      "title": "SwarmWorld: Stigmergic technological evolution in societies of language-model agents",
-      "summary": "Collective intelligence can emerge when individuals coordinate through a shared environment, allowing local actions to accumulate into durable social organization. Language-model agents offer a new substrate for this process, yet most multi-agent systems rely on direct conversati…",
+      "title": "From Static to Dynamic: Benchmarking Real-World Code Review with MCR-Bench",
+      "summary": "In real-world software development, code review typically involves iterative interactions between developers and reviewers to improve software quality, making the process costly and time-consuming. Although recent work explores large language models (LLMs) for automated code revi…",
       "authors": [
-        "Subhadeep Pal",
-        "Fiona Y. Wang",
-        "Markus J. Buehler"
+        "Dewu Zheng",
+        "Yanlin Wang",
+        "Xiwen Wang",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.26081v1",
-      "published": "2026-08-26T17:45:34Z",
+      "link": "http://arxiv.org/abs/2608.27442v1",
+      "published": "2026-08-27T17:56:24Z",
+      "category": "cs.SE"
+    },
+    {
+      "title": "RedEvoAgent: Automatic Red-Teaming Agent with Experience-Driven Skill Evolution",
+      "summary": "LLM-based agents are increasingly deployed in product-level execution harnesses, where jailbreaks can trigger harmful tool use and persistent state changes, creating greater risks than unsafe text generation alone. Existing automatic red-teaming methods often rely on fixed attack…",
+      "authors": [
+        "Junjie Zhang",
+        "Hui Liu",
+        "Kecheng Chen",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.27439v1",
+      "published": "2026-08-27T17:55:33Z",
+      "category": "cs.CR"
+    },
+    {
+      "title": "Mechanistic Reaction Prediction via Discrete Flow Matching on Graph-Structured Electron Occupation",
+      "summary": "Chemical reactions are fundamentally transformations in electron space, yet most machine learning approaches model them either through \\textit{de novo} generation of product molecules or through heuristic graph edits that operate directly on molecular topology.   We introduce MAE…",
+      "authors": [
+        "Nguyen Xuan-Vu",
+        "Octavian Susanu",
+        "Daniel Armstrong",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.27429v1",
+      "published": "2026-08-27T17:50:44Z",
       "category": "cs.AI"
     },
     {
-      "title": "Gating Before Commitment: Anticipating Intent Divergence to Prevent Post-Interaction Decision Failures in Autonomous Driving",
-      "summary": "Intent misinterpretation during vehicle interactions causes recurring planning failures. We study a decision layer in which a language-guided intent module reads structured descriptors, computes a smoothed intent-geometry divergence score, and gates the planned maneuver before co…",
+      "title": "Stochastic Estimation of Transduced Language Models",
+      "summary": "Transduced language models (TLMs) compose a pretrained \\emph{source} language model with a functional finite-state transducer to induce a language model over \\emph{target} strings. Computing the probability of a target prefix under a TLM amounts to summing the source-model probab…",
       "authors": [
-        "Cong Xu",
-        "Ravi Sankar"
-      ],
-      "link": "http://arxiv.org/abs/2608.26074v1",
-      "published": "2026-08-26T17:42:03Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Prefix Sliding for efficient test-time scaling",
-      "summary": "Test-time scaling uses extra test-time compute to improve performance, such as letting language models reason longer when solving a problem. As models keep the entire reasoning trace in memory via full attention, hard tasks that need long thinking can be prohibitively expensive. …",
-      "authors": [
-        "Niklas Muennighoff",
-        "Zhengyang Wang",
-        "Zeyi Chen",
+        "Vésteinn Snæbjarnarson",
+        "Samuel Kiegeland",
+        "Manuel de Prada Corral",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.26070v1",
-      "published": "2026-08-26T17:37:15Z",
+      "link": "http://arxiv.org/abs/2608.27428v1",
+      "published": "2026-08-27T17:50:21Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit",
+      "summary": "Large language model (LLM) agents in governed organizations must let the persona (instructions, tone, self-presentation) evolve freely, while keeping execution (stateful, audited work) traceable. A single trust domain does not satisfy both cheaply. We present Persona-Execution Se…",
+      "authors": [
+        "Yisen Xi"
+      ],
+      "link": "http://arxiv.org/abs/2608.27427v1",
+      "published": "2026-08-27T17:50:07Z",
+      "category": "cs.SE"
+    },
+    {
+      "title": "Beyond F1: Evaluating Coverage and Failure Recovery in AI Model Security Scanners",
+      "summary": "Static scanners are increasingly used to identify executable or otherwise unsafe content in machine- learning artifacts, yet conventional evaluation metrics characterize only cases where a scanner yields a usable security judgment. We evaluate ModelScan, ModelAudit, and Fickling …",
+      "authors": [
+        "Qianlong Lan",
+        "Vinothini Pandurangan",
+        "Anuj Kaul",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.27424v1",
+      "published": "2026-08-27T17:49:28Z",
+      "category": "cs.CR"
+    },
+    {
+      "title": "Learning a Continuous Sepsis Severity Score Without Hour-by-Hour Supervision: A Two-Site Retrospective Study",
+      "summary": "Currently used sepsis severity indices rely on fixed variables and weights established decades ago, which are coarsely discretized and calibrated to a cohort that no longer reflects contemporary critical care. No alternative learned directly from patient trajectories is in routin…",
+      "authors": [
+        "Kevin Zhu",
+        "Ryan Zhang",
+        "Baraa Abed",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.27421v1",
+      "published": "2026-08-27T17:46:21Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Boosting LLM Exploration via Weak-Model Guidance in RLVR",
+      "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) significantly improves LLM reasoning but often causes a drop in policy entropy, leading to narrowed reasoning coverage and degraded pass@$k$ for large $k$. While existing methods mitigate this entropy collapse through algorith…",
+      "authors": [
+        "Xingyu Shen",
+        "Huishuai Zhang",
+        "Peng Li",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.27420v1",
+      "published": "2026-08-27T17:45:50Z",
       "category": "cs.CL"
     }
   ]

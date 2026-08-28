@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-08-27T13:37:59+00:00",
+  "generated_at": "2026-08-28T00:12:06+00:00",
   "items": [
     {
       "id": "Qwen/Qwen3.8-Flash-Next",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
       "downloads": 4810,
-      "likes": 3850,
+      "likes": 3955,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.3-Flash",
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
       "downloads": 34,
-      "likes": 1203,
+      "likes": 1324,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 3457687,
-      "likes": 12976,
+      "likes": 13033,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
       "downloads": 7758790,
-      "likes": 3041,
+      "likes": 3071,
       "pipeline_tag": null
     },
     {
       "id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
       "url": "https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED",
       "downloads": 509270,
-      "likes": 830,
+      "likes": 849,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
       "downloads": 4354,
-      "likes": 417,
+      "likes": 450,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "orcarouter/Qwen3.8-27B-Uncensored-FP8",
       "url": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-FP8",
       "downloads": 273577,
-      "likes": 1197,
+      "likes": 1207,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "orcarouter/Qwen3.8-27B-Uncensored-MLX",
       "url": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX",
       "downloads": 83352,
-      "likes": 1153,
+      "likes": 1164,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 912729,
-      "likes": 1902,
+      "likes": 1935,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
       "url": "https://huggingface.co/HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
       "downloads": 938219,
-      "likes": 674,
+      "likes": 687,
       "pipeline_tag": "image-text-to-text"
     }
   ]

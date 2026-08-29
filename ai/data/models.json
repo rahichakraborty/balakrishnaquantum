@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-08-29T09:39:28+00:00",
+  "generated_at": "2026-08-29T18:08:16+00:00",
   "items": [
     {
       "id": "Qwen/Qwen3.8-Flash-Next",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
       "downloads": 52341,
-      "likes": 4201,
+      "likes": 4260,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.3-Flash",
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
       "downloads": 189793,
-      "likes": 1545,
+      "likes": 1594,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "zai-org/GLM-5.3",
       "url": "https://huggingface.co/zai-org/GLM-5.3",
       "downloads": 8804,
-      "likes": 1195,
+      "likes": 1246,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 4028839,
-      "likes": 13175,
+      "likes": 13227,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
       "downloads": 188061,
-      "likes": 536,
+      "likes": 546,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
       "downloads": 8363481,
-      "likes": 3160,
+      "likes": 3174,
       "pipeline_tag": null
     },
     {
       "id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
       "url": "https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED",
       "downloads": 645554,
-      "likes": 885,
+      "likes": 909,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 1044661,
-      "likes": 2043,
+      "likes": 2094,
       "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "orcarouter/Qwen3.8-27B-Uncensored-MLX",
-      "url": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX",
-      "downloads": 97508,
-      "likes": 1196,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "tencent/Hy4-preview",
       "url": "https://huggingface.co/tencent/Hy4-preview",
       "downloads": 1394,
-      "likes": 258,
+      "likes": 272,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "orcarouter/Qwen3.8-27B-Uncensored-MLX",
+      "url": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX",
+      "downloads": 97508,
+      "likes": 1207,
+      "pipeline_tag": "image-text-to-text"
     }
   ]
 }

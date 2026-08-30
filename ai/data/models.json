@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-08-30T08:51:08+00:00",
+  "generated_at": "2026-08-30T18:22:27+00:00",
   "items": [
     {
       "id": "Qwen/Qwen3.8-Flash-Next",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "downloads": 52341,
-      "likes": 4319,
+      "downloads": 121976,
+      "likes": 4365,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.3-Flash",
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
-      "downloads": 189793,
-      "likes": 1645,
+      "downloads": 346516,
+      "likes": 1690,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "zai-org/GLM-5.3",
       "url": "https://huggingface.co/zai-org/GLM-5.3",
-      "downloads": 8804,
-      "likes": 1299,
+      "downloads": 50116,
+      "likes": 1331,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 4511348,
-      "likes": 13285,
+      "likes": 13321,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
-      "downloads": 188061,
-      "likes": 579,
+      "downloads": 328195,
+      "likes": 595,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-      "downloads": 8363481,
-      "likes": 3192,
+      "downloads": 8839153,
+      "likes": 3223,
       "pipeline_tag": null
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 1137181,
-      "likes": 2165,
+      "likes": 2230,
       "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
-      "url": "https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED",
-      "downloads": 645554,
-      "likes": 929,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "tencent/Hy4-preview",
       "url": "https://huggingface.co/tencent/Hy4-preview",
-      "downloads": 1394,
-      "likes": 292,
+      "downloads": 2123,
+      "likes": 313,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "unsloth/GLM-5.3-Flash-GGUF",
       "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF",
-      "downloads": 27288,
-      "likes": 278,
+      "downloads": 45936,
+      "likes": 283,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
+      "url": "https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED",
+      "downloads": 725757,
+      "likes": 940,
       "pipeline_tag": "text-generation"
     }
   ]

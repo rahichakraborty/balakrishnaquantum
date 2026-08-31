@@ -1,158 +1,145 @@
 {
-  "generated_at": "2026-08-30T18:22:21+00:00",
+  "generated_at": "2026-08-31T09:13:53+00:00",
   "items": [
     {
-      "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
-      "summary": "Recent advances in inference-time scaling have significantly improved the reasoning performance of large language models (LLMs). However, these methods typically rely on repeated generation or external verification. To address this limitation, we introduce CritICL, a novel infere…",
+      "title": "QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs",
+      "summary": "We propose QGPINNs, a physics-informed neural network framework developed in PyTorch for the numerical solution of nonlocal differential equations on quantum graphs. The framework is designed as a general computational implementation in which the solution on each edge of the grap…",
       "authors": [
-        "Yufan Wu",
-        "Yinghui He",
-        "Zhengyi Hu",
+        "Vaibhav Mehandiratta",
+        "Saket Ramchandra"
+      ],
+      "link": "http://arxiv.org/abs/2608.28589v1",
+      "published": "2026-08-28T17:59:47Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning",
+      "summary": "Tendon-driven hands are anthropomorphic, and moving the actuators off the joints is what makes a hand of this capability affordable to build. Two effects produce that saving. Routing force through a cable removes the requirement that a motor fit inside the joint it drives, so sma…",
+      "authors": [
+        "Nan Wang",
+        "Mohit Yadav",
+        "Jonathan Wulff",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.27455v1",
-      "published": "2026-08-27T17:59:30Z",
+      "link": "http://arxiv.org/abs/2608.28578v1",
+      "published": "2026-08-28T17:53:48Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "Learning a Size-Weight Frontier for Synthetic-Augmented Inference",
+      "summary": "Synthetic data can improve statistical inference when real data are scarce, but naively treating synthetic samples as real data can introduce bias and lead to unreliable inference. We develop a general framework for synthetic-augmented inference across a population of related tas…",
+      "authors": [
+        "Chengpiao Huang",
+        "Kaizheng Wang"
+      ],
+      "link": "http://arxiv.org/abs/2608.28576v1",
+      "published": "2026-08-28T17:52:33Z",
+      "category": "stat.ME"
+    },
+    {
+      "title": "On two proofs of $d^2$ mixing of weighted Dikin walks",
+      "summary": "We study the mixing time of weighted Dikin walks for sampling from exponential distributions on polytopes and truncated positive-semidefinite (PSD) cones. Our first result gives a general total-variation mixing bound under strong self-concordance, $\\barν$-symmetry, and mixed-trac…",
+      "authors": [
+        "Yuansi Chen",
+        "Yunbum Kook"
+      ],
+      "link": "http://arxiv.org/abs/2608.28566v1",
+      "published": "2026-08-28T17:43:58Z",
+      "category": "cs.DS"
+    },
+    {
+      "title": "Learning between the peaks: sharp asymptotics for kernel ridge regression under power-law anisotropy",
+      "summary": "We study kernel ridge regression under anisotropic Gaussian data, where the input covariance decays as a power law with exponent $α\\geq 0$ for polynomial inner-product kernels. We derive asymptotically sharp expressions for the kernel spectrum and the generalization error in the …",
+      "authors": [
+        "Lorenzo Rizzi",
+        "Arie Wortsman Zurich",
+        "Bruno Loureiro"
+      ],
+      "link": "http://arxiv.org/abs/2608.28564v1",
+      "published": "2026-08-28T17:41:53Z",
+      "category": "stat.ML"
+    },
+    {
+      "title": "A Formal Limitation on Learning Human Language From Textual Corpora",
+      "summary": "Can a listener recover what a speaker means from the form of an utterance alone? We answer this question information-theoretically, and for a listener given by any featurizer of text, including the hidden states of contemporary large language models. Modeling language use as a jo…",
+      "authors": [
+        "Emily Cheng",
+        "Ryan Cotterell"
+      ],
+      "link": "http://arxiv.org/abs/2608.28560v1",
+      "published": "2026-08-28T17:38:24Z",
       "category": "cs.CL"
     },
     {
-      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
-      "summary": "Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables agents to progressively adapt through interaction. However, the insights that g…",
+      "title": "Blog: Survey of Optimizers",
+      "summary": "Neural-network optimization in 2025-2026 is no longer well described as a succession of new Adam variants. The design space has expanded from coordinates to matrices and layers, from fixed training horizons to policies over time, and from mathematical update rules to state repres…",
       "authors": [
-        "Liyan Tang",
-        "Cyrus Rashtchian",
-        "Chun-Sung Ferng",
+        "Ruoran Xu"
+      ],
+      "link": "http://arxiv.org/abs/2608.28557v1",
+      "published": "2026-08-28T17:35:11Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Logos: An Agent Harness on a Cross-Process Bus",
+      "summary": "Modern agent systems assemble capabilities at runtime, and this dynamic composition has recently received a complete formal treat ment in the spatiotemporal-composability calculus, in which a capability is a component carrying a tracked inverse, and agents are assembled as plugin…",
+      "authors": [
+        "Hanzhang Jia",
+        "Liheng Zeng",
+        "Hao Cheng",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.27454v1",
-      "published": "2026-08-27T17:59:11Z",
+      "link": "http://arxiv.org/abs/2608.28553v1",
+      "published": "2026-08-28T17:30:10Z",
       "category": "cs.AI"
     },
     {
-      "title": "SWE-Prime: Fewer Trajectories, Better Performance",
-      "summary": "To improve large language models' ability to resolve real-world software issues, prior work has focused on constructing large-scale agent trajectory datasets and performing supervised fine-tuning (SFT) on successful trajectories. However, task success does not guarantee high-qual…",
+      "title": "Advancing Interaction-Sensitive Feature Selection: Novel Relief-Based Algorithms, Expanded Comparisons, and Recommendations for Biomedical Data Mining",
+      "summary": "As a precursor to high-dimensional biomedical data modeling, reliable feature selection can reduce computational expense, improve modeling performance, and yield simpler, more interpretable models. However, most filter-based feature selection methods struggle to detect feature in…",
       "authors": [
-        "Dewu Zheng",
-        "Ruizhe Ye",
-        "Yanlin Wang",
+        "Kia Kazemi-Nia",
+        "Harsh Bandhey",
+        "Philip J. Freda",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.27449v1",
-      "published": "2026-08-27T17:58:10Z",
-      "category": "cs.SE"
+      "link": "http://arxiv.org/abs/2608.28552v1",
+      "published": "2026-08-28T17:28:50Z",
+      "category": "cs.LG"
     },
     {
-      "title": "TTPO: Test-Time Policy Optimization",
-      "summary": "Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet their reliance on ground-truth labels precludes test-time training (TTT). Replac…",
+      "title": "Video Generative Models as Geometry Learner",
+      "summary": "Recent generative approaches to geometry estimation adapt pretrained image diffusion models and treat the task as image-conditioned generation. Leveraging off-the-shelf image diffusion models, they either (i) train task-specific geometry models (for depth and surface normal estim…",
       "authors": [
-        "Aozhe Wang",
-        "Zhengxi Lu",
-        "Jianze Wang",
+        "Haosen Yang",
+        "Jifei Song",
+        "Zhensong Zhang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.27448v1",
-      "published": "2026-08-27T17:58:10Z",
-      "category": "cs.CL"
+      "link": "http://arxiv.org/abs/2608.28549v1",
+      "published": "2026-08-28T17:25:31Z",
+      "category": "cs.CV"
     },
     {
-      "title": "From Static to Dynamic: Benchmarking Real-World Code Review with MCR-Bench",
-      "summary": "In real-world software development, code review typically involves iterative interactions between developers and reviewers to improve software quality, making the process costly and time-consuming. Although recent work explores large language models (LLMs) for automated code revi…",
+      "title": "DARTS: Decoder-Aware Representation Tuning via Surgery for Model Merging",
+      "summary": "Model merging combines multiple task-specific fine-tuned LLMs into a single multi-task model without additional training. However, merged models are known to suffer from representation bias: systematic drift between the merged model's hidden states and those of each individual so…",
       "authors": [
-        "Dewu Zheng",
-        "Yanlin Wang",
-        "Xiwen Wang",
-        "et al."
+        "Aaryan Ajay Sharma",
+        "Sai Nishanth Padala",
+        "Seganrasan Subramanian"
       ],
-      "link": "http://arxiv.org/abs/2608.27442v1",
-      "published": "2026-08-27T17:56:24Z",
-      "category": "cs.SE"
+      "link": "http://arxiv.org/abs/2608.28547v1",
+      "published": "2026-08-28T17:22:47Z",
+      "category": "cs.LG"
     },
     {
-      "title": "RedEvoAgent: Automatic Red-Teaming Agent with Experience-Driven Skill Evolution",
-      "summary": "LLM-based agents are increasingly deployed in product-level execution harnesses, where jailbreaks can trigger harmful tool use and persistent state changes, creating greater risks than unsafe text generation alone. Existing automatic red-teaming methods often rely on fixed attack…",
+      "title": "An Enclosed Mode Is a Gauge Choice: Topology Relative to Reach in Certified Code World Models",
+      "summary": "A code world model accepted by a sampling gate can be exactly right on everything the gate can see and arbitrarily wrong beyond it. We characterize what a certified model can know, and what its errors can cost, when the omission is an annular freeze mode enclosing an unreachable …",
       "authors": [
-        "Junjie Zhang",
-        "Hui Liu",
-        "Kecheng Chen",
-        "et al."
+        "Javier Aguilar Martín"
       ],
-      "link": "http://arxiv.org/abs/2608.27439v1",
-      "published": "2026-08-27T17:55:33Z",
-      "category": "cs.CR"
-    },
-    {
-      "title": "Mechanistic Reaction Prediction via Discrete Flow Matching on Graph-Structured Electron Occupation",
-      "summary": "Chemical reactions are fundamentally transformations in electron space, yet most machine learning approaches model them either through \\textit{de novo} generation of product molecules or through heuristic graph edits that operate directly on molecular topology.   We introduce MAE…",
-      "authors": [
-        "Nguyen Xuan-Vu",
-        "Octavian Susanu",
-        "Daniel Armstrong",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.27429v1",
-      "published": "2026-08-27T17:50:44Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Stochastic Estimation of Transduced Language Models",
-      "summary": "Transduced language models (TLMs) compose a pretrained \\emph{source} language model with a functional finite-state transducer to induce a language model over \\emph{target} strings. Computing the probability of a target prefix under a TLM amounts to summing the source-model probab…",
-      "authors": [
-        "Vésteinn Snæbjarnarson",
-        "Samuel Kiegeland",
-        "Manuel de Prada Corral",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.27428v1",
-      "published": "2026-08-27T17:50:21Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit",
-      "summary": "Large language model (LLM) agents in governed organizations must let the persona (instructions, tone, self-presentation) evolve freely, while keeping execution (stateful, audited work) traceable. A single trust domain does not satisfy both cheaply. We present Persona-Execution Se…",
-      "authors": [
-        "Yisen Xi"
-      ],
-      "link": "http://arxiv.org/abs/2608.27427v1",
-      "published": "2026-08-27T17:50:07Z",
-      "category": "cs.SE"
-    },
-    {
-      "title": "Beyond F1: Evaluating Coverage and Failure Recovery in AI Model Security Scanners",
-      "summary": "Static scanners are increasingly used to identify executable or otherwise unsafe content in machine- learning artifacts, yet conventional evaluation metrics characterize only cases where a scanner yields a usable security judgment. We evaluate ModelScan, ModelAudit, and Fickling …",
-      "authors": [
-        "Qianlong Lan",
-        "Vinothini Pandurangan",
-        "Anuj Kaul",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.27424v1",
-      "published": "2026-08-27T17:49:28Z",
-      "category": "cs.CR"
-    },
-    {
-      "title": "Learning a Continuous Sepsis Severity Score Without Hour-by-Hour Supervision: A Two-Site Retrospective Study",
-      "summary": "Currently used sepsis severity indices rely on fixed variables and weights established decades ago, which are coarsely discretized and calibrated to a cohort that no longer reflects contemporary critical care. No alternative learned directly from patient trajectories is in routin…",
-      "authors": [
-        "Kevin Zhu",
-        "Ryan Zhang",
-        "Baraa Abed",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.27421v1",
-      "published": "2026-08-27T17:46:21Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Boosting LLM Exploration via Weak-Model Guidance in RLVR",
-      "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) significantly improves LLM reasoning but often causes a drop in policy entropy, leading to narrowed reasoning coverage and degraded pass@$k$ for large $k$. While existing methods mitigate this entropy collapse through algorith…",
-      "authors": [
-        "Xingyu Shen",
-        "Huishuai Zhang",
-        "Peng Li",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.27420v1",
-      "published": "2026-08-27T17:45:50Z",
-      "category": "cs.CL"
+      "link": "http://arxiv.org/abs/2608.28541v1",
+      "published": "2026-08-28T17:14:58Z",
+      "category": "cs.LG"
     }
   ]
 }

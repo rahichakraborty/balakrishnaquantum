@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-08-31T20:35:32+00:00",
+  "generated_at": "2026-09-01T08:13:20+00:00",
   "items": [
     {
       "id": "Qwen/Qwen3.8-Flash-Next",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
       "downloads": 158598,
-      "likes": 4507,
+      "likes": 4556,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.3-Flash",
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
       "downloads": 379271,
-      "likes": 1802,
+      "likes": 1832,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.3",
       "url": "https://huggingface.co/zai-org/GLM-5.3",
       "downloads": 66195,
-      "likes": 1410,
+      "likes": 1430,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 4720763,
-      "likes": 13462,
+      "likes": 13501,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
       "downloads": 373029,
-      "likes": 630,
+      "likes": 645,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "downloads": 0,
+      "likes": 394,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
       "downloads": 9059937,
-      "likes": 3279,
+      "likes": 3300,
       "pipeline_tag": null
     },
     {
       "id": "tencent/Hy4-preview",
       "url": "https://huggingface.co/tencent/Hy4-preview",
       "downloads": 2589,
-      "likes": 349,
+      "likes": 365,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 1182585,
-      "likes": 2354,
+      "likes": 2395,
       "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-      "downloads": 0,
-      "likes": 313,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/GLM-5.3-Flash-GGUF",
       "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF",
       "downloads": 53350,
-      "likes": 309,
+      "likes": 314,
       "pipeline_tag": "text-generation"
     }
   ]

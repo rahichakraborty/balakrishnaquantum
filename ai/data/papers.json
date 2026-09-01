@@ -1,145 +1,147 @@
 {
-  "generated_at": "2026-08-31T20:35:27+00:00",
+  "generated_at": "2026-09-01T08:13:12+00:00",
   "items": [
     {
-      "title": "QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs",
-      "summary": "We propose QGPINNs, a physics-informed neural network framework developed in PyTorch for the numerical solution of nonlocal differential equations on quantum graphs. The framework is designed as a general computational implementation in which the solution on each edge of the grap…",
+      "title": "Context-Aware Interleaved Batching for WhisperX",
+      "summary": "While WhisperX accelerates speech transcription via intra-audio batching, it isolates audio segments, losing the historical context needed for coherent punctuation and terminology transcription. Conversely, standard Whisper retains context sequentially but suffers from slow infer…",
       "authors": [
-        "Vaibhav Mehandiratta",
-        "Saket Ramchandra"
+        "Carlos Bain",
+        "Max Bain"
       ],
-      "link": "http://arxiv.org/abs/2608.28589v1",
-      "published": "2026-08-28T17:59:47Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning",
-      "summary": "Tendon-driven hands are anthropomorphic, and moving the actuators off the joints is what makes a hand of this capability affordable to build. Two effects produce that saving. Routing force through a cable removes the requirement that a motor fit inside the joint it drives, so sma…",
-      "authors": [
-        "Nan Wang",
-        "Mohit Yadav",
-        "Jonathan Wulff",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.28578v1",
-      "published": "2026-08-28T17:53:48Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Learning a Size-Weight Frontier for Synthetic-Augmented Inference",
-      "summary": "Synthetic data can improve statistical inference when real data are scarce, but naively treating synthetic samples as real data can introduce bias and lead to unreliable inference. We develop a general framework for synthetic-augmented inference across a population of related tas…",
-      "authors": [
-        "Chengpiao Huang",
-        "Kaizheng Wang"
-      ],
-      "link": "http://arxiv.org/abs/2608.28576v1",
-      "published": "2026-08-28T17:52:33Z",
-      "category": "stat.ME"
-    },
-    {
-      "title": "On two proofs of $d^2$ mixing of weighted Dikin walks",
-      "summary": "We study the mixing time of weighted Dikin walks for sampling from exponential distributions on polytopes and truncated positive-semidefinite (PSD) cones. Our first result gives a general total-variation mixing bound under strong self-concordance, $\\barν$-symmetry, and mixed-trac…",
-      "authors": [
-        "Yuansi Chen",
-        "Yunbum Kook"
-      ],
-      "link": "http://arxiv.org/abs/2608.28566v1",
-      "published": "2026-08-28T17:43:58Z",
-      "category": "cs.DS"
-    },
-    {
-      "title": "Learning between the peaks: sharp asymptotics for kernel ridge regression under power-law anisotropy",
-      "summary": "We study kernel ridge regression under anisotropic Gaussian data, where the input covariance decays as a power law with exponent $α\\geq 0$ for polynomial inner-product kernels. We derive asymptotically sharp expressions for the kernel spectrum and the generalization error in the …",
-      "authors": [
-        "Lorenzo Rizzi",
-        "Arie Wortsman Zurich",
-        "Bruno Loureiro"
-      ],
-      "link": "http://arxiv.org/abs/2608.28564v1",
-      "published": "2026-08-28T17:41:53Z",
-      "category": "stat.ML"
-    },
-    {
-      "title": "A Formal Limitation on Learning Human Language From Textual Corpora",
-      "summary": "Can a listener recover what a speaker means from the form of an utterance alone? We answer this question information-theoretically, and for a listener given by any featurizer of text, including the hidden states of contemporary large language models. Modeling language use as a jo…",
-      "authors": [
-        "Emily Cheng",
-        "Ryan Cotterell"
-      ],
-      "link": "http://arxiv.org/abs/2608.28560v1",
-      "published": "2026-08-28T17:38:24Z",
+      "link": "http://arxiv.org/abs/2608.31170v1",
+      "published": "2026-08-31T17:59:46Z",
       "category": "cs.CL"
     },
     {
-      "title": "Blog: Survey of Optimizers",
-      "summary": "Neural-network optimization in 2025-2026 is no longer well described as a succession of new Adam variants. The design space has expanded from coordinates to matrices and layers, from fixed training horizons to policies over time, and from mathematical update rules to state repres…",
+      "title": "Constant Individual Regret in General Games",
+      "summary": "Uncoupled no-regret dynamics provide a decentralized route to equilibrium, but prior guarantees for individual regret retain a polylogarithmic dependence on the horizon. We remove this dependence for every finite $N$-player normal-form game under full-information feedback. We int…",
       "authors": [
-        "Ruoran Xu"
+        "Mingyang Liu",
+        "Gabriele Farina",
+        "Asuman Ozdaglar"
       ],
-      "link": "http://arxiv.org/abs/2608.28557v1",
-      "published": "2026-08-28T17:35:11Z",
+      "link": "http://arxiv.org/abs/2608.31166v1",
+      "published": "2026-08-31T17:59:16Z",
       "category": "cs.LG"
     },
     {
-      "title": "Logos: An Agent Harness on a Cross-Process Bus",
-      "summary": "Modern agent systems assemble capabilities at runtime, and this dynamic composition has recently received a complete formal treat ment in the spatiotemporal-composability calculus, in which a capability is a component carrying a tracked inverse, and agents are assembled as plugin…",
+      "title": "SUN: Persistent Programs For Language-Grounded Control-to-Learning-to-Real Policies",
+      "summary": "Bridging model-based control and learned policies in long-horizon manipulation has harbored a silent disagreement: control executes specified objectives, learning amortizes that behavior into a reactive policy, yet existing protocols discard task semantics, leaving rewards hand-c…",
       "authors": [
-        "Hanzhang Jia",
-        "Liheng Zeng",
-        "Hao Cheng",
+        "Weiqi Wang",
+        "Zhi Li",
+        "Yudong Lei",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.28553v1",
-      "published": "2026-08-28T17:30:10Z",
+      "link": "http://arxiv.org/abs/2608.31167v1",
+      "published": "2026-08-31T17:59:16Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "Sharp Approximation Rates for Neural Networks with Affine Latent Parameterizations",
+      "summary": "Many parameter-efficient methods generate the parameters of a large neural network from a low-dimensional latent representation. Given an architecture $Φ$ with $P_Φ$ parameter slots, we write $\\boldsymbolθ_f=\\mathcal{G}(\\boldsymbolξ_f)$, where $\\mathcal{G}\\colon\\mathbb{R}^M\\to\\ma…",
+      "authors": [
+        "Shijun Zhang"
+      ],
+      "link": "http://arxiv.org/abs/2608.31157v1",
+      "published": "2026-08-31T17:55:51Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Auditing Anonymous AI Models: A Four-Stage Protocol for Black-Box Identity Verification",
+      "summary": "The 2025--2026 AI market has seen a wave of stealth releases: frontier models launched anonymously on developer platforms under codenames. For their users, identity determines data-handling terms, supply-chain risk, and capability expectations. No validated methodology exists for…",
+      "authors": [
+        "Yisen Xi"
+      ],
+      "link": "http://arxiv.org/abs/2608.31142v1",
+      "published": "2026-08-31T17:48:24Z",
+      "category": "cs.SE"
+    },
+    {
+      "title": "Configurable Semantic Chunking for Biomedical Information Extraction in Retrieval-Augmented Generation",
+      "summary": "BioMedRAG introduced retrieval-augmented generation with a learned chunk scorer for biomedical information extraction. However, it relies on fixed-size chunking which can fragment semantic evidence. We propose a configurable semantic chunking framework that addresses this limitat…",
+      "authors": [
+        "Riya Ahuja",
+        "Tim Kacprowski",
+        "Roya Shiasi Sardoabi"
+      ],
+      "link": "http://arxiv.org/abs/2608.31139v1",
+      "published": "2026-08-31T17:44:54Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "OntoAligner-Ensemble: Voting-Based Fusion across Heterogeneous Ontology Alignment Techniques",
+      "summary": "Ontology alignment (OA) has evolved through several methodological paradigms, ranging from lexical and structural aligners to knowledge graph embedding (KGE) models and, more recently, Large Language Model (LLM)-based approaches. Although modern OA frameworks provide unified ecos…",
+      "authors": [
+        "Hamed Babaei Giglou",
+        "Sören Auer",
+        "Peio Popov",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2608.31137v1",
+      "published": "2026-08-31T17:44:25Z",
       "category": "cs.AI"
     },
     {
-      "title": "Advancing Interaction-Sensitive Feature Selection: Novel Relief-Based Algorithms, Expanded Comparisons, and Recommendations for Biomedical Data Mining",
-      "summary": "As a precursor to high-dimensional biomedical data modeling, reliable feature selection can reduce computational expense, improve modeling performance, and yield simpler, more interpretable models. However, most filter-based feature selection methods struggle to detect feature in…",
+      "title": "Implementing neural network mixed-effects models in Template Model Builder (TMB)",
+      "summary": "Neural network mixed-effects models (NMMs) have gained traction by combining the strong representation and predictive power of artificial neural networks with the capacity of mixed-effects modeling to capture complex correlation structures. However, existing estimation approaches…",
       "authors": [
-        "Kia Kazemi-Nia",
-        "Harsh Bandhey",
-        "Philip J. Freda",
+        "Nan Zheng",
+        "Hoi Yiu Cheung",
+        "Vibhu Sharma",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.28552v1",
-      "published": "2026-08-28T17:28:50Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2608.31133v1",
+      "published": "2026-08-31T17:43:02Z",
+      "category": "stat.ML"
     },
     {
-      "title": "Video Generative Models as Geometry Learner",
-      "summary": "Recent generative approaches to geometry estimation adapt pretrained image diffusion models and treat the task as image-conditioned generation. Leveraging off-the-shelf image diffusion models, they either (i) train task-specific geometry models (for depth and surface normal estim…",
+      "title": "DIASENTINEL: An Auditable Multi-Agent System for Guideline-Grounded Diabetes Risk Screening",
+      "summary": "Large language models (LLMs) offer promising clinical decision support but remain vulnerable to hallucinated facts, unsupported recommendations, and citation errors. We present DIASENTINEL, a fully on-premise multi-agent system for one-year type 2 diabetes mellitus (T2DM) risk sc…",
       "authors": [
-        "Haosen Yang",
-        "Jifei Song",
-        "Zhensong Zhang",
+        "Yung Wei Shueh",
+        "Zhi-Jie Chen",
+        "Chia-Hsuan Hsu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.28549v1",
-      "published": "2026-08-28T17:25:31Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2608.31128v1",
+      "published": "2026-08-31T17:40:43Z",
+      "category": "cs.CL"
     },
     {
-      "title": "DARTS: Decoder-Aware Representation Tuning via Surgery for Model Merging",
-      "summary": "Model merging combines multiple task-specific fine-tuned LLMs into a single multi-task model without additional training. However, merged models are known to suffer from representation bias: systematic drift between the merged model's hidden states and those of each individual so…",
+      "title": "On the Complexity of the Compatibility Problem for Succinctly Encoded Conditional Distributions",
+      "summary": "The motivation for this paper is the investigation of the trade-offs implicit in probabilistic models used in machine learning. Models are often used to make predictions in the form of conditional probabilities. However, a pair of conditional distributions p(x|y) and p(y|x) may n…",
       "authors": [
-        "Aaryan Ajay Sharma",
-        "Sai Nishanth Padala",
-        "Seganrasan Subramanian"
+        "Guy Emerson"
       ],
-      "link": "http://arxiv.org/abs/2608.28547v1",
-      "published": "2026-08-28T17:22:47Z",
+      "link": "http://arxiv.org/abs/2608.31120v1",
+      "published": "2026-08-31T17:32:21Z",
       "category": "cs.LG"
     },
     {
-      "title": "An Enclosed Mode Is a Gauge Choice: Topology Relative to Reach in Certified Code World Models",
-      "summary": "A code world model accepted by a sampling gate can be exactly right on everything the gate can see and arbitrarily wrong beyond it. We characterize what a certified model can know, and what its errors can cost, when the omission is an annular freeze mode enclosing an unreachable …",
+      "title": "PaperGym: Rubric-Centered Evolution for Research-Plan Generation",
+      "summary": "Research planning is the decisive capability of AI scientists. Yet a research plan admits no verifiable answer, so reinforcement learning lacks the environment it requires: tasks paired with a critic. Rubrics extracted from scientific papers can supply the critic. Existing pipeli…",
       "authors": [
-        "Javier Aguilar Martín"
+        "Yuhan Wang",
+        "Zhengxi Lu",
+        "Yuchen Yan",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.28541v1",
-      "published": "2026-08-28T17:14:58Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2608.31119v1",
+      "published": "2026-08-31T17:31:18Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "When Does Bigger Help? A Controlled Study of LLM Scale for Ontology Learning",
+      "summary": "The effect of Large Language Model (LLM) scale on ontology learning (OL) performance remains insufficiently characterized. We present a controlled evaluation of 13 models spanning dense and Mixture-of-Experts variants from the Qwen3.5 and Qwen3.6 lineages, together with proprieta…",
+      "authors": [
+        "Hamed Babaei Giglou",
+        "Sören Auer",
+        "Jennifer D'Souza"
+      ],
+      "link": "http://arxiv.org/abs/2608.31118v1",
+      "published": "2026-08-31T17:30:05Z",
+      "category": "cs.AI"
     }
   ]
 }

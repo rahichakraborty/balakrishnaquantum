@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-09-01T08:13:20+00:00",
+  "generated_at": "2026-09-01T18:06:39+00:00",
   "items": [
     {
       "id": "Qwen/Qwen3.8-Flash-Next",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "downloads": 158598,
-      "likes": 4556,
+      "downloads": 207941,
+      "likes": 4612,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.3-Flash",
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
-      "downloads": 379271,
-      "likes": 1832,
+      "downloads": 441348,
+      "likes": 1862,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.3",
       "url": "https://huggingface.co/zai-org/GLM-5.3",
-      "downloads": 66195,
-      "likes": 1430,
+      "downloads": 94403,
+      "likes": 1460,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 4720763,
-      "likes": 13501,
+      "downloads": 4960483,
+      "likes": 13550,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
-      "downloads": 373029,
-      "likes": 645,
+      "downloads": 431339,
+      "likes": 662,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-      "downloads": 0,
-      "likes": 394,
+      "downloads": 17893,
+      "likes": 436,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "unsloth/Qwen3.8-27B-GGUF",
-      "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-      "downloads": 9059937,
-      "likes": 3300,
-      "pipeline_tag": null
     },
     {
       "id": "tencent/Hy4-preview",
       "url": "https://huggingface.co/tencent/Hy4-preview",
-      "downloads": 2589,
-      "likes": 365,
+      "downloads": 3516,
+      "likes": 378,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "unsloth/Qwen3.8-27B-GGUF",
+      "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
+      "downloads": 9354057,
+      "likes": 3319,
+      "pipeline_tag": null
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 1182585,
-      "likes": 2395,
+      "downloads": 1232274,
+      "likes": 2438,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "unsloth/GLM-5.3-Flash-GGUF",
       "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF",
-      "downloads": 53350,
-      "likes": 314,
+      "downloads": 63718,
+      "likes": 322,
       "pipeline_tag": "text-generation"
     }
   ]

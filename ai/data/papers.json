@@ -1,147 +1,154 @@
 {
-  "generated_at": "2026-09-01T18:06:32+00:00",
+  "generated_at": "2026-09-02T07:32:02+00:00",
   "items": [
     {
-      "title": "Context-Aware Interleaved Batching for WhisperX",
-      "summary": "While WhisperX accelerates speech transcription via intra-audio batching, it isolates audio segments, losing the historical context needed for coherent punctuation and terminology transcription. Conversely, standard Whisper retains context sequentially but suffers from slow infer…",
+      "title": "Beyond Scores: Understanding LLM-as-a-Judge Mechanisms in Summarization Evaluation",
+      "summary": "LLM-based evaluators of natural language generation (NLG) quality are widely deployed as scoring tools and as automated training signals, yet the internal procedure by which they assign a rating remains poorly understood. We investigate this procedure mechanistically through an e…",
       "authors": [
-        "Carlos Bain",
-        "Max Bain"
+        "Himil Vasava",
+        "Ming Jiang"
       ],
-      "link": "http://arxiv.org/abs/2608.31170v1",
-      "published": "2026-08-31T17:59:46Z",
+      "link": "http://arxiv.org/abs/2609.01604v1",
+      "published": "2026-09-01T17:59:49Z",
       "category": "cs.CL"
     },
     {
-      "title": "Constant Individual Regret in General Games",
-      "summary": "Uncoupled no-regret dynamics provide a decentralized route to equilibrium, but prior guarantees for individual regret retain a polylogarithmic dependence on the horizon. We remove this dependence for every finite $N$-player normal-form game under full-information feedback. We int…",
+      "title": "Efficient SWE Agent Benchmarking via Trajectory-Aware Evaluation",
+      "summary": "Evaluating software engineering agents on realistic benchmarks is costly, since each task may require multi-step code exploration, modification, and test execution. Existing efficient evaluation methods select representative subsets to estimate full-benchmark performance, but are…",
       "authors": [
-        "Mingyang Liu",
-        "Gabriele Farina",
-        "Asuman Ozdaglar"
-      ],
-      "link": "http://arxiv.org/abs/2608.31166v1",
-      "published": "2026-08-31T17:59:16Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "SUN: Persistent Programs For Language-Grounded Control-to-Learning-to-Real Policies",
-      "summary": "Bridging model-based control and learned policies in long-horizon manipulation has harbored a silent disagreement: control executes specified objectives, learning amortizes that behavior into a reactive policy, yet existing protocols discard task semantics, leaving rewards hand-c…",
-      "authors": [
-        "Weiqi Wang",
-        "Zhi Li",
-        "Yudong Lei",
+        "Kefeng Duan",
+        "Dewu Zheng",
+        "Yanlin Wang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.31167v1",
-      "published": "2026-08-31T17:59:16Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Sharp Approximation Rates for Neural Networks with Affine Latent Parameterizations",
-      "summary": "Many parameter-efficient methods generate the parameters of a large neural network from a low-dimensional latent representation. Given an architecture $Φ$ with $P_Φ$ parameter slots, we write $\\boldsymbolθ_f=\\mathcal{G}(\\boldsymbolξ_f)$, where $\\mathcal{G}\\colon\\mathbb{R}^M\\to\\ma…",
-      "authors": [
-        "Shijun Zhang"
-      ],
-      "link": "http://arxiv.org/abs/2608.31157v1",
-      "published": "2026-08-31T17:55:51Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Auditing Anonymous AI Models: A Four-Stage Protocol for Black-Box Identity Verification",
-      "summary": "The 2025--2026 AI market has seen a wave of stealth releases: frontier models launched anonymously on developer platforms under codenames. For their users, identity determines data-handling terms, supply-chain risk, and capability expectations. No validated methodology exists for…",
-      "authors": [
-        "Yisen Xi"
-      ],
-      "link": "http://arxiv.org/abs/2608.31142v1",
-      "published": "2026-08-31T17:48:24Z",
+      "link": "http://arxiv.org/abs/2609.01603v1",
+      "published": "2026-09-01T17:59:46Z",
       "category": "cs.SE"
     },
     {
-      "title": "Configurable Semantic Chunking for Biomedical Information Extraction in Retrieval-Augmented Generation",
-      "summary": "BioMedRAG introduced retrieval-augmented generation with a learned chunk scorer for biomedical information extraction. However, it relies on fixed-size chunking which can fragment semantic evidence. We propose a configurable semantic chunking framework that addresses this limitat…",
+      "title": "Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation",
+      "summary": "The repository-level code generation task requires synthesizing code that satisfies task requirements while remaining consistent with the target repository context. Since real-world repositories often exceed the input length limits of LLMs, existing approaches commonly adopt retr…",
       "authors": [
-        "Riya Ahuja",
-        "Tim Kacprowski",
-        "Roya Shiasi Sardoabi"
+        "Kefeng Duan",
+        "Dewu Zheng",
+        "Yanlin Wang",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.31139v1",
-      "published": "2026-08-31T17:44:54Z",
+      "link": "http://arxiv.org/abs/2609.01601v1",
+      "published": "2026-09-01T17:59:39Z",
+      "category": "cs.SE"
+    },
+    {
+      "title": "CordisBench: Can Language Models Reason About Component Lifecycles in Dynamic Agent Harnesses?",
+      "summary": "Dynamic agent harnesses let language models change the software that shapes their own execution. This flexibility brings a new reasoning burden: a local plugin change can propagate through dependencies and cleanup. We introduce CordisBench, a 1,200-question benchmark of this life…",
+      "authors": [
+        "Damien Sileo",
+        "Dimitri Kachler"
+      ],
+      "link": "http://arxiv.org/abs/2609.01600v1",
+      "published": "2026-09-01T17:59:13Z",
       "category": "cs.CL"
     },
     {
-      "title": "OntoAligner-Ensemble: Voting-Based Fusion across Heterogeneous Ontology Alignment Techniques",
-      "summary": "Ontology alignment (OA) has evolved through several methodological paradigms, ranging from lexical and structural aligners to knowledge graph embedding (KGE) models and, more recently, Large Language Model (LLM)-based approaches. Although modern OA frameworks provide unified ecos…",
+      "title": "The Rise of Verbal Reinforcement Learning",
+      "summary": "Natural language is emerging as a primary feedback channel for improving language agents, capable of conveying intent, preferences, and causal structure in forms interpretable by both humans and modern language models. We call this paradigm Verbal Reinforcement Learning (VRL) and…",
       "authors": [
-        "Hamed Babaei Giglou",
-        "Sören Auer",
-        "Peio Popov",
+        "Kshitij Tayal",
+        "Arun Sharma",
+        "Genta Indra Winata",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.31137v1",
-      "published": "2026-08-31T17:44:25Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Implementing neural network mixed-effects models in Template Model Builder (TMB)",
-      "summary": "Neural network mixed-effects models (NMMs) have gained traction by combining the strong representation and predictive power of artificial neural networks with the capacity of mixed-effects modeling to capture complex correlation structures. However, existing estimation approaches…",
-      "authors": [
-        "Nan Zheng",
-        "Hoi Yiu Cheung",
-        "Vibhu Sharma",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.31133v1",
-      "published": "2026-08-31T17:43:02Z",
-      "category": "stat.ML"
-    },
-    {
-      "title": "DIASENTINEL: An Auditable Multi-Agent System for Guideline-Grounded Diabetes Risk Screening",
-      "summary": "Large language models (LLMs) offer promising clinical decision support but remain vulnerable to hallucinated facts, unsupported recommendations, and citation errors. We present DIASENTINEL, a fully on-premise multi-agent system for one-year type 2 diabetes mellitus (T2DM) risk sc…",
-      "authors": [
-        "Yung Wei Shueh",
-        "Zhi-Jie Chen",
-        "Chia-Hsuan Hsu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2608.31128v1",
-      "published": "2026-08-31T17:40:43Z",
+      "link": "http://arxiv.org/abs/2609.01597v1",
+      "published": "2026-09-01T17:58:18Z",
       "category": "cs.CL"
     },
     {
-      "title": "On the Complexity of the Compatibility Problem for Succinctly Encoded Conditional Distributions",
-      "summary": "The motivation for this paper is the investigation of the trade-offs implicit in probabilistic models used in machine learning. Models are often used to make predictions in the form of conditional probabilities. However, a pair of conditional distributions p(x|y) and p(y|x) may n…",
+      "title": "Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation",
+      "summary": "Real-world robotic assembly at sub-millimeter tolerances demands spatial precision, compliant interaction, and robustness to contact failures. We present Facet-0, a robotic foundation model that predicts and values the contact consequences of its actions. Facet-0 unifies multimod…",
       "authors": [
-        "Guy Emerson"
+        "Haoyuan Deng",
+        "Haichao Liu",
+        "Wenkai Guo",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.31120v1",
-      "published": "2026-08-31T17:32:21Z",
+      "link": "http://arxiv.org/abs/2609.01596v1",
+      "published": "2026-09-01T17:58:07Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "Mechanism Design for Alignment and Control",
+      "summary": "We develop a framework for mechanism design with AI agents whose alignment (preferences) and capabilities (feasible actions and information) are unknown. We want such agents to act on our behalf so mechanisms must incentivize both honesty and obedience. A one-sided imitation stru…",
+      "authors": [
+        "Dirk Bergemann",
+        "Andrew Koh",
+        "Stephen Morris"
+      ],
+      "link": "http://arxiv.org/abs/2609.01595v1",
+      "published": "2026-09-01T17:57:50Z",
+      "category": "econ.TH"
+    },
+    {
+      "title": "StudentSim: Training LLM-based Student Simulators",
+      "summary": "AI tutors are most useful when they adapt to each student's strengths, weaknesses, and preferred guidance, but evidence about which guidance works for which student is sparse, slow, and costly to collect from real learners. Student simulators can provide this signal as a proxy, y…",
+      "authors": [
+        "Ke Yang",
+        "Chenglong Wang",
+        "Michel Galley",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.01591v1",
+      "published": "2026-09-01T17:55:10Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Designing Proactive Thought Partners for Writing",
+      "summary": "Writing involves diverse cognitive activities, from ideation to revision, and writers' needs vary across individuals and moments. Proactive AI promises to provide the right support at the right time, yet existing proactive tools largely focus on generic textual assistance, such a…",
+      "authors": [
+        "Chao Zhang",
+        "Abe Davis",
+        "Chih-Wei Chen",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.01588v1",
+      "published": "2026-09-01T17:54:32Z",
+      "category": "cs.HC"
+    },
+    {
+      "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally",
+      "summary": "Post-training quantization (PTQ) is widely used to reduce the cost of serving large language models (LLMs), but its accuracy cost is uneven and is often tuned per model. We study where quantization damage occurs and how to allocate a small additional precision budget. Using causa…",
+      "authors": [
+        "Jundong Hu",
+        "Shekar Ramachandran"
+      ],
+      "link": "http://arxiv.org/abs/2609.01587v1",
+      "published": "2026-09-01T17:53:41Z",
       "category": "cs.LG"
     },
     {
-      "title": "PaperGym: Rubric-Centered Evolution for Research-Plan Generation",
-      "summary": "Research planning is the decisive capability of AI scientists. Yet a research plan admits no verifiable answer, so reinforcement learning lacks the environment it requires: tasks paired with a critic. Rubrics extracted from scientific papers can supply the critic. Existing pipeli…",
+      "title": "Closing Cost-Quality Gap in Document VLMs: Difficulty-Aware Data Curation and Quality-Adjusted Deployment Economics",
+      "summary": "Extracting structured fields from hundreds of millions of documents annually remains costly in regulated industries: bespoke OCR cascades cover only a fraction of workflows, privacy rules preclude external models, and existing open-source VLMs that clear quality thresholds cost m…",
       "authors": [
-        "Yuhan Wang",
-        "Zhengxi Lu",
-        "Yuchen Yan",
+        "Maksim Evdokimov",
+        "Matvey Ivanov",
+        "Dmitrii Tsiupin",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.31119v1",
-      "published": "2026-08-31T17:31:18Z",
+      "link": "http://arxiv.org/abs/2609.01575v1",
+      "published": "2026-09-01T17:40:29Z",
       "category": "cs.CL"
     },
     {
-      "title": "When Does Bigger Help? A Controlled Study of LLM Scale for Ontology Learning",
-      "summary": "The effect of Large Language Model (LLM) scale on ontology learning (OL) performance remains insufficiently characterized. We present a controlled evaluation of 13 models spanning dense and Mixture-of-Experts variants from the Qwen3.5 and Qwen3.6 lineages, together with proprieta…",
+      "title": "Scaling Near-Optimal SFT-RL Annotation Budget Allocation from Small to Large LLMs",
+      "summary": "How to divide a fixed annotation budget between supervised fine-tuning (SFT) and reinforcement learning (RL) during LLM post-training remains an open problem. Existing work characterizes only broad trends (e.g., SFT dominates in low-data regimes), lacks a principled allocation fr…",
       "authors": [
-        "Hamed Babaei Giglou",
-        "Sören Auer",
-        "Jennifer D'Souza"
+        "Jingtan Wang",
+        "Arun Verma",
+        "Xiaoqiang Lin",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2608.31118v1",
-      "published": "2026-08-31T17:30:05Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2609.01573v1",
+      "published": "2026-09-01T17:39:55Z",
+      "category": "cs.CL"
     }
   ]
 }

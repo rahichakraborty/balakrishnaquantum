@@ -1,154 +1,143 @@
 {
-  "generated_at": "2026-09-02T18:21:44+00:00",
+  "generated_at": "2026-09-03T07:39:51+00:00",
   "items": [
     {
-      "title": "Beyond Scores: Understanding LLM-as-a-Judge Mechanisms in Summarization Evaluation",
-      "summary": "LLM-based evaluators of natural language generation (NLG) quality are widely deployed as scoring tools and as automated training signals, yet the internal procedure by which they assign a rating remains poorly understood. We investigate this procedure mechanistically through an e…",
+      "title": "A Common Measure of Communication for Speech Brain-Computer Interfaces",
+      "summary": "Speech brain-computer interfaces (speech BCIs) translate neural activity into language, offering a path towards restoring speech for people with paralysis and, more broadly, enabling new forms of natural human-computer interaction. Despite this promise, the field lacks a common m…",
       "authors": [
-        "Himil Vasava",
-        "Ming Jiang"
+        "Dulhan Jayalath",
+        "Benjamin Ballyk",
+        "Oiwi Parker Jones"
       ],
-      "link": "http://arxiv.org/abs/2609.01604v1",
-      "published": "2026-09-01T17:59:49Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Efficient SWE Agent Benchmarking via Trajectory-Aware Evaluation",
-      "summary": "Evaluating software engineering agents on realistic benchmarks is costly, since each task may require multi-step code exploration, modification, and test execution. Existing efficient evaluation methods select representative subsets to estimate full-benchmark performance, but are…",
-      "authors": [
-        "Kefeng Duan",
-        "Dewu Zheng",
-        "Yanlin Wang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.01603v1",
-      "published": "2026-09-01T17:59:46Z",
-      "category": "cs.SE"
-    },
-    {
-      "title": "Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation",
-      "summary": "The repository-level code generation task requires synthesizing code that satisfies task requirements while remaining consistent with the target repository context. Since real-world repositories often exceed the input length limits of LLMs, existing approaches commonly adopt retr…",
-      "authors": [
-        "Kefeng Duan",
-        "Dewu Zheng",
-        "Yanlin Wang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.01601v1",
-      "published": "2026-09-01T17:59:39Z",
-      "category": "cs.SE"
-    },
-    {
-      "title": "CordisBench: Can Language Models Reason About Component Lifecycles in Dynamic Agent Harnesses?",
-      "summary": "Dynamic agent harnesses let language models change the software that shapes their own execution. This flexibility brings a new reasoning burden: a local plugin change can propagate through dependencies and cleanup. We introduce CordisBench, a 1,200-question benchmark of this life…",
-      "authors": [
-        "Damien Sileo",
-        "Dimitri Kachler"
-      ],
-      "link": "http://arxiv.org/abs/2609.01600v1",
-      "published": "2026-09-01T17:59:13Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "The Rise of Verbal Reinforcement Learning",
-      "summary": "Natural language is emerging as a primary feedback channel for improving language agents, capable of conveying intent, preferences, and causal structure in forms interpretable by both humans and modern language models. We call this paradigm Verbal Reinforcement Learning (VRL) and…",
-      "authors": [
-        "Kshitij Tayal",
-        "Arun Sharma",
-        "Genta Indra Winata",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.01597v1",
-      "published": "2026-09-01T17:58:18Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation",
-      "summary": "Real-world robotic assembly at sub-millimeter tolerances demands spatial precision, compliant interaction, and robustness to contact failures. We present Facet-0, a robotic foundation model that predicts and values the contact consequences of its actions. Facet-0 unifies multimod…",
-      "authors": [
-        "Haoyuan Deng",
-        "Haichao Liu",
-        "Wenkai Guo",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.01596v1",
-      "published": "2026-09-01T17:58:07Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Mechanism Design for Alignment and Control",
-      "summary": "We develop a framework for mechanism design with AI agents whose alignment (preferences) and capabilities (feasible actions and information) are unknown. We want such agents to act on our behalf so mechanisms must incentivize both honesty and obedience. A one-sided imitation stru…",
-      "authors": [
-        "Dirk Bergemann",
-        "Andrew Koh",
-        "Stephen Morris"
-      ],
-      "link": "http://arxiv.org/abs/2609.01595v1",
-      "published": "2026-09-01T17:57:50Z",
-      "category": "econ.TH"
-    },
-    {
-      "title": "StudentSim: Training LLM-based Student Simulators",
-      "summary": "AI tutors are most useful when they adapt to each student's strengths, weaknesses, and preferred guidance, but evidence about which guidance works for which student is sparse, slow, and costly to collect from real learners. Student simulators can provide this signal as a proxy, y…",
-      "authors": [
-        "Ke Yang",
-        "Chenglong Wang",
-        "Michel Galley",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.01591v1",
-      "published": "2026-09-01T17:55:10Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Designing Proactive Thought Partners for Writing",
-      "summary": "Writing involves diverse cognitive activities, from ideation to revision, and writers' needs vary across individuals and moments. Proactive AI promises to provide the right support at the right time, yet existing proactive tools largely focus on generic textual assistance, such a…",
-      "authors": [
-        "Chao Zhang",
-        "Abe Davis",
-        "Chih-Wei Chen",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.01588v1",
-      "published": "2026-09-01T17:54:32Z",
-      "category": "cs.HC"
-    },
-    {
-      "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally",
-      "summary": "Post-training quantization (PTQ) is widely used to reduce the cost of serving large language models (LLMs), but its accuracy cost is uneven and is often tuned per model. We study where quantization damage occurs and how to allocate a small additional precision budget. Using causa…",
-      "authors": [
-        "Jundong Hu",
-        "Shekar Ramachandran"
-      ],
-      "link": "http://arxiv.org/abs/2609.01587v1",
-      "published": "2026-09-01T17:53:41Z",
+      "link": "http://arxiv.org/abs/2609.02887v1",
+      "published": "2026-09-02T17:59:46Z",
       "category": "cs.LG"
     },
     {
-      "title": "Closing Cost-Quality Gap in Document VLMs: Difficulty-Aware Data Curation and Quality-Adjusted Deployment Economics",
-      "summary": "Extracting structured fields from hundreds of millions of documents annually remains costly in regulated industries: bespoke OCR cascades cover only a fraction of workflows, privacy rules preclude external models, and existing open-source VLMs that clear quality thresholds cost m…",
+      "title": "Discriminative World Models for Web Agents",
+      "summary": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state predictio…",
       "authors": [
-        "Maksim Evdokimov",
-        "Matvey Ivanov",
-        "Dmitrii Tsiupin",
+        "Kelvin Li",
+        "Dhruv Pendharkar",
+        "Anish Pahilajani",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.01575v1",
-      "published": "2026-09-01T17:40:29Z",
+      "link": "http://arxiv.org/abs/2609.02885v1",
+      "published": "2026-09-02T17:59:40Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Graph Machine: Towards Better Pretraining via Edges",
+      "summary": "We introduce the Graph Machine (GM), an architecture that maintains an $O(n)$-sized state and accesses it through sparse, dynamic routing. Unlike methods with fixed-size states or sparse but static routing, GM preserves $O(n)$ complexity in its sparse layers without restricting t…",
+      "authors": [
+        "Lintai Hou"
+      ],
+      "link": "http://arxiv.org/abs/2609.02881v1",
+      "published": "2026-09-02T17:56:41Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "GRADSOLVE: fast exact gradients for ODE ensembles on GPUs",
+      "summary": "Ordinary differential equations (ODEs) underlie models in science and engineering, and many applications need derivatives of their solutions with respect to parameters. Ensembles of independent trajectories suit graphics processing units (GPUs), but current GPU software forces a …",
+      "authors": [
+        "Alessio Spurio Mancini"
+      ],
+      "link": "http://arxiv.org/abs/2609.02876v1",
+      "published": "2026-09-02T17:56:10Z",
+      "category": "cs.MS"
+    },
+    {
+      "title": "Towards Trustworthy Autonomous Robots: An Explainable AI-Based Decision Framework",
+      "summary": "Autonomous robots powered by deep learning face a fundamental auditability challenge: when incidents occur, investigators cannot reconstruct why the system made specific decisions. This paper presents TRACE (Transparent Reasoning Architecture for Credible Execution), a decision f…",
+      "authors": [
+        "Cagri Temel"
+      ],
+      "link": "http://arxiv.org/abs/2609.02861v1",
+      "published": "2026-09-02T17:44:25Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "User Feedback Provides a Unique Signal that LLMs Can not Detect",
+      "summary": "Harnessing naturally occurring feedback from user interactions offers a promising learning signal for Large Language Models (LLMs). However, recent studies suggest this feedback is inherently noisy and difficult to leverage effectively. We challenge this conception by demonstrati…",
+      "authors": [
+        "Shachar Don-Yehiya",
+        "Leshem Choshen",
+        "Omri Abend"
+      ],
+      "link": "http://arxiv.org/abs/2609.02859v1",
+      "published": "2026-09-02T17:42:44Z",
       "category": "cs.CL"
     },
     {
-      "title": "Scaling Near-Optimal SFT-RL Annotation Budget Allocation from Small to Large LLMs",
-      "summary": "How to divide a fixed annotation budget between supervised fine-tuning (SFT) and reinforcement learning (RL) during LLM post-training remains an open problem. Existing work characterizes only broad trends (e.g., SFT dominates in low-data regimes), lacks a principled allocation fr…",
+      "title": "Improved Gradient Descent Lower Bounds Beyond Nesterov",
+      "summary": "We study how far gradient descent (GD) can be accelerated by predetermined stepsizes in smooth convex optimization. Going beyond the classical $Ω(n^{-2})$ first-order oracle lower bound of Nemirovsky and Yudin, we prove an $Ω(n^{-1.6342})$ non-anytime lower bound and an $Ω(n^{-1.…",
       "authors": [
-        "Jingtan Wang",
-        "Arun Verma",
-        "Xiaoqiang Lin",
+        "Yuhan Ye",
+        "Kaizhao Liu"
+      ],
+      "link": "http://arxiv.org/abs/2609.02855v1",
+      "published": "2026-09-02T17:39:52Z",
+      "category": "math.OC"
+    },
+    {
+      "title": "The Implications of Linguistic Illegibility for LLM Security",
+      "summary": "LLMs are trained to generate natural language. However, various strands of evidence indicate that an LLM's externalized linguistic outputs and mechanistically-extracted linguistic features can be an unreliable lens for understanding internal model computation. We introduce the te…",
+      "authors": [
+        "James Mickens"
+      ],
+      "link": "http://arxiv.org/abs/2609.02852v1",
+      "published": "2026-09-02T17:37:22Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
+      "summary": "Competitive programming has become a key test of large language model reasoning, with international competitions such as IOI and ICPC representing its most challenging settings. We present an end-to-end specialization pipeline combining large-scale problem curation, synthetic rea…",
+      "authors": [
+        "Aleksander Ficek",
+        "Sean Narenthiran",
+        "Mehrzad Samadi",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.01573v1",
-      "published": "2026-09-01T17:39:55Z",
-      "category": "cs.CL"
+      "link": "http://arxiv.org/abs/2609.02849v1",
+      "published": "2026-09-02T17:33:37Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "UE5M3 FP4 Block Scaling for Stable Language Model Pretraining",
+      "summary": "Stable 4-bit floating-point (FP4) pretraining is difficult because the E2M1 payload represents only a narrow range of magnitudes. NVIDIA's Transformer Engine \\nv{} recipe addresses this with current-tensor scaling, a randomized Hadamard transform (RHT), and bfloat16 (BF16) final …",
+      "authors": [
+        "Robert Hu",
+        "Carlo Luschi",
+        "Paul Balanca"
+      ],
+      "link": "http://arxiv.org/abs/2609.02846v1",
+      "published": "2026-09-02T17:32:07Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Learning Spectral-Like Mesh-Free Discretisations",
+      "summary": "Meshfree methods such as smoothed particle hydrodynamics (SPH) with kernel corrections, radial basis function-generated finite differences (RBF-FD), and the local anisotropic basis function method (LABFM) construct discrete differential operators by imposing polynomial consistenc…",
+      "authors": [
+        "Lucas Gerken Starepravo",
+        "Henry Broadley",
+        "Steven Lind",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.02833v1",
+      "published": "2026-09-02T17:16:16Z",
+      "category": "physics.comp-ph"
+    },
+    {
+      "title": "AI Contextual Measurement for Recovering Individual and Group-Level Effects: Validation Against Survey Measures and an Occupational Application",
+      "summary": "Researchers increasingly use artificial intelligence to construct measures of social, organizational, and occupational characteristics that are absent from conventional surveys. We propose AICOME, AI COntextual MEasurement, a framework for evaluating whether AI-derived respondent…",
+      "authors": [
+        "Wenxin Jiang",
+        "Xuyang Wang",
+        "Yuxiao Wu"
+      ],
+      "link": "http://arxiv.org/abs/2609.02821v1",
+      "published": "2026-09-02T17:09:30Z",
+      "category": "cs.AI"
     }
   ]
 }

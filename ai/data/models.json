@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-09-06T07:31:29+00:00",
+  "generated_at": "2026-09-06T17:27:22+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-      "downloads": 184542,
-      "likes": 695,
+      "downloads": 209191,
+      "likes": 723,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 6024467,
-      "likes": 14054,
+      "downloads": 6190807,
+      "likes": 14102,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "XHToken/Spark-X2.5-4B",
       "url": "https://huggingface.co/XHToken/Spark-X2.5-4B",
-      "downloads": 4755,
-      "likes": 559,
+      "downloads": 5477,
+      "likes": 584,
       "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "Qwen/Qwen3.8-Flash-Next",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "downloads": 401327,
-      "likes": 4925,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "google/timesfm-3.0-pytorch",
       "url": "https://huggingface.co/google/timesfm-3.0-pytorch",
-      "downloads": 123025,
-      "likes": 466,
+      "downloads": 144455,
+      "likes": 489,
       "pipeline_tag": "time-series-forecasting"
     },
     {
-      "id": "zai-org/GLM-5.3-Flash",
-      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
-      "downloads": 727610,
-      "likes": 2082,
+      "id": "Qwen/Qwen3.8-Flash-Next",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+      "downloads": 432966,
+      "likes": 4938,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+      "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+      "downloads": 348389,
+      "likes": 454,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 1484329,
-      "likes": 2905,
+      "downloads": 1526928,
+      "likes": 2934,
       "pipeline_tag": "image-to-video"
     },
     {
-      "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
-      "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
-      "downloads": 297493,
-      "likes": 427,
+      "id": "zai-org/GLM-5.3-Flash",
+      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "downloads": 761364,
+      "likes": 2092,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "zai-org/GLM-5.3",
       "url": "https://huggingface.co/zai-org/GLM-5.3",
-      "downloads": 370417,
-      "likes": 1723,
+      "downloads": 410074,
+      "likes": 1732,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-      "downloads": 10157510,
-      "likes": 3554,
+      "downloads": 10311462,
+      "likes": 3574,
       "pipeline_tag": null
     }
   ]

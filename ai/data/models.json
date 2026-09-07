@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-09-07T07:48:38+00:00",
+  "generated_at": "2026-09-07T18:57:23+00:00",
   "items": [
     {
-      "id": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-      "downloads": 209191,
-      "likes": 765,
-      "pipeline_tag": "image-text-to-text"
+      "id": "XHToken/Spark-X2.5-4B",
+      "url": "https://huggingface.co/XHToken/Spark-X2.5-4B",
+      "downloads": 7216,
+      "likes": 696,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 6190807,
-      "likes": 14164,
+      "downloads": 6416358,
+      "likes": 14232,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "XHToken/Spark-X2.5-4B",
-      "url": "https://huggingface.co/XHToken/Spark-X2.5-4B",
-      "downloads": 5477,
-      "likes": 641,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "google/timesfm-3.0-pytorch",
       "url": "https://huggingface.co/google/timesfm-3.0-pytorch",
-      "downloads": 144455,
-      "likes": 529,
+      "downloads": 271713,
+      "likes": 564,
       "pipeline_tag": "time-series-forecasting"
-    },
-    {
-      "id": "Qwen/Qwen3.8-Flash-Next",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "downloads": 432966,
-      "likes": 4955,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
       "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
-      "downloads": 348389,
-      "likes": 476,
+      "downloads": 403292,
+      "likes": 526,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "downloads": 251611,
+      "likes": 788,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 1526928,
-      "likes": 2995,
+      "downloads": 1584382,
+      "likes": 3060,
       "pipeline_tag": "image-to-video"
     },
     {
-      "id": "zai-org/GLM-5.3-Flash",
-      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
-      "downloads": 761364,
-      "likes": 2111,
+      "id": "Qwen/Qwen3.8-Flash-Next",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+      "downloads": 474693,
+      "likes": 4971,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-      "downloads": 10311462,
-      "likes": 3611,
+      "downloads": 10479045,
+      "likes": 3631,
       "pipeline_tag": null
     },
     {
-      "id": "zai-org/GLM-5.3",
-      "url": "https://huggingface.co/zai-org/GLM-5.3",
-      "downloads": 410074,
-      "likes": 1740,
-      "pipeline_tag": "text-generation"
+      "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+      "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+      "downloads": 258896,
+      "likes": 290,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash",
+      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "downloads": 784005,
+      "likes": 2130,
+      "pipeline_tag": "image-text-to-text"
     }
   ]
 }

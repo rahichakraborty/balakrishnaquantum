@@ -1,155 +1,156 @@
 {
-  "generated_at": "2026-09-06T17:27:15+00:00",
+  "generated_at": "2026-09-07T07:48:31+00:00",
   "items": [
     {
-      "title": "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions",
-      "summary": "Many recurring text functions are easy to describe but difficult to implement with rules, while calling a large remote model for every input introduces repeated cost, latency, and dependency on a provider. We present compile by training, which turns a natural-language specificati…",
+      "title": "UniMate: One Unified Model to Animate Diverse Skeletons",
+      "summary": "Recent advances in automatic rigging now deliver animation-ready 3D assets at scale, yet generating the motion to drive them remains a bottleneck. Existing learned animators are topology-constrained: they rely on category-specific templates or require per-skeleton fine-tuning and…",
       "authors": [
-        "Yuntian Deng",
-        "Pengyu Nie",
-        "Stuart Shieber"
-      ],
-      "link": "http://arxiv.org/abs/2609.04199v1",
-      "published": "2026-09-03T17:59:49Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Clean Engineering, Unstable Measurement: A Preregistered Reliability Failure of Black-Box LLM Observers on Shared Endpoints",
-      "summary": "Language-model judges now gate training data, score generations, and drive leaderboards. The judge is then a measurement instrument, resting on one rarely stated assumption: the same request, sent to the same model name, reads the same tomorrow. We audited that assumption in two …",
-      "authors": [
-        "Haoyaun Zhu",
-        "Jie Zhang"
-      ],
-      "link": "http://arxiv.org/abs/2609.04198v1",
-      "published": "2026-09-03T17:59:43Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "ESPO: Error-Structured Prompt Optimization via Diagnose, Diversify, and Stabilize",
-      "summary": "Evolutionary prompt optimizers such as GEPA suffer from prompt bloat: each iteration appends rules and caveats, producing prompts up to 3$\\times$ longer yet no more accurate. We trace this to three deficiencies - incomplete error observation, limited search diversity, and unrelia…",
-      "authors": [
-        "Lihao Liu",
-        "Peng Tang",
-        "Kunwar Yashraj Singh",
+        "Linzhan Mou",
+        "Jiahui Lei",
+        "Zhiyang Dou",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.04197v1",
-      "published": "2026-09-03T17:59:37Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Legibility is Not Interpretability: Comparing Judged and Actual Importance in Chain-Of-Thought Reasoning",
-      "summary": "Reasoning traces from chain-of-thought models appear to offer a legible window into how a model arrives at its answer. A growing body of work treats them as such, using LLM judges to diagnose errors, evaluate faithfulness, and provide step-level supervision via process reward mod…",
-      "authors": [
-        "Kevin Du",
-        "Alexander Hoyle",
-        "Laura Ruis",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.04194v1",
-      "published": "2026-09-03T17:59:08Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "One Editor, Many Edits: A Unified Training-Free Framework for Diverse Video Editing",
-      "summary": "Video editing spans diverse editing paradigms, yet achieving high-quality instruction-guided and subject-guided editing within a single unified framework remains challenging. We introduce EditVid, a training-free framework combining sparse causal memory for local coherence, corre…",
-      "authors": [
-        "Adheesh Sunil Juvekar",
-        "Onkar Kishor Susladkar",
-        "Kiet A. Nguyen",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.04190v1",
-      "published": "2026-09-03T17:59:01Z",
+      "link": "http://arxiv.org/abs/2609.05415v1",
+      "published": "2026-09-04T17:59:00Z",
       "category": "cs.CV"
     },
     {
-      "title": "Robust PAC Learning of Concurrent Stochastic Games",
-      "summary": "We introduce the first Probably Approximately Correct (PAC) learning framework for general-sum concurrent stochastic games (CSGs) with transition uncertainty, while addressing the challenge of Nash equilibrium (NE) existence. Our algorithm maintains data-driven $L^1$ confidence s…",
+      "title": "WearableQA: A Benchmark for Health Reasoning over Real-World Wearable Data",
+      "summary": "Recent advances in wearable sensing enable continuous monitoring of physiological and behavioral signals, yet existing benchmarks rarely evaluate whether AI systems can reason over a real user's longitudinal wearable record. We introduce WearableQA, a benchmark comprising 4,084 1…",
       "authors": [
-        "Angel Y. He",
-        "David Parker"
+        "Ji Soo Lee",
+        "Xilun Chen",
+        "Pierce Chuang",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.04189v1",
-      "published": "2026-09-03T17:58:57Z",
+      "link": "http://arxiv.org/abs/2609.05405v1",
+      "published": "2026-09-04T17:52:37Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Diffusion TV: Experiencing Diffusion Models through Tangible, Embodied Interaction",
+      "summary": "Diffusion TV is an interactive AI art installation that offers a tangible and embodied experience of diffusion models through a modified CRT TV. By physically manipulating the TV's antenna, audiences control the clarity of AI-generated images and sounds, metaphorically enacting t…",
+      "authors": [
+        "Sihwa Park"
+      ],
+      "link": "http://arxiv.org/abs/2609.05404v1",
+      "published": "2026-09-04T17:51:48Z",
+      "category": "cs.HC"
+    },
+    {
+      "title": "RegionFed: Federated Learning for Personalized Query Understanding in Heterogeneous Retail Environments",
+      "summary": "Retail search systems serve diverse geographic regions with distinct query patterns, vocabularies, and product preferences, creating significant data heterogeneity that challenges both privacy-preserving training and model personalization. Federated learning offers a natural solu…",
+      "authors": [
+        "Quoc H. Nguyen",
+        "Ali Lafzi",
+        "Abhijeet Phatak",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.05403v1",
+      "published": "2026-09-04T17:50:10Z",
       "category": "cs.LG"
     },
     {
-      "title": "Seeing Before Synthesizing: VLM-Guided Transition Event Discovery for Weakly-Supervised Dense Video Captioning",
-      "summary": "Weakly-Supervised Dense Video Captioning aims to localize and describe multiple events in untrimmed videos given only an ordered set of event-level captions per video. Recent work synthesizes auxiliary transition captions via LLM to provide additional vision-language alignment, b…",
+      "title": "Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision Language Reward Models",
+      "summary": "Vision-language models are increasingly used as reward functions for robotic learning, but this role requires paraphrase invariance: the same trajectory should receive the same reward under semantically equivalent goal descriptions. We show that current VLM reward models often vi…",
       "authors": [
-        "Ye-Chan Kim",
-        "Seunghee Choi",
-        "SeungJu Cha",
+        "Wonje Jeung",
+        "Sangyeon Yoon",
+        "Hyesoo Hong",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.04183v1",
-      "published": "2026-09-03T17:58:02Z",
+      "link": "http://arxiv.org/abs/2609.05401v1",
+      "published": "2026-09-04T17:47:58Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "A Deep Generative Model for Synthesizing Labeled Wireless Signals",
+      "summary": "Wireless signals with position-related labels are pivotal for both performance evaluation and model training in the realm of wireless sensing. However, acquiring real-world datasets is often challenged by significant measurement and labeling costs. Traditional methods for synthes…",
+      "authors": [
+        "Yuxiao Li",
+        "Keke Hu",
+        "Santiago Mazuelas",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.05396v1",
+      "published": "2026-09-04T17:44:54Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Multi-Step Tool-Calling over Korean Open Public APIs: A Benchmark and a Data-Synthesis Recipe",
+      "summary": "Data-sovereignty regulations increasingly require public institutions to deploy open-source, on-premise LLM agents that chain multiple tool-calls across live government APIs. However, open-source models consistently underperform in this multi-step setting, and no existing benchma…",
+      "authors": [
+        "Dain Kim",
+        "Eungi Cho",
+        "Kyumin Kim",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.05395v1",
+      "published": "2026-09-04T17:44:52Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Necessary or Sufficient? Evaluating LLM Explanations With Behavioural Evidence",
+      "summary": "LLM decision components that can operate within agent workflows often produce action-relevant recommendations or judgements together with explanations. Operators may use the named factors to monitor a system, diagnose errors, or decide when to escalate an output. Such use assumes…",
+      "authors": [
+        "Urja Pawar",
+        "Rajitha Ramanayake",
+        "Nabeel Kemal",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.05385v1",
+      "published": "2026-09-04T17:37:17Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Reflection-aware Generative Novel View Synthesis",
+      "summary": "We propose Ref-GeNVS, a training-free, reflection-aware method for generative novel view synthesis (NVS) in mirror scenes. Existing multi-view diffusion models often fail to recognize the mirror in the scene and cannot exploit reflected content for scene generation. To fix this i…",
+      "authors": [
+        "GeonU Kim",
+        "Shin Dong-Yeon",
+        "Tae-Hyun Oh"
+      ],
+      "link": "http://arxiv.org/abs/2609.05382v1",
+      "published": "2026-09-04T17:33:45Z",
       "category": "cs.CV"
     },
     {
-      "title": "Knowledge Acquisition During Pre-training? Large Language Models Learn Better With Auxiliary Views",
-      "summary": "Gaps remain in our understanding of how large language models (LLMs) acquire knowledge during pre-training. We posit that auxiliary views, reformulations of knowledge, are causally helpful for learning. We design controlled experiments to isolate this. First, we confirm that repe…",
+      "title": "Molecular Déjà Vu: Digit-Level Retrieval of Published Values in Frontier Language Models",
+      "summary": "Large language models (LLMs) are increasingly evaluated on molecular property benchmarks, but accuracy cannot distinguish a model that predicts a property from one that retrieves a published number. We audit 22 frontier models on 12 regression benchmarks for verbatim retrieval an…",
       "authors": [
-        "Joseph Lee",
-        "Yidi Huang",
-        "Dokyoon Kim",
+        "Matthias Busch",
+        "Marius Tacke",
+        "Sviatlana V. Lamaka",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.04180v1",
-      "published": "2026-09-03T17:57:02Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "A Computationally Feasible Framework for Causal Probabilistic Explanation",
-      "summary": "Explaining why a specific outcome occurred, and which inputs deserve the blame or credit, is central to philosophical, scientific, and policy analysis. Existing tools split into two camps. The theory of actual causality (AC) gives principled verdicts, but only for toy-sized model…",
-      "authors": [
-        "Rafal Urbaniak",
-        "Sam Witty",
-        "Daniel Waxman",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.04177v1",
-      "published": "2026-09-03T17:55:43Z",
+      "link": "http://arxiv.org/abs/2609.05381v1",
+      "published": "2026-09-04T17:32:48Z",
       "category": "cs.AI"
     },
     {
-      "title": "Last Translation Benchmark",
-      "summary": "For scientific progress, we need benchmarks that test the limits of state-of-the-art models, and evaluation methods that inform us about failure cases. As models get stronger, standard benchmarks for machine translation are approaching saturation. Further, automatic translation m…",
+      "title": "What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies",
+      "summary": "Visuomotor imitation policies can achieve high performance under in-distribution visual conditions yet fail when visually similar objects or receptacles are introduced. We study this behavior as a problem of conditional visual grounding: the visual target required for successful …",
       "authors": [
-        "Vilém Zouhar",
-        "Niyati Bafna",
-        "Mukund Choudhary",
+        "Vivek Chavan",
+        "Pengtao Xie",
+        "Yahuan Shi",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.04173v1",
-      "published": "2026-09-03T17:54:45Z",
-      "category": "cs.CL"
+      "link": "http://arxiv.org/abs/2609.05376v1",
+      "published": "2026-09-04T17:27:35Z",
+      "category": "cs.RO"
     },
     {
-      "title": "Rethinking On-Policy Distillation of Large Language Models II: One Training Example",
-      "summary": "On-policy distillation (OPD) combines student-generated rollouts with dense token-level supervision from a teacher. Existing work has mainly studied its algorithmic behavior, leaving the role of training data unclear. We examine this role at the data-minimal limit by training on …",
+      "title": "CUA-Universe: A Scalable and Dynamic Environment for Hybrid GUI+CLI Agents",
+      "summary": "Computer-use agents have advanced on benchmarks like OSWorld and AndroidWorld, but still act mostly through the GUI, often producing inefficient trajectories. Real-world computer work is hybrid, combining visual-state inspection with precise, high-throughput command-line operatio…",
       "authors": [
-        "Zixuan Fu",
-        "Bingxiang He",
-        "Yuxin Zuo",
+        "Haoting Shi",
+        "Wenhao Wang",
+        "Weicheng Fang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.04172v1",
-      "published": "2026-09-03T17:54:38Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms",
-      "summary": "Multi-agent AI science ecosystems rely on agents possessing tools that allow them to communicate, coordinate, and build on each other's work. Yet this shared infrastructure can also introduce vulnerabilities by creating a substrate for the contagious spread of unintended and unde…",
-      "authors": [
-        "Davide Paglieri",
-        "Logan Cross",
-        "Tim Genewein",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.04170v1",
-      "published": "2026-09-03T17:54:09Z",
+      "link": "http://arxiv.org/abs/2609.05374v1",
+      "published": "2026-09-04T17:26:18Z",
       "category": "cs.AI"
     }
   ]

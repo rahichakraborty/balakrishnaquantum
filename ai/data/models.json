@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-09-06T17:27:22+00:00",
+  "generated_at": "2026-09-07T07:48:38+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
       "downloads": 209191,
-      "likes": 723,
+      "likes": 765,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 6190807,
-      "likes": 14102,
+      "likes": 14164,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "XHToken/Spark-X2.5-4B",
       "url": "https://huggingface.co/XHToken/Spark-X2.5-4B",
       "downloads": 5477,
-      "likes": 584,
+      "likes": 641,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "google/timesfm-3.0-pytorch",
       "url": "https://huggingface.co/google/timesfm-3.0-pytorch",
       "downloads": 144455,
-      "likes": 489,
+      "likes": 529,
       "pipeline_tag": "time-series-forecasting"
     },
     {
       "id": "Qwen/Qwen3.8-Flash-Next",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
       "downloads": 432966,
-      "likes": 4938,
+      "likes": 4955,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
       "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
       "downloads": 348389,
-      "likes": 454,
+      "likes": 476,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 1526928,
-      "likes": 2934,
+      "likes": 2995,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "zai-org/GLM-5.3-Flash",
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
       "downloads": 761364,
-      "likes": 2092,
+      "likes": 2111,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "zai-org/GLM-5.3",
-      "url": "https://huggingface.co/zai-org/GLM-5.3",
-      "downloads": 410074,
-      "likes": 1732,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
       "downloads": 10311462,
-      "likes": 3574,
+      "likes": 3611,
       "pipeline_tag": null
+    },
+    {
+      "id": "zai-org/GLM-5.3",
+      "url": "https://huggingface.co/zai-org/GLM-5.3",
+      "downloads": 410074,
+      "likes": 1740,
+      "pipeline_tag": "text-generation"
     }
   ]
 }

@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-09-10T07:48:13+00:00",
+  "generated_at": "2026-09-10T18:00:00+00:00",
   "items": [
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "downloads": 6,
+      "likes": 1162,
+      "pipeline_tag": "image-text-to-text"
+    },
     {
       "id": "openbmb/MiniCPM5-2B",
       "url": "https://huggingface.co/openbmb/MiniCPM5-2B",
-      "downloads": 2879,
-      "likes": 1001,
+      "downloads": 42289,
+      "likes": 1079,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "XHToken/Spark-X2.5-4B",
       "url": "https://huggingface.co/XHToken/Spark-X2.5-4B",
-      "downloads": 10661,
-      "likes": 1025,
+      "downloads": 15930,
+      "likes": 1050,
       "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
-      "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
-      "downloads": 479597,
-      "likes": 750,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 6712160,
-      "likes": 14547,
+      "downloads": 7322476,
+      "likes": 14617,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-      "downloads": 0,
-      "likes": 426,
+      "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+      "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+      "downloads": 614850,
+      "likes": 777,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "google/timesfm-3.0-pytorch",
-      "url": "https://huggingface.co/google/timesfm-3.0-pytorch",
-      "downloads": 444052,
-      "likes": 699,
-      "pipeline_tag": "time-series-forecasting"
+      "id": "nex-agi/Nex-N2.5-mini",
+      "url": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "downloads": 2444,
+      "likes": 640,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 1644796,
-      "likes": 3293,
+      "downloads": 1740572,
+      "likes": 3352,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-      "downloads": 10675683,
-      "likes": 3802,
+      "downloads": 11127203,
+      "likes": 3829,
       "pipeline_tag": null
     },
     {
-      "id": "sentence-transformers/all-MiniLM-L6-v2",
-      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2",
-      "downloads": 254324263,
-      "likes": 5724,
-      "pipeline_tag": "sentence-similarity"
+      "id": "google/timesfm-3.0-pytorch",
+      "url": "https://huggingface.co/google/timesfm-3.0-pytorch",
+      "downloads": 483787,
+      "likes": 710,
+      "pipeline_tag": "time-series-forecasting"
     },
     {
-      "id": "openai-community/gpt2",
-      "url": "https://huggingface.co/openai-community/gpt2",
-      "downloads": 14981665,
-      "likes": 3866,
-      "pipeline_tag": "text-generation"
+      "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+      "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+      "downloads": 517644,
+      "likes": 435,
+      "pipeline_tag": "image-text-to-text"
     }
   ]
 }

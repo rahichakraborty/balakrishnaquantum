@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-09-14T08:28:48+00:00",
+  "generated_at": "2026-09-14T19:42:24+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-      "downloads": 244457,
-      "likes": 2299,
+      "downloads": 288414,
+      "likes": 2421,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Edge0/Edge0-35B-A3B-preview",
       "url": "https://huggingface.co/Edge0/Edge0-35B-A3B-preview",
-      "downloads": 3552,
-      "likes": 1337,
+      "downloads": 8109,
+      "likes": 1799,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "openbmb/MiniCPM5-2B",
       "url": "https://huggingface.co/openbmb/MiniCPM5-2B",
-      "downloads": 150110,
-      "likes": 1361,
+      "downloads": 206774,
+      "likes": 1387,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "nex-agi/Nex-N2.5-mini",
       "url": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
-      "downloads": 3970,
-      "likes": 772,
+      "downloads": 4543,
+      "likes": 777,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 7768964,
-      "likes": 15057,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
-      "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
-      "downloads": 769557,
-      "likes": 984,
+      "downloads": 7703400,
+      "likes": 15114,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "nex-agi/Nex-N2.5-Pro",
       "url": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
-      "downloads": 30289,
-      "likes": 627,
+      "downloads": 30489,
+      "likes": 633,
       "pipeline_tag": "text-generation"
     },
     {
-      "id": "XHToken/Spark-X2.5-4B",
-      "url": "https://huggingface.co/XHToken/Spark-X2.5-4B",
-      "downloads": 21336,
-      "likes": 1160,
-      "pipeline_tag": "text-generation"
+      "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+      "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+      "downloads": 819784,
+      "likes": 1029,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "m-a-p/YuE2-3B",
       "url": "https://huggingface.co/m-a-p/YuE2-3B",
-      "downloads": 3707,
-      "likes": 428,
+      "downloads": 5186,
+      "likes": 465,
       "pipeline_tag": "text-to-audio"
+    },
+    {
+      "id": "XHToken/Spark-X2.5-4B",
+      "url": "https://huggingface.co/XHToken/Spark-X2.5-4B",
+      "downloads": 24084,
+      "likes": 1170,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 1548442,
-      "likes": 3787,
+      "downloads": 1559653,
+      "likes": 3856,
       "pipeline_tag": "image-to-video"
     }
   ]

@@ -1,5 +1,158 @@
 {
-  "generated_at": "2026-09-15T08:19:35+00:00",
-  "items": [],
-  "error": "TimeoutError: The read operation timed out"
+  "generated_at": "2026-09-15T18:40:04+00:00",
+  "items": [
+    {
+      "title": "Corrupt Plans, Clean Traces: Evading Chain-of-Thought Monitoring with Plan Injection",
+      "summary": "Chain-of-thought (CoT) monitoring is a safety strategy where the reasoning of a large language model \"actor\" is inspected by a \"monitor\" (often another language model) for signs of unsafe planning, deception, or misalignment. We find that planting harmful but benign-sounding reas…",
+      "authors": [
+        "Keertana Chidambaram",
+        "Andrew Ilyas",
+        "Vasilis Syrgkanis"
+      ],
+      "link": "http://arxiv.org/abs/2609.15989v1",
+      "published": "2026-09-14T18:33:27Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Bellman Policy Optimization",
+      "summary": "Reinforcement learning with verifiable rewards (RLVR) improves the reasoning capabilities of large language models (LLMs). We introduce Bellman Policy Optimization (BPO), a critic-free method derived from Policy Mirror Descent (PMD). For autoregressive generation with terminal re…",
+      "authors": [
+        "Zhuoqing Song",
+        "Haotian Xu",
+        "Xikun Zhang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.15987v1",
+      "published": "2026-09-14T17:59:47Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Stellar Colosseum: A Many-Agent Harness for Long-Horizon Research in Mathematics and Theoretical Computer Science",
+      "summary": "Language models can produce plausible short proofs, but may still be unreliable on long-horizon research problems, where progress depends on a sequence of uncertain and interdependent decisions. We introduce Stellar Colosseum, a model-agnostic harness for allocating inference acr…",
+      "authors": [
+        "Honghao Lin",
+        "David P. Woodruff",
+        "Yuan Deng",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.15983v1",
+      "published": "2026-09-14T17:58:55Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "The Router Within: Eliciting Native Skill Routing from a Frozen LLM",
+      "summary": "Skills extend an LLM agent beyond its parametric knowledge, and the gain they promise rests on picking the right one. Deployed harnesses route by preloading every skill's metadata into the context, which disperses the agent's attention and caps the library size. Retrieval pipelin…",
+      "authors": [
+        "Ruishuo Chen",
+        "Xun Wang",
+        "Yu Chen",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.15982v1",
+      "published": "2026-09-14T17:58:27Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "A Chosen Future Can Still Be Rewritten: Causal Writability in Video Models",
+      "summary": "When a video model generates physically incorrect motion, did it fail to learn the correct motion, or did it learn it but fail to use it? We show the latter: the correct motion remains available inside the model and can still be made to control the generated video. We train on vi…",
+      "authors": [
+        "Xingyun Wang",
+        "Haomin Zheng",
+        "Man Yuan",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.15980v1",
+      "published": "2026-09-14T17:58:11Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Disentangling Representation Evolution in Transformers through Directional Decomposition",
+      "summary": "Transformer representations evolve through learned additive transformations that either preserve their current direction or redirect it. We study this evolution as a functional geometry, decomposing learned updates into parallel and perpendicular components. Across pretrained mod…",
+      "authors": [
+        "Shwai He",
+        "Haichao Zhang",
+        "Shen Yan"
+      ],
+      "link": "http://arxiv.org/abs/2609.15975v1",
+      "published": "2026-09-14T17:56:19Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Discovery Foundation Models: Toward Open-Ended Discovery Intelligence",
+      "summary": "Foundation models have progressed from learning and reasoning over existing knowledge, to increasingly learning through action, tool use, and outcome feedback. We argue that the next frontier is a further transition: from solving and acting within problems specified by humans to …",
+      "authors": [
+        "Ling Yang",
+        "Zhenfei Yin",
+        "Yingcheng Wu"
+      ],
+      "link": "http://arxiv.org/abs/2609.15973v1",
+      "published": "2026-09-14T17:56:00Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Mind2Dialogue: Training Human-Aware Language Models by Simulating User Mental States",
+      "summary": "As language models become more capable, long-term collaboration in learning, reasoning, and decision-making calls for a deeper understanding of the people they serve. Yet training such human-aware language models faces a fundamental supervision gap because current datasets for LL…",
+      "authors": [
+        "Zixuan Wang",
+        "Yufan Zhou",
+        "Jinzhou Tang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.15972v1",
+      "published": "2026-09-14T17:55:58Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Verifiable by Construction: Claim-Level Evaluation of Verbatim Citation in Clinical Question Answering",
+      "summary": "Large language models (LLMs) have been widely adopted for clinical question answering (QA). Current systems can attach citations to their answers, but these often point to broad texts, leaving time-pressed clinicians unable to verify them efficiently. An alternative is to ensure …",
+      "authors": [
+        "Jiashuo Zhang",
+        "Yuling Chen",
+        "Yvonne Commodore-Mensah",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.15964v1",
+      "published": "2026-09-14T17:53:51Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Privacy-Aligned Personalized Federated Learning with Compact Adaptation and Variable-Length Gaussian Communication",
+      "summary": "Record-level differential privacy exposes a structural misalignment in personalized federated learning when client-specific variation is low-dimensional while training repeatedly releases high-dimensional updates. In this paper, we address this misalignment by releasing a private…",
+      "authors": [
+        "Yilin Xu",
+        "Chun Hei Michael Shiu",
+        "Chih Wei Ling",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.15950v1",
+      "published": "2026-09-14T17:48:11Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Vulnerability Localization Benchmark: Measuring Agentic Security Analysis at Repository Scale",
+      "summary": "Language-model agents increasingly operate over complete software repositories, yet cybersecurity evaluations primarily measure whether they can detect, reproduce, or repair vulnerabilities rather than whether they can locate the relevant code. We study vulnerability localization…",
+      "authors": [
+        "Aman Priyanshu",
+        "Supriti Vijay",
+        "Kimia Majd",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.15939v1",
+      "published": "2026-09-14T17:44:51Z",
+      "category": "cs.CR"
+    },
+    {
+      "title": "HypoEvolve: Genetic Algorithms Enable Multi-Agent LLMs to Discover Scientific Hypotheses",
+      "summary": "Scientific agents contribute to hypothesis discovery by synthesizing evidence, assessing proposals, and developing new explanations. Recent systems combine scientific agents with evolutionary search through critique, comparison, and revision. However, how different forms of agent…",
+      "authors": [
+        "Jieyuan Liu",
+        "Mengzhou Hu",
+        "Jefferson Chen",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.15938v1",
+      "published": "2026-09-14T17:44:49Z",
+      "category": "cs.CL"
+    }
+  ]
 }

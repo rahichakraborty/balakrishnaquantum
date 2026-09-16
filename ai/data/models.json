@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-09-15T18:40:12+00:00",
+  "generated_at": "2026-09-16T08:12:42+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
       "downloads": 325712,
-      "likes": 2642,
+      "likes": 2754,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Edge0/Edge0-35B-A3B-preview",
       "url": "https://huggingface.co/Edge0/Edge0-35B-A3B-preview",
       "downloads": 17853,
-      "likes": 2551,
+      "likes": 2971,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "openbmb/MiniCPM5-2B",
       "url": "https://huggingface.co/openbmb/MiniCPM5-2B",
       "downloads": 271754,
-      "likes": 1436,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "nex-agi/Nex-N2.5-mini",
-      "url": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
-      "downloads": 5202,
-      "likes": 802,
+      "likes": 1480,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 7702543,
-      "likes": 15231,
+      "likes": 15312,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "nex-agi/Nex-N2.5-mini",
+      "url": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "downloads": 5202,
+      "likes": 813,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "m-a-p/YuE2-3B",
       "url": "https://huggingface.co/m-a-p/YuE2-3B",
       "downloads": 6716,
-      "likes": 542,
+      "likes": 584,
       "pipeline_tag": "text-to-audio"
     },
     {
       "id": "nex-agi/Nex-N2.5-Pro",
       "url": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
       "downloads": 30881,
-      "likes": 646,
+      "likes": 655,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
       "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
       "downloads": 884926,
-      "likes": 1107,
+      "likes": 1150,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 1580077,
-      "likes": 3966,
+      "likes": 4030,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "TokenRhythm/NeoHorse-1-4B",
       "url": "https://huggingface.co/TokenRhythm/NeoHorse-1-4B",
       "downloads": 11904,
-      "likes": 1981,
+      "likes": 2086,
       "pipeline_tag": "text-generation"
     }
   ]

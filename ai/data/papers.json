@@ -1,5 +1,147 @@
 {
-  "generated_at": "2026-09-16T18:36:42+00:00",
-  "items": [],
-  "error": "HTTPError: HTTP Error 406: Not Acceptable"
+  "generated_at": "2026-09-17T08:18:52+00:00",
+  "items": [
+    {
+      "title": "Objective vs. Search: Decomposing What Makes a Good Tokeniser",
+      "summary": "Two dominant tokenisation algorithms are used by modern language models: byte-pair encoding (BPE) and UnigramLM. These differ along two orthogonal axes: their optimisation objective (compression vs. log-likelihood) and their search procedure (bottom-up merging vs. top-down prunin…",
+      "authors": [
+        "Ahmetcan Yavuz",
+        "Clara Meister",
+        "Tiago Pimentel"
+      ],
+      "link": "http://arxiv.org/abs/2609.19145v1",
+      "published": "2026-09-16T17:59:45Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "A Zeroth-Order Paradigm for LLM Preference Alignment",
+      "summary": "Direct preference alignment methods are widely used to align large language models (LLMs) with human preferences because of their computational and memory efficiency. However, likelihood displacement motivates alternative ways to extract information from preference pairs with sma…",
+      "authors": [
+        "Peter Chen",
+        "Xi Chen",
+        "Wotao Yin",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.19144v1",
+      "published": "2026-09-16T17:59:35Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "PANORAMA: Panoptic Grounded Captioning via Mask Proposal Selection",
+      "summary": "Intelligent systems that act in the world require image understanding that is both comprehensive and spatially grounded. Current vision-language models (VLMs) can generate fluent and detailed image captions, but reliably associating them with image pixels remains challenging. Exi…",
+      "authors": [
+        "Sara Pieri",
+        "Evangelos Kazakos",
+        "Shizhe Chen",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.19143v1",
+      "published": "2026-09-16T17:59:30Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Dreaming the Sound of Contact: Leveraging Video and Audio Generation for Zero-Shot Force-Aware Manipulation and Data Generation",
+      "summary": "Recent advances in video generation allow robots to learn manipulation trajectories from generated videos. However, these approaches produce purely kinematic trajectories that lack force information, causing failures in contact-rich tasks where appropriate contact forces are esse…",
+      "authors": [
+        "Guanhua Ji",
+        "Tianyu Li",
+        "Dayoon Suh",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.19137v1",
+      "published": "2026-09-16T17:56:44Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "Exponential Hardness of Off-Policy Evaluation under History-Dependent Logging",
+      "summary": "Can a logged dataset visit every hidden state frequently and still be exponentially uninformative about a target policy's value? We show that it can when the logger depends on history. For every horizon $H \\ge 3$, we construct two POMDPs with at most two latent states per stage, …",
+      "authors": [
+        "Pranaya Jajoo"
+      ],
+      "link": "http://arxiv.org/abs/2609.19135v1",
+      "published": "2026-09-16T17:56:12Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments",
+      "summary": "Scientific code repositories encode decades of human knowledge in executable models, methods, and tools. Yet fragmented toolchains, implicit domain conventions, and specialized correctness criteria make this knowledge difficult to convert into reliable learning experience-a chall…",
+      "authors": [
+        "Hejia Geng",
+        "Zesen Huang",
+        "Haoyang Li",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.19134v1",
+      "published": "2026-09-16T17:55:47Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Cognitive Extensions for Dual-Process Language Agents: Memory and Self-Reflection in Interactive Environments",
+      "summary": "Language agents remain brittle in interactive environments, where success requires long-horizon state tracking, valid action execution, and recovery from failed steps. We extend SwiftSage, a dual-process agent that combines a fast action proposer with a slower planner, using two …",
+      "authors": [
+        "João Meneses dos Santos",
+        "Arlindo L. Oliveira"
+      ],
+      "link": "http://arxiv.org/abs/2609.19128v1",
+      "published": "2026-09-16T17:50:42Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Affora: A Design System for Agent-Friendly Interfaces",
+      "summary": "Computer-use agents increasingly operate software designed for people, but interfaces often leave actions or task state unclear to machine readers. We present Affora, a design system that supports both readers while preserving visual freedom and familiar human workflows. Three co…",
+      "authors": [
+        "Jin Gao"
+      ],
+      "link": "http://arxiv.org/abs/2609.19125v1",
+      "published": "2026-09-16T17:46:34Z",
+      "category": "cs.HC"
+    },
+    {
+      "title": "Flag Game: A Toy Model for Mechanistic Swarm Interpretability",
+      "summary": "Emergent coordinated behaviors of AI agents are starting to present critical safety risks. A key phenomenon driving these behaviors is the rapid formation and spread of beliefs about the world, and mechanistic understanding is crucial for collective alignment. To this end, we int…",
+      "authors": [
+        "Elizabeth Pavlova",
+        "Hidenori Tanaka"
+      ],
+      "link": "http://arxiv.org/abs/2609.19124v1",
+      "published": "2026-09-16T17:46:06Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Playing log(N)-Questions over Wikipedia Abstracts: Communication Efficiency Between Paired Frontier Models",
+      "summary": "We evaluate six frontier language models on the two-agent $\\log(N)$-Questions game. A questioner sees $N$ Wikipedia lead paragraphs and must identify a secretly chosen target using exactly $\\log_2 N$ yes/no questions. An answerer sees only the target and the question, and replies…",
+      "authors": [
+        "Peter Potash"
+      ],
+      "link": "http://arxiv.org/abs/2609.19113v1",
+      "published": "2026-09-16T17:41:12Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "How Model Growth, Recursion, and Boundary Operators Influence Scaling Exponents",
+      "summary": "Scaling laws predict how loss decreases with increases in computation. We show, contrary to conventional wisdom, that architectural interventions can modify scaling exponents in pre-training, leading to exponential improvements in performance with increases in computation. As an …",
+      "authors": [
+        "Zixi Chen",
+        "Akshay Vegesna",
+        "Samip Dahal",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.19107v1",
+      "published": "2026-09-16T17:36:13Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "rMuscle: Robotic Muscle Memory for Efficient Vision-Language-Action Model Inference",
+      "summary": "Factory work is a promising early scenario for embodied AI: assigning repetitive manual jobs to robots has clear economic payoff, and a structured station keeps the jobs tractable for current policies. Vision-Language-Action (VLA) models now dominate as the policy paradigm for th…",
+      "authors": [
+        "Kaijun Zhou",
+        "Zhiyang Li",
+        "Le Chen",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.19104v1",
+      "published": "2026-09-16T17:34:43Z",
+      "category": "cs.RO"
+    }
+  ]
 }

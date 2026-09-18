@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T07:55:10+00:00",
+  "generated_at": "2026-09-18T18:03:32+00:00",
   "covers": {
     "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow|Aurélien Géron": "https://covers.openlibrary.org/b/id/9388208-M.jpg",
     "An Introduction to Statistical Learning (ISLR)|James, Witten, Hastie, Tibshirani": "https://covers.openlibrary.org/b/isbn/9781461471370-M.jpg?default=false",
@@ -14,7 +14,7 @@
     "Python for Data Analysis|Wes McKinney": "https://covers.openlibrary.org/b/id/7548132-M.jpg",
     "Data Science from Scratch|Joel Grus": "https://covers.openlibrary.org/b/id/12672936-M.jpg",
     "Storytelling with Data|Cole Nussbaumer Knaflic": "https://covers.openlibrary.org/b/id/7932707-M.jpg",
-    "Prediction Machines|Agrawal, Gans, Goldfarb": "https://covers.openlibrary.org/b/id/12508574-M.jpg",
+    "Prediction Machines|Agrawal, Gans, Goldfarb": null,
     "AI Superpowers|Kai-Fu Lee": "https://covers.openlibrary.org/b/id/8276796-M.jpg"
   },
   "_debug_samples": [

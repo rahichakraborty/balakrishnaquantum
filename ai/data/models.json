@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-09-18T18:01:04+00:00",
+  "generated_at": "2026-09-19T07:44:32+00:00",
   "items": [
-    {
-      "id": "Edge0/Edge0-35B-A3B-preview",
-      "url": "https://huggingface.co/Edge0/Edge0-35B-A3B-preview",
-      "downloads": 52519,
-      "likes": 3383,
-      "pipeline_tag": "text-generation"
-    },
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
       "downloads": 429865,
-      "likes": 3136,
+      "likes": 3215,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
       "downloads": 405609,
-      "likes": 819,
+      "likes": 1004,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 7358662,
-      "likes": 15634,
+      "likes": 15674,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "m-a-p/YuE2-3B",
       "url": "https://huggingface.co/m-a-p/YuE2-3B",
       "downloads": 13668,
-      "likes": 785,
+      "likes": 823,
       "pipeline_tag": "text-to-audio"
-    },
-    {
-      "id": "TokenRhythm/NeoHorse-1-4B",
-      "url": "https://huggingface.co/TokenRhythm/NeoHorse-1-4B",
-      "downloads": 22666,
-      "likes": 2364,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
       "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
       "downloads": 1078301,
-      "likes": 1301,
+      "likes": 1359,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "XingChen-AGI/Xing4.0-29B-A4B",
+      "url": "https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B",
+      "downloads": 3073,
+      "likes": 516,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "ukisai/Swift-Qwen3.8-27b",
+      "url": "https://huggingface.co/ukisai/Swift-Qwen3.8-27b",
+      "downloads": 6293,
+      "likes": 451,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 1590087,
-      "likes": 4308,
+      "likes": 4352,
       "pipeline_tag": "image-to-video"
     },
     {
-      "id": "ukisai/Swift-Qwen3.8-27b",
-      "url": "https://huggingface.co/ukisai/Swift-Qwen3.8-27b",
-      "downloads": 6293,
-      "likes": 433,
-      "pipeline_tag": "image-text-to-text"
+      "id": "harshatheg/Qwen-2.5-1B-RLCD",
+      "url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD",
+      "downloads": 0,
+      "likes": 398,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
       "downloads": 1197378,
-      "likes": 885,
+      "likes": 916,
       "pipeline_tag": "image-text-to-text"
     }
   ]

@@ -1,5 +1,155 @@
 {
-  "generated_at": "2026-09-21T08:30:03+00:00",
-  "items": [],
-  "error": "HTTPError: HTTP Error 406: Not Acceptable"
+  "generated_at": "2026-09-21T19:50:19+00:00",
+  "items": [
+    {
+      "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
+      "summary": "Professional graphic design is a long-horizon agentic task in which structured, editable artifacts emerge from many interdependent actions, yet outcomes admit no reliable programmatic oracle. We introduce a continual adaptation framework in which a frozen frontier model operates …",
+      "authors": [
+        "Hongyang Du",
+        "Lan Yan",
+        "Christian Flores",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.22086v1",
+      "published": "2026-09-18T17:59:56Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Cross-sector generalization of accident-process role classification in occupational accident narratives",
+      "summary": "Occupational accident narratives contain valuable information about work situations, unfavourable conditions, accident events, and their consequences. Automatically structuring these narratives can facilitate large-scale accident analysis and support occupational risk prevention.…",
+      "authors": [
+        "Aho Yapi",
+        "Pierre Latouche",
+        "Arnaud Guillin",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.22081v1",
+      "published": "2026-09-18T17:59:10Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself",
+      "summary": "Training capable coding agents via reinforcement learning (RL) requires diverse tasks with reliable verifiers. Open-source codebases offer a rich source of such tasks, while existing methods typically rely on development artifacts such as issues and commits, limiting the range of…",
+      "authors": [
+        "Bowen Ye",
+        "Lei Li",
+        "Shicheng Li",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.22068v1",
+      "published": "2026-09-18T17:55:17Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Value-Sensitive Delegation in Everyday AI Agent Use: Evidence from OpenClaw",
+      "summary": "Users increasingly delegate work to autonomous AI agents, yet evaluations typically measure task completion rather than the values users prioritize. Using Value Sensitive Design, we analyzed, with LLM assistance, 73,093 first-person Reddit posts about using OpenClaw, each for its…",
+      "authors": [
+        "Renkai Ma",
+        "Ruyuan Wan",
+        "Xuan Lu",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.22067v1",
+      "published": "2026-09-18T17:55:09Z",
+      "category": "cs.HC"
+    },
+    {
+      "title": "BrainWideBench: Benchmarking large-scale pretraining and across-animal transfer in multi-region neural recordings",
+      "summary": "Advances in large-scale neural recording have made it possible to collect data across many animals and distributed brain regions, raising the question of whether this scale can be exploited to learn general-purpose neural representations transferable across diverse downstream tas…",
+      "authors": [
+        "Alexandre Andre",
+        "Shivashriganesh P. Mahato",
+        "Vinam Arora",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.22064v1",
+      "published": "2026-09-18T17:54:32Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Predictable Failure in Multi-Hop Retrieval: Score-Distributional Confidence Scoring and Abstention",
+      "summary": "Multi-hop retrieval failures are not uniformly distributed across queries: they cluster in structurally predictable subpopulations. We prove two results formalizing this structure. First (CWAR Reducibility): confident-failure reduction is achievable if and only if retrieval featu…",
+      "authors": [
+        "Andre Bacellar"
+      ],
+      "link": "http://arxiv.org/abs/2609.22056v1",
+      "published": "2026-09-18T17:48:15Z",
+      "category": "cs.IR"
+    },
+    {
+      "title": "Benchmarking World Models for Continual Learning on Compositional Tasks",
+      "summary": "A desirable property of a world model is the ability to learn continually across tasks, adapting to new environments without forgetting what the agent has already learnt. In particular, the ability to retain and reuse knowledge obtained from prior experiences underpins an agent's…",
+      "authors": [
+        "Haoyu Zhou",
+        "Joe Watson",
+        "Anson Lei",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.22055v1",
+      "published": "2026-09-18T17:46:28Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Particle Competition and Cooperation for Robust Graph Convolutional Network Learning Under Label Noise",
+      "summary": "Graph Convolutional Networks (GCNs) are highly sensitive to label noise, since corrupted supervision can propagate through the graph and degrade learned node representations. This work proposes PCC+GCN, a hybrid framework that uses Particle Competition and Cooperation (PCC) as a …",
+      "authors": [
+        "Fabricio Breve"
+      ],
+      "link": "http://arxiv.org/abs/2609.22053v1",
+      "published": "2026-09-18T17:46:08Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Available Guardrails: Certifying Selective Prediction across ML Systems",
+      "summary": "A selective predictor acts as a safety gate: it returns an output only when the prediction appears sufficiently trustworthy. Deployments increasingly require this reliability to be certified at a target precision for every reporting unit of interest, such as a tool, policy label,…",
+      "authors": [
+        "Parivesh Priye",
+        "Yufeng Wang",
+        "Haibin Ling",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.22048v1",
+      "published": "2026-09-18T17:36:52Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "An Interpretable Memory Decision Controller for LLM Agents Based on Three-Signal Complementarity: Decoupling Confidence and Consistency",
+      "summary": "Memory systems for large language models have focused predominantly on efficient retrieval, whereas the decision of whether retrieved memories should be trusted has received comparatively little attention. When the memory store contains conflicting positions, standard retrieval-a…",
+      "authors": [
+        "Yiming Zhang",
+        "Jinghong Zhang",
+        "Haoran Zhao",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.22043v1",
+      "published": "2026-09-18T17:34:13Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "$λ$-Controlled GRPO: Turning Flow-Matching Ratio Instability into a Budgeted Resource",
+      "summary": "Reinforcement learning is increasingly used to align image generators with reward signals, and Flow-GRPO recently extended this paradigm to flow-matching models by treating the denoising sampler as a stochastic policy that can be optimized from reward feedback. Training in this s…",
+      "authors": [
+        "Yufeng Wang",
+        "Parivesh Priye",
+        "Meeshawn Marathe",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.22041v1",
+      "published": "2026-09-18T17:33:38Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Gricea: An Open Science Platform for Conversational AI Research",
+      "summary": "We need studies on conversational AI (CAI) at scale to understand human behavior and shape CAI design. However, fragmented reporting of systems and study configurations hinders replication, extension, and knowledge accumulation. We present Gricea, an open-science platform represe…",
+      "authors": [
+        "Nikhil Sharma",
+        "Yunlin Gong",
+        "Xinyang Cheng",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.22039v1",
+      "published": "2026-09-18T17:31:05Z",
+      "category": "cs.HC"
+    }
+  ]
 }

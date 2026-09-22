@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-09-21T19:50:27+00:00",
+  "generated_at": "2026-09-22T08:10:40+00:00",
   "items": [
     {
       "id": "convaiinnovations/laya",
       "url": "https://huggingface.co/convaiinnovations/laya",
       "downloads": 0,
-      "likes": 1656,
+      "likes": 2012,
       "pipeline_tag": "text-classification"
     },
     {
       "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
       "downloads": 2227879,
-      "likes": 1715,
+      "likes": 1780,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen-Image-2.1",
       "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
       "downloads": 6523,
-      "likes": 1367,
+      "likes": 1569,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "XingChen-AGI/Xing4.0-29B-A4B",
       "url": "https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B",
       "downloads": 18394,
-      "likes": 1086,
+      "likes": 1190,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
       "downloads": 512120,
-      "likes": 3511,
+      "likes": 3562,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "abenzerps/Qwen-Image-2.1-GGUF",
+      "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-GGUF",
+      "downloads": 33232,
+      "likes": 753,
+      "pipeline_tag": "text-to-image"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 7153238,
-      "likes": 15956,
+      "likes": 15992,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "harshatheg/Qwen-2.5-1B-RLCD",
       "url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD",
       "downloads": 0,
-      "likes": 509,
+      "likes": 526,
       "pipeline_tag": "text-generation"
     },
     {
-      "id": "abenzerps/Qwen-Image-2.1-GGUF",
-      "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-GGUF",
-      "downloads": 33232,
-      "likes": 525,
-      "pipeline_tag": "text-to-image"
+      "id": "Comfy-Org/Qwen-Image-2.1",
+      "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
+      "downloads": 535365,
+      "likes": 480,
+      "pipeline_tag": null
     },
     {
       "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
       "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
       "downloads": 1292471,
-      "likes": 1527,
+      "likes": 1548,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "m-a-p/YuE2-3B",
-      "url": "https://huggingface.co/m-a-p/YuE2-3B",
-      "downloads": 18759,
-      "likes": 942,
-      "pipeline_tag": "text-to-audio"
     }
   ]
 }

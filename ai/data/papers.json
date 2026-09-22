@@ -1,155 +1,159 @@
 {
-  "generated_at": "2026-09-21T19:50:19+00:00",
+  "generated_at": "2026-09-22T08:10:32+00:00",
   "items": [
     {
-      "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
-      "summary": "Professional graphic design is a long-horizon agentic task in which structured, editable artifacts emerge from many interdependent actions, yet outcomes admit no reliable programmatic oracle. We introduce a continual adaptation framework in which a frozen frontier model operates …",
+      "title": "GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay",
+      "summary": "Modern video games provide a measurable testbed for AI models, combining abilities of visual understanding, instruction decomposition, goal planning, and precise action control over multiple temporal horizons. Existing datasets and benchmarks, however, either cover a narrow range…",
       "authors": [
-        "Hongyang Du",
-        "Lan Yan",
-        "Christian Flores",
+        "Yiran Wang",
+        "Xingyilang Yin",
+        "Junfu Pu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.22086v1",
-      "published": "2026-09-18T17:59:56Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2609.25001v1",
+      "published": "2026-09-21T17:59:33Z",
+      "category": "cs.CV"
     },
     {
-      "title": "Cross-sector generalization of accident-process role classification in occupational accident narratives",
-      "summary": "Occupational accident narratives contain valuable information about work situations, unfavourable conditions, accident events, and their consequences. Automatically structuring these narratives can facilitate large-scale accident analysis and support occupational risk prevention.…",
+      "title": "Critical-State RL: Diagnosing Trainable States for Multi-Turn Tool Use",
+      "summary": "Multi-turn tool-use failures can hinge on a single model call, yet reward variation alone does not reveal which call would benefit from training. When rewards depend on later interactions, their variation can reflect downstream randomness rather than differences between the curre…",
       "authors": [
-        "Aho Yapi",
-        "Pierre Latouche",
-        "Arnaud Guillin",
+        "Zixiang Chen",
+        "Wenting Zhao",
+        "Zhepeng Cen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.22081v1",
-      "published": "2026-09-18T17:59:10Z",
+      "link": "http://arxiv.org/abs/2609.24985v1",
+      "published": "2026-09-21T17:57:20Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory",
+      "summary": "Video world models enable interactive exploration of dynamic environments, yet struggle to respect prior observations over long horizons and across viewpoints. We present WorldCrafter, a video world model that learns a camera-queryable implicit 3D-aware memory for this purpose. T…",
+      "authors": [
+        "Wangbo Yu",
+        "Kunhao Liu",
+        "Wenbo Hu",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.24984v1",
+      "published": "2026-09-21T17:57:06Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction",
+      "summary": "We present onPanda, an interactive tool for efficiently annotating LLM alignment data and agent trajectories. onPanda adopts token-level correction as its core interaction: while reading a model response, the annotator locates the first inappropriate token and either picks a subs…",
+      "authors": [
+        "Lei Yang",
+        "Mengyin Liu",
+        "Jia Wang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.24983v1",
+      "published": "2026-09-21T17:56:53Z",
       "category": "cs.CL"
     },
     {
-      "title": "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself",
-      "summary": "Training capable coding agents via reinforcement learning (RL) requires diverse tasks with reliable verifiers. Open-source codebases offer a rich source of such tasks, while existing methods typically rely on development artifacts such as issues and commits, limiting the range of…",
+      "title": "LoRA-generating hypernetworks for efficient on-device LLM generative personalization",
+      "summary": "On-device large language models (`LLMs'), e.g. running on mobile phones, are ripe for improvement via personalization. The limited compute resources of mobile devices impose limits on model scale and thus model quality, making any realizable quality gains highly impactful. At the…",
       "authors": [
-        "Bowen Ye",
-        "Lei Li",
-        "Shicheng Li",
+        "Sean Augenstein",
+        "Li Ding",
+        "Jihwan Lee",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.22068v1",
-      "published": "2026-09-18T17:55:17Z",
+      "link": "http://arxiv.org/abs/2609.24979v1",
+      "published": "2026-09-21T17:55:48Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "DexTacWAM: A Visuo-Tactile World-Action Model for Dexterous Manipulation",
+      "summary": "Dexterous manipulation depends on contact dynamics that are often only partially observable from vision. Recent World-Action Models (WAMs) couple predictive video world modeling with action generation, but remain largely vision-centric and therefore cannot directly model these co…",
+      "authors": [
+        "Haoran Yuan",
+        "Zekai Wang",
+        "Boning Shao",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.24976v1",
+      "published": "2026-09-21T17:55:24Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
+      "summary": "Agent harnesses, the external systems that mediate model-environment interaction, can substantially improve agent performance, but their gains remain tied to the harness at deployment. Because the best harness varies across domains, instances, and models, a general-purpose agent …",
+      "authors": [
+        "Haoran Ye",
+        "Yuxing Lu",
+        "Haonan Dong",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.24974v1",
+      "published": "2026-09-21T17:55:20Z",
       "category": "cs.AI"
     },
     {
-      "title": "Value-Sensitive Delegation in Everyday AI Agent Use: Evidence from OpenClaw",
-      "summary": "Users increasingly delegate work to autonomous AI agents, yet evaluations typically measure task completion rather than the values users prioritize. Using Value Sensitive Design, we analyzed, with LLM assistance, 73,093 first-person Reddit posts about using OpenClaw, each for its…",
+      "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+      "summary": "An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasingly automate this process by iteratively proposing and selecting component-wise …",
       "authors": [
-        "Renkai Ma",
-        "Ruyuan Wan",
-        "Xuan Lu",
+        "Peng Xia",
+        "Rujun Han",
+        "Zifeng Wang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.22067v1",
-      "published": "2026-09-18T17:55:09Z",
-      "category": "cs.HC"
-    },
-    {
-      "title": "BrainWideBench: Benchmarking large-scale pretraining and across-animal transfer in multi-region neural recordings",
-      "summary": "Advances in large-scale neural recording have made it possible to collect data across many animals and distributed brain regions, raising the question of whether this scale can be exploited to learn general-purpose neural representations transferable across diverse downstream tas…",
-      "authors": [
-        "Alexandre Andre",
-        "Shivashriganesh P. Mahato",
-        "Vinam Arora",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.22064v1",
-      "published": "2026-09-18T17:54:32Z",
+      "link": "http://arxiv.org/abs/2609.24972v1",
+      "published": "2026-09-21T17:54:49Z",
       "category": "cs.LG"
     },
     {
-      "title": "Predictable Failure in Multi-Hop Retrieval: Score-Distributional Confidence Scoring and Abstention",
-      "summary": "Multi-hop retrieval failures are not uniformly distributed across queries: they cluster in structurally predictable subpopulations. We prove two results formalizing this structure. First (CWAR Reducibility): confident-failure reduction is achievable if and only if retrieval featu…",
+      "title": "DolphinBench: Mapping the Pareto Frontier of Agent Memory",
+      "summary": "Agents today often take real-world actions that depend on long-term memory and context recall over time. However, most current memory benchmarks are built for a conversational question-answer format, where the question itself signals that some fact must be retrieved, and often wh…",
       "authors": [
-        "Andre Bacellar"
+        "Soumil Rathi",
+        "Deshraj Yadav",
+        "Taranjeet Singh"
       ],
-      "link": "http://arxiv.org/abs/2609.22056v1",
-      "published": "2026-09-18T17:48:15Z",
-      "category": "cs.IR"
-    },
-    {
-      "title": "Benchmarking World Models for Continual Learning on Compositional Tasks",
-      "summary": "A desirable property of a world model is the ability to learn continually across tasks, adapting to new environments without forgetting what the agent has already learnt. In particular, the ability to retain and reuse knowledge obtained from prior experiences underpins an agent's…",
-      "authors": [
-        "Haoyu Zhou",
-        "Joe Watson",
-        "Anson Lei",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.22055v1",
-      "published": "2026-09-18T17:46:28Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Particle Competition and Cooperation for Robust Graph Convolutional Network Learning Under Label Noise",
-      "summary": "Graph Convolutional Networks (GCNs) are highly sensitive to label noise, since corrupted supervision can propagate through the graph and degrade learned node representations. This work proposes PCC+GCN, a hybrid framework that uses Particle Competition and Cooperation (PCC) as a …",
-      "authors": [
-        "Fabricio Breve"
-      ],
-      "link": "http://arxiv.org/abs/2609.22053v1",
-      "published": "2026-09-18T17:46:08Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Available Guardrails: Certifying Selective Prediction across ML Systems",
-      "summary": "A selective predictor acts as a safety gate: it returns an output only when the prediction appears sufficiently trustworthy. Deployments increasingly require this reliability to be certified at a target precision for every reporting unit of interest, such as a tool, policy label,…",
-      "authors": [
-        "Parivesh Priye",
-        "Yufeng Wang",
-        "Haibin Ling",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.22048v1",
-      "published": "2026-09-18T17:36:52Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "An Interpretable Memory Decision Controller for LLM Agents Based on Three-Signal Complementarity: Decoupling Confidence and Consistency",
-      "summary": "Memory systems for large language models have focused predominantly on efficient retrieval, whereas the decision of whether retrieved memories should be trusted has received comparatively little attention. When the memory store contains conflicting positions, standard retrieval-a…",
-      "authors": [
-        "Yiming Zhang",
-        "Jinghong Zhang",
-        "Haoran Zhao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.22043v1",
-      "published": "2026-09-18T17:34:13Z",
+      "link": "http://arxiv.org/abs/2609.24971v1",
+      "published": "2026-09-21T17:54:35Z",
       "category": "cs.CL"
     },
     {
-      "title": "$λ$-Controlled GRPO: Turning Flow-Matching Ratio Instability into a Budgeted Resource",
-      "summary": "Reinforcement learning is increasingly used to align image generators with reward signals, and Flow-GRPO recently extended this paradigm to flow-matching models by treating the denoising sampler as a stochastic policy that can be optimized from reward feedback. Training in this s…",
+      "title": "Rare Event Estimation via Iterative Unalignment",
+      "summary": "As agents are deployed with increased autonomy, even extremely rare events along their stochastic output trajectories can occur and prove catastrophic. Safe deployment therefore does not depend on whether these events can occur, but on how often they might. We study the problem o…",
       "authors": [
-        "Yufeng Wang",
-        "Parivesh Priye",
-        "Meeshawn Marathe",
+        "Hanming Yang",
+        "Daksh Mittal",
+        "Jing Dong",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.22041v1",
-      "published": "2026-09-18T17:33:38Z",
+      "link": "http://arxiv.org/abs/2609.24969v1",
+      "published": "2026-09-21T17:53:38Z",
       "category": "cs.LG"
     },
     {
-      "title": "Gricea: An Open Science Platform for Conversational AI Research",
-      "summary": "We need studies on conversational AI (CAI) at scale to understand human behavior and shape CAI design. However, fragmented reporting of systems and study configurations hinders replication, extension, and knowledge accumulation. We present Gricea, an open-science platform represe…",
+      "title": "Emergent Collusion in Long-Horizon LLM Agent Interaction",
+      "summary": "LLM agents are increasingly deployed in collaborative settings, yet long-term interaction may give rise to undesirable coordination. We study the emergence of collusion in a long-horizon multi-agent environment: two agents repeatedly complete individual tasks, share task logs, ve…",
       "authors": [
-        "Nikhil Sharma",
-        "Yunlin Gong",
-        "Xinyang Cheng",
+        "Xinrui Shi",
+        "Yanzhe Zhang",
+        "Diyi Yang"
+      ],
+      "link": "http://arxiv.org/abs/2609.24967v1",
+      "published": "2026-09-21T17:52:48Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Jev for Scientific Decisions: Evaluating Semantic Choices and Their Consequences",
+      "summary": "Scientific workflows often require choosing among known relations before a deterministic calculation can proceed. Whether observations share a culture, treatment or reference standard can change the scientific meaning of the resulting count or comparison. We evaluate Jev as a sem…",
+      "authors": [
+        "Boyuan Deng",
+        "Shuyi Fan",
+        "Hongyang Zhang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.22039v1",
-      "published": "2026-09-18T17:31:05Z",
-      "category": "cs.HC"
+      "link": "http://arxiv.org/abs/2609.24965v1",
+      "published": "2026-09-21T17:51:50Z",
+      "category": "cs.CL"
     }
   ]
 }

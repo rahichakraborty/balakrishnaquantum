@@ -1,159 +1,154 @@
 {
-  "generated_at": "2026-09-22T18:27:30+00:00",
+  "generated_at": "2026-09-23T08:12:52+00:00",
   "items": [
     {
-      "title": "GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay",
-      "summary": "Modern video games provide a measurable testbed for AI models, combining abilities of visual understanding, instruction decomposition, goal planning, and precise action control over multiple temporal horizons. Existing datasets and benchmarks, however, either cover a narrow range…",
+      "title": "Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs",
+      "summary": "Diffusion Large Language Models (dLLMs) have recently emerged as a promising alternative to autoregressive LLMs by enabling non-autoregressive text generation. However, their practical deployment remains limited by inefficient inference, largely due to the absence of effective Ke…",
       "authors": [
-        "Yiran Wang",
-        "Xingyilang Yin",
-        "Junfu Pu",
-        "et al."
+        "Quan Nguyen-Tri",
+        "Mukul Ranjan",
+        "Zhiqiang Shen"
       ],
-      "link": "http://arxiv.org/abs/2609.25001v1",
-      "published": "2026-09-21T17:59:33Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Critical-State RL: Diagnosing Trainable States for Multi-Turn Tool Use",
-      "summary": "Multi-turn tool-use failures can hinge on a single model call, yet reward variation alone does not reveal which call would benefit from training. When rewards depend on later interactions, their variation can reflect downstream randomness rather than differences between the curre…",
-      "authors": [
-        "Zixiang Chen",
-        "Wenting Zhao",
-        "Zhepeng Cen",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.24985v1",
-      "published": "2026-09-21T17:57:20Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory",
-      "summary": "Video world models enable interactive exploration of dynamic environments, yet struggle to respect prior observations over long horizons and across viewpoints. We present WorldCrafter, a video world model that learns a camera-queryable implicit 3D-aware memory for this purpose. T…",
-      "authors": [
-        "Wangbo Yu",
-        "Kunhao Liu",
-        "Wenbo Hu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.24984v1",
-      "published": "2026-09-21T17:57:06Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction",
-      "summary": "We present onPanda, an interactive tool for efficiently annotating LLM alignment data and agent trajectories. onPanda adopts token-level correction as its core interaction: while reading a model response, the annotator locates the first inappropriate token and either picks a subs…",
-      "authors": [
-        "Lei Yang",
-        "Mengyin Liu",
-        "Jia Wang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.24983v1",
-      "published": "2026-09-21T17:56:53Z",
+      "link": "http://arxiv.org/abs/2609.26796v1",
+      "published": "2026-09-22T17:59:57Z",
       "category": "cs.CL"
     },
     {
-      "title": "LoRA-generating hypernetworks for efficient on-device LLM generative personalization",
-      "summary": "On-device large language models (`LLMs'), e.g. running on mobile phones, are ripe for improvement via personalization. The limited compute resources of mobile devices impose limits on model scale and thus model quality, making any realizable quality gains highly impactful. At the…",
+      "title": "A Decentralized Partially Observable Team Decision Methodology with Delayed Information Sharing",
+      "summary": "We study decentralized partially observable team decision problems with low-rank latent dynamics and unknown system models. The proposed framework combines team-theoretic equivalence with low-rank model representations to address cooperative decision-making in partially observabl…",
       "authors": [
-        "Sean Augenstein",
-        "Li Ding",
-        "Jihwan Lee",
-        "et al."
+        "Xiaoxing Ren",
+        "Thomas Parisini",
+        "Andreas A. Malikopoulos"
       ],
-      "link": "http://arxiv.org/abs/2609.24979v1",
-      "published": "2026-09-21T17:55:48Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2609.26783v1",
+      "published": "2026-09-22T17:56:46Z",
+      "category": "math.OC"
     },
     {
-      "title": "DexTacWAM: A Visuo-Tactile World-Action Model for Dexterous Manipulation",
-      "summary": "Dexterous manipulation depends on contact dynamics that are often only partially observable from vision. Recent World-Action Models (WAMs) couple predictive video world modeling with action generation, but remain largely vision-centric and therefore cannot directly model these co…",
+      "title": "Agensh: Scaling Organizational Intelligence to 1,024 Agents",
+      "summary": "A multi-agent system can reduce latency on complex tasks by executing work concurrently. Several pioneering harness frameworks support multi-agent systems. However, the scalability of current multi-agent harnesses is often constrained by a central orchestrator's capacity to alloc…",
       "authors": [
-        "Haoran Yuan",
-        "Zekai Wang",
-        "Boning Shao",
+        "Zhihao Zhan",
+        "Ting Song",
+        "Li Dong",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.24976v1",
-      "published": "2026-09-21T17:55:24Z",
-      "category": "cs.RO"
+      "link": "http://arxiv.org/abs/2609.26781v1",
+      "published": "2026-09-22T17:56:25Z",
+      "category": "cs.CL"
     },
     {
-      "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
-      "summary": "Agent harnesses, the external systems that mediate model-environment interaction, can substantially improve agent performance, but their gains remain tied to the harness at deployment. Because the best harness varies across domains, instances, and models, a general-purpose agent …",
+      "title": "SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue",
+      "summary": "Long-term conversational memory in multi-party settings requires more than retrieving relevant content from long-term conversations: it must distinguish who said what, whom each statement concerns, how individuals perceive one another, what information is shared by the group, and…",
       "authors": [
-        "Haoran Ye",
-        "Yuxing Lu",
-        "Haonan Dong",
+        "Haobo Zheng",
+        "Tan Tang",
+        "Yan Chen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.24974v1",
-      "published": "2026-09-21T17:55:20Z",
+      "link": "http://arxiv.org/abs/2609.26780v1",
+      "published": "2026-09-22T17:56:12Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+      "summary": "Agents often work on complex problems that require millions of tokens of context, which necessitates compacting across sessions due to limited context windows. We develop CliffCompaction, an autocompaction technique that reduces cost by up to 50% under a bounded context while mai…",
+      "authors": [
+        "Trang Nguyen",
+        "Eulrang Cho",
+        "Bingqing Chen",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.26779v1",
+      "published": "2026-09-22T17:55:59Z",
       "category": "cs.AI"
     },
     {
-      "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
-      "summary": "An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasingly automate this process by iteratively proposing and selecting component-wise …",
+      "title": "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving",
+      "summary": "We introduce SWE-Serve, a benchmark for evaluating agents on production inference engineering tasks. Implementing an inference feature can require coordinating multiple changes across the serving stack, including model support, runtime execution, and public APIs. Existing benchma…",
       "authors": [
-        "Peng Xia",
-        "Rujun Han",
-        "Zifeng Wang",
+        "Jennifer Williams",
+        "Dave Farris",
+        "Jeff Farris",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.24972v1",
-      "published": "2026-09-21T17:54:49Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "DolphinBench: Mapping the Pareto Frontier of Agent Memory",
-      "summary": "Agents today often take real-world actions that depend on long-term memory and context recall over time. However, most current memory benchmarks are built for a conversational question-answer format, where the question itself signals that some fact must be retrieved, and often wh…",
-      "authors": [
-        "Soumil Rathi",
-        "Deshraj Yadav",
-        "Taranjeet Singh"
-      ],
-      "link": "http://arxiv.org/abs/2609.24971v1",
-      "published": "2026-09-21T17:54:35Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Rare Event Estimation via Iterative Unalignment",
-      "summary": "As agents are deployed with increased autonomy, even extremely rare events along their stochastic output trajectories can occur and prove catastrophic. Safe deployment therefore does not depend on whether these events can occur, but on how often they might. We study the problem o…",
-      "authors": [
-        "Hanming Yang",
-        "Daksh Mittal",
-        "Jing Dong",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.24969v1",
-      "published": "2026-09-21T17:53:38Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Emergent Collusion in Long-Horizon LLM Agent Interaction",
-      "summary": "LLM agents are increasingly deployed in collaborative settings, yet long-term interaction may give rise to undesirable coordination. We study the emergence of collusion in a long-horizon multi-agent environment: two agents repeatedly complete individual tasks, share task logs, ve…",
-      "authors": [
-        "Xinrui Shi",
-        "Yanzhe Zhang",
-        "Diyi Yang"
-      ],
-      "link": "http://arxiv.org/abs/2609.24967v1",
-      "published": "2026-09-21T17:52:48Z",
+      "link": "http://arxiv.org/abs/2609.26777v1",
+      "published": "2026-09-22T17:54:59Z",
       "category": "cs.AI"
     },
     {
-      "title": "Jev for Scientific Decisions: Evaluating Semantic Choices and Their Consequences",
-      "summary": "Scientific workflows often require choosing among known relations before a deterministic calculation can proceed. Whether observations share a culture, treatment or reference standard can change the scientific meaning of the resulting count or comparison. We evaluate Jev as a sem…",
+      "title": "A2M: Trace-Optimized Agent Hijacking in the MCP Ecosystem",
+      "summary": "Agents using the Model Context Protocol (MCP) rely on semantic matching to select tools from third-party servers, exposing a semantic supply-chain risk through attacker-controlled metadata and outputs. We introduce A2M (Attraction-to-Manipulation), a two-stage black-box framework…",
       "authors": [
-        "Boyuan Deng",
-        "Shuyi Fan",
-        "Hongyang Zhang",
+        "Laizhen Li",
+        "Xuan Wang",
+        "Peicheng Zhao",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.24965v1",
-      "published": "2026-09-21T17:51:50Z",
-      "category": "cs.CL"
+      "link": "http://arxiv.org/abs/2609.26761v1",
+      "published": "2026-09-22T17:41:34Z",
+      "category": "cs.CR"
+    },
+    {
+      "title": "Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents",
+      "summary": "Large language model (LLM) agents often handle streams of related tasks, yet standard harnesses repeatedly ask the model to reconstruct the same control decisions inside each task's context. We study whether task feedback can instead turn recurring control into reusable executabl…",
+      "authors": [
+        "Laizhen Li",
+        "Jiarui Li",
+        "Juanjuan Zhao",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.26760v1",
+      "published": "2026-09-22T17:40:45Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Type-Safe Is Not Error-Free: A Constrained Decision Head Follows the Option Name, Not the Rubric Bound to It",
+      "summary": "Typed decision models are built for settings where model outputs are consumed directly by software. Instead of generating free-form text, they return a decision over a predefined set of options. By construction, every output conforms to the required schema. Yet this guarantee doe…",
+      "authors": [
+        "Yu Sun",
+        "Junhao Xu"
+      ],
+      "link": "http://arxiv.org/abs/2609.26758v1",
+      "published": "2026-09-22T17:38:12Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "FleXray: Universal Clinical X-ray Segmentation",
+      "summary": "X-ray is medicine's most widely used imaging modality, yet remains among its least quantitative. Unlike volumetric modalities like CT or MRI, X-ray collapses 3D anatomy into a 2D projection, causing structures to overlap and anatomical boundaries to be ambiguous, even to experts.…",
+      "authors": [
+        "Victor Ion Butoi",
+        "Vivek Gopalakrishnan",
+        "John V. Guttag",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.26756v1",
+      "published": "2026-09-22T17:37:55Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "EquivSVA: A Formally Verified Dataset of Behavioral Assertions Across Equivalent RTL Implementations",
+      "summary": "Large language models are increasingly used to generate SystemVerilog Assertions from natural-language specifica- tions and register-transfer-level designs. Existing datasets and benchmarks support important goals such as large- scale training, formal evaluation, specification-to…",
+      "authors": [
+        "FNU Aditi"
+      ],
+      "link": "http://arxiv.org/abs/2609.26751v1",
+      "published": "2026-09-22T17:33:09Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Metrics Failure in LLM-Based Code Vulnerability Repair: An Empirical Study and a Change-Aware Screen",
+      "summary": "Large language models (LLMs) are increasingly applied to the automated repair of C/C++ security vulnerabilities, and compile rate is a commonly reported proxy for progress: whether the generated patch compiles. We argue that compile rate is a scientifically unreliable metric for …",
+      "authors": [
+        "Om Nepal",
+        "Sushant Aryal",
+        "Oluseyi Olukola",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.26749v1",
+      "published": "2026-09-22T17:32:05Z",
+      "category": "cs.SE"
     }
   ]
 }

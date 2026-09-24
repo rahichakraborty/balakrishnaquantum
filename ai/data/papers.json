@@ -1,154 +1,149 @@
 {
-  "generated_at": "2026-09-23T18:46:49+00:00",
+  "generated_at": "2026-09-24T08:03:26+00:00",
   "items": [
     {
-      "title": "Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs",
-      "summary": "Diffusion Large Language Models (dLLMs) have recently emerged as a promising alternative to autoregressive LLMs by enabling non-autoregressive text generation. However, their practical deployment remains limited by inefficient inference, largely due to the absence of effective Ke…",
+      "title": "On the Diffusibility of High-Dimensional Latents",
+      "summary": "Representation Autoencoders (RAEs) enable diffusion models to operate in the feature spaces of pretrained visual encoders. However, many off-the-shelf encoders are not optimized for faithful reconstruction, discarding fine-grained visual details. As expected, finetuning these enc…",
       "authors": [
-        "Quan Nguyen-Tri",
-        "Mukul Ranjan",
-        "Zhiqiang Shen"
-      ],
-      "link": "http://arxiv.org/abs/2609.26796v1",
-      "published": "2026-09-22T17:59:57Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "A Decentralized Partially Observable Team Decision Methodology with Delayed Information Sharing",
-      "summary": "We study decentralized partially observable team decision problems with low-rank latent dynamics and unknown system models. The proposed framework combines team-theoretic equivalence with low-rank model representations to address cooperative decision-making in partially observabl…",
-      "authors": [
-        "Xiaoxing Ren",
-        "Thomas Parisini",
-        "Andreas A. Malikopoulos"
-      ],
-      "link": "http://arxiv.org/abs/2609.26783v1",
-      "published": "2026-09-22T17:56:46Z",
-      "category": "math.OC"
-    },
-    {
-      "title": "Agensh: Scaling Organizational Intelligence to 1,024 Agents",
-      "summary": "A multi-agent system can reduce latency on complex tasks by executing work concurrently. Several pioneering harness frameworks support multi-agent systems. However, the scalability of current multi-agent harnesses is often constrained by a central orchestrator's capacity to alloc…",
-      "authors": [
-        "Zhihao Zhan",
-        "Ting Song",
-        "Li Dong",
+        "Chao Feng",
+        "Zhiyang Xu",
+        "Bowei Chen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.26781v1",
-      "published": "2026-09-22T17:56:25Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue",
-      "summary": "Long-term conversational memory in multi-party settings requires more than retrieving relevant content from long-term conversations: it must distinguish who said what, whom each statement concerns, how individuals perceive one another, what information is shared by the group, and…",
-      "authors": [
-        "Haobo Zheng",
-        "Tan Tang",
-        "Yan Chen",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.26780v1",
-      "published": "2026-09-22T17:56:12Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
-      "summary": "Agents often work on complex problems that require millions of tokens of context, which necessitates compacting across sessions due to limited context windows. We develop CliffCompaction, an autocompaction technique that reduces cost by up to 50% under a bounded context while mai…",
-      "authors": [
-        "Trang Nguyen",
-        "Eulrang Cho",
-        "Bingqing Chen",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.26779v1",
-      "published": "2026-09-22T17:55:59Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving",
-      "summary": "We introduce SWE-Serve, a benchmark for evaluating agents on production inference engineering tasks. Implementing an inference feature can require coordinating multiple changes across the serving stack, including model support, runtime execution, and public APIs. Existing benchma…",
-      "authors": [
-        "Jennifer Williams",
-        "Dave Farris",
-        "Jeff Farris",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.26777v1",
-      "published": "2026-09-22T17:54:59Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "A2M: Trace-Optimized Agent Hijacking in the MCP Ecosystem",
-      "summary": "Agents using the Model Context Protocol (MCP) rely on semantic matching to select tools from third-party servers, exposing a semantic supply-chain risk through attacker-controlled metadata and outputs. We introduce A2M (Attraction-to-Manipulation), a two-stage black-box framework…",
-      "authors": [
-        "Laizhen Li",
-        "Xuan Wang",
-        "Peicheng Zhao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.26761v1",
-      "published": "2026-09-22T17:41:34Z",
-      "category": "cs.CR"
-    },
-    {
-      "title": "Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents",
-      "summary": "Large language model (LLM) agents often handle streams of related tasks, yet standard harnesses repeatedly ask the model to reconstruct the same control decisions inside each task's context. We study whether task feedback can instead turn recurring control into reusable executabl…",
-      "authors": [
-        "Laizhen Li",
-        "Jiarui Li",
-        "Juanjuan Zhao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.26760v1",
-      "published": "2026-09-22T17:40:45Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Type-Safe Is Not Error-Free: A Constrained Decision Head Follows the Option Name, Not the Rubric Bound to It",
-      "summary": "Typed decision models are built for settings where model outputs are consumed directly by software. Instead of generating free-form text, they return a decision over a predefined set of options. By construction, every output conforms to the required schema. Yet this guarantee doe…",
-      "authors": [
-        "Yu Sun",
-        "Junhao Xu"
-      ],
-      "link": "http://arxiv.org/abs/2609.26758v1",
-      "published": "2026-09-22T17:38:12Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "FleXray: Universal Clinical X-ray Segmentation",
-      "summary": "X-ray is medicine's most widely used imaging modality, yet remains among its least quantitative. Unlike volumetric modalities like CT or MRI, X-ray collapses 3D anatomy into a 2D projection, causing structures to overlap and anatomical boundaries to be ambiguous, even to experts.…",
-      "authors": [
-        "Victor Ion Butoi",
-        "Vivek Gopalakrishnan",
-        "John V. Guttag",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.26756v1",
-      "published": "2026-09-22T17:37:55Z",
+      "link": "http://arxiv.org/abs/2609.28473v1",
+      "published": "2026-09-23T17:59:56Z",
       "category": "cs.CV"
     },
     {
-      "title": "EquivSVA: A Formally Verified Dataset of Behavioral Assertions Across Equivalent RTL Implementations",
-      "summary": "Large language models are increasingly used to generate SystemVerilog Assertions from natural-language specifica- tions and register-transfer-level designs. Existing datasets and benchmarks support important goals such as large- scale training, formal evaluation, specification-to…",
+      "title": "Contrastive Learning for Authorship Verification",
+      "summary": "Our results show that contrastive learning outperforms a classification-based approach to authorship verification under the tested settings. We identify loss function, batch size, training duration, pre-trained model, input context length, and random text span data augmentation a…",
       "authors": [
-        "FNU Aditi"
+        "Peter Kirby"
       ],
-      "link": "http://arxiv.org/abs/2609.26751v1",
-      "published": "2026-09-22T17:33:09Z",
+      "link": "http://arxiv.org/abs/2609.28471v1",
+      "published": "2026-09-23T17:59:08Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "StudentBench: AI and human tutoring yield equivalent GRE learning gains",
+      "summary": "Artificial intelligence offers an unprecedented opportunity to augment human capabilities, yet progress at the frontier has focused primarily on advancing model capabilities. We introduce StudentBench, a suite of AI teaching evaluations and a public platform that enables large-sc…",
+      "authors": [
+        "Curtis Northcutt",
+        "Inaara Hasmani",
+        "Kevin Feng",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.28470v1",
+      "published": "2026-09-23T17:57:45Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Where Should I Join? Robot Group Joining via Language-Guided Goal Prediction",
+      "summary": "Social navigation typically assumes a specified goal and focuses on reaching it while respecting social conventions, whereas robot group joining requires predicting where to join based on the group's real-time activity and formation. This is a highly semantic task, yet an importa…",
+      "authors": [
+        "Zilin Fang",
+        "Zishuo Wang",
+        "Gim Hee Lee",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.28467v1",
+      "published": "2026-09-23T17:55:48Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "Even Sharper Bounds for Transductive Learning and Its Applications",
+      "summary": "We introduce Sharper Transductive Local Complexity (STLC), a localized complexity method for transductive learning under uniform sampling without replacement. The construction starts from a Bernstein-type concentration inequality for the supremum of the test--train empirical proc…",
+      "authors": [
+        "Yingzhen Yang"
+      ],
+      "link": "http://arxiv.org/abs/2609.28459v1",
+      "published": "2026-09-23T17:52:50Z",
       "category": "cs.LG"
     },
     {
-      "title": "Metrics Failure in LLM-Based Code Vulnerability Repair: An Empirical Study and a Change-Aware Screen",
-      "summary": "Large language models (LLMs) are increasingly applied to the automated repair of C/C++ security vulnerabilities, and compile rate is a commonly reported proxy for progress: whether the generated patch compiles. We argue that compile rate is a scientifically unreliable metric for …",
+      "title": "Can LLMs Reason About Runtime Behavior? A Repository-Level Dynamic Benchmark",
+      "summary": "Large language models (LLMs) are increasingly used in coding tasks, but their ability to reason about code execution remains unclear. Existing repository-level QA benchmarks mainly evaluate static code understanding and often rely on LLM-based evaluation, while execution-reasonin…",
       "authors": [
-        "Om Nepal",
-        "Sushant Aryal",
-        "Oluseyi Olukola",
+        "Hamed Taherkhani",
+        "Mohammad Abdollahi",
+        "Melika Sepidband",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.26749v1",
-      "published": "2026-09-22T17:32:05Z",
+      "link": "http://arxiv.org/abs/2609.28449v1",
+      "published": "2026-09-23T17:46:50Z",
       "category": "cs.SE"
+    },
+    {
+      "title": "Nonequilibrium Phases of Repulsive Self-Attention: Chaos, Attention Condensation, and Emergent Locality",
+      "summary": "We study the nonequilibrium dynamics of a minimal recurrent transformer with $N$ normalized tokens, $Q=K=I$, and a negative value map $V=-I$. Similarity-based attention selects nearby representations, while the negative value map drives tokens away from the selected field. This f…",
+      "authors": [
+        "Qucheng Gao",
+        "Zuyi Yang",
+        "Xiao Chen"
+      ],
+      "link": "http://arxiv.org/abs/2609.28448v1",
+      "published": "2026-09-23T17:46:38Z",
+      "category": "cond-mat.dis-nn"
+    },
+    {
+      "title": "Order-Invariant Answers, Order-Sensitive Representations in Mathematical Reasoning",
+      "summary": "Reordering a set of mathematical rules without changing its meaning should preserve the correct answer, but must a model's internal representations stay invariant too? We investigate this question using synthetic multi-step function-composition problems, each presented under mult…",
+      "authors": [
+        "Zhixu Silvia Tao"
+      ],
+      "link": "http://arxiv.org/abs/2609.28442v1",
+      "published": "2026-09-23T17:40:57Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Minimal-Norm Univariate Two-Layer ReLU Classification: Exact Solutions and Global Optimality with Skip Connections",
+      "summary": "We study minimal-norm interpolation and $\\ell_2$-regularized logistic-loss minimization for binary classification by univariate two-layer ReLU networks. We give complete geometric characterizations of the optimal classifiers in function space, resolving how the solutions depend o…",
+      "authors": [
+        "Karolina Drabik",
+        "Ben Lewis",
+        "Antoni Puch",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.28438v1",
+      "published": "2026-09-23T17:37:26Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Cross-Scale Transfer Learning for Depression Severity Prediction: From PHQ-8 to HAMD-17 Across Languages and Clinical Paradigms",
+      "summary": "This work addresses continuous depression-severity score prediction from clinical interview transcripts under data scarcity. We propose a sequential low-rank adaptation (LoRA) protocol for cross-scale transfer: a Qwen3 backbone with a bounded regression head is first fine-tuned o…",
+      "authors": [
+        "Wenjie Feng",
+        "Sahba Zojaji",
+        "Satoshi Nakamura"
+      ],
+      "link": "http://arxiv.org/abs/2609.28430v1",
+      "published": "2026-09-23T17:30:07Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Context-Continuous Preference Learning for Exoskeleton Personalization",
+      "summary": "Personalizing exoskeleton assistance across operating conditions is constrained by the time and physical effort required to collect user feedback. We examined whether a user's preference landscape varies smoothly across operating conditions and when this continuity supports learn…",
+      "authors": [
+        "Sunin Baek",
+        "Sungwoo Park",
+        "Daekyum Kim"
+      ],
+      "link": "http://arxiv.org/abs/2609.28427v1",
+      "published": "2026-09-23T17:28:08Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Repairability of Inexact Solvers in Recursive State Estimation with Machine Learning",
+      "summary": "Recursive state estimation often executes approximate numerical solutions inside a feedback loop, where highly accurate local steps do not guarantee better overall results. For a fixed linear Kalman model, we characterize when a correction within a prescribed subspace and norm bu…",
+      "authors": [
+        "Yanjun Ji",
+        "Dennis Willsch",
+        "Orkun Şensebat",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.28425v1",
+      "published": "2026-09-23T17:27:07Z",
+      "category": "quant-ph"
     }
   ]
 }

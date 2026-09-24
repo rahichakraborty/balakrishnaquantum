@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-09-23T18:46:56+00:00",
+  "generated_at": "2026-09-24T08:03:33+00:00",
   "items": [
     {
       "id": "convaiinnovations/laya",
       "url": "https://huggingface.co/convaiinnovations/laya",
       "downloads": 0,
-      "likes": 3023,
+      "likes": 3218,
       "pipeline_tag": "text-classification"
     },
     {
       "id": "Qwen/Qwen-Image-2.1",
       "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
       "downloads": 28407,
-      "likes": 1986,
+      "likes": 2091,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
       "downloads": 2815979,
-      "likes": 1935,
+      "likes": 1970,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "XingChen-AGI/Xing4.0-29B-A4B",
       "url": "https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B",
       "downloads": 39009,
-      "likes": 1502,
+      "likes": 1638,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
       "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
       "downloads": 350678,
-      "likes": 1400,
+      "likes": 1508,
       "pipeline_tag": "text-to-image"
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-      "downloads": 570909,
-      "likes": 3658,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Comfy-Org/Qwen-Image-2.1",
       "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
       "downloads": 2220609,
-      "likes": 615,
+      "likes": 645,
       "pipeline_tag": null
     },
     {
       "id": "Altworld/Hemmingway-1",
       "url": "https://huggingface.co/Altworld/Hemmingway-1",
       "downloads": 3787,
-      "likes": 563,
+      "likes": 595,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "downloads": 570909,
+      "likes": 3684,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 6912469,
-      "likes": 16121,
+      "likes": 16163,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "AlexWortega/openjev",
       "url": "https://huggingface.co/AlexWortega/openjev",
       "downloads": 0,
-      "likes": 508,
+      "likes": 536,
       "pipeline_tag": "text-classification"
     }
   ]

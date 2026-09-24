@@ -1,94 +1,94 @@
 {
-  "generated_at": "2026-09-24T08:03:32+00:00",
+  "generated_at": "2026-09-24T18:47:28+00:00",
   "items": [
     {
       "name": "affaan-m/ECC",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 266366,
+      "stars": 266696,
       "language": "JavaScript",
-      "updated_at": "2026-09-22T23:09:59Z",
+      "updated_at": "2026-09-24T16:52:48Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/124439313?v=4"
     },
     {
       "name": "NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 248522,
+      "stars": 248666,
       "language": "Python",
-      "updated_at": "2026-09-24T08:01:54Z",
+      "updated_at": "2026-09-24T18:15:51Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/134168893?v=4"
     },
     {
       "name": "deepseek-ai/deepseek-harness",
       "description": "DeepSeek Harness: Everything is a Plugin.",
       "url": "https://github.com/deepseek-ai/deepseek-harness",
-      "stars": 234653,
+      "stars": 235068,
       "language": "TypeScript",
-      "updated_at": "2026-09-23T13:30:24Z",
+      "updated_at": "2026-09-24T14:10:21Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/148330874?v=4"
     },
     {
       "name": "tensorflow/tensorflow",
       "description": "An Open Source Machine Learning Framework for Everyone",
       "url": "https://github.com/tensorflow/tensorflow",
-      "stars": 200273,
+      "stars": 200284,
       "language": "C++",
-      "updated_at": "2026-09-24T07:30:57Z",
+      "updated_at": "2026-09-24T18:43:12Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/15658638?v=4"
     },
     {
       "name": "Significant-Gravitas/AutoGPT",
       "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "stars": 187515,
+      "stars": 187523,
       "language": "Python",
-      "updated_at": "2026-09-24T08:03:03Z",
+      "updated_at": "2026-09-24T18:41:21Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/130738209?v=4"
     },
     {
       "name": "firecrawl/firecrawl",
       "description": "The web data API to search, scrape, and interact at scale. 🔥",
       "url": "https://github.com/firecrawl/firecrawl",
-      "stars": 184007,
+      "stars": 184208,
       "language": "TypeScript",
-      "updated_at": "2026-09-24T06:26:39Z",
+      "updated_at": "2026-09-24T16:50:40Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/135057108?v=4"
     },
     {
       "name": "ollama/ollama",
       "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
       "url": "https://github.com/ollama/ollama",
-      "stars": 181565,
+      "stars": 181622,
       "language": "Go",
-      "updated_at": "2026-09-24T03:46:00Z",
+      "updated_at": "2026-09-24T16:42:51Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/151674099?v=4"
     },
     {
       "name": "huggingface/transformers",
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "url": "https://github.com/huggingface/transformers",
-      "stars": 166582,
+      "stars": 166601,
       "language": "Python",
-      "updated_at": "2026-09-24T08:01:18Z",
+      "updated_at": "2026-09-24T18:05:36Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/25720743?v=4"
     },
     {
       "name": "langgenius/dify",
       "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
       "url": "https://github.com/langgenius/dify",
-      "stars": 157040,
+      "stars": 157105,
       "language": "TypeScript",
-      "updated_at": "2026-09-24T08:02:18Z",
+      "updated_at": "2026-09-24T13:34:55Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/127165244?v=4"
     },
     {
       "name": "open-webui/open-webui",
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "url": "https://github.com/open-webui/open-webui",
-      "stars": 152969,
+      "stars": 153051,
       "language": "Python",
-      "updated_at": "2026-09-24T04:15:30Z",
+      "updated_at": "2026-09-24T16:34:06Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/158137808?v=4"
     }
   ]

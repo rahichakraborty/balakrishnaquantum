@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-09-25T19:05:37+00:00",
+  "generated_at": "2026-09-26T08:14:55+00:00",
   "items": [
     {
       "id": "convaiinnovations/laya",
       "url": "https://huggingface.co/convaiinnovations/laya",
       "downloads": 0,
-      "likes": 3634,
+      "likes": 3741,
       "pipeline_tag": "text-classification"
     },
     {
       "id": "Qwen/Qwen-Image-2.1",
       "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
       "downloads": 42469,
-      "likes": 2302,
+      "likes": 2348,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
       "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
       "downloads": 715906,
-      "likes": 1756,
+      "likes": 1841,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "XingChen-AGI/Xing4.0-29B-A4B",
       "url": "https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B",
       "downloads": 42950,
-      "likes": 1684,
+      "likes": 1692,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
       "downloads": 3109078,
-      "likes": 2082,
+      "likes": 2104,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Comfy-Org/Qwen-Image-2.1",
       "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
       "downloads": 3266380,
-      "likes": 723,
+      "likes": 740,
       "pipeline_tag": null
     },
     {
       "id": "Altworld/Hemmingway-1",
       "url": "https://huggingface.co/Altworld/Hemmingway-1",
       "downloads": 4978,
-      "likes": 666,
+      "likes": 684,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Edge0/Audio8-ASR-Infinite",
       "url": "https://huggingface.co/Edge0/Audio8-ASR-Infinite",
       "downloads": 2853,
-      "likes": 550,
+      "likes": 681,
       "pipeline_tag": "automatic-speech-recognition"
     },
     {
       "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
       "downloads": 42062,
-      "likes": 494,
+      "likes": 507,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "TaichuAI/ZDTaichu5.0-9B",
       "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
       "downloads": 9498,
-      "likes": 1046,
+      "likes": 1152,
       "pipeline_tag": "image-text-to-text"
     }
   ]

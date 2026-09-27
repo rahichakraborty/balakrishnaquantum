@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-09-27T08:51:51+00:00",
+  "generated_at": "2026-09-27T18:51:22+00:00",
   "items": [
     {
       "id": "convaiinnovations/laya",
       "url": "https://huggingface.co/convaiinnovations/laya",
       "downloads": 0,
-      "likes": 3955,
+      "likes": 4057,
       "pipeline_tag": "text-classification"
-    },
-    {
-      "id": "Qwen/Qwen-Image-2.1",
-      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
-      "downloads": 48361,
-      "likes": 2424,
-      "pipeline_tag": "text-to-image"
     },
     {
       "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
       "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
-      "downloads": 876673,
-      "likes": 1983,
+      "downloads": 964220,
+      "likes": 2046,
+      "pipeline_tag": "text-to-image"
+    },
+    {
+      "id": "Qwen/Qwen-Image-2.1",
+      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+      "downloads": 52804,
+      "likes": 2472,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "XingChen-AGI/Xing4.0-29B-A4B",
       "url": "https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B",
-      "downloads": 43947,
-      "likes": 1750,
+      "downloads": 45028,
+      "likes": 1777,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Edge0/Audio8-ASR-Infinite",
       "url": "https://huggingface.co/Edge0/Audio8-ASR-Infinite",
-      "downloads": 7859,
-      "likes": 853,
+      "downloads": 19434,
+      "likes": 977,
       "pipeline_tag": "automatic-speech-recognition"
-    },
-    {
-      "id": "Comfy-Org/Qwen-Image-2.1",
-      "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
-      "downloads": 3641785,
-      "likes": 789,
-      "pipeline_tag": null
-    },
-    {
-      "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
-      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
-      "downloads": 3247527,
-      "likes": 2151,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "Altworld/Hemmingway-1",
       "url": "https://huggingface.co/Altworld/Hemmingway-1",
-      "downloads": 5590,
-      "likes": 718,
+      "downloads": 5904,
+      "likes": 730,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
+      "downloads": 3343748,
+      "likes": 2177,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "Comfy-Org/Qwen-Image-2.1",
+      "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
+      "downloads": 3987373,
+      "likes": 800,
+      "pipeline_tag": null
     },
     {
       "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
-      "downloads": 74497,
-      "likes": 533,
+      "downloads": 75079,
+      "likes": 548,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
-      "downloads": 7905,
-      "likes": 507,
+      "downloads": 8839,
+      "likes": 519,
       "pipeline_tag": "image-text-to-text"
     }
   ]

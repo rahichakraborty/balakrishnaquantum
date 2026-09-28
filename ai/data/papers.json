@@ -1,154 +1,151 @@
 {
-  "generated_at": "2026-09-27T18:51:14+00:00",
+  "generated_at": "2026-09-28T09:16:05+00:00",
   "items": [
     {
-      "title": "LLM Agents Can Easily Tamper With Their Own Traces",
-      "summary": "Asynchronous monitoring, incident investigations, and compliance audits primarily rely on agent traces to reconstruct what happened. These analyses assume that LLM agents cannot tamper with their own execution traces. We show that local LLM agents such as Claude Code, Codex, Anti…",
+      "title": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
+      "summary": "Reasoning models often generate very long reasoning traces, making inference computationally expensive. Existing approaches typically improve efficiency either through inference-time early-stopping mechanisms or by explicitly encouraging shorter reasoning during training, for exa…",
       "authors": [
-        "Jeremy Qin",
-        "David Schmotz",
-        "Derck Prinzhorn",
+        "Parsa Hosseini",
+        "Akasha Tigalappanavara",
+        "Sumit Nawathe",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.30266v1",
-      "published": "2026-09-24T17:59:54Z",
-      "category": "cs.CR"
-    },
-    {
-      "title": "AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control",
-      "summary": "Latent world models are typically trained to predict factual transitions, whereas model predictive control (MPC) must compare alternative actions from the same state. A model can therefore achieve low factual prediction error yet poorly distinguish candidate actions. We introduce…",
-      "authors": [
-        "Jiabin Qiu",
-        "Zixuan Chen",
-        "Hongye Cao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.30264v1",
-      "published": "2026-09-24T17:59:41Z",
+      "link": "http://arxiv.org/abs/2609.31619v1",
+      "published": "2026-09-25T17:59:52Z",
       "category": "cs.AI"
     },
     {
-      "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
-      "summary": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Tempora…",
+      "title": "Gap-free Differentially Private PCA for Gaussian Data",
+      "summary": "We give a gap-free differentially private algorithm for the principal component analysis (PCA) problem with Gaussian data.",
       "authors": [
-        "Sudip Bhujel",
-        "Shanghao Shi",
-        "Ruiquan Huang",
+        "Alina Ene",
+        "Huy L. Nguyen"
+      ],
+      "link": "http://arxiv.org/abs/2609.31614v1",
+      "published": "2026-09-25T17:58:38Z",
+      "category": "cs.DS"
+    },
+    {
+      "title": "First-Order Stationarity of Reverse Diffusions",
+      "summary": "Recent literature has shown a strong connection between optimization and sampling. We develop the corresponding first-order theory for diffusion models. First, the SDE-based reverse-time flows of overdamped and underdamped Langevin diffusions contract relative Fisher divergences …",
+      "authors": [
+        "Zhifeng Chen",
+        "Chenyang Jiang",
+        "Yazhen Wang"
+      ],
+      "link": "http://arxiv.org/abs/2609.31612v1",
+      "published": "2026-09-25T17:57:43Z",
+      "category": "stat.ML"
+    },
+    {
+      "title": "Statistical attribute alignment for black-box generative AI via output post-processing",
+      "summary": "Generative AI systems are increasingly used, but aligning their outputs with user requirements poses a continuing challenge. Here, we aim to ensure that the distribution of an attribute of an AI-generated output aligns with a user-specified target. This is motivated by examples s…",
+      "authors": [
+        "Kevin Jiang",
+        "Morgane Austern",
+        "Edgar Dobriban",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.30258v1",
-      "published": "2026-09-24T17:59:18Z",
+      "link": "http://arxiv.org/abs/2609.31607v1",
+      "published": "2026-09-25T17:55:49Z",
+      "category": "stat.ME"
+    },
+    {
+      "title": "User Model Extraction via Belief Self-Distillation",
+      "summary": "Large language models (LLMs) implicitly infer attributes of their users and adapt their behavior accordingly, yet these beliefs remain difficult to inspect and causally manipulate. We introduce Belief Self-Distillation (BSD), a unified read-write framework that bridges linear and…",
+      "authors": [
+        "Ali Holmov",
+        "Yiran Huang",
+        "Kirill Bykov",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.31603v1",
+      "published": "2026-09-25T17:54:32Z",
       "category": "cs.LG"
     },
     {
-      "title": "Agentic Detection of Online Conspiracies",
-      "summary": "Conspiratorial discourse on social media is not always expressed through explicit claims or stable lexical markers. The same surface content may express endorsement, legitimate concerns, criticism, satire, or mockery. The main challenge is therefore not only recognizing conspirac…",
+      "title": "New LoRA Skills Should Read but Never Write",
+      "summary": "Low-rank adapters (LoRA) make it cheap to fine-tune a large language model once per task, but combining several independently trained adapters into one model remains difficult: merging the updates in weight space causes interference, retraining on all task data is expensive, and …",
       "authors": [
-        "Lior Biton",
-        "Oren Tsur"
-      ],
-      "link": "http://arxiv.org/abs/2609.30250v1",
-      "published": "2026-09-24T17:58:43Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "RAPID: Robot Agentic Programming from Demonstrations",
-      "summary": "Coding agents have demonstrated enormous success in solving complex programming problems. To leverage their potential for robot systems, this work introduces Robot Agentic Programming from Demonstrations (RAPID), which automatically generates, verifies, and refines robot programs…",
-      "authors": [
-        "Yuyao Liu",
-        "Jiayuan Mao",
-        "David Hsu",
+        "Zeyan Li",
+        "Panqi Yang",
+        "Qirong Guo",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.30249v1",
-      "published": "2026-09-24T17:58:21Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Rolling-WAM: World Action Models with Rolling Imagination",
-      "summary": "World Action Models (WAMs) couple action generation with future visual prediction for robotic manipulation. However, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiv…",
-      "authors": [
-        "Yinghua Zhou",
-        "Junjie Ye",
-        "Yiqi Zhao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.30247v1",
-      "published": "2026-09-24T17:58:03Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "JevOut: Natural Context Can Flip Decision Models",
-      "summary": "Dedicated decision models such as Jev map unstructured language to probability distributions over finite choices, allowing their outputs to directly route requests, select tools, and trigger actions. Yet real-world inputs rarely arrive in isolation: they come with background deta…",
-      "authors": [
-        "Zixiang Xu"
-      ],
-      "link": "http://arxiv.org/abs/2609.30243v1",
-      "published": "2026-09-24T17:57:07Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "SemMSA: Latent Semantic-Aided Robust Multimodal Sentiment Analysis with Incomplete Data",
-      "summary": "Recent research on Multimodal Sentiment Analysis (MSA) has focused on learning from language, visual, and acoustic modalities with incomplete data to infer human sentiment. Most studies typically compensate for missing information by reconstructing modality features or designing …",
-      "authors": [
-        "Wenhao Li",
-        "Zhibin Wu",
-        "Chong Xiao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.30238v1",
-      "published": "2026-09-24T17:55:31Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Coding Agents for Generalized Task and Motion Planning Problems",
-      "summary": "Task and motion planning (TAMP) problems remain difficult even with full observability and object-centric states because discrete decisions are tightly coupled to geometric, kinematic, and dynamic constraints. Generalized TAMP addresses this difficulty by exploiting regularities …",
-      "authors": [
-        "Matteo Merler",
-        "Bowen Li",
-        "Josh Roy",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.30233v1",
-      "published": "2026-09-24T17:53:35Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "To Trust or Not to Trust: Retrieval-Augmented Fact Checking in Speech",
-      "summary": "Online misinformation increasingly appears in spoken formats such as news clips, podcasts, interviews, political speeches, and social media videos, creating a need for fact-checking systems that can verify claims directly from speech. We introduce VeriSpeak, a probe benchmark for…",
-      "authors": [
-        "Debajyoti Mazumder",
-        " Mamta",
-        "Abhirama Subramanyam Penamakuri"
-      ],
-      "link": "http://arxiv.org/abs/2609.30227v1",
-      "published": "2026-09-24T17:50:40Z",
+      "link": "http://arxiv.org/abs/2609.31600v1",
+      "published": "2026-09-25T17:54:01Z",
       "category": "cs.LG"
     },
     {
-      "title": "PoEM: Predicting RL Outcomes from Existing Policies",
-      "summary": "Foundation models are post-trained with reinforcement learning (RL) to maximize specific rewards, such as human alignment, correctness, or instruction following. This post-training process is computationally intensive, sometimes unstable, and has to be run from scratch every time…",
+      "title": "Common-Mode Collapse and Recovery in Direct Feedback Alignment",
+      "summary": "Direct feedback alignment (DFA) trains hidden layers through fixed random projections of output error. With tanh hidden units and independent sigmoid outputs, plain stochastic gradient descent can stall near the loss of a constant predictor of class frequencies. We trace this sta…",
       "authors": [
-        "Kimia Hamidieh",
-        "Giannis Daras",
-        "Antonio Torralba"
+        "Varun Reddy",
+        "Bernardo L. Sabatini",
+        "Houman Safaai"
       ],
-      "link": "http://arxiv.org/abs/2609.30226v1",
-      "published": "2026-09-24T17:50:25Z",
+      "link": "http://arxiv.org/abs/2609.31589v1",
+      "published": "2026-09-25T17:43:40Z",
       "category": "cs.LG"
     },
     {
-      "title": "TrackEverything: Long Horizon Dense Tracking via De-Duplicating 3D Scene Representations",
-      "summary": "Existing point tracking models face a fundamental tradeoff: they can either track a sparse set of query points over long horizons, or track all points across only short clips. We introduce TrackEverything, a 3D point tracker that breaks this trade-off by representing videos as pe…",
+      "title": "Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer",
+      "summary": "We investigate whether natural-language documentation helps coding agents resolve software issues, and we build the tools to construct and evaluate it. We introduce a roundtrip benchmark that scores code descriptions by whether code regenerated from them passes the original tests…",
       "authors": [
-        "Ayush Jain",
-        "Sreeharsha Paruchuri",
-        "Ishita Gupta",
+        "Md Shohel Arman",
+        "Igor Molybog"
+      ],
+      "link": "http://arxiv.org/abs/2609.31587v1",
+      "published": "2026-09-25T17:42:22Z",
+      "category": "cs.SE"
+    },
+    {
+      "title": "Trust Guided Decision Transformer",
+      "summary": "Decision Transformer performance degrades on long rollouts because the conditioning context drifts out of the training distribution. We show that this drift is visible through the model's own next state prediction error, which rises during rollout and stays elevated, giving a dir…",
+      "authors": [
+        "Chainesh Gautam",
+        "Raghuram Bharadwaj Diddigi",
+        "Chandramouli Kamanchi",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.30222v1",
-      "published": "2026-09-24T17:48:20Z",
+      "link": "http://arxiv.org/abs/2609.31586v1",
+      "published": "2026-09-25T17:42:19Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "OC-GS: Gaussian Splatting for Irregular Turntable Capture",
+      "summary": "Uneven rotation and dropped frames make equal-angle assumptions unreliable for turntable reconstruction. We present OC-GS, an object-centric Gaussian splatting that refines each image's angle while maintaining a shared camera, rotation axis, and pivot. This orbit-consistent refin…",
+      "authors": [
+        "Jae Joong Lee",
+        "Bedrich Benes"
+      ],
+      "link": "http://arxiv.org/abs/2609.31572v1",
+      "published": "2026-09-25T17:35:05Z",
       "category": "cs.CV"
+    },
+    {
+      "title": "Strategically Diverse Sampling for Self-Training",
+      "summary": "Many LLM training and inference methods, including RL and test-time scaling, depend on repeated sampling, but benefit only when the responses meaningfully differ. Self-training faces the same challenge: training data is typically constructed by sampling IID responses and filterin…",
+      "authors": [
+        "Alexander Gurung",
+        "Esmeralda S. Whitammer",
+        "Mirella Lapata"
+      ],
+      "link": "http://arxiv.org/abs/2609.31571v1",
+      "published": "2026-09-25T17:35:05Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Uncertainty and Explainability in Deep Rough Volatility: A Neural Information-Theoretic Posterior Approach",
+      "summary": "Deep learning has substantially accelerated the calibration of complex stochastic-volatility models, but neural point calibration alone does not capture the uncertainty remaining after an implied-volatility (IV) surface has been observed. We develop a simulation-based inference f…",
+      "authors": [
+        "Damiano Brigo",
+        "Raphaël Huser",
+        "Dan Leonte"
+      ],
+      "link": "http://arxiv.org/abs/2609.31570v1",
+      "published": "2026-09-25T17:34:56Z",
+      "category": "stat.ML"
     }
   ]
 }

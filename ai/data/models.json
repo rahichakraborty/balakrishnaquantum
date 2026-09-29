@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-09-28T21:01:16+00:00",
+  "generated_at": "2026-09-29T09:24:30+00:00",
   "items": [
     {
       "id": "convaiinnovations/laya",
       "url": "https://huggingface.co/convaiinnovations/laya",
       "downloads": 0,
-      "likes": 4289,
+      "likes": 4397,
       "pipeline_tag": "text-classification"
-    },
-    {
-      "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
-      "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
-      "downloads": 1062921,
-      "likes": 2243,
-      "pipeline_tag": "text-to-image"
     },
     {
       "id": "Edge0/Audio8-ASR-Infinite",
       "url": "https://huggingface.co/Edge0/Audio8-ASR-Infinite",
       "downloads": 19963,
-      "likes": 1372,
+      "likes": 1456,
       "pipeline_tag": "automatic-speech-recognition"
+    },
+    {
+      "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+      "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+      "downloads": 1062921,
+      "likes": 2319,
+      "pipeline_tag": "text-to-image"
     },
     {
       "id": "Qwen/Qwen-Image-2.1",
       "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
       "downloads": 58693,
-      "likes": 2581,
+      "likes": 2614,
       "pipeline_tag": "text-to-image"
-    },
-    {
-      "id": "XingChen-AGI/Xing4.0-29B-A4B",
-      "url": "https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B",
-      "downloads": 45834,
-      "likes": 1798,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "XingChen-AGI/TeleOCR",
       "url": "https://huggingface.co/XingChen-AGI/TeleOCR",
       "downloads": 27904,
-      "likes": 735,
+      "likes": 830,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
-      "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
-      "downloads": 9994,
-      "likes": 545,
-      "pipeline_tag": "image-text-to-text"
+      "id": "XingChen-AGI/Xing4.0-29B-A4B",
+      "url": "https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B",
+      "downloads": 45834,
+      "likes": 1803,
+      "pipeline_tag": "text-generation"
     },
     {
-      "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
-      "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
-      "downloads": 76518,
-      "likes": 581,
+      "id": "Contrastive-LM/CLM-v0.1-8B",
+      "url": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B",
+      "downloads": 1271,
+      "likes": 503,
+      "pipeline_tag": "text-ranking"
+    },
+    {
+      "id": "nvidia/Nemotron-3-Diarization",
+      "url": "https://huggingface.co/nvidia/Nemotron-3-Diarization",
+      "downloads": 26428,
+      "likes": 486,
+      "pipeline_tag": "voice-activity-detection"
+    },
+    {
+      "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
+      "downloads": 3457124,
+      "likes": 2248,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "TaichuAI/ZDTaichu5.0-9B",
       "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
       "downloads": 11738,
-      "likes": 1703,
+      "likes": 1804,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
-      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
-      "downloads": 3457124,
-      "likes": 2232,
-      "pipeline_tag": "text-generation"
     }
   ]
 }

@@ -1,151 +1,159 @@
 {
-  "generated_at": "2026-09-28T21:01:07+00:00",
+  "generated_at": "2026-09-29T09:24:23+00:00",
   "items": [
     {
-      "title": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
-      "summary": "Reasoning models often generate very long reasoning traces, making inference computationally expensive. Existing approaches typically improve efficiency either through inference-time early-stopping mechanisms or by explicitly encouraging shorter reasoning during training, for exa…",
+      "title": "FurE: Efficient Instance-Specific 3D Fur Reconstruction without Animal-Fur Datasets",
+      "summary": "Realistic and editable animal fur reconstruction from multi-view images is challenging due to fine-scale detail, self-occlusion and obfuscation, and, unlike human hair, the lack of animal-fur datasets. Fur usually covers most of an animal's body, with large inter-species and intr…",
       "authors": [
-        "Parsa Hosseini",
-        "Akasha Tigalappanavara",
-        "Sumit Nawathe",
+        "Srinjay Sarkar",
+        "Prakhar Kaushik",
+        "Soumava Paul",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.31619v1",
-      "published": "2026-09-25T17:59:52Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Gap-free Differentially Private PCA for Gaussian Data",
-      "summary": "We give a gap-free differentially private algorithm for the principal component analysis (PCA) problem with Gaussian data.",
-      "authors": [
-        "Alina Ene",
-        "Huy L. Nguyen"
-      ],
-      "link": "http://arxiv.org/abs/2609.31614v1",
-      "published": "2026-09-25T17:58:38Z",
-      "category": "cs.DS"
-    },
-    {
-      "title": "First-Order Stationarity of Reverse Diffusions",
-      "summary": "Recent literature has shown a strong connection between optimization and sampling. We develop the corresponding first-order theory for diffusion models. First, the SDE-based reverse-time flows of overdamped and underdamped Langevin diffusions contract relative Fisher divergences …",
-      "authors": [
-        "Zhifeng Chen",
-        "Chenyang Jiang",
-        "Yazhen Wang"
-      ],
-      "link": "http://arxiv.org/abs/2609.31612v1",
-      "published": "2026-09-25T17:57:43Z",
-      "category": "stat.ML"
-    },
-    {
-      "title": "Statistical attribute alignment for black-box generative AI via output post-processing",
-      "summary": "Generative AI systems are increasingly used, but aligning their outputs with user requirements poses a continuing challenge. Here, we aim to ensure that the distribution of an attribute of an AI-generated output aligns with a user-specified target. This is motivated by examples s…",
-      "authors": [
-        "Kevin Jiang",
-        "Morgane Austern",
-        "Edgar Dobriban",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.31607v1",
-      "published": "2026-09-25T17:55:49Z",
-      "category": "stat.ME"
-    },
-    {
-      "title": "User Model Extraction via Belief Self-Distillation",
-      "summary": "Large language models (LLMs) implicitly infer attributes of their users and adapt their behavior accordingly, yet these beliefs remain difficult to inspect and causally manipulate. We introduce Belief Self-Distillation (BSD), a unified read-write framework that bridges linear and…",
-      "authors": [
-        "Ali Holmov",
-        "Yiran Huang",
-        "Kirill Bykov",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.31603v1",
-      "published": "2026-09-25T17:54:32Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "New LoRA Skills Should Read but Never Write",
-      "summary": "Low-rank adapters (LoRA) make it cheap to fine-tune a large language model once per task, but combining several independently trained adapters into one model remains difficult: merging the updates in weight space causes interference, retraining on all task data is expensive, and …",
-      "authors": [
-        "Zeyan Li",
-        "Panqi Yang",
-        "Qirong Guo",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.31600v1",
-      "published": "2026-09-25T17:54:01Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Common-Mode Collapse and Recovery in Direct Feedback Alignment",
-      "summary": "Direct feedback alignment (DFA) trains hidden layers through fixed random projections of output error. With tanh hidden units and independent sigmoid outputs, plain stochastic gradient descent can stall near the loss of a constant predictor of class frequencies. We trace this sta…",
-      "authors": [
-        "Varun Reddy",
-        "Bernardo L. Sabatini",
-        "Houman Safaai"
-      ],
-      "link": "http://arxiv.org/abs/2609.31589v1",
-      "published": "2026-09-25T17:43:40Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer",
-      "summary": "We investigate whether natural-language documentation helps coding agents resolve software issues, and we build the tools to construct and evaluate it. We introduce a roundtrip benchmark that scores code descriptions by whether code regenerated from them passes the original tests…",
-      "authors": [
-        "Md Shohel Arman",
-        "Igor Molybog"
-      ],
-      "link": "http://arxiv.org/abs/2609.31587v1",
-      "published": "2026-09-25T17:42:22Z",
-      "category": "cs.SE"
-    },
-    {
-      "title": "Trust Guided Decision Transformer",
-      "summary": "Decision Transformer performance degrades on long rollouts because the conditioning context drifts out of the training distribution. We show that this drift is visible through the model's own next state prediction error, which rises during rollout and stays elevated, giving a dir…",
-      "authors": [
-        "Chainesh Gautam",
-        "Raghuram Bharadwaj Diddigi",
-        "Chandramouli Kamanchi",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.31586v1",
-      "published": "2026-09-25T17:42:19Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "OC-GS: Gaussian Splatting for Irregular Turntable Capture",
-      "summary": "Uneven rotation and dropped frames make equal-angle assumptions unreliable for turntable reconstruction. We present OC-GS, an object-centric Gaussian splatting that refines each image's angle while maintaining a shared camera, rotation axis, and pivot. This orbit-consistent refin…",
-      "authors": [
-        "Jae Joong Lee",
-        "Bedrich Benes"
-      ],
-      "link": "http://arxiv.org/abs/2609.31572v1",
-      "published": "2026-09-25T17:35:05Z",
+      "link": "http://arxiv.org/abs/2609.35770v1",
+      "published": "2026-09-28T17:59:58Z",
       "category": "cs.CV"
     },
     {
-      "title": "Strategically Diverse Sampling for Self-Training",
-      "summary": "Many LLM training and inference methods, including RL and test-time scaling, depend on repeated sampling, but benefit only when the responses meaningfully differ. Self-training faces the same challenge: training data is typically constructed by sampling IID responses and filterin…",
+      "title": "Telescopic Language Models",
+      "summary": "One deployed language model must often serve many compute budgets, yet serving each budget still means a separate training or compression run per point. We train a Telescopic Language Model (TLM) to be that continuum: a nested-capacity Transformer supervised by stochastic prefix …",
       "authors": [
-        "Alexander Gurung",
-        "Esmeralda S. Whitammer",
-        "Mirella Lapata"
+        "Zhilin Guo",
+        "Boqiao Zhang",
+        "Hakan Aktas",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.31571v1",
-      "published": "2026-09-25T17:35:05Z",
+      "link": "http://arxiv.org/abs/2609.35769v1",
+      "published": "2026-09-28T17:59:53Z",
       "category": "cs.CL"
     },
     {
-      "title": "Uncertainty and Explainability in Deep Rough Volatility: A Neural Information-Theoretic Posterior Approach",
-      "summary": "Deep learning has substantially accelerated the calibration of complex stochastic-volatility models, but neural point calibration alone does not capture the uncertainty remaining after an implied-volatility (IV) surface has been observed. We develop a simulation-based inference f…",
+      "title": "PDMD: Projected Distribution Matching Distillation for Video Diffusion Models",
+      "summary": "Modern video diffusion models require tens of denoising evaluations over long spatiotemporal token sequences. Distribution Matching Distillation (DMD) reduces the number of function evaluations (NFE) to just a few. However, DMD samples can degrade during training, exhibiting prog…",
       "authors": [
-        "Damiano Brigo",
-        "Raphaël Huser",
-        "Dan Leonte"
+        "Zimo Wang",
+        "Junkun Yuan",
+        "Angtian Wang",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.31570v1",
-      "published": "2026-09-25T17:34:56Z",
-      "category": "stat.ML"
+      "link": "http://arxiv.org/abs/2609.35768v1",
+      "published": "2026-09-28T17:59:52Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
+      "summary": "Unified multimodal models can both look at and render images, so in principle they can repair their own generations: diagnose what an image gets wrong, revise it, observe the result, and diagnose again. Whether a revision helps is known only after it is rendered, so the reflectio…",
+      "authors": [
+        "Yijia Fan",
+        "Ziqi Huang",
+        "Zhongang Cai",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.35767v1",
+      "published": "2026-09-28T17:59:36Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Retrieving Biblical Intertextual References in Karen Blixen's Seven Gothic Tales",
+      "summary": "Identifying intertextual references is central to literary scholarship, but computationally difficult when source material is transformed through paraphrase, allusion, historical language, and translation. We investigate this problem through biblical intertextuality in Karen Blix…",
+      "authors": [
+        "András Kovács",
+        "Alexander Conroy",
+        "Daniel Hershcovich",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.35765v1",
+      "published": "2026-09-28T17:59:27Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Unifying Distributional Training for One-Step Visual Generation",
+      "summary": "\\emph{Distributional training} provides collective supervision for one-step visual generation by matching real and generated features in frozen representation spaces. We introduce \\emph{a unified theoretical framework} that separates distribution modeling from matching discrepanc…",
+      "authors": [
+        "Chi Zhang",
+        "Haoyang Shi",
+        "Yueyi Liu",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.35763v1",
+      "published": "2026-09-28T17:59:14Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Scaling Long-Form Story Generation via Narrative State Tracking",
+      "summary": "LLMs have demonstrated strong capabilities in creative writing. However, scaling them to full-length novels remains challenging, as maintaining narrative consistency becomes increasingly difficult. Existing story-generation methods typically focus on stories of up to about ten th…",
+      "authors": [
+        "Zhennan Wan",
+        "Jianfei Chen"
+      ],
+      "link": "http://arxiv.org/abs/2609.35759v1",
+      "published": "2026-09-28T17:59:09Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+      "summary": "When a large language model (LLM) agent executes the same task, token consumption can vary by over an order of magnitude across runs. The agent chooses its next steps based on tool feedback and intermediate results, while the growing context steadily inflates the input size of ev…",
+      "authors": [
+        "Chaoqian Ouyang",
+        "Ling Yue",
+        "Libin Zheng",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.35760v1",
+      "published": "2026-09-28T17:59:09Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Statistical Learning of Contractive Dynamical Representations for Composite Adaptive Control",
+      "summary": "We present a representation-learning framework for composite adaptive tracking control under dynamically coupled disturbances. The framework connects classical disturbance-accommodating control (DAC) to recent last-layer adaptive disturbance-rejection methods. Specifically, we in…",
+      "authors": [
+        "Min Kim",
+        "José Leonardo Brenes",
+        "Fred Hadaegh",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.35758v1",
+      "published": "2026-09-28T17:59:07Z",
+      "category": "eess.SY"
+    },
+    {
+      "title": "Neural Harmonic Measure Operator",
+      "summary": "We introduce Neural Harmonic Measure Operator (NHMO), a neural solver for elliptic PDE problems on variable-shape domains. The harmonic measure of a domain is the boundary probability distribution that, integrated against any boundary data, returns the Dirichlet Laplace solution.…",
+      "authors": [
+        "Jinjin He",
+        "Sinan Wang",
+        "Yuchen Sun",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.35752v1",
+      "published": "2026-09-28T17:58:13Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "How to Loop MoE: Flatten the Experts, Untie the Attention",
+      "summary": "Looped Transformers reuse one block of layers several times: by spending extra computation they push a model of fixed size further, and so use its parameters more fully; while sparse mixture-of-experts (MoE) models activate only a few of many experts for each token. Looped MoE br…",
+      "authors": [
+        "Shouren Wang",
+        "Chuang Ma",
+        "Mohsen Hariri",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.35751v1",
+      "published": "2026-09-28T17:58:03Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+      "summary": "Scaling the horizon of agentic LLMs is bottlenecked by the need to fit ever longer context traces in GPU memory. Context compaction has been the most popular mechanism to alleviate this issue, keeping GPU memory constant for a given trace. Unfortunately, most compaction strategie…",
+      "authors": [
+        "Emiliano Penaloza",
+        "Dane Malenfant",
+        "Dheeraj Vattikonda",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.35750v1",
+      "published": "2026-09-28T17:57:42Z",
+      "category": "cs.LG"
     }
   ]
 }

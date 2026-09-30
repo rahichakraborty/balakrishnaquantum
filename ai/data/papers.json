@@ -1,159 +1,156 @@
 {
-  "generated_at": "2026-09-29T19:44:47+00:00",
+  "generated_at": "2026-09-30T09:14:01+00:00",
   "items": [
     {
-      "title": "FurE: Efficient Instance-Specific 3D Fur Reconstruction without Animal-Fur Datasets",
-      "summary": "Realistic and editable animal fur reconstruction from multi-view images is challenging due to fine-scale detail, self-occlusion and obfuscation, and, unlike human hair, the lack of animal-fur datasets. Fur usually covers most of an animal's body, with large inter-species and intr…",
+      "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
+      "summary": "Robots deployed in the physical world must be able to improve beyond their initial training as they encounter new situations and failures. For this improvement to scale across tasks, it must make effective use of experience without requiring human demonstration of each correction…",
       "authors": [
-        "Srinjay Sarkar",
-        "Prakhar Kaushik",
-        "Soumava Paul",
+        "Zihang Rui",
+        "Renhao Wang",
+        "Haoxu Huang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.35770v1",
-      "published": "2026-09-28T17:59:58Z",
+      "link": "http://arxiv.org/abs/2609.38178v1",
+      "published": "2026-09-29T17:59:55Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "Imagine3D-LLM: Teaching MLLMs to Imagine 3D Scenes Before Answering",
+      "summary": "Reasoning about the 3D world from multi-view images remains a fundamental challenge for Multimodal Large Language Models (MLLMs). While modern MLLMs handle single-image inputs effectively, they struggle to integrate evidence across viewpoints into a coherent 3D understanding. A g…",
+      "authors": [
+        "Jaewoo Jung",
+        "Hyeonseo Yu",
+        "Honggyu An",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.38177v1",
+      "published": "2026-09-29T17:59:52Z",
       "category": "cs.CV"
     },
     {
-      "title": "Telescopic Language Models",
-      "summary": "One deployed language model must often serve many compute budgets, yet serving each budget still means a separate training or compression run per point. We train a Telescopic Language Model (TLM) to be that continuum: a nested-capacity Transformer supervised by stochastic prefix …",
+      "title": "Breakdown of Local Denoising as Semantic Speciation",
+      "summary": "The dynamics of generative models exhibit two apparently distinct temporal windows: a speciation window, in which a sample commits to a semantic class, and a nonlocality window, in which local context windows become insufficient for generation. Motivated by evidence of their near…",
       "authors": [
-        "Zhilin Guo",
-        "Boqiao Zhang",
-        "Hakan Aktas",
+        "Guangkuo Liu",
+        "Mert Okyay",
+        "Yifan F. Zhang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.35769v1",
-      "published": "2026-09-28T17:59:53Z",
+      "link": "http://arxiv.org/abs/2609.38176v1",
+      "published": "2026-09-29T17:59:50Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+      "summary": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quan…",
+      "authors": [
+        "Bingchen Yao",
+        "Haobo Xu",
+        "Haokun Lin",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.38169v1",
+      "published": "2026-09-29T17:59:40Z",
       "category": "cs.CL"
     },
     {
-      "title": "PDMD: Projected Distribution Matching Distillation for Video Diffusion Models",
-      "summary": "Modern video diffusion models require tens of denoising evaluations over long spatiotemporal token sequences. Distribution Matching Distillation (DMD) reduces the number of function evaluations (NFE) to just a few. However, DMD samples can degrade during training, exhibiting prog…",
+      "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+      "summary": "Recent LLMs increasingly adopt hybrid designs that replace standard attention with linear attention, such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA). Although they compress the context into a fixed-size recurrent state and substantially reduce the cost of long-context…",
       "authors": [
-        "Zimo Wang",
-        "Junkun Yuan",
-        "Angtian Wang",
+        "Yi Pan",
+        "Haocheng Xi",
+        "Kan Zhu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.35768v1",
-      "published": "2026-09-28T17:59:52Z",
+      "link": "http://arxiv.org/abs/2609.38166v1",
+      "published": "2026-09-29T17:59:34Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Cropland PAtteRNS: Parallel Dimensional Attention Networks and Attention to Dataset Disparity for Crop Segmentation in Satellite Imagery Time Series Data",
+      "summary": "The landscape of satellite imagery time series datasets and boundary-pushing architectures for cropland segmentation has never been richer. However, in this gold rush, important truths are being missed on both fronts, as a drive for the most novel concepts or the largest datasets…",
+      "authors": [
+        "Joseph Metcalfe",
+        "Sara Sharifzadeh",
+        "Fabio Caraffini"
+      ],
+      "link": "http://arxiv.org/abs/2609.38165v1",
+      "published": "2026-09-29T17:59:29Z",
       "category": "cs.CV"
     },
     {
-      "title": "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
-      "summary": "Unified multimodal models can both look at and render images, so in principle they can repair their own generations: diagnose what an image gets wrong, revise it, observe the result, and diagnose again. Whether a revision helps is known only after it is rendered, so the reflectio…",
+      "title": "A Spectral Theory of Distortion in LLM Graph Reconstruction: Sharp Bounds and Empirical Characterization",
+      "summary": "Evaluations of graph reconstruction by language models typically report a single aggregate distance between the original and the reconstructed graph. We prove that for the Wasserstein distance between Laplacian spectra such a summary is bracketed by two edge counts, the net chang…",
       "authors": [
-        "Yijia Fan",
-        "Ziqi Huang",
-        "Zhongang Cai",
+        "Jianru Shen"
+      ],
+      "link": "http://arxiv.org/abs/2609.38161v1",
+      "published": "2026-09-29T17:59:16Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "EmoRES-TTS: Residual-Enhanced Vector Steering for Emotional Speech Generation",
+      "summary": "Emotion-conditioned text-to-speech (TTS) models may fail to express the requested emotion reliably, and improving controllability by additional training is costly in both computation and emotion-labeled speech training data. We therefore study vector steering, a training-free app…",
+      "authors": [
+        "Kuan-Po Huang",
+        "Haohe Liu",
+        "Puyuan Peng",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.35767v1",
-      "published": "2026-09-28T17:59:36Z",
+      "link": "http://arxiv.org/abs/2609.38157v1",
+      "published": "2026-09-29T17:59:05Z",
+      "category": "cs.SD"
+    },
+    {
+      "title": "Beyond the Timeline: Augmenting Long-Video Memory with Grounded Entity Biographies",
+      "summary": "Answering questions about long videos often requires connecting events involving the same objects across hours or days. Chronological descriptions and text-derived entities can leave physical identity unresolved: different objects may share a description, while observations of th…",
+      "authors": [
+        "Hui Ren",
+        "Lei Fan",
+        "Henry Pao",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.38155v1",
+      "published": "2026-09-29T17:59:01Z",
       "category": "cs.CV"
     },
     {
-      "title": "Retrieving Biblical Intertextual References in Karen Blixen's Seven Gothic Tales",
-      "summary": "Identifying intertextual references is central to literary scholarship, but computationally difficult when source material is transformed through paraphrase, allusion, historical language, and translation. We investigate this problem through biblical intertextuality in Karen Blix…",
+      "title": "Pretraining Latent Information Feedback Transformers with Teacher Supervision",
+      "summary": "Transformer language models (LMs) are feed-forward: deep-layer representations are never fed back to shallower layers, and the only pathway for information to flow downward across generation steps is the decoded token. This narrow channel forces models to recompute intermediate r…",
       "authors": [
-        "András Kovács",
-        "Alexander Conroy",
-        "Daniel Hershcovich",
-        "et al."
+        "Dor Tirosh",
+        "Ido Amos",
+        "Mor Geva"
       ],
-      "link": "http://arxiv.org/abs/2609.35765v1",
-      "published": "2026-09-28T17:59:27Z",
+      "link": "http://arxiv.org/abs/2609.38149v1",
+      "published": "2026-09-29T17:57:40Z",
       "category": "cs.CL"
     },
     {
-      "title": "Unifying Distributional Training for One-Step Visual Generation",
-      "summary": "\\emph{Distributional training} provides collective supervision for one-step visual generation by matching real and generated features in frozen representation spaces. We introduce \\emph{a unified theoretical framework} that separates distribution modeling from matching discrepanc…",
+      "title": "Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning",
+      "summary": "As agents take on longer and more complex problems, controlling the execution becomes a task in its own right. Each step in the run brings new control choices, like which partial work to build on, whether to start fresh, or when to stop. We introduce agentic meta-reasoning, an in…",
       "authors": [
-        "Chi Zhang",
-        "Haoyang Shi",
-        "Yueyi Liu",
+        "Paras Dahal",
+        "Anton Bakhtin",
+        "Taco Cohen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.35763v1",
-      "published": "2026-09-28T17:59:14Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2609.38147v1",
+      "published": "2026-09-29T17:57:25Z",
+      "category": "cs.AI"
     },
     {
-      "title": "Scaling Long-Form Story Generation via Narrative State Tracking",
-      "summary": "LLMs have demonstrated strong capabilities in creative writing. However, scaling them to full-length novels remains challenging, as maintaining narrative consistency becomes increasingly difficult. Existing story-generation methods typically focus on stories of up to about ten th…",
+      "title": "Learning Meta-Skills for Agent Harness Design in Test-Time AI4AI",
+      "summary": "Agent performance depends on both reasoning ability and the environment in which it acts. We study test-time AI-for-AI, asking how a Builder can learn to construct better execution environments for a Target while both models' weights remain fixed. To make the Builder's experience…",
       "authors": [
-        "Zhennan Wan",
-        "Jianfei Chen"
-      ],
-      "link": "http://arxiv.org/abs/2609.35759v1",
-      "published": "2026-09-28T17:59:09Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
-      "summary": "When a large language model (LLM) agent executes the same task, token consumption can vary by over an order of magnitude across runs. The agent chooses its next steps based on tool feedback and intermediate results, while the growing context steadily inflates the input size of ev…",
-      "authors": [
-        "Chaoqian Ouyang",
-        "Ling Yue",
-        "Libin Zheng",
+        "Cheng Qian",
+        "Kunlun Zhu",
+        "Beibin Li",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.35760v1",
-      "published": "2026-09-28T17:59:09Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Statistical Learning of Contractive Dynamical Representations for Composite Adaptive Control",
-      "summary": "We present a representation-learning framework for composite adaptive tracking control under dynamically coupled disturbances. The framework connects classical disturbance-accommodating control (DAC) to recent last-layer adaptive disturbance-rejection methods. Specifically, we in…",
-      "authors": [
-        "Min Kim",
-        "José Leonardo Brenes",
-        "Fred Hadaegh",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.35758v1",
-      "published": "2026-09-28T17:59:07Z",
-      "category": "eess.SY"
-    },
-    {
-      "title": "Neural Harmonic Measure Operator",
-      "summary": "We introduce Neural Harmonic Measure Operator (NHMO), a neural solver for elliptic PDE problems on variable-shape domains. The harmonic measure of a domain is the boundary probability distribution that, integrated against any boundary data, returns the Dirichlet Laplace solution.…",
-      "authors": [
-        "Jinjin He",
-        "Sinan Wang",
-        "Yuchen Sun",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.35752v1",
-      "published": "2026-09-28T17:58:13Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "How to Loop MoE: Flatten the Experts, Untie the Attention",
-      "summary": "Looped Transformers reuse one block of layers several times: by spending extra computation they push a model of fixed size further, and so use its parameters more fully; while sparse mixture-of-experts (MoE) models activate only a few of many experts for each token. Looped MoE br…",
-      "authors": [
-        "Shouren Wang",
-        "Chuang Ma",
-        "Mohsen Hariri",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.35751v1",
-      "published": "2026-09-28T17:58:03Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
-      "summary": "Scaling the horizon of agentic LLMs is bottlenecked by the need to fit ever longer context traces in GPU memory. Context compaction has been the most popular mechanism to alleviate this issue, keeping GPU memory constant for a given trace. Unfortunately, most compaction strategie…",
-      "authors": [
-        "Emiliano Penaloza",
-        "Dane Malenfant",
-        "Dheeraj Vattikonda",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.35750v1",
-      "published": "2026-09-28T17:57:42Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2609.38143v1",
+      "published": "2026-09-29T17:55:56Z",
+      "category": "cs.AI"
     }
   ]
 }

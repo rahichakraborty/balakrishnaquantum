@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-09-30T19:46:23+00:00",
+  "generated_at": "2026-10-01T09:41:52+00:00",
   "items": [
     {
       "id": "Edge0/Audio8-ASR-Infinite",
       "url": "https://huggingface.co/Edge0/Audio8-ASR-Infinite",
-      "downloads": 26749,
-      "likes": 1735,
+      "downloads": 27228,
+      "likes": 1982,
       "pipeline_tag": "automatic-speech-recognition"
     },
     {
       "id": "convaiinnovations/laya",
       "url": "https://huggingface.co/convaiinnovations/laya",
       "downloads": 0,
-      "likes": 4635,
+      "likes": 4724,
       "pipeline_tag": "text-classification"
-    },
-    {
-      "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
-      "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
-      "downloads": 1232685,
-      "likes": 2524,
-      "pipeline_tag": "text-to-image"
     },
     {
       "id": "XingChen-AGI/TeleOCR",
       "url": "https://huggingface.co/XingChen-AGI/TeleOCR",
-      "downloads": 30383,
-      "likes": 1032,
+      "downloads": 31584,
+      "likes": 1125,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "Qwen/Qwen-Image-2.1",
-      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
-      "downloads": 70687,
-      "likes": 2708,
+      "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+      "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+      "downloads": 1303476,
+      "likes": 2618,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "Contrastive-LM/CLM-v0.1-8B",
       "url": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B",
-      "downloads": 2392,
-      "likes": 561,
+      "downloads": 2720,
+      "likes": 582,
       "pipeline_tag": "text-ranking"
     },
     {
-      "id": "nvidia/Nemotron-3-Diarization",
-      "url": "https://huggingface.co/nvidia/Nemotron-3-Diarization",
-      "downloads": 36386,
-      "likes": 549,
-      "pipeline_tag": "voice-activity-detection"
-    },
-    {
-      "id": "Qwen/Qwen3.8-27B",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 7038259,
-      "likes": 16635,
-      "pipeline_tag": "image-text-to-text"
+      "id": "Qwen/Qwen-Image-2.1",
+      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+      "downloads": 76938,
+      "likes": 2734,
+      "pipeline_tag": "text-to-image"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 1602348,
-      "likes": 5678,
+      "downloads": 1588619,
+      "likes": 5762,
       "pipeline_tag": "image-to-video"
     },
     {
-      "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
-      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
-      "downloads": 3676692,
-      "likes": 2295,
-      "pipeline_tag": "text-generation"
+      "id": "Qwen/Qwen3.8-27B",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "downloads": 6950834,
+      "likes": 16682,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "nvidia/Nemotron-3-Diarization",
+      "url": "https://huggingface.co/nvidia/Nemotron-3-Diarization",
+      "downloads": 40936,
+      "likes": 573,
+      "pipeline_tag": "voice-activity-detection"
+    },
+    {
+      "id": "SupersonicLabs/Julia-1",
+      "url": "https://huggingface.co/SupersonicLabs/Julia-1",
+      "downloads": 2556,
+      "likes": 324,
+      "pipeline_tag": "text-classification"
     }
   ]
 }

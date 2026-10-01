@@ -1,156 +1,157 @@
 {
-  "generated_at": "2026-09-30T19:46:15+00:00",
+  "generated_at": "2026-10-01T09:41:45+00:00",
   "items": [
     {
-      "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
-      "summary": "Robots deployed in the physical world must be able to improve beyond their initial training as they encounter new situations and failures. For this improvement to scale across tasks, it must make effective use of experience without requiring human demonstration of each correction…",
+      "title": "Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis",
+      "summary": "Multimodal large language models (MLLMs) are rapidly advancing clinical diagnosis, yet their adaptation pipelines remain anchored to accuracy-based objectives. Clinical data are heavily class-imbalanced: a constant-majority predictor can score above 90% accuracy while being clini…",
       "authors": [
-        "Zihang Rui",
-        "Renhao Wang",
-        "Haoxu Huang",
+        "Tian Xia",
+        "Minghao Liu",
+        "Yiqing Liang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.38178v1",
-      "published": "2026-09-29T17:59:55Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Imagine3D-LLM: Teaching MLLMs to Imagine 3D Scenes Before Answering",
-      "summary": "Reasoning about the 3D world from multi-view images remains a fundamental challenge for Multimodal Large Language Models (MLLMs). While modern MLLMs handle single-image inputs effectively, they struggle to integrate evidence across viewpoints into a coherent 3D understanding. A g…",
-      "authors": [
-        "Jaewoo Jung",
-        "Hyeonseo Yu",
-        "Honggyu An",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.38177v1",
-      "published": "2026-09-29T17:59:52Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Breakdown of Local Denoising as Semantic Speciation",
-      "summary": "The dynamics of generative models exhibit two apparently distinct temporal windows: a speciation window, in which a sample commits to a semantic class, and a nonlocality window, in which local context windows become insufficient for generation. Motivated by evidence of their near…",
-      "authors": [
-        "Guangkuo Liu",
-        "Mert Okyay",
-        "Yifan F. Zhang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.38176v1",
-      "published": "2026-09-29T17:59:50Z",
+      "link": "http://arxiv.org/abs/2609.40361v1",
+      "published": "2026-09-30T17:59:56Z",
       "category": "cs.LG"
     },
     {
-      "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
-      "summary": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quan…",
+      "title": "Semifactual Credit-Augmented Policy Optimization",
+      "summary": "Reinforcement learning with verifiable rewards (RLVR) has improved the reasoning capabilities of large language models (LLMs), yet their predictions remain sensitive to task-irrelevant prompt features. We investigate this sensitivity through semifactual prompt interventions that …",
       "authors": [
-        "Bingchen Yao",
-        "Haobo Xu",
-        "Haokun Lin",
+        "Junshu Pan",
+        "Zhizhang Fu",
+        "Shulin Huang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.38169v1",
-      "published": "2026-09-29T17:59:40Z",
+      "link": "http://arxiv.org/abs/2609.40360v1",
+      "published": "2026-09-30T17:59:56Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Removing Timing Shortcuts Improves Non-Invasive Brain-to-Text",
+      "summary": "We find that major reported improvements in decoding words from non-invasive brain recordings are largely reproducible without any brain data. In the influential work of d'Ascoli et al. (2025), time series of brain activity from subjects perceiving continuous speech are segmented…",
+      "authors": [
+        "Dulhan Jayalath",
+        "Oiwi Parker Jones"
+      ],
+      "link": "http://arxiv.org/abs/2609.40359v1",
+      "published": "2026-09-30T17:59:52Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "ViTeX-Bench: Benchmarking High-Fidelity Video Scene Text Editing",
+      "summary": "Recent video generation is increasingly realistic and controllable, yet video editing remains less developed, particularly for precise local edits that must preserve the original scene dynamics. Video scene text editing replaces text on scene surfaces, such as storefront signs, w…",
+      "authors": [
+        "Xinghao Chen",
+        "Xiangbo Gao",
+        "Jiongze Yu",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.40356v1",
+      "published": "2026-09-30T17:59:33Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Image Classifiers are Efficient Self-Supervised Video Representation Learners",
+      "summary": "We introduce VideoMSN, a Masked Siamese Network framework for efficient self-supervised spatio-temporal representation learning in videos. Instead of relying on heavy 3D architectures or reconstruction-based autoencoders for learning with unlabeled data, we repurpose standard ima…",
+      "authors": [
+        "Owais Iqbal",
+        "Sudipta Sarkar",
+        "Shyam Marjit",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.40347v1",
+      "published": "2026-09-30T17:59:03Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+      "summary": "Evolutionary search with large language models (LLMs) can stall when progress requires external knowledge the model lacks. Supplying relevant documents helps, but simply adding web search tool can keep returning the same pages as solutions change. We introduce EvoDuet, a bi-level…",
+      "authors": [
+        "Young-Jun Lee",
+        "Jinheon Baek",
+        "Soyeong Jeong",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.40340v1",
+      "published": "2026-09-30T17:58:28Z",
       "category": "cs.CL"
     },
     {
-      "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
-      "summary": "Recent LLMs increasingly adopt hybrid designs that replace standard attention with linear attention, such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA). Although they compress the context into a fixed-size recurrent state and substantially reduce the cost of long-context…",
+      "title": "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?",
+      "summary": "Differentially Private Stochastic Gradient Descent (DP-SGD) is a leading approach for privacy-preserving fine-tuning of large language models (LLMs). Many decoder-only LLMs employ weight tying between input and output embeddings, a design choice originally introduced for paramete…",
       "authors": [
-        "Yi Pan",
-        "Haocheng Xi",
-        "Kan Zhu",
+        "Razan El Mais",
+        "Ali Chehab",
+        "Ibrahim Issa",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.38166v1",
-      "published": "2026-09-29T17:59:34Z",
+      "link": "http://arxiv.org/abs/2609.40335v1",
+      "published": "2026-09-30T17:57:43Z",
       "category": "cs.LG"
     },
     {
-      "title": "Cropland PAtteRNS: Parallel Dimensional Attention Networks and Attention to Dataset Disparity for Crop Segmentation in Satellite Imagery Time Series Data",
-      "summary": "The landscape of satellite imagery time series datasets and boundary-pushing architectures for cropland segmentation has never been richer. However, in this gold rush, important truths are being missed on both fronts, as a drive for the most novel concepts or the largest datasets…",
+      "title": "Turbo Harness: Instance-Adaptive Harness Optimization",
+      "summary": "Automating the search for effective harnesses is an important step toward enabling agents to recursively self-improve. Existing harness optimizations typically produce a single global harness that is applied uniformly across task instances. However, a harness that works well on a…",
       "authors": [
-        "Joseph Metcalfe",
-        "Sara Sharifzadeh",
-        "Fabio Caraffini"
+        "Tunyu Zhang",
+        "Hao Wang",
+        "Kai Xu",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2609.38165v1",
-      "published": "2026-09-29T17:59:29Z",
+      "link": "http://arxiv.org/abs/2609.40330v1",
+      "published": "2026-09-30T17:56:09Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "WorldAuditBench: Interactive 3D World Auditing with Multimodal Agents",
+      "summary": "As interactive 3D worlds are increasingly used to study intelligent behavior, it becomes important to develop efficient pipelines for identifying anomalies in these simulated environments, such as floating objects, traversable walls, or objects inconsistent with the surrounding s…",
+      "authors": [
+        "Ziyan Jiang",
+        "Jingbo Yang",
+        "Jiabao Ji",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.40325v1",
+      "published": "2026-09-30T17:55:29Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Cogentic: Multi-Agent Orchestration for Automated Proof Discovery",
+      "summary": "We present Cogentic, a multi-agent harness for automated proof discovery on open research problems. While frontier language models can generate strong mathematical ideas in a single shot, single-shot generation is often insufficient for open problems that require exploring multip…",
+      "authors": [
+        "Yang Cai",
+        "Vineet Gupta",
+        "Yanchen Jiang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2609.40324v1",
+      "published": "2026-09-30T17:55:22Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "MatLoom: Layered Text-to-Material Generation in a Compact Program Space",
+      "summary": "Material generation should produce not only an appearance, but also the rules that construct it. We introduce MatLoom, a compact, layer-oriented language for text-to-material generation with pretrained language models. Each program composes alpha-masked layers whose shared spatia…",
+      "authors": [
+        "Anson Y. Lam",
+        "Shuqing Li",
+        "Michael R. Lyu"
+      ],
+      "link": "http://arxiv.org/abs/2609.40322v1",
+      "published": "2026-09-30T17:55:06Z",
       "category": "cs.CV"
     },
     {
-      "title": "A Spectral Theory of Distortion in LLM Graph Reconstruction: Sharp Bounds and Empirical Characterization",
-      "summary": "Evaluations of graph reconstruction by language models typically report a single aggregate distance between the original and the reconstructed graph. We prove that for the Wasserstein distance between Laplacian spectra such a summary is bracketed by two edge counts, the net chang…",
+      "title": "Scaling Laws for Looped Mixture of Experts",
+      "summary": "Looped transformers and Mixture-of-Experts (MoE) offer complementary routes to efficient scaling: recurrence increases computational depth at fixed parameters, while MoE sparsity expands total capacity at fixed active compute. Yet existing scaling laws model recurrence or sparsit…",
       "authors": [
-        "Jianru Shen"
+        "Yanbei Chen",
+        "Anirudh Goyal",
+        "Raghuraman Krishnamoorthi"
       ],
-      "link": "http://arxiv.org/abs/2609.38161v1",
-      "published": "2026-09-29T17:59:16Z",
+      "link": "http://arxiv.org/abs/2609.40316v1",
+      "published": "2026-09-30T17:53:47Z",
       "category": "cs.LG"
-    },
-    {
-      "title": "EmoRES-TTS: Residual-Enhanced Vector Steering for Emotional Speech Generation",
-      "summary": "Emotion-conditioned text-to-speech (TTS) models may fail to express the requested emotion reliably, and improving controllability by additional training is costly in both computation and emotion-labeled speech training data. We therefore study vector steering, a training-free app…",
-      "authors": [
-        "Kuan-Po Huang",
-        "Haohe Liu",
-        "Puyuan Peng",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.38157v1",
-      "published": "2026-09-29T17:59:05Z",
-      "category": "cs.SD"
-    },
-    {
-      "title": "Beyond the Timeline: Augmenting Long-Video Memory with Grounded Entity Biographies",
-      "summary": "Answering questions about long videos often requires connecting events involving the same objects across hours or days. Chronological descriptions and text-derived entities can leave physical identity unresolved: different objects may share a description, while observations of th…",
-      "authors": [
-        "Hui Ren",
-        "Lei Fan",
-        "Henry Pao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.38155v1",
-      "published": "2026-09-29T17:59:01Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Pretraining Latent Information Feedback Transformers with Teacher Supervision",
-      "summary": "Transformer language models (LMs) are feed-forward: deep-layer representations are never fed back to shallower layers, and the only pathway for information to flow downward across generation steps is the decoded token. This narrow channel forces models to recompute intermediate r…",
-      "authors": [
-        "Dor Tirosh",
-        "Ido Amos",
-        "Mor Geva"
-      ],
-      "link": "http://arxiv.org/abs/2609.38149v1",
-      "published": "2026-09-29T17:57:40Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning",
-      "summary": "As agents take on longer and more complex problems, controlling the execution becomes a task in its own right. Each step in the run brings new control choices, like which partial work to build on, whether to start fresh, or when to stop. We introduce agentic meta-reasoning, an in…",
-      "authors": [
-        "Paras Dahal",
-        "Anton Bakhtin",
-        "Taco Cohen",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.38147v1",
-      "published": "2026-09-29T17:57:25Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Learning Meta-Skills for Agent Harness Design in Test-Time AI4AI",
-      "summary": "Agent performance depends on both reasoning ability and the environment in which it acts. We study test-time AI-for-AI, asking how a Builder can learn to construct better execution environments for a Target while both models' weights remain fixed. To make the Builder's experience…",
-      "authors": [
-        "Cheng Qian",
-        "Kunlun Zhu",
-        "Beibin Li",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2609.38143v1",
-      "published": "2026-09-29T17:55:56Z",
-      "category": "cs.AI"
     }
   ]
 }

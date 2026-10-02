@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-10-01T20:03:45+00:00",
+  "generated_at": "2026-10-02T09:16:08+00:00",
   "items": [
     {
       "id": "convaiinnovations/laya",
       "url": "https://huggingface.co/convaiinnovations/laya",
       "downloads": 0,
-      "likes": 4818,
+      "likes": 4887,
       "pipeline_tag": "text-classification"
     },
     {
       "id": "XingChen-AGI/TeleOCR",
       "url": "https://huggingface.co/XingChen-AGI/TeleOCR",
-      "downloads": 31584,
-      "likes": 1204,
+      "downloads": 32675,
+      "likes": 1239,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
       "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
       "downloads": 1303476,
-      "likes": 2687,
+      "likes": 2746,
+      "pipeline_tag": "text-to-image"
+    },
+    {
+      "id": "Cloudflare/clef",
+      "url": "https://huggingface.co/Cloudflare/clef",
+      "downloads": 18,
+      "likes": 475,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "Qwen/Qwen-Image-2.1",
+      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+      "downloads": 76938,
+      "likes": 2806,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "Contrastive-LM/CLM-v0.1-8B",
       "url": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B",
       "downloads": 2720,
-      "likes": 620,
+      "likes": 630,
       "pipeline_tag": "text-ranking"
-    },
-    {
-      "id": "Qwen/Qwen-Image-2.1",
-      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
-      "downloads": 76938,
-      "likes": 2764,
-      "pipeline_tag": "text-to-image"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 1588619,
-      "likes": 5830,
+      "downloads": 1584129,
+      "likes": 5886,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 6950834,
-      "likes": 16715,
+      "downloads": 6934867,
+      "likes": 16745,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "SupersonicLabs/Julia-1",
       "url": "https://huggingface.co/SupersonicLabs/Julia-1",
       "downloads": 2556,
-      "likes": 335,
+      "likes": 349,
       "pipeline_tag": "text-classification"
-    },
-    {
-      "id": "nvidia/Nemotron-3-Diarization",
-      "url": "https://huggingface.co/nvidia/Nemotron-3-Diarization",
-      "downloads": 40936,
-      "likes": 594,
-      "pipeline_tag": "voice-activity-detection"
     },
     {
       "id": "Viggle/Qwen-Image-2.1-viggle-turbo",
       "url": "https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo",
       "downloads": 217638,
-      "likes": 492,
+      "likes": 512,
       "pipeline_tag": "text-to-image"
     }
   ]

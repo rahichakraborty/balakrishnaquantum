@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-10-04T18:30:15+00:00",
+  "generated_at": "2026-10-05T09:55:33+00:00",
   "items": [
     {
       "id": "Cloudflare/clef",
       "url": "https://huggingface.co/Cloudflare/clef",
       "downloads": 4214,
-      "likes": 1144,
+      "likes": 1294,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "convaiinnovations/laya",
       "url": "https://huggingface.co/convaiinnovations/laya",
-      "downloads": 3752,
-      "likes": 5134,
+      "downloads": 11733,
+      "likes": 5190,
       "pipeline_tag": "text-classification"
     },
     {
       "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
       "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
-      "downloads": 1553744,
-      "likes": 3065,
+      "downloads": 1638838,
+      "likes": 3183,
       "pipeline_tag": "text-to-image"
+    },
+    {
+      "id": "Aleph-Alpha/Kolibri-1",
+      "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+      "downloads": 1135,
+      "likes": 490,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 1626951,
-      "likes": 6249,
+      "downloads": 1645444,
+      "likes": 6373,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "Cloudflare/clef-flash",
       "url": "https://huggingface.co/Cloudflare/clef-flash",
       "downloads": 6372,
-      "likes": 412,
+      "likes": 458,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "Aleph-Alpha/Kolibri-1",
-      "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
-      "downloads": 1135,
-      "likes": 360,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 6821761,
-      "likes": 16922,
+      "downloads": 6758884,
+      "likes": 16963,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "Qwen/Qwen-Image-2.1",
-      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
-      "downloads": 90003,
-      "likes": 2931,
-      "pipeline_tag": "text-to-image"
+      "id": "Venastine-Research/Xing4.0-29B-A4B-GGUF",
+      "url": "https://huggingface.co/Venastine-Research/Xing4.0-29B-A4B-GGUF",
+      "downloads": 18863,
+      "likes": 352,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "PSRben/VisionHOPE",
       "url": "https://huggingface.co/PSRben/VisionHOPE",
       "downloads": 1516,
-      "likes": 398,
+      "likes": 410,
       "pipeline_tag": "image-classification"
     },
     {
-      "id": "Contrastive-LM/CLM-v0.1-8B",
-      "url": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B",
-      "downloads": 3445,
-      "likes": 705,
-      "pipeline_tag": "text-ranking"
+      "id": "Qwen/Qwen-Image-2.1",
+      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+      "downloads": 94556,
+      "likes": 2958,
+      "pipeline_tag": "text-to-image"
     }
   ]
 }

@@ -1,155 +1,153 @@
 {
-  "generated_at": "2026-10-04T18:30:08+00:00",
+  "generated_at": "2026-10-05T09:55:25+00:00",
   "items": [
     {
-      "title": "One Basis to Animate Them All: Gaussian Blendshape Distillation for Real-Time Avatars",
-      "summary": "3D Gaussian avatars support fast rendering, however, their real-time animation is often challenged by the costly neural inference. We address this bottleneck and show that the animation of pretrained avatar models can be closely approximated by a linear combination of identity-in…",
+      "title": "Less Decoder is More Encoder: Geometric Representation Learning from Novel View Synthesis",
+      "summary": "This paper examines the role of Novel View Synthesis (NVS) in geometric representation learning. In principle, NVS should reason about 3D scene structure, thereby enabling transferable multi-view geometric representations. Yet, existing encoder-based NVS methods yield poor repres…",
       "authors": [
-        "Ramazan Fazylov",
-        "Stamatis Lefkimmiatis",
-        "Ivan Laptev"
+        "Keerthi Kaashyap",
+        "Dennis Anthony",
+        "Akshay Krishnan",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.02207v1",
-      "published": "2026-10-01T17:59:58Z",
+      "link": "http://arxiv.org/abs/2610.03717v1",
+      "published": "2026-10-02T17:59:14Z",
       "category": "cs.CV"
     },
     {
-      "title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
-      "summary": "LLMs are increasingly applied to cybersecurity workflows, where they are expected to translate analysts' intent into tool invocations. However, existing evaluations focus on knowledge-based assessments or end-to-end agentic tasks, and do not directly measure LLMs' ability to gene…",
+      "title": "4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes",
+      "summary": "We introduce 4DCodeBench, a benchmark for 4D inverse graphics through code generation, in which agents reconstruct dynamic scenes from video as executable graphics programs. To accomplish this, agents must translate visual observations into compact representations of scene struct…",
       "authors": [
-        "Pengfei Li",
-        "Naufal Suryanto",
-        "Sicheng Zhang",
+        "Ruihong Shen",
+        "Žiga Kovačič",
+        "Peter Kulits",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.02206v1",
-      "published": "2026-10-01T17:59:55Z",
-      "category": "cs.CL"
+      "link": "http://arxiv.org/abs/2610.03715v1",
+      "published": "2026-10-02T17:58:49Z",
+      "category": "cs.CV"
     },
     {
-      "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
-      "summary": "Building reliable robot capabilities across diverse tasks requires substantial human effort to develop and maintain skills, design rewards, and integrate perception with control. We present Reconstruct, Practice, Go Real (RPG), a framework for autonomous improvement of robot exec…",
+      "title": "What Should World Models Forget? Stratified Retention for Continual Adaptation",
+      "summary": "Continual learning treats degradation on previously seen data as evidence of failure, a convention inherited from settings with a stationary prediction target, where a correct label remains correct indefinitely. World models do not satisfy this condition. Their prediction target …",
       "authors": [
-        "Yen-Jen Wang",
-        "Haozhe Jiang",
-        "Shuying Deng",
+        "Nishit Anand",
+        "Ramani Duraiswami",
+        "Dinesh Manocha"
+      ],
+      "link": "http://arxiv.org/abs/2610.03713v1",
+      "published": "2026-10-02T17:58:14Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "RNADyn: A Benchmark for Generating and Understanding RNA Dynamics",
+      "summary": "Ribonucleic acid (RNA) functions through conformational changes that are not fully captured by static structures. However, large-scale standardized RNA dynamics data remain limited, and existing approaches typically treat trajectory generation and dynamics understanding as separa…",
+      "authors": [
+        "Yiming Huang",
+        "Lennart Bastian",
+        "Hanqun Cao",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.02204v1",
-      "published": "2026-10-01T17:59:50Z",
+      "link": "http://arxiv.org/abs/2610.03712v1",
+      "published": "2026-10-02T17:58:08Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "EyeRobot 2.0: Active Gaze for Precise Manipulation without Wrist Cameras",
+      "summary": "Inspired by human vision, we introduce a framework using active gaze to enable fine-grained bimanual manipulation with only a single stereo camera. EyeRobot 2.0 physically attends to a 3D fixation point in the scene by swiveling two eye viewpoints to center their gaze on it. The …",
+      "authors": [
+        "Kush Hari",
+        "Justin Kerr",
+        "Nidhya Shivakumar",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.03710v1",
+      "published": "2026-10-02T17:57:51Z",
       "category": "cs.RO"
     },
     {
-      "title": "Embedding Prediction Helps Image Generation",
-      "summary": "In diffusion transformers, a class label or a text prompt is embedded once, and the same condition is reused at every denoising step. We ask whether predicted embeddings can serve as this condition instead. Next-Embedding Predictive Autoregression (NEPA) trains a Transformer to p…",
+      "title": "From Mixing to Tearing: Graph Decomposition in Decentralized Optimization via Message Passing",
+      "summary": "We study the minimization of sums of smooth strongly convex functions over undirected graphs, with each function held by one agent and communication restricted to neighbors in the graph. Existing decentralized methods, whether based on gossip or on routing over spanning trees, ty…",
       "authors": [
-        "Sihan Xu",
-        "Ji Xie",
-        "Zilin Wang",
-        "et al."
+        "Kuangyu Ding",
+        "Gesualdo Scutari"
       ],
-      "link": "http://arxiv.org/abs/2610.02203v1",
-      "published": "2026-10-01T17:59:49Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2610.03709v1",
+      "published": "2026-10-02T17:57:50Z",
+      "category": "math.OC"
     },
     {
-      "title": "ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research",
-      "summary": "What makes great scientists great? Even as AI systems start to make progress on open problems, scientists remain far ahead of them at sensing which prior idea, buried in an ever-growing archive of research, a new problem needs. To study this skill, we draw on researchers who know…",
+      "title": "LESSER: Post-Training Data Selection with Output-Layer Gradients",
+      "summary": "The choice of post-training data for large language models substantially affects downstream performance. Gradient-based data selection is a popular approach that ranks training data by how well their gradients align with those of a small validation set. However, ranking with full…",
       "authors": [
-        "Sohyeon Kim",
-        "Yoonho Lee",
-        "Bo Liu",
+        "Lyuxin David Zhang",
+        "Eric Wong",
+        "Surbhi Goel",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.02202v1",
-      "published": "2026-10-01T17:59:47Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "SILSA: Sliding-Window Slice Latents for Topology-Preserving High-Resolution 3D Generation",
-      "summary": "High-resolution 3D generation increasingly relies on voxel latents and multi-stage pipelines that first predict active structure and then synthesize local geometry. While effective, this design fragments continuous surfaces into many local tokens, inflates generation cost, and of…",
-      "authors": [
-        "Tianjiao Yu",
-        "Xinzhuo Li",
-        "Yifan Shen",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.02201v1",
-      "published": "2026-10-01T17:59:46Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "VISTA: A Visual Harness for Reasoning in an Interactive World",
-      "summary": "We show that multimodal models possess strong reasoning abilities and that an appropriate harness can unlock their potential to solve tasks across diverse interactive environments. We introduce VISTA, a visual harness that gives a general-purpose multimodal model long-horizon vis…",
-      "authors": [
-        "Qiushi Han",
-        "Keya Hu",
-        "Linlu Qiu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.02200v1",
-      "published": "2026-10-01T17:59:45Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
-      "summary": "Full-parameter fine-tuning of large language models (LLMs) incurs substantial optimizer state memory overhead, limiting the model sizes that fit on modern GPUs. Existing approaches either compress optimizer state, abandon first-order gradients, or change the update geometry while…",
-      "authors": [
-        "Jichao Jiang",
-        "Cristian McGee",
-        "El Houcine Bergou",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.02199v1",
-      "published": "2026-10-01T17:59:42Z",
+      "link": "http://arxiv.org/abs/2610.03702v1",
+      "published": "2026-10-02T17:55:42Z",
       "category": "cs.LG"
     },
     {
-      "title": "FERPO: Forward Entropy-Regularized Policy Optimization",
-      "summary": "Several state-of-the-art methods for online reinforcement learning in continuous control improve policies using action gradients of a learned critic. However, critics are typically trained to predict returns, and accurate value predictions do not necessarily yield accurate action…",
+      "title": "Language Models that Play Chess and Explain Their Moves",
+      "summary": "Modern chess engines are silent experts: they play at a superhuman level, but do not offer explanations for their play. On the other hand, language models (LMs) can generate plausible-sounding explanations, but their weak playing strength limits the utility of their explanations.…",
       "authors": [
-        "Sebastian Sanokowski",
-        "Alireza Sarmadi",
-        "Majid Khadiv"
+        "Adithya Bhaskar",
+        "Jeffrey Cheng",
+        "Danqi Chen"
       ],
-      "link": "http://arxiv.org/abs/2610.02198v1",
-      "published": "2026-10-01T17:59:41Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Cost-augmented Schrödinger bridges on graphs are exactly solvable: a Feynman-Kac tilt replaces learned control",
-      "summary": "The generalized Schrödinger bridge on a graph moves mass between two distributions while charging a cost for the states visited. It has been approached by learning the rates of a controlled continuous-time Markov chain, with a temporal-difference penalty that restores the cost. A…",
-      "authors": [
-        "Akshay Balsubramani"
-      ],
-      "link": "http://arxiv.org/abs/2610.02195v1",
-      "published": "2026-10-01T17:59:39Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Hierarchical Continuous Diffusion Language Models",
-      "summary": "Discrete diffusion language models offer a compelling alternative to autoregressive generation for tasks demanding bidirectional reasoning and global constraint satisfaction. Yet they share a structural bottleneck: when decoding in parallel, each token is sampled independently fr…",
-      "authors": [
-        "Hui Ren",
-        "Zihan Li",
-        "Chang Liu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.02193v1",
-      "published": "2026-10-01T17:59:39Z",
+      "link": "http://arxiv.org/abs/2610.03695v1",
+      "published": "2026-10-02T17:54:22Z",
       "category": "cs.CL"
     },
     {
-      "title": "The Missing Primitive: Diagnosing and Repairing Mathematical Reasoning in Large Language Models",
-      "summary": "While Large Language Models (LLMs) have demonstrated striking capabilities on frontier mathematical problems, it remains unclear whether they possess the structural mathematical understanding underlying their solutions. In this paper, we take a first step toward systematically st…",
+      "title": "Transcriptome-informed multi-modal AI for predicting neoadjuvant therapy response from breast cancer biopsies",
+      "summary": "Scarcity of labeled data limits development of deep learning biomarkers in oncology. We develop a two-stage AI model predicting pathological complete response (pCR) to neoadjuvant therapy in breast cancer. The first stage learns the transcriptome from histopathology using 8,742 p…",
       "authors": [
-        "Shuo Xing",
-        "Zilin Dai",
-        "Chengyuan Qian",
+        "Jungkyu Park",
+        "Dhruva Biswas",
+        "Joseph Cappadona",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.02191v1",
-      "published": "2026-10-01T17:59:32Z",
+      "link": "http://arxiv.org/abs/2610.03693v1",
+      "published": "2026-10-02T17:52:57Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Simulation-Free Learning of Population Dynamics with Wasserstein Lagrangian Residuals",
+      "summary": "The dynamics of cells, organisms, and fluids are often modeled as probability distributions evolving over time. Reconstructing and extrapolating this evolution from unpaired snapshots requires assumptions about the underlying process. Wasserstein gradient flows are a common choic…",
+      "authors": [
+        "Fedor Sergeev",
+        "Markus Heinonen",
+        "Daniel Waxman",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.03679v1",
+      "published": "2026-10-02T17:46:52Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution",
+      "summary": "LLM-guided evolutionary methods, such as AlphaEvolve, have emerged as powerful approaches for challenging computational optimization problems, such as circle packing. However, prior work typically optimizes performance gain over a fixed number of iterations. We argue that practic…",
+      "authors": [
+        "Hui Chen",
+        "Xuan Qi",
+        "James Xu Zhao",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.03675v1",
+      "published": "2026-10-02T17:44:05Z",
+      "category": "cs.NE"
+    },
+    {
+      "title": "Planning to Learn",
+      "summary": "Policy-gradient methods are central to modern reinforcement learning, including LLM post-training. When they struggle, the usual suspects are exploration, credit assignment and action-sampling noise. Classification has none of them. A classifier is a policy whose expected reward,…",
+      "authors": [
+        "Ian Osband"
+      ],
+      "link": "http://arxiv.org/abs/2610.03667v1",
+      "published": "2026-10-02T17:38:28Z",
       "category": "cs.LG"
     }
   ]

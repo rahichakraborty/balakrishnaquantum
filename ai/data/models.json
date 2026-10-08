@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-10-08T09:50:44+00:00",
+  "generated_at": "2026-10-08T20:27:05+00:00",
   "items": [
     {
       "id": "autotrust/JEV-27B-VL",
       "url": "https://huggingface.co/autotrust/JEV-27B-VL",
-      "downloads": 1529210,
-      "likes": 2422,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "Cloudflare/clef",
-      "url": "https://huggingface.co/Cloudflare/clef",
-      "downloads": 9513,
-      "likes": 1857,
+      "downloads": 1533034,
+      "likes": 2817,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "autotrust/GEV-26B-Decide",
       "url": "https://huggingface.co/autotrust/GEV-26B-Decide",
-      "downloads": 895867,
-      "likes": 1553,
+      "downloads": 903866,
+      "likes": 1809,
       "pipeline_tag": "text-classification"
+    },
+    {
+      "id": "Cloudflare/clef",
+      "url": "https://huggingface.co/Cloudflare/clef",
+      "downloads": 10874,
+      "likes": 1878,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "google/embeddinggemma-2",
       "url": "https://huggingface.co/google/embeddinggemma-2",
-      "downloads": 7562,
-      "likes": 1077,
+      "downloads": 21148,
+      "likes": 1165,
       "pipeline_tag": "feature-extraction"
     },
     {
       "id": "Aleph-Alpha/Kolibri-1",
       "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
-      "downloads": 5775,
-      "likes": 794,
+      "downloads": 6777,
+      "likes": 810,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
       "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
-      "downloads": 1820627,
-      "likes": 3626,
+      "downloads": 1933066,
+      "likes": 3663,
       "pipeline_tag": "text-to-image"
-    },
-    {
-      "id": "Cloudflare/clef-flash",
-      "url": "https://huggingface.co/Cloudflare/clef-flash",
-      "downloads": 15722,
-      "likes": 674,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Venastine-Research/Xing4.0-29B-A4B-GGUF",
       "url": "https://huggingface.co/Venastine-Research/Xing4.0-29B-A4B-GGUF",
-      "downloads": 33633,
-      "likes": 637,
+      "downloads": 36481,
+      "likes": 659,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "jialinyyzz/humanizer",
       "url": "https://huggingface.co/jialinyyzz/humanizer",
-      "downloads": 19483,
-      "likes": 546,
+      "downloads": 23439,
+      "likes": 612,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "Cloudflare/clef-flash",
+      "url": "https://huggingface.co/Cloudflare/clef-flash",
+      "downloads": 17587,
+      "likes": 686,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 1688807,
-      "likes": 6846,
+      "likes": 6916,
       "pipeline_tag": "image-to-video"
     }
   ]

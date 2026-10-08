@@ -1,155 +1,155 @@
 {
-  "generated_at": "2026-10-07T20:22:52+00:00",
+  "generated_at": "2026-10-08T09:50:37+00:00",
   "items": [
     {
-      "title": "QF3: Fast Flow RL with Filtered Q-Gradients",
-      "summary": "Flow policies have become a standard policy class for learning robot behaviors from demonstrations, but reinforcement learning is still critical for improving pre-trained flow policies or learning them from scratch through interaction. We introduce QF3 (Fast Flow RL with Filtered…",
+      "title": "Never Look Back: Understanding Persistence in 3D Object Memory from Egocentric Videos",
+      "summary": "As we move through the world and carry out everyday tasks, we encounter objects that may become relevant only later. We are capable of recalling where we left something or what was inside a container, even without knowing we would need it later. Here, we study how an embodied ass…",
       "authors": [
-        "Chung Min Kim",
-        "Brent Yi",
-        "David McAllister",
+        "Shravan Chaudhari",
+        "William Paul",
+        "Suchi Saria",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.08789v1",
-      "published": "2026-10-06T17:59:34Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Conformal Prediction Sets Quantify Information Gain: A Theoretical Perspective",
-      "summary": "Conformal prediction is a popular tool for uncertainty quantification that outputs prediction sets with finite-sample coverage guarantees. While prediction set size is commonly used as a heuristic measure of uncertainty, the information-theoretic basis for this interpretation rem…",
-      "authors": [
-        "Kevin Zhang",
-        "Stephen Bates"
-      ],
-      "link": "http://arxiv.org/abs/2610.08785v1",
-      "published": "2026-10-06T17:59:11Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "4D-HOF: Hand-Object Flow Matching for Feed-Forward 4D Interaction Reconstruction",
-      "summary": "Existing methods for 4D hand-object reconstruction often rely on costly per-sequence optimization, while generative approaches typically synthesize interactions from random noise, which can lead to unstable interaction prediction. We introduce 4D-HOF, a feed-forward framework tha…",
-      "authors": [
-        "Shiqi Li",
-        "Sean Cho",
-        "Yijie Li",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.08782v1",
-      "published": "2026-10-06T17:59:02Z",
+      "link": "http://arxiv.org/abs/2610.10538v1",
+      "published": "2026-10-07T17:59:41Z",
       "category": "cs.CV"
     },
     {
-      "title": "IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas",
-      "summary": "Scientific research often begins by synthesizing ideas from a set of related papers to identify gaps and formulate new directions. However, training language models to perform this form of literature-grounded ideation remains challenging, as existing approaches based on prompting…",
+      "title": "Decoupling Exploration from Optimization in RLVR",
+      "summary": "Modern language models undergo reinforcement learning with verifiable rewards (RLVR) on top of already-trained checkpoints. A key promise of RLVR is the discovery of new reasoning strategies. In principle, a model can sample novel ideas absent from its prior training data. In pra…",
       "authors": [
-        "Ziyu Chen",
-        "Yilun Zhao",
-        "Jiashuo Sun",
+        "Saif Punjwani",
+        "Micah Goldblum"
+      ],
+      "link": "http://arxiv.org/abs/2610.10536v1",
+      "published": "2026-10-07T17:59:26Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "EngramEdit: Decoupled Knowledge Updates in LLMs through Conditional Memory",
+      "summary": "Conditional memory architectures such as DeepSeek Engram use input n-grams to look up learned embeddings, expanding the capacity of large language models (LLMs) with limited additional computation. Beyond model scaling, this architecture has demonstrated the potential to decouple…",
+      "authors": [
+        "Hongru Cai",
+        "Ran Wei",
+        "Wenjie Wang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.08781v1",
-      "published": "2026-10-06T17:59:01Z",
+      "link": "http://arxiv.org/abs/2610.10533v1",
+      "published": "2026-10-07T17:58:52Z",
       "category": "cs.CL"
     },
     {
-      "title": "DepthWorld: 3D World Model for Robot Manipulation",
-      "summary": "World models offer a data-driven alternative to traditional simulators for robotics, with applications spanning policy evaluation, improvement, and planning. All of these uses depend on faithful 3D geometry, yet current video-based world models are trained on RGB alone and produc…",
+      "title": "Long-WAM: Scaling the Context of World-Action Models",
+      "summary": "Real-time robot control demands enough visual history to infer motion and task progress, but processing that history can delay action. We present Long-WAM, a model-system framework for scaling the context of causal world-action models under real-time control constraints. Our cent…",
       "authors": [
-        "Jai Bardhan",
-        "Josef Sivic",
-        "Vladimir Petrik"
+        "Wei Huang",
+        "Bohan Zhang",
+        "Chenzhi Liu",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.08780v1",
-      "published": "2026-10-06T17:59:00Z",
+      "link": "http://arxiv.org/abs/2610.10528v1",
+      "published": "2026-10-07T17:58:04Z",
       "category": "cs.RO"
     },
     {
-      "title": "Sherpa: Teaching LLMs to Teach Adaptively",
-      "summary": "Large language models (LLMs) have become increasingly capable problem solvers, but being able to solve a problem is not the same as being able to teach it. Existing approaches to training LLMs as teachers rely on demonstrations, preference data, or predefined pedagogical criteria…",
+      "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+      "summary": "Heavy-tailed noise has been widely observed in modern machine learning, motivating the use of methods like gradient clipping and normalization. While these methods are well understood in centralized settings, much less is known in decentralized ones, where applying a nonlinearity…",
       "authors": [
-        "Weixian Xu",
-        "Yanzhe Zhang",
-        "Zora Zhiruo Wang",
+        "Aleksandar Armacki",
+        "Haoyuan Cai",
+        "Ali H. Sayed"
+      ],
+      "link": "http://arxiv.org/abs/2610.10527v1",
+      "published": "2026-10-07T17:57:58Z",
+      "category": "math.OC"
+    },
+    {
+      "title": "Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models",
+      "summary": "Vision-language-action models (VLAs) are strikingly sensitive to instruction phrasing and do not inherit the language robustness of the vision-language models they are built on. A one-word edit can move success by tens of points: $π_{0.5}$ turns on a LIBERO stove 100% of the time…",
+      "authors": [
+        "Mikey Watts",
+        "Yuchen Cui"
+      ],
+      "link": "http://arxiv.org/abs/2610.10526v1",
+      "published": "2026-10-07T17:57:38Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "Distilling Graph Geometry: Knowledge Gap from GNNs to MLPs",
+      "summary": "GNN-to-MLP distillation aims to retain the predictive accuracy of a message-passing teacher while deploying a graph-free MLP at inference. Existing methods mainly transfer node-wise predictions or use confidence-based reweighting, but they do not specify where the student should …",
+      "authors": [
+        "Zhewei Chen",
+        "Hao Zhu",
+        "Jiaojiao Jiang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.08778v1",
-      "published": "2026-10-06T17:58:18Z",
+      "link": "http://arxiv.org/abs/2610.10520v1",
+      "published": "2026-10-07T17:56:01Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Why Forget-Only Unlearning Needs Memorization",
+      "summary": "Machine unlearning asks for a deletion algorithm whose output is close to retraining from scratch without the selected forget examples. In this work, we study forget-only unlearning, where the deletion algorithm receives only the trained model and the examples to forget, with no …",
+      "authors": [
+        "Luka Radić",
+        "Vikrant Singhal",
+        "Amartya Sanyal"
+      ],
+      "link": "http://arxiv.org/abs/2610.10519v1",
+      "published": "2026-10-07T17:55:46Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "RoboJEPA: Scaling Robotic Latent World Models",
+      "summary": "Latent world models have shown a remarkable ability to predict future states and to plan in the real world. In practice, however, we lack a principled way to estimate how their capabilities scale with model size, data, and compute, an open problem that slows progress in the field…",
+      "authors": [
+        "Artem Zholus",
+        "Nicolas Beltran-Velez",
+        "Jianhao Yuan",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.10515v1",
+      "published": "2026-10-07T17:54:42Z",
       "category": "cs.AI"
     },
     {
-      "title": "Agent in a Bottle: Can LLM Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?",
-      "summary": "Large language models (LLMs) can solve many narrow tasks, but querying them separately for millions of related instances can be prohibitively expensive. Can LLM agents autonomously create cheaper solutions for such workloads? We call this ability \"bottling\": the ability to turn g…",
+      "title": "SciExam for ENSO: Can AI Agents Build Climate Models?",
+      "summary": "Language-model agents are increasingly asked to carry out open-ended scientific research, yet their results are usually graded against a known answer, a rubric, or a language-model reviewer, none of which can tell whether a new scientific model is valid. The AI Science Exam for E…",
       "authors": [
-        "Ankit Sonthalia",
-        "Haritz Puerto",
-        "Alexander Rubinstein",
+        "Yinling Zhang",
+        "Langchen Liu",
+        "Dongbin Xiu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.08775v1",
-      "published": "2026-10-06T17:57:19Z",
+      "link": "http://arxiv.org/abs/2610.10513v1",
+      "published": "2026-10-07T17:52:52Z",
       "category": "cs.AI"
     },
     {
-      "title": "AdvSim2Real : Training Web Agents Against Adaptive Prompt Injection in a Web World Model",
-      "summary": "Web agents complete user requests by reading and acting on pages that third parties write, so an instruction planted on a page can redirect the agent away from the user's goal. The agent cannot simply ignore the page, because the page also holds the values and controls the task r…",
+      "title": "Your Prompt Should Do More: Effects of Retrieval Instructions in Embedding Models",
+      "summary": "Prompted embedding models have recently received increasing attention, particularly for retrieval, where detailed retrieval instructions are provided as part of the retrieval prompt. Several new datasets and studies have examined this setting, showing that the current embedding m…",
       "authors": [
-        "Sarim Hashmi",
-        "Mukul Ranjan",
-        "Kshitij Mishra",
+        "Amanda Myntti",
+        "Jenna Kanerva",
+        "Veronika Laippala",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.08773v1",
-      "published": "2026-10-06T17:56:43Z",
+      "link": "http://arxiv.org/abs/2610.10508v1",
+      "published": "2026-10-07T17:51:46Z",
       "category": "cs.CL"
     },
     {
-      "title": "Rapid Fredholm stabilization of the Kuramoto--Sivashinsky equation with unrestricted, spatially-varying anti-diffusion",
-      "summary": "We develop the first feedback design for rapid stabilization of the Kuramoto--Sivashinsky equation with a spatially varying anti-diffusion coefficient. For constant coefficients, the single-input Fredholm design of Coron and Lü (2015) excludes a discrete set of values at which re…",
+      "title": "RECAST: Learning to Compute the Right Context through Adaptive Evidence Routing",
+      "summary": "Large language models are increasingly applied to tasks grounded in long, heterogeneous information sources. Conventional Retrieval-Augmented Generation (RAG) relies on fixed similarity-based retrieval, while agentic variants adapt queries and tool use but remain largely retrieva…",
       "authors": [
-        "Luke Bhan",
-        "Miroslav Krstic",
-        "Yuanyuan Shi"
-      ],
-      "link": "http://arxiv.org/abs/2610.08764v1",
-      "published": "2026-10-06T17:50:54Z",
-      "category": "eess.SY"
-    },
-    {
-      "title": "VeriFine: Scaling Verification for Self-Improvement in Embodied Reasoning",
-      "summary": "Self-improving policies continually expose new failure patterns, changing what their judges must be able to verify. However, current fixed judges constrain both optimization feedback and the discovery of useful training examples, limiting further self-improvement. This challenge …",
-      "authors": [
-        "Zewei Zhou",
-        "Rachel Luo",
-        "Yulong Cao",
+        "Yilun Hao",
+        "Krishna Sayana",
+        "Isabella Ye",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.08761v1",
-      "published": "2026-10-06T17:50:29Z",
+      "link": "http://arxiv.org/abs/2610.10507v1",
+      "published": "2026-10-07T17:51:08Z",
       "category": "cs.AI"
-    },
-    {
-      "title": "WorldSonus: Bringing Sound to Worlds",
-      "summary": "Recent advances in world models have enabled increasingly realistic visual synthesis. However, these generated environments remain largely silent. Bringing sound to world models poses three core challenges: real-time generation to keep pace with interactive video streams, interac…",
-      "authors": [
-        "Pengjun Fang",
-        "Jingyi Fa",
-        "Kam Man Wu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.08760v1",
-      "published": "2026-10-06T17:50:18Z",
-      "category": "cs.SD"
-    },
-    {
-      "title": "Neural Petri flows for chemical reactions",
-      "summary": "Petri nets have been used to describe chemical processes such as reactions.They map well to chemistry: Places are the bonds between atoms and the free valence of each atom, a token is a unit of bond order, a transition forms or breaks a bond, the conserved quantities are the vale…",
-      "authors": [
-        "Jose Eduardo Escrig Molina",
-        "Daniel Probst"
-      ],
-      "link": "http://arxiv.org/abs/2610.08750v1",
-      "published": "2026-10-06T17:44:56Z",
-      "category": "cs.LG"
     }
   ]
 }

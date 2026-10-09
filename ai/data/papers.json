@@ -1,155 +1,150 @@
 {
-  "generated_at": "2026-10-08T20:26:57+00:00",
+  "generated_at": "2026-10-09T09:54:53+00:00",
   "items": [
     {
-      "title": "Never Look Back: Understanding Persistence in 3D Object Memory from Egocentric Videos",
-      "summary": "As we move through the world and carry out everyday tasks, we encounter objects that may become relevant only later. We are capable of recalling where we left something or what was inside a container, even without knowing we would need it later. Here, we study how an embodied ass…",
+      "title": "CSF: Contextual Safety Filtering for Motion Generators",
+      "summary": "Text-conditioned motion generators produce trackable whole-body motion, but they have no notion of scene-dependent safety: the same action may target an object or a person. Existing safeguards either inspect the prompt, require labeled motion data, or enforce geometric constraint…",
       "authors": [
-        "Shravan Chaudhari",
-        "William Paul",
-        "Suchi Saria",
+        "Lizhi Yang",
+        "Yiling Hou",
+        "Yao Tang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.10538v1",
-      "published": "2026-10-07T17:59:41Z",
+      "link": "http://arxiv.org/abs/2610.12467v1",
+      "published": "2026-10-08T17:59:50Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "On the estimation and validity of AI time horizons---a statistical look at the METR plot",
+      "summary": "METR's 50\\% time horizon measures the human completion time of software tasks that an AI solves with 50\\% probability, allowing AI capabilities to be expressed in interpretable units. On 228 tasks and 26 AIs, we recompute the time horizons using splines and item-response theory t…",
+      "authors": [
+        "Drew T. Nguyen",
+        "William Fithian"
+      ],
+      "link": "http://arxiv.org/abs/2610.12466v1",
+      "published": "2026-10-08T17:59:50Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control",
+      "summary": "General-purpose robots must perform a wide range of tasks from agile locomotion to dexterous manipulation. While sim-to-real reinforcement learning (RL) has proven to be a useful tool for this goal, current RL pipelines depend on engineering-heavy, per-task structural priors such…",
+      "authors": [
+        "Octi Zhang",
+        "Mateo Guaman Castro",
+        "Patrick Yin",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.12465v1",
+      "published": "2026-10-08T17:59:50Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents",
+      "summary": "In 2026, cybersecurity evaluations involving OpenAI, Anthropic, and Google agents reached real systems outside their authorized test scope. The paths were different. OpenAI agents exploited research infrastructure, coordinated across runs, and compromised parts of Hugging Face's …",
+      "authors": [
+        "Abbas Raftari"
+      ],
+      "link": "http://arxiv.org/abs/2610.12463v1",
+      "published": "2026-10-08T17:59:49Z",
+      "category": "cs.CR"
+    },
+    {
+      "title": "BrickBench: Evaluating Agentic Brick Design",
+      "summary": "We propose BrickBench, a benchmark for agentic text-conditioned LEGO-set design. Given a prompt, an agent is tasked with producing an assembly that not only satisfies semantic and design criteria, but that can also be physically built. To do so, it must select parts from a discre…",
+      "authors": [
+        "Peter Kulits",
+        "Yiqing Xu",
+        "R. Kenny Jones",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.12452v1",
+      "published": "2026-10-08T17:58:56Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
+      "summary": "In this work, we show that a single Transformer block, applied recurrently, can match the accuracy of a full-depth vision encoder at comparable inference FLOPs without intermediate feature distillation. reViT restores depth-specific transformations by representing the FFN at each…",
+      "authors": [
+        "Adrian Bulat",
+        "Yassine Ouali",
+        "Georgios Tzimiropoulos"
+      ],
+      "link": "http://arxiv.org/abs/2610.12448v1",
+      "published": "2026-10-08T17:58:36Z",
       "category": "cs.CV"
     },
     {
-      "title": "Decoupling Exploration from Optimization in RLVR",
-      "summary": "Modern language models undergo reinforcement learning with verifiable rewards (RLVR) on top of already-trained checkpoints. A key promise of RLVR is the discovery of new reasoning strategies. In principle, a model can sample novel ideas absent from its prior training data. In pra…",
+      "title": "Bi-FORK: Generative Modeling of High-Dimensional Bifurcating Systems",
+      "summary": "Bifurcations are ubiquitous in physical systems, from structural buckling to fluid and climate dynamics, yet they remain largely unexplored in deep learning. At a symmetry-breaking bifurcation, a single input admits multiple equally valid solutions, violating the one-to-one assum…",
       "authors": [
-        "Saif Punjwani",
-        "Micah Goldblum"
+        "Anna Zimmel",
+        "Fleur Hendriks",
+        "Markus Holzleitner",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.10536v1",
-      "published": "2026-10-07T17:59:26Z",
+      "link": "http://arxiv.org/abs/2610.12449v1",
+      "published": "2026-10-08T17:58:36Z",
       "category": "cs.LG"
     },
     {
-      "title": "EngramEdit: Decoupled Knowledge Updates in LLMs through Conditional Memory",
-      "summary": "Conditional memory architectures such as DeepSeek Engram use input n-grams to look up learned embeddings, expanding the capacity of large language models (LLMs) with limited additional computation. Beyond model scaling, this architecture has demonstrated the potential to decouple…",
+      "title": "Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception",
+      "summary": "Recent incidents have highlighted the challenge of monitoring LLM agents and the danger of models deceiving people. We show that white-box deception detection via probes can be scaled up to frontier monitoring settings by collecting the largest deception dataset to date for train…",
       "authors": [
-        "Hongru Cai",
-        "Ran Wei",
-        "Wenjie Wang",
+        "Oskar J. Hollinsworth",
+        "Alex F. Spies",
+        "Tigist Diriba",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.10533v1",
-      "published": "2026-10-07T17:58:52Z",
-      "category": "cs.CL"
+      "link": "http://arxiv.org/abs/2610.12445v1",
+      "published": "2026-10-08T17:58:13Z",
+      "category": "cs.LG"
     },
     {
-      "title": "Long-WAM: Scaling the Context of World-Action Models",
-      "summary": "Real-time robot control demands enough visual history to infer motion and task progress, but processing that history can delay action. We present Long-WAM, a model-system framework for scaling the context of causal world-action models under real-time control constraints. Our cent…",
+      "title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+      "summary": "Quantizing AdamW's optimizer states reduces persistent storage, but quantization errors propagate through the moment recurrences and perturb subsequent adaptive updates. We redesign 4-bit optimizer-state quantization for AdamW from the perspective of \\emph{rounding space}: the co…",
       "authors": [
-        "Wei Huang",
-        "Bohan Zhang",
-        "Chenzhi Liu",
+        "Hanyang Li",
+        "Shao Tang",
+        "Daniel Thomas Braithwaite",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.10528v1",
-      "published": "2026-10-07T17:58:04Z",
+      "link": "http://arxiv.org/abs/2610.12444v1",
+      "published": "2026-10-08T17:58:09Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Density Ratio Estimation with Stein Displacement Fields",
+      "summary": "Density ratios quantify distribution shift from a probability-mass point of view, whereas displacement fields describe, from a dynamical point of view, how one distribution is transported onto another. Although both offer complementary insights, they are usually estimated separat…",
+      "authors": [
+        "Song Liu"
+      ],
+      "link": "http://arxiv.org/abs/2610.12437v1",
+      "published": "2026-10-08T17:57:33Z",
+      "category": "stat.ML"
+    },
+    {
+      "title": "Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff",
+      "summary": "AI agents can now conduct real-world cyberattacks, scale up capabilities with the number of agents, and collectively pursue misaligned goals to obtain rewards. Together, these factors raise the risk of a population explosion of misaligned agents: agents could compromise computers…",
+      "authors": [
+        "Erin Crawley",
+        "Hidenori Tanaka"
+      ],
+      "link": "http://arxiv.org/abs/2610.12436v1",
+      "published": "2026-10-08T17:57:32Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "VioLA: Learning Generalist Humanoid Control Policies from Human Data",
+      "summary": "Teaching a humanoid to follow instructions with its whole body runs into two obstacles. Its action space is large and tightly coupled: legs, arms, and fingers must move together while the robot keeps its balance, which makes joint-level actions hard to learn. And humanoid demonst…",
+      "authors": [
+        "Mert Albaba",
+        "Jens Beißwenger",
+        "Anna Manasyan",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.12435v1",
+      "published": "2026-10-08T17:57:27Z",
       "category": "cs.RO"
-    },
-    {
-      "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
-      "summary": "Heavy-tailed noise has been widely observed in modern machine learning, motivating the use of methods like gradient clipping and normalization. While these methods are well understood in centralized settings, much less is known in decentralized ones, where applying a nonlinearity…",
-      "authors": [
-        "Aleksandar Armacki",
-        "Haoyuan Cai",
-        "Ali H. Sayed"
-      ],
-      "link": "http://arxiv.org/abs/2610.10527v1",
-      "published": "2026-10-07T17:57:58Z",
-      "category": "math.OC"
-    },
-    {
-      "title": "Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models",
-      "summary": "Vision-language-action models (VLAs) are strikingly sensitive to instruction phrasing and do not inherit the language robustness of the vision-language models they are built on. A one-word edit can move success by tens of points: $π_{0.5}$ turns on a LIBERO stove 100% of the time…",
-      "authors": [
-        "Mikey Watts",
-        "Yuchen Cui"
-      ],
-      "link": "http://arxiv.org/abs/2610.10526v1",
-      "published": "2026-10-07T17:57:38Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Distilling Graph Geometry: Knowledge Gap from GNNs to MLPs",
-      "summary": "GNN-to-MLP distillation aims to retain the predictive accuracy of a message-passing teacher while deploying a graph-free MLP at inference. Existing methods mainly transfer node-wise predictions or use confidence-based reweighting, but they do not specify where the student should …",
-      "authors": [
-        "Zhewei Chen",
-        "Hao Zhu",
-        "Jiaojiao Jiang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.10520v1",
-      "published": "2026-10-07T17:56:01Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Why Forget-Only Unlearning Needs Memorization",
-      "summary": "Machine unlearning asks for a deletion algorithm whose output is close to retraining from scratch without the selected forget examples. In this work, we study forget-only unlearning, where the deletion algorithm receives only the trained model and the examples to forget, with no …",
-      "authors": [
-        "Luka Radić",
-        "Vikrant Singhal",
-        "Amartya Sanyal"
-      ],
-      "link": "http://arxiv.org/abs/2610.10519v1",
-      "published": "2026-10-07T17:55:46Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "RoboJEPA: Scaling Robotic Latent World Models",
-      "summary": "Latent world models have shown a remarkable ability to predict future states and to plan in the real world. In practice, however, we lack a principled way to estimate how their capabilities scale with model size, data, and compute, an open problem that slows progress in the field…",
-      "authors": [
-        "Artem Zholus",
-        "Nicolas Beltran-Velez",
-        "Jianhao Yuan",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.10515v1",
-      "published": "2026-10-07T17:54:42Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "SciExam for ENSO: Can AI Agents Build Climate Models?",
-      "summary": "Language-model agents are increasingly asked to carry out open-ended scientific research, yet their results are usually graded against a known answer, a rubric, or a language-model reviewer, none of which can tell whether a new scientific model is valid. The AI Science Exam for E…",
-      "authors": [
-        "Yinling Zhang",
-        "Langchen Liu",
-        "Dongbin Xiu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.10513v1",
-      "published": "2026-10-07T17:52:52Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Your Prompt Should Do More: Effects of Retrieval Instructions in Embedding Models",
-      "summary": "Prompted embedding models have recently received increasing attention, particularly for retrieval, where detailed retrieval instructions are provided as part of the retrieval prompt. Several new datasets and studies have examined this setting, showing that the current embedding m…",
-      "authors": [
-        "Amanda Myntti",
-        "Jenna Kanerva",
-        "Veronika Laippala",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.10508v1",
-      "published": "2026-10-07T17:51:46Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "RECAST: Learning to Compute the Right Context through Adaptive Evidence Routing",
-      "summary": "Large language models are increasingly applied to tasks grounded in long, heterogeneous information sources. Conventional Retrieval-Augmented Generation (RAG) relies on fixed similarity-based retrieval, while agentic variants adapt queries and tool use but remain largely retrieva…",
-      "authors": [
-        "Yilun Hao",
-        "Krishna Sayana",
-        "Isabella Ye",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.10507v1",
-      "published": "2026-10-07T17:51:08Z",
-      "category": "cs.AI"
     }
   ]
 }

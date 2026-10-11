@@ -1,18 +1,18 @@
 {
   "last_updated": {
-    "date": "10 Oct 2026",
-    "time": "15:33 IST",
-    "iso": "2026-10-10T15:33:34.493103+00:00"
+    "date": "11 Oct 2026",
+    "time": "15:43 IST",
+    "iso": "2026-10-11T15:43:47.371526+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udfe2",
-    "bias": "Mild Bullish",
-    "confidence": 55,
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 52,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 55
+    "conviction": 52
   },
   "assets": {
     "BTC": {
@@ -33,12 +33,28 @@
     }
   },
   "scores": {
-    "macro": 48,
-    "flow": 50,
+    "macro": 40,
+    "flow": 51,
     "technical": 46,
     "risk": 4
   },
   "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Ledger confirms unauthorized hardware implant; losses may exceed $86M"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "CFTC proposals aimed at separating prediction markets from casino gambling"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Justin Sun says Tron\u2019s post-quantum cryptography has gone live on testnet"
+    },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Tech chief says EU can fend off rogue AI risk: Report"
@@ -54,22 +70,6 @@
     {
       "emoji": "\ud83d\udfe1",
       "text": "New York permanently bars Celsius founder Mashinsky in $35M fraud settlement"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "THORChain exec accuses Tether of temporarily freezing USDT vaults"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Here\u2019s what happened in crypto today"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "HSBC, Ant Digital test AI-agent payments using tokenized deposits"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Ledger investigates fund losses linked to Southeast Asian reseller, warns users"
     }
   ],
   "events": [

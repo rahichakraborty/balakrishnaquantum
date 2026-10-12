@@ -1,150 +1,146 @@
 {
-  "generated_at": "2026-10-11T19:17:58+00:00",
+  "generated_at": "2026-10-12T10:07:08+00:00",
   "items": [
     {
-      "title": "CSF: Contextual Safety Filtering for Motion Generators",
-      "summary": "Text-conditioned motion generators produce trackable whole-body motion, but they have no notion of scene-dependent safety: the same action may target an object or a person. Existing safeguards either inspect the prompt, require labeled motion data, or enforce geometric constraint…",
+      "title": "Can Language Models Play the Wikipedia Game?",
+      "summary": "Language models increasingly support or automate information retrieval from document collections too large to index. This task is difficult when it requires specialist linguistic or scientific knowledge. We used the Wikipedia Game to test language models on an analogous informati…",
       "authors": [
-        "Lizhi Yang",
-        "Yiling Hou",
-        "Yao Tang",
-        "et al."
+        "Alexander Hickey",
+        "Joanna Knight",
+        "James Bishop"
       ],
-      "link": "http://arxiv.org/abs/2610.12467v1",
-      "published": "2026-10-08T17:59:50Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "On the estimation and validity of AI time horizons---a statistical look at the METR plot",
-      "summary": "METR's 50\\% time horizon measures the human completion time of software tasks that an AI solves with 50\\% probability, allowing AI capabilities to be expressed in interpretable units. On 228 tasks and 26 AIs, we recompute the time horizons using splines and item-response theory t…",
-      "authors": [
-        "Drew T. Nguyen",
-        "William Fithian"
-      ],
-      "link": "http://arxiv.org/abs/2610.12466v1",
-      "published": "2026-10-08T17:59:50Z",
+      "link": "http://arxiv.org/abs/2610.13948v1",
+      "published": "2026-10-09T17:59:56Z",
       "category": "cs.AI"
     },
     {
-      "title": "A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control",
-      "summary": "General-purpose robots must perform a wide range of tasks from agile locomotion to dexterous manipulation. While sim-to-real reinforcement learning (RL) has proven to be a useful tool for this goal, current RL pipelines depend on engineering-heavy, per-task structural priors such…",
+      "title": "Hide and Seek: HIDE Concepts to SEEK explanations for black box models",
+      "summary": "Interpreting machine learning model predictions is a central challenge, particularly for black-box vision models. Concept-based attribution methods interpret models using human-understandable concepts. Existing concept-based methods can only interpret classification and regressio…",
       "authors": [
-        "Octi Zhang",
-        "Mateo Guaman Castro",
-        "Patrick Yin",
+        "Bhanu Tokas",
+        "Rahul Nair",
+        "Rockwell Jackson",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.12465v1",
-      "published": "2026-10-08T17:59:50Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents",
-      "summary": "In 2026, cybersecurity evaluations involving OpenAI, Anthropic, and Google agents reached real systems outside their authorized test scope. The paths were different. OpenAI agents exploited research infrastructure, coordinated across runs, and compromised parts of Hugging Face's …",
-      "authors": [
-        "Abbas Raftari"
-      ],
-      "link": "http://arxiv.org/abs/2610.12463v1",
-      "published": "2026-10-08T17:59:49Z",
-      "category": "cs.CR"
-    },
-    {
-      "title": "BrickBench: Evaluating Agentic Brick Design",
-      "summary": "We propose BrickBench, a benchmark for agentic text-conditioned LEGO-set design. Given a prompt, an agent is tasked with producing an assembly that not only satisfies semantic and design criteria, but that can also be physically built. To do so, it must select parts from a discre…",
-      "authors": [
-        "Peter Kulits",
-        "Yiqing Xu",
-        "R. Kenny Jones",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.12452v1",
-      "published": "2026-10-08T17:58:56Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
-      "summary": "In this work, we show that a single Transformer block, applied recurrently, can match the accuracy of a full-depth vision encoder at comparable inference FLOPs without intermediate feature distillation. reViT restores depth-specific transformations by representing the FFN at each…",
-      "authors": [
-        "Adrian Bulat",
-        "Yassine Ouali",
-        "Georgios Tzimiropoulos"
-      ],
-      "link": "http://arxiv.org/abs/2610.12448v1",
-      "published": "2026-10-08T17:58:36Z",
+      "link": "http://arxiv.org/abs/2610.13935v1",
+      "published": "2026-10-09T17:56:59Z",
       "category": "cs.CV"
     },
     {
-      "title": "Bi-FORK: Generative Modeling of High-Dimensional Bifurcating Systems",
-      "summary": "Bifurcations are ubiquitous in physical systems, from structural buckling to fluid and climate dynamics, yet they remain largely unexplored in deep learning. At a symmetry-breaking bifurcation, a single input admits multiple equally valid solutions, violating the one-to-one assum…",
+      "title": "Constructive Bounds for the Topological Expressivity of Neural Networks",
+      "summary": "The expressivity of a neural network $Φ$ describes the class of functions that a network can express. The term topological expressivity refers to a family of measures particularly suited to understand binary classification and is often formulated in terms of the Betti numbers of …",
       "authors": [
-        "Anna Zimmel",
-        "Fleur Hendriks",
-        "Markus Holzleitner",
+        "Kosio Beshkov"
+      ],
+      "link": "http://arxiv.org/abs/2610.13931v1",
+      "published": "2026-10-09T17:55:33Z",
+      "category": "math.AT"
+    },
+    {
+      "title": "AI Models Can Provably Hide Arbitrary Capabilities",
+      "summary": "Capability evaluations aim to surface dangerous model behaviors before deployment, but their reliability depends on the assumption that hidden capabilities can be elicited. We show this assumption does not hold under adversarial conditions by constructing backdoor attacks that em…",
+      "authors": [
+        "Andis Draguns",
+        "Sumeet Ramesh Motwani",
+        "Raymond Douglas",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.12449v1",
-      "published": "2026-10-08T17:58:36Z",
+      "link": "http://arxiv.org/abs/2610.13928v1",
+      "published": "2026-10-09T17:55:06Z",
       "category": "cs.LG"
     },
     {
-      "title": "Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception",
-      "summary": "Recent incidents have highlighted the challenge of monitoring LLM agents and the danger of models deceiving people. We show that white-box deception detection via probes can be scaled up to frontier monitoring settings by collecting the largest deception dataset to date for train…",
+      "title": "KL Before and After Mixing: A Round-Complexity Separation in Parallel Sampling",
+      "summary": "A parallel sampler can choose at random which coordinates to generate together. For a target $p$ and the output law $q_U$ of a schedule $U$ drawn afresh for each output, we compare the schedule-averaged divergence $\\mathbb{E}_U D_{\\mathrm{KL}}(p\\|q_U)$ with the output-law diverge…",
       "authors": [
-        "Oskar J. Hollinsworth",
-        "Alex F. Spies",
-        "Tigist Diriba",
-        "et al."
+        "Tianyi Wu"
       ],
-      "link": "http://arxiv.org/abs/2610.12445v1",
-      "published": "2026-10-08T17:58:13Z",
+      "link": "http://arxiv.org/abs/2610.13924v1",
+      "published": "2026-10-09T17:54:16Z",
       "category": "cs.LG"
     },
     {
-      "title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
-      "summary": "Quantizing AdamW's optimizer states reduces persistent storage, but quantization errors propagate through the moment recurrences and perturb subsequent adaptive updates. We redesign 4-bit optimizer-state quantization for AdamW from the perspective of \\emph{rounding space}: the co…",
+      "title": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
+      "summary": "Deep-space communications operate under intermittent connectivity, long propagation delays, and relay storage constraints. In such networks, the Bundle Protocol enables store-carry-forward communication, requiring relay nodes to manage limited storage and scarce contact opportuni…",
       "authors": [
-        "Hanyang Li",
-        "Shao Tang",
-        "Daniel Thomas Braithwaite",
+        "Sajjad Baghaeea",
+        "Aimin Lib",
+        "Shanmugarajan Balasubramanian",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.12444v1",
-      "published": "2026-10-08T17:58:09Z",
+      "link": "http://arxiv.org/abs/2610.13923v1",
+      "published": "2026-10-09T17:53:46Z",
+      "category": "cs.NI"
+    },
+    {
+      "title": "DyssomniaNN: Multi-Scale Spiking Neural Modeling of Human Sleep Disorders and Perceived Restedness",
+      "summary": "Clinical sleep medicine repeatedly documents profound divergences between objective sleep duration and subjective daytime impairment, notably exemplified by sleep state misperception in paradoxical insomnia and boundary instability in narcolepsy type 1. Here, we present Dyssomnia…",
+      "authors": [
+        "Daniel Szelogowski"
+      ],
+      "link": "http://arxiv.org/abs/2610.13918v1",
+      "published": "2026-10-09T17:52:23Z",
+      "category": "cs.NE"
+    },
+    {
+      "title": "Designing Protein Structures from Natural Language",
+      "summary": "A central challenge in de novo protein design is generating proteins with desired structural and functional properties. Existing design models typically require a dedicated input representation for each property, limiting the design objectives they support. We develop Prompteina,…",
+      "authors": [
+        "Joseph Lee",
+        "Yanjing Li",
+        "Bo Qiang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.13917v1",
+      "published": "2026-10-09T17:51:55Z",
       "category": "cs.LG"
     },
     {
-      "title": "Density Ratio Estimation with Stein Displacement Fields",
-      "summary": "Density ratios quantify distribution shift from a probability-mass point of view, whereas displacement fields describe, from a dynamical point of view, how one distribution is transported onto another. Although both offer complementary insights, they are usually estimated separat…",
+      "title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
+      "summary": "Recursive self-improvement (RSI) aims to transform interaction experience into persistent improvements, yet external feedback is costly and world-model predictions may become unreliable as policies evolve. We introduce RSI-Anything, a domain-general framework built on JEPA-Anythi…",
       "authors": [
-        "Song Liu"
+        "Taoyong Cui",
+        "Pinxian Zeng",
+        "Wanghan Xu",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.12437v1",
-      "published": "2026-10-08T17:57:33Z",
+      "link": "http://arxiv.org/abs/2610.13912v1",
+      "published": "2026-10-09T17:50:30Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "When VLMs Destroy What They Know: Spatial Representations Fall Below Lexical Priors",
+      "summary": "Vision-Language Models (VLMs) increasingly analyze and reason about images, yet it remains unclear whether their internal representations faithfully encode the structured relations required for such reasoning. We introduce EICS (Evaluation-Invariant Concept Stability), a metric f…",
+      "authors": [
+        "Shubh Garg",
+        "Chen Shani"
+      ],
+      "link": "http://arxiv.org/abs/2610.13910v1",
+      "published": "2026-10-09T17:50:03Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Revisiting Tabular Deep Regression: Objectives and the Limits of Global Early Stopping",
+      "summary": "While deep learning models for tabular data have recently received significant research attention, the choice of objective functions for regression tasks remains an understudied degree of freedom. Several lines of research offer alternatives to the standard Mean Squared Error (MS…",
+      "authors": [
+        "Danil Rudenko",
+        "Georgii Bulgakov",
+        "Nikolay Kartashev",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.13909v1",
+      "published": "2026-10-09T17:49:32Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Hitting-Time Bounds for Asynchronous Q-Learning",
+      "summary": "We study the last iterate of standard asynchronous Q-learning from a single trajectory of a finite Markov decision process. The trajectory follows a fixed behavior policy whose state--action chain is irreducible and may be periodic. For discount factor $γ$, write $H=(1-γ)^{-1}$, …",
+      "authors": [
+        "Yang Peng"
+      ],
+      "link": "http://arxiv.org/abs/2610.13901v1",
+      "published": "2026-10-09T17:44:10Z",
       "category": "stat.ML"
-    },
-    {
-      "title": "Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff",
-      "summary": "AI agents can now conduct real-world cyberattacks, scale up capabilities with the number of agents, and collectively pursue misaligned goals to obtain rewards. Together, these factors raise the risk of a population explosion of misaligned agents: agents could compromise computers…",
-      "authors": [
-        "Erin Crawley",
-        "Hidenori Tanaka"
-      ],
-      "link": "http://arxiv.org/abs/2610.12436v1",
-      "published": "2026-10-08T17:57:32Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "VioLA: Learning Generalist Humanoid Control Policies from Human Data",
-      "summary": "Teaching a humanoid to follow instructions with its whole body runs into two obstacles. Its action space is large and tightly coupled: legs, arms, and fingers must move together while the robot keeps its balance, which makes joint-level actions hard to learn. And humanoid demonst…",
-      "authors": [
-        "Mert Albaba",
-        "Jens Beißwenger",
-        "Anna Manasyan",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.12435v1",
-      "published": "2026-10-08T17:57:27Z",
-      "category": "cs.RO"
     }
   ]
 }

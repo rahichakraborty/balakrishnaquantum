@@ -1,24 +1,24 @@
 {
   "last_updated": {
-    "date": "12 Oct 2026",
-    "time": "16:42 IST",
-    "iso": "2026-10-12T16:42:47.394903+00:00"
+    "date": "13 Oct 2026",
+    "time": "16:24 IST",
+    "iso": "2026-10-13T16:24:13.917579+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udfe2",
-    "bias": "Mild Bullish",
-    "confidence": 55,
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 50,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 55
+    "conviction": 50
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Neutral Bearish",
-      "confidence": 45,
+      "confidence": 46,
       "support": 80651.78,
       "resistance": 86592.23,
       "trade_plan": "Wait for confirmed breakout."
@@ -33,27 +33,31 @@
     }
   },
   "scores": {
-    "macro": 50,
-    "flow": 56,
+    "macro": 42,
+    "flow": 44,
     "technical": 48,
     "risk": 21
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Kraken parent clears Dubai\u2019s final hurdle for dirham trading rollout"
+      "text": "Metaplanet to issue $329M convertible bonds to pay debt, fund share buybacks"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Standard Chartered adds Ripple USD custody, eyes LMAX collateral deal"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "South Korean bank launches Bitcoin-backed business loans: Report"
+      "text": "MediaMarktSaturn pulls Ledger products amid tampering reports"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Global watchdog flags stablecoin risks, AI threats ahead of G20"
+      "text": "Bitcoin hits $84K resistance as Korean tech rout deepens KOSPI losses"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Chinese fraud victims lose key court battle over 61,000 Bitcoin"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Ledger details LTE-enabled spy implants in wallets sold by CryptoBilis"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -61,15 +65,11 @@
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "DATA Network to migrate to Sui, retire own chain"
+      "text": "Blur is shutting down its website, so why are NFT collectors cheering?"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "French lawmakers back reporting rule for crypto wallets over $112K"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "XRP Ledger defends emergency patch for unlimited XRP bug"
+      "text": "Binance to shut down crypto mining pool services in November"
     }
   ],
   "events": [

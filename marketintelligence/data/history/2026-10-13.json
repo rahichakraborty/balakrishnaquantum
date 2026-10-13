@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "13 Oct 2026",
+    "time": "16:24 IST",
+    "iso": "2026-10-13T16:24:13.917579+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 50,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 50
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Neutral Bearish",
+      "confidence": 46,
+      "support": 80651.78,
+      "resistance": 86592.23,
+      "trade_plan": "Wait for confirmed breakout."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2413.52,
+      "resistance": 2721.64,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 42,
+    "flow": 44,
+    "technical": 48,
+    "risk": 21
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Metaplanet to issue $329M convertible bonds to pay debt, fund share buybacks"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "MediaMarktSaturn pulls Ledger products amid tampering reports"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin hits $84K resistance as Korean tech rout deepens KOSPI losses"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Chinese fraud victims lose key court battle over 61,000 Bitcoin"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Ledger details LTE-enabled spy implants in wallets sold by CryptoBilis"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Blur is shutting down its website, so why are NFT collectors cheering?"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Binance to shut down crypto mining pool services in November"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

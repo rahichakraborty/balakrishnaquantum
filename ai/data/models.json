@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-10-13T10:00:27+00:00",
+  "generated_at": "2026-10-13T20:28:32+00:00",
   "items": [
     {
       "id": "google/embeddinggemma-2",
       "url": "https://huggingface.co/google/embeddinggemma-2",
       "downloads": 124930,
-      "likes": 2011,
+      "likes": 2089,
       "pipeline_tag": "feature-extraction"
     },
     {
       "id": "jialinyyzz/humanizer",
       "url": "https://huggingface.co/jialinyyzz/humanizer",
       "downloads": 54039,
-      "likes": 1384,
+      "likes": 1481,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen-Image-2.1-Turbo",
       "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
       "downloads": 9665,
-      "likes": 672,
+      "likes": 701,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
       "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
       "downloads": 2247929,
-      "likes": 4149,
+      "likes": 4195,
       "pipeline_tag": "text-to-image"
-    },
-    {
-      "id": "Cloudflare/clef",
-      "url": "https://huggingface.co/Cloudflare/clef",
-      "downloads": 17173,
-      "likes": 2112,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 1724548,
-      "likes": 7534,
+      "likes": 7614,
       "pipeline_tag": "image-to-video"
+    },
+    {
+      "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
+      "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
+      "downloads": 630,
+      "likes": 451,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "ConwayResearch/Underdog-Saluki-27B-1.0",
       "url": "https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0",
       "downloads": 269829,
-      "likes": 388,
+      "likes": 415,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "Cloudflare/clef",
+      "url": "https://huggingface.co/Cloudflare/clef",
+      "downloads": 17173,
+      "likes": 2138,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "LiquidAI/d1-3B",
       "url": "https://huggingface.co/LiquidAI/d1-3B",
       "downloads": 13190,
-      "likes": 362,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "Qwen/Qwen3.8-27B",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 7119569,
-      "likes": 17599,
+      "likes": 375,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "AtomicChat/Qwen-Image-2.1-Turbo-Uncensored-GGUF",
       "url": "https://huggingface.co/AtomicChat/Qwen-Image-2.1-Turbo-Uncensored-GGUF",
       "downloads": 208575,
-      "likes": 388,
+      "likes": 404,
       "pipeline_tag": "text-to-image"
     }
   ]

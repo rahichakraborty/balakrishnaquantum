@@ -1,26 +1,26 @@
 {
   "last_updated": {
-    "date": "13 Oct 2026",
-    "time": "16:24 IST",
-    "iso": "2026-10-13T16:24:13.917579+00:00"
+    "date": "14 Oct 2026",
+    "time": "14:26 IST",
+    "iso": "2026-10-14T14:26:38.309905+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udfe1",
-    "bias": "Neutral",
-    "confidence": 50,
+    "emoji": "\ud83d\udfe2",
+    "bias": "Mild Bullish",
+    "confidence": 55,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 50
+    "conviction": 55
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Neutral Bearish",
-      "confidence": 46,
+      "confidence": 47,
       "support": 80651.78,
-      "resistance": 86592.23,
+      "resistance": 84154.06,
       "trade_plan": "Wait for confirmed breakout."
     },
     "ETH": {
@@ -28,48 +28,48 @@
       "bias": "Neutral",
       "confidence": 50,
       "support": 2413.52,
-      "resistance": 2721.64,
+      "resistance": 2609.95,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 42,
-    "flow": 44,
+    "macro": 48,
+    "flow": 48,
     "technical": 48,
-    "risk": 21
+    "risk": 6
   },
   "drivers": [
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Metaplanet to issue $329M convertible bonds to pay debt, fund share buybacks"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "MediaMarktSaturn pulls Ledger products amid tampering reports"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin hits $84K resistance as Korean tech rout deepens KOSPI losses"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Chinese fraud victims lose key court battle over 61,000 Bitcoin"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Ledger details LTE-enabled spy implants in wallets sold by CryptoBilis"
-    },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Blur is shutting down its website, so why are NFT collectors cheering?"
+      "text": "Starknet introduces wallet privacy feature for DeFi activity"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Binance to shut down crypto mining pool services in November"
+      "text": "Fed\u2019s Williams sees AI supply squeeze lasting beyond 2 years"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitwise\u2019s Hougan says Q3 charts point to \u2018crypto spring\u2019"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Ledger asks resellers to halt sales in Southeast Asia and Hong Kong"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Most tokenized stock trading on Solana, BNB Chain occurs outside US market hours"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Trezor reduces resellers as a \u2018preventative step\u2019 amid Ledger tampering reports"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "How the SEC\u2019s lack of leadership could facilitate crypto rulemaking"
     }
   ],
   "events": [

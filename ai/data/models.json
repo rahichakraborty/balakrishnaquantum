@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-10-14T08:19:08+00:00",
+  "generated_at": "2026-10-14T19:07:48+00:00",
   "items": [
     {
       "id": "google/embeddinggemma-2",
       "url": "https://huggingface.co/google/embeddinggemma-2",
-      "downloads": 124930,
-      "likes": 2142,
+      "downloads": 135175,
+      "likes": 2232,
       "pipeline_tag": "feature-extraction"
     },
     {
       "id": "jialinyyzz/humanizer",
       "url": "https://huggingface.co/jialinyyzz/humanizer",
-      "downloads": 54039,
-      "likes": 1556,
+      "downloads": 65616,
+      "likes": 1611,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen-Image-2.1-Turbo",
       "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
-      "downloads": 9665,
-      "likes": 729,
+      "downloads": 12704,
+      "likes": 763,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
       "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
-      "downloads": 2247929,
-      "likes": 4237,
+      "downloads": 2315771,
+      "likes": 4285,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
       "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
-      "downloads": 630,
-      "likes": 520,
+      "downloads": 4157,
+      "likes": 565,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "autotrust/JEV-35B",
+      "url": "https://huggingface.co/autotrust/JEV-35B",
+      "downloads": 27970,
+      "likes": 715,
+      "pipeline_tag": "text-classification"
     },
     {
       "id": "ConwayResearch/Underdog-Saluki-27B-1.0",
       "url": "https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0",
-      "downloads": 269829,
-      "likes": 434,
+      "downloads": 311969,
+      "likes": 452,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 1724548,
-      "likes": 7682,
+      "downloads": 1823507,
+      "likes": 7763,
       "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "autotrust/JEV-35B",
-      "url": "https://huggingface.co/autotrust/JEV-35B",
-      "downloads": 17426,
-      "likes": 665,
-      "pipeline_tag": "text-classification"
     },
     {
       "id": "AtomicChat/Qwen-Image-2.1-Turbo-Uncensored-GGUF",
       "url": "https://huggingface.co/AtomicChat/Qwen-Image-2.1-Turbo-Uncensored-GGUF",
-      "downloads": 208575,
-      "likes": 428,
+      "downloads": 258320,
+      "likes": 447,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "LiquidAI/d1-3B",
       "url": "https://huggingface.co/LiquidAI/d1-3B",
-      "downloads": 13190,
-      "likes": 384,
+      "downloads": 14854,
+      "likes": 393,
       "pipeline_tag": "image-text-to-text"
     }
   ]

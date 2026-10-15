@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "15 Oct 2026",
+    "time": "14:00 IST",
+    "iso": "2026-10-15T14:00:34.153508+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udd34",
+    "bias": "Mild Bearish",
+    "confidence": 37,
+    "todays_trade": "Reduce Size",
+    "preferred_asset": "ETH",
+    "risk_level": "High",
+    "risk_note": "Reduce Size",
+    "conviction": 37
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 34,
+      "support": 80521.52,
+      "resistance": 84154.06,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2347.71,
+      "resistance": 2569.64,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 42,
+    "flow": 28,
+    "technical": 42,
+    "risk": 74
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin ETFs shed $261M as XRP funds buck weekly outflow trend"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "South Korea plans cybersecurity overhaul after attacks hit banks, crypto firms"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Australia seeks feedback on crypto platform rules ahead of 2027 rollout"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin miners plunge up to 13% in Wall Street\u2019s worst selloff since July"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "VanEck seeks to withdraw application for Lido staked Ether ETF"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Polygon gains US payments licenses after closing Coinme deal"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Organizations join forces to fight Illinois crypto tax, after 6-month pause"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

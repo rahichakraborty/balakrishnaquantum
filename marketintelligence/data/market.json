@@ -1,75 +1,75 @@
 {
   "last_updated": {
-    "date": "14 Oct 2026",
-    "time": "14:26 IST",
-    "iso": "2026-10-14T14:26:38.309905+00:00"
+    "date": "15 Oct 2026",
+    "time": "14:00 IST",
+    "iso": "2026-10-15T14:00:34.153508+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udfe2",
-    "bias": "Mild Bullish",
-    "confidence": 55,
-    "todays_trade": "Wait For Confirmation",
+    "emoji": "\ud83d\udd34",
+    "bias": "Mild Bearish",
+    "confidence": 37,
+    "todays_trade": "Reduce Size",
     "preferred_asset": "ETH",
-    "risk_level": "Low",
-    "risk_note": "Normal Conditions",
-    "conviction": 55
+    "risk_level": "High",
+    "risk_note": "Reduce Size",
+    "conviction": 37
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
-      "bias": "Neutral Bearish",
-      "confidence": 47,
-      "support": 80651.78,
+      "bias": "Bearish",
+      "confidence": 34,
+      "support": 80521.52,
       "resistance": 84154.06,
-      "trade_plan": "Wait for confirmed breakout."
+      "trade_plan": "Fade rallies while below resistance."
     },
     "ETH": {
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 2413.52,
-      "resistance": 2609.95,
+      "support": 2347.71,
+      "resistance": 2569.64,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 48,
-    "flow": 48,
-    "technical": 48,
-    "risk": 6
+    "macro": 42,
+    "flow": 28,
+    "technical": 42,
+    "risk": 74
   },
   "drivers": [
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin ETFs shed $261M as XRP funds buck weekly outflow trend"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "South Korea plans cybersecurity overhaul after attacks hit banks, crypto firms"
+    },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Starknet introduces wallet privacy feature for DeFi activity"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Fed\u2019s Williams sees AI supply squeeze lasting beyond 2 years"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Bitwise\u2019s Hougan says Q3 charts point to \u2018crypto spring\u2019"
+      "text": "Australia seeks feedback on crypto platform rules ahead of 2027 rollout"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "Ledger asks resellers to halt sales in Southeast Asia and Hong Kong"
+      "text": "Bitcoin miners plunge up to 13% in Wall Street\u2019s worst selloff since July"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Most tokenized stock trading on Solana, BNB Chain occurs outside US market hours"
+      "text": "VanEck seeks to withdraw application for Lido staked Ether ETF"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Trezor reduces resellers as a \u2018preventative step\u2019 amid Ledger tampering reports"
+      "text": "Polygon gains US payments licenses after closing Coinme deal"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "How the SEC\u2019s lack of leadership could facilitate crypto rulemaking"
+      "text": "Organizations join forces to fight Illinois crypto tax, after 6-month pause"
     }
   ],
   "events": [

@@ -1,25 +1,25 @@
 {
   "last_updated": {
-    "date": "15 Oct 2026",
-    "time": "14:00 IST",
-    "iso": "2026-10-15T14:00:34.153508+00:00"
+    "date": "16 Oct 2026",
+    "time": "13:54 IST",
+    "iso": "2026-10-16T13:54:39.132377+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udd34",
-    "bias": "Mild Bearish",
-    "confidence": 37,
-    "todays_trade": "Reduce Size",
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 52,
+    "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
-    "risk_level": "High",
-    "risk_note": "Reduce Size",
-    "conviction": 37
+    "risk_level": "Medium",
+    "risk_note": "Watch Headlines",
+    "conviction": 52
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
-      "confidence": 34,
-      "support": 80521.52,
+      "confidence": 40,
+      "support": 80116.63,
       "resistance": 84154.06,
       "trade_plan": "Fade rallies while below resistance."
     },
@@ -27,25 +27,25 @@
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 2347.71,
+      "support": 2337.78,
       "resistance": 2569.64,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 42,
-    "flow": 28,
-    "technical": 42,
-    "risk": 74
+    "macro": 48,
+    "flow": 62,
+    "technical": 45,
+    "risk": 40
   },
   "drivers": [
     {
-      "emoji": "\ud83d\udd34",
-      "text": "Bitcoin ETFs shed $261M as XRP funds buck weekly outflow trend"
+      "emoji": "\ud83d\udfe1",
+      "text": "Capital B reports $78M H1 loss driven by Bitcoin impairment charge"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "South Korea plans cybersecurity overhaul after attacks hit banks, crypto firms"
+      "text": "Judge rejects CFTC, Gemini bid to undo $5M settlement"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -53,23 +53,23 @@
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Australia seeks feedback on crypto platform rules ahead of 2027 rollout"
+      "text": "OpenAI model helped itself to testnet crypto, then kept quiet about it"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "Bitcoin miners plunge up to 13% in Wall Street\u2019s worst selloff since July"
+      "text": "Balaji\u2019s \u2018Singapore of social media\u2019 begins with a wave of bans"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "VanEck seeks to withdraw application for Lido staked Ether ETF"
+      "text": "MSCI adopts index exclusion rules that could oust Strategy"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Polygon gains US payments licenses after closing Coinme deal"
+      "text": "Australia releases draft bill to adopt OECD crypto tax reporting framework"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Organizations join forces to fight Illinois crypto tax, after 6-month pause"
+      "text": "Scammer loses $4.8M stored on tampered Ledgers: Asia Express"
     }
   ],
   "events": [

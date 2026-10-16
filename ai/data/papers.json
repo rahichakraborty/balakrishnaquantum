@@ -1,154 +1,161 @@
 {
-  "generated_at": "2026-10-15T18:50:11+00:00",
+  "generated_at": "2026-10-16T07:49:13+00:00",
   "items": [
     {
-      "title": "Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion",
-      "summary": "Recent advances in robot learning have driven rapid progress in humanoid control, enabling increasingly agile behaviors in the real world. However, humanoid control networks are typically obtained through conventional training procedures, while comparatively little attention has …",
+      "title": "LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation",
+      "summary": "Personalization is essential for general-purpose robots to transition into household environments and achieve true practicality. While general robotic manipulation has been extensively studied, personalized robotic manipulation (PeRM) lacks a controlled benchmark for separating t…",
       "authors": [
-        "Huixuan Cheng",
-        "Bike Zhang",
-        "Shankar Sastry",
+        "Zhixu Li",
+        "Keqian Tang",
+        "Litian Gong",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.20606v1",
-      "published": "2026-10-14T17:59:52Z",
+      "link": "http://arxiv.org/abs/2610.22372v1",
+      "published": "2026-10-15T17:59:59Z",
       "category": "cs.RO"
     },
     {
-      "title": "Hierarchical Residual Policy Learning for Real-World Mobile Manipulation with Sparse Human Guidance",
-      "summary": "Mobile Manipulation (MoMa) is a cornerstone of autonomous robotic systems, yet real-world fine-tuning remains a formidable challenge because of high-dimensional action spaces and intricate coupling between heterogeneous modules. In this paper, we propose HiRe-MoMa (Hierarchical R…",
+      "title": "Discovering state-of-the-art quantum circuits with large language models",
+      "summary": "Significant efforts are currently being directed toward the implementation of large-scale quantum information processors, but realizing useful quantum advantage also requires the development of efficient quantum algorithms. While for many practical problems the dominant resource …",
       "authors": [
-        "Zhefei Gong",
-        "Hefeifei Jiang",
-        "Zehao Wang",
+        "Andi Gu",
+        "Alek H. Kemeny",
+        "Susanne F. Yelin",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.20607v1",
-      "published": "2026-10-14T17:59:52Z",
+      "link": "http://arxiv.org/abs/2610.22367v1",
+      "published": "2026-10-15T17:59:20Z",
+      "category": "quant-ph"
+    },
+    {
+      "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
+      "summary": "Predicting how the world responds to an action requires more than what can be seen: robots must account for environmental factors that are neither directly observable nor explicitly specified, from physical properties such as friction and mass to human-defined environmental rules…",
+      "authors": [
+        "Chenyuan Zhou",
+        "Yining Hong",
+        "Huang Huang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.22364v1",
+      "published": "2026-10-15T17:59:11Z",
       "category": "cs.RO"
     },
     {
-      "title": "Co-Evolving Acting and Forecasting for Language Agents",
-      "summary": "Training language agents is bottlenecked by the high cost of long-horizon rollouts, yet standard agentic reinforcement learning (RL) learns only from a terminal scalar reward, leaving the supervision in intermediate steps largely unused. Prior work exploits this supervision throu…",
+      "title": "CoDA: Co-Evolution of Data Engines and Action Policies",
+      "summary": "Generative simulation can automate robot environment construction, but physically valid environments are not necessarily useful for training. The challenge is to identify environments that address a policy's failures and supervision that helps it overcome them. We introduce CoDA,…",
       "authors": [
-        "Haofei Yu",
-        "Yixing Chen",
-        "Yining Zhao",
+        "Tianjiao Yu",
+        "Zhilin Ou",
+        "Yifan Shen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.20597v1",
-      "published": "2026-10-14T17:59:28Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2610.22362v1",
+      "published": "2026-10-15T17:59:02Z",
+      "category": "cs.RO"
     },
     {
-      "title": "Your Transformer Is Secretly Elastic",
-      "summary": "Scaling up transformers has produced models with broad capabilities, deployed across heterogeneous hardware and fluctuating workloads. Yet, model families offer only a few fixed sizes (e.g., S, B, L), forcing users to commit to a model based on hardware and latency constraints. T…",
+      "title": "PathFM: Fast Generative Forecasting of Multivariate Trajectories",
+      "summary": "Time series foundation models are becoming increasingly popular for general-purpose forecasting. However, most leading models predict marginal quantiles, leaving the dependence structure of future trajectories unspecified. This distinction matters for trajectory-dependent quantit…",
       "authors": [
-        "Walter Simoncini",
-        "Dheeraj Varghese",
-        "Gertjan J. Burghouts",
+        "Jiachen Yao",
+        "Xiyuan Zhang",
+        "Annan Yu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.20588v1",
-      "published": "2026-10-14T17:58:08Z",
+      "link": "http://arxiv.org/abs/2610.22358v1",
+      "published": "2026-10-15T17:58:45Z",
       "category": "cs.LG"
     },
     {
-      "title": "Price of Anarchy of First-Price Auctions in Agentic Markets",
-      "summary": "An agentic market is a decentralized serving-time market where AI agents bid to claim each user prompt. An agent's bid is based on its expected value for the prompt, which is the expectation of the reward for its response minus its inference costs. First-price auctions (FPAs), in…",
+      "title": "OmniVerifier-C1: Decomposed Graded Verifier for Rule-Governed Generative World Modeling",
+      "summary": "Generative visual verifiers play a crucial role in advancing multimodal intelligence. To enhance the robustness of visual verifiers in complex multimodal scenarios involving compositional requirements, we move beyond conventional binary verifiers that produce only True/False disc…",
       "authors": [
-        "Shubhendu Trivedi",
-        "Jacob Eisenstein",
-        "Alekh Agarwal",
+        "Bowei Liu",
+        "Xinchen Zhang",
+        "Xuhuan Li",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.20587v1",
-      "published": "2026-10-14T17:57:57Z",
-      "category": "cs.GT"
-    },
-    {
-      "title": "Continuum Attention",
-      "summary": "We introduce Continuum Attention (CA), a causal Transformer attention operator that replaces discrete key and value lookup with integration over a continuous, piecewise linear memory curve. Each query induces an exponential relevance density along the curve. Integrating the densi…",
-      "authors": [
-        "Afshin Khadangi"
-      ],
-      "link": "http://arxiv.org/abs/2610.20586v1",
-      "published": "2026-10-14T17:57:40Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Learnable Hodge-Laplacian Driven Mixture of Experts for Steady-PDE Surrogates on Coarse Unstructured Meshes",
-      "summary": "Current approaches for steady partial differential equations surrogate models on unstructured meshes apply a single mixing mechanism to the whole solution. This paper proposes an architecture that partitions the solution among vanilla transformer experts, each focused on a differ…",
-      "authors": [
-        "Stavros Nousias",
-        "Akis Nousias",
-        "Konstantinos Gkrispanis"
-      ],
-      "link": "http://arxiv.org/abs/2610.20585v1",
-      "published": "2026-10-14T17:57:24Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Player-1: Learning to Play from Synthetic Experience",
-      "summary": "Computer-use agents have demonstrated strong capabilities in interpreting screens and executing keyboard and mouse actions. However, games, with their visually rich worlds and diverse mechanics, remain challenging and offer a demanding next step toward general digital control. Cu…",
-      "authors": [
-        "Mingyu Ouyang",
-        "Yiran Wang",
-        "Siyuan Hu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.20584v1",
-      "published": "2026-10-14T17:57:12Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Latent Compaction with Test-Time Training",
-      "summary": "Long contexts enlarge key--value (KV) caches, increasing memory use and attention costs during generation. Compressing these caches must preserve information for unseen questions. We introduce **Latent Compaction**, which learns a compact document-specific cache through test-time…",
-      "authors": [
-        "Yingfa Chen",
-        "Xingyu Shen",
-        "Chaojun Xiao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.20582v1",
-      "published": "2026-10-14T17:57:01Z",
+      "link": "http://arxiv.org/abs/2610.22355v1",
+      "published": "2026-10-15T17:58:04Z",
       "category": "cs.CL"
     },
     {
-      "title": "One Task, Many Interfaces: Simple Cross-Interface Consistency Training Improves LLM Agent Robustness",
-      "summary": "Post-training binds the competence of an LLM agent to the interface it was trained on. Semantics-preserving perturbations of that interface, such as renaming an action or changing the notation, leave the underlying task unchanged yet make the agent worse at it. Scoring each sampl…",
+      "title": "Rethinking Routing Exploration in Modern Mixture-of-Experts",
+      "summary": "Mixture-of-experts (MoE) models have become an important approach for scaling model parameters. Modern MoE architectures increasingly combine two design choices: fine-grained expert segmentation and shared experts. The former increases expressiveness by enabling more expert combi…",
       "authors": [
-        "Artin Tajdini",
-        "Manpreet Kaur",
-        "Peng Qi"
-      ],
-      "link": "http://arxiv.org/abs/2610.20576v1",
-      "published": "2026-10-14T17:56:06Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Beyond LLM Judge: Mechanical Verification for Agentic Autoformalization",
-      "summary": "We introduce a novel method for verifying Lean formalizations that goes beyond LLM-judged faithfulness. Unlike most verification methods, which rely on LLMs or trained models, our method combines LLM-based semantic review with mechanical numerical and vacuity checks, providing ch…",
-      "authors": [
-        "Anna Mei",
-        "Michael R. Douglas"
-      ],
-      "link": "http://arxiv.org/abs/2610.20573v1",
-      "published": "2026-10-14T17:54:48Z",
-      "category": "cs.LO"
-    },
-    {
-      "title": "Recovering Reliable Supervision via Critique-Guided On-Policy Distillation",
-      "summary": "On-policy distillation (OPD) trains a student model on its own rollouts with token-level supervision from a teacher, assuming that the teacher can reach a correct answer from any prefix the student writes. We call this property the recoverability of the teacher and show it fails …",
-      "authors": [
-        "Kaixiang Zhao",
-        "Tianrun Yu",
-        "Shangzhe Li",
+        "Bingcong Li",
+        "Hao Ma",
+        "Michael Muehlebach",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.20572v1",
-      "published": "2026-10-14T17:54:34Z",
+      "link": "http://arxiv.org/abs/2610.22353v1",
+      "published": "2026-10-15T17:58:02Z",
       "category": "cs.LG"
+    },
+    {
+      "title": "FDE-Gym: The Last Mile of AI Delivery",
+      "summary": "Existing agent benchmarks typically evaluate agents on well-specified tasks defined by issue reports, specifications, or task tickets. Real-world customer delivery is different: forward-deployed engineers (FDEs) must clarify ambiguous requirements, work in live systems, and uncov…",
+      "authors": [
+        "Dongxu Yang",
+        "Hongda Yan",
+        "Renxin Wang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.22350v1",
+      "published": "2026-10-15T17:57:23Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
+      "summary": "Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI). Workflow-driven machine learning engineering (MLE) …",
+      "authors": [
+        "Shangheng Du",
+        "Jinxin Shi",
+        "Shuaiyu Zhang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.22344v1",
+      "published": "2026-10-15T17:56:32Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "GeoState: Learning View-Decoupled Geometry States for 3D World Modeling",
+      "summary": "Recent 3D world models increasingly use features from geometry foundation models (GFMs) as predictive world states, benefiting from their rich geometric priors. However, the view dependence of these features entangles scene dynamics with camera-induced variation, making the resul…",
+      "authors": [
+        "Hongchang Liu",
+        "Jian Liu",
+        "Yujuan Ding",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.22343v1",
+      "published": "2026-10-15T17:56:18Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "3DCodeVerse: Exploring 3D Worlds as Code",
+      "summary": "We introduce 3DCodeVerse, a research ecosystem that enables coding agents to create editable and verifiable 3D content at scale. 3DCodeVerse comprises large-scale, high-quality datasets of executable 3D code, a coding harness for spatial reasoning and automated verification, and …",
+      "authors": [
+        "Yipeng Gao",
+        "Ziyao Zeng",
+        "Jinfa Huang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.22341v1",
+      "published": "2026-10-15T17:56:07Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Dexterity from Supervised Play",
+      "summary": "How can robots autonomously collect the contact-rich experience needed to learn dexterous manipulation? We present DSP: Dexterity from supervised play, a framework in which a robot learns a play policy from minutes of human play through behavior cloning, then deploys it autonomou…",
+      "authors": [
+        "Botao He",
+        "Yiming Dou",
+        "Yiannis Aloimonos",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.22340v1",
+      "published": "2026-10-15T17:55:50Z",
+      "category": "cs.RO"
     }
   ]
 }

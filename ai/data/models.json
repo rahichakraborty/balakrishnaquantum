@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-10-17T07:26:41+00:00",
+  "generated_at": "2026-10-17T17:42:38+00:00",
   "items": [
     {
       "id": "google/embeddinggemma-2",
       "url": "https://huggingface.co/google/embeddinggemma-2",
-      "downloads": 151258,
-      "likes": 2527,
+      "downloads": 158490,
+      "likes": 2575,
       "pipeline_tag": "feature-extraction"
     },
     {
       "id": "jialinyyzz/humanizer",
       "url": "https://huggingface.co/jialinyyzz/humanizer",
-      "downloads": 85612,
-      "likes": 1845,
+      "downloads": 95870,
+      "likes": 1881,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "downloads": 0,
+      "likes": 796,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
       "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
-      "downloads": 17553,
-      "likes": 860,
+      "downloads": 36252,
+      "likes": 891,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "fishaudio/drama-3",
       "url": "https://huggingface.co/fishaudio/drama-3",
-      "downloads": 6158,
-      "likes": 568,
+      "downloads": 8193,
+      "likes": 605,
       "pipeline_tag": "text-to-speech"
     },
     {
-      "id": "Qwen/Qwen-Image-2.1-Turbo",
-      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
-      "downloads": 17421,
-      "likes": 948,
-      "pipeline_tag": "text-to-image"
+      "id": "black-forest-labs/flux-3-image-klein-comfy",
+      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
+      "downloads": 224108,
+      "likes": 609,
+      "pipeline_tag": "image-to-image"
+    },
+    {
+      "id": "meta-models/Muse-Spark-Open-816B-A42B",
+      "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "downloads": 1600,
+      "likes": 490,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 1920611,
-      "likes": 8115,
+      "downloads": 1993003,
+      "likes": 8180,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
       "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
-      "downloads": 2477554,
-      "likes": 4451,
+      "downloads": 2571722,
+      "likes": 4481,
       "pipeline_tag": "text-to-image"
-    },
-    {
-      "id": "meta-models/Muse-Spark-Open-816B-A42B",
-      "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
-      "downloads": 815,
-      "likes": 458,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "black-forest-labs/flux-3-image-klein-comfy",
-      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
-      "downloads": 73767,
-      "likes": 497,
-      "pipeline_tag": "image-to-image"
     },
     {
       "id": "LiquidAI/LFM2.5-24B-A2B",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
-      "downloads": 9356,
-      "likes": 436,
+      "downloads": 11926,
+      "likes": 444,
       "pipeline_tag": "text-generation"
     }
   ]

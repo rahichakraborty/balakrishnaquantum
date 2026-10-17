@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-10-16T18:34:43+00:00",
+  "generated_at": "2026-10-17T07:26:41+00:00",
   "items": [
     {
       "id": "google/embeddinggemma-2",
       "url": "https://huggingface.co/google/embeddinggemma-2",
       "downloads": 151258,
-      "likes": 2496,
+      "likes": 2527,
       "pipeline_tag": "feature-extraction"
     },
     {
       "id": "jialinyyzz/humanizer",
       "url": "https://huggingface.co/jialinyyzz/humanizer",
       "downloads": 85612,
-      "likes": 1810,
+      "likes": 1845,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
       "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
       "downloads": 17553,
-      "likes": 835,
+      "likes": 860,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "Qwen/Qwen-Image-2.1-Turbo",
-      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
-      "downloads": 17421,
-      "likes": 931,
-      "pipeline_tag": "text-to-image"
     },
     {
       "id": "fishaudio/drama-3",
       "url": "https://huggingface.co/fishaudio/drama-3",
       "downloads": 6158,
-      "likes": 539,
+      "likes": 568,
       "pipeline_tag": "text-to-speech"
     },
     {
-      "id": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
-      "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
-      "downloads": 2477554,
-      "likes": 4423,
+      "id": "Qwen/Qwen-Image-2.1-Turbo",
+      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+      "downloads": 17421,
+      "likes": 948,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 1920611,
-      "likes": 8050,
+      "likes": 8115,
       "pipeline_tag": "image-to-video"
     },
     {
-      "id": "AtomicChat/Qwen-Image-2.1-Turbo-Uncensored-GGUF",
-      "url": "https://huggingface.co/AtomicChat/Qwen-Image-2.1-Turbo-Uncensored-GGUF",
-      "downloads": 327786,
-      "likes": 510,
+      "id": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+      "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+      "downloads": 2477554,
+      "likes": 4451,
       "pipeline_tag": "text-to-image"
-    },
-    {
-      "id": "LiquidAI/LFM2.5-24B-A2B",
-      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
-      "downloads": 9356,
-      "likes": 419,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "meta-models/Muse-Spark-Open-816B-A42B",
       "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
       "downloads": 815,
-      "likes": 420,
+      "likes": 458,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "black-forest-labs/flux-3-image-klein-comfy",
+      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
+      "downloads": 73767,
+      "likes": 497,
+      "pipeline_tag": "image-to-image"
+    },
+    {
+      "id": "LiquidAI/LFM2.5-24B-A2B",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+      "downloads": 9356,
+      "likes": 436,
+      "pipeline_tag": "text-generation"
     }
   ]
 }

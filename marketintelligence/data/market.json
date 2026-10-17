@@ -1,24 +1,24 @@
 {
   "last_updated": {
-    "date": "16 Oct 2026",
-    "time": "13:54 IST",
-    "iso": "2026-10-16T13:54:39.132377+00:00"
+    "date": "17 Oct 2026",
+    "time": "13:27 IST",
+    "iso": "2026-10-17T13:27:56.255753+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 52,
+    "confidence": 53,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
-    "risk_level": "Medium",
-    "risk_note": "Watch Headlines",
-    "conviction": 52
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 53
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
-      "confidence": 40,
+      "confidence": 38,
       "support": 80116.63,
       "resistance": 84154.06,
       "trade_plan": "Fade rallies while below resistance."
@@ -33,19 +33,15 @@
     }
   },
   "scores": {
-    "macro": 48,
-    "flow": 62,
-    "technical": 45,
-    "risk": 40
+    "macro": 50,
+    "flow": 46,
+    "technical": 44,
+    "risk": 13
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Capital B reports $78M H1 loss driven by Bitcoin impairment charge"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Judge rejects CFTC, Gemini bid to undo $5M settlement"
+      "text": "Bitget to discontinue services for some users in one-off exercise"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -53,23 +49,27 @@
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "OpenAI model helped itself to testnet crypto, then kept quiet about it"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Balaji\u2019s \u2018Singapore of social media\u2019 begins with a wave of bans"
+      "text": "Crypto PACs escalate spending against Sherrod Brown in Ohio Senate race"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "MSCI adopts index exclusion rules that could oust Strategy"
+      "text": "Stablecoin remittances cost 84% less than traditional transfers, report finds"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Australia releases draft bill to adopt OECD crypto tax reporting framework"
+      "text": "Crypto Biz: Wall Street closes at 4. Tokenized stocks keep trading"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Scammer loses $4.8M stored on tampered Ledgers: Asia Express"
+      "text": "Bitcoin price steadies around $82K after Fed\u2019s Warsh avoids rate-hike hints"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Strategy conditionally declares daily dividends as STRC hovers below $100"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Ledger\u2019s early implant warnings deserved more action, Karpel\u00e8s says"
     }
   ],
   "events": [

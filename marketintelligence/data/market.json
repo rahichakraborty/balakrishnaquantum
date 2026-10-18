@@ -1,8 +1,8 @@
 {
   "last_updated": {
-    "date": "17 Oct 2026",
-    "time": "13:27 IST",
-    "iso": "2026-10-17T13:27:56.255753+00:00"
+    "date": "18 Oct 2026",
+    "time": "13:44 IST",
+    "iso": "2026-10-18T13:44:39.063819+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
@@ -18,7 +18,7 @@
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
-      "confidence": 38,
+      "confidence": 39,
       "support": 80116.63,
       "resistance": 84154.06,
       "trade_plan": "Fade rallies while below resistance."
@@ -33,19 +33,35 @@
     }
   },
   "scores": {
-    "macro": 50,
-    "flow": 46,
+    "macro": 48,
+    "flow": 47,
     "technical": 44,
-    "risk": 13
+    "risk": 9
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Bitget to discontinue services for some users in one-off exercise"
+      "text": "Tether backs AIsa as strategic investor, completing seed extension round"
     },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Solana shows resilience, but some areas need continued observation, Fidelity says"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Circle\u2019s Allaire says stablecoin issuer looking to enter 40 developing markets: Report"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Lagarde says euro-area economy is resilient, digital euro imminent"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitget to discontinue services for some users in one-off exercise"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -54,22 +70,6 @@
     {
       "emoji": "\ud83d\udfe1",
       "text": "Stablecoin remittances cost 84% less than traditional transfers, report finds"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Crypto Biz: Wall Street closes at 4. Tokenized stocks keep trading"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin price steadies around $82K after Fed\u2019s Warsh avoids rate-hike hints"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Strategy conditionally declares daily dividends as STRC hovers below $100"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Ledger\u2019s early implant warnings deserved more action, Karpel\u00e8s says"
     }
   ],
   "events": [

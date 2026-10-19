@@ -1,161 +1,159 @@
 {
-  "generated_at": "2026-10-18T17:43:49+00:00",
+  "generated_at": "2026-10-19T08:24:14+00:00",
   "items": [
     {
-      "title": "LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation",
-      "summary": "Personalization is essential for general-purpose robots to transition into household environments and achieve true practicality. While general robotic manipulation has been extensively studied, personalized robotic manipulation (PeRM) lacks a controlled benchmark for separating t…",
+      "title": "Rethinking the design space of Vanilla Pixel Diffusion Transformers",
+      "summary": "Pixel-space diffusion models have recently re-emerged as a compelling alternative to latent diffusion, avoiding the lossy latent bottleneck and separately trained autoencoder. JiT shows that a vanilla diffusion transformer can generate directly in pixel space by replacing the com…",
       "authors": [
-        "Zhixu Li",
-        "Keqian Tang",
-        "Litian Gong",
+        "Soumik Mukhopadhyay",
+        "Long Mai",
+        "Abhinav Shrivastava",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.22372v1",
-      "published": "2026-10-15T17:59:59Z",
-      "category": "cs.RO"
+      "link": "http://arxiv.org/abs/2610.23854v1",
+      "published": "2026-10-16T17:59:30Z",
+      "category": "cs.CV"
     },
     {
-      "title": "Discovering state-of-the-art quantum circuits with large language models",
-      "summary": "Significant efforts are currently being directed toward the implementation of large-scale quantum information processors, but realizing useful quantum advantage also requires the development of efficient quantum algorithms. While for many practical problems the dominant resource …",
+      "title": "Behavioral Couplings: From Formation to Behavioral Emergence in Language Models",
+      "summary": "Fine-tuning large language models (LLMs) can induce behaviors beyond those explicitly targeted. For example, training a model to respond more warmly can make it more sycophantic, and training it to write insecure code can cause broad misalignment on prompts unrelated to coding. W…",
       "authors": [
-        "Andi Gu",
-        "Alek H. Kemeny",
-        "Susanne F. Yelin",
+        "Dongyoon Hahm",
+        "Woogyeol Jin",
+        "Dennis Wei",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.22367v1",
-      "published": "2026-10-15T17:59:20Z",
-      "category": "quant-ph"
-    },
-    {
-      "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
-      "summary": "Predicting how the world responds to an action requires more than what can be seen: robots must account for environmental factors that are neither directly observable nor explicitly specified, from physical properties such as friction and mass to human-defined environmental rules…",
-      "authors": [
-        "Chenyuan Zhou",
-        "Yining Hong",
-        "Huang Huang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.22364v1",
-      "published": "2026-10-15T17:59:11Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "CoDA: Co-Evolution of Data Engines and Action Policies",
-      "summary": "Generative simulation can automate robot environment construction, but physically valid environments are not necessarily useful for training. The challenge is to identify environments that address a policy's failures and supervision that helps it overcome them. We introduce CoDA,…",
-      "authors": [
-        "Tianjiao Yu",
-        "Zhilin Ou",
-        "Yifan Shen",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.22362v1",
-      "published": "2026-10-15T17:59:02Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "PathFM: Fast Generative Forecasting of Multivariate Trajectories",
-      "summary": "Time series foundation models are becoming increasingly popular for general-purpose forecasting. However, most leading models predict marginal quantiles, leaving the dependence structure of future trajectories unspecified. This distinction matters for trajectory-dependent quantit…",
-      "authors": [
-        "Jiachen Yao",
-        "Xiyuan Zhang",
-        "Annan Yu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.22358v1",
-      "published": "2026-10-15T17:58:45Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "OmniVerifier-C1: Decomposed Graded Verifier for Rule-Governed Generative World Modeling",
-      "summary": "Generative visual verifiers play a crucial role in advancing multimodal intelligence. To enhance the robustness of visual verifiers in complex multimodal scenarios involving compositional requirements, we move beyond conventional binary verifiers that produce only True/False disc…",
-      "authors": [
-        "Bowei Liu",
-        "Xinchen Zhang",
-        "Xuhuan Li",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.22355v1",
-      "published": "2026-10-15T17:58:04Z",
+      "link": "http://arxiv.org/abs/2610.23847v1",
+      "published": "2026-10-16T17:58:08Z",
       "category": "cs.CL"
     },
     {
-      "title": "Rethinking Routing Exploration in Modern Mixture-of-Experts",
-      "summary": "Mixture-of-experts (MoE) models have become an important approach for scaling model parameters. Modern MoE architectures increasingly combine two design choices: fine-grained expert segmentation and shared experts. The former increases expressiveness by enabling more expert combi…",
+      "title": "AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery",
+      "summary": "Reproducible and analytically robust research findings are essential to scientific progress, but evaluating these properties typically requires costly manual effort. We investigate whether LLM agents can help automate reproduction and robustness analysis, using a medical case stu…",
       "authors": [
-        "Bingcong Li",
-        "Hao Ma",
-        "Michael Muehlebach",
+        "Shicheng Liu",
+        "Krista Opsahl-Ong",
+        "Andrew Drozdov",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.22353v1",
-      "published": "2026-10-15T17:58:02Z",
+      "link": "http://arxiv.org/abs/2610.23845v1",
+      "published": "2026-10-16T17:57:55Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses",
+      "summary": "Scientific discovery requires developing worthwhile hypotheses into practical investigations, yet learning from this evolving research process remains challenging. We introduce an operational definition of valuable and testable research hypotheses: evidence-grounded claims about …",
+      "authors": [
+        "Jianyuan Zhong",
+        "Chenwei Wu",
+        "Zhaochen Yu",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.23839v1",
+      "published": "2026-10-16T17:56:35Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Task-aligned spectral inductive biases in parameterized quantum circuits",
+      "summary": "Parameterized quantum circuits are widely investigated in quantum machine learning, yet how their architecture can provide task-aligned inductive biases remains poorly understood. We study data reuploading quantum circuits with two distinct inputs: a signal that varies between sa…",
+      "authors": [
+        "Felix Frohnert",
+        "Adrián Pérez-Salinas",
+        "Sebastian Lange",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.23834v1",
+      "published": "2026-10-16T17:53:19Z",
+      "category": "quant-ph"
+    },
+    {
+      "title": "Beyond the Answer: Student-Conditioned Trace Construction for Reasoning Distillation",
+      "summary": "A reasoning trace can accompany a correct answer without providing effective supervision for a particular student. We study how to construct traces that improve learning beyond answer-only supervision by considering both their intermediate content and their accessibility to the t…",
+      "authors": [
+        "Shaoang Li",
+        "Yanhang Shi",
+        "Yufei Li",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.23831v1",
+      "published": "2026-10-16T17:52:58Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Waiting Buys Exactly Two Moments: Endogenous Identification in Prediction-Driven Allocation",
+      "summary": "A planner with a fixed budget of preventive help must decide whom to help and when. Waiting reveals risk but removes intervention opportunities as higher-risk individuals leave first. We characterize this tradeoff under repeated noisy signals and risk-dependent attrition: in the …",
+      "authors": [
+        "Rama AlHamidi",
+        "Rasul Khanbayov",
+        "Erchin Serpedin",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.23830v1",
+      "published": "2026-10-16T17:52:57Z",
       "category": "cs.LG"
     },
     {
-      "title": "FDE-Gym: The Last Mile of AI Delivery",
-      "summary": "Existing agent benchmarks typically evaluate agents on well-specified tasks defined by issue reports, specifications, or task tickets. Real-world customer delivery is different: forward-deployed engineers (FDEs) must clarify ambiguous requirements, work in live systems, and uncov…",
+      "title": "Quality-of-Transmission Estimation in Quantum Networks: Compute, Simulate, or Learn?",
+      "summary": "Future quantum networks will rely on control-plane decisions such as routing, scheduling, entanglement provisioning, purification, and memory allocation. Each decision depends on a timely and reliable estimate of the quality of the entanglement that a candidate path can deliver, …",
       "authors": [
-        "Dongxu Yang",
-        "Hongda Yan",
-        "Renxin Wang",
+        "Anis Bekri",
+        "Amar Abane",
+        "Van Sy Mai",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.22350v1",
-      "published": "2026-10-15T17:57:23Z",
+      "link": "http://arxiv.org/abs/2610.23827v1",
+      "published": "2026-10-16T17:49:43Z",
+      "category": "quant-ph"
+    },
+    {
+      "title": "Self-Building Labs",
+      "summary": "Self-driving laboratories (SDLs) accelerate scientific discovery by automating experimental execution and optimization. AI agents can increasingly propose new experiments, but existing SDLs can only run the procedures they were built for. Adapting them to a new experiment still t…",
+      "authors": [
+        "Jiaru Bai",
+        "Yuchi Zhao",
+        "Han Hao",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.23826v1",
+      "published": "2026-10-16T17:48:29Z",
       "category": "cs.AI"
     },
     {
-      "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
-      "summary": "Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI). Workflow-driven machine learning engineering (MLE) …",
+      "title": "ENFR: Evidence Networks with Flow-Matched References for Amortized Simulation-Based Model Inference",
+      "summary": "The evidence, $\\mathcal{Z} = p(x | \\mathcal{M})$, of a data-generating model $\\mathcal{M}$ is a powerful tool in Bayesian frameworks: it enables model inference, model misspecification tests, and goodness-of-fit assessment as an alternative to standard discrepancy statistics, e.g…",
       "authors": [
-        "Shangheng Du",
-        "Jinxin Shi",
-        "Shuaiyu Zhang",
+        "Kai Lehman",
+        "Jameson Dong",
+        "Carolina Cuesta-Lazaro",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.22344v1",
-      "published": "2026-10-15T17:56:32Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2610.23825v1",
+      "published": "2026-10-16T17:48:26Z",
+      "category": "stat.ML"
     },
     {
-      "title": "GeoState: Learning View-Decoupled Geometry States for 3D World Modeling",
-      "summary": "Recent 3D world models increasingly use features from geometry foundation models (GFMs) as predictive world states, benefiting from their rich geometric priors. However, the view dependence of these features entangles scene dynamics with camera-induced variation, making the resul…",
+      "title": "Learning without relearning physical symmetry: an SO(3)-equivariant convolutional network (CNN) on the sphere",
+      "summary": "Many of the most important datasets in the physical sciences live natively on the sphere, and these data often carry no preferred position or orientation. Using methods that do not reflect this symmetry leads to far higher simulation requirements, which can be catastrophic for sc…",
       "authors": [
-        "Hongchang Liu",
-        "Jian Liu",
-        "Yujuan Ding",
-        "et al."
+        "Joshua Williamson",
+        "Niall Jeffrey",
+        "Lorne Whiteway"
       ],
-      "link": "http://arxiv.org/abs/2610.22343v1",
-      "published": "2026-10-15T17:56:18Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2610.23821v1",
+      "published": "2026-10-16T17:45:43Z",
+      "category": "stat.ML"
     },
     {
-      "title": "3DCodeVerse: Exploring 3D Worlds as Code",
-      "summary": "We introduce 3DCodeVerse, a research ecosystem that enables coding agents to create editable and verifiable 3D content at scale. 3DCodeVerse comprises large-scale, high-quality datasets of executable 3D code, a coding harness for spatial reasoning and automated verification, and …",
+      "title": "CocoRNA: Collective RNA Design with Cooperative Multi-agent Reinforcement Learning",
+      "summary": "Designing RNA sequences that reliably fold into specific secondary structures is essential for understanding their biological functions but remains a challenging computational problem. We propose CocoRNA, a cooperative multi-agent reinforcement learning framework for RNA inverse …",
       "authors": [
-        "Yipeng Gao",
-        "Ziyao Zeng",
-        "Jinfa Huang",
-        "et al."
+        "Tianmeng Hu",
+        "Biao Luo",
+        "Ke Li"
       ],
-      "link": "http://arxiv.org/abs/2610.22341v1",
-      "published": "2026-10-15T17:56:07Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Dexterity from Supervised Play",
-      "summary": "How can robots autonomously collect the contact-rich experience needed to learn dexterous manipulation? We present DSP: Dexterity from supervised play, a framework in which a robot learns a play policy from minutes of human play through behavior cloning, then deploys it autonomou…",
-      "authors": [
-        "Botao He",
-        "Yiming Dou",
-        "Yiannis Aloimonos",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.22340v1",
-      "published": "2026-10-15T17:55:50Z",
-      "category": "cs.RO"
+      "link": "http://arxiv.org/abs/2610.23820v1",
+      "published": "2026-10-16T17:43:25Z",
+      "category": "cs.LG"
     }
   ]
 }

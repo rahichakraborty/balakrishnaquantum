@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-10-18T17:43:57+00:00",
+  "generated_at": "2026-10-19T08:24:21+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "downloads": 10233,
-      "likes": 1259,
+      "likes": 1484,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
+      "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
+      "downloads": 57935,
+      "likes": 1025,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "google/embeddinggemma-2",
       "url": "https://huggingface.co/google/embeddinggemma-2",
       "downloads": 164339,
-      "likes": 2642,
+      "likes": 2677,
       "pipeline_tag": "feature-extraction"
-    },
-    {
-      "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
-      "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
-      "downloads": 57935,
-      "likes": 975,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "jialinyyzz/humanizer",
-      "url": "https://huggingface.co/jialinyyzz/humanizer",
-      "downloads": 103709,
-      "likes": 1931,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "fishaudio/drama-3",
       "url": "https://huggingface.co/fishaudio/drama-3",
       "downloads": 9620,
-      "likes": 674,
+      "likes": 719,
       "pipeline_tag": "text-to-speech"
+    },
+    {
+      "id": "jialinyyzz/humanizer",
+      "url": "https://huggingface.co/jialinyyzz/humanizer",
+      "downloads": 103709,
+      "likes": 1962,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "black-forest-labs/flux-3-image-klein-comfy",
       "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
       "downloads": 338036,
-      "likes": 767,
+      "likes": 847,
       "pipeline_tag": "image-to-image"
     },
     {
       "id": "meta-models/Muse-Spark-Open-816B-A42B",
       "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
       "downloads": 1809,
-      "likes": 534,
+      "likes": 559,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "Lightricks/LTX-2.5",
-      "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 2012496,
-      "likes": 8333,
-      "pipeline_tag": "image-to-video"
     },
     {
       "id": "LiquidAI/LFM2.5-24B-A2B",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
       "downloads": 13007,
-      "likes": 459,
+      "likes": 479,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "Lightricks/LTX-2.5",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5",
+      "downloads": 2012496,
+      "likes": 8412,
+      "pipeline_tag": "image-to-video"
     },
     {
       "id": "black-forest-labs/flux-3-image-klein",
       "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein",
       "downloads": 52315,
-      "likes": 474,
+      "likes": 500,
       "pipeline_tag": "image-to-image"
     }
   ]

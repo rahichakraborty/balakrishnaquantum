@@ -1,75 +1,75 @@
 {
   "last_updated": {
-    "date": "18 Oct 2026",
-    "time": "13:44 IST",
-    "iso": "2026-10-18T13:44:39.063819+00:00"
+    "date": "19 Oct 2026",
+    "time": "14:42 IST",
+    "iso": "2026-10-19T14:42:12.008300+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 53,
+    "confidence": 52,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 53
+    "conviction": 52
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
-      "bias": "Bearish",
-      "confidence": 39,
+      "bias": "Neutral Bearish",
+      "confidence": 46,
       "support": 80116.63,
-      "resistance": 84154.06,
-      "trade_plan": "Fade rallies while below resistance."
+      "resistance": 83822.67,
+      "trade_plan": "Wait for confirmed breakout."
     },
     "ETH": {
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 2337.78,
-      "resistance": 2569.64,
+      "support": 2335.57,
+      "resistance": 2557.46,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 48,
-    "flow": 47,
-    "technical": 44,
-    "risk": 9
+    "macro": 40,
+    "flow": 54,
+    "technical": 48,
+    "risk": 14
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Tether backs AIsa as strategic investor, completing seed extension round"
+      "text": "JPMorgan takes JPM Coin to Ethereum for institutional clients: Report"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin, Ether ETFs shed $549M as October ETH outflows near $1B"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Zoom adds \u2018proof of human\u2019 badges to show you\u2019re not a deepfake"
     },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
     },
     {
-      "emoji": "\ud83d\udfe1",
-      "text": "Solana shows resilience, but some areas need continued observation, Fidelity says"
+      "emoji": "\ud83d\udd34",
+      "text": "South Korea to meet crypto exchanges amid calls for tax delay"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Circle\u2019s Allaire says stablecoin issuer looking to enter 40 developing markets: Report"
+      "text": "Qubic freezes chain after attacker drains 1.4K wallets with weak seeds"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Lagarde says euro-area economy is resilient, digital euro imminent"
+      "text": "Richard Heart caught \u2018off-guard,\u2019 QDay gets even closer: Hodler\u2019s Digest"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Bitget to discontinue services for some users in one-off exercise"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Crypto PACs escalate spending against Sherrod Brown in Ohio Senate race"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Stablecoin remittances cost 84% less than traditional transfers, report finds"
+      "text": "Most Americans polled oppose betting on elections: Reuters"
     }
   ],
   "events": [
@@ -84,7 +84,7 @@
     "ETF": "green",
     "Funding": "green",
     "Open Interest": "green",
-    "Fear & Greed": "green",
+    "Fear & Greed": "red",
     "Macro": "green",
     "News": "yellow",
     "Risk": "green"

@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-10-19T20:19:40+00:00",
+  "generated_at": "2026-10-20T08:07:15+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "downloads": 17924,
-      "likes": 1655,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
-      "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
-      "downloads": 76410,
-      "likes": 1052,
+      "likes": 1771,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "black-forest-labs/flux-3-image-klein-comfy",
       "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
       "downloads": 393062,
-      "likes": 941,
+      "likes": 1007,
       "pipeline_tag": "image-to-image"
     },
     {
       "id": "fishaudio/drama-3",
       "url": "https://huggingface.co/fishaudio/drama-3",
       "downloads": 11795,
-      "likes": 761,
+      "likes": 787,
       "pipeline_tag": "text-to-speech"
+    },
+    {
+      "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
+      "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
+      "downloads": 76410,
+      "likes": 1072,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "google/embeddinggemma-2",
       "url": "https://huggingface.co/google/embeddinggemma-2",
       "downloads": 167750,
-      "likes": 2718,
+      "likes": 2735,
       "pipeline_tag": "feature-extraction"
     },
     {
       "id": "jialinyyzz/humanizer",
       "url": "https://huggingface.co/jialinyyzz/humanizer",
       "downloads": 109937,
-      "likes": 1979,
+      "likes": 2006,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "meta-models/Muse-Spark-Open-816B-A42B",
       "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
       "downloads": 2109,
-      "likes": 576,
+      "likes": 588,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "LiquidAI/LFM2.5-24B-A2B",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
       "downloads": 14151,
-      "likes": 497,
+      "likes": 504,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "black-forest-labs/flux-3-image-klein",
       "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein",
       "downloads": 62006,
-      "likes": 524,
+      "likes": 536,
       "pipeline_tag": "image-to-image"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 2019834,
-      "likes": 8481,
+      "likes": 8523,
       "pipeline_tag": "image-to-video"
     }
   ]

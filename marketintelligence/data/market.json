@@ -1,75 +1,75 @@
 {
   "last_updated": {
-    "date": "20 Oct 2026",
+    "date": "21 Oct 2026",
     "time": "14:17 IST",
-    "iso": "2026-10-20T14:17:21.847715+00:00"
+    "iso": "2026-10-21T14:17:18.596486+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 50,
+    "confidence": 52,
     "todays_trade": "Wait For Confirmation",
-    "preferred_asset": "ETH",
-    "risk_level": "Low",
-    "risk_note": "Normal Conditions",
-    "conviction": 50
+    "preferred_asset": "BTC",
+    "risk_level": "Medium",
+    "risk_note": "Watch Headlines",
+    "conviction": 52
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
-      "bias": "Bearish",
-      "confidence": 39,
+      "bias": "Neutral Bullish",
+      "confidence": 50,
       "support": 80116.63,
-      "resistance": 83678.53,
-      "trade_plan": "Fade rallies while below resistance."
+      "resistance": 83396.49,
+      "trade_plan": "Buy pullbacks while above support."
     },
     "ETH": {
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
       "support": 2335.57,
-      "resistance": 2516.82,
+      "resistance": 2505.0,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 50,
-    "flow": 41,
-    "technical": 44,
-    "risk": 30
+    "macro": 45,
+    "flow": 63,
+    "technical": 50,
+    "risk": 43
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "BlackRock files for third Bitcoin ETF, still no Solana or XRP"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "US Bitcoin ETFs draw $527M in biggest showing since September"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Sophon sets Nov. 25 withdrawal deadline ahead of mainnet shutdown"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "US bans DeepSeek from civilian agency IT systems"
-    },
-    {
-      "emoji": "\u2705",
-      "text": "Bitcoin rally could revive treasury buying, but easy-money days over"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Solana treasury firm SkyAI sells all SOL holdings, launches $201M buyback"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Crypto PAC pours $362K into California race voters essentially decided in August"
+      "text": "Ether ETF outflows continue, pass $1B in October so far"
     },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Malaysia central bank launches DLT platform for tokenized bonds"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Tech giants rush to block 8 eMudhra certs that could enable fake sites"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Musk says SpaceX-Tesla merger a \u2018good idea\u2019 as AI revenue jumps ninefold"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Qubic restarts blockchain, opens recovery claims after $1.4M hack"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Utah AG sues Kalshi, pursues profits from prediction market company"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitwise, Hyperliquid seek SEC rule changes for token trading, airdrops"
     }
   ],
   "events": [

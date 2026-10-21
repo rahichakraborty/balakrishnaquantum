@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-10-21T08:12:38+00:00",
+  "generated_at": "2026-10-21T19:04:34+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-      "downloads": 27737,
-      "likes": 2035,
+      "downloads": 42122,
+      "likes": 2133,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "black-forest-labs/flux-3-image-klein-comfy",
       "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
-      "downloads": 439528,
-      "likes": 1114,
+      "downloads": 490447,
+      "likes": 1169,
       "pipeline_tag": "image-to-image"
-    },
-    {
-      "id": "fishaudio/drama-3",
-      "url": "https://huggingface.co/fishaudio/drama-3",
-      "downloads": 13495,
-      "likes": 850,
-      "pipeline_tag": "text-to-speech"
     },
     {
       "id": "meta-models/Muse-Spark-Open-816B-A42B",
       "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
-      "downloads": 2592,
-      "likes": 613,
+      "downloads": 2891,
+      "likes": 630,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "fishaudio/drama-3",
+      "url": "https://huggingface.co/fishaudio/drama-3",
+      "downloads": 15274,
+      "likes": 877,
+      "pipeline_tag": "text-to-speech"
     },
     {
       "id": "black-forest-labs/flux-3-image-klein",
       "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein",
-      "downloads": 78897,
-      "likes": 574,
+      "downloads": 92604,
+      "likes": 598,
       "pipeline_tag": "image-to-image"
-    },
-    {
-      "id": "google/embeddinggemma-2",
-      "url": "https://huggingface.co/google/embeddinggemma-2",
-      "downloads": 172474,
-      "likes": 2782,
-      "pipeline_tag": "feature-extraction"
     },
     {
       "id": "OpenMOSS-Team/MOSS-Image-SFT",
       "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT",
-      "downloads": 4547,
-      "likes": 509,
+      "downloads": 5840,
+      "likes": 525,
       "pipeline_tag": "text-to-image"
+    },
+    {
+      "id": "OpenMOSS-Team/MOSS-Image-Base",
+      "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base",
+      "downloads": 4344,
+      "likes": 461,
+      "pipeline_tag": "text-to-image"
+    },
+    {
+      "id": "google/embeddinggemma-2",
+      "url": "https://huggingface.co/google/embeddinggemma-2",
+      "downloads": 179734,
+      "likes": 2798,
+      "pipeline_tag": "feature-extraction"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 2039447,
-      "likes": 8659,
+      "downloads": 2057942,
+      "likes": 8719,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "jialinyyzz/humanizer",
       "url": "https://huggingface.co/jialinyyzz/humanizer",
-      "downloads": 115341,
-      "likes": 2034,
+      "downloads": 120930,
+      "likes": 2055,
       "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "OpenMOSS-Team/MOSS-Image-Base",
-      "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base",
-      "downloads": 3558,
-      "likes": 443,
-      "pipeline_tag": "text-to-image"
     }
   ]
 }

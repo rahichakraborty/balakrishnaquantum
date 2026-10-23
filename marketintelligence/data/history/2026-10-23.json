@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "23 Oct 2026",
+    "time": "14:15 IST",
+    "iso": "2026-10-23T14:15:38.656255+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 47,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "BTC",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 47
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 42,
+      "support": 80814.25,
+      "resistance": 84777.79,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Bearish",
+      "confidence": 30,
+      "support": 2335.57,
+      "resistance": 2513.51,
+      "trade_plan": "Fade rallies while below resistance."
+    }
+  },
+  "scores": {
+    "macro": 35,
+    "flow": 49,
+    "technical": 36,
+    "risk": 3
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Malaysia, Thailand join Singapore\u2019s cross-border stablecoin push"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin ETFs bleed $635M as October slides back into the red"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Ethereum delays Glamsterdam Hoodi testnet launch over security risks"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin Core changes security policy as AI makes bugs easier to find"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Switzerland\u2019s first retail spot Bitcoin ETF targets November launch"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Pentagon bans US forces from using military info to bet in prediction markets"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "New DeepSeek ban in US, Swiss-Asia crypto ties deepen: Asia Express"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "red",
+    "Risk": "green"
+  }
+}

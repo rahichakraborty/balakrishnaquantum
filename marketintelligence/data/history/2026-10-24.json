@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "24 Oct 2026",
+    "time": "13:49 IST",
+    "iso": "2026-10-24T13:49:45.752681+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 49,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 49
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 37,
+      "support": 80553.26,
+      "resistance": 84777.79,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2335.57,
+      "resistance": 2513.51,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 45,
+    "flow": 43,
+    "technical": 44,
+    "risk": 23
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "IRS plans lower tax disclosure penalties, including for crypto: Forbes"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Initia halts blockchain after exploit reportedly drains over $2.6M"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "US senator probes Tether after reported deal with ex-Trump crypto adviser"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "SEC flags tokenization as high-risk area in 2027 market examinations"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin seeks support above $81K as Brent crude oil hits highest level since March"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "China targets 2030 for its national blockchain network buildout"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

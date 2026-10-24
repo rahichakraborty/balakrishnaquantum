@@ -1,75 +1,75 @@
 {
   "last_updated": {
-    "date": "23 Oct 2026",
-    "time": "14:15 IST",
-    "iso": "2026-10-23T14:15:38.656255+00:00"
+    "date": "24 Oct 2026",
+    "time": "13:49 IST",
+    "iso": "2026-10-24T13:49:45.752681+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 47,
+    "confidence": 49,
     "todays_trade": "Wait For Confirmation",
-    "preferred_asset": "BTC",
+    "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 47
+    "conviction": 49
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
-      "confidence": 42,
-      "support": 80814.25,
+      "confidence": 37,
+      "support": 80553.26,
       "resistance": 84777.79,
       "trade_plan": "Fade rallies while below resistance."
     },
     "ETH": {
       "name": "Ethereum",
-      "bias": "Bearish",
-      "confidence": 30,
+      "bias": "Neutral",
+      "confidence": 50,
       "support": 2335.57,
       "resistance": 2513.51,
-      "trade_plan": "Fade rallies while below resistance."
+      "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 35,
-    "flow": 49,
-    "technical": 36,
-    "risk": 3
+    "macro": 45,
+    "flow": 43,
+    "technical": 44,
+    "risk": 23
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Malaysia, Thailand join Singapore\u2019s cross-border stablecoin push"
+      "text": "Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin ETFs bleed $635M as October slides back into the red"
+      "text": "IRS plans lower tax disclosure penalties, including for crypto: Forbes"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Initia halts blockchain after exploit reportedly drains over $2.6M"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "US senator probes Tether after reported deal with ex-Trump crypto adviser"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "SEC flags tokenization as high-risk area in 2027 market examinations"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin seeks support above $81K as Brent crude oil hits highest level since March"
     },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
     },
     {
-      "emoji": "\ud83d\udd34",
-      "text": "Ethereum delays Glamsterdam Hoodi testnet launch over security risks"
-    },
-    {
       "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin Core changes security policy as AI makes bugs easier to find"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Switzerland\u2019s first retail spot Bitcoin ETF targets November launch"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Pentagon bans US forces from using military info to bet in prediction markets"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "New DeepSeek ban in US, Swiss-Asia crypto ties deepen: Asia Express"
+      "text": "China targets 2030 for its national blockchain network buildout"
     }
   ],
   "events": [
@@ -86,7 +86,7 @@
     "Open Interest": "green",
     "Fear & Greed": "green",
     "Macro": "green",
-    "News": "red",
+    "News": "yellow",
     "Risk": "green"
   }
 }

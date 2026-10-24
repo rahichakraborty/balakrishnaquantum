@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-10-23T18:50:14+00:00",
+  "generated_at": "2026-10-24T07:49:54+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "downloads": 57715,
-      "likes": 2549,
+      "likes": 2624,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "black-forest-labs/flux-3-image-klein-comfy",
-      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
-      "downloads": 534837,
-      "likes": 1394,
-      "pipeline_tag": "image-to-image"
     },
     {
       "id": "RecursiveSI/flint",
       "url": "https://huggingface.co/RecursiveSI/flint",
       "downloads": 1904,
-      "likes": 659,
+      "likes": 708,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "black-forest-labs/flux-3-image-klein-comfy",
+      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
+      "downloads": 534837,
+      "likes": 1433,
+      "pipeline_tag": "image-to-image"
     },
     {
       "id": "OpenMOSS-Team/MOSS-Image-SFT",
       "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT",
       "downloads": 7658,
-      "likes": 641,
+      "likes": 662,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 2026951,
-      "likes": 9000,
+      "likes": 9072,
       "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "OpenMOSS-Team/MOSS-Image-Base",
-      "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base",
-      "downloads": 5618,
-      "likes": 517,
-      "pipeline_tag": "text-to-image"
-    },
-    {
-      "id": "fishaudio/drama-3",
-      "url": "https://huggingface.co/fishaudio/drama-3",
-      "downloads": 17017,
-      "likes": 941,
-      "pipeline_tag": "text-to-speech"
     },
     {
       "id": "XHToken/Spark-X2.6-4B",
       "url": "https://huggingface.co/XHToken/Spark-X2.6-4B",
       "downloads": 1060,
-      "likes": 403,
+      "likes": 423,
       "pipeline_tag": "text-generation"
     },
     {
-      "id": "Comfy-Org/MOSS-Image",
-      "url": "https://huggingface.co/Comfy-Org/MOSS-Image",
-      "downloads": 1606363,
-      "likes": 391,
-      "pipeline_tag": null
+      "id": "fishaudio/drama-3",
+      "url": "https://huggingface.co/fishaudio/drama-3",
+      "downloads": 17017,
+      "likes": 956,
+      "pipeline_tag": "text-to-speech"
+    },
+    {
+      "id": "OpenMOSS-Team/MOSS-Image-Base",
+      "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base",
+      "downloads": 5618,
+      "likes": 524,
+      "pipeline_tag": "text-to-image"
     },
     {
       "id": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
       "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
       "downloads": 2398071,
-      "likes": 4901,
+      "likes": 4919,
       "pipeline_tag": "text-to-image"
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "downloads": 7710011,
+      "likes": 18303,
+      "pipeline_tag": "image-text-to-text"
     }
   ]
 }

@@ -1,25 +1,25 @@
 {
   "last_updated": {
-    "date": "24 Oct 2026",
-    "time": "13:49 IST",
-    "iso": "2026-10-24T13:49:45.752681+00:00"
+    "date": "25 Oct 2026",
+    "time": "14:08 IST",
+    "iso": "2026-10-25T14:08:12.689860+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 49,
+    "confidence": 52,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 49
+    "conviction": 52
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
       "confidence": 37,
-      "support": 80553.26,
+      "support": 79730.04,
       "resistance": 84777.79,
       "trade_plan": "Fade rallies while below resistance."
     },
@@ -27,16 +27,16 @@
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 2335.57,
+      "support": 2304.39,
       "resistance": 2513.51,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 45,
-    "flow": 43,
+    "macro": 48,
+    "flow": 46,
     "technical": 44,
-    "risk": 23
+    "risk": 15
   },
   "drivers": [
     {

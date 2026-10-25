@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-10-25T08:02:25+00:00",
+  "generated_at": "2026-10-25T18:02:26+00:00",
   "items": [
     {
       "name": "morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "url": "https://github.com/morluto/rea",
-      "stars": 380349,
+      "stars": 383373,
       "language": "TypeScript",
-      "updated_at": "2026-10-25T07:13:11Z",
+      "updated_at": "2026-10-25T17:55:41Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/76467478?v=4"
     },
     {
       "name": "affaan-m/ECC",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 288293,
+      "stars": 288652,
       "language": "JavaScript",
       "updated_at": "2026-10-20T23:08:28Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/124439313?v=4"
@@ -23,7 +23,7 @@
       "name": "deepseek-ai/deepseek-harness",
       "description": "DeepSeek Harness: Everything is a Plugin.",
       "url": "https://github.com/deepseek-ai/deepseek-harness",
-      "stars": 260829,
+      "stars": 261318,
       "language": "TypeScript",
       "updated_at": "2026-10-23T15:25:40Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/148330874?v=4"
@@ -32,43 +32,43 @@
       "name": "NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 256886,
+      "stars": 257012,
       "language": "Python",
-      "updated_at": "2026-10-25T06:57:10Z",
+      "updated_at": "2026-10-25T15:42:37Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/134168893?v=4"
     },
     {
       "name": "tensorflow/tensorflow",
       "description": "An Open Source Machine Learning Framework for Everyone",
       "url": "https://github.com/tensorflow/tensorflow",
-      "stars": 201235,
+      "stars": 201236,
       "language": "C++",
-      "updated_at": "2026-10-25T05:33:40Z",
+      "updated_at": "2026-10-25T14:09:17Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/15658638?v=4"
     },
     {
       "name": "firecrawl/firecrawl",
       "description": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
       "url": "https://github.com/firecrawl/firecrawl",
-      "stars": 195095,
+      "stars": 195262,
       "language": "TypeScript",
-      "updated_at": "2026-10-25T07:59:26Z",
+      "updated_at": "2026-10-25T13:29:33Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/135057108?v=4"
     },
     {
       "name": "Significant-Gravitas/AutoGPT",
       "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "stars": 187736,
+      "stars": 187747,
       "language": "Python",
-      "updated_at": "2026-10-25T08:01:46Z",
+      "updated_at": "2026-10-25T17:53:47Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/130738209?v=4"
     },
     {
       "name": "ollama/ollama",
       "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
       "url": "https://github.com/ollama/ollama",
-      "stars": 184686,
+      "stars": 184757,
       "language": "Go",
       "updated_at": "2026-10-24T18:03:30Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/151674099?v=4"
@@ -77,7 +77,7 @@
       "name": "DietrichGebert/ponytail",
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "url": "https://github.com/DietrichGebert/ponytail",
-      "stars": 175699,
+      "stars": 176025,
       "language": "JavaScript",
       "updated_at": "2026-10-18T01:55:14Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/137048761?v=4"
@@ -86,9 +86,9 @@
       "name": "f/prompts.chat",
       "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
       "url": "https://github.com/f/prompts.chat",
-      "stars": 174446,
+      "stars": 174522,
       "language": "HTML",
-      "updated_at": "2026-10-25T07:59:53Z",
+      "updated_at": "2026-10-25T10:24:08Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/196477?v=4"
     }
   ]

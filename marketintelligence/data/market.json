@@ -1,25 +1,25 @@
 {
   "last_updated": {
-    "date": "25 Oct 2026",
-    "time": "14:08 IST",
-    "iso": "2026-10-25T14:08:12.689860+00:00"
+    "date": "26 Oct 2026",
+    "time": "14:45 IST",
+    "iso": "2026-10-26T14:45:03.915250+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 52,
+    "confidence": 54,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 52
+    "conviction": 54
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
       "confidence": 37,
-      "support": 79730.04,
+      "support": 79489.87,
       "resistance": 84777.79,
       "trade_plan": "Fade rallies while below resistance."
     },
@@ -27,41 +27,21 @@
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 2304.39,
+      "support": 2300.6,
       "resistance": 2513.51,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 48,
-    "flow": 46,
+    "macro": 45,
+    "flow": 50,
     "technical": 44,
-    "risk": 15
+    "risk": 2
   },
   "drivers": [
     {
-      "emoji": "\ud83d\udfe1",
-      "text": "Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "IRS plans lower tax disclosure penalties, including for crypto: Forbes"
-    },
-    {
       "emoji": "\ud83d\udd34",
-      "text": "Initia halts blockchain after exploit reportedly drains over $2.6M"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "US senator probes Tether after reported deal with ex-Trump crypto adviser"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "SEC flags tokenization as high-risk area in 2027 market examinations"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin seeks support above $81K as Brent crude oil hits highest level since March"
+      "text": "Bitcoin ETFs break 2-week outflow streak with $301M comeback"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -69,7 +49,27 @@
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "China targets 2030 for its national blockchain network buildout"
+      "text": "Musk warns over 200 AI neoclouds face \u2018guppy-level death\u2019"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Hong Kong names Nasdaq-listed Solana Company a strategic enterprise"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Keystone says website breach exposed hardware wallet buyers\u2019 addresses"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Standard Chartered-led Anchorpoint says it\u2019s not rushing retail stablecoin"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "ECB official sees digital euro as key to protecting EU \u2018sovereignty\u2019"
     }
   ],
   "events": [

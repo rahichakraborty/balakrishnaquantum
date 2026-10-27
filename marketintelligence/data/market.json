@@ -1,24 +1,24 @@
 {
   "last_updated": {
-    "date": "26 Oct 2026",
+    "date": "27 Oct 2026",
     "time": "14:45 IST",
-    "iso": "2026-10-26T14:45:03.915250+00:00"
+    "iso": "2026-10-27T14:45:08.837847+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 54,
+    "confidence": 47,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 54
+    "conviction": 47
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
-      "confidence": 37,
+      "confidence": 36,
       "support": 79489.87,
       "resistance": 84777.79,
       "trade_plan": "Fade rallies while below resistance."
@@ -33,15 +33,19 @@
     }
   },
   "scores": {
-    "macro": 45,
-    "flow": 50,
-    "technical": 44,
-    "risk": 2
+    "macro": 32,
+    "flow": 47,
+    "technical": 43,
+    "risk": 9
   },
   "drivers": [
     {
-      "emoji": "\ud83d\udd34",
-      "text": "Bitcoin ETFs break 2-week outflow streak with $301M comeback"
+      "emoji": "\ud83d\udfe1",
+      "text": "Binance files for Brazil crypto license ahead of Friday deadline"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin ETFs claw back $110M after $774M exit"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -49,27 +53,23 @@
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Musk warns over 200 AI neoclouds face \u2018guppy-level death\u2019"
+      "text": "RedotPay weighs confidential US IPO filing by year-end: Bloomberg"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Keystone breach deepens: Hackers stole key used to verify wallets as genuine"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Hong Kong names Nasdaq-listed Solana Company a strategic enterprise"
+      "text": "Ripple wins final US approval for national trust bank"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "US OCC calls on community banks to become payment stablecoin issuers"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Keystone says website breach exposed hardware wallet buyers\u2019 addresses"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Standard Chartered-led Anchorpoint says it\u2019s not rushing retail stablecoin"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "AI agents help rescue ETH\u2019s Glamsterdam fork, \u2018Steal My Bitcoin\u2019 site: Hodler\u2019s Digest"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "ECB official sees digital euro as key to protecting EU \u2018sovereignty\u2019"
+      "text": "Injective launches onchain futures market tracking Nvidia GPU rental costs"
     }
   ],
   "events": [
@@ -86,7 +86,7 @@
     "Open Interest": "green",
     "Fear & Greed": "green",
     "Macro": "green",
-    "News": "yellow",
+    "News": "red",
     "Risk": "green"
   }
 }

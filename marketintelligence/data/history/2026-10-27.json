@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "27 Oct 2026",
+    "time": "14:45 IST",
+    "iso": "2026-10-27T14:45:08.837847+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 47,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 47
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 36,
+      "support": 79489.87,
+      "resistance": 84777.79,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2300.6,
+      "resistance": 2513.51,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 32,
+    "flow": 47,
+    "technical": 43,
+    "risk": 9
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Binance files for Brazil crypto license ahead of Friday deadline"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin ETFs claw back $110M after $774M exit"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "RedotPay weighs confidential US IPO filing by year-end: Bloomberg"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Keystone breach deepens: Hackers stole key used to verify wallets as genuine"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Ripple wins final US approval for national trust bank"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "US OCC calls on community banks to become payment stablecoin issuers"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Injective launches onchain futures market tracking Nvidia GPU rental costs"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "red",
+    "Risk": "green"
+  }
+}

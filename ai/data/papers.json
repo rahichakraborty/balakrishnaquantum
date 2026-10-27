@@ -1,149 +1,151 @@
 {
-  "generated_at": "2026-10-26T20:16:05+00:00",
+  "generated_at": "2026-10-27T08:34:21+00:00",
   "items": [
     {
-      "title": "The Language of Instruction: Genre and Generative AI",
-      "summary": "This article argues that instruction-fine-tuned language models should be understood as implementing a genre, what is proposed as the instructional-conversational genre. This genre is an amalgamation of discursive language from prior conversations between generative models and hu…",
+      "title": "Retriever-Free Retrieval: Navigating Documents with Decision Models",
+      "summary": "While language models have become dramatically more capable, retrieval still largely relies on lexical matching or similarity in fixed embedding spaces. This creates a capability asymmetry: what the retriever fails to find, even the strongest generator cannot recover. We propose …",
       "authors": [
-        "James E. Dobson"
+        "Chao Wan",
+        "Paul Jünger",
+        "Beixi Du",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.32982v1",
-      "published": "2026-10-23T17:59:56Z",
-      "category": "cs.CL"
+      "link": "http://arxiv.org/abs/2610.35868v1",
+      "published": "2026-10-26T17:59:44Z",
+      "category": "cs.AI"
     },
     {
-      "title": "SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning",
-      "summary": "Training generalizable embodied agents requires realistic, varied, and simulation-ready indoor environments. Language-guided methods support semantic planning and object-level reasoning, but precise spatial grounding remains difficult. Visual generative models offer rich priors o…",
+      "title": "Center-of-Mass Interpretation of Evolution Strategies",
+      "summary": "Evolution strategies (ES) update a model by sampling a population of perturbed copies, scoring each one, and moving in the reward-weighted direction of the perturbations. This update is usually presented as an estimate of a smoothed gradient. We present a geometrical interpretati…",
       "authors": [
-        "Yuhan Liu",
-        "Lianhui Qin",
-        "Shenji Wan"
+        "Akshat Gupta"
       ],
-      "link": "http://arxiv.org/abs/2610.32978v1",
-      "published": "2026-10-23T17:59:21Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2610.35865v1",
+      "published": "2026-10-26T17:59:33Z",
+      "category": "cs.AI"
     },
     {
-      "title": "RobustRLlib: A Unified Library and Benchmark for Robust Reinforcement Learning Algorithms",
-      "summary": "Robust reinforcement learning (RL) is critical for reliable real-world deployment, where policies may fail under diverse shifts and disruptions. Existing robust RL algorithms offer a rich set of mechanisms and principles, yet two major barriers limit their broader potential: limi…",
+      "title": "Auto-Research Arena: Benchmarking and Advancing Auto-Research in Language Modeling",
+      "summary": "As autonomous research systems become more capable, benchmarks must both evaluate their performance and support meaningful research progress. We introduce Auto-Research Arena, a multi-target benchmark for evaluating autonomous research systems and discovering ideas in language mo…",
       "authors": [
         "Xi Chen",
-        "Fengqi Hu",
-        "Zeyu Shen",
+        "Chongjian Ge",
+        "Yiran Xu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.32971v1",
-      "published": "2026-10-23T17:57:22Z",
+      "link": "http://arxiv.org/abs/2610.35866v1",
+      "published": "2026-10-26T17:59:33Z",
       "category": "cs.LG"
     },
     {
-      "title": "DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection",
-      "summary": "Collecting high-quality demonstrations remains a central bottleneck for learning dexterous manipulation. Teleoperation records executable robot actions, but it requires a complete robot setup and places the burden of coordinating many finger joints on the operator. Human demonstr…",
+      "title": "Learning Force-Reactive Humanoid Loco-Manipulation",
+      "summary": "Many everyday tasks require controlling contact force as well as motion. On a humanoid, this force must often be coordinated across both hands and the whole body, and cannot be specified by kinematic trajectories alone. Therefore, we present FLORE, a framework for learning force-…",
       "authors": [
-        "Amber Xie",
-        "Jiawei Fu",
+        "Sihang Li",
         "Xiaofeng Guo",
+        "Jinkun Cao",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.32969v1",
-      "published": "2026-10-23T17:56:28Z",
+      "link": "http://arxiv.org/abs/2610.35862v1",
+      "published": "2026-10-26T17:59:11Z",
       "category": "cs.RO"
     },
     {
-      "title": "Flownomaly: Single-Step Conditional-Mean Recovery for Few-Shot Anomaly Detection",
-      "summary": "Few-shot industrial anomaly detection requires modeling category-specific normality from only a handful of defect-free images. Common approaches tie inference to stored exemplars, impose rigid linear structure, or risk reproducing anomalous content. Flownomaly instead casts the p…",
+      "title": "On the stability of learning",
+      "summary": "Learning algorithms are usually analyzed under the assumption that informative gradients are continuously available. But this is not always true---learning signals in biological neural networks, for example, may be sparse, local, and only intermittently available at any given syn…",
       "authors": [
-        "Bernardo Perrone Ribeiro",
-        "Erkut Akdag",
-        "Egor Bondarev"
+        "John J. Vastola"
       ],
-      "link": "http://arxiv.org/abs/2610.32964v1",
-      "published": "2026-10-23T17:53:30Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2610.35856v1",
+      "published": "2026-10-26T17:58:14Z",
+      "category": "q-bio.NC"
     },
     {
-      "title": "Measure Before You Train: Typed Decision Models vs. a Classical Baseline vs. a Generative LLM for Routing a Personal Multilingual Inbox",
-      "summary": "Personal email agents decide, for every message, what it is, whether it is urgent, whether to draft a reply, create a task, or ignore it. Their error rate is rarely measured: the stored labels were written by the system itself. We present Foyer, a self-hosted personal inbox agent…",
+      "title": "Patient-specific rubric-based evaluation of large language models across longitudinal cancer care",
+      "summary": "Large language models (LLMs) show promise in specialty medicine, yet existing evaluations largely focus on isolated clinical encounters rather than tracking how clinical responsibilities evolve across a longitudinal care pathway. Here we introduce NPC-RubricBench, a phase-aware b…",
       "authors": [
-        "Federico Lucca"
+        "Wei-Wei Zhang",
+        "Pengkai Wang",
+        "Yan Li",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.32955v1",
-      "published": "2026-10-23T17:49:43Z",
+      "link": "http://arxiv.org/abs/2610.35847v1",
+      "published": "2026-10-26T17:56:26Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Preserve to Expand: Source-Aware Adaptation and Model Merging for Multilingual LLM-Based ASR",
+      "summary": "Expanding multilingual ASR systems to new languages is challenging when adaptation must preserve previously supported languages without replaying source-language training data. We study this problem in connector-based Speech LLMs, where a trainable connector maps speech represent…",
+      "authors": [
+        "Yuchen Zhang",
+        "Haralambos Mouratidis",
+        "Ravi Shekhar"
+      ],
+      "link": "http://arxiv.org/abs/2610.35846v1",
+      "published": "2026-10-26T17:56:22Z",
       "category": "cs.CL"
     },
     {
-      "title": "Where Rounding Happens Matters: Rounding-Location Alignment Stabilizes LLM Reinforcement Learning",
-      "summary": "Reinforcement learning for large language models often uses separate systems for inference and training. Even with identical weights and BF16 tensors, implementation differences can make an intended on-policy update off-policy and destabilize training. Existing remedies align the…",
+      "title": "Work Agents: Systems, Capabilities, and Optimization",
+      "summary": "As foundation models evolve from information generation to digital work execution, agents are increasingly capable of completing complex tasks across tools, applications, and workflows. However, existing research lacks a unified perspective on how agents reliably accomplish deleg…",
       "authors": [
-        "Yijing Ke",
-        "Tianle Cai",
-        "Ruosong Wang"
+        "Zishan Xu",
+        "Enjun Du",
+        "Mingqi Gao",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.32951v1",
-      "published": "2026-10-23T17:45:03Z",
+      "link": "http://arxiv.org/abs/2610.35845v1",
+      "published": "2026-10-26T17:56:21Z",
       "category": "cs.LG"
     },
     {
-      "title": "Beyond Discrete Tokens: Preserving Numerical Continuity in Medical Vision-Language Models",
-      "summary": "Objective: To develop a unified vision-language model for prompt-conditioned quantitative ultrasound measurement that addresses the mismatch between continuous measurement targets and discrete token-based numerical prediction. Methods: This article presents HAD-VLM, a hybrid auto…",
+      "title": "I-HITL: Inalienable Human-in-the-Loop",
+      "summary": "Human oversight is a pillar of AI safety. It is often exercised by a human in the loop (HITL) who approves critical actions taken by an AI agent. AI agents' increasing ability to bypass guardrails, though, raises the question of how to enforce HITL robustly.   We introduce the co…",
       "authors": [
-        "Dianye Huang",
-        "Jiamei Guo",
-        "Yue Zhou",
+        "Samuel Breckenridge",
+        "Dani Vilardell",
+        "Wenhao Wang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.32948v1",
-      "published": "2026-10-23T17:40:58Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2610.35835v1",
+      "published": "2026-10-26T17:52:14Z",
+      "category": "cs.CR"
     },
     {
-      "title": "Monetizing Intelligence: Advertising and Subscription Design on LLM Platforms",
-      "summary": "Large language model (LLM) platforms introducing advertising must decide how much capability ad revenue should fund and what consumers should pay to avoid ads. We study a monopolistic platform that jointly chooses costly response quality, advertising intensity, and subscription p…",
+      "title": "Information-Theoretic Secure Aggregation With Heterogeneous Client Quantization",
+      "summary": "In federated learning (FL), secure aggregation enables a server to compute the sum of local model updates of $N$ clients, without revealing any information on the individual model updates to the server, beyond their sum. Different clients may be subject to heterogeneous bandwidth…",
       "authors": [
-        "Yuhang Ji",
-        "Fasheng Xu",
-        "Tianjun Feng"
+        "Shreya Meel",
+        "Sennur Ulukus",
+        "Itzhak Tamo"
       ],
-      "link": "http://arxiv.org/abs/2610.32945v1",
-      "published": "2026-10-23T17:39:42Z",
-      "category": "econ.TH"
+      "link": "http://arxiv.org/abs/2610.35833v1",
+      "published": "2026-10-26T17:51:08Z",
+      "category": "cs.IT"
     },
     {
-      "title": "Knowledge Distillation across Item and Code Spaces for Parallel Generative Recommendation",
-      "summary": "Generative recommendation with semantic IDs represents each item as a sequence of discrete codes derived from its semantic representation and predicts these codes to generate recommendations. Existing semantic-ID recommenders are typically trained with hard labels for the observe…",
+      "title": "Profiling a Frontier Agent with EBench: From Direct Control to Harness with Policy",
+      "summary": "Frontier multimodal large language models (MLLMs) can control robots without robot-specific training, but how their capabilities compare and interact with post-trained vision-language-action (VLA) and world action model (WAM) policies across manipulation demands remains to be tho…",
       "authors": [
-        "Yixuan Xu",
-        "Hailin Liu",
-        "Linxiang Peng",
+        "Yifei Yao",
+        "Yude Zou",
+        "Guanbo Jiao",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.32943v1",
-      "published": "2026-10-23T17:37:55Z",
-      "category": "cs.IR"
-    },
-    {
-      "title": "If at First You Don't Succeed, Backtrack: Lightweight Recovery for Frozen VLAs",
-      "summary": "Vision-Language-Action (VLA) models perform well on robotic manipulation, yet remain brittle once their own actions carry them into states their training data barely covers. Recovering from such failures usually requires recovery demonstrations, policy retraining, or a separate m…",
-      "authors": [
-        "Thomas Landeg",
-        "Thierry Tambe"
-      ],
-      "link": "http://arxiv.org/abs/2610.32941v1",
-      "published": "2026-10-23T17:35:33Z",
+      "link": "http://arxiv.org/abs/2610.35832v1",
+      "published": "2026-10-26T17:51:02Z",
       "category": "cs.RO"
     },
     {
-      "title": "Learning Positive Linear Combinations of ReLUs in Fully Polynomial Time",
-      "summary": "We study the fundamental problem of PAC learning positive linear combinations of $k$ arbitrary ReLU activations on $\\mathbb{R}^d$ with respect to the Gaussian distribution, in $L_2$ loss. We give the first fully-polynomial time algorithm for this learning task. Specifically, our …",
+      "title": "Reva: Real-Time Vulnerability Detection through Contextual Probing of Large Language Models",
+      "summary": "A vulnerability costs more to fix the later it is discovered. As coding agents generate code faster than developers can review it, software needs a first line of defense screening each new function in real time. LLM agents have recently become capable of finding real-world vulner…",
       "authors": [
-        "Ilias Diakonikolas",
-        "Jelena Diakonikolas",
-        "Puqian Wang",
-        "et al."
+        "Amine Lbath",
+        "Massih-Reza Amini"
       ],
-      "link": "http://arxiv.org/abs/2610.32940v1",
-      "published": "2026-10-23T17:34:15Z",
-      "category": "cs.DS"
+      "link": "http://arxiv.org/abs/2610.35829v1",
+      "published": "2026-10-26T17:50:09Z",
+      "category": "cs.CR"
     }
   ]
 }

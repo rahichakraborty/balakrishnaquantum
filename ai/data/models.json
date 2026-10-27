@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-10-26T20:16:13+00:00",
+  "generated_at": "2026-10-27T08:34:28+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "downloads": 95889,
-      "likes": 3163,
+      "likes": 3260,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "RecursiveSI/flint",
       "url": "https://huggingface.co/RecursiveSI/flint",
       "downloads": 8470,
-      "likes": 909,
+      "likes": 937,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Nanbeige/Nanbeige4.3-33B",
       "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
       "downloads": 2787,
-      "likes": 580,
+      "likes": 616,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "XHToken/Spark-X2.6-4B",
       "url": "https://huggingface.co/XHToken/Spark-X2.6-4B",
       "downloads": 4726,
-      "likes": 633,
+      "likes": 724,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "black-forest-labs/flux-3-image-klein-comfy",
       "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
       "downloads": 700652,
-      "likes": 1684,
+      "likes": 1721,
       "pipeline_tag": "image-to-image"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 2117147,
-      "likes": 9438,
+      "likes": 9491,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "MiniMaxAI/MiniMax-M3.1-Flash",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
       "downloads": 8782,
-      "likes": 381,
+      "likes": 390,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
       "url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
       "downloads": 891147,
-      "likes": 337,
+      "likes": 357,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 7608285,
-      "likes": 18451,
+      "likes": 18484,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "OpenMOSS-Team/MOSS-Image-SFT",
-      "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT",
-      "downloads": 12114,
-      "likes": 753,
-      "pipeline_tag": "text-to-image"
+      "id": "InternScience/Sage-A1.5",
+      "url": "https://huggingface.co/InternScience/Sage-A1.5",
+      "downloads": 5235,
+      "likes": 321,
+      "pipeline_tag": "text-generation"
     }
   ]
 }

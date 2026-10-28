@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "28 Oct 2026",
+    "time": "15:25 IST",
+    "iso": "2026-10-28T15:25:48.390720+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 52,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Medium",
+    "risk_note": "Watch Headlines",
+    "conviction": 52
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Neutral Bearish",
+      "confidence": 47,
+      "support": 79489.87,
+      "resistance": 84777.79,
+      "trade_plan": "Wait for confirmed breakout."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2300.6,
+      "resistance": 2513.51,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 48,
+    "flow": 62,
+    "technical": 48,
+    "risk": 41
+  },
+  "drivers": [
+    {
+      "emoji": "\u2705",
+      "text": "Bitcoin ETF inflows climb to $176M as BTC rebounds above $80K"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Coinbase denies systems breach, says vendor exposed customer data"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Robinhood\u2019s Tenev warns US tokenization uncertainty deters \u2018serious assets\u2019"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bithumb discloses data leak after internal system breach: Report"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Discord is making public chats searchable on Google: How to opt out"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Intel, IBM, Oracle and IonQ latest to object to OKX-ICE tokenized stocks"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

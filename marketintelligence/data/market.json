@@ -1,27 +1,27 @@
 {
   "last_updated": {
-    "date": "27 Oct 2026",
-    "time": "14:45 IST",
-    "iso": "2026-10-27T14:45:08.837847+00:00"
+    "date": "28 Oct 2026",
+    "time": "15:25 IST",
+    "iso": "2026-10-28T15:25:48.390720+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 47,
+    "confidence": 52,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
-    "risk_level": "Low",
-    "risk_note": "Normal Conditions",
-    "conviction": 47
+    "risk_level": "Medium",
+    "risk_note": "Watch Headlines",
+    "conviction": 52
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
-      "bias": "Bearish",
-      "confidence": 36,
+      "bias": "Neutral Bearish",
+      "confidence": 47,
       "support": 79489.87,
       "resistance": 84777.79,
-      "trade_plan": "Fade rallies while below resistance."
+      "trade_plan": "Wait for confirmed breakout."
     },
     "ETH": {
       "name": "Ethereum",
@@ -33,19 +33,19 @@
     }
   },
   "scores": {
-    "macro": 32,
-    "flow": 47,
-    "technical": 43,
-    "risk": 9
+    "macro": 48,
+    "flow": 62,
+    "technical": 48,
+    "risk": 41
   },
   "drivers": [
     {
-      "emoji": "\ud83d\udfe1",
-      "text": "Binance files for Brazil crypto license ahead of Friday deadline"
+      "emoji": "\u2705",
+      "text": "Bitcoin ETF inflows climb to $176M as BTC rebounds above $80K"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin ETFs claw back $110M after $774M exit"
+      "text": "Coinbase denies systems breach, says vendor exposed customer data"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -53,23 +53,23 @@
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "RedotPay weighs confidential US IPO filing by year-end: Bloomberg"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Keystone breach deepens: Hackers stole key used to verify wallets as genuine"
+      "text": "Robinhood\u2019s Tenev warns US tokenization uncertainty deters \u2018serious assets\u2019"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Ripple wins final US approval for national trust bank"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "US OCC calls on community banks to become payment stablecoin issuers"
+      "text": "Bithumb discloses data leak after internal system breach: Report"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Injective launches onchain futures market tracking Nvidia GPU rental costs"
+      "text": "Discord is making public chats searchable on Google: How to opt out"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Intel, IBM, Oracle and IonQ latest to object to OKX-ICE tokenized stocks"
     }
   ],
   "events": [
@@ -86,7 +86,7 @@
     "Open Interest": "green",
     "Fear & Greed": "green",
     "Macro": "green",
-    "News": "red",
+    "News": "yellow",
     "Risk": "green"
   }
 }

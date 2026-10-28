@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-10-27T19:46:52+00:00",
+  "generated_at": "2026-10-28T09:13:58+00:00",
   "items": [
     {
       "name": "morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "url": "https://github.com/morluto/rea",
-      "stars": 396604,
+      "stars": 399343,
       "language": "TypeScript",
-      "updated_at": "2026-10-27T19:43:16Z",
+      "updated_at": "2026-10-28T09:12:33Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/76467478?v=4"
     },
     {
       "name": "affaan-m/ECC",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 290690,
+      "stars": 291215,
       "language": "JavaScript",
       "updated_at": "2026-10-26T04:56:56Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/124439313?v=4"
@@ -23,61 +23,61 @@
       "name": "deepseek-ai/deepseek-harness",
       "description": "DeepSeek Harness: Everything is a Plugin.",
       "url": "https://github.com/deepseek-ai/deepseek-harness",
-      "stars": 263593,
+      "stars": 264276,
       "language": "TypeScript",
-      "updated_at": "2026-10-23T15:25:40Z",
+      "updated_at": "2026-10-28T02:48:17Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/148330874?v=4"
     },
     {
       "name": "NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 257702,
+      "stars": 257884,
       "language": "Python",
-      "updated_at": "2026-10-27T19:44:45Z",
+      "updated_at": "2026-10-28T09:01:28Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/134168893?v=4"
     },
     {
       "name": "tensorflow/tensorflow",
       "description": "An Open Source Machine Learning Framework for Everyone",
       "url": "https://github.com/tensorflow/tensorflow",
-      "stars": 201302,
+      "stars": 201272,
       "language": "C++",
-      "updated_at": "2026-10-27T19:46:48Z",
+      "updated_at": "2026-10-28T09:10:55Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/15658638?v=4"
     },
     {
       "name": "firecrawl/firecrawl",
       "description": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
       "url": "https://github.com/firecrawl/firecrawl",
-      "stars": 196012,
+      "stars": 196199,
       "language": "TypeScript",
-      "updated_at": "2026-10-27T19:40:31Z",
+      "updated_at": "2026-10-28T08:27:59Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/135057108?v=4"
     },
     {
       "name": "Significant-Gravitas/AutoGPT",
       "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "stars": 187789,
+      "stars": 187797,
       "language": "Python",
-      "updated_at": "2026-10-27T19:12:17Z",
+      "updated_at": "2026-10-28T08:56:31Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/130738209?v=4"
     },
     {
       "name": "ollama/ollama",
       "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
       "url": "https://github.com/ollama/ollama",
-      "stars": 185010,
+      "stars": 185076,
       "language": "Go",
-      "updated_at": "2026-10-27T18:03:57Z",
+      "updated_at": "2026-10-28T01:56:22Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/151674099?v=4"
     },
     {
       "name": "DietrichGebert/ponytail",
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "url": "https://github.com/DietrichGebert/ponytail",
-      "stars": 178025,
+      "stars": 178506,
       "language": "JavaScript",
       "updated_at": "2026-10-18T01:55:14Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/137048761?v=4"
@@ -86,9 +86,9 @@
       "name": "f/prompts.chat",
       "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
       "url": "https://github.com/f/prompts.chat",
-      "stars": 174780,
+      "stars": 174891,
       "language": "HTML",
-      "updated_at": "2026-10-27T19:13:58Z",
+      "updated_at": "2026-10-28T08:23:59Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/196477?v=4"
     }
   ]

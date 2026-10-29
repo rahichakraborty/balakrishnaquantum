@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-10-28T20:01:52+00:00",
+  "generated_at": "2026-10-29T09:14:08+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "downloads": 116770,
-      "likes": 3517,
+      "likes": 3660,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "RecursiveSI/flint",
-      "url": "https://huggingface.co/RecursiveSI/flint",
-      "downloads": 14047,
-      "likes": 1145,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "Nanbeige/Nanbeige4.3-33B",
       "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
       "downloads": 7412,
-      "likes": 712,
+      "likes": 746,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "RecursiveSI/flint",
+      "url": "https://huggingface.co/RecursiveSI/flint",
+      "downloads": 14047,
+      "likes": 1216,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "XHToken/Spark-X2.6-4B",
       "url": "https://huggingface.co/XHToken/Spark-X2.6-4B",
       "downloads": 8222,
-      "likes": 845,
+      "likes": 881,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "tencent/Hy-SimulMT-30B-A3B-FP8",
+      "url": "https://huggingface.co/tencent/Hy-SimulMT-30B-A3B-FP8",
+      "downloads": 165,
+      "likes": 445,
+      "pipeline_tag": "translation"
+    },
+    {
+      "id": "LiquidAI/LFM3-1.7B",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+      "downloads": 8892,
+      "likes": 426,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "MiniMaxAI/MiniMax-M3.1-Flash",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
       "downloads": 13247,
-      "likes": 446,
+      "likes": 470,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "black-forest-labs/flux-3-image-klein-comfy",
-      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
-      "downloads": 798943,
-      "likes": 1942,
-      "pipeline_tag": "image-to-image"
     },
     {
       "id": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
       "url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
       "downloads": 1377570,
-      "likes": 430,
+      "likes": 460,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 2234788,
-      "likes": 9688,
+      "likes": 9764,
       "pipeline_tag": "image-to-video"
     },
     {
-      "id": "LiquidAI/LFM3-1.7B",
-      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
-      "downloads": 8892,
-      "likes": 354,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "Qwen/Qwen3.8-27B",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 7515620,
-      "likes": 18606,
-      "pipeline_tag": "image-text-to-text"
+      "id": "black-forest-labs/flux-3-image-klein-comfy",
+      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
+      "downloads": 798943,
+      "likes": 1985,
+      "pipeline_tag": "image-to-image"
     }
   ]
 }

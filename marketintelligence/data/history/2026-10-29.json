@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "29 Oct 2026",
+    "time": "15:48 IST",
+    "iso": "2026-10-29T15:48:21.170073+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 46,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 46
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 39,
+      "support": 79489.87,
+      "resistance": 81965.02,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2300.6,
+      "resistance": 2412.9,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 42,
+    "flow": 40,
+    "technical": 44,
+    "risk": 32
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin ETFs add $137M, pushing October back into the green"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Your fridge could one day stake Ether, launch memecoins: CFTC chair"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Tampered Ledger wallets cost Singapore users $2.7M: Police"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Fed\u2019s hawkish rate hold keeps pressure on Bitcoin: Analysts"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Canadian \u2018crypto king\u2019 case to go to jury as criminal trial winds down"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Sam Bankman-Fried wrote to actor portraying him in Netflix series"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Strategy shareholders approve daily dividends for four preferred stocks"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

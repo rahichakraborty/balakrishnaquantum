@@ -1,51 +1,47 @@
 {
   "last_updated": {
-    "date": "28 Oct 2026",
-    "time": "15:25 IST",
-    "iso": "2026-10-28T15:25:48.390720+00:00"
+    "date": "29 Oct 2026",
+    "time": "15:48 IST",
+    "iso": "2026-10-29T15:48:21.170073+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 52,
+    "confidence": 46,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
-    "risk_level": "Medium",
-    "risk_note": "Watch Headlines",
-    "conviction": 52
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 46
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
-      "bias": "Neutral Bearish",
-      "confidence": 47,
+      "bias": "Bearish",
+      "confidence": 39,
       "support": 79489.87,
-      "resistance": 84777.79,
-      "trade_plan": "Wait for confirmed breakout."
+      "resistance": 81965.02,
+      "trade_plan": "Fade rallies while below resistance."
     },
     "ETH": {
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
       "support": 2300.6,
-      "resistance": 2513.51,
+      "resistance": 2412.9,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 48,
-    "flow": 62,
-    "technical": 48,
-    "risk": 41
+    "macro": 42,
+    "flow": 40,
+    "technical": 44,
+    "risk": 32
   },
   "drivers": [
     {
-      "emoji": "\u2705",
-      "text": "Bitcoin ETF inflows climb to $176M as BTC rebounds above $80K"
-    },
-    {
       "emoji": "\ud83d\udfe1",
-      "text": "Coinbase denies systems breach, says vendor exposed customer data"
+      "text": "Bitcoin ETFs add $137M, pushing October back into the green"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -53,23 +49,27 @@
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Robinhood\u2019s Tenev warns US tokenization uncertainty deters \u2018serious assets\u2019"
+      "text": "Your fridge could one day stake Ether, launch memecoins: CFTC chair"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Bithumb discloses data leak after internal system breach: Report"
+      "text": "Tampered Ledger wallets cost Singapore users $2.7M: Police"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Discord is making public chats searchable on Google: How to opt out"
+      "text": "Fed\u2019s hawkish rate hold keeps pressure on Bitcoin: Analysts"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure"
+      "text": "Canadian \u2018crypto king\u2019 case to go to jury as criminal trial winds down"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Sam Bankman-Fried wrote to actor portraying him in Netflix series"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Intel, IBM, Oracle and IonQ latest to object to OKX-ICE tokenized stocks"
+      "text": "Strategy shareholders approve daily dividends for four preferred stocks"
     }
   ],
   "events": [

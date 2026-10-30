@@ -1,47 +1,55 @@
 {
   "last_updated": {
-    "date": "29 Oct 2026",
-    "time": "15:48 IST",
-    "iso": "2026-10-29T15:48:21.170073+00:00"
+    "date": "30 Oct 2026",
+    "time": "15:50 IST",
+    "iso": "2026-10-30T15:50:26.624528+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udfe1",
-    "bias": "Neutral",
-    "confidence": 46,
-    "todays_trade": "Wait For Confirmation",
+    "emoji": "\ud83d\udd34",
+    "bias": "Mild Bearish",
+    "confidence": 27,
+    "todays_trade": "Sell Rallies",
     "preferred_asset": "ETH",
-    "risk_level": "Low",
-    "risk_note": "Normal Conditions",
-    "conviction": 46
+    "risk_level": "Medium",
+    "risk_note": "Watch Headlines",
+    "conviction": 27
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
-      "confidence": 39,
-      "support": 79489.87,
-      "resistance": 81965.02,
+      "confidence": 24,
+      "support": 76666.41,
+      "resistance": 81894.45,
       "trade_plan": "Fade rallies while below resistance."
     },
     "ETH": {
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 2300.6,
-      "resistance": 2412.9,
+      "support": 2191.63,
+      "resistance": 2411.19,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 42,
-    "flow": 40,
-    "technical": 44,
-    "risk": 32
+    "macro": 15,
+    "flow": 31,
+    "technical": 37,
+    "risk": 62
   },
   "drivers": [
     {
+      "emoji": "\ud83d\udd34",
+      "text": "THORChain\u2019s RUNE jumps 13% after Binance\u2019s record $6.3B hack"
+    },
+    {
       "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin ETFs add $137M, pushing October back into the green"
+      "text": "Trezor warns CryptoBilis buyers to move funds over suspected implant"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Live updates: Binance uncovers more breach points in $6.3B hack"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -49,27 +57,19 @@
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Your fridge could one day stake Ether, launch memecoins: CFTC chair"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Tampered Ledger wallets cost Singapore users $2.7M: Police"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Fed\u2019s hawkish rate hold keeps pressure on Bitcoin: Analysts"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Canadian \u2018crypto king\u2019 case to go to jury as criminal trial winds down"
+      "text": "Strategy eyes more Bitcoin buys as Saylor touts $30B credit capacity"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "Sam Bankman-Fried wrote to actor portraying him in Netflix series"
+      "text": "North Korea\u2019s TraderTraitor linked to $6.3B Binance hack"
     },
     {
-      "emoji": "\ud83d\udfe1",
-      "text": "Strategy shareholders approve daily dividends for four preferred stocks"
+      "emoji": "\ud83d\udd34",
+      "text": "Binance hack could accelerate shift to DEXs: Standard Chartered"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Binance points to engineer\u2019s hacked laptop in $6.3B breach"
     }
   ],
   "events": [
@@ -86,7 +86,7 @@
     "Open Interest": "green",
     "Fear & Greed": "green",
     "Macro": "green",
-    "News": "yellow",
+    "News": "red",
     "Risk": "green"
   }
 }

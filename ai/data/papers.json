@@ -1,157 +1,156 @@
 {
-  "generated_at": "2026-10-29T20:01:09+00:00",
+  "generated_at": "2026-10-30T09:28:53+00:00",
   "items": [
     {
-      "title": "Honeycomb-Surfels: Compact Hexagonal Primitives for Efficient Scene Rendering and Reconstruction",
-      "summary": "Novel view synthesis and 3D reconstruction have advanced rapidly with radiance fields and splatting, yet their memory and computational demands limit their use in resource-constrained settings. We introduce Hexels: novel planar hexagonal surface elements with a first-order spatia…",
+      "title": "Elucidating the Design Space of LM Data Attribution",
+      "summary": "Data attribution methods for Language Models (LMs) are typically evaluated using downstream tasks like fact retrieval. However, existing evaluations vary multiple dataset properties simultaneously, making it impossible to isolate exactly why an attribution algorithm fails. To dia…",
       "authors": [
-        "Prakhar Kaushik",
-        "Soumava Paul",
-        "Alan Yuille"
+        "Steven Yu",
+        "Sheng-Yu Wang",
+        "Kimia Hamidieh",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.37668v1",
-      "published": "2026-10-27T17:59:59Z",
+      "link": "http://arxiv.org/abs/2610.40655v1",
+      "published": "2026-10-29T17:59:53Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Private Filtering",
+      "summary": "An estimator can be accurate and stable on typical data, yet sensitive to a few possible records. Differentially private mechanisms commonly scale their noise to the worst-case influence of a single record, which lets these records dictate the noise even when the remaining data w…",
+      "authors": [
+        "Moshe Shenfeld",
+        "Eliad Tsfadia",
+        "Katrina Ligett"
+      ],
+      "link": "http://arxiv.org/abs/2610.40654v1",
+      "published": "2026-10-29T17:59:49Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Rethinking Neural Thickets Without Weight Perturbations",
+      "summary": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanatio…",
+      "authors": [
+        "Nicolas Dufour",
+        "Elouan Gardès",
+        "Amil Dravid",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.40649v1",
+      "published": "2026-10-29T17:59:29Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
+      "summary": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency struct…",
+      "authors": [
+        "Jiongfan Yang",
+        "Weichen Fan",
+        "Haiwen Diao",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.40647v1",
+      "published": "2026-10-29T17:59:21Z",
       "category": "cs.CV"
     },
     {
-      "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning",
-      "summary": "Vision-Language-Action (VLA) models have made substantial progress in robotic manipulation, but their generalization remains constrained by the diversity and coverage of action-labeled robot demonstrations. Human videos provide much broader behavioral and environmental experience…",
+      "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
+      "summary": "Distributionally robust optimization (DRO) hedges data-driven two-stage stochastic programs against error in the distribution estimated from a finite record, and standard ambiguity sets differ in how they treat realizations absent from that record. A divergence ball around the em…",
       "authors": [
-        "Chaehyun Kim",
-        "Chi-Pin Huang",
-        "Jisoo Kim",
-        "et al."
+        "Aron Brenner",
+        "Saurabh Amin"
       ],
-      "link": "http://arxiv.org/abs/2610.37666v1",
-      "published": "2026-10-27T17:59:52Z",
-      "category": "cs.RO"
+      "link": "http://arxiv.org/abs/2610.40644v1",
+      "published": "2026-10-29T17:59:01Z",
+      "category": "eess.SY"
     },
     {
-      "title": "When Should We Intervene at Test Time?",
-      "summary": "Test-time adaptation helps a deployed model respond to changing inputs, but the same intervention can rescue one batch and damage the next. Updating normalization statistics, for example, can improve corrupted images yet fail when a batch contains mostly one class. Average accura…",
+      "title": "Luggage re-identification: A study of strategies towards a real-world application",
+      "summary": "Luggage re-identification (ReID) is a critical task in video surveillance for forensics, security or border management (suspicious or abandoned luggage recognition), as well as luggage management (lost luggage recovery). It enables the association of observations of the same lugg…",
       "authors": [
-        "Jiahao Zhang",
-        "Xinling Wen",
-        "Liangliang Li",
+        "Quentin Dhôte",
+        "Romaric Audigier"
+      ],
+      "link": "http://arxiv.org/abs/2610.40643v1",
+      "published": "2026-10-29T17:58:59Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "From extreme weather to agricultural consequences with agentic AI",
+      "summary": "Extreme weather is forecast days ahead, yet its consequences for agriculture remain hard to predict: a forecast says where a storm will strike, not which crops will suffer or how much is at risk, and the records that could tell span many sources. We present WxCrop, the first agen…",
+      "authors": [
+        "Minghan Yu",
+        "Mengyu Dai",
+        "Yixin Wen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.37658v1",
-      "published": "2026-10-27T17:58:53Z",
+      "link": "http://arxiv.org/abs/2610.40641v1",
+      "published": "2026-10-29T17:58:53Z",
+      "category": "physics.ao-ph"
+    },
+    {
+      "title": "world2vec: Mechanistic world models through latent dynamics learning",
+      "summary": "World models can achieve strong control performance without faithfully capturing the dynamics of their environment, limiting their potential for mechanistic interpretability and scientific discovery. Here, we introduce world2vec to learn mechanistic world models without reward in…",
+      "authors": [
+        "Tobias Schmidt",
+        "Rodrigo Gonzalez Laiz",
+        "Krisztián Szuppinger",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.40637v1",
+      "published": "2026-10-29T17:58:23Z",
       "category": "cs.LG"
     },
     {
-      "title": "Heads of Security: Learned Attention Gates Improve Prompt Injection Robustness",
-      "summary": "We introduce Heads of Security (HoS), a prompt injection defense that enforces instruction-data separation via a small set of learned per-head attention gates. HoS learns how each head should redistribute attention between trusted and untrusted tokens, enabling models to reason o…",
+      "title": "Probing Spatial State Representations in Visual Foundation Models",
+      "summary": "An observer sees only part of the surrounding world, yet must keep track of what lies beyond the current view. Spatial perception therefore involves more than recognizing individual images: it calls for a persistent spatial state that is updated under self-motion and used to guid…",
       "authors": [
-        "Igor Shilov",
-        "Xiaoxue Yang",
-        "Alexander Panfilov",
+        "Baiqiao Yin",
+        "Zhongang Cai",
+        "Ruisi Wang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.37657v1",
-      "published": "2026-10-27T17:58:52Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2610.40636v1",
+      "published": "2026-10-29T17:58:16Z",
+      "category": "cs.CV"
     },
     {
-      "title": "Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops",
-      "summary": "Relations compose through the entity they share - Alice is Bob's mother and Bob is Carol's father, so Alice is Carol's grandmother - and the order matters, since a father's mother is not a mother's father; verifying a composed relation means closing the loop. We show that if each…",
+      "title": "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender",
+      "summary": "Safety alignment has enabled large language models to reliably refuse harmful requests directly, yet the same request distributed across a multi-turn conversation still succeeds far too often. This brittleness has a mechanistic root: Alignment is shallow, with safety behavior con…",
       "authors": [
-        "Aakash Sarkar",
-        "Ananya Mukherjee",
-        "Motoshige Sato"
-      ],
-      "link": "http://arxiv.org/abs/2610.37656v1",
-      "published": "2026-10-27T17:58:48Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "KPPax: preprocess differentiable kinetic ODE for machine learning in atmospheric chemistry",
-      "summary": "Atmospheric chemical mechanisms are commonly distributed in the language of the Kinetic PreProcessor (KPP), which generates efficient Fortran or C code but does not fit into the differentiable programming frameworks in which machine-learning models are developed. We present KPPax…",
-      "authors": [
-        "Wenqing Peng",
-        "Michael Boy",
-        "Zhi-Song Liu"
-      ],
-      "link": "http://arxiv.org/abs/2610.37655v1",
-      "published": "2026-10-27T17:58:40Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Pushing Dexterity and Safety for In-Hand Object Pose Reaching That Works Remarkably Well",
-      "summary": "Dexterous manipulation with multi-fingered hands is the next frontier of robotics, yet learned hand skills remain limited to simple grasps or basic repeated motions, such as rotating an object. As robots attempt more demanding in-hand maneuvers, safety, such as not dropping the o…",
-      "authors": [
-        "Ian Chuang",
-        "Hiya Shah",
-        "Vamsi Chilamkur",
+        "Qiyao Ma",
+        "Xiaodong Liu",
+        "Weiwei Yang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.37652v1",
-      "published": "2026-10-27T17:58:20Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "GEPA-Curator: Curated Learning for Self Improving Agents",
-      "summary": "Large Language Models (LLMs) are increasingly used in multi-turn agentic workloads that require sustained interaction with complex environments. Existing reflective prompt optimizers such as GEPA learn from failed rollouts, but agentic failures can also come from prompt weaknesse…",
-      "authors": [
-        "Zack Yu",
-        "Nicholas Lee",
-        "Minjae Lee",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.37651v1",
-      "published": "2026-10-27T17:58:11Z",
+      "link": "http://arxiv.org/abs/2610.40627v1",
+      "published": "2026-10-29T17:56:53Z",
       "category": "cs.CL"
     },
     {
-      "title": "Can LLMs Uncover Hidden Physical Laws through Free Exploration?",
-      "summary": "Scientific discovery often begins with an unexpected observation that prompts a new research question. In a world with altered physical laws, can large language models (LLMs) notice unexpected behavior, such as heavier objects falling more slowly, and discover the law through exp…",
+      "title": "Testimony from Timelines: Evidence-Grounded Significance Testing of Temporal Clinical Hypotheses",
+      "summary": "Ask a language model whether sales tend to dip after a product recall, or whether one side effect tends to follow another after a vaccine, and it answers in a fluent sentence that reads like a finding, with no test behind it. Assertions about how events unfold across many cases f…",
       "authors": [
-        "Zhen Yang",
-        "Wen Wang",
-        "Xander Xu",
+        "Chengyang He",
+        "Wenlong Zhang",
+        "Koduvayur Subbalakshmi",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.37649v1",
-      "published": "2026-10-27T17:57:00Z",
+      "link": "http://arxiv.org/abs/2610.40619v1",
+      "published": "2026-10-29T17:55:30Z",
       "category": "cs.CL"
     },
     {
-      "title": "Scaling Laws for Tool-Use Agents via Controllable Environment Synthesis",
-      "summary": "We explore how to build performant large language model (LLM) tool-use agents that complete complex, multi-step tasks. Specifically, we study how data composition in synthetically generated tool-use environments affects the training of such agents. To do so, we propose the SynthA…",
+      "title": "An ODE-based Sampler for Discrete Diffusion Models",
+      "summary": "The marginals of a continuous diffusion model can be reproduced by a deterministic ordinary differential equation (ODE), known as the probability flow ODE, which provides a foundation for accelerated sampling and consistency distillation. In this paper we address the question whe…",
       "authors": [
-        "Andrew Szot",
-        "Samira Abnar",
-        "Omar Attia",
+        "Samson Gourevitch",
+        "Yazid Janati",
+        "Eric Moulines",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.37648v1",
-      "published": "2026-10-27T17:56:46Z",
+      "link": "http://arxiv.org/abs/2610.40618v1",
+      "published": "2026-10-29T17:55:25Z",
       "category": "cs.LG"
-    },
-    {
-      "title": "MuonGS: Pretraining LLMs with Relaxed Weight-Norm Control",
-      "summary": "Weight decay and explicit weight-norm constraints improve optimizer performance in language model pretraining, yet a unified understanding of why such control helps and how much is needed remains incomplete. We analyze norm control in Muon over the entire training trajectory usin…",
-      "authors": [
-        "Athanasios Glentis",
-        "Dawei Li",
-        "Mingyi Hong"
-      ],
-      "link": "http://arxiv.org/abs/2610.37647v1",
-      "published": "2026-10-27T17:56:40Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Multi-State Linear Attention with Generalized Second-Order Routing",
-      "summary": "Self-attention plays a key role in long-sequence modeling, but its quadratic time complexity fundamentally limits the scaling of Large Language Models. Recently, Multi-State Linear Attention (MSLA) mechanisms have been proposed to make sequence modeling more efficient by splittin…",
-      "authors": [
-        "Hee Seung Hwang",
-        "Sanghyuk Chun",
-        "Xindi Wu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.37645v1",
-      "published": "2026-10-27T17:55:49Z",
-      "category": "cs.CL"
     }
   ]
 }

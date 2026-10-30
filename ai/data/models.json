@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-10-30T09:29:01+00:00",
+  "generated_at": "2026-10-30T19:48:49+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-      "downloads": 131062,
-      "likes": 3912,
+      "downloads": 145869,
+      "likes": 3987,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Nanbeige/Nanbeige4.3-33B",
       "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
-      "downloads": 9655,
-      "likes": 784,
+      "downloads": 12178,
+      "likes": 794,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "LiquidAI/LFM3-1.7B",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
-      "downloads": 15885,
-      "likes": 509,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "RecursiveSI/flint",
-      "url": "https://huggingface.co/RecursiveSI/flint",
-      "downloads": 16598,
-      "likes": 1249,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
-      "url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
-      "downloads": 1578937,
-      "likes": 487,
+      "downloads": 23694,
+      "likes": 546,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
       "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-      "downloads": 4276,
-      "likes": 442,
+      "downloads": 15980,
+      "likes": 483,
       "pipeline_tag": "automatic-speech-recognition"
+    },
+    {
+      "id": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
+      "url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
+      "downloads": 1747945,
+      "likes": 502,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "baidu/Unlimited-OCR-2",
       "url": "https://huggingface.co/baidu/Unlimited-OCR-2",
-      "downloads": 18141,
-      "likes": 426,
+      "downloads": 24276,
+      "likes": 442,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "RecursiveSI/flint",
+      "url": "https://huggingface.co/RecursiveSI/flint",
+      "downloads": 19015,
+      "likes": 1255,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "mistralai/Mistral-Large-4-1T-A52B",
+      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+      "downloads": 1239,
+      "likes": 1325,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 2269999,
-      "likes": 9888,
+      "downloads": 2335172,
+      "likes": 9941,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "XHToken/Spark-X2.6-4B",
       "url": "https://huggingface.co/XHToken/Spark-X2.6-4B",
-      "downloads": 10163,
-      "likes": 912,
+      "downloads": 12515,
+      "likes": 919,
       "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "black-forest-labs/flux-3-image-klein-comfy",
-      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
-      "downloads": 832197,
-      "likes": 2069,
-      "pipeline_tag": "image-to-image"
     }
   ]
 }

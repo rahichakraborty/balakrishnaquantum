@@ -1,26 +1,26 @@
 {
   "last_updated": {
-    "date": "30 Oct 2026",
-    "time": "15:50 IST",
-    "iso": "2026-10-30T15:50:26.624528+00:00"
+    "date": "31 Oct 2026",
+    "time": "15:22 IST",
+    "iso": "2026-10-31T15:22:54.018209+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udd34",
     "bias": "Mild Bearish",
-    "confidence": 27,
-    "todays_trade": "Sell Rallies",
+    "confidence": 42,
+    "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
-    "risk_level": "Medium",
-    "risk_note": "Watch Headlines",
-    "conviction": 27
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 42
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
-      "confidence": 24,
-      "support": 76666.41,
-      "resistance": 81894.45,
+      "confidence": 25,
+      "support": 76360.18,
+      "resistance": 81691.75,
       "trade_plan": "Fade rallies while below resistance."
     },
     "ETH": {
@@ -28,48 +28,48 @@
       "bias": "Neutral",
       "confidence": 50,
       "support": 2191.63,
-      "resistance": 2411.19,
+      "resistance": 2369.98,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 15,
-    "flow": 31,
-    "technical": 37,
-    "risk": 62
+    "macro": 22,
+    "flow": 51,
+    "technical": 38,
+    "risk": 9
   },
   "drivers": [
     {
       "emoji": "\ud83d\udd34",
-      "text": "THORChain\u2019s RUNE jumps 13% after Binance\u2019s record $6.3B hack"
+      "text": "Binance hackers raced to move billions before it could be frozen"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Trezor warns CryptoBilis buyers to move funds over suspected implant"
+      "text": "Tether\u2019s excess reserves nearly double to $8B as Q3 profit hits $1.5B"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "Live updates: Binance uncovers more breach points in $6.3B hack"
+      "text": "Coinbase leads crypto stock selloff following $6.3B Binance hack"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Crypto Biz: Bitcoin\u2019s quantum threat is becoming an economic problem"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Recap: How Binance\u2019s record $6.3B hack unfolded"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "As it happened: Binance\u2019s record $6.3B crypto hack"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin risks worst October in 12 years as tech sell-off spreads to gold"
     },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Strategy eyes more Bitcoin buys as Saylor touts $30B credit capacity"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "North Korea\u2019s TraderTraitor linked to $6.3B Binance hack"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Binance hack could accelerate shift to DEXs: Standard Chartered"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Binance points to engineer\u2019s hacked laptop in $6.3B breach"
     }
   ],
   "events": [

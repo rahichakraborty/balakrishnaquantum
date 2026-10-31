@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "31 Oct 2026",
+    "time": "15:22 IST",
+    "iso": "2026-10-31T15:22:54.018209+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udd34",
+    "bias": "Mild Bearish",
+    "confidence": 42,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 42
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 25,
+      "support": 76360.18,
+      "resistance": 81691.75,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2191.63,
+      "resistance": 2369.98,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 22,
+    "flow": 51,
+    "technical": 38,
+    "risk": 9
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Binance hackers raced to move billions before it could be frozen"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Tether\u2019s excess reserves nearly double to $8B as Q3 profit hits $1.5B"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Coinbase leads crypto stock selloff following $6.3B Binance hack"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Crypto Biz: Bitcoin\u2019s quantum threat is becoming an economic problem"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Recap: How Binance\u2019s record $6.3B hack unfolded"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "As it happened: Binance\u2019s record $6.3B crypto hack"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin risks worst October in 12 years as tech sell-off spreads to gold"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "red",
+    "Risk": "green"
+  }
+}

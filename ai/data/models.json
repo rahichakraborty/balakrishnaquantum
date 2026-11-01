@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-10-31T19:00:40+00:00",
+  "generated_at": "2026-11-01T09:58:24+00:00",
   "items": [
     {
       "id": "Nanbeige/Nanbeige4.3-33B",
       "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
-      "downloads": 13832,
-      "likes": 850,
+      "downloads": 15795,
+      "likes": 941,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-      "downloads": 156373,
-      "likes": 4086,
+      "downloads": 170353,
+      "likes": 4148,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "LiquidAI/LFM3-1.7B",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
-      "downloads": 32933,
-      "likes": 621,
+      "downloads": 37568,
+      "likes": 647,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
       "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-      "downloads": 24357,
-      "likes": 534,
+      "downloads": 29364,
+      "likes": 561,
       "pipeline_tag": "automatic-speech-recognition"
     },
     {
       "id": "mistralai/Mistral-Large-4-1T-A52B",
       "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
-      "downloads": 2945,
-      "likes": 1393,
+      "downloads": 4576,
+      "likes": 1414,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "baidu/Unlimited-OCR-2",
       "url": "https://huggingface.co/baidu/Unlimited-OCR-2",
-      "downloads": 69231,
-      "likes": 471,
+      "downloads": 109519,
+      "likes": 486,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 2441077,
-      "likes": 10056,
+      "downloads": 2431846,
+      "likes": 10125,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "ccore/Qwen3.5-4B-3D-Coder",
       "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder",
-      "downloads": 29615,
-      "likes": 380,
+      "downloads": 44825,
+      "likes": 422,
       "pipeline_tag": null
-    },
-    {
-      "id": "RecursiveSI/flint",
-      "url": "https://huggingface.co/RecursiveSI/flint",
-      "downloads": 23079,
-      "likes": 1274,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "XHToken/Spark-X2.6-4B",
       "url": "https://huggingface.co/XHToken/Spark-X2.6-4B",
-      "downloads": 14515,
-      "likes": 935,
+      "downloads": 16707,
+      "likes": 940,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "RecursiveSI/flint",
+      "url": "https://huggingface.co/RecursiveSI/flint",
+      "downloads": 26703,
+      "likes": 1282,
       "pipeline_tag": "text-generation"
     }
   ]

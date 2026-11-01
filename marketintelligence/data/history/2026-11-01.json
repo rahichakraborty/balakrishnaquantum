@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "01 Nov 2026",
+    "time": "16:13 IST",
+    "iso": "2026-11-01T16:13:24.430022+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 46,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 46
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 31,
+      "support": 76360.18,
+      "resistance": 81691.75,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2191.63,
+      "resistance": 2369.98,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 32,
+    "flow": 55,
+    "technical": 40,
+    "risk": 16
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Binance says phase one of withdrawals opens after $6.3B hack"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "FBI blames North Korea for record $6.3B Binance hack"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Binance says 90% of stolen assets replenished, targets Sunday withdrawals"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin held up better than expected after Binance hack, Strive CEO says"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin turns 18: Has the original rebel grown up?"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Texas brothers sentenced to 15 years in prison for armed crypto robbery, kidnapping"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Blockchain investigator Chainalysis hit by cybersecurity incident"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "red",
+    "Risk": "green"
+  }
+}

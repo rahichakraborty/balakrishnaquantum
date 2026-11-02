@@ -1,25 +1,25 @@
 {
   "last_updated": {
-    "date": "01 Nov 2026",
-    "time": "16:13 IST",
-    "iso": "2026-11-01T16:13:24.430022+00:00"
+    "date": "02 Nov 2026",
+    "time": "17:03 IST",
+    "iso": "2026-11-02T17:03:09.258163+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 46,
+    "confidence": 45,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 46
+    "conviction": 45
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
       "confidence": 31,
-      "support": 76360.18,
+      "support": 76586.21,
       "resistance": 81691.75,
       "trade_plan": "Fade rallies while below resistance."
     },
@@ -33,43 +33,43 @@
     }
   },
   "scores": {
-    "macro": 32,
-    "flow": 55,
+    "macro": 28,
+    "flow": 51,
     "technical": 40,
-    "risk": 16
+    "risk": 7
   },
   "drivers": [
     {
       "emoji": "\ud83d\udd34",
-      "text": "Binance says phase one of withdrawals opens after $6.3B hack"
+      "text": "From Uptober to Hacktober: Are Bitcoin\u2019s seasonal patterns becoming obsolete?"
+    },
+    {
+      "emoji": "\u2705",
+      "text": "Trezor lifts password ceiling after Coldcard\u2019s $100M wallet thefts"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Hong Kong takes tokenized settlement to 24/7, plans stablecoin trials"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "BTC heads into US midterm showdown: Three things to know in Bitcoin this week"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "OKX draws $445M in net inflows as Binance outflows exceed $7B"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "FBI blames North Korea for record $6.3B Binance hack"
+      "text": "Bitcoin ETFs sink into October outflows with $643M exit after Binance hack"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Binance says 90% of stolen assets replenished, targets Sunday withdrawals"
+      "text": "BTCPay Server warns of hot wallet thefts running on outdated software"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "Bitcoin held up better than expected after Binance hack, Strive CEO says"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Here\u2019s what happened in crypto today"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin turns 18: Has the original rebel grown up?"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Texas brothers sentenced to 15 years in prison for armed crypto robbery, kidnapping"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Blockchain investigator Chainalysis hit by cybersecurity incident"
+      "text": "Bank of Korea probes financial firms\u2019 exposure to crypto risks"
     }
   ],
   "events": [

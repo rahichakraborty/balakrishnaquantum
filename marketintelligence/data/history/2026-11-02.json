@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "02 Nov 2026",
+    "time": "17:03 IST",
+    "iso": "2026-11-02T17:03:09.258163+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 45,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 45
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 31,
+      "support": 76586.21,
+      "resistance": 81691.75,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2191.63,
+      "resistance": 2369.98,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 28,
+    "flow": 51,
+    "technical": 40,
+    "risk": 7
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "From Uptober to Hacktober: Are Bitcoin\u2019s seasonal patterns becoming obsolete?"
+    },
+    {
+      "emoji": "\u2705",
+      "text": "Trezor lifts password ceiling after Coldcard\u2019s $100M wallet thefts"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Hong Kong takes tokenized settlement to 24/7, plans stablecoin trials"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "BTC heads into US midterm showdown: Three things to know in Bitcoin this week"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "OKX draws $445M in net inflows as Binance outflows exceed $7B"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin ETFs sink into October outflows with $643M exit after Binance hack"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "BTCPay Server warns of hot wallet thefts running on outdated software"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bank of Korea probes financial firms\u2019 exposure to crypto risks"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "red",
+    "Risk": "green"
+  }
+}

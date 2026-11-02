@@ -1,155 +1,151 @@
 {
-  "generated_at": "2026-11-01T19:19:22+00:00",
+  "generated_at": "2026-11-02T10:26:58+00:00",
   "items": [
     {
-      "title": "Elucidating the Design Space of LM Data Attribution",
-      "summary": "Data attribution methods for Language Models (LMs) are typically evaluated using downstream tasks like fact retrieval. However, existing evaluations vary multiple dataset properties simultaneously, making it impossible to isolate exactly why an attribution algorithm fails. To dia…",
+      "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
+      "summary": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs oft…",
       "authors": [
-        "Steven Yu",
-        "Sheng-Yu Wang",
-        "Kimia Hamidieh",
+        "Byungwoo Jeon",
+        "Yoonwoo Jeong",
+        "Hyunseok Lee",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.40655v1",
-      "published": "2026-10-29T17:59:53Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Private Filtering",
-      "summary": "An estimator can be accurate and stable on typical data, yet sensitive to a few possible records. Differentially private mechanisms commonly scale their noise to the worst-case influence of a single record, which lets these records dictate the noise even when the remaining data w…",
-      "authors": [
-        "Moshe Shenfeld",
-        "Eliad Tsfadia",
-        "Katrina Ligett"
-      ],
-      "link": "http://arxiv.org/abs/2610.40654v1",
-      "published": "2026-10-29T17:59:49Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Rethinking Neural Thickets Without Weight Perturbations",
-      "summary": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanatio…",
-      "authors": [
-        "Nicolas Dufour",
-        "Elouan Gardès",
-        "Amil Dravid",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.40649v1",
-      "published": "2026-10-29T17:59:29Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
-      "summary": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency struct…",
-      "authors": [
-        "Jiongfan Yang",
-        "Weichen Fan",
-        "Haiwen Diao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2610.40647v1",
-      "published": "2026-10-29T17:59:21Z",
+      "link": "http://arxiv.org/abs/2610.42149v1",
+      "published": "2026-10-30T17:59:43Z",
       "category": "cs.CV"
     },
     {
-      "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
-      "summary": "Distributionally robust optimization (DRO) hedges data-driven two-stage stochastic programs against error in the distribution estimated from a finite record, and standard ambiguity sets differ in how they treat realizations absent from that record. A divergence ball around the em…",
+      "title": "Flide: Accelerating Decision Inference with Exact State Forking",
+      "summary": "Decision models such as Jev have emerged as a highly promising paradigm for LLM agent systems, providing lightweight and reliable categorical reasoning for rapid System One execution. However, existing generation-oriented inference engines fail to support these workloads effectiv…",
       "authors": [
-        "Aron Brenner",
-        "Saurabh Amin"
-      ],
-      "link": "http://arxiv.org/abs/2610.40644v1",
-      "published": "2026-10-29T17:59:01Z",
-      "category": "eess.SY"
-    },
-    {
-      "title": "Luggage re-identification: A study of strategies towards a real-world application",
-      "summary": "Luggage re-identification (ReID) is a critical task in video surveillance for forensics, security or border management (suspicious or abandoned luggage recognition), as well as luggage management (lost luggage recovery). It enables the association of observations of the same lugg…",
-      "authors": [
-        "Quentin Dhôte",
-        "Romaric Audigier"
-      ],
-      "link": "http://arxiv.org/abs/2610.40643v1",
-      "published": "2026-10-29T17:58:59Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "From extreme weather to agricultural consequences with agentic AI",
-      "summary": "Extreme weather is forecast days ahead, yet its consequences for agriculture remain hard to predict: a forecast says where a storm will strike, not which crops will suffer or how much is at risk, and the records that could tell span many sources. We present WxCrop, the first agen…",
-      "authors": [
-        "Minghan Yu",
-        "Mengyu Dai",
-        "Yixin Wen",
+        "Bobo Li",
+        "Jiajia Song",
+        "Hao Fei",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.40641v1",
-      "published": "2026-10-29T17:58:53Z",
-      "category": "physics.ao-ph"
+      "link": "http://arxiv.org/abs/2610.42148v1",
+      "published": "2026-10-30T17:59:38Z",
+      "category": "cs.CL"
     },
     {
-      "title": "world2vec: Mechanistic world models through latent dynamics learning",
-      "summary": "World models can achieve strong control performance without faithfully capturing the dynamics of their environment, limiting their potential for mechanistic interpretability and scientific discovery. Here, we introduce world2vec to learn mechanistic world models without reward in…",
+      "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+      "summary": "Agentic workflows are increasingly shifting towards long-horizon tasks, such as open-ended scientific work, where models benefit from long context windows. However, at ultra-long context (above 1M tokens), full attention is prohibitively expensive. A promising approach is sparse …",
       "authors": [
-        "Tobias Schmidt",
-        "Rodrigo Gonzalez Laiz",
-        "Krisztián Szuppinger",
+        "Ales Kubicek",
+        "Andrea Caciolai",
+        "Liangzu Peng",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.40637v1",
-      "published": "2026-10-29T17:58:23Z",
+      "link": "http://arxiv.org/abs/2610.42147v1",
+      "published": "2026-10-30T17:59:34Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Hierarchical World Models with Implicit Dynamics",
+      "summary": "Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-a…",
+      "authors": [
+        "Gaoyue Zhou",
+        "Yvonne Wu",
+        "Zichen Jeff Cui",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.42146v1",
+      "published": "2026-10-30T17:59:25Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory",
+      "summary": "Recent work shows that a frozen robot policy performs far better inside an agent harness, where control code decides when to query the policy, consult vision tools, or command the arm directly. Yet today these harnesses are built by hand and redesigned for each new robot or bench…",
+      "authors": [
+        "Shengguang Wu",
+        "Suning Huang",
+        "Cherie Ho",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2610.42141v1",
+      "published": "2026-10-30T17:58:48Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "Counting on Dummies: Privacy Amplification with Observable Counts and Truncated Batches",
+      "summary": "In many practical deployments of Differentially Private Stochastic Gradient Descent (DP-SGD), the server processes data in batches. Randomly sampling these batches allows for better privacy bounds via privacy amplification results. Most sampling schemes with provable privacy ampl…",
+      "authors": [
+        "Vitaly Feldman",
+        "Audra McMillan",
+        "Kunal Talwar"
+      ],
+      "link": "http://arxiv.org/abs/2610.42139v1",
+      "published": "2026-10-30T17:58:42Z",
       "category": "cs.LG"
     },
     {
-      "title": "Probing Spatial State Representations in Visual Foundation Models",
-      "summary": "An observer sees only part of the surrounding world, yet must keep track of what lies beyond the current view. Spatial perception therefore involves more than recognizing individual images: it calls for a persistent spatial state that is updated under self-motion and used to guid…",
+      "title": "A Better Critic Matters for Distribution Matching Distillation",
+      "summary": "Distribution Matching Distillation (DMD) trains a few-step student using the difference between a teacher's score and an online critic's estimate of the student distribution's score. We investigate what the critic needs, in capacity and in information, to provide a reliable train…",
       "authors": [
-        "Baiqiao Yin",
-        "Zhongang Cai",
-        "Ruisi Wang",
+        "Zongze Wu",
+        "Xianbang Wang",
+        "Zhengyang Geng",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.40636v1",
-      "published": "2026-10-29T17:58:16Z",
+      "link": "http://arxiv.org/abs/2610.42135v1",
+      "published": "2026-10-30T17:58:26Z",
       "category": "cs.CV"
     },
     {
-      "title": "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender",
-      "summary": "Safety alignment has enabled large language models to reliably refuse harmful requests directly, yet the same request distributed across a multi-turn conversation still succeeds far too often. This brittleness has a mechanistic root: Alignment is shallow, with safety behavior con…",
+      "title": "Instance-dependent sequential limits as an exact information ledger",
+      "summary": "Instance-dependent limits for bandit regret, sequential tests, best-arm identification and Markov decision processes are proved by one chain. It runs from a divergence decomposition through data processing to a statistic, a testing step that turns a class guarantee into a require…",
       "authors": [
-        "Qiyao Ma",
-        "Xiaodong Liu",
-        "Weiwei Yang",
+        "Akshay Balsubramani"
+      ],
+      "link": "http://arxiv.org/abs/2610.42133v1",
+      "published": "2026-10-30T17:57:44Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "DecisionRank: On-Policy Distillation for Decision-Model Rerankers",
+      "summary": "Decision models target structured tasks by directly predicting choices or scores, avoiding autoregressive decoding latency. However, transferring a generative LLM's ranking knowledge to a decision model remains challenging: the teacher expresses preferences through a ranked list …",
+      "authors": [
+        "Yanran Wu",
+        "Dian Yu",
+        "Chongyang Bai",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.40627v1",
-      "published": "2026-10-29T17:56:53Z",
+      "link": "http://arxiv.org/abs/2610.42128v1",
+      "published": "2026-10-30T17:56:58Z",
       "category": "cs.CL"
     },
     {
-      "title": "Testimony from Timelines: Evidence-Grounded Significance Testing of Temporal Clinical Hypotheses",
-      "summary": "Ask a language model whether sales tend to dip after a product recall, or whether one side effect tends to follow another after a vaccine, and it answers in a fluent sentence that reads like a finding, with no test behind it. Assertions about how events unfold across many cases f…",
+      "title": "Physiological Trajectories and Observation Patterns in ICU Mortality Prediction: Transportability Under Changing Measurement Conditions",
+      "summary": "Objective: To distinguish the transferable predictive value of physiological trajectories from that of observation patterns in ICU mortality prediction, and to assess whether measurement timing affects performance independently of observation quantity.   Materials and Methods: In…",
       "authors": [
-        "Chengyang He",
-        "Wenlong Zhang",
-        "Koduvayur Subbalakshmi",
-        "et al."
+        "Benjamin T. Pike"
       ],
-      "link": "http://arxiv.org/abs/2610.40619v1",
-      "published": "2026-10-29T17:55:30Z",
-      "category": "cs.CL"
+      "link": "http://arxiv.org/abs/2610.42126v1",
+      "published": "2026-10-30T17:56:10Z",
+      "category": "cs.LG"
     },
     {
-      "title": "An ODE-based Sampler for Discrete Diffusion Models",
-      "summary": "The marginals of a continuous diffusion model can be reproduced by a deterministic ordinary differential equation (ODE), known as the probability flow ODE, which provides a foundation for accelerated sampling and consistency distillation. In this paper we address the question whe…",
+      "title": "Gradient Descent on Two ReLU Neurons: Global Landscape and Bifurcation Dynamics",
+      "summary": "Understanding how gradient descent learns features remains a central challenge in neural network theory. We study this question in a minimal multi-index setting that already exhibits rich multi-phase gradient dynamics: a well-specified two-neuron ReLU teacher-student model under …",
       "authors": [
-        "Samson Gourevitch",
-        "Yazid Janati",
-        "Eric Moulines",
+        "Binghua Li",
+        "Mengzhe Li",
+        "Denny Wu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2610.40618v1",
-      "published": "2026-10-29T17:55:25Z",
+      "link": "http://arxiv.org/abs/2610.42118v1",
+      "published": "2026-10-30T17:51:35Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Fast Privacy Loss Accounting for Random Allocation via Multiscale FFT",
+      "summary": "In the random allocation sampling scheme each user's data is used in $k$ steps chosen randomly and uniformly from a sequence of $t$ steps. This scheme is known to improve on Poisson sampling in private optimization and in communication-efficient aggregation. The existing privacy …",
+      "authors": [
+        "Vitaly Feldman",
+        "Moshe Shenfeld"
+      ],
+      "link": "http://arxiv.org/abs/2610.42117v1",
+      "published": "2026-10-30T17:51:03Z",
       "category": "cs.LG"
     }
   ]

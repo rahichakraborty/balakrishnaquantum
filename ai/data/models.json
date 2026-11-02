@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-01T19:19:29+00:00",
+  "generated_at": "2026-11-02T10:27:05+00:00",
   "items": [
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-      "downloads": 170353,
-      "likes": 4230,
+      "downloads": 177009,
+      "likes": 4465,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "LiquidAI/LFM3-1.7B",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
-      "downloads": 37568,
-      "likes": 674,
-      "pipeline_tag": "text-generation"
-    },
-    {
-      "id": "Nanbeige/Nanbeige4.3-33B",
-      "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
-      "downloads": 15795,
-      "likes": 964,
+      "downloads": 42384,
+      "likes": 760,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
       "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-      "downloads": 29364,
-      "likes": 581,
+      "downloads": 32439,
+      "likes": 633,
       "pipeline_tag": "automatic-speech-recognition"
     },
     {
       "id": "mistralai/Mistral-Large-4-1T-A52B",
       "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
-      "downloads": 4576,
-      "likes": 1437,
+      "downloads": 5500,
+      "likes": 1470,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "baidu/Unlimited-OCR-2",
       "url": "https://huggingface.co/baidu/Unlimited-OCR-2",
-      "downloads": 109519,
-      "likes": 510,
+      "downloads": 147588,
+      "likes": 540,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "Lightricks/LTX-2.5",
-      "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 2431846,
-      "likes": 10185,
-      "pipeline_tag": "image-to-video"
     },
     {
       "id": "ccore/Qwen3.5-4B-3D-Coder",
       "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder",
-      "downloads": 44825,
-      "likes": 465,
+      "downloads": 63499,
+      "likes": 520,
       "pipeline_tag": null
+    },
+    {
+      "id": "Lightricks/LTX-2.5",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5",
+      "downloads": 2467613,
+      "likes": 10262,
+      "pipeline_tag": "image-to-video"
+    },
+    {
+      "id": "Nanbeige/Nanbeige4.3-33B",
+      "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
+      "downloads": 16976,
+      "likes": 992,
+      "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "speridlabs/idol",
+      "url": "https://huggingface.co/speridlabs/idol",
+      "downloads": 7787,
+      "likes": 349,
+      "pipeline_tag": "image-to-3d"
     },
     {
       "id": "Pika-Labs/Pika-H3-Flex",
       "url": "https://huggingface.co/Pika-Labs/Pika-H3-Flex",
-      "downloads": 404,
-      "likes": 299,
+      "downloads": 491,
+      "likes": 335,
       "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "black-forest-labs/flux-3-image-klein-comfy",
-      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
-      "downloads": 970633,
-      "likes": 2247,
-      "pipeline_tag": "image-to-image"
     }
   ]
 }

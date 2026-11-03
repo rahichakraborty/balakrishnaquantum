@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-02T22:57:52+00:00",
+  "generated_at": "2026-11-03T10:24:03+00:00",
   "items": [
     {
       "id": "LiquidAI/LFM3-1.7B",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
-      "downloads": 42384,
-      "likes": 986,
+      "downloads": 47817,
+      "likes": 1276,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-      "downloads": 177009,
-      "likes": 4688,
+      "downloads": 187260,
+      "likes": 4769,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
       "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-      "downloads": 32439,
-      "likes": 677,
+      "downloads": 38942,
+      "likes": 704,
       "pipeline_tag": "automatic-speech-recognition"
     },
     {
       "id": "mistralai/Mistral-Large-4-1T-A52B",
       "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
-      "downloads": 5500,
-      "likes": 1499,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "baidu/Unlimited-OCR-2",
-      "url": "https://huggingface.co/baidu/Unlimited-OCR-2",
-      "downloads": 147588,
-      "likes": 560,
+      "downloads": 6556,
+      "likes": 1516,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "speridlabs/idol",
       "url": "https://huggingface.co/speridlabs/idol",
-      "downloads": 7787,
-      "likes": 411,
+      "downloads": 10742,
+      "likes": 456,
       "pipeline_tag": "image-to-3d"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 2467613,
-      "likes": 10357,
+      "downloads": 2488128,
+      "likes": 10409,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "ccore/Qwen3.5-4B-3D-Coder",
       "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder",
-      "downloads": 63499,
-      "likes": 558,
+      "downloads": 91123,
+      "likes": 576,
       "pipeline_tag": null
+    },
+    {
+      "id": "baidu/Unlimited-OCR-2",
+      "url": "https://huggingface.co/baidu/Unlimited-OCR-2",
+      "downloads": 189897,
+      "likes": 575,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Pika-Labs/Pika-H3-Flex",
       "url": "https://huggingface.co/Pika-Labs/Pika-H3-Flex",
-      "downloads": 491,
-      "likes": 357,
+      "downloads": 633,
+      "likes": 370,
       "pipeline_tag": "image-to-video"
     },
     {
-      "id": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
-      "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
-      "downloads": 2516622,
-      "likes": 5548,
-      "pipeline_tag": "text-to-image"
+      "id": "LiquidAI/LFM3-Omni-2B",
+      "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B",
+      "downloads": 11662,
+      "likes": 323,
+      "pipeline_tag": "any-to-any"
     }
   ]
 }

@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "03 Nov 2026",
+    "time": "16:42 IST",
+    "iso": "2026-11-03T16:42:30.996798+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 46,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 46
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 29,
+      "support": 76488.42,
+      "resistance": 81691.75,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2191.63,
+      "resistance": 2369.98,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 35,
+    "flow": 46,
+    "technical": 40,
+    "risk": 13
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "France postpones 2027 budget vote, crypto exit-tax proposals scrapped"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin price threatens $77.7K support loss with recent buyers underwater"
+    },
+    {
+      "emoji": "\u2705",
+      "text": "ARK buys $17M in Coinbase, Circle shares while trimming Bullish"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Suspected EU crypto theft estimate rises to $133M: ZachXBT"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "BlackRock\u2019s IBIT sees biggest Bitcoin ETF outflows since June"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Crypto.com to withdraw Hong Kong consumer app citing regulatory changes"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Australia lifts rates to 18-year high as AI boom, energy costs fuel inflation"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "red",
+    "Risk": "green"
+  }
+}

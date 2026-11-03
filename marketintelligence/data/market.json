@@ -1,25 +1,25 @@
 {
   "last_updated": {
-    "date": "02 Nov 2026",
-    "time": "17:03 IST",
-    "iso": "2026-11-02T17:03:09.258163+00:00"
+    "date": "03 Nov 2026",
+    "time": "16:42 IST",
+    "iso": "2026-11-03T16:42:30.996798+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 45,
+    "confidence": 46,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 45
+    "conviction": 46
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
-      "confidence": 31,
-      "support": 76586.21,
+      "confidence": 29,
+      "support": 76488.42,
       "resistance": 81691.75,
       "trade_plan": "Fade rallies while below resistance."
     },
@@ -33,43 +33,43 @@
     }
   },
   "scores": {
-    "macro": 28,
-    "flow": 51,
+    "macro": 35,
+    "flow": 46,
     "technical": 40,
-    "risk": 7
+    "risk": 13
   },
   "drivers": [
     {
-      "emoji": "\ud83d\udd34",
-      "text": "From Uptober to Hacktober: Are Bitcoin\u2019s seasonal patterns becoming obsolete?"
+      "emoji": "\ud83d\udfe1",
+      "text": "France postpones 2027 budget vote, crypto exit-tax proposals scrapped"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin price threatens $77.7K support loss with recent buyers underwater"
     },
     {
       "emoji": "\u2705",
-      "text": "Trezor lifts password ceiling after Coldcard\u2019s $100M wallet thefts"
+      "text": "ARK buys $17M in Coinbase, Circle shares while trimming Bullish"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Hong Kong takes tokenized settlement to 24/7, plans stablecoin trials"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "BTC heads into US midterm showdown: Three things to know in Bitcoin this week"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "OKX draws $445M in net inflows as Binance outflows exceed $7B"
+      "text": "Suspected EU crypto theft estimate rises to $133M: ZachXBT"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "Bitcoin ETFs sink into October outflows with $643M exit after Binance hack"
+      "text": "BlackRock\u2019s IBIT sees biggest Bitcoin ETF outflows since June"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "BTCPay Server warns of hot wallet thefts running on outdated software"
+      "text": "Here\u2019s what happened in crypto today"
     },
     {
-      "emoji": "\ud83d\udd34",
-      "text": "Bank of Korea probes financial firms\u2019 exposure to crypto risks"
+      "emoji": "\ud83d\udfe1",
+      "text": "Crypto.com to withdraw Hong Kong consumer app citing regulatory changes"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Australia lifts rates to 18-year high as AI boom, energy costs fuel inflation"
     }
   ],
   "events": [

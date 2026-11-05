@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "05 Nov 2026",
+    "time": "16:50 IST",
+    "iso": "2026-11-05T16:50:57.353213+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 50,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "BTC",
+    "risk_level": "Medium",
+    "risk_note": "Watch Headlines",
+    "conviction": 50
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Neutral Bullish",
+      "confidence": 50,
+      "support": 76198.52,
+      "resistance": 81691.75,
+      "trade_plan": "Buy pullbacks while above support."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2191.63,
+      "resistance": 2434.86,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 42,
+    "flow": 65,
+    "technical": 50,
+    "risk": 49
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin win rate vs. S&P 500 recovers as post-midterm history favors stocks"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "South Korea seeks 4th crypto tax delay, targets 2029 start"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "France budget rejection sidelines stablecoin tax, wallet reporting"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin, Ether ETFs draw $128M as crypto rebounds after midterms"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Cr\u00e9dit Mutuel Ark\u00e9a resumes operations after attack, assesses losses"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Binance, Polymarket seek Polygon hard fork to recover $6.8M in stolen crypto"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "\u2018Lawyer up\u2019: Democrats target Trump, Big Tech after midterm sweep"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

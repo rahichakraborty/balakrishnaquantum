@@ -1,63 +1,63 @@
 {
   "last_updated": {
-    "date": "03 Nov 2026",
-    "time": "16:42 IST",
-    "iso": "2026-11-03T16:42:30.996798+00:00"
+    "date": "05 Nov 2026",
+    "time": "16:50 IST",
+    "iso": "2026-11-05T16:50:57.353213+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 46,
+    "confidence": 50,
     "todays_trade": "Wait For Confirmation",
-    "preferred_asset": "ETH",
-    "risk_level": "Low",
-    "risk_note": "Normal Conditions",
-    "conviction": 46
+    "preferred_asset": "BTC",
+    "risk_level": "Medium",
+    "risk_note": "Watch Headlines",
+    "conviction": 50
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
-      "bias": "Bearish",
-      "confidence": 29,
-      "support": 76488.42,
+      "bias": "Neutral Bullish",
+      "confidence": 50,
+      "support": 76198.52,
       "resistance": 81691.75,
-      "trade_plan": "Fade rallies while below resistance."
+      "trade_plan": "Buy pullbacks while above support."
     },
     "ETH": {
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
       "support": 2191.63,
-      "resistance": 2369.98,
+      "resistance": 2434.86,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 35,
-    "flow": 46,
-    "technical": 40,
-    "risk": 13
+    "macro": 42,
+    "flow": 65,
+    "technical": 50,
+    "risk": 49
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "France postpones 2027 budget vote, crypto exit-tax proposals scrapped"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin price threatens $77.7K support loss with recent buyers underwater"
-    },
-    {
-      "emoji": "\u2705",
-      "text": "ARK buys $17M in Coinbase, Circle shares while trimming Bullish"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Suspected EU crypto theft estimate rises to $133M: ZachXBT"
+      "text": "Bitcoin win rate vs. S&P 500 recovers as post-midterm history favors stocks"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "BlackRock\u2019s IBIT sees biggest Bitcoin ETF outflows since June"
+      "text": "South Korea seeks 4th crypto tax delay, targets 2029 start"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "France budget rejection sidelines stablecoin tax, wallet reporting"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin, Ether ETFs draw $128M as crypto rebounds after midterms"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Cr\u00e9dit Mutuel Ark\u00e9a resumes operations after attack, assesses losses"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -65,11 +65,11 @@
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Crypto.com to withdraw Hong Kong consumer app citing regulatory changes"
+      "text": "Binance, Polymarket seek Polygon hard fork to recover $6.8M in stolen crypto"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Australia lifts rates to 18-year high as AI boom, energy costs fuel inflation"
+      "text": "\u2018Lawyer up\u2019: Democrats target Trump, Big Tech after midterm sweep"
     }
   ],
   "events": [
@@ -86,7 +86,7 @@
     "Open Interest": "green",
     "Fear & Greed": "green",
     "Macro": "green",
-    "News": "red",
+    "News": "yellow",
     "Risk": "green"
   }
 }

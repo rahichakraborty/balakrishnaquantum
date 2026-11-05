@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-11-05T10:13:27+00:00",
+  "generated_at": "2026-11-05T21:18:23+00:00",
   "items": [
     {
       "id": "moonshotai/Kimi-K3.1-Pro",
       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
-      "downloads": 797,
-      "likes": 687,
+      "downloads": 11658,
+      "likes": 890,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "speridlabs/idol",
       "url": "https://huggingface.co/speridlabs/idol",
       "downloads": 17180,
-      "likes": 661,
+      "likes": 750,
       "pipeline_tag": "image-to-3d"
-    },
-    {
-      "id": "mistralai/Mistral-Large-4-1T-A52B",
-      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
-      "downloads": 9592,
-      "likes": 1597,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Pika-Labs/Pika-H3-Flex",
       "url": "https://huggingface.co/Pika-Labs/Pika-H3-Flex",
       "downloads": 863,
-      "likes": 439,
+      "likes": 466,
       "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-      "downloads": 57297,
-      "likes": 3035,
-      "pipeline_tag": "automatic-speech-recognition"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 2561845,
-      "likes": 10652,
+      "likes": 10716,
       "pipeline_tag": "image-to-video"
+    },
+    {
+      "id": "mistralai/Mistral-Large-4-1T-A52B",
+      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+      "downloads": 9592,
+      "likes": 1611,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "ccore/Qwen3.5-4B-3D-Coder",
       "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder",
       "downloads": 157157,
-      "likes": 667,
+      "likes": 694,
       "pipeline_tag": null
+    },
+    {
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+      "downloads": 57297,
+      "likes": 3054,
+      "pipeline_tag": "automatic-speech-recognition"
     },
     {
       "id": "burner22/numbat",
       "url": "https://huggingface.co/burner22/numbat",
       "downloads": 8789,
-      "likes": 347,
+      "likes": 352,
       "pipeline_tag": null
     },
     {
       "id": "FusionCow/Sulphur-3",
       "url": "https://huggingface.co/FusionCow/Sulphur-3",
-      "downloads": 528,
-      "likes": 367,
+      "downloads": 607,
+      "likes": 378,
       "pipeline_tag": null
     },
     {
-      "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-      "downloads": 243508,
-      "likes": 5314,
+      "id": "Qwen/Qwen3.8-27B",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "downloads": 8037597,
+      "likes": 19205,
       "pipeline_tag": "image-text-to-text"
     }
   ]

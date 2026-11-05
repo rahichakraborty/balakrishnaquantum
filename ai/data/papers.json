@@ -1,150 +1,150 @@
 {
-  "generated_at": "2026-11-04T21:01:19+00:00",
+  "generated_at": "2026-11-05T10:13:19+00:00",
   "items": [
     {
-      "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
-      "summary": "Learning a universal action representation from video requires modeling dynamics that are consistent across different executions of the same action yet invariant to changes in embodiment and appearance. Existing latent action models infer actions from visual transitions, but thei…",
+      "title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
+      "summary": "Researchers use large language models as agents in social simulations, where agents are prompted with observations and background information intended to shape their actions. Yet LLM agents have been shown to substantially change their behavior under meaning-preserving prompt var…",
       "authors": [
-        "Jisoo Kim",
-        "Chaehyun Kim",
-        "Junsu Kim",
+        "Mattia Greiche",
+        "Reihaneh Rabbany",
+        "Maximilian Puelma Touzel"
+      ],
+      "link": "http://arxiv.org/abs/2611.06914v1",
+      "published": "2026-11-04T18:58:23Z",
+      "category": "cs.MA"
+    },
+    {
+      "title": "FlowReconBench: Accuracy, calibration and cost of learned and classical flow reconstruction from sparse sensors",
+      "summary": "Reconstructing full flow fields from sparse sensors requires prior assumptions about unmeasured regions and physical variables. Yet it remains unclear when learned models outperform classical estimators and which aspects of their predictions can be trusted. FlowReconBench evaluat…",
+      "authors": [
+        "Nicolas Tricard",
+        "Linzheng Wang",
+        "Jason Chen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.05377v1",
-      "published": "2026-11-03T18:59:56Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2611.06912v1",
+      "published": "2026-11-04T18:57:47Z",
+      "category": "physics.flu-dyn"
     },
     {
-      "title": "From Autonomous Agents to Cognitive Symbionts: Toward AI-Augmented Human Intelligence",
-      "summary": "For a decade, progress in artificial intelligence has been measured by how much a machine can do on its own. Large foundation models now write code and run multistep tasks, and personal agents act on a person's behalf. Yet people still forget what they once knew, miss what they a…",
+      "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
+      "summary": "Self-Driving Chemical Laboratories (SDCLs) are moving chemical experimentation toward embodied automation, where machines must perceive laboratory scenes, reason about experimental states, and act under physical, procedural, and safety constraints. Although Multimodal Large Langu…",
       "authors": [
-        "Hao Fei"
-      ],
-      "link": "http://arxiv.org/abs/2611.05376v1",
-      "published": "2026-11-03T18:59:52Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Aligning Language Models with General Preferences: An Empirical Study of Direct Nash Optimization",
-      "summary": "Direct Nash Optimization (DNO) aligns a language model to a general preference function by approximating the Nash equilibrium of a two-player preference game. Its practical variant, DNO-Prct, iterates on-policy sampling, LLM-based rating of the samples together with a teacher's g…",
-      "authors": [
-        "Austin Tsai",
-        "Saurav Nanda",
-        "Ganapathy Parthasarathy",
+        "Fei Lin",
+        "Tengchao Zhang",
+        "Ziyang Gong",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.05373v1",
-      "published": "2026-11-03T18:59:15Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning",
-      "summary": "Inverse kinematics (IK) converts end-effector pose commands into joint motion, and many vision-language-action (VLA) policies rely on it to act on a given arm and to transfer across embodiments. Precise IK remains laborious: redundancy and singularities complicate the inverse map…",
-      "authors": [
-        "Yuhan Liu",
-        "Xinqi Liu",
-        "Zixuan Dong",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.05372v1",
-      "published": "2026-11-03T18:59:14Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "GUILD: Guided Iterative Data Collection for Imitation Learning",
-      "summary": "Imitation learning policies in robotics are trained on datasets collected through costly real-world teleoperation. Often, the data-collection process is unguided, relying on the teleoperator's intuition, resulting in data that contributes little to overall policy performance. Rec…",
-      "authors": [
-        "Shivin Dass",
-        "Kevin Nguyen",
-        "Rohan Yelandur",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.05368v1",
-      "published": "2026-11-03T18:57:35Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Suppressing Misaligned Behaviors in Language Models, Durably",
-      "summary": "Undesired model behaviors can emerge or re-emerge at any stage of training. Once observed, how effectively can we suppress them? To study this question, we first construct two model organisms--language models deliberately trained to exhibit a specific misalignment--that differ in…",
-      "authors": [
-        "Luxi He",
-        "Pengcheng Jiang",
-        "Jifan Zhang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.05358v1",
-      "published": "2026-11-03T18:54:08Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Reading Why: Born-Measured Attention with Exact Word Evidence on Light and Qubits",
-      "summary": "When a language model answers, we can usually only estimate why. We build a transformer in which every step is a Born measurement - attention $|\\langle q|k\\rangle|^4$ normalised over each row, a measured product in place of the feed-forward nonlinearity, and a Born readout. With …",
-      "authors": [
-        "Teerawat Tongloy",
-        "Jiraporn Pongsopa",
-        "Rangsan Jomtarak"
-      ],
-      "link": "http://arxiv.org/abs/2611.05355v1",
-      "published": "2026-11-03T18:52:44Z",
-      "category": "quant-ph"
-    },
-    {
-      "title": "Agnostic Learning by Imitating",
-      "summary": "Given a class of machine learning models and sample access to a data distribution with binary labels, which computational task is harder: training a discriminative model that distinguishes positive and negative labels as well as the best member of the class, or training a generat…",
-      "authors": [
-        "Sílvia Casacuberta",
-        "Parikshit Gopalan",
-        "Varun Kanade",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.05346v1",
-      "published": "2026-11-03T18:45:38Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Adversarial Speculative Reasoning Improves Long Horizon Agents",
-      "summary": "Speculative decoding has been treated purely as a systems optimization that speeds up large language model decoding without changing the model behavior. Under this view, the growing effort to train better draft models has been focused solely on acceptance rate. We argue that this…",
-      "authors": [
-        "Hongyin Luo",
-        "Wei Fang",
-        "Lijie Yang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.05345v1",
-      "published": "2026-11-03T18:45:23Z",
+      "link": "http://arxiv.org/abs/2611.06911v1",
+      "published": "2026-11-04T18:57:17Z",
       "category": "cs.AI"
     },
     {
-      "title": "A Circuit for In-Context Learning",
-      "summary": "In-context learning (ICL) lets a pretrained language model perform a task specified by demonstrations in its prompt, with no parameter updates. With arbitrary labels the model must acquire a mapping it cannot have memorized, so the learning happens within a single forward pass. P…",
+      "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
+      "summary": "AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely check research quality alongside correctness. We introduce Fron…",
       "authors": [
-        "Andrew Gao",
-        "William Gao"
+        "Bingran You",
+        "Wenjun Ke",
+        "Ria Rosenauer",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.05344v1",
-      "published": "2026-11-03T18:44:34Z",
+      "link": "http://arxiv.org/abs/2611.06910v1",
+      "published": "2026-11-04T18:56:22Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Perceptive Humanoid Motion from Simulation",
+      "summary": "Humanoid robots have the potential to automate a wide range of physical tasks. Progress toward generalist humanoid autonomy, however, remains constrained by a data bottleneck: mapping pixels and free-form language to low-level joint commands requires paired supervision, and no co…",
+      "authors": [
+        "Siyuan Hu",
+        "Abulikemu Abuduweili",
+        "Yue Meng",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.06908v1",
+      "published": "2026-11-04T18:55:33Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "Reinforcement Learning Enables Scaling Generalist Robot Policy Improvement",
+      "summary": "The introduction of generalist robot policies has enabled a single, large model to learn to perform a variety of tasks from a vast pre-training corpus. While these models often exhibit powerful zero-shot generalization capabilities, they typically require an adaptation phase to a…",
+      "authors": [
+        "Michal Korniak",
+        "Marco Bagatella",
+        "Ralf Römer",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.06905v1",
+      "published": "2026-11-04T18:52:28Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Occlusion for Free: Detecting Occlusion from the Disagreement Between Two Monocular Distance Cues",
+      "summary": "Knowing that a pedestrian is occluded is useful to a robot even when the detector cannot recover the hidden pixels, but occlusion estimators are normally trained on occlusion annotations that deployment settings rarely have. We show that occlusion can be read off two distance est…",
+      "authors": [
+        "Chibueze Praise Onyenweaku",
+        "Toyibat Adele",
+        "Sikirulahi Opeyemi Abdulkareem",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.06899v1",
+      "published": "2026-11-04T18:49:13Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure",
+      "summary": "Automation is often justified as relief from dull, dirty, and dangerous work. I examine how these conditions relate to occupational AI exposure using 21 O*NET items across 754 US occupations. Higher exposure is associated with lower condition scores under a large language model (…",
+      "authors": [
+        "Siyi Yu"
+      ],
+      "link": "http://arxiv.org/abs/2611.06888v1",
+      "published": "2026-11-04T18:41:40Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Adaptive Multi Mode: Budget-Aware Routing of Optimizers By Online Landscape Probes",
+      "summary": "The best classical optimizer for a continuous black-box problem depends on its budget and landscape. Existing routers decide from the dimension and budget, past improvement or features fitted to one benchmark, and few test an optimizer's implicit assumptions online. AMM (Adaptive…",
+      "authors": [
+        "Benjamin Jacob Bodner"
+      ],
+      "link": "http://arxiv.org/abs/2611.06879v1",
+      "published": "2026-11-04T18:35:35Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "SpecCompact: Accelerating LLM Agent Context Compaction with Slot-Parallel Semantic Speculative Verification",
+      "summary": "LLM agents use context compaction to manage growing interaction histories, but summarizing long histories with large models can introduce substantial delays. Compaction therefore requires balancing information retention against latency. We observe that structured summary slots ca…",
+      "authors": [
+        "Yulu An",
+        "Yifei Feng",
+        "Xiangyang Yin"
+      ],
+      "link": "http://arxiv.org/abs/2611.06876v1",
+      "published": "2026-11-04T18:34:41Z",
       "category": "cs.CL"
     },
     {
-      "title": "Weight-space programming for auditing clinical decision networks",
-      "summary": "Machine learning models in radiotherapy are commissioned by testing them on cases with known answers, which may not reveal a shortcut that the test cases share with the training data. Frontier language models have recently been reported to read and write the raw weights of small …",
+      "title": "Learning to Decode Linear Codes with Generalized Belief Propagation Network",
+      "summary": "Error correcting codes are a fundamental component of communication systems, enabling reliable data transmission over noisy channels. Recently, neural decoders have demonstrated notable performance gains over classical iterative algorithms. In this paper, we propose a Generalized…",
       "authors": [
-        "Humza Nusrat",
-        "Omar Nusrat"
+        "Samira Malek"
       ],
-      "link": "http://arxiv.org/abs/2611.05341v1",
-      "published": "2026-11-03T18:41:15Z",
-      "category": "physics.med-ph"
+      "link": "http://arxiv.org/abs/2611.06874v1",
+      "published": "2026-11-04T18:29:31Z",
+      "category": "cs.AI"
     },
     {
-      "title": "MedPhysBench: A Benchmark for Evaluating Language Models on Medical Physics Calculations and Error Detection",
-      "summary": "Medical physicists turn a prescription into a delivered dose and check one another's calculations, because one error in a beam calibration or a monitor-unit (MU) calculation can affect every patient treated with it. MedPhysBench has ten seeded generators of calculation items in r…",
+      "title": "On Turn-Level Best-of-N Sampling for Scaling LLM Agents",
+      "summary": "In this work, we evaluate a simple inference-time scaling approach based on \\textit{turn-level best-of-N sampling} (\\method) for large language model (LLM) agents on complex, long-horizon tasks. We instantiate this using a \\textit{generator-selector} framework with two LLMs; at e…",
       "authors": [
-        "Omar Nusrat"
+        "Jalaj Bhandari",
+        "Dhawal Gupta",
+        "Hongli Zhan",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.05340v1",
-      "published": "2026-11-03T18:40:35Z",
-      "category": "physics.med-ph"
+      "link": "http://arxiv.org/abs/2611.06868v1",
+      "published": "2026-11-04T18:23:14Z",
+      "category": "cs.AI"
     }
   ]
 }

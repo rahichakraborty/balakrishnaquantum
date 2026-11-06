@@ -1,150 +1,151 @@
 {
-  "generated_at": "2026-11-05T21:18:16+00:00",
+  "generated_at": "2026-11-06T10:17:07+00:00",
   "items": [
     {
-      "title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
-      "summary": "Researchers use large language models as agents in social simulations, where agents are prompted with observations and background information intended to shape their actions. Yet LLM agents have been shown to substantially change their behavior under meaning-preserving prompt var…",
+      "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
+      "summary": "User embeddings are central components of modern recommendation, personalization, and behavioral modeling systems. Though these embeddings can compactly encode rich behavioral information, they are inherently dense and opaque, limiting interpretability. To address this gap, we ar…",
       "authors": [
-        "Mattia Greiche",
-        "Reihaneh Rabbany",
-        "Maximilian Puelma Touzel"
-      ],
-      "link": "http://arxiv.org/abs/2611.06914v1",
-      "published": "2026-11-04T18:58:23Z",
-      "category": "cs.MA"
-    },
-    {
-      "title": "FlowReconBench: Accuracy, calibration and cost of learned and classical flow reconstruction from sparse sensors",
-      "summary": "Reconstructing full flow fields from sparse sensors requires prior assumptions about unmeasured regions and physical variables. Yet it remains unclear when learned models outperform classical estimators and which aspects of their predictions can be trusted. FlowReconBench evaluat…",
-      "authors": [
-        "Nicolas Tricard",
-        "Linzheng Wang",
-        "Jason Chen",
+        "Jonathan Kozaczuk",
+        "Zheng Dong",
+        "Noyan Evirgen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.06912v1",
-      "published": "2026-11-04T18:57:47Z",
-      "category": "physics.flu-dyn"
-    },
-    {
-      "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
-      "summary": "Self-Driving Chemical Laboratories (SDCLs) are moving chemical experimentation toward embodied automation, where machines must perceive laboratory scenes, reason about experimental states, and act under physical, procedural, and safety constraints. Although Multimodal Large Langu…",
-      "authors": [
-        "Fei Lin",
-        "Tengchao Zhang",
-        "Ziyang Gong",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.06911v1",
-      "published": "2026-11-04T18:57:17Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
-      "summary": "AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely check research quality alongside correctness. We introduce Fron…",
-      "authors": [
-        "Bingran You",
-        "Wenjun Ke",
-        "Ria Rosenauer",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.06910v1",
-      "published": "2026-11-04T18:56:22Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Perceptive Humanoid Motion from Simulation",
-      "summary": "Humanoid robots have the potential to automate a wide range of physical tasks. Progress toward generalist humanoid autonomy, however, remains constrained by a data bottleneck: mapping pixels and free-form language to low-level joint commands requires paired supervision, and no co…",
-      "authors": [
-        "Siyuan Hu",
-        "Abulikemu Abuduweili",
-        "Yue Meng",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.06908v1",
-      "published": "2026-11-04T18:55:33Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Reinforcement Learning Enables Scaling Generalist Robot Policy Improvement",
-      "summary": "The introduction of generalist robot policies has enabled a single, large model to learn to perform a variety of tasks from a vast pre-training corpus. While these models often exhibit powerful zero-shot generalization capabilities, they typically require an adaptation phase to a…",
-      "authors": [
-        "Michal Korniak",
-        "Marco Bagatella",
-        "Ralf Römer",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.06905v1",
-      "published": "2026-11-04T18:52:28Z",
+      "link": "http://arxiv.org/abs/2611.08487v1",
+      "published": "2026-11-05T18:59:42Z",
       "category": "cs.LG"
     },
     {
-      "title": "Occlusion for Free: Detecting Occlusion from the Disagreement Between Two Monocular Distance Cues",
-      "summary": "Knowing that a pedestrian is occluded is useful to a robot even when the detector cannot recover the hidden pixels, but occlusion estimators are normally trained on occlusion annotations that deployment settings rarely have. We show that occlusion can be read off two distance est…",
+      "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+      "summary": "LLM-guided evolutionary search uses AI agents to improve programs for mathematical and computational problems by iteratively refining solutions and combining high-scoring methods. However, the process is often slow because the LLM generates a long textual chain of thought for eac…",
       "authors": [
-        "Chibueze Praise Onyenweaku",
-        "Toyibat Adele",
-        "Sikirulahi Opeyemi Abdulkareem",
-        "et al."
+        "Qile Jiang",
+        "George Em Karniadakis"
       ],
-      "link": "http://arxiv.org/abs/2611.06899v1",
-      "published": "2026-11-04T18:49:13Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure",
-      "summary": "Automation is often justified as relief from dull, dirty, and dangerous work. I examine how these conditions relate to occupational AI exposure using 21 O*NET items across 754 US occupations. Higher exposure is associated with lower condition scores under a large language model (…",
-      "authors": [
-        "Siyi Yu"
-      ],
-      "link": "http://arxiv.org/abs/2611.06888v1",
-      "published": "2026-11-04T18:41:40Z",
+      "link": "http://arxiv.org/abs/2611.08483v1",
+      "published": "2026-11-05T18:59:29Z",
       "category": "cs.AI"
     },
     {
-      "title": "Adaptive Multi Mode: Budget-Aware Routing of Optimizers By Online Landscape Probes",
-      "summary": "The best classical optimizer for a continuous black-box problem depends on its budget and landscape. Existing routers decide from the dimension and budget, past improvement or features fitted to one benchmark, and few test an optimizer's implicit assumptions online. AMM (Adaptive…",
+      "title": "Scientist World: Grow a Research World for AI-Scientists",
+      "summary": "AI-Scientists arrived, but a world for them to grow in did not. Human scientists take theirs for granted $-$ centuries of open problems and shared ideas, waiting in the scientific literature. To AI-Scientists, that world is readable but not runnable, so we build Scientist World f…",
       "authors": [
-        "Benjamin Jacob Bodner"
+        "Taiming Lu",
+        "Sachin Konan",
+        "Zhuang Liu"
       ],
-      "link": "http://arxiv.org/abs/2611.06879v1",
-      "published": "2026-11-04T18:35:35Z",
+      "link": "http://arxiv.org/abs/2611.08478v1",
+      "published": "2026-11-05T18:58:17Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "XStack: A Benchmark for ML Repo Migration",
+      "summary": "ML code should run where researchers choose, not where it was first written. Today, machine learning code mainly lives in two ecosystems, PyTorch on NVIDIA GPUs and JAX on Google TPUs. Migrating repositories between them means building and testing across frameworks and hardware. …",
+      "authors": [
+        "Linrong Cai",
+        "Taiming Lu",
+        "Haozhe Chen",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.08472v1",
+      "published": "2026-11-05T18:55:54Z",
       "category": "cs.LG"
     },
     {
-      "title": "SpecCompact: Accelerating LLM Agent Context Compaction with Slot-Parallel Semantic Speculative Verification",
-      "summary": "LLM agents use context compaction to manage growing interaction histories, but summarizing long histories with large models can introduce substantial delays. Compaction therefore requires balancing information retention against latency. We observe that structured summary slots ca…",
+      "title": "Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information",
+      "summary": "Interpretability, AI auditing and assessments of machine consciousness increasingly rest on mechanism-level quantities: functionals of a system's causal transition law that describe how it computes, not what it outputs. Experiments see that law only through finite, partial and no…",
       "authors": [
-        "Yulu An",
-        "Yifei Feng",
-        "Xiangyang Yin"
+        "Linqian Wu",
+        "Diaoxuan He"
       ],
-      "link": "http://arxiv.org/abs/2611.06876v1",
-      "published": "2026-11-04T18:34:41Z",
+      "link": "http://arxiv.org/abs/2611.08469v1",
+      "published": "2026-11-05T18:55:31Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Towards interpreting any residual stream direction by scaling activation inversion",
+      "summary": "To interpret a direction in a language model's residual stream, we can look for text that strongly activates it. But when such text is found by scanning a corpus, it is limited to what that corpus contains. We develop Maximally-Activating Example Metamodels (MAEMs), language mode…",
+      "authors": [
+        "Celeste De Schamphelaere",
+        "Juan J. Vazquez",
+        "Ari Spiesberger",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.08465v1",
+      "published": "2026-11-05T18:54:40Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Adversarial Training with Large Step Sizes: Implicit Bias, Optimization, and Sharpness",
+      "summary": "Adversarial Training (AT) is an important method for improving model robustness. We study the dynamics of deterministic Gradient Descent (GD) in AT. Most existing works in this direction focus on the small or vanishing step sizes regime, where GD resembles a continuous-time flow.…",
+      "authors": [
+        "Yi Feng",
+        "Andrea Paudice"
+      ],
+      "link": "http://arxiv.org/abs/2611.08457v1",
+      "published": "2026-11-05T18:48:50Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO",
+      "summary": "On-policy distillation (OPD) trains a student on its own rollouts under a frozen teacher's per-token supervision. Does this dense signal reduce the training FLOPs needed to reach a target accuracy compared with reinforcement learning? We systematically compare vanilla reverse-KL …",
+      "authors": [
+        "Zeyu Leo Liu",
+        "Yang Li",
+        "Bo Pang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.08453v1",
+      "published": "2026-11-05T18:47:05Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "ReproBridge: Building Reproducibility into ML Research Artifacts",
+      "summary": "Reproducing machine learning experiments requires reconstructing procedures from information scattered across papers, released code, and supporting artifacts. For coding agents, reproduction success can therefore depend on their ability to fill in missing details, rather than on …",
+      "authors": [
+        "Yubo Wang",
+        "Rui Meng",
+        "Jaehyun Nam",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.08452v1",
+      "published": "2026-11-05T18:45:36Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "A Hidden Markov Preference Model for Online Prediction of Adversary Actions",
+      "summary": "A defender anticipating an attacker needs a probability distribution over the attacker's next action from information available before that action occurs. Two structures complicate this: the attacker's behavioral regime persists and can switch within an episode, and each action c…",
+      "authors": [
+        "Angel Daruna",
+        "Michael Cogswell",
+        "Tixiao Shan",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.08445v1",
+      "published": "2026-11-05T18:37:07Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Label-Wording Augmentation in a Typed-Decision Encoder: Gains on Unfamiliar Words, Not on Abbreviations or Codes",
+      "summary": "Typed-decision models score options that the caller supplies at request time, so their accuracy depends on label wording that the model's developer does not control. We compare two releases of a 307M-parameter multilingual cross-encoder, Ru-Jev, trained on thirteen Russian-langua…",
+      "authors": [
+        "Vladimir Beskorovainyi"
+      ],
+      "link": "http://arxiv.org/abs/2611.08439v1",
+      "published": "2026-11-05T18:31:24Z",
       "category": "cs.CL"
     },
     {
-      "title": "Learning to Decode Linear Codes with Generalized Belief Propagation Network",
-      "summary": "Error correcting codes are a fundamental component of communication systems, enabling reliable data transmission over noisy channels. Recently, neural decoders have demonstrated notable performance gains over classical iterative algorithms. In this paper, we propose a Generalized…",
+      "title": "Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety",
+      "summary": "Neural networks are likely to be among the most consequential artefacts in human history. As these systems become more capable and autonomous, their potential to cause societal harm also grows, making AI safety one of the defining challenges of our time. Yet we continue to build …",
       "authors": [
-        "Samira Malek"
-      ],
-      "link": "http://arxiv.org/abs/2611.06874v1",
-      "published": "2026-11-04T18:29:31Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "On Turn-Level Best-of-N Sampling for Scaling LLM Agents",
-      "summary": "In this work, we evaluate a simple inference-time scaling approach based on \\textit{turn-level best-of-N sampling} (\\method) for large language model (LLM) agents on complex, long-horizon tasks. We instantiate this using a \\textit{generator-selector} framework with two LLMs; at e…",
-      "authors": [
-        "Jalaj Bhandari",
-        "Dhawal Gupta",
-        "Hongli Zhan",
+        "Fazl Barez",
+        "Tung-Yu Wu",
+        "Hunar Batra",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.06868v1",
-      "published": "2026-11-04T18:23:14Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2611.08438v1",
+      "published": "2026-11-05T18:30:54Z",
+      "category": "cs.CL"
     }
   ]
 }

@@ -1,75 +1,75 @@
 {
   "last_updated": {
-    "date": "05 Nov 2026",
-    "time": "16:50 IST",
-    "iso": "2026-11-05T16:50:57.353213+00:00"
+    "date": "06 Nov 2026",
+    "time": "16:49 IST",
+    "iso": "2026-11-06T16:49:57.111034+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udfe1",
-    "bias": "Neutral",
-    "confidence": 50,
-    "todays_trade": "Wait For Confirmation",
-    "preferred_asset": "BTC",
-    "risk_level": "Medium",
-    "risk_note": "Watch Headlines",
-    "conviction": 50
+    "emoji": "\ud83d\udd34",
+    "bias": "Mild Bearish",
+    "confidence": 33,
+    "todays_trade": "Reduce Size",
+    "preferred_asset": "ETH",
+    "risk_level": "High",
+    "risk_note": "Reduce Size",
+    "conviction": 33
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
-      "bias": "Neutral Bullish",
-      "confidence": 50,
-      "support": 76198.52,
-      "resistance": 81691.75,
-      "trade_plan": "Buy pullbacks while above support."
+      "bias": "Bearish",
+      "confidence": 25,
+      "support": 75538.15,
+      "resistance": 80668.65,
+      "trade_plan": "Fade rallies while below resistance."
     },
     "ETH": {
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 2191.63,
+      "support": 2221.58,
       "resistance": 2434.86,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 42,
-    "flow": 65,
-    "technical": 50,
-    "risk": 49
+    "macro": 50,
+    "flow": 18,
+    "technical": 38,
+    "risk": 100
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin win rate vs. S&P 500 recovers as post-midterm history favors stocks"
+      "text": "Greece approves 10% tax on crypto gains starting in 2027"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "South Korea seeks 4th crypto tax delay, targets 2029 start"
+      "text": "GOPAX halts crypto trading, withdrawals to move all assets to cold storage"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "France budget rejection sidelines stablecoin tax, wallet reporting"
+      "text": "Binance\u2019s $6.3B hack leaves questions over hot wallet safeguards"
+    },
+    {
+      "emoji": "\u2705",
+      "text": "Zcash NU7 upgrade goes live, leaves 12,224 ZEC stranded in Sprout pool"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin, Ether ETFs draw $128M as crypto rebounds after midterms"
+      "text": "Hyperliquid Strategies seeks futures registration for perps"
     },
     {
-      "emoji": "\ud83d\udfe1",
-      "text": "Cr\u00e9dit Mutuel Ark\u00e9a resumes operations after attack, assesses losses"
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin, Ether ETFs post $530M outflows as election gains evaporate"
+    },
+    {
+      "emoji": "\u2705",
+      "text": "Chainalysis says breach exposed password hashes and live tokens"
     },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Binance, Polymarket seek Polygon hard fork to recover $6.8M in stolen crypto"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "\u2018Lawyer up\u2019: Democrats target Trump, Big Tech after midterm sweep"
     }
   ],
   "events": [

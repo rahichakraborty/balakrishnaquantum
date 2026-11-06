@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-06T10:17:16+00:00",
+  "generated_at": "2026-11-06T20:40:27+00:00",
   "items": [
     {
       "id": "moonshotai/Kimi-K3.1-Pro",
       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
       "downloads": 18432,
-      "likes": 1295,
+      "likes": 1457,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "speridlabs/idol",
       "url": "https://huggingface.co/speridlabs/idol",
       "downloads": 19139,
-      "likes": 842,
+      "likes": 918,
       "pipeline_tag": "image-to-3d"
     },
     {
       "id": "ccore/Qwen3.5-4B-3D-Coder",
       "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder",
       "downloads": 190243,
-      "likes": 735,
+      "likes": 776,
       "pipeline_tag": null
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 2607491,
-      "likes": 10778,
+      "likes": 10847,
       "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-      "downloads": 61049,
-      "likes": 3064,
-      "pipeline_tag": "automatic-speech-recognition"
     },
     {
       "id": "burner22/numbat",
       "url": "https://huggingface.co/burner22/numbat",
       "downloads": 9066,
-      "likes": 359,
+      "likes": 369,
       "pipeline_tag": null
     },
     {
       "id": "FusionCow/Sulphur-3",
       "url": "https://huggingface.co/FusionCow/Sulphur-3",
       "downloads": 950,
-      "likes": 385,
+      "likes": 392,
       "pipeline_tag": null
     },
     {
-      "id": "Pika-Labs/Pika-H3-Flex",
-      "url": "https://huggingface.co/Pika-Labs/Pika-H3-Flex",
-      "downloads": 986,
-      "likes": 483,
-      "pipeline_tag": "image-to-video"
+      "id": "ricursiveAI/Ripple-65B-Preview",
+      "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview",
+      "downloads": 2013,
+      "likes": 322,
+      "pipeline_tag": null
     },
     {
-      "id": "mistralai/Mistral-Large-4-1T-A52B",
-      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
-      "downloads": 10530,
-      "likes": 1619,
-      "pipeline_tag": "image-text-to-text"
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+      "downloads": 61049,
+      "likes": 3072,
+      "pipeline_tag": "automatic-speech-recognition"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 7845288,
-      "likes": 19235,
+      "likes": 19267,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF",
+      "url": "https://huggingface.co/AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF",
+      "downloads": 108162,
+      "likes": 341,
+      "pipeline_tag": "text-generation"
     }
   ]
 }

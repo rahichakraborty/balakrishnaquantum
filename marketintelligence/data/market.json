@@ -1,25 +1,25 @@
 {
   "last_updated": {
-    "date": "06 Nov 2026",
-    "time": "16:49 IST",
-    "iso": "2026-11-06T16:49:57.111034+00:00"
+    "date": "07 Nov 2026",
+    "time": "16:03 IST",
+    "iso": "2026-11-07T16:03:59.475067+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udd34",
-    "bias": "Mild Bearish",
-    "confidence": 33,
-    "todays_trade": "Reduce Size",
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 53,
+    "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
-    "risk_level": "High",
-    "risk_note": "Reduce Size",
-    "conviction": 33
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 53
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
-      "confidence": 25,
-      "support": 75538.15,
+      "confidence": 26,
+      "support": 75457.89,
       "resistance": 80668.65,
       "trade_plan": "Fade rallies while below resistance."
     },
@@ -27,49 +27,49 @@
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 2221.58,
+      "support": 2223.22,
       "resistance": 2434.86,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 50,
-    "flow": 18,
+    "macro": 48,
+    "flow": 49,
     "technical": 38,
-    "risk": 100
+    "risk": 4
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Greece approves 10% tax on crypto gains starting in 2027"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "GOPAX halts crypto trading, withdrawals to move all assets to cold storage"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Binance\u2019s $6.3B hack leaves questions over hot wallet safeguards"
-    },
-    {
-      "emoji": "\u2705",
-      "text": "Zcash NU7 upgrade goes live, leaves 12,224 ZEC stranded in Sprout pool"
+      "text": "Suspicious prediction market activity seen before election poll release: NYT"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Hyperliquid Strategies seeks futures registration for perps"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Bitcoin, Ether ETFs post $530M outflows as election gains evaporate"
-    },
-    {
-      "emoji": "\u2705",
-      "text": "Chainalysis says breach exposed password hashes and live tokens"
+      "text": "Nvidia may face a more hostile post-election Washington: Report"
     },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "US Treasury cuts off MEXC over alleged $16B in illicit transactions"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Gnosis Pay breach exposes card details, personal data and crypto wallet information"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Binance hack is \u2018cyber war,\u2019 TRM Labs executive says"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "US 401(k) proposal leaves door open to altcoins, but hurdles remain"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Russia finalizes crypto trading rules ahead of Nov. 17 rollout"
     }
   ],
   "events": [

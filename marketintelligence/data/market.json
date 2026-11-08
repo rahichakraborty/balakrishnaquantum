@@ -1,24 +1,24 @@
 {
   "last_updated": {
-    "date": "07 Nov 2026",
-    "time": "16:03 IST",
-    "iso": "2026-11-07T16:03:59.475067+00:00"
+    "date": "08 Nov 2026",
+    "time": "16:09 IST",
+    "iso": "2026-11-08T16:09:56.437713+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 53,
+    "confidence": 54,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 53
+    "conviction": 54
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
-      "confidence": 26,
+      "confidence": 27,
       "support": 75457.89,
       "resistance": 80668.65,
       "trade_plan": "Fade rallies while below resistance."
@@ -33,19 +33,19 @@
     }
   },
   "scores": {
-    "macro": 48,
-    "flow": 49,
+    "macro": 52,
+    "flow": 48,
     "technical": 38,
-    "risk": 4
+    "risk": 5
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Suspicious prediction market activity seen before election poll release: NYT"
+      "text": "Amsterdam protesters break into Microsoft data center construction site: Report"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Nvidia may face a more hostile post-election Washington: Report"
+      "text": "Binance\u2019s  finance chief Kaiser Ng to leave company, report says"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -53,23 +53,23 @@
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "US Treasury cuts off MEXC over alleged $16B in illicit transactions"
+      "text": "Ex-FBI counterintelligence agent stole almost $2.5M in crypto"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Gnosis Pay breach exposes card details, personal data and crypto wallet information"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Binance hack is \u2018cyber war,\u2019 TRM Labs executive says"
+      "text": "Bitcoin holders have received eCash \u2014 What can you do with it?"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "US 401(k) proposal leaves door open to altcoins, but hurdles remain"
+      "text": "US sanctions Canadian money-exchange firms over Iran ties"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Russia finalizes crypto trading rules ahead of Nov. 17 rollout"
+      "text": "Suspicious prediction market activity seen before election poll release: NYT"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Nvidia may face a more hostile post-election Washington: Report"
     }
   ],
   "events": [

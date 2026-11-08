@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "08 Nov 2026",
+    "time": "16:09 IST",
+    "iso": "2026-11-08T16:09:56.437713+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 54,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 54
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 27,
+      "support": 75457.89,
+      "resistance": 80668.65,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2223.22,
+      "resistance": 2434.86,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 52,
+    "flow": 48,
+    "technical": 38,
+    "risk": 5
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Amsterdam protesters break into Microsoft data center construction site: Report"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Binance\u2019s  finance chief Kaiser Ng to leave company, report says"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Ex-FBI counterintelligence agent stole almost $2.5M in crypto"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin holders have received eCash \u2014 What can you do with it?"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "US sanctions Canadian money-exchange firms over Iran ties"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Suspicious prediction market activity seen before election poll release: NYT"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Nvidia may face a more hostile post-election Washington: Report"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

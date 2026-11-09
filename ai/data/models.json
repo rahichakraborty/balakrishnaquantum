@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-11-09T10:48:17+00:00",
+  "generated_at": "2026-11-09T23:40:08+00:00",
   "items": [
     {
       "id": "speridlabs/idol",
       "url": "https://huggingface.co/speridlabs/idol",
       "downloads": 24747,
-      "likes": 1475,
+      "likes": 1620,
       "pipeline_tag": "image-to-3d"
     },
     {
       "id": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
       "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
       "downloads": 11755,
-      "likes": 957,
+      "likes": 1034,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "moonshotai/Kimi-K3.1-Pro",
       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
       "downloads": 27926,
-      "likes": 1760,
+      "likes": 1794,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "ricursiveAI/Ripple-65B-Preview",
       "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview",
       "downloads": 5835,
-      "likes": 423,
+      "likes": 453,
       "pipeline_tag": null
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 2720096,
-      "likes": 11168,
+      "likes": 11261,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "ccore/Qwen3.5-4B-3D-Coder",
       "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder",
       "downloads": 289466,
-      "likes": 933,
+      "likes": 948,
       "pipeline_tag": null
+    },
+    {
+      "id": "NousResearch/Arete-27B",
+      "url": "https://huggingface.co/NousResearch/Arete-27B",
+      "downloads": 2407,
+      "likes": 360,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
       "downloads": 1530688,
-      "likes": 2729,
+      "likes": 2776,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 7508158,
-      "likes": 19439,
+      "likes": 19485,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "NousResearch/Arete-27B",
-      "url": "https://huggingface.co/NousResearch/Arete-27B",
-      "downloads": 2407,
-      "likes": 320,
-      "pipeline_tag": "text-generation"
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
       "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
       "downloads": 69992,
-      "likes": 3117,
+      "likes": 3123,
       "pipeline_tag": "automatic-speech-recognition"
     }
   ]

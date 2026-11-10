@@ -1,149 +1,152 @@
 {
-  "generated_at": "2026-11-09T23:40:01+00:00",
+  "generated_at": "2026-11-10T10:41:34+00:00",
   "items": [
     {
-      "title": "On Agentic Manipulation Policies",
-      "summary": "Recent work on robot manipulation has focused on specialist policies trained on demonstrations. We show that generalist AI models can control manipulators more reliably than specialist policies such as vision-language-action models (VLAs) and world-action models (WAMs). We system…",
+      "title": "Guiding Data Allocation for Robust Subpopulation Generalization",
+      "summary": "Machine learning models often achieve high average accuracy in the training data while performing poorly on test data due to subpopulation shift. A common data-centric solution is to enforce balanced subgroup proportions, but full balance can be costly, infeasible, and not always…",
       "authors": [
-        "Chen Chen",
-        "Omid Bagherieh",
-        "Naveen Nikamanth Appiah Balaji",
+        "Zhaoying Pan",
+        "Yipei Wang",
+        "Shenyu Lu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.09892v1",
-      "published": "2026-11-06T18:59:34Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
-      "summary": "Large language models reinvent the wheel all the time. They conflate task-solving with the execution of the solutions, which forces them to solve every problem from scratch. We show that once a task has been reasoned through, the application of its solution to a new problem insta…",
-      "authors": [
-        "Peter Belcak",
-        "Greg Heinrich",
-        "Saurav Muralidharan",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.09891v1",
-      "published": "2026-11-06T18:58:50Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "On the (non-)closedness of the set of ReLU networks",
-      "summary": "We prove that the set $\\mathcal{N}_N$ of ReLU networks with one hidden layer and at most $N\\in\\mathbb N$ neurons is weakly closed in $W^{1,p}(Ω)$, for a bounded connected open set $Ω\\subset\\mathbb R^d$. Consequently, every coercive, weakly lower semicontinuous energy on this spac…",
-      "authors": [
-        "Eloi Martinet",
-        "Leon Bungert"
-      ],
-      "link": "http://arxiv.org/abs/2611.09887v1",
-      "published": "2026-11-06T18:58:06Z",
+      "link": "http://arxiv.org/abs/2611.12884v1",
+      "published": "2026-11-09T18:59:40Z",
       "category": "cs.LG"
     },
     {
-      "title": "FlowMoP: Stochastic Multi-Person Motion Prediction",
-      "summary": "Predicting the future motion of multiple people is inherently stochastic: the same observed history admits many plausible continuations depending on intent, coordination, and social context. Yet the dominant paradigm in multi-person 3D motion prediction remains deterministic, wit…",
+      "title": "Kolmogorov-Chapman Maps: Trajectory-Free Learning for Simulating Molecular Dynamics",
+      "summary": "Stochastic differential equations (SDEs) describe stochastic processes across a wide range of scientific domains, including physics, biology, and finance. Although individual numerical integration steps are inexpensive, observing meaningful events or transitions can require milli…",
       "authors": [
-        "Aadya Agrawal",
-        "Ho Kei Cheng",
-        "Alexander Schwing"
-      ],
-      "link": "http://arxiv.org/abs/2611.09882v1",
-      "published": "2026-11-06T18:56:41Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Graded convolutional networks: scale invariance without the scale and robustness to unknown blur",
-      "summary": "The Gaussian jet of an image is a graded vector space: a dilation by $λ$ multiplies derivatives of order $k$ by $λ^{-k}$. Local graded convolutions are exactly homogeneous differential operators, and a local feature is dilation-invariant if and only if it factors through the scal…",
-      "authors": [
-        "Tanush Shaska"
-      ],
-      "link": "http://arxiv.org/abs/2611.09878v1",
-      "published": "2026-11-06T18:54:03Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "On the Reliability of Majority-Vote Pseudo-Labels in Test-Time Reinforcement Learning",
-      "summary": "Test-time reinforcement learning (TTRL) adapts pretrained language models to unlabeled target-domain data using self-generated pseudo-labels, whose reliability remains poorly understood. We analyze majority-vote supervision for TTRL with online Direct Preference Optimization (DPO…",
-      "authors": [
-        "Haoyu Wang",
-        "Ru Wang",
-        "Yuanyuan Wang",
+        "Majdi Hassan",
+        "Marta Skreta",
+        "Dominique Beaini",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.09872v1",
-      "published": "2026-11-06T18:49:02Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2611.12880v1",
+      "published": "2026-11-09T18:59:13Z",
+      "category": "cs.LG"
     },
     {
-      "title": "CodeQuant2: Enhanced Outlier Mitigation and Adaptive Clustering for Low-Precision LRMs",
-      "summary": "Large reasoning models (LRMs) improve task performance by generating longer intermediate reasoning traces, but this substantially increases inference costs and makes low-precision quantization increasingly important. However, aggressively quantized models often perform poorly on …",
+      "title": "Adaptive Quantization Preserves Fast Rates for TD Learning over Rate-Limited Channels",
+      "summary": "Motivated by reinforcement learning subject to communication constraints, we study a policy evaluation problem with linear function approximation over a rate-limited channel. In our setup, an agent interacting with an unknown environment (modeled as a Markov Decision Process) tra…",
       "authors": [
-        "Xingyu Liu",
-        "Xiangyang Yin",
-        "Tianhua Xia",
+        "Sreejeet Maity",
+        "Aritra Mitra"
+      ],
+      "link": "http://arxiv.org/abs/2611.12878v1",
+      "published": "2026-11-09T18:58:41Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents",
+      "summary": "As multimodal agents accumulate increasingly long interaction histories, effectively retrieving and utilizing past information becomes critical for long-term interaction. Existing memory systems typically rely on semantic retrieval over compressed memories and expose predefined r…",
+      "authors": [
+        "Haozhen Zhang",
+        "Bohan Liu",
+        "Jianzhu Bao",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.09868v1",
-      "published": "2026-11-06T18:48:04Z",
+      "link": "http://arxiv.org/abs/2611.12872v1",
+      "published": "2026-11-09T18:57:00Z",
       "category": "cs.CL"
     },
     {
-      "title": "GRAC: Graph-Based Retrieval-Augmented Captioning for Surgical Scene Description",
-      "summary": "Purpose: Surgical operative reports support procedural documentation, surgical training, performance assessment, and workflow review. However, extracting meaningful information often requires extensive manual review and clinical expertise. Automated surgical scene descriptions co…",
+      "title": "Vendi Anomaly Scores for Efficient and Accurate Anomaly Detection",
+      "summary": "Anomaly detection (AD) is a critical for trustworthy machine learning and scientific discovery. Existing methods typically define anomalies through local density, isolation heuristics, or distance from a fitted distribution, making them sensitive to neighborhood scale, partitioni…",
       "authors": [
-        "Rochak Dhakal",
-        "Chen Zhao",
-        "Soup Cobb",
-        "et al."
+        "Amey Pasarkar",
+        "Adji Bousso Dieng"
       ],
-      "link": "http://arxiv.org/abs/2611.09866v1",
-      "published": "2026-11-06T18:47:23Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2611.12871v1",
+      "published": "2026-11-09T18:56:15Z",
+      "category": "cs.LG"
     },
     {
-      "title": "Grasp-TAGS: Task-Aware Grasp Selection via Critic Distillation for Prehensile Loco-Manipulation",
-      "summary": "Loco-manipulation, which requires mobile manipulators to coordinate locomotion and manipulation over long horizons, is a key capability for large-object rearrangement in applications such as service robotics and warehouse automation. Despite recent progress, reliably executing th…",
+      "title": "Where Does Alignment Emerge and What Does It Mean? A Closer Look at the Platonic Representation Hypothesis",
+      "summary": "The Platonic Representation Hypothesis (PRH) suggests that neural networks are converging toward similar representation spaces. As language models become more capable, their representations are aligning with those of vision models. However, recent work has questioned whether this…",
       "authors": [
-        "Xun Tu",
-        "Minghao Zou",
-        "Karthik Desingh"
-      ],
-      "link": "http://arxiv.org/abs/2611.09864v1",
-      "published": "2026-11-06T18:44:33Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Flow-Guided Target-Space Alignment via Path Consistency",
-      "summary": "Many multimodal alignment problems require mapping a source modality into a fixed space defined by a target modality, where the target space is not merely an intermediate embedding but is used directly for downstream analysis. In this setting, successful alignment should preserve…",
-      "authors": [
-        "Ruizhi Yuan",
-        "Zeqiu Yu",
-        "Wei Gao",
+        "Julia Herbst",
+        "Simon Roschmann",
+        "Quentin Bouniot",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.09863v1",
-      "published": "2026-11-06T18:44:08Z",
+      "link": "http://arxiv.org/abs/2611.12869v1",
+      "published": "2026-11-09T18:53:57Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Shortcuts and Boundaries: Verifiable RL Misalignment and Contextual Safety Learning",
+      "summary": "Reinforcement learning (RL) can improve an agent's task capability while reinforcing behavior that violates contextual execution requirements. We study this reward-driven misalignment, including reward hacking, through verifiable reward--context conflicts, where compliant task co…",
+      "authors": [
+        "Xinjie Shen"
+      ],
+      "link": "http://arxiv.org/abs/2611.12865v1",
+      "published": "2026-11-09T18:52:20Z",
       "category": "cs.AI"
     },
     {
-      "title": "How far does a hash-only sender go? A pre-registered map of sender memory versus bits for short text messages",
-      "summary": "Can a sender that only computes hashes, with a language model only at the receiver, transmit short human text more cheaply than a classical sender trained on the same domain? We answer with one pre-registered run on 1,000 English user utterances from Taskmaster-1. The primary end…",
+      "title": "Is Persona Generalization Predictable?",
+      "summary": "Persona generalization occurs when fine-tuning a language model in one domain induces behavioral changes in others -- for example, the broadly unsafe behavior observed in emergent misalignment. We discover a surprising \"on-the-line\" phenomenon in persona generalization: in-domain…",
       "authors": [
-        "Marcelo Samoilenko"
+        "Olina Mukherjee",
+        "Arnav Goel",
+        "Aditi Raghunathan",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.09848v1",
-      "published": "2026-11-06T18:31:24Z",
-      "category": "cs.IT"
+      "link": "http://arxiv.org/abs/2611.12864v1",
+      "published": "2026-11-09T18:51:03Z",
+      "category": "cs.CL"
     },
     {
-      "title": "Computer-Use Agents Are Embodied Generalists",
-      "summary": "In many areas of AI, general-purpose models have increasingly replaced handcrafted methods and specialized architectures. We argue that embodied AI is poised for a similar shift. Our key claim is that embodied tasks can be formulated as interaction with digital software. Specific…",
+      "title": "WorkflowArena: Benchmarking Executable Workflow Orchestration in LLM-Based Multi-Agent Systems",
+      "summary": "Large language model agents are increasingly deployed as multi-agent systems rather than as a standalone model operating within a single context. Recent agent harnesses allow the model to instantiate worker agents and to author the executable workflow that coordinates them, shift…",
       "authors": [
-        "Pranjal Aggarwal",
-        "Sean Welleck"
+        "Zheng Jiang",
+        "Fang Niu",
+        "Bo Peng",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.09847v1",
-      "published": "2026-11-06T18:31:17Z",
+      "link": "http://arxiv.org/abs/2611.12856v1",
+      "published": "2026-11-09T18:45:28Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "What kills $v$-prediction? A Patch-wise PCA Perspective on Pixel-Space Flow Matching",
+      "summary": "Latent Diffusion Models dominate generative modeling but face two-stage training complexity and the inherent reconstruction limits of pre-trained autoencoders. Pixel-space Flow Matching offers a simplified end-to-end alternative yet often encounters training difficulties when usi…",
+      "authors": [
+        "Tianze Luo",
+        "Haofeng Huang",
+        "Yuan Yao"
+      ],
+      "link": "http://arxiv.org/abs/2611.12852v1",
+      "published": "2026-11-09T18:44:37Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Mitigating Agentic Deception via Evaluation-Side Partially Observable Games",
+      "summary": "As large language models become more capable agents, they can exhibit deceptive behaviors, cheating human for higher rewards while appearing helpful. We attribute this failure to evaluation-side partial observability, where models are evaluated mainly from final outcome, without …",
+      "authors": [
+        "Hanxiao Li",
+        "Shutong Liu",
+        "Yongjia Ma",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.12835v1",
+      "published": "2026-11-09T18:33:13Z",
       "category": "cs.LG"
+    },
+    {
+      "title": "Programming Prescience: Issues in Human Construction of Forecasting Bots",
+      "summary": "AI models' growing capacity for complex reasoning has made them attractive tools for forecasting, or the systematic prediction of the future based on past and present data. However, should AI forecasting systems be adopted, human builders will shoulder the work of building and ev…",
+      "authors": [
+        "Priya Dhawka",
+        "Benjamin Wilson",
+        "Andrew Head"
+      ],
+      "link": "http://arxiv.org/abs/2611.12834v1",
+      "published": "2026-11-09T18:33:13Z",
+      "category": "cs.HC"
     }
   ]
 }

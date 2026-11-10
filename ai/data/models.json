@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-09T23:40:08+00:00",
+  "generated_at": "2026-11-10T10:41:41+00:00",
   "items": [
     {
       "id": "speridlabs/idol",
       "url": "https://huggingface.co/speridlabs/idol",
       "downloads": 24747,
-      "likes": 1620,
+      "likes": 1724,
       "pipeline_tag": "image-to-3d"
     },
     {
       "id": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
       "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
       "downloads": 11755,
-      "likes": 1034,
+      "likes": 1107,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "moonshotai/Kimi-K3.1-Pro",
       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
       "downloads": 27926,
-      "likes": 1794,
+      "likes": 1823,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "ricursiveAI/Ripple-65B-Preview",
       "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview",
       "downloads": 5835,
-      "likes": 453,
+      "likes": 466,
       "pipeline_tag": null
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 2720096,
-      "likes": 11261,
+      "downloads": 2791606,
+      "likes": 11304,
       "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "ccore/Qwen3.5-4B-3D-Coder",
-      "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder",
-      "downloads": 289466,
-      "likes": 948,
-      "pipeline_tag": null
     },
     {
       "id": "NousResearch/Arete-27B",
       "url": "https://huggingface.co/NousResearch/Arete-27B",
       "downloads": 2407,
-      "likes": 360,
+      "likes": 379,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "ccore/Qwen3.5-4B-3D-Coder",
+      "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder",
+      "downloads": 289466,
+      "likes": 964,
+      "pipeline_tag": null
     },
     {
       "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
-      "downloads": 1530688,
-      "likes": 2776,
+      "downloads": 1459029,
+      "likes": 2803,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 7508158,
-      "likes": 19485,
+      "downloads": 7443748,
+      "likes": 19522,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-      "downloads": 69992,
-      "likes": 3123,
-      "pipeline_tag": "automatic-speech-recognition"
+      "id": "webAI-Official/TwIL-8B",
+      "url": "https://huggingface.co/webAI-Official/TwIL-8B",
+      "downloads": 34546,
+      "likes": 266,
+      "pipeline_tag": "text-generation"
     }
   ]
 }

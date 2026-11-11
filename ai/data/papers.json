@@ -1,152 +1,147 @@
 {
-  "generated_at": "2026-11-10T21:09:37+00:00",
+  "generated_at": "2026-11-11T10:11:56+00:00",
   "items": [
     {
-      "title": "Guiding Data Allocation for Robust Subpopulation Generalization",
-      "summary": "Machine learning models often achieve high average accuracy in the training data while performing poorly on test data due to subpopulation shift. A common data-centric solution is to enforce balanced subgroup proportions, but full balance can be costly, infeasible, and not always…",
+      "title": "Medical Image Segmentation: Foundation Model Adaptation versus Task-Specific Training",
+      "summary": "Foundation models pretrained on large natural-image collections are increasingly adapted for medical image segmentation, in the expectation that they will replace models trained for each task. Most comparisons, however, use data from the training distribution and a single task-sp…",
       "authors": [
-        "Zhaoying Pan",
-        "Yipei Wang",
-        "Shenyu Lu",
-        "et al."
+        "Emre Kutlusan",
+        "Yongmin Li"
       ],
-      "link": "http://arxiv.org/abs/2611.12884v1",
-      "published": "2026-11-09T18:59:40Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Kolmogorov-Chapman Maps: Trajectory-Free Learning for Simulating Molecular Dynamics",
-      "summary": "Stochastic differential equations (SDEs) describe stochastic processes across a wide range of scientific domains, including physics, biology, and finance. Although individual numerical integration steps are inexpensive, observing meaningful events or transitions can require milli…",
-      "authors": [
-        "Majdi Hassan",
-        "Marta Skreta",
-        "Dominique Beaini",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.12880v1",
-      "published": "2026-11-09T18:59:13Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Adaptive Quantization Preserves Fast Rates for TD Learning over Rate-Limited Channels",
-      "summary": "Motivated by reinforcement learning subject to communication constraints, we study a policy evaluation problem with linear function approximation over a rate-limited channel. In our setup, an agent interacting with an unknown environment (modeled as a Markov Decision Process) tra…",
-      "authors": [
-        "Sreejeet Maity",
-        "Aritra Mitra"
-      ],
-      "link": "http://arxiv.org/abs/2611.12878v1",
-      "published": "2026-11-09T18:58:41Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents",
-      "summary": "As multimodal agents accumulate increasingly long interaction histories, effectively retrieving and utilizing past information becomes critical for long-term interaction. Existing memory systems typically rely on semantic retrieval over compressed memories and expose predefined r…",
-      "authors": [
-        "Haozhen Zhang",
-        "Bohan Liu",
-        "Jianzhu Bao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.12872v1",
-      "published": "2026-11-09T18:57:00Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "Vendi Anomaly Scores for Efficient and Accurate Anomaly Detection",
-      "summary": "Anomaly detection (AD) is a critical for trustworthy machine learning and scientific discovery. Existing methods typically define anomalies through local density, isolation heuristics, or distance from a fitted distribution, making them sensitive to neighborhood scale, partitioni…",
-      "authors": [
-        "Amey Pasarkar",
-        "Adji Bousso Dieng"
-      ],
-      "link": "http://arxiv.org/abs/2611.12871v1",
-      "published": "2026-11-09T18:56:15Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Where Does Alignment Emerge and What Does It Mean? A Closer Look at the Platonic Representation Hypothesis",
-      "summary": "The Platonic Representation Hypothesis (PRH) suggests that neural networks are converging toward similar representation spaces. As language models become more capable, their representations are aligning with those of vision models. However, recent work has questioned whether this…",
-      "authors": [
-        "Julia Herbst",
-        "Simon Roschmann",
-        "Quentin Bouniot",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.12869v1",
-      "published": "2026-11-09T18:53:57Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Shortcuts and Boundaries: Verifiable RL Misalignment and Contextual Safety Learning",
-      "summary": "Reinforcement learning (RL) can improve an agent's task capability while reinforcing behavior that violates contextual execution requirements. We study this reward-driven misalignment, including reward hacking, through verifiable reward--context conflicts, where compliant task co…",
-      "authors": [
-        "Xinjie Shen"
-      ],
-      "link": "http://arxiv.org/abs/2611.12865v1",
-      "published": "2026-11-09T18:52:20Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Is Persona Generalization Predictable?",
-      "summary": "Persona generalization occurs when fine-tuning a language model in one domain induces behavioral changes in others -- for example, the broadly unsafe behavior observed in emergent misalignment. We discover a surprising \"on-the-line\" phenomenon in persona generalization: in-domain…",
-      "authors": [
-        "Olina Mukherjee",
-        "Arnav Goel",
-        "Aditi Raghunathan",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.12864v1",
-      "published": "2026-11-09T18:51:03Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "WorkflowArena: Benchmarking Executable Workflow Orchestration in LLM-Based Multi-Agent Systems",
-      "summary": "Large language model agents are increasingly deployed as multi-agent systems rather than as a standalone model operating within a single context. Recent agent harnesses allow the model to instantiate worker agents and to author the executable workflow that coordinates them, shift…",
-      "authors": [
-        "Zheng Jiang",
-        "Fang Niu",
-        "Bo Peng",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.12856v1",
-      "published": "2026-11-09T18:45:28Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "What kills $v$-prediction? A Patch-wise PCA Perspective on Pixel-Space Flow Matching",
-      "summary": "Latent Diffusion Models dominate generative modeling but face two-stage training complexity and the inherent reconstruction limits of pre-trained autoencoders. Pixel-space Flow Matching offers a simplified end-to-end alternative yet often encounters training difficulties when usi…",
-      "authors": [
-        "Tianze Luo",
-        "Haofeng Huang",
-        "Yuan Yao"
-      ],
-      "link": "http://arxiv.org/abs/2611.12852v1",
-      "published": "2026-11-09T18:44:37Z",
+      "link": "http://arxiv.org/abs/2611.14519v1",
+      "published": "2026-11-10T18:59:54Z",
       "category": "cs.CV"
     },
     {
-      "title": "Mitigating Agentic Deception via Evaluation-Side Partially Observable Games",
-      "summary": "As large language models become more capable agents, they can exhibit deceptive behaviors, cheating human for higher rewards while appearing helpful. We attribute this failure to evaluation-side partial observability, where models are evaluated mainly from final outcome, without …",
+      "title": "Toward Foundation Detection Models via Example-Based Grounding in EM-DETR",
+      "summary": "DeepLearning (DL)-based Computer-Aided Diagnostic (CAD) systems have shown great promise in supporting clinicians, but their performance heavily depends on the availability of large, well-annotated datasets. In medical lesion detection, the scarcity of comprehensive, stan dardize…",
       "authors": [
-        "Hanxiao Li",
-        "Shutong Liu",
-        "Yongjia Ma",
+        "Sheethal Bhat",
+        "Bogdan Georgescu",
+        "Awais Mansoor",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.12835v1",
-      "published": "2026-11-09T18:33:13Z",
+      "link": "http://arxiv.org/abs/2611.14518v1",
+      "published": "2026-11-10T18:59:17Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "TorchCurves: Differentiable Parametric Curves",
+      "summary": "We present TorchCurves, a PyTorch library that treats vector-valued parametric curves as learnable primitives. Its central operation maps batches of scalar inputs to points on curves represented in B-spline or Legendre polynomial bases, with differentiation through both inputs an…",
+      "authors": [
+        "Alex Shtoff"
+      ],
+      "link": "http://arxiv.org/abs/2611.14516v1",
+      "published": "2026-11-10T18:58:52Z",
       "category": "cs.LG"
     },
     {
-      "title": "Programming Prescience: Issues in Human Construction of Forecasting Bots",
-      "summary": "AI models' growing capacity for complex reasoning has made them attractive tools for forecasting, or the systematic prediction of the future based on past and present data. However, should AI forecasting systems be adopted, human builders will shoulder the work of building and ev…",
+      "title": "AutoScaffold: AI-Guided Scaffolding for Reinforcement Learning of Language Models",
+      "summary": "Reinforcement learning with verifiable rewards (RLVR) produces rich training experience, yet outcome rewards reduce each attempt to a single number and leave most of this information unused. Training-time scaffolds, such as strategies or hints added to the prompt during training,…",
       "authors": [
-        "Priya Dhawka",
-        "Benjamin Wilson",
-        "Andrew Head"
+        "Zijian Zhang",
+        "Rizhen Hu",
+        "Jiangweizhi Peng",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.12834v1",
-      "published": "2026-11-09T18:33:13Z",
-      "category": "cs.HC"
+      "link": "http://arxiv.org/abs/2611.14515v1",
+      "published": "2026-11-10T18:58:46Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations",
+      "summary": "LLM agents are increasingly used for open-ended, data-driven scientific discovery, yet most of them evaluate hypotheses pointwise, testing an empirical claim $h$ only against its complement $\\neg h$. When evidence rejects $h$, the agent learns that one explanation is unlikely but…",
+      "authors": [
+        "Ziang Liu",
+        "James J. Kim",
+        "Yijia Dai",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.14514v1",
+      "published": "2026-11-10T18:58:43Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Pyrite: Building and Benchmarking Protein-Ligand Pose Ranking Agents",
+      "summary": "Predicting how a ligand binds to its target is central to small-molecule drug discovery. Modern cofolding models can generate diverse candidate poses, but reliably ranking these candidates remains challenging. We introduce Pyrite, a pairwise pose-ranking benchmark comprising 1,50…",
+      "authors": [
+        "Megha Srivastava",
+        "Michael H. Lim",
+        "Allison M. Keys",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.14511v1",
+      "published": "2026-11-10T18:56:32Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "When Does the Real Wiring Win? Testing connectome structure-function claims against unmeasured physiology",
+      "summary": "Connectome-constrained models are often used to argue that a measured wiring diagram outperforms shuffled or rewired wiring, and hence that structure shapes function. Such comparisons can confound wiring with how the models are tuned: a connectome fixes who connects to whom, not …",
+      "authors": [
+        "Yeyuan Liu"
+      ],
+      "link": "http://arxiv.org/abs/2611.14508v1",
+      "published": "2026-11-10T18:55:48Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Continual-ARC: Measuring Skill Acquisition over a Working Lifetime",
+      "summary": "Agent harnesses have emerged as a promising mechanism for continual learning, alongside test-time parametric learning. However, the current benchmarks have several limitations: they generally focus on a single applied domain, serve each instance only once, and assume a single fam…",
+      "authors": [
+        "Daniel Lenton"
+      ],
+      "link": "http://arxiv.org/abs/2611.14505v1",
+      "published": "2026-11-10T18:55:01Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Emergent Biological Capabilities in a Foundation Model for Molecular Interactions",
+      "summary": "Foundation models trained on large unlabeled corpora develop emergent capabilities, tasks that go beyond the training objective. We extend this paradigm to multimodal biology with Bonbon, a foundation model for molecular interactions trained on approximately 3.2 trillion tokens o…",
+      "authors": [
+        "Adi Mashiach"
+      ],
+      "link": "http://arxiv.org/abs/2611.14504v1",
+      "published": "2026-11-10T18:53:01Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
+      "summary": "Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool workflows. We present a three-phase comparative study of three evaluation frameworks, each representing a distinct evaluation pa…",
+      "authors": [
+        "Howard Zhang",
+        "Chuck Arvin",
+        "Logan Brown",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.14493v1",
+      "published": "2026-11-10T18:50:06Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
+      "summary": "Business process automation runs the same Standard Operating Procedure (SOP) again and again on new inputs. Large Language Model (LLM) agents can follow an SOP written in natural language, but they call an LLM to choose every step of every run, which adds latency and cost at scal…",
+      "authors": [
+        "Kaiyuan Hou",
+        "Yang Ping Kuo",
+        "Indranil Bhattacharya",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.14492v1",
+      "published": "2026-11-10T18:49:47Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics",
+      "summary": "Time series analytics has been widely applied across various domains. While existing time series foundation models (TSFMs) have demonstrated promising results, they still face two major challenges: 1) Most TSFMs mainly rely on stacking Transformer layers to increase parameter siz…",
+      "authors": [
+        "Peng Chen",
+        "Yihang Wang",
+        "Zhongwen Rao",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.14491v1",
+      "published": "2026-11-10T18:49:26Z",
+      "category": "cs.LG"
     }
   ]
 }

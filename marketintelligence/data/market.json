@@ -1,25 +1,25 @@
 {
   "last_updated": {
-    "date": "10 Nov 2026",
-    "time": "17:01 IST",
-    "iso": "2026-11-10T17:01:03.003345+00:00"
+    "date": "11 Nov 2026",
+    "time": "16:49 IST",
+    "iso": "2026-11-11T16:49:53.573780+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udfe1",
     "bias": "Neutral",
-    "confidence": 51,
+    "confidence": 47,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 51
+    "conviction": 47
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
-      "confidence": 22,
-      "support": 73828.47,
+      "confidence": 23,
+      "support": 72839.9,
       "resistance": 80668.65,
       "trade_plan": "Fade rallies while below resistance."
     },
@@ -27,49 +27,49 @@
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 2089.12,
+      "support": 2016.83,
       "resistance": 2434.86,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 48,
-    "flow": 47,
+    "macro": 40,
+    "flow": 45,
     "technical": 36,
-    "risk": 12
+    "risk": 16
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Binance warns iOS flaw could expose crypto wallet keys"
+      "text": "Bitcoin short-term holders send 47K BTC to exchanges at a loss"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Ex-employee sues Ethereum Foundation and Vitalik Buterin over firing"
+      "text": "Bitget Wallet reports sevenfold jump in crypto phishing risk alerts"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin price eyes $74K as Fed rate-hike bets hit 96% after Waller speech"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "BitGo Q3 profit nearly doubles on crypto gains as revenue falls 51%"
+      "text": "Bitmine posts $6.3B net loss for fiscal 2026 as Ether prices slide"
     },
     {
       "emoji": "\ud83d\udd34",
-      "text": "BlackRock Bitcoin ETF outflows hit $1.66B over seven trading sessions"
+      "text": "ECB warns legislative delays could postpone digital euro launch"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Securitize agrees to buy River One to expand into asset-backed lending"
+      "text": "Stock ETF buyers pounce on dip as Bitcoin funds bleed $1.6 billion"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "SEC enforcement actions fall 24%, crypto cases in spotlight"
     },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
     },
     {
-      "emoji": "\ud83d\udfe1",
-      "text": "Crypto exchanges need hard dollar caps on hot wallets, CertiK says"
+      "emoji": "\ud83d\udd34",
+      "text": "Initia confirms second exploit in 3 weeks, $3.27M stolen in latest attack"
     }
   ],
   "events": [

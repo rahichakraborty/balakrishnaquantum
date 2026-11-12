@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "12 Nov 2026",
+    "time": "17:09 IST",
+    "iso": "2026-11-12T17:09:28.940580+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 46,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 46
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 20,
+      "support": 72839.9,
+      "resistance": 80332.03,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 2016.83,
+      "resistance": 2419.17,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 42,
+    "flow": 43,
+    "technical": 35,
+    "risk": 23
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Tron and Tether bring in Chainalysis after T3 crime unit folds"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Ethlabs drops Hegot\u00e1 slot proposal in push for 2027 quantum readiness"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "BlackRock Bitcoin ETF outflows hit $2B over nine sessions"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "South Korea to permit crypto withdrawal freezes during hacking threats"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Binance CSO unwittingly foreshadowed $6.3B hack tactic months before attack"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "MSCI confirms Strategy\u2019s removal from indexes at end of November"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Suiet wallet to shut down in latest exit from Sui ecosystem"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "green",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

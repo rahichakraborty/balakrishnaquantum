@@ -1,147 +1,154 @@
 {
-  "generated_at": "2026-11-12T21:41:05+00:00",
+  "generated_at": "2026-11-13T10:26:47+00:00",
   "items": [
     {
-      "title": "Medical Image Segmentation: Foundation Model Adaptation versus Task-Specific Training",
-      "summary": "Foundation models pretrained on large natural-image collections are increasingly adapted for medical image segmentation, in the expectation that they will replace models trained for each task. Most comparisons, however, use data from the training distribution and a single task-sp…",
+      "title": "Unbundling Multimodal Vision Encoding",
+      "summary": "How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choic…",
       "authors": [
-        "Emre Kutlusan",
-        "Yongmin Li"
+        "Ellis Brown",
+        "Chris Hoang",
+        "Shengyi Qian",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.14519v1",
-      "published": "2026-11-10T18:59:54Z",
+      "link": "http://arxiv.org/abs/2611.17334v1",
+      "published": "2026-11-12T18:59:54Z",
       "category": "cs.CV"
     },
     {
-      "title": "Toward Foundation Detection Models via Example-Based Grounding in EM-DETR",
-      "summary": "DeepLearning (DL)-based Computer-Aided Diagnostic (CAD) systems have shown great promise in supporting clinicians, but their performance heavily depends on the availability of large, well-annotated datasets. In medical lesion detection, the scarcity of comprehensive, stan dardize…",
+      "title": "ArchSpace: Recording, Reviewing, and Referencing LLM Architecture Research",
+      "summary": "Model architecture shapes the scaling behavior, training efficiency, and inference cost of LLMs, making it a central focus of both industry and academia. In industry, teams such as those behind DeepSeek, Qwen, and Kimi routinely introduce architectural innovations, yet public rep…",
       "authors": [
-        "Sheethal Bhat",
-        "Bogdan Georgescu",
-        "Awais Mansoor",
+        "Jie Wang",
+        "Tong Zhu",
+        "JiaHao Kuang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.14518v1",
-      "published": "2026-11-10T18:59:17Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2611.17332v1",
+      "published": "2026-11-12T18:59:52Z",
+      "category": "cs.CL"
     },
     {
-      "title": "TorchCurves: Differentiable Parametric Curves",
-      "summary": "We present TorchCurves, a PyTorch library that treats vector-valued parametric curves as learnable primitives. Its central operation maps batches of scalar inputs to points on curves represented in B-spline or Legendre polynomial bases, with differentiation through both inputs an…",
+      "title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
+      "summary": "Institutional portfolios operate under investment policy statements that specify asset allocation constraints, often conditioned on market regime information. Deep reinforcement learning has been shown to optimize financial performance but typically does not enforce rule complian…",
       "authors": [
-        "Alex Shtoff"
+        "Zeynep Yıldız",
+        "Satchit Chatterji",
+        "Ercan Atam",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.14516v1",
-      "published": "2026-11-10T18:58:52Z",
+      "link": "http://arxiv.org/abs/2611.17329v1",
+      "published": "2026-11-12T18:59:37Z",
       "category": "cs.LG"
     },
     {
-      "title": "AutoScaffold: AI-Guided Scaffolding for Reinforcement Learning of Language Models",
-      "summary": "Reinforcement learning with verifiable rewards (RLVR) produces rich training experience, yet outcome rewards reduce each attempt to a single number and leave most of this information unused. Training-time scaffolds, such as strategies or hints added to the prompt during training,…",
+      "title": "AgentSSL: Can MLE Agents Leverage Unlabeled Data?",
+      "summary": "Applying machine learning systems to new domains introduces bottlenecks in both labeled data acquisition and manual pipeline engineering. While recent MLE agents show promise in automating pipeline design, they have been studied almost exclusively in fully supervised settings, le…",
       "authors": [
-        "Zijian Zhang",
-        "Rizhen Hu",
-        "Jiangweizhi Peng",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.14515v1",
-      "published": "2026-11-10T18:58:46Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations",
-      "summary": "LLM agents are increasingly used for open-ended, data-driven scientific discovery, yet most of them evaluate hypotheses pointwise, testing an empirical claim $h$ only against its complement $\\neg h$. When evidence rejects $h$, the agent learns that one explanation is unlikely but…",
-      "authors": [
+        "Ethan Lin",
+        "Akanksha Sarkar",
         "Ziang Liu",
-        "James J. Kim",
-        "Yijia Dai",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.14514v1",
-      "published": "2026-11-10T18:58:43Z",
+      "link": "http://arxiv.org/abs/2611.17323v1",
+      "published": "2026-11-12T18:59:06Z",
       "category": "cs.AI"
     },
     {
-      "title": "Pyrite: Building and Benchmarking Protein-Ligand Pose Ranking Agents",
-      "summary": "Predicting how a ligand binds to its target is central to small-molecule drug discovery. Modern cofolding models can generate diverse candidate poses, but reliably ranking these candidates remains challenging. We introduce Pyrite, a pairwise pose-ranking benchmark comprising 1,50…",
+      "title": "Learning When Diffusion Language Models Should Regenerate",
+      "summary": "Remasking allows diffusion language models to revisit generated text, but effective correction requires knowing when and what to revise. Our diagnosis on Sudoku reveals two gaps. Hidden states contain error information that token confidence does not reliably expose, and remasking…",
       "authors": [
-        "Megha Srivastava",
-        "Michael H. Lim",
-        "Allison M. Keys",
+        "Minhae Oh",
+        "Jeonghye Kim",
+        "Jinwoo Koo",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.14511v1",
-      "published": "2026-11-10T18:56:32Z",
-      "category": "cs.LG"
+      "link": "http://arxiv.org/abs/2611.17320v1",
+      "published": "2026-11-12T18:58:50Z",
+      "category": "cs.CL"
     },
     {
-      "title": "When Does the Real Wiring Win? Testing connectome structure-function claims against unmeasured physiology",
-      "summary": "Connectome-constrained models are often used to argue that a measured wiring diagram outperforms shuffled or rewired wiring, and hence that structure shapes function. Such comparisons can confound wiring with how the models are tuned: a connectome fixes who connects to whom, not …",
+      "title": "CoReMem: Cost-Internalizing Memory for Successive Coding Tasks with Prospective Valuation",
+      "summary": "Coding agents tackle successive tasks on an evolving repository, carrying forward edits and writing memory before the next task is known. Selecting memory for unknown next tasks requires balancing future usefulness against the costs of writing and reading it. The actor must also …",
       "authors": [
-        "Yeyuan Liu"
-      ],
-      "link": "http://arxiv.org/abs/2611.14508v1",
-      "published": "2026-11-10T18:55:48Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Continual-ARC: Measuring Skill Acquisition over a Working Lifetime",
-      "summary": "Agent harnesses have emerged as a promising mechanism for continual learning, alongside test-time parametric learning. However, the current benchmarks have several limitations: they generally focus on a single applied domain, serve each instance only once, and assume a single fam…",
-      "authors": [
-        "Daniel Lenton"
-      ],
-      "link": "http://arxiv.org/abs/2611.14505v1",
-      "published": "2026-11-10T18:55:01Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Emergent Biological Capabilities in a Foundation Model for Molecular Interactions",
-      "summary": "Foundation models trained on large unlabeled corpora develop emergent capabilities, tasks that go beyond the training objective. We extend this paradigm to multimodal biology with Bonbon, a foundation model for molecular interactions trained on approximately 3.2 trillion tokens o…",
-      "authors": [
-        "Adi Mashiach"
-      ],
-      "link": "http://arxiv.org/abs/2611.14504v1",
-      "published": "2026-11-10T18:53:01Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
-      "summary": "Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool workflows. We present a three-phase comparative study of three evaluation frameworks, each representing a distinct evaluation pa…",
-      "authors": [
-        "Howard Zhang",
-        "Chuck Arvin",
-        "Logan Brown",
+        "Peiwen Li",
+        "Harshit Verma",
+        "Sophia Zhou",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.14493v1",
-      "published": "2026-11-10T18:50:06Z",
+      "link": "http://arxiv.org/abs/2611.17316v1",
+      "published": "2026-11-12T18:58:22Z",
       "category": "cs.AI"
     },
     {
-      "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
-      "summary": "Business process automation runs the same Standard Operating Procedure (SOP) again and again on new inputs. Large Language Model (LLM) agents can follow an SOP written in natural language, but they call an LLM to choose every step of every run, which adds latency and cost at scal…",
+      "title": "Linking Rapid Learning to Compositional Structure in Neural Networks: Evidence from Additive Analogies in Meta-Learned Parameter Spaces",
+      "summary": "Humans can learn rapidly from limited experience, while neural networks typically require extensive training. In this work, we investigate what properties of a neural network can enable it to learn rapidly. We study neural networks that have been optimized via meta-learning, a te…",
       "authors": [
-        "Kaiyuan Hou",
-        "Yang Ping Kuo",
-        "Indranil Bhattacharya",
+        "Abigail L. Tenenbaum",
+        "R. Thomas McCoy"
+      ],
+      "link": "http://arxiv.org/abs/2611.17314v1",
+      "published": "2026-11-12T18:57:49Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Sketching Language Models for Context Attribution",
+      "summary": "Context attribution asks how removing parts of a prompt changes a language model's output. We study leave-one-out (LOO) attribution for a prompt of $n$ tokens and a fixed measurement function. Computing all LOO values directly requires $n$ model evaluations. Under a stability ass…",
+      "authors": [
+        "Christopher Liaw",
+        "Aranyak Mehta",
+        "Grigoris Velegkas",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.14492v1",
-      "published": "2026-11-10T18:49:47Z",
+      "link": "http://arxiv.org/abs/2611.17313v1",
+      "published": "2026-11-12T18:57:48Z",
+      "category": "cs.DS"
+    },
+    {
+      "title": "Classical Energies Learn to Reason 1,000x Faster than Looped Models",
+      "summary": "Looped models have emerged as a prominent paradigm for reasoning, with successes on simple reasoning puzzles such as Sudoku-Extreme and Maze-Unique. However, these models can be unstable, slow to train, and use many parameters and FLOPs to solve simple puzzles. Descent on an ener…",
+      "authors": [
+        "Benjamin Hoover",
+        "Hugh Blayney",
+        "James C. R. Whittington"
+      ],
+      "link": "http://arxiv.org/abs/2611.17309v1",
+      "published": "2026-11-12T18:56:56Z",
       "category": "cs.AI"
     },
     {
-      "title": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics",
-      "summary": "Time series analytics has been widely applied across various domains. While existing time series foundation models (TSFMs) have demonstrated promising results, they still face two major challenges: 1) Most TSFMs mainly rely on stacking Transformer layers to increase parameter siz…",
+      "title": "Quantifying structural stability of transparent models for general insurance pricing",
+      "summary": "The short duration of general insurance contracts leads to rapid distributional shifts in the data, warranting regular model updates. This process may yield a post-update model that differs considerably from the pre-update model in both predictions and structure. Structural stabi…",
       "authors": [
-        "Peng Chen",
-        "Yihang Wang",
-        "Zhongwen Rao",
+        "Félix Côté",
+        "Marie-Pier Côté"
+      ],
+      "link": "http://arxiv.org/abs/2611.17308v1",
+      "published": "2026-11-12T18:56:54Z",
+      "category": "stat.ML"
+    },
+    {
+      "title": "Towards a Theory of Learnability via Debate",
+      "summary": "Debate has been recently proposed as a training protocol that is hoped to produce more aligned models even as model capabilities scale. The idea is that the human, instead of providing supervision in the form of labels, judges a debate between two models that compete to prove the…",
+      "authors": [
+        "Tosca Lechner",
+        "Vinayak Pathak",
+        "Sivan Sabato",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.14491v1",
-      "published": "2026-11-10T18:49:26Z",
+      "link": "http://arxiv.org/abs/2611.17303v1",
+      "published": "2026-11-12T18:55:58Z",
       "category": "cs.LG"
+    },
+    {
+      "title": "FLEX-LBP: Learning Local Binary Patterns with Exact Binary Inference for Texture Classification",
+      "summary": "Local Binary Patterns (LBP) remain among the most widely used texture descriptors, from industrial inspection to medical imaging. Yet their radius, sampling angles, color transform and thresholds are fixed by hand for each dataset. We present FLEX-LBP, which learns these paramete…",
+      "authors": [
+        "Mohamed Alimoussa",
+        "Amal El Kaid"
+      ],
+      "link": "http://arxiv.org/abs/2611.17302v1",
+      "published": "2026-11-12T18:55:56Z",
+      "category": "cs.CV"
     }
   ]
 }

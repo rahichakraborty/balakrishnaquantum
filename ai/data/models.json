@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-13T10:26:54+00:00",
+  "generated_at": "2026-11-13T21:08:20+00:00",
   "items": [
     {
       "id": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
       "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
       "downloads": 21586,
-      "likes": 4831,
+      "likes": 5379,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "MiniMaxAI/MiniMax-H3-Image",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
       "downloads": 437039,
-      "likes": 934,
+      "likes": 995,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "NousResearch/Arete-27B",
       "url": "https://huggingface.co/NousResearch/Arete-27B",
       "downloads": 5545,
-      "likes": 508,
+      "likes": 535,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 2778909,
-      "likes": 11675,
+      "likes": 11761,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "speridlabs/idol",
       "url": "https://huggingface.co/speridlabs/idol",
       "downloads": 31367,
-      "likes": 2255,
+      "likes": 2282,
       "pipeline_tag": "image-to-3d"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "downloads": 6960395,
-      "likes": 19786,
+      "likes": 19852,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
       "downloads": 1639400,
-      "likes": 2998,
+      "likes": 3040,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "moonshotai/Kimi-K3.1-Pro",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "downloads": 40953,
+      "likes": 2018,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Comfy-Org/MiniMax-H3-Image",
       "url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image",
       "downloads": 1257301,
-      "likes": 319,
+      "likes": 341,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "ccore/Qwen3.5-4B-3D-Coder",
       "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder",
       "downloads": 392582,
-      "likes": 1066,
+      "likes": 1079,
       "pipeline_tag": null
-    },
-    {
-      "id": "black-forest-labs/flux-3-image-klein-comfy",
-      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
-      "downloads": 1330289,
-      "likes": 3049,
-      "pipeline_tag": "image-to-image"
     }
   ]
 }

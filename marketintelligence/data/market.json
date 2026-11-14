@@ -1,75 +1,75 @@
 {
   "last_updated": {
-    "date": "13 Nov 2026",
-    "time": "16:53 IST",
-    "iso": "2026-11-13T16:53:34.259528+00:00"
+    "date": "14 Nov 2026",
+    "time": "16:16 IST",
+    "iso": "2026-11-14T16:16:22.439287+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udd34",
     "bias": "Mild Bearish",
-    "confidence": 31,
-    "todays_trade": "Reduce Size",
+    "confidence": 40,
+    "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
-    "risk_level": "High",
-    "risk_note": "Reduce Size",
-    "conviction": 31
+    "risk_level": "Medium",
+    "risk_note": "Watch Headlines",
+    "conviction": 40
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
       "confidence": 20,
-      "support": 68061.87,
-      "resistance": 76124.97,
+      "support": 66690.7,
+      "resistance": 75986.18,
       "trade_plan": "Fade rallies while below resistance."
     },
     "ETH": {
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 1909.24,
-      "resistance": 2248.18,
+      "support": 1882.26,
+      "resistance": 2244.65,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 38,
-    "flow": 26,
+    "macro": 42,
+    "flow": 38,
     "technical": 35,
-    "risk": 90
+    "risk": 52
   },
   "drivers": [
     {
-      "emoji": "\ud83d\udd34",
-      "text": "Unocoin keeps deposits and withdrawals halted over suspect transfers"
+      "emoji": "\ud83d\udfe1",
+      "text": "Microsoft confirms global outage resolved, rules out cyberattack"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin returns to 200-week trend line as analyst sees risk of $57.7K next"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "DOJ moves to seize $1.2B from Binance hack, disrupts FaceStealer scam"
+      "text": "MegaETH parent cuts 20% of staff amid restructuring, AI push"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Jane Street boosts Fidelity Bitcoin ETF holdings nearly 8x, trims IBIT"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Microsoft 365 outage hits Outlook email and Teams calendars worldwide"
+      "text": "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock\u2019s losing streak hits 11"
     },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
     },
     {
-      "emoji": "\ud83d\udd34",
-      "text": "Bitcoin slides below $70K amid thin liquidity, ETF outflows"
+      "emoji": "\ud83d\udfe1",
+      "text": "OpenAI launches AI payments in ChatGPT with Visa, Mastercard and Amex"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Trump nominates Hester Peirce successor among SEC, CFTC picks"
+      "text": "Adam Back makes case for simpler security as Blockstream launches Bitcoin custody system"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Kraken parent Payward gains market share as slower trading weighs on earnings"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "US regulators move ahead on crypto trust charters as Senate scrutiny grows"
     }
   ],
   "events": [
@@ -86,7 +86,7 @@
     "Open Interest": "green",
     "Fear & Greed": "yellow",
     "Macro": "green",
-    "News": "red",
+    "News": "yellow",
     "Risk": "green"
   }
 }

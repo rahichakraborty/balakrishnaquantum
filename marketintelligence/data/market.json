@@ -1,25 +1,25 @@
 {
   "last_updated": {
-    "date": "14 Nov 2026",
-    "time": "16:16 IST",
-    "iso": "2026-11-14T16:16:22.439287+00:00"
+    "date": "15 Nov 2026",
+    "time": "16:52 IST",
+    "iso": "2026-11-15T16:52:13.987880+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udd34",
     "bias": "Mild Bearish",
-    "confidence": 40,
-    "todays_trade": "Wait For Confirmation",
+    "confidence": 34,
+    "todays_trade": "Reduce Size",
     "preferred_asset": "ETH",
-    "risk_level": "Medium",
-    "risk_note": "Watch Headlines",
-    "conviction": 40
+    "risk_level": "High",
+    "risk_note": "Reduce Size",
+    "conviction": 34
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
       "confidence": 20,
-      "support": 66690.7,
+      "support": 62612.09,
       "resistance": 75986.18,
       "trade_plan": "Fade rallies while below resistance."
     },
@@ -27,18 +27,34 @@
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 1882.26,
-      "resistance": 2244.65,
+      "support": 1729.19,
+      "resistance": 2239.07,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 42,
-    "flow": 38,
+    "macro": 35,
+    "flow": 33,
     "technical": 35,
-    "risk": 52
+    "risk": 67
   },
   "drivers": [
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin falls to four-month low near $62K as crypto selloff deepens"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Coinone warns of phishing, identity theft after customer data breach"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "RWA protocol stUSDT winds down three years after $2.3B TVL peak"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Microsoft confirms global outage resolved, rules out cyberattack"
@@ -53,23 +69,7 @@
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Here\u2019s what happened in crypto today"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
       "text": "OpenAI launches AI payments in ChatGPT with Visa, Mastercard and Amex"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Adam Back makes case for simpler security as Blockstream launches Bitcoin custody system"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Kraken parent Payward gains market share as slower trading weighs on earnings"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "US regulators move ahead on crypto trust charters as Senate scrutiny grows"
     }
   ],
   "events": [
@@ -86,7 +86,7 @@
     "Open Interest": "green",
     "Fear & Greed": "yellow",
     "Macro": "green",
-    "News": "yellow",
+    "News": "red",
     "Risk": "green"
   }
 }

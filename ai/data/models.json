@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-15T20:05:38+00:00",
+  "generated_at": "2026-11-16T10:32:01+00:00",
   "items": [
     {
       "id": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
       "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
       "downloads": 27037,
-      "likes": 7501,
+      "likes": 7618,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "MiniMaxAI/MiniMax-H3-Image",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
       "downloads": 571067,
-      "likes": 1172,
+      "likes": 1238,
       "pipeline_tag": "text-to-image"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 6547772,
-      "likes": 20096,
+      "downloads": 6763402,
+      "likes": 20171,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 2754355,
-      "likes": 12036,
+      "downloads": 2789021,
+      "likes": 12126,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "Comfy-Org/MiniMax-H3-Image",
       "url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image",
       "downloads": 1973388,
-      "likes": 408,
+      "likes": 434,
       "pipeline_tag": "text-to-image"
-    },
-    {
-      "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
-      "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
-      "downloads": 1708637,
-      "likes": 3157,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Zyphra/ZONOS3-Mini",
       "url": "https://huggingface.co/Zyphra/ZONOS3-Mini",
       "downloads": 39862,
-      "likes": 384,
+      "likes": 421,
       "pipeline_tag": "text-to-speech"
     },
     {
       "id": "thinkingmachines/Inkling-2-Small",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
       "downloads": 7329,
-      "likes": 336,
+      "likes": 363,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "higurashi-ai/Haru-4B",
+      "url": "https://huggingface.co/higurashi-ai/Haru-4B",
+      "downloads": 2098,
+      "likes": 357,
+      "pipeline_tag": "audio-to-audio"
+    },
+    {
+      "id": "unsloth/Qwen3.8-27B-GGUF",
+      "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
+      "downloads": 6666734,
+      "likes": 6019,
+      "pipeline_tag": null
     },
     {
       "id": "speridlabs/idol",
       "url": "https://huggingface.co/speridlabs/idol",
       "downloads": 33423,
-      "likes": 2360,
+      "likes": 2380,
       "pipeline_tag": "image-to-3d"
-    },
-    {
-      "id": "unsloth/Qwen3.8-27B-GGUF",
-      "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-      "downloads": 6566295,
-      "likes": 5992,
-      "pipeline_tag": null
     }
   ]
 }

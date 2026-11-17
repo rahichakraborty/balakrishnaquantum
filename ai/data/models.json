@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-16T23:36:55+00:00",
+  "generated_at": "2026-11-17T11:25:35+00:00",
   "items": [
-    {
-      "id": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
-      "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
-      "downloads": 29567,
-      "likes": 8627,
-      "pipeline_tag": "text-generation"
-    },
     {
       "id": "MiniMaxAI/MiniMax-H3-Image",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
-      "downloads": 609130,
-      "likes": 1309,
+      "downloads": 727110,
+      "likes": 1366,
       "pipeline_tag": "text-to-image"
+    },
+    {
+      "id": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+      "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+      "downloads": 32356,
+      "likes": 9413,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 6763402,
-      "likes": 20260,
+      "downloads": 6942530,
+      "likes": 20334,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 2789021,
-      "likes": 12221,
+      "downloads": 2828071,
+      "likes": 12318,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "Comfy-Org/MiniMax-H3-Image",
       "url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image",
       "downloads": 2294065,
-      "likes": 477,
+      "likes": 506,
       "pipeline_tag": "text-to-image"
-    },
-    {
-      "id": "Zyphra/ZONOS3-Mini",
-      "url": "https://huggingface.co/Zyphra/ZONOS3-Mini",
-      "downloads": 69946,
-      "likes": 459,
-      "pipeline_tag": "text-to-speech"
     },
     {
       "id": "higurashi-ai/Haru-4B",
       "url": "https://huggingface.co/higurashi-ai/Haru-4B",
       "downloads": 3372,
-      "likes": 420,
+      "likes": 461,
       "pipeline_tag": "audio-to-audio"
     },
     {
       "id": "thinkingmachines/Inkling-2-Small",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
-      "downloads": 16918,
-      "likes": 405,
+      "downloads": 18359,
+      "likes": 432,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "Zyphra/ZONOS3-Mini",
+      "url": "https://huggingface.co/Zyphra/ZONOS3-Mini",
+      "downloads": 69946,
+      "likes": 499,
+      "pipeline_tag": "text-to-speech"
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-      "downloads": 6666734,
-      "likes": 6079,
+      "downloads": 6827598,
+      "likes": 6107,
       "pipeline_tag": null
     },
     {
-      "id": "speridlabs/idol",
-      "url": "https://huggingface.co/speridlabs/idol",
-      "downloads": 34752,
-      "likes": 2414,
-      "pipeline_tag": "image-to-3d"
+      "id": "black-forest-labs/flux-3-image-klein-comfy",
+      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
+      "downloads": 1062051,
+      "likes": 3372,
+      "pipeline_tag": "image-to-image"
     }
   ]
 }

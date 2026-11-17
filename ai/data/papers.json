@@ -1,152 +1,157 @@
 {
-  "generated_at": "2026-11-16T23:36:48+00:00",
+  "generated_at": "2026-11-17T11:25:28+00:00",
   "items": [
     {
-      "title": "Pairing AIS with RF: Analysis of a Markovian Approach for Maritime Data Fusion",
-      "summary": "Monitoring maritime activities is important for safety and security, particularly for detecting illegal activities, but remains challenging due to the size and complexity of the maritime domain. The Automatic Identification System (AIS) is commonly used for this purpose, despite …",
+      "title": "Latent Lattice Language Models",
+      "summary": "Language models typically increase per-token computation through deeper or looped layers and latent reasoning steps, while richer residual connections improve information flow across layers. We instead increase computational capacity: the number of active computational states a m…",
       "authors": [
-        "Daniel Grimm",
-        "Kyra Jongman",
-        "Renato Cordeiro Ferreira",
+        "Shivam Duggal",
+        "Zongze Wu",
+        "William T. Freeman",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.18563v1",
-      "published": "2026-11-13T18:59:43Z",
+      "link": "http://arxiv.org/abs/2611.21608v1",
+      "published": "2026-11-16T18:59:38Z",
       "category": "cs.LG"
     },
     {
-      "title": "FETTUCCINE: Fast and efficient brain-to-text decoding on mobile devices",
-      "summary": "Recent advances in speech neuroprostheses have enabled new communication avenues for people who have lost the ability to speak due to neurological illness or injury. These systems can decode neural activity during attempted speech into text by relying on language priors to achiev…",
+      "title": "ViRA: Toward Ultra-High-Resolution Visual Agents via Cross-Input Relative Policy Optimization",
+      "summary": "Visual agents answer questions about ultra-high-resolution photos by zooming into the relevant regions. However, existing agents often answer from common sense instead of reading the evidence. Reinforcement learning (RL) on the final answer cannot correct this, because a guess ea…",
       "authors": [
-        "Jonathan D. McCart",
-        "Pranav I. Deevi",
-        "Mehdi Azabou",
+        "Huawei Lin",
+        "Jinting Liu",
+        "Tongyan Wang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.18561v1",
-      "published": "2026-11-13T18:59:02Z",
-      "category": "q-bio.NC"
+      "link": "http://arxiv.org/abs/2611.21605v1",
+      "published": "2026-11-16T18:59:04Z",
+      "category": "cs.CV"
     },
     {
-      "title": "Training Reasoning Models in Simulation to Natively Use Real Robots",
-      "summary": "Robot-use agents (RUAs) have emerged as a promising approach to general-purpose robot control. However, strong performance has so far been achieved only by frontier proprietary models such as GPT-6 Astra and Claude Fable 5.2, whereas open-weight models remain substantially less c…",
+      "title": "Quantifying the added value of human forecaster discussions for tropical cyclone intensity prediction",
+      "summary": "The National Hurricane Center routinely releases Tropical Cyclone Discussions that offer insights into its tropical cyclone forecasts. This study examines the added value of these discussions for intensity forecasting beyond a set of numerical predictors. For 637 Atlantic and eas…",
       "authors": [
-        "Jiaming Tang",
-        "Zhuoyang Zhang",
-        "Junxian Guo",
+        "Ilia Azizi",
+        "Frederick Iat-Hin Tam",
+        "Marc-Olivier Boldi",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.18562v1",
-      "published": "2026-11-13T18:59:02Z",
+      "link": "http://arxiv.org/abs/2611.21602v1",
+      "published": "2026-11-16T18:58:55Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "How VLMs Plan What's Next",
+      "summary": "When a vision-language model describes an image, it names one object at a time and it rarely repeats itself, yet how the model plans this order is far from obvious. We characterize the mechanism a VLM uses to decide where to look before it looks. The mechanism has four main parts…",
+      "authors": [
+        "Rohit Gandikota",
+        "Arnab Sen Sharma",
+        "Adam Belfki",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.21600v1",
+      "published": "2026-11-16T18:58:30Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Hyperlyve: Parallelized Enumeration and Exact Lyapunov Stability Certification for Deep ReLU Networks",
+      "summary": "We introduce Hyperlyve (Hyperplane Partitioned Lyapunov Verification and Enumeration), a framework for proving the asymptotic stability of nonlinear dynamical systems, including those with neural network controllers. Hyperlyve learns and formally certifies continuous piecewise-af…",
+      "authors": [
+        "Brian Yarbrough",
+        "Jesse Wayment",
+        "Jingbo Wang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.21599v1",
+      "published": "2026-11-16T18:58:29Z",
+      "category": "eess.SY"
+    },
+    {
+      "title": "Mitigating Catastrophic Forgetting with Physics-Indexed Specialist Memory: the Evolutionary Neuroplastic Agent",
+      "summary": "Continual reinforcement learning requires adaptation to changing conditions while preserving performance under previously encountered dynamics. It was investigated whether specialists generated by evolutionary search can provide a reusable memory when combined with environment de…",
+      "authors": [
+        "Blas Eugenio Vicco Zarate",
+        "Miguel Hernán Vicco"
+      ],
+      "link": "http://arxiv.org/abs/2611.21598v1",
+      "published": "2026-11-16T18:58:20Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Optimal Autoregressive Chain-of-Thought Learning via Bagging",
+      "summary": "We study how to learn an autoregressive next-token generator $f\\colonΣ^\\star\\toΣ$ from a class $\\mathcal{F}$, given chain-of-thought (CoT) demonstrations of length $T$ generated by $f$. We present a simple algorithm based on bagging, which outputs a majority vote of generators th…",
+      "authors": [
+        "Awni Altabaa",
+        "John Lafferty",
+        "Omar Montasser"
+      ],
+      "link": "http://arxiv.org/abs/2611.21597v1",
+      "published": "2026-11-16T18:58:07Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "SADL: On the Demand-Supply Geometry of Representation Collapse",
+      "summary": "In Joint-Embedding Predictive Architectures (JEPAs), a well-constrained projector output does not by itself prevent representation collapse. We find that, from initialization, the encoder representation is dominated by a component shared by different inputs. A batch-normalized pr…",
+      "authors": [
+        "Junhan Sun",
+        "Yigui Feng",
+        "Mingzhe Liu",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.21596v1",
+      "published": "2026-11-16T18:58:03Z",
       "category": "cs.RO"
     },
     {
-      "title": "BAL: Bidirectional Autoregression in Latent Space for Learning Human Movement Representations",
-      "summary": "Learning semantically meaningful human movement representations from 3D pose sequences is essential for human behavior modeling. Existing self-supervised methods derive supervision from artificial assumptions, e.g., invariance to augmentation within a certain range or recoverabil…",
+      "title": "Surrogate-Assisted Compact-Model Extraction for SKY130 CMOS at 77 K",
+      "summary": "Cryogenic circuit design requires compact transistor models that reproduce measured low-temperature behavior and run in standard circuit simulators. We fit BSIM4 parameters to measured I-V curves of SkyWater 130 nm (SKY130) transistors at 77 K using a neural surrogate of NGSpice.…",
       "authors": [
-        "Genki Kinoshita",
-        "Ko Nishino"
+        "Aaron Wang",
+        "Olivia Gzamouranis",
+        "Vaibhav Lohia",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.18559v1",
-      "published": "2026-11-13T18:58:54Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2611.21594v1",
+      "published": "2026-11-16T18:57:06Z",
+      "category": "physics.ins-det"
     },
     {
-      "title": "WeightBench: Evaluating Language Models as Weight-Space Programmers",
-      "summary": "Recent work shows that large language models (LLMs) can operate directly on the parameters of other neural networks. They can read what a network was trained to do, fix a network that fails, and write working networks from scratch, all without gradient descent. This capability ha…",
+      "title": "Beyond Job Titles: Interpreting Early-Career Job Advertisements with Sparse Autoencoders and Semantic Clustering",
+      "summary": "Job titles and job descriptions alone provide limited insight into how technical roles differ in a changing job market. To assess how such roles differ in their work and industry applications, we design and compare two methods based on deep learning and transformer representation…",
       "authors": [
-        "Aayush Marasini",
-        "Barsat Khadka",
-        "Nick Rahimi"
+        "Yisong Cao",
+        "Leah Kim",
+        "Brian Wright",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.18553v1",
-      "published": "2026-11-13T18:58:08Z",
+      "link": "http://arxiv.org/abs/2611.21586v1",
+      "published": "2026-11-16T18:54:40Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "CertiSum: Bitwise-Identical MXFP4 Training Across Platforms and Parallelism Layouts",
+      "summary": "Training with MXFP4, a 4-bit microscaling format, is non-deterministic: identical inputs can produce different results across parallelism layouts and GPU vendors. These differences complicate debugging and training audits and can cause training and inference engines to disagree. …",
+      "authors": [
+        "Steve Rhyner",
+        "Yubo Gao",
+        "Stefan de Lasa",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.21584v1",
+      "published": "2026-11-16T18:54:07Z",
       "category": "cs.LG"
     },
     {
-      "title": "Imitation Bootstrapped Multi-Agent Reinforcement Learning",
-      "summary": "Demonstrations are an effective way to accelerate single-agent reinforcement learning (RL), but extending this idea to multi-agent reinforcement learning (MARL) is non-trivial as it is difficult and often impossible for a single person to teleoperate multiple agents simultaneousl…",
+      "title": "ScenarioForge: Resource-Grounded Generation and Execution Validation of Cyber Exercises",
+      "summary": "Cyber-range and capture-the-flag scenario construction remains labor-intensive because authors must coordinate infrastructure, vulnerable services, attack paths, artifacts, and success conditions. LLMs can propose detailed exercises, but plausible descriptions do not guarantee de…",
       "authors": [
-        "Tony H. Zhang",
-        "Connor Mattson",
-        "Daniel S. Brown"
+        "Jaime C. Acosta",
+        "Anantaa Kotal",
+        "Aritran Piplai"
       ],
-      "link": "http://arxiv.org/abs/2611.18543v1",
-      "published": "2026-11-13T18:50:05Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Elliptic Sampling: Optimal Interpolant Schedules for Gaussians and Beyond",
-      "summary": "Generative modeling based on stochastic interpolants requires specifying two key choices: an interpolant schedule bridging the initial and target distributions, and an efficient discretization of the resulting probability-flow ODE. In this work, we introduce a new framework for j…",
-      "authors": [
-        "Cole Becker",
-        "Taylan Kargin",
-        "Kimia Hassibi",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.18542v1",
-      "published": "2026-11-13T18:49:36Z",
-      "category": "stat.ML"
-    },
-    {
-      "title": "Why Finite Intelligence Works in an Infinite World: A Mathematical Theory",
-      "summary": "An information system often has to learn before it knows what it will be asked. A finite representation can succeed without recording an infinite environment in full when those asks share collective structure, rather than demand unrelated facts scattered arbitrarily across it. We…",
-      "authors": [
-        "Mojtaba Soltanalian"
-      ],
-      "link": "http://arxiv.org/abs/2611.18538v1",
-      "published": "2026-11-13T18:47:24Z",
-      "category": "cs.IT"
-    },
-    {
-      "title": "ModHarness-RL: Recasting Harnesses as Learnable and Evolving Programs for Agentic RL",
-      "summary": "Agentic reinforcement learning (RL) increasingly relies on a harness, the scaffold around the model that decides what it sees of its own interaction and what guidance it receives. Most existing approaches train under a hand-written harness that stays fixed throughout. However, an…",
-      "authors": [
-        "Zelin He",
-        "Siyu Zhu",
-        "Jacob Helwig",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.18533v1",
-      "published": "2026-11-13T18:45:49Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Alignment by Socialization: Learning Tradeoffs Under Selection",
-      "summary": "Artificial intelligence (AI) agents are expected to complete tasks while following rules of conduct, but these objectives can conflict. We study how evolutionary selection shapes an agent's choices between them, and whether experience can make those choices reflect human judgment…",
-      "authors": [
-        "Thomas Brennan",
-        "Andrew W. Lo",
-        "Chaoyi Zhao"
-      ],
-      "link": "http://arxiv.org/abs/2611.18531v1",
-      "published": "2026-11-13T18:43:24Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Understanding Contextual Bias in Agricultural CNNs Through Hidden-Neuron Concept Induction",
-      "summary": "Convolutional Neural Networks (CNNs) can classify images using background-dominated patches that contain little or none of the target object, showing that they exploit contextual information. Previous studies detected this behavior through classification accuracy but say little a…",
-      "authors": [
-        "Abhilekha Dalal",
-        "Avishek Das",
-        "Samatha Ereshi Akkamahadevi"
-      ],
-      "link": "http://arxiv.org/abs/2611.18530v1",
-      "published": "2026-11-13T18:43:15Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "WaferTetris: Efficient Freeform Mapping on Wafer-Scale Accelerators",
-      "summary": "Wafer-scale accelerators offer massive compute capacity through hundreds of thousands of processing elements (PEs) interconnected across a single wafer, but realizing this potential requires efficient application mapping. Their scale makes programming these systems and mapping ap…",
-      "authors": [
-        "Dayou Du",
-        "Congjie He",
-        "Andrew Boutros",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.18527v1",
-      "published": "2026-11-13T18:41:44Z",
-      "category": "cs.AR"
+      "link": "http://arxiv.org/abs/2611.21579v1",
+      "published": "2026-11-16T18:49:56Z",
+      "category": "cs.CR"
     }
   ]
 }

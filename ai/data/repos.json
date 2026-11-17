@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-11-16T23:36:54+00:00",
+  "generated_at": "2026-11-17T11:25:34+00:00",
   "items": [
     {
       "name": "affaan-m/ECC",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 304614,
+      "stars": 304947,
       "language": "JavaScript",
-      "updated_at": "2026-11-16T22:10:32Z",
+      "updated_at": "2026-11-17T06:41:46Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/124439313?v=4"
     },
     {
       "name": "deepseek-ai/deepseek-harness",
       "description": "DeepSeek Harness: Everything is a Plugin.",
       "url": "https://github.com/deepseek-ai/deepseek-harness",
-      "stars": 282325,
+      "stars": 282724,
       "language": "TypeScript",
       "updated_at": "2026-11-13T07:56:25Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/148330874?v=4"
@@ -23,72 +23,72 @@
       "name": "NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 263907,
+      "stars": 264065,
       "language": "Python",
-      "updated_at": "2026-11-16T23:29:15Z",
+      "updated_at": "2026-11-17T11:25:18Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/134168893?v=4"
     },
     {
       "name": "firecrawl/firecrawl",
       "description": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
       "url": "https://github.com/firecrawl/firecrawl",
-      "stars": 202350,
+      "stars": 202477,
       "language": "TypeScript",
-      "updated_at": "2026-11-16T23:34:36Z",
+      "updated_at": "2026-11-17T10:44:45Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/135057108?v=4"
     },
     {
       "name": "tensorflow/tensorflow",
       "description": "An Open Source Machine Learning Framework for Everyone",
       "url": "https://github.com/tensorflow/tensorflow",
-      "stars": 201605,
+      "stars": 201624,
       "language": "C++",
-      "updated_at": "2026-11-16T23:25:27Z",
+      "updated_at": "2026-11-17T11:22:19Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/15658638?v=4"
     },
     {
       "name": "Significant-Gravitas/AutoGPT",
       "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "stars": 188062,
+      "stars": 188072,
       "language": "Python",
-      "updated_at": "2026-11-16T23:34:02Z",
+      "updated_at": "2026-11-17T11:24:49Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/130738209?v=4"
     },
     {
       "name": "ollama/ollama",
       "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
       "url": "https://github.com/ollama/ollama",
-      "stars": 187262,
+      "stars": 187336,
       "language": "Go",
-      "updated_at": "2026-11-16T18:14:32Z",
+      "updated_at": "2026-11-17T04:54:35Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/151674099?v=4"
     },
     {
       "name": "f/prompts.chat",
       "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
       "url": "https://github.com/f/prompts.chat",
-      "stars": 177674,
+      "stars": 177719,
       "language": "MDX",
-      "updated_at": "2026-11-16T03:14:07Z",
+      "updated_at": "2026-11-17T03:12:36Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/196477?v=4"
     },
     {
       "name": "huggingface/transformers",
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "url": "https://github.com/huggingface/transformers",
-      "stars": 169077,
+      "stars": 169134,
       "language": "Python",
-      "updated_at": "2026-11-16T23:28:38Z",
+      "updated_at": "2026-11-17T11:25:16Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/25720743?v=4"
     },
     {
       "name": "langgenius/dify",
       "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
       "url": "https://github.com/langgenius/dify",
-      "stars": 161290,
+      "stars": 161347,
       "language": "Python",
-      "updated_at": "2026-11-16T19:08:43Z",
+      "updated_at": "2026-11-17T11:21:15Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/127165244?v=4"
     }
   ]

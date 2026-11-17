@@ -1,18 +1,18 @@
 {
   "last_updated": {
-    "date": "16 Nov 2026",
-    "time": "17:23 IST",
-    "iso": "2026-11-16T17:23:52.677876+00:00"
+    "date": "17 Nov 2026",
+    "time": "17:46 IST",
+    "iso": "2026-11-17T17:46:44.701468+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udfe1",
-    "bias": "Neutral",
-    "confidence": 46,
+    "emoji": "\ud83d\udd34",
+    "bias": "Mild Bearish",
+    "confidence": 43,
     "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
     "risk_level": "Low",
     "risk_note": "Normal Conditions",
-    "conviction": 46
+    "conviction": 43
   },
   "assets": {
     "BTC": {
@@ -20,7 +20,7 @@
       "bias": "Bearish",
       "confidence": 20,
       "support": 62612.09,
-      "resistance": 75464.77,
+      "resistance": 74611.63,
       "trade_plan": "Fade rallies while below resistance."
     },
     "ETH": {
@@ -28,48 +28,48 @@
       "bias": "Neutral",
       "confidence": 50,
       "support": 1729.19,
-      "resistance": 2145.87,
+      "resistance": 2096.78,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 45,
-    "flow": 44,
+    "macro": 30,
+    "flow": 55,
     "technical": 35,
-    "risk": 31
+    "risk": 28
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Singapore, Germany test cross-border FX settlement with CBDCs"
+      "text": "US senators seek SEC answers on tokenized stock money laundering risks"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "BlackRock\u2019s Bitcoin ETF snaps $2.35B outflow streak amid extreme fear"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "BTC price tags 18-week low into Nvidia earnings: Three things to know in Bitcoin this week"
+      "text": "Bitcoin realized loss metric beats June high as open interest eyes 2-year low"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Google says hackers use AI agents to find and exploit software flaws"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "DBS, JPMorgan\u2019s Kinexys launch 24/7 transfers of tokenized deposits"
+      "text": "US judge clears brothers in $25M Ethereum MEV case after mistrial"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Harvard, Dartmouth keep Bitcoin ETF stakes steady as fund gains 42% in Q3"
+      "text": "Goldman Sachs reports $1.22B in Ether ETFs as ETHA share count jumps"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Ex-Robinhood engineer pleads guilty to $125K Hyperliquid trading scheme"
     },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Aster CEO suspects foul play after token plunges 32% in minutes"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Asian chip stocks tumble ahead of Nvidia Q3 earnings"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Luxor CEO warns of AI \u2018dark forest\u2019 following Bitcoin miner hijack"
     }
   ],
   "events": [
@@ -86,7 +86,7 @@
     "Open Interest": "green",
     "Fear & Greed": "yellow",
     "Macro": "green",
-    "News": "yellow",
+    "News": "red",
     "Risk": "green"
   }
 }

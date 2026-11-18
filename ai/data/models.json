@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-18T10:59:12+00:00",
+  "generated_at": "2026-11-18T22:27:14+00:00",
   "items": [
-    {
-      "id": "MiniMaxAI/MiniMax-H3-Image",
-      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
-      "downloads": 727110,
-      "likes": 1556,
-      "pipeline_tag": "text-to-image"
-    },
-    {
-      "id": "Qwen/Qwen3.8-27B",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 6888351,
-      "likes": 20509,
-      "pipeline_tag": "image-text-to-text"
-    },
     {
       "id": "higurashi-ai/Haru-4B",
       "url": "https://huggingface.co/higurashi-ai/Haru-4B",
-      "downloads": 4445,
-      "likes": 568,
+      "downloads": 5314,
+      "likes": 660,
       "pipeline_tag": "audio-to-audio"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 2871190,
-      "likes": 12472,
+      "likes": 12545,
       "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "thinkingmachines/Inkling-2-Small",
-      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
-      "downloads": 18359,
-      "likes": 472,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "unsloth/Qwen3.8-27B-GGUF",
-      "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-      "downloads": 6998076,
-      "likes": 6170,
-      "pipeline_tag": null
-    },
-    {
-      "id": "sensenova/SenseNova-Loop-9B",
-      "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B",
-      "downloads": 0,
-      "likes": 284,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "harness-hub/Qwen3.8-27B-pi-adapted",
       "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
-      "downloads": 0,
-      "likes": 255,
+      "downloads": 377,
+      "likes": 389,
       "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
-      "url": "https://huggingface.co/chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
-      "downloads": 160748,
-      "likes": 562,
+      "id": "thinkingmachines/Inkling-2-Small",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
+      "downloads": 30082,
+      "likes": 490,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "MiniMaxAI/MiniMax-H3-Image",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+      "downloads": 759661,
+      "likes": 1576,
       "pipeline_tag": "text-to-image"
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "downloads": 6888351,
+      "likes": 20556,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "n4ze3m/tiny-voca",
       "url": "https://huggingface.co/n4ze3m/tiny-voca",
-      "downloads": 3042,
-      "likes": 263,
+      "downloads": 4430,
+      "likes": 285,
       "pipeline_tag": "text-to-speech"
+    },
+    {
+      "id": "tencent/Hy4-flash",
+      "url": "https://huggingface.co/tencent/Hy4-flash",
+      "downloads": 159,
+      "likes": 225,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "apple/FastFrames-L",
+      "url": "https://huggingface.co/apple/FastFrames-L",
+      "downloads": 0,
+      "likes": 204,
+      "pipeline_tag": "text-to-video"
+    },
+    {
+      "id": "meituan-longcat/LongCat-Video-Avatar-1.6",
+      "url": "https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.6",
+      "downloads": 1226,
+      "likes": 257,
+      "pipeline_tag": null
     }
   ]
 }

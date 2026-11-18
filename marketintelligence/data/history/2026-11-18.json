@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "18 Nov 2026",
+    "time": "17:33 IST",
+    "iso": "2026-11-18T17:33:33.268822+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udd34",
+    "bias": "Mild Bearish",
+    "confidence": 41,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 41
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 20,
+      "support": 62612.09,
+      "resistance": 74611.63,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 1729.19,
+      "resistance": 2089.45,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 32,
+    "flow": 44,
+    "technical": 35,
+    "risk": 30
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitwise seeks Texas Stock Exchange listing for Zcash ETF"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin steadies after Nvidia\u2019s earnings beat as $60K bids stand out"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "World Bank partners with Circle, Citi to explore stablecoins for payments"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "SOL comes out of Breakpoint 7% higher as Solana exits beta"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin ETFs lose $240M as CryptoQuant flags bearish market phase"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Ledger hardware implant saga reaches Dubai\u2019s Virgin Megastore"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Nvidia board rejects Huang comeback despite record $116B quarter"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "yellow",
+    "Macro": "green",
+    "News": "red",
+    "Risk": "green"
+  }
+}

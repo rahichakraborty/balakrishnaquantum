@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-19T11:01:31+00:00",
+  "generated_at": "2026-11-19T22:32:13+00:00",
   "items": [
     {
       "id": "higurashi-ai/Haru-4B",
       "url": "https://huggingface.co/higurashi-ai/Haru-4B",
-      "downloads": 5314,
-      "likes": 1753,
+      "downloads": 6266,
+      "likes": 3619,
       "pipeline_tag": "audio-to-audio"
     },
     {
       "id": "tencent/Hy4-flash",
       "url": "https://huggingface.co/tencent/Hy4-flash",
-      "downloads": 159,
-      "likes": 276,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "Qwen/Qwen3.8-27B",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 6647301,
-      "likes": 20603,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "MiniMaxAI/MiniMax-H3-Image",
-      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
-      "downloads": 759661,
-      "likes": 1605,
-      "pipeline_tag": "text-to-image"
-    },
-    {
-      "id": "harness-hub/Qwen3.8-27B-pi-adapted",
-      "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
-      "downloads": 377,
-      "likes": 652,
+      "downloads": 2053,
+      "likes": 337,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "apple/FastFrames-L",
       "url": "https://huggingface.co/apple/FastFrames-L",
       "downloads": 0,
-      "likes": 248,
+      "likes": 324,
       "pipeline_tag": "text-to-video"
     },
     {
-      "id": "n4ze3m/tiny-voca",
-      "url": "https://huggingface.co/n4ze3m/tiny-voca",
-      "downloads": 4430,
-      "likes": 307,
-      "pipeline_tag": "text-to-speech"
+      "id": "harness-hub/Qwen3.8-27B-pi-adapted",
+      "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
+      "downloads": 1320,
+      "likes": 731,
+      "pipeline_tag": "image-text-to-text"
     },
     {
-      "id": "meituan-longcat/LongCat-Video-Avatar-1.6",
-      "url": "https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.6",
-      "downloads": 1226,
-      "likes": 286,
-      "pipeline_tag": null
+      "id": "Qwen/Qwen3.8-27B",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "downloads": 6647301,
+      "likes": 20674,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "inworld/voice-isolator",
+      "url": "https://huggingface.co/inworld/voice-isolator",
+      "downloads": 0,
+      "likes": 244,
+      "pipeline_tag": "audio-to-audio"
+    },
+    {
+      "id": "MiniMaxAI/MiniMax-H3-Image",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+      "downloads": 821710,
+      "likes": 1644,
+      "pipeline_tag": "text-to-image"
     },
     {
       "id": "maxwell-model/Maxwell-V1-Flash",
       "url": "https://huggingface.co/maxwell-model/Maxwell-V1-Flash",
-      "downloads": 1052,
-      "likes": 253,
+      "downloads": 1703,
+      "likes": 286,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 2934937,
-      "likes": 12656,
+      "likes": 12731,
       "pipeline_tag": "image-to-video"
+    },
+    {
+      "id": "chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
+      "url": "https://huggingface.co/chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
+      "downloads": 268540,
+      "likes": 690,
+      "pipeline_tag": "text-to-image"
     }
   ]
 }

@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "19 Nov 2026",
+    "time": "17:28 IST",
+    "iso": "2026-11-19T17:28:59.816097+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 48,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 48
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 20,
+      "support": 62181.04,
+      "resistance": 72856.43,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 1729.19,
+      "resistance": 2020.38,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 42,
+    "flow": 50,
+    "technical": 35,
+    "risk": 16
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Sweden\u2019s H100 could tap Bitcoin trading pool to fund share buybacks"
+    },
+    {
+      "emoji": "\u2705",
+      "text": "IOSCO warns quantum upgrades could slow blockchains, leave security gaps"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Singapore settles $77.5M tokenized bill sale with wholesale CBDC"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin ETF assets fall to three-month low as 2026 net outflows top $2.5B"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "BTCPay Server issues emergency update for 5 security flaws"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin retests $62K as Nasdaq futures rise ahead of Anthropic debut"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin carry trades could beat Treasury bills in 2027, Sygnum predicts"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "yellow",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

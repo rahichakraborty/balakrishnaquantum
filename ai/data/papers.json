@@ -1,141 +1,150 @@
 {
-  "generated_at": "2026-11-18T22:27:06+00:00",
+  "generated_at": "2026-11-19T11:01:16+00:00",
   "items": [
     {
-      "title": "Ambient LLMs: Data-Efficient Supervised Fine-tuning via Temperature Matching",
-      "summary": "Collecting large-scale, diverse, and high-quality post-training datasets for autoregressive language models is challenging. Consequently, Supervised Fine-Tuning (SFT) is typically applied to datasets significantly smaller than those used for pre-training, which leads to overfitti…",
+      "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
+      "summary": "Jailbreak attempts and harmful prompts remain a challenge for the safe deployment of large language models. We study whether contrastively learned representations can support safety detection without training an additional downstream classifier. We propose Jailbreak Detection wit…",
       "authors": [
-        "Giannis Daras",
-        "Marios Papachristou",
-        "Adam Klivans",
-        "et al."
+        "Yan Qiu",
+        "Yuanyuan Li"
       ],
-      "link": "http://arxiv.org/abs/2611.23229v1",
-      "published": "2026-11-17T18:59:37Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Spool: Low-Latency Streaming Inference for Hybrid Vision-Language Models",
-      "summary": "Applications such as visual accessibility agents and robotics require answering questions about recent video content promptly, over a bounded window of past frames (e.g., the last two minutes). Hybrid vision-language models (VLMs), which interleave attention with linear recurrent…",
-      "authors": [
-        "Rui Ning",
-        "Om Chabra",
-        "Hari Balakrishnan"
-      ],
-      "link": "http://arxiv.org/abs/2611.23228v1",
-      "published": "2026-11-17T18:59:27Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "StringQFT: A Multiuse Textbook Resource for AI-Assisted Theoretical Physics",
-      "summary": "We present StringQFT as a textbook collection for string constructions of quantum field theory and as infrastructure for AI-assisted theoretical physics. The collection comprises 18 volumes, 190 chapters and 3,795 pages, covering brane probes, brane webs, geometric engineering, F…",
-      "authors": [
-        "Xingyang Yu"
-      ],
-      "link": "http://arxiv.org/abs/2611.23225v1",
-      "published": "2026-11-17T18:58:40Z",
-      "category": "hep-th"
-    },
-    {
-      "title": "An inexact stochastic variance-reduced gradient method for constrained convex finite-sum optimization",
-      "summary": "In this paper, we study a class of constrained convex finite-sum optimization problems. In many practical applications, all or some of the constraints are hard constraints that represent imperative requirements. Consequently, any desirable approximate solution must (nearly) satis…",
-      "authors": [
-        "Zhaosong Lu",
-        "Yifeng Xiao"
-      ],
-      "link": "http://arxiv.org/abs/2611.23221v1",
-      "published": "2026-11-17T18:57:16Z",
-      "category": "math.OC"
-    },
-    {
-      "title": "Do LLM Agents Still Need to Be Told How to Self-Improve?",
-      "summary": "LLM agents increasingly drive their own learning. Self-improvement methods delegate various components of model optimization to the models themselves. As models become more capable, this motivates a basic question: do these increasingly capable models still need us to specify how…",
-      "authors": [
-        "Shobhita Sundaram",
-        "Cansu Sancaktar",
-        "Phillip Isola"
-      ],
-      "link": "http://arxiv.org/abs/2611.23219v1",
-      "published": "2026-11-17T18:57:10Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "What Does a Bias Head Measure? Non-Identifiability in Head-Level Bias Attribution",
-      "summary": "Methods that localise social bias in large language models to individual attention heads and remove it by ablation are validated by their effect on a fairness metric, never by evidence that the statistic selecting the heads measures bias. We audit this on Qwen-2.5-7B-Instruct and…",
-      "authors": [
-        "S. M Seefat Alam"
-      ],
-      "link": "http://arxiv.org/abs/2611.23218v1",
-      "published": "2026-11-17T18:57:08Z",
+      "link": "http://arxiv.org/abs/2611.24936v1",
+      "published": "2026-11-18T18:56:12Z",
       "category": "cs.CL"
     },
     {
-      "title": "Higher-Scoring Coding Models Did Not Get More Work Done",
-      "summary": "New coding models advertise themselves on score improvements of coding benchmarks. Yet no study has tested if a model that scores higher on these benchmarks gets more real work done. On June 12, 2026, a U.S. export control directive banned access to Claude Fable 5 for 19 days, wh…",
+      "title": "Knowing What You Know: A Trait Theory of Reviewer Value in Human-AI Cognitive Systems",
+      "summary": "When a capable model and a human reviewer cooperate on the same decision, which human still adds value? We argue this is a question about a single cognitive trait, metacognitive calibration: the alignment between a reviewer's behavioral confidence and the actual correctness of th…",
       "authors": [
-        "Yining Hua"
+        "Priyanka Sinha",
+        "Sugam Pandey"
       ],
-      "link": "http://arxiv.org/abs/2611.23216v1",
-      "published": "2026-11-17T18:56:42Z",
+      "link": "http://arxiv.org/abs/2611.24932v1",
+      "published": "2026-11-18T18:55:07Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Mapping the AI Supply Chain: Dependencies, Vulnerabilities, and Market Concentration in the AI Ecosystem",
+      "summary": "AI systems are built across many organizations that contribute models, data, compute, capital, talent, and other assets. While the layers of the AI stack are relatively well understood, the relationships between actors and components across layers remains sparsely documented. In …",
+      "authors": [
+        "Sarah H. Cen",
+        "Lindsey A. Gailmard",
+        "Joohan Kim",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.24927v1",
+      "published": "2026-11-18T18:53:58Z",
+      "category": "cs.CY"
+    },
+    {
+      "title": "Agentic Harness Engineering Beta: Requirement-Centered Evolution of Agent Harnesses",
+      "summary": "Real-world harness engineering is driven by explicit and implicit user requirements, which guide development and validation. However, existing harness evolution methods often overlook implicit requirements and interaction needs, while using a single evolution agent to modify the …",
+      "authors": [
+        "Jiahang Lin",
+        "Jiahao Chen",
+        "Yiding Wang",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.24924v1",
+      "published": "2026-11-18T18:52:13Z",
       "category": "cs.SE"
     },
     {
-      "title": "Multimodal Masked Diffusion Autoencoder for Modeling Impaired Driving",
-      "summary": "Human cognitive state (e.g., distraction, stress), gaze, and behavior interact with the driving environment in subtle ways that AI could use to assist drivers, but ground-truth labels for human cognitive state levels are costly to obtain at scale. We propose a multimodal masked-d…",
+      "title": "Decomposing SGD Dynamics in Neural Networks: Teacher-Induced Spikes and Variance Inflation",
+      "summary": "We study two-layer neural networks trained by stochastic gradient descent (SGD) on a multi-index teacher model, focusing on how first-layer parameters orthogonal to the teacher subspace affect generalization. We decompose the first-layer weights into a signal component aligned wi…",
       "authors": [
-        "John Gideon",
-        "Anshul Gupta",
-        "Megan Applegate-Kenton",
-        "et al."
+        "Samet Demir",
+        "Zafer Dogan"
       ],
-      "link": "http://arxiv.org/abs/2611.23211v1",
-      "published": "2026-11-17T18:50:22Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2611.24908v1",
+      "published": "2026-11-18T18:43:40Z",
+      "category": "stat.ML"
     },
     {
-      "title": "Distortion-Free Semantic Watermarks for Black-Box Generative Models",
-      "summary": "We present a provably distortion-free semantic watermarking algorithm that requires only black-box sampling access to a generative model and black-box access to a semantic embedding. A watermark is called distortion-free if, averaged over its secret detection key, it leaves the g…",
+      "title": "Equivariant Modeling with Polynomial Features via Minimal Homogeneous Generators",
+      "summary": "We present a general framework for modeling and learning equivariant functions between finite dimensional semisimple real group representations, unifying constructions developed across many application areas. Our model is a linear combination of equivariant polynomial features wh…",
       "authors": [
-        "Aviv Yossef",
-        "Or Patashnik",
-        "Or Zamir"
+        "Michael Liaofan Liu",
+        "Joe Kileel"
       ],
-      "link": "http://arxiv.org/abs/2611.23208v1",
-      "published": "2026-11-17T18:49:17Z",
+      "link": "http://arxiv.org/abs/2611.24896v1",
+      "published": "2026-11-18T18:37:02Z",
       "category": "cs.LG"
     },
     {
-      "title": "Reading Scene States: Uncovering Safety Failures in Vision-Language Models",
-      "summary": "Vision-language models (VLMs) can provide harmful assistance by interpreting visual events, even without an explicit request for the underlying harmful objective. We identify this \\textbf{scene-state safety vulnerability} and introduce \\textbf{SceneSafetyBench}, comprising 375 im…",
+      "title": "On Evaluating User Simulators for Interactive Agents",
+      "summary": "User simulators offer a scalable way to evaluate interactive agents, but how to assess their quality remains underexplored. In particular, it is unclear whether existing user simulator evaluation frameworks reliably detect meaningful failures in simulated user behavior. This unce…",
       "authors": [
-        "Tongxi Wu",
-        "Yuyang Cheng",
-        "Jiacheng Xian",
+        "Hengguang Zhou",
+        "I-Hung Hsu",
+        "Li Chen",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.23206v1",
-      "published": "2026-11-17T18:48:02Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Fine-Tuning Gemma 4 Edge Models for MATLAB Signal-Processing Code with SFT and QLoRA on a Laptop iGPU",
-      "summary": "Small language models that run on a laptop are attractive for writing signal-processing code offline, but they make systematic errors on digital signal processing (DSP) conventions. We apply supervised fine-tuning (SFT) to the Gemma 4 edge models E2B and E4B with 66 checked examp…",
-      "authors": [
-        "Mehmet Altan Toksöz"
-      ],
-      "link": "http://arxiv.org/abs/2611.23205v1",
-      "published": "2026-11-17T18:47:37Z",
+      "link": "http://arxiv.org/abs/2611.24892v1",
+      "published": "2026-11-18T18:34:23Z",
       "category": "cs.LG"
     },
     {
-      "title": "Agent Trust Infrastructure (ATI): A Federated Identity, Trust, Attestation, and Accountability Architecture for Cross-Organization Autonomous AI Agents",
-      "summary": "AI agents increasingly collaborate across organizational boundaries, invoking tools and interacting with agents operated by independent entities. Although existing agent frameworks support planning and coordination, they lack a common mechanism for verifying cross-organizational …",
+      "title": "Cap-and-Track: Optimizing LLM Inference Request Dispatch Across Shifting Capacity",
+      "summary": "A fixed dispatch rate for LLM inference becomes stale as serving fleets resize and request sizes change. Generative output length is unknown at admission, and shared provider pools can lose capacity. We present Cap-and-Track, a design for asynchronous inference across provider ca…",
       "authors": [
-        "Viet K. Nguyen",
-        "Mohammad I. Husain"
+        "Benjamin Novotny",
+        "Doug Szeto",
+        "Chang Wang",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.23202v1",
-      "published": "2026-11-17T18:44:25Z",
+      "link": "http://arxiv.org/abs/2611.24891v1",
+      "published": "2026-11-18T18:34:10Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Who are you? The Personal Imitation Game",
+      "summary": "Large Language Models (LLMs) now perform strongly on Alan Turing's 1950 Imitation Game, so we propose a harder challenge, the Personal Imitation Game, which asks whether a machine can replicate a specific individual in conversation rather than a generic human. Testing with 30 par…",
+      "authors": [
+        "Muhammad Rizky Wellyanto",
+        "Hajara-Yasmin Isa",
+        "Kexin Xue",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.24888v1",
+      "published": "2026-11-18T18:32:14Z",
+      "category": "cs.HC"
+    },
+    {
+      "title": "Ground, Iterate, Trace: Decomposing AI Research Ideation",
+      "summary": "Large language models have been widely used to generate plausible research ideas, yet it remains unclear what makes automated ideation effective and how generated novel proposals arise from prior scientific work. We introduce the Creative AI Researcher (CAR), an agentic framework…",
+      "authors": [
+        "Samson Yu",
+        "Qiran Zou",
+        "Jing Yu Lim",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.24887v1",
+      "published": "2026-11-18T18:31:37Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Monoculture Robust Learning",
+      "summary": "We introduce a notion of monoculture robustness in Probably Approximately Correct (PAC) learning, as a way to mitigate the problem of algorithmic monoculture (Kleinberg and Raghavan, 2021): the tendency of models sharing the same components (e.g., training data) to fail on the sa…",
+      "authors": [
+        "Lee Cohen",
+        "Jon Kleinberg",
+        "Omer Reingold"
+      ],
+      "link": "http://arxiv.org/abs/2611.24881v1",
+      "published": "2026-11-18T18:27:52Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Local AI Agents in Power Electronics Simulation: Deployment, Measurements and Costs",
+      "summary": "Agentic artificial intelligence (AI) is emerging in power electronics, where it drives the simulation loop that engineers used to close largely by hand. In this loop, a converter design, or a study of the network it connects to, is built, run, measured and revised until it satisf…",
+      "authors": [
+        "Yuzhuo Li",
+        "Pasan Gunawardena",
+        "Yunwei Li"
+      ],
+      "link": "http://arxiv.org/abs/2611.24880v1",
+      "published": "2026-11-18T18:27:40Z",
       "category": "cs.AI"
     }
   ]

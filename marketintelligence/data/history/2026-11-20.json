@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "20 Nov 2026",
+    "time": "17:30 IST",
+    "iso": "2026-11-20T17:30:13.119562+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udd34",
+    "bias": "Mild Bearish",
+    "confidence": 35,
+    "todays_trade": "Reduce Size",
+    "preferred_asset": "BTC",
+    "risk_level": "High",
+    "risk_note": "Reduce Size",
+    "conviction": 35
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 20,
+      "support": 61463.64,
+      "resistance": 69507.45,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Bearish",
+      "confidence": 20,
+      "support": 1725.45,
+      "resistance": 1966.02,
+      "trade_plan": "Fade rallies while below resistance."
+    }
+  },
+  "scores": {
+    "macro": 45,
+    "flow": 33,
+    "technical": 20,
+    "risk": 65
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "VanEck to end Gemini ETF custody deals, keeps Coinbase"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin nears repeat of chart pattern that preceded 2023\u2019s $25K retest"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "BlackRock\u2019s IBIT loses record $541M amid Anthropic market debut"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "SEC charges eight firms over fake crypto platforms tied to $37M fraud"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Anthropic\u2019s $81B IPO draws half the net retail buying of SpaceX\u2019s"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Institutions pile back into US Bitcoin ETFs in Q3 after selling streak"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "yellow",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

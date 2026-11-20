@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-11-19T22:32:13+00:00",
+  "generated_at": "2026-11-20T10:50:19+00:00",
   "items": [
-    {
-      "id": "higurashi-ai/Haru-4B",
-      "url": "https://huggingface.co/higurashi-ai/Haru-4B",
-      "downloads": 6266,
-      "likes": 3619,
-      "pipeline_tag": "audio-to-audio"
-    },
     {
       "id": "tencent/Hy4-flash",
       "url": "https://huggingface.co/tencent/Hy4-flash",
-      "downloads": 2053,
-      "likes": 337,
+      "downloads": 3949,
+      "likes": 410,
       "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "higurashi-ai/Haru-4B",
+      "url": "https://huggingface.co/higurashi-ai/Haru-4B",
+      "downloads": 7323,
+      "likes": 3702,
+      "pipeline_tag": "audio-to-audio"
     },
     {
       "id": "apple/FastFrames-L",
       "url": "https://huggingface.co/apple/FastFrames-L",
       "downloads": 0,
-      "likes": 324,
+      "likes": 367,
       "pipeline_tag": "text-to-video"
-    },
-    {
-      "id": "harness-hub/Qwen3.8-27B-pi-adapted",
-      "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
-      "downloads": 1320,
-      "likes": 731,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "Qwen/Qwen3.8-27B",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 6647301,
-      "likes": 20674,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "inworld/voice-isolator",
       "url": "https://huggingface.co/inworld/voice-isolator",
       "downloads": 0,
-      "likes": 244,
+      "likes": 313,
       "pipeline_tag": "audio-to-audio"
     },
     {
-      "id": "MiniMaxAI/MiniMax-H3-Image",
-      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
-      "downloads": 821710,
-      "likes": 1644,
-      "pipeline_tag": "text-to-image"
+      "id": "harness-hub/Qwen3.8-27B-pi-adapted",
+      "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
+      "downloads": 1874,
+      "likes": 776,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "downloads": 6454419,
+      "likes": 20711,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "maxwell-model/Maxwell-V1-Flash",
       "url": "https://huggingface.co/maxwell-model/Maxwell-V1-Flash",
-      "downloads": 1703,
-      "likes": 286,
+      "downloads": 2453,
+      "likes": 300,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "MiniMaxAI/MiniMax-H3-Image",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+      "downloads": 876986,
+      "likes": 1663,
+      "pipeline_tag": "text-to-image"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 2934937,
-      "likes": 12731,
+      "downloads": 2964523,
+      "likes": 12777,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
       "url": "https://huggingface.co/chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
-      "downloads": 268540,
-      "likes": 690,
+      "downloads": 309394,
+      "likes": 706,
       "pipeline_tag": "text-to-image"
     }
   ]

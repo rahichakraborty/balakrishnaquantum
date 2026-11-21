@@ -1,75 +1,75 @@
 {
   "last_updated": {
-    "date": "20 Nov 2026",
-    "time": "17:30 IST",
-    "iso": "2026-11-20T17:30:13.119562+00:00"
+    "date": "21 Nov 2026",
+    "time": "17:04 IST",
+    "iso": "2026-11-21T17:04:38.236595+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udd34",
     "bias": "Mild Bearish",
-    "confidence": 35,
+    "confidence": 31,
     "todays_trade": "Reduce Size",
-    "preferred_asset": "BTC",
+    "preferred_asset": "ETH",
     "risk_level": "High",
     "risk_note": "Reduce Size",
-    "conviction": 35
+    "conviction": 31
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
       "confidence": 20,
-      "support": 61463.64,
-      "resistance": 69507.45,
+      "support": 55711.45,
+      "resistance": 67218.4,
       "trade_plan": "Fade rallies while below resistance."
     },
     "ETH": {
       "name": "Ethereum",
-      "bias": "Bearish",
-      "confidence": 20,
-      "support": 1725.45,
-      "resistance": 1966.02,
-      "trade_plan": "Fade rallies while below resistance."
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 1559.0,
+      "resistance": 1908.71,
+      "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 45,
-    "flow": 33,
-    "technical": 20,
-    "risk": 65
+    "macro": 42,
+    "flow": 24,
+    "technical": 35,
+    "risk": 97
   },
   "drivers": [
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "VanEck to end Gemini ETF custody deals, keeps Coinbase"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin nears repeat of chart pattern that preceded 2023\u2019s $25K retest"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "BlackRock\u2019s IBIT loses record $541M amid Anthropic market debut"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "SEC charges eight firms over fake crypto platforms tied to $37M fraud"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Anthropic\u2019s $81B IPO draws half the net retail buying of SpaceX\u2019s"
-    },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Institutions pile back into US Bitcoin ETFs in Q3 after selling streak"
+      "text": "ECB seeks industry partners for tokenized deposits, securities experiments"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "US lawmakers propose up to 30% rewards for prediction market whistleblowers"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Hong Kong pushes to bring crypto custodians, advisers under licensing rules"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin falls below $60K for first time since July amid broader market selloff"
+    },
+    {
+      "emoji": "\u2705",
+      "text": "US Senate advances prediction market restrictions with DEATH BETS Act"
     }
   ],
   "events": [

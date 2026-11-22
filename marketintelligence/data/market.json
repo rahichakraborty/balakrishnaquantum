@@ -1,18 +1,18 @@
 {
   "last_updated": {
-    "date": "21 Nov 2026",
-    "time": "17:04 IST",
-    "iso": "2026-11-21T17:04:38.236595+00:00"
+    "date": "22 Nov 2026",
+    "time": "17:18 IST",
+    "iso": "2026-11-22T17:18:36.839468+00:00"
   },
   "overall": {
     "emoji": "\ud83d\udd34",
     "bias": "Mild Bearish",
-    "confidence": 31,
+    "confidence": 40,
     "todays_trade": "Reduce Size",
     "preferred_asset": "ETH",
     "risk_level": "High",
     "risk_note": "Reduce Size",
-    "conviction": 31
+    "conviction": 40
   },
   "assets": {
     "BTC": {
@@ -20,7 +20,7 @@
       "bias": "Bearish",
       "confidence": 20,
       "support": 55711.45,
-      "resistance": 67218.4,
+      "resistance": 65466.69,
       "trade_plan": "Fade rallies while below resistance."
     },
     "ETH": {
@@ -28,20 +28,32 @@
       "bias": "Neutral",
       "confidence": 50,
       "support": 1559.0,
-      "resistance": 1908.71,
+      "resistance": 1846.09,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 42,
-    "flow": 24,
+    "macro": 35,
+    "flow": 70,
     "technical": 35,
-    "risk": 97
+    "risk": 77
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "South Korean exchanges halt CYBER transfers amid suspected bridge exploit"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Chainflip confirms $12M hack, offers attacker 10% bounty"
     },
     {
       "emoji": "\ud83d\udfe1",
@@ -58,18 +70,6 @@
     {
       "emoji": "\ud83d\udd34",
       "text": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Bitcoin falls below $60K for first time since July amid broader market selloff"
-    },
-    {
-      "emoji": "\u2705",
-      "text": "US Senate advances prediction market restrictions with DEATH BETS Act"
     }
   ],
   "events": [
@@ -86,7 +86,7 @@
     "Open Interest": "green",
     "Fear & Greed": "yellow",
     "Macro": "green",
-    "News": "yellow",
+    "News": "red",
     "Risk": "green"
   }
 }

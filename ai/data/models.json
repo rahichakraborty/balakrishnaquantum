@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-11-22T20:54:20+00:00",
+  "generated_at": "2026-11-23T11:40:15+00:00",
   "items": [
     {
       "id": "thinkingmachines/Inkling-2-Mini",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
-      "downloads": 23543,
-      "likes": 4830,
+      "downloads": 41888,
+      "likes": 5240,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Inkling-2-Mini-GGUF",
       "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
-      "downloads": 805993,
-      "likes": 854,
+      "downloads": 1292888,
+      "likes": 978,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "inworld/voice-isolator",
       "url": "https://huggingface.co/inworld/voice-isolator",
       "downloads": 0,
-      "likes": 617,
+      "likes": 679,
       "pipeline_tag": "audio-to-audio"
+    },
+    {
+      "id": "tencent/Hy4-flash",
+      "url": "https://huggingface.co/tencent/Hy4-flash",
+      "downloads": 7696,
+      "likes": 632,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "harness-hub/Qwen3.8-27B-pi-adapted",
       "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
-      "downloads": 2831,
-      "likes": 985,
+      "downloads": 3132,
+      "likes": 1010,
       "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "higurashi-ai/Haru-4B",
-      "url": "https://huggingface.co/higurashi-ai/Haru-4B",
-      "downloads": 8608,
-      "likes": 887,
-      "pipeline_tag": "audio-to-audio"
     },
     {
       "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
       "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
-      "downloads": 129693,
-      "likes": 457,
+      "downloads": 329497,
+      "likes": 562,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "apple/DepthPro2",
       "url": "https://huggingface.co/apple/DepthPro2",
       "downloads": 0,
-      "likes": 269,
+      "likes": 1089,
       "pipeline_tag": "depth-estimation"
     },
     {
-      "id": "tencent/Hy4-flash",
-      "url": "https://huggingface.co/tencent/Hy4-flash",
-      "downloads": 6617,
-      "likes": 615,
-      "pipeline_tag": "image-text-to-text"
+      "id": "higurashi-ai/Haru-4B",
+      "url": "https://huggingface.co/higurashi-ai/Haru-4B",
+      "downloads": 9087,
+      "likes": 914,
+      "pipeline_tag": "audio-to-audio"
     },
     {
       "id": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "downloads": 6297396,
-      "likes": 20878,
+      "downloads": 6185088,
+      "likes": 21634,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "sensenova/SenseNova-Loop-9B",
       "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B",
-      "downloads": 1863,
-      "likes": 516,
+      "downloads": 2036,
+      "likes": 602,
       "pipeline_tag": "image-text-to-text"
     }
   ]

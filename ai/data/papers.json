@@ -1,152 +1,149 @@
 {
-  "generated_at": "2026-11-22T20:54:13+00:00",
+  "generated_at": "2026-11-23T11:40:07+00:00",
   "items": [
     {
-      "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
-      "summary": "Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natura…",
+      "title": "Optimal Linear Regression Without a Variance",
+      "summary": "We study high-probability linear regression in the infinite variance regime, wherecthe regression noise has only a finite conditional $α$-moment $ν$ for some unknown $α\\in(1,2)$, and the covariates may only have finite moments up to a given order (e.g., 4th moment). We give a bla…",
       "authors": [
-        "Tuna Han Salih Meral",
-        "Kaan Oktay",
-        "Alec Helbling",
+        "Artin Tajdini",
+        "Jasper C. H. Lee",
+        "Jonathan Scarlett",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.26627v1",
-      "published": "2026-11-19T18:59:53Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2611.27983v1",
+      "published": "2026-11-20T18:58:45Z",
+      "category": "stat.ML"
     },
     {
-      "title": "PlayCraft: Designing Engaging Games from Agent Play Experience",
-      "summary": "Recent AI agents can generate playable games, but these games are not necessarily engaging. Mastery is a key source of engagement, yet designing for it requires extensive human play and tuning. We propose PlayCraft, an automated framework that uses a vision-based agent to play ga…",
+      "title": "A Methodologically Rigorous Benchmark of Linear Regression,RNN, and LSTM for S&P 500 Forecasting:Identifying Sources of Performance Inflation in Financial DeepLearning",
+      "summary": "This study examines one-day-ahead forecasting of the S&P 500 closing level using a 2006-2025 dataset that includes fundamental price data, macroeconomic indicators, and engineered technical features. We benchmark three model families, namely linear regression, vanilla recurrent n…",
       "authors": [
-        "Weihao Cheng"
+        "Hari Sitaula",
+        "Joseph Opitz"
       ],
-      "link": "http://arxiv.org/abs/2611.26624v1",
-      "published": "2026-11-19T18:59:34Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
-      "summary": "Hybrid architectures have become mainstream among open-weight language models. Their global-attention and bounded-state layers maintain heterogeneous caches whose demands vary with context length and concurrency. We present TideCache, a serving system on CPU--GPU superchips with …",
-      "authors": [
-        "Jinbin Luo",
-        "Xiaozhe Yao",
-        "Shang Yang",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.26619v1",
-      "published": "2026-11-19T18:58:31Z",
-      "category": "cs.DC"
-    },
-    {
-      "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
-      "summary": "Videos reveal how the world changes, but rarely the actions that cause those changes. Latent action learning recovers such supervision from visual transitions, yet often learns the underlying dynamics largely from scratch. We ask whether a pretrained video generator can instead p…",
-      "authors": [
-        "Yuxin Jiang",
-        "Wenqiang Sun",
-        "Jiaqi Li",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.26617v1",
-      "published": "2026-11-19T18:58:14Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
-      "summary": "Frontier multimodal language agents such as GPT-6 Astra have demonstrated strong capabilities in controlling robots directly via low-level numerical actions without high-level primitives. However, existing benchmarks report only episode-level success rates, which show neither how…",
-      "authors": [
-        "Yiyang Du",
-        "Yuxuan Kuang",
-        "Qitao Zhao",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.26613v1",
-      "published": "2026-11-19T18:57:25Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "Bio-PM-Guided Synthetic IMU Generation",
-      "summary": "Collecting and labeling inertial measurement unit (IMU) data for human activity recognition (HAR) is expensive, and models trained on one group of subjects often fail to generalize to unseen individuals. Even with balanced data, classifiers struggle to distinguish dynamically sim…",
-      "authors": [
-        "Deepali Singh",
-        "Deepesh Parpani",
-        "Aviral Gupta"
-      ],
-      "link": "http://arxiv.org/abs/2611.26607v1",
-      "published": "2026-11-19T18:56:25Z",
+      "link": "http://arxiv.org/abs/2611.27978v1",
+      "published": "2026-11-20T18:57:15Z",
       "category": "cs.LG"
     },
     {
-      "title": "Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth",
-      "summary": "We present Depth Pro 2, an approach to estimating dense metric depth for images and video at full resolution. By analyzing prior methods for monocular depth estimation, we find that they commonly trade off temporal consistency and boundary sharpness: multi-frame methods favor con…",
+      "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+      "summary": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear G…",
       "authors": [
-        "Peiyun Hu",
-        "Marko Mihajlovic",
-        "Lyndon Duong",
+        "Chang Nie",
+        "Chaoyou Fu",
+        "Songlin Liu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.26603v1",
-      "published": "2026-11-19T18:55:41Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2611.27973v1",
+      "published": "2026-11-20T18:51:29Z",
+      "category": "cs.CL"
     },
     {
-      "title": "SoK: Assessing the Evolution of LLM Capability in Software Vulnerability Research",
-      "summary": "LLM-based agents are becoming increasingly capable at discovering, validating and patching vulnerabilities in real software, and vendors and researchers report that this is already changing how vulnerabilities are found and fixed. These claims, however, are scattered across paper…",
+      "title": "On the Complete Feature Set for ADHD Classification in Children and Adolescents Based on EEG Signals",
+      "summary": "Attention-deficit/hyperactivity disorder is a neurodevelopmental condition that can affect attention, activity and impulse control. Electroencephalography (EEG) records brain activity as children and adolescents perform cognitive tasks. However, comparing features derived from th…",
       "authors": [
-        "Amine Lbath",
-        "Manan Suri",
-        "Aurelien Delaitre",
+        "Javier Sanchis",
+        "Álvaro Navarro",
+        "Jorge García-Carrasco",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.26601v1",
-      "published": "2026-11-19T18:54:19Z",
-      "category": "cs.CR"
-    },
-    {
-      "title": "Active Feature Acquisition by Distilling an Oracle Teacher",
-      "summary": "Acquiring every feature of an instance is often costly: a measurement can carry a monetary price, a time delay, or a privacy cost. Active Feature Acquisition (AFA) addresses this by learning a policy that decides, per instance, which features to acquire under a budget. Existing A…",
-      "authors": [
-        "Yang Meng",
-        "Zixin Ding",
-        "Robert L. Grossman",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.26598v1",
-      "published": "2026-11-19T18:52:57Z",
+      "link": "http://arxiv.org/abs/2611.27970v1",
+      "published": "2026-11-20T18:51:08Z",
       "category": "cs.LG"
     },
     {
-      "title": "PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation",
-      "summary": "Robotic vision-language-action (VLA) models can execute diverse individual manipulation skills, yet they still struggle with long-horizon loco-manipulation tasks, where temporal structure, skills, and precision are tightly coupled within a monolithic model. We propose Physically …",
+      "title": "Non-penetrating World Models",
+      "summary": "We study a new problem of preventing object penetration in interactive video world models. To understand how existing models handle this, we introduce NoPeBench, a benchmark that evaluates how world models respond to physical obstacles. Our evaluation reveals that none of the ope…",
       "authors": [
-        "Kai Lu",
-        "Chenyang Ma",
-        "Ioannis Havoutis"
+        "Yuhang Dai",
+        "Yinwei Wu",
+        "Ziyue Lin",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.26596v1",
-      "published": "2026-11-19T18:52:18Z",
-      "category": "cs.RO"
+      "link": "http://arxiv.org/abs/2611.27963v1",
+      "published": "2026-11-20T18:44:57Z",
+      "category": "cs.CV"
     },
     {
-      "title": "Realized versus Population Reliability: Anytime-Valid Self-Consistency Certification under Correlated Reasoning",
-      "summary": "Self-consistency certification treats repeated sampling from a language model as sequential evidence accumulation and stops when an anytime-valid e-process crosses a threshold, guaranteeing finite-sample Type I error control by Ville's inequality. Prior constructions assume sampl…",
+      "title": "Model Carving: Training Transformers That Optimize Their Own Topology",
+      "summary": "Machine learning has largely kept separate the choice of architecture and the process of training. A classic Transformer, for instance, trains a fixed set of attention and MLP sublayers at every layer, in the same order, and optimizes the weights within. This uniformity is a conv…",
       "authors": [
-        "Terence D. Agbeyegbe",
-        "Toneukarin G. Agbeyegbe"
+        "Kaden Zheng",
+        "Pratyusha Sharma"
       ],
-      "link": "http://arxiv.org/abs/2611.26592v1",
-      "published": "2026-11-19T18:47:51Z",
-      "category": "stat.ME"
+      "link": "http://arxiv.org/abs/2611.27962v1",
+      "published": "2026-11-20T18:41:39Z",
+      "category": "cs.LG"
     },
     {
-      "title": "Probing the \"Conscious\" Mind: Selective Access and Global Workspace in Vision-Language Models",
-      "summary": "Vision-language models (VLMs) integrate visual and textual information, but their outputs do not reveal internal concept representations. Global workspace theory (GWT) proposes that information is selected from parallel brain processes, integrated in a shared workspace, and made …",
+      "title": "Ranking-Preserving Coreset Selection for Efficient Evolutionary Hyperparameter Optimization",
+      "summary": "Hyperparameter optimization (HPO) is essential for high predictive performance, but its computational cost becomes prohibitive when candidate configurations require repeated training on large datasets. This paper proposes a ranking-preserving coreset (RPC) selection framework for…",
       "authors": [
-        "Jiahao Huang",
-        "Jun Wang"
+        "Mamoona Tasadduq",
+        "Maryam Bashir"
       ],
-      "link": "http://arxiv.org/abs/2611.26590v1",
-      "published": "2026-11-19T18:46:50Z",
+      "link": "http://arxiv.org/abs/2611.27959v1",
+      "published": "2026-11-20T18:35:28Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Topology Hub Optimal Transport: Eliminating Long Context Dilution at Flash Speed",
+      "summary": "Long-context models use sparse or structured attention to avoid quadratic cost, yet retrieving a small set of relevant facts embedded among hundreds of thousands of distractors degrades as normalization mass disperses with length. Hub-and-spoke optimal transport (OT) replaces the…",
+      "authors": [
+        "Dylan Forde"
+      ],
+      "link": "http://arxiv.org/abs/2611.27951v1",
+      "published": "2026-11-20T18:23:42Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "The Optimal Sample Complexity of Agnostic PAC Learning for Partial Concept Classes",
+      "summary": "Let $\\mathcal H\\subseteq\\{-1,+1,\\star\\}^{\\mathcal X}$ be a partial concept class of finite VC dimension $d$. We construct a deterministic agnostic PAC learner that, for every $\\varepsilon,δ\\in(0,1)$, uses $O((d+\\log(1/δ))/\\varepsilon^2)$ i.i.d. examples from an arbitrary distribu…",
+      "authors": [
+        "Liang-Yu Zou"
+      ],
+      "link": "http://arxiv.org/abs/2611.27946v1",
+      "published": "2026-11-20T18:18:09Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "BioEmu2: Scalable Emulation of Biomolecular Dynamics",
+      "summary": "Despite major advances in structure prediction, modelling the motions and interactions that drive biomolecular function at scale remains a central challenge. We introduce BioEmu2, a generative model for atomically resolved biomolecular structures combining static structure predic…",
+      "authors": [
+        "Michael Gastegger",
+        "Adam E. Foster",
+        "José Jiménez-Luna",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.27924v1",
+      "published": "2026-11-20T17:58:47Z",
       "category": "cs.AI"
+    },
+    {
+      "title": "SUAF: Spectral Universal Advantage Features for Zero-Shot Policy Improvement",
+      "summary": "Reward-independent representations enable reinforcement learning agents to reuse knowledge across tasks, but limited representation capacity raises three fundamental questions: what statistical dependence should these representations capture, which components of that dependence s…",
+      "authors": [
+        "Huaze Tang",
+        "Runqing Miao",
+        "Tianren Peng",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.27919v1",
+      "published": "2026-11-20T17:53:21Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "StereoVLM: Binocular Vision-Language Models for Metric 3D Spatial Reasoning",
+      "summary": "Vision-language models (VLMs) exhibit strong semantic understanding but remain limited in their ability to reason about metric 3D space in the physical world. Existing VLMs typically infer 3D scene structure from one or more images without known camera calibration or cross-view g…",
+      "authors": [
+        "Chi Yan",
+        "Guoyang Zhao",
+        "Wentao Yuan",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.27915v1",
+      "published": "2026-11-20T17:52:02Z",
+      "category": "cs.CV"
     }
   ]
 }

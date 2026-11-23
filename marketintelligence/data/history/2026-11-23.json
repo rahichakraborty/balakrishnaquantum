@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "23 Nov 2026",
+    "time": "18:58 IST",
+    "iso": "2026-11-23T18:58:27.302714+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 49,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 49
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 20,
+      "support": 55711.45,
+      "resistance": 65285.15,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 1559.0,
+      "resistance": 1846.09,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 45,
+    "flow": 55,
+    "technical": 35,
+    "risk": 27
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Critics of Netflix\u2019s FTX drama point to Obama\u2019s producer credit"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "ECB to let banks pledge more tokenized securities as collateral"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "BTC price gains 12% from $55K: Three things to know in Bitcoin this week"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "\u2018MoldyRoost\u2019 ads can steal crypto wallet recovery phrases from iPhones"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin ETFs shed $1.8B in third-largest weekly outflow"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Trump renews call for Nvidia to rehire Jensen Huang as CEO"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Billionaire Bill Ackman warns Fed will make a rate \u2018mistake\u2019 in December"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "yellow",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

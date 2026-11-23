@@ -1,18 +1,18 @@
 {
   "last_updated": {
-    "date": "22 Nov 2026",
-    "time": "17:18 IST",
-    "iso": "2026-11-22T17:18:36.839468+00:00"
+    "date": "23 Nov 2026",
+    "time": "18:58 IST",
+    "iso": "2026-11-23T18:58:27.302714+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udd34",
-    "bias": "Mild Bearish",
-    "confidence": 40,
-    "todays_trade": "Reduce Size",
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 49,
+    "todays_trade": "Wait For Confirmation",
     "preferred_asset": "ETH",
-    "risk_level": "High",
-    "risk_note": "Reduce Size",
-    "conviction": 40
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 49
   },
   "assets": {
     "BTC": {
@@ -20,7 +20,7 @@
       "bias": "Bearish",
       "confidence": 20,
       "support": 55711.45,
-      "resistance": 65466.69,
+      "resistance": 65285.15,
       "trade_plan": "Fade rallies while below resistance."
     },
     "ETH": {
@@ -33,43 +33,43 @@
     }
   },
   "scores": {
-    "macro": 35,
-    "flow": 70,
+    "macro": 45,
+    "flow": 55,
     "technical": 35,
-    "risk": 77
+    "risk": 27
   },
   "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Critics of Netflix\u2019s FTX drama point to Obama\u2019s producer credit"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "ECB to let banks pledge more tokenized securities as collateral"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "BTC price gains 12% from $55K: Three things to know in Bitcoin this week"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "\u2018MoldyRoost\u2019 ads can steal crypto wallet recovery phrases from iPhones"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin ETFs shed $1.8B in third-largest weekly outflow"
+    },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "South Korean exchanges halt CYBER transfers amid suspected bridge exploit"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Chainflip confirms $12M hack, offers attacker 10% bounty"
+      "text": "Trump renews call for Nvidia to rehire Jensen Huang as CEO"
     },
     {
       "emoji": "\ud83d\udfe1",
-      "text": "ECB seeks industry partners for tokenized deposits, securities experiments"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "US lawmakers propose up to 30% rewards for prediction market whistleblowers"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Hong Kong pushes to bring crypto custodians, advisers under licensing rules"
-    },
-    {
-      "emoji": "\ud83d\udd34",
-      "text": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit"
+      "text": "Billionaire Bill Ackman warns Fed will make a rate \u2018mistake\u2019 in December"
     }
   ],
   "events": [
@@ -86,7 +86,7 @@
     "Open Interest": "green",
     "Fear & Greed": "yellow",
     "Macro": "green",
-    "News": "red",
+    "News": "yellow",
     "Risk": "green"
   }
 }

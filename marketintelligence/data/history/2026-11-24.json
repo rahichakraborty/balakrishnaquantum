@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "24 Nov 2026",
+    "time": "19:36 IST",
+    "iso": "2026-11-24T19:36:21.306165+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udd34",
+    "bias": "Mild Bearish",
+    "confidence": 29,
+    "todays_trade": "Reduce Size",
+    "preferred_asset": "ETH",
+    "risk_level": "High",
+    "risk_note": "Reduce Size",
+    "conviction": 29
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 20,
+      "support": 55711.45,
+      "resistance": 65078.97,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 1559.0,
+      "resistance": 1827.52,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 38,
+    "flow": 24,
+    "technical": 35,
+    "risk": 96
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Swiss central bank, UBS and SIX study ledger for tokenized settlement"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Sky lender proposes buyback of up to $50M to fund stUSDS withdrawals"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Grayscale calls Bitcoin \u2018oversold\u2019 at $62K but warns of AI risks"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "South Korea proposes bank-led stablecoins, 20% cap on crypto exchange stakes"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin dipped on Huang\u2019s Nvidia exit but jumped 5% on his return"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin dips back under $60K as gold seals worst 60-day loss since 1980s"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin ETFs keep bleeding as BlackRock\u2019s IBIT shares gain nearly 5%"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "yellow",
+    "Macro": "green",
+    "News": "red",
+    "Risk": "green"
+  }
+}

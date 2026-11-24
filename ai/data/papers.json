@@ -1,149 +1,149 @@
 {
-  "generated_at": "2026-11-24T01:58:52+00:00",
+  "generated_at": "2026-11-24T13:12:06+00:00",
   "items": [
     {
-      "title": "Optimal Linear Regression Without a Variance",
-      "summary": "We study high-probability linear regression in the infinite variance regime, wherecthe regression noise has only a finite conditional $α$-moment $ν$ for some unknown $α\\in(1,2)$, and the covariates may only have finite moments up to a given order (e.g., 4th moment). We give a bla…",
+      "title": "Pruning Autonomous Driving VLAs: What to Preserve for Reasoning and Action",
+      "summary": "Reasoning vision-language-action (VLA) models for autonomous driving use chain-of-thought (CoT) reasoning to guide action generation, but incur substantial memory and computational costs. We study structured pruning for these models, focusing on preserving both scene understandin…",
       "authors": [
-        "Artin Tajdini",
-        "Jasper C. H. Lee",
-        "Jonathan Scarlett",
+        "Seongchan Kim",
+        "Soowon Son",
+        "Sangoh Kim",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.27983v1",
-      "published": "2026-11-20T18:58:45Z",
-      "category": "stat.ML"
-    },
-    {
-      "title": "A Methodologically Rigorous Benchmark of Linear Regression,RNN, and LSTM for S&P 500 Forecasting:Identifying Sources of Performance Inflation in Financial DeepLearning",
-      "summary": "This study examines one-day-ahead forecasting of the S&P 500 closing level using a 2006-2025 dataset that includes fundamental price data, macroeconomic indicators, and engineered technical features. We benchmark three model families, namely linear regression, vanilla recurrent n…",
-      "authors": [
-        "Hari Sitaula",
-        "Joseph Opitz"
-      ],
-      "link": "http://arxiv.org/abs/2611.27978v1",
-      "published": "2026-11-20T18:57:15Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
-      "summary": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear G…",
-      "authors": [
-        "Chang Nie",
-        "Chaoyou Fu",
-        "Songlin Liu",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.27973v1",
-      "published": "2026-11-20T18:51:29Z",
-      "category": "cs.CL"
-    },
-    {
-      "title": "On the Complete Feature Set for ADHD Classification in Children and Adolescents Based on EEG Signals",
-      "summary": "Attention-deficit/hyperactivity disorder is a neurodevelopmental condition that can affect attention, activity and impulse control. Electroencephalography (EEG) records brain activity as children and adolescents perform cognitive tasks. However, comparing features derived from th…",
-      "authors": [
-        "Javier Sanchis",
-        "Álvaro Navarro",
-        "Jorge García-Carrasco",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.27970v1",
-      "published": "2026-11-20T18:51:08Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Non-penetrating World Models",
-      "summary": "We study a new problem of preventing object penetration in interactive video world models. To understand how existing models handle this, we introduce NoPeBench, a benchmark that evaluates how world models respond to physical obstacles. Our evaluation reveals that none of the ope…",
-      "authors": [
-        "Yuhang Dai",
-        "Yinwei Wu",
-        "Ziyue Lin",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.27963v1",
-      "published": "2026-11-20T18:44:57Z",
+      "link": "http://arxiv.org/abs/2611.31240v1",
+      "published": "2026-11-23T18:59:52Z",
       "category": "cs.CV"
     },
     {
-      "title": "Model Carving: Training Transformers That Optimize Their Own Topology",
-      "summary": "Machine learning has largely kept separate the choice of architecture and the process of training. A classic Transformer, for instance, trains a fixed set of attention and MLP sublayers at every layer, in the same order, and optimizes the weights within. This uniformity is a conv…",
+      "title": "Let Vision-Language Models Generate Images through Their Representations",
+      "summary": "Recent unified multimodal models aim to combine visual understanding and generation within a single model, yet effectively integrating the two capabilities remains challenging. Leveraging pretrained vision-language models offers a way to build on already learned multimodal knowle…",
       "authors": [
-        "Kaden Zheng",
-        "Pratyusha Sharma"
-      ],
-      "link": "http://arxiv.org/abs/2611.27962v1",
-      "published": "2026-11-20T18:41:39Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Ranking-Preserving Coreset Selection for Efficient Evolutionary Hyperparameter Optimization",
-      "summary": "Hyperparameter optimization (HPO) is essential for high predictive performance, but its computational cost becomes prohibitive when candidate configurations require repeated training on large datasets. This paper proposes a ranking-preserving coreset (RPC) selection framework for…",
-      "authors": [
-        "Mamoona Tasadduq",
-        "Maryam Bashir"
-      ],
-      "link": "http://arxiv.org/abs/2611.27959v1",
-      "published": "2026-11-20T18:35:28Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "Topology Hub Optimal Transport: Eliminating Long Context Dilution at Flash Speed",
-      "summary": "Long-context models use sparse or structured attention to avoid quadratic cost, yet retrieving a small set of relevant facts embedded among hundreds of thousands of distractors degrades as normalization mass disperses with length. Hub-and-spoke optimal transport (OT) replaces the…",
-      "authors": [
-        "Dylan Forde"
-      ],
-      "link": "http://arxiv.org/abs/2611.27951v1",
-      "published": "2026-11-20T18:23:42Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "The Optimal Sample Complexity of Agnostic PAC Learning for Partial Concept Classes",
-      "summary": "Let $\\mathcal H\\subseteq\\{-1,+1,\\star\\}^{\\mathcal X}$ be a partial concept class of finite VC dimension $d$. We construct a deterministic agnostic PAC learner that, for every $\\varepsilon,δ\\in(0,1)$, uses $O((d+\\log(1/δ))/\\varepsilon^2)$ i.i.d. examples from an arbitrary distribu…",
-      "authors": [
-        "Liang-Yu Zou"
-      ],
-      "link": "http://arxiv.org/abs/2611.27946v1",
-      "published": "2026-11-20T18:18:09Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "BioEmu2: Scalable Emulation of Biomolecular Dynamics",
-      "summary": "Despite major advances in structure prediction, modelling the motions and interactions that drive biomolecular function at scale remains a central challenge. We introduce BioEmu2, a generative model for atomically resolved biomolecular structures combining static structure predic…",
-      "authors": [
-        "Michael Gastegger",
-        "Adam E. Foster",
-        "José Jiménez-Luna",
+        "JB Kim",
+        "Byungwoo Jeon",
+        "Kyungmin Lee",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.27924v1",
-      "published": "2026-11-20T17:58:47Z",
+      "link": "http://arxiv.org/abs/2611.31237v1",
+      "published": "2026-11-23T18:59:32Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "TowerBridge: Bridging the Dual-Encoder Modality Gap via Weight-Space Programming",
+      "summary": "CLIP-style dual encoders map images and text through two separate towers into a shared embedding space, where the two modalities occupy distinct regions separated by a modality gap. Retrieval fails when wrong matches, or hard negatives, outrank the correct one, and the gap is the…",
+      "authors": [
+        "Hani Alomari",
+        "Md Atabuzzaman",
+        "Chris Thomas"
+      ],
+      "link": "http://arxiv.org/abs/2611.31233v1",
+      "published": "2026-11-23T18:59:13Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ",
+      "summary": "Prompting language models to verbalize stepwise numerical confidence during generation is an increasingly popular approach for triggering backtracking and error correction in agentic reasoning. This strategy presupposes two capabilities: (1) in-situ monitoring fidelity (does conf…",
+      "authors": [
+        "Daniel Theron"
+      ],
+      "link": "http://arxiv.org/abs/2611.31228v1",
+      "published": "2026-11-23T18:58:52Z",
       "category": "cs.AI"
     },
     {
-      "title": "SUAF: Spectral Universal Advantage Features for Zero-Shot Policy Improvement",
-      "summary": "Reward-independent representations enable reinforcement learning agents to reuse knowledge across tasks, but limited representation capacity raises three fundamental questions: what statistical dependence should these representations capture, which components of that dependence s…",
+      "title": "How Far Can Linear Go? BiPert, a Unified Framework for Single-Cell Perturbation Modelling",
+      "summary": "Understanding how genetic perturbations affect cellular behaviour is essential for studying gene function and regulatory mechanisms. Large-scale CRISPR screens measure these effects across thousands of genes, but cover relatively few cellular contexts. Predicting perturbation res…",
       "authors": [
-        "Huaze Tang",
-        "Runqing Miao",
-        "Tianren Peng",
-        "et al."
+        "Abhishek Sharma",
+        "Aleksej Zelezniak"
       ],
-      "link": "http://arxiv.org/abs/2611.27919v1",
-      "published": "2026-11-20T17:53:21Z",
+      "link": "http://arxiv.org/abs/2611.31227v1",
+      "published": "2026-11-23T18:58:32Z",
       "category": "cs.LG"
     },
     {
-      "title": "StereoVLM: Binocular Vision-Language Models for Metric 3D Spatial Reasoning",
-      "summary": "Vision-language models (VLMs) exhibit strong semantic understanding but remain limited in their ability to reason about metric 3D space in the physical world. Existing VLMs typically infer 3D scene structure from one or more images without known camera calibration or cross-view g…",
+      "title": "Self-Supervised Dataset Distillation via Mutual Information Maximization",
+      "summary": "Dataset distillation (DD) aims to compress a large dataset into a small synthetic one that remains effective for training neural networks. Despite its success in supervised learning, DD remains underexplored in self-supervised learning (SSL), where distilled data must preserve th…",
       "authors": [
-        "Chi Yan",
-        "Guoyang Zhao",
-        "Wentao Yuan",
+        "Mohammad Hossein Moslemi",
+        "Mahdi Beitollahi",
+        "Zhimin Mei",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.27915v1",
-      "published": "2026-11-20T17:52:02Z",
+      "link": "http://arxiv.org/abs/2611.31225v1",
+      "published": "2026-11-23T18:58:27Z",
       "category": "cs.CV"
+    },
+    {
+      "title": "Agentic AI for Intent Management and Control in Autonomous Communication Networks",
+      "summary": "Artificial intelligence (AI)-driven automation will help future mobile networks translate high-level network intents into concrete network optimization or control actions. However, existing approaches often focus on intent management and orchestration, leaving the adaptation of u…",
+      "authors": [
+        "Burak Demirel",
+        "Yu Wang",
+        "Pablo Soldati"
+      ],
+      "link": "http://arxiv.org/abs/2611.31223v1",
+      "published": "2026-11-23T18:57:32Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "CTLink: A Text-Prompted Segmentation Model for Linking Radiology Report Findings to 3D Chest CT Scans",
+      "summary": "Radiology reports describe findings in text only, without visually marking them on the scan, so readers cannot directly see which abnormality each reported finding refers to. We introduce CTLink, a text-prompted 3D segmentation model that segments findings described in a chest CT…",
+      "authors": [
+        "Mohammed Baharoon",
+        "Sung Eun Kim",
+        "Mahmoud Hussain Alabbad",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.31222v1",
+      "published": "2026-11-23T18:57:26Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "LeJEPA Features Are Not Isotropic, and Should Not Be",
+      "summary": "The SIGReg term in LeJEPA regularizes features to have an isotropic Gaussian distribution. Our first result is to show that this regularizer, in practice, cannot achieve its goal. We design a modified regularizer to enforce the objective better. This leads to slightly improved pe…",
+      "authors": [
+        "Richeek Das",
+        "Pratik Chaudhari"
+      ],
+      "link": "http://arxiv.org/abs/2611.31216v1",
+      "published": "2026-11-23T18:56:04Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Seeking in Space: Benchmarking Purposeful Active Exploration of Vision-Language Models for Spatial Reasoning",
+      "summary": "Humans explore unfamiliar spaces with purpose, deciding where to look until they have gathered the evidence a spatial question requires. However, can vision-language models (VLMs), which reason increasingly well over curated images and videos, also seek in space when the evidence…",
+      "authors": [
+        "Xiwei Liu",
+        "Yulong Li",
+        "Xuhui Li",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.31215v1",
+      "published": "2026-11-23T18:55:44Z",
+      "category": "cs.AI"
+    },
+    {
+      "title": "Flood forecasting using a physics-guided conditional denoising diffusion probabilistic model",
+      "summary": "High-resolution flood forecasting with full two-dimensional shallow water equation (SWE) solvers remains computationally expensive, even on GPUs. We develop a conditional denoising diffusion probabilistic model (DDPM) that forecasts the evolution of 30 m water-depth fields over a…",
+      "authors": [
+        "Omar Sallam",
+        "David Coe",
+        "Jeremy Feinstein",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.31212v1",
+      "published": "2026-11-23T18:55:29Z",
+      "category": "physics.flu-dyn"
+    },
+    {
+      "title": "Verifying the Outputs of PDE Solvers: From Finite Elements to Neural Surrogates",
+      "summary": "Physics simulation outputs increasingly come from solvers that no expert inspects, such as third-party packages in automated pipelines, programs written by large language models (LLMs), and learned surrogates. In earlier work on cardiac pulsed field ablation, we proposed that sol…",
+      "authors": [
+        "Konstantinos Dovelos"
+      ],
+      "link": "http://arxiv.org/abs/2611.31211v1",
+      "published": "2026-11-23T18:55:06Z",
+      "category": "cs.CE"
     }
   ]
 }

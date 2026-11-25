@@ -1,149 +1,155 @@
 {
-  "generated_at": "2026-11-24T23:43:02+00:00",
+  "generated_at": "2026-11-25T12:00:12+00:00",
   "items": [
     {
-      "title": "Pruning Autonomous Driving VLAs: What to Preserve for Reasoning and Action",
-      "summary": "Reasoning vision-language-action (VLA) models for autonomous driving use chain-of-thought (CoT) reasoning to guide action generation, but incur substantial memory and computational costs. We study structured pruning for these models, focusing on preserving both scene understandin…",
+      "title": "OmniAct: One Policy, One Million Embodiments",
+      "summary": "A single policy that controls diverse robots must not only transfer task knowledge across embodiments, but also adapt its behavior to each robot's capabilities. Existing approaches facilitate transfer through shared action representations, but these representations do not necessa…",
       "authors": [
-        "Seongchan Kim",
-        "Soowon Son",
-        "Sangoh Kim",
+        "Xiang Fan",
+        "Yuheng Wang",
+        "Jiayuan Yan",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.31240v1",
-      "published": "2026-11-23T18:59:52Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2611.33158v1",
+      "published": "2026-11-24T18:59:58Z",
+      "category": "cs.RO"
     },
     {
-      "title": "Let Vision-Language Models Generate Images through Their Representations",
-      "summary": "Recent unified multimodal models aim to combine visual understanding and generation within a single model, yet effectively integrating the two capabilities remains challenging. Leveraging pretrained vision-language models offers a way to build on already learned multimodal knowle…",
+      "title": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
+      "summary": "We present DiaCap, an audiovisual LLM for comprehensive dialogue captioning, which produces the transcript, timestamps, and a visual description of the speaker for every utterance in a video. Considering that utterance timing and audiovisual diarization are tightly coupled, DiaCa…",
       "authors": [
-        "JB Kim",
-        "Byungwoo Jeon",
-        "Kyungmin Lee",
+        "Binfei Ji",
+        "Zhiwen Cao",
+        "Anqi Yang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.31237v1",
-      "published": "2026-11-23T18:59:32Z",
+      "link": "http://arxiv.org/abs/2611.33153v1",
+      "published": "2026-11-24T18:59:08Z",
       "category": "cs.CV"
     },
     {
-      "title": "TowerBridge: Bridging the Dual-Encoder Modality Gap via Weight-Space Programming",
-      "summary": "CLIP-style dual encoders map images and text through two separate towers into a shared embedding space, where the two modalities occupy distinct regions separated by a modality gap. Retrieval fails when wrong matches, or hard negatives, outrank the correct one, and the gap is the…",
+      "title": "BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles",
+      "summary": "The development of biomedical vision-language models (VLMs) with contrastive image-text pretraining has been driven by scaling to increasingly large and diverse image-text datasets. Beyond scaling, further progress can come from learning richer representations from existing data.…",
       "authors": [
-        "Hani Alomari",
-        "Md Atabuzzaman",
-        "Chris Thomas"
+        "Yuwei Yang",
+        "Xiaoxiao Sun",
+        "Alejandro Lozano",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.31233v1",
-      "published": "2026-11-23T18:59:13Z",
+      "link": "http://arxiv.org/abs/2611.33151v1",
+      "published": "2026-11-24T18:59:04Z",
       "category": "cs.CV"
     },
     {
-      "title": "Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ",
-      "summary": "Prompting language models to verbalize stepwise numerical confidence during generation is an increasingly popular approach for triggering backtracking and error correction in agentic reasoning. This strategy presupposes two capabilities: (1) in-situ monitoring fidelity (does conf…",
+      "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
+      "summary": "Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the str…",
       "authors": [
-        "Daniel Theron"
+        "Dawid J. Kopiczko",
+        "Tijmen Blankevoort",
+        "Yuki M. Asano"
       ],
-      "link": "http://arxiv.org/abs/2611.31228v1",
-      "published": "2026-11-23T18:58:52Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2611.33148v1",
+      "published": "2026-11-24T18:58:53Z",
+      "category": "cs.CL"
     },
     {
-      "title": "How Far Can Linear Go? BiPert, a Unified Framework for Single-Cell Perturbation Modelling",
-      "summary": "Understanding how genetic perturbations affect cellular behaviour is essential for studying gene function and regulatory mechanisms. Large-scale CRISPR screens measure these effects across thousands of genes, but cover relatively few cellular contexts. Predicting perturbation res…",
+      "title": "iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction",
+      "summary": "World-action models (WAMs) build policies on pretrained video-generation models, on the premise that predicting how a scene evolves helps determine how to act. However, generating future scenes is expensive for real-time control. This motivates efficient proxies for future imagin…",
       "authors": [
-        "Abhishek Sharma",
-        "Aleksej Zelezniak"
+        "Vansh Kapoor",
+        "Max Sobol Mark",
+        "Sreyas Venkataraman",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.31227v1",
-      "published": "2026-11-23T18:58:32Z",
+      "link": "http://arxiv.org/abs/2611.33141v1",
+      "published": "2026-11-24T18:56:04Z",
+      "category": "cs.RO"
+    },
+    {
+      "title": "BriConstrain: Geometrically Constrained Decoding for Autoregressive Brick Assembly Generation",
+      "summary": "Language models can generate LEGO$^\\circledR$ assemblies from text, but their builds often contain parts that collide or attach to nothing. The usual approach of rejecting and resampling invalid placements discards decoded tokens without guaranteeing a valid build. We present Bri…",
+      "authors": [
+        "Nadav Magar",
+        "Amir Hertz",
+        "Ariel Shamir",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.33135v1",
+      "published": "2026-11-24T18:54:38Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "A Bias in Disguise: Tiny Gradient Edits Stop a Small Language Model's Thinking Loops and Complement a Frontier Model's Weight Edit",
+      "summary": "Qwen3.5-0.8B rarely finishes reasoning in thinking mode: at a 4,096-token budget only 1 or 2 of 500 MATH-500 answers close their think block (two seeds), and accuracy is 15.4%. A recent demonstration had GPT-6 Astra edit 131,072 of the model's weights without gradients and report…",
+      "authors": [
+        "Hussamuddin Syed"
+      ],
+      "link": "http://arxiv.org/abs/2611.33133v1",
+      "published": "2026-11-24T18:53:22Z",
       "category": "cs.LG"
     },
     {
-      "title": "Self-Supervised Dataset Distillation via Mutual Information Maximization",
-      "summary": "Dataset distillation (DD) aims to compress a large dataset into a small synthetic one that remains effective for training neural networks. Despite its success in supervised learning, DD remains underexplored in self-supervised learning (SSL), where distilled data must preserve th…",
+      "title": "Exploratory Midtraining for Robot Policies",
+      "summary": "Robot policies predominantly learn from human-collected data emphasizing competent behavior, limiting coverage of the low-level behaviors needed to support autonomous improvement. We study how a form of midtraining can be used to build coverage over diverse low-level behaviors th…",
       "authors": [
-        "Mohammad Hossein Moslemi",
-        "Mahdi Beitollahi",
-        "Zhimin Mei",
+        " Kshitiz",
+        "Zheyuan Hu",
+        "Robyn Wu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.31225v1",
-      "published": "2026-11-23T18:58:27Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2611.33130v1",
+      "published": "2026-11-24T18:52:34Z",
+      "category": "cs.RO"
     },
     {
-      "title": "Agentic AI for Intent Management and Control in Autonomous Communication Networks",
-      "summary": "Artificial intelligence (AI)-driven automation will help future mobile networks translate high-level network intents into concrete network optimization or control actions. However, existing approaches often focus on intent management and orchestration, leaving the adaptation of u…",
+      "title": "SAG-Mem-1.0 Technical Report",
+      "summary": "Long-term conversational memory requires retrieving complementary facts scattered across dialogue sessions, including intermediate evidence with limited similarity to the original question. Existing approaches often rely on derived memory representations or persistent relational …",
       "authors": [
-        "Burak Demirel",
-        "Yu Wang",
-        "Pablo Soldati"
-      ],
-      "link": "http://arxiv.org/abs/2611.31223v1",
-      "published": "2026-11-23T18:57:32Z",
-      "category": "cs.LG"
-    },
-    {
-      "title": "CTLink: A Text-Prompted Segmentation Model for Linking Radiology Report Findings to 3D Chest CT Scans",
-      "summary": "Radiology reports describe findings in text only, without visually marking them on the scan, so readers cannot directly see which abnormality each reported finding refers to. We introduce CTLink, a text-prompted 3D segmentation model that segments findings described in a chest CT…",
-      "authors": [
-        "Mohammed Baharoon",
-        "Sung Eun Kim",
-        "Mahmoud Hussain Alabbad",
+        "Yuchao Wu",
+        "XingCheng Liang",
+        "Xuanze Wang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.31222v1",
-      "published": "2026-11-23T18:57:26Z",
-      "category": "cs.CV"
+      "link": "http://arxiv.org/abs/2611.33124v1",
+      "published": "2026-11-24T18:51:29Z",
+      "category": "cs.CL"
     },
     {
-      "title": "LeJEPA Features Are Not Isotropic, and Should Not Be",
-      "summary": "The SIGReg term in LeJEPA regularizes features to have an isotropic Gaussian distribution. Our first result is to show that this regularizer, in practice, cannot achieve its goal. We design a modified regularizer to enforce the objective better. This leads to slightly improved pe…",
+      "title": "MetaFORGE: A Meta-Learning Framework for Harness Optimization in Automated Code Generation for Parallel Computing",
+      "summary": "Large language models (LLMs) can generate parallel programs, but their correctness and performance depend strongly on the instructions that guide generation. We present \\textsc{MetaFORGE}, an execution-grounded meta-learning framework that iteratively optimizes persistent natural…",
       "authors": [
-        "Richeek Das",
-        "Pratik Chaudhari"
-      ],
-      "link": "http://arxiv.org/abs/2611.31216v1",
-      "published": "2026-11-23T18:56:04Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "Seeking in Space: Benchmarking Purposeful Active Exploration of Vision-Language Models for Spatial Reasoning",
-      "summary": "Humans explore unfamiliar spaces with purpose, deciding where to look until they have gathered the evidence a spatial question requires. However, can vision-language models (VLMs), which reason increasingly well over curated images and videos, also seek in space when the evidence…",
-      "authors": [
-        "Xiwei Liu",
-        "Yulong Li",
-        "Xuhui Li",
+        "Scott Piersall",
+        "Yang Gao",
+        "Shenyang Liu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.31215v1",
-      "published": "2026-11-23T18:55:44Z",
+      "link": "http://arxiv.org/abs/2611.33119v1",
+      "published": "2026-11-24T18:49:19Z",
       "category": "cs.AI"
     },
     {
-      "title": "Flood forecasting using a physics-guided conditional denoising diffusion probabilistic model",
-      "summary": "High-resolution flood forecasting with full two-dimensional shallow water equation (SWE) solvers remains computationally expensive, even on GPUs. We develop a conditional denoising diffusion probabilistic model (DDPM) that forecasts the evolution of 30 m water-depth fields over a…",
+      "title": "Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions",
+      "summary": "Speculative decoding accelerates large language model (LLM) inference by employing a lightweight draft model to propose draft tokens and allowing the target model to verify the new tokens in parallel to improve inference-time compute utilization. The speedup relies on the accepta…",
       "authors": [
-        "Omar Sallam",
-        "David Coe",
-        "Jeremy Feinstein",
+        "Yuxing Liu",
+        "Wei Zuo",
+        "Walid Krichene",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.31212v1",
-      "published": "2026-11-23T18:55:29Z",
-      "category": "physics.flu-dyn"
+      "link": "http://arxiv.org/abs/2611.33111v1",
+      "published": "2026-11-24T18:41:59Z",
+      "category": "cs.LG"
     },
     {
-      "title": "Verifying the Outputs of PDE Solvers: From Finite Elements to Neural Surrogates",
-      "summary": "Physics simulation outputs increasingly come from solvers that no expert inspects, such as third-party packages in automated pipelines, programs written by large language models (LLMs), and learned surrogates. In earlier work on cardiac pulsed field ablation, we proposed that sol…",
+      "title": "Temporal Conditioning for Human Behavioral Cloning in Chess",
+      "summary": "Behavioral cloning models in chess typically predict human moves from board states while ignoring temporal inputs such as the remaining clock. However, time pressure is a major determinant of human decision-making quality, and temporal state is a missing dimension of human behavi…",
       "authors": [
-        "Konstantinos Dovelos"
+        "Victor Dziwniel",
+        "Tianxiang Lu"
       ],
-      "link": "http://arxiv.org/abs/2611.31211v1",
-      "published": "2026-11-23T18:55:06Z",
-      "category": "cs.CE"
+      "link": "http://arxiv.org/abs/2611.33106v1",
+      "published": "2026-11-24T18:40:51Z",
+      "category": "cs.AI"
     }
   ]
 }

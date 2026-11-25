@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-24T23:43:11+00:00",
+  "generated_at": "2026-11-25T12:00:31+00:00",
   "items": [
     {
       "id": "thinkingmachines/Inkling-2-Mini",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
-      "downloads": 69042,
-      "likes": 5777,
+      "downloads": 96527,
+      "likes": 5883,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Inkling-2-Mini-GGUF",
       "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
-      "downloads": 1913407,
-      "likes": 1249,
+      "downloads": 2445633,
+      "likes": 1304,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "inworld/voice-isolator",
       "url": "https://huggingface.co/inworld/voice-isolator",
-      "downloads": 12733,
-      "likes": 814,
+      "downloads": 15244,
+      "likes": 848,
       "pipeline_tag": "audio-to-audio"
     },
     {
       "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
       "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
-      "downloads": 573775,
-      "likes": 751,
-      "pipeline_tag": "image-text-to-text"
-    },
-    {
-      "id": "harness-hub/Qwen3.8-27B-pi-adapted",
-      "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
-      "downloads": 3529,
-      "likes": 1069,
+      "downloads": 762491,
+      "likes": 790,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "SulphurAI/Sulphur-3",
       "url": "https://huggingface.co/SulphurAI/Sulphur-3",
-      "downloads": 160965,
-      "likes": 903,
+      "downloads": 189735,
+      "likes": 968,
       "pipeline_tag": null
+    },
+    {
+      "id": "harness-hub/Qwen3.8-27B-pi-adapted",
+      "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
+      "downloads": 3844,
+      "likes": 1084,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "higurashi-ai/Haru-4B",
       "url": "https://huggingface.co/higurashi-ai/Haru-4B",
-      "downloads": 9575,
-      "likes": 977,
+      "downloads": 10026,
+      "likes": 986,
       "pipeline_tag": "audio-to-audio"
     },
     {
-      "id": "tencent/Hy4-flash",
-      "url": "https://huggingface.co/tencent/Hy4-flash",
-      "downloads": 9167,
-      "likes": 679,
-      "pipeline_tag": "image-text-to-text"
+      "id": "prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+      "downloads": 59366,
+      "likes": 209,
+      "pipeline_tag": "text-generation"
     },
     {
       "id": "apple/DepthPro2",
       "url": "https://huggingface.co/apple/DepthPro2",
       "downloads": 0,
-      "likes": 1193,
+      "likes": 1211,
       "pipeline_tag": "depth-estimation"
     },
     {
-      "id": "apple/FastFrames-L",
-      "url": "https://huggingface.co/apple/FastFrames-L",
-      "downloads": 0,
-      "likes": 594,
-      "pipeline_tag": "text-to-video"
+      "id": "llamaindex/OCRia-nano-1",
+      "url": "https://huggingface.co/llamaindex/OCRia-nano-1",
+      "downloads": 126,
+      "likes": 195,
+      "pipeline_tag": "image-to-text"
     }
   ]
 }

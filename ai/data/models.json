@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-11-25T23:27:03+00:00",
+  "generated_at": "2026-11-26T11:48:33+00:00",
   "items": [
     {
       "id": "thinkingmachines/Inkling-2-Mini",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
       "downloads": 96527,
-      "likes": 6019,
+      "likes": 6122,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Inkling-2-Mini-GGUF",
       "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
       "downloads": 2445633,
-      "likes": 1367,
+      "likes": 1414,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "inworld/voice-isolator",
       "url": "https://huggingface.co/inworld/voice-isolator",
       "downloads": 15244,
-      "likes": 893,
+      "likes": 919,
       "pipeline_tag": "audio-to-audio"
     },
     {
       "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
       "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
       "downloads": 762491,
-      "likes": 837,
+      "likes": 871,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "SulphurAI/Sulphur-3",
       "url": "https://huggingface.co/SulphurAI/Sulphur-3",
       "downloads": 189735,
-      "likes": 1066,
+      "likes": 1147,
       "pipeline_tag": null
     },
     {
       "id": "prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
       "downloads": 59366,
-      "likes": 316,
+      "likes": 426,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "Lightricks/LTX-2.5",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5",
+      "downloads": 3041405,
+      "likes": 13491,
+      "pipeline_tag": "image-to-video"
     },
     {
       "id": "apple/DepthPro2",
       "url": "https://huggingface.co/apple/DepthPro2",
       "downloads": 0,
-      "likes": 1250,
+      "likes": 1267,
       "pipeline_tag": "depth-estimation"
-    },
-    {
-      "id": "harness-hub/Qwen3.8-27B-pi-adapted",
-      "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
-      "downloads": 3844,
-      "likes": 1116,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "llamaindex/OCRia-nano-1",
       "url": "https://huggingface.co/llamaindex/OCRia-nano-1",
       "downloads": 126,
-      "likes": 227,
+      "likes": 247,
       "pipeline_tag": "image-to-text"
     },
     {
       "id": "inclusionAI/Ling-3.2-air",
       "url": "https://huggingface.co/inclusionAI/Ling-3.2-air",
       "downloads": 1467,
-      "likes": 234,
+      "likes": 241,
       "pipeline_tag": null
     }
   ]

@@ -1,155 +1,158 @@
 {
-  "generated_at": "2026-11-25T23:26:56+00:00",
+  "generated_at": "2026-11-26T11:48:25+00:00",
   "items": [
     {
-      "title": "OmniAct: One Policy, One Million Embodiments",
-      "summary": "A single policy that controls diverse robots must not only transfer task knowledge across embodiments, but also adapt its behavior to each robot's capabilities. Existing approaches facilitate transfer through shared action representations, but these representations do not necessa…",
+      "title": "Spectrum Adaptation of AI-Native Autoencoder Communications with Transfer Learning",
+      "summary": "End-to-end physical-layer learning replaces separate modulation, coding, and detection operations with an autoencoder (AE) that consists of a jointly trained encoder-decoder pair at the transmitter and the receiver. This paper studies AI-native communications with AEs and quantif…",
       "authors": [
-        "Xiang Fan",
-        "Yuheng Wang",
-        "Jiayuan Yan",
-        "et al."
+        "Yalin E. Sagduyu",
+        "Tugba Erpek"
       ],
-      "link": "http://arxiv.org/abs/2611.33158v1",
-      "published": "2026-11-24T18:59:58Z",
-      "category": "cs.RO"
+      "link": "http://arxiv.org/abs/2611.34942v1",
+      "published": "2026-11-25T18:59:57Z",
+      "category": "cs.NI"
     },
     {
-      "title": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
-      "summary": "We present DiaCap, an audiovisual LLM for comprehensive dialogue captioning, which produces the transcript, timestamps, and a visual description of the speaker for every utterance in a video. Considering that utterance timing and audiovisual diarization are tightly coupled, DiaCa…",
+      "title": "Tokenisation is not in APX",
+      "summary": "In this paper, we prove that, unless P=NP, no polynomial-time algorithm can find a tokeniser whose objective is within any constant factor of the optimum, meaning that tokenisation is not in the APX complexity class. We prove this for direct and bottom-up tokenisation, under both…",
       "authors": [
-        "Binfei Ji",
-        "Zhiwen Cao",
-        "Anqi Yang",
+        "Violeta Kastreva",
+        "Philip Whittington",
+        "Dennis Komm",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.33153v1",
-      "published": "2026-11-24T18:59:08Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles",
-      "summary": "The development of biomedical vision-language models (VLMs) with contrastive image-text pretraining has been driven by scaling to increasingly large and diverse image-text datasets. Beyond scaling, further progress can come from learning richer representations from existing data.…",
-      "authors": [
-        "Yuwei Yang",
-        "Xiaoxiao Sun",
-        "Alejandro Lozano",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.33151v1",
-      "published": "2026-11-24T18:59:04Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
-      "summary": "Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the str…",
-      "authors": [
-        "Dawid J. Kopiczko",
-        "Tijmen Blankevoort",
-        "Yuki M. Asano"
-      ],
-      "link": "http://arxiv.org/abs/2611.33148v1",
-      "published": "2026-11-24T18:58:53Z",
+      "link": "http://arxiv.org/abs/2611.34938v1",
+      "published": "2026-11-25T18:59:38Z",
       "category": "cs.CL"
     },
     {
-      "title": "iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction",
-      "summary": "World-action models (WAMs) build policies on pretrained video-generation models, on the premise that predicting how a scene evolves helps determine how to act. However, generating future scenes is expensive for real-time control. This motivates efficient proxies for future imagin…",
+      "title": "Can image generation help visual reasoning? An empirical study",
+      "summary": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-lan…",
       "authors": [
-        "Vansh Kapoor",
-        "Max Sobol Mark",
-        "Sreyas Venkataraman",
+        "Xueyang Yu",
+        "Yifan Jing",
+        "Taiming Lu",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.33141v1",
-      "published": "2026-11-24T18:56:04Z",
-      "category": "cs.RO"
-    },
-    {
-      "title": "BriConstrain: Geometrically Constrained Decoding for Autoregressive Brick Assembly Generation",
-      "summary": "Language models can generate LEGO$^\\circledR$ assemblies from text, but their builds often contain parts that collide or attach to nothing. The usual approach of rejecting and resampling invalid placements discards decoded tokens without guaranteeing a valid build. We present Bri…",
-      "authors": [
-        "Nadav Magar",
-        "Amir Hertz",
-        "Ariel Shamir",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.33135v1",
-      "published": "2026-11-24T18:54:38Z",
-      "category": "cs.CV"
-    },
-    {
-      "title": "A Bias in Disguise: Tiny Gradient Edits Stop a Small Language Model's Thinking Loops and Complement a Frontier Model's Weight Edit",
-      "summary": "Qwen3.5-0.8B rarely finishes reasoning in thinking mode: at a 4,096-token budget only 1 or 2 of 500 MATH-500 answers close their think block (two seeds), and accuracy is 15.4%. A recent demonstration had GPT-6 Astra edit 131,072 of the model's weights without gradients and report…",
-      "authors": [
-        "Hussamuddin Syed"
-      ],
-      "link": "http://arxiv.org/abs/2611.33133v1",
-      "published": "2026-11-24T18:53:22Z",
+      "link": "http://arxiv.org/abs/2611.34935v1",
+      "published": "2026-11-25T18:59:31Z",
       "category": "cs.LG"
     },
     {
-      "title": "Exploratory Midtraining for Robot Policies",
-      "summary": "Robot policies predominantly learn from human-collected data emphasizing competent behavior, limiting coverage of the low-level behaviors needed to support autonomous improvement. We study how a form of midtraining can be used to build coverage over diverse low-level behaviors th…",
+      "title": "Attack Policy Selection can Mislead Monitor Evaluators",
+      "summary": "AI monitors, classifiers that flag dangerous behaviour by AI agents, are often evaluated against transcripts generated by attack policies acting as proxies for dangerous behaviour in deployment. We evaluate an ex-production OpenAI monitor as a case study and find that measured fa…",
       "authors": [
-        " Kshitiz",
-        "Zheyuan Hu",
-        "Robyn Wu",
+        "Charlie Griffin",
+        "Oliver Makins",
+        "Asa Cooper Stickland",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.33130v1",
-      "published": "2026-11-24T18:52:34Z",
-      "category": "cs.RO"
+      "link": "http://arxiv.org/abs/2611.34934v1",
+      "published": "2026-11-25T18:59:28Z",
+      "category": "cs.LG"
     },
     {
-      "title": "SAG-Mem-1.0 Technical Report",
-      "summary": "Long-term conversational memory requires retrieving complementary facts scattered across dialogue sessions, including intermediate evidence with limited similarity to the original question. Existing approaches often rely on derived memory representations or persistent relational …",
+      "title": "A gene informed benchmark for BioScoring of pathology foundation models",
+      "summary": "Pathology foundation models are usually compared by their performance on downstream tasks such as classification and retrieval. While such benchmarks measure how useful a model is, they provide no insight into the biology it represents. We introduce BioScore, a benchmark that qua…",
       "authors": [
-        "Yuchao Wu",
-        "XingCheng Liang",
-        "Xuanze Wang",
+        "Paul Vilars",
+        "Vincent Quoc-Huy Trinh",
+        "Maria Vakalopoulou",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.33124v1",
-      "published": "2026-11-24T18:51:29Z",
+      "link": "http://arxiv.org/abs/2611.34930v1",
+      "published": "2026-11-25T18:59:13Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
+      "summary": "Post-training large language models (LLMs) for mathematical reasoning often relies on accepted traces whose final answers pass a verifier. For hard math problems, however, such traces can be rare under independent Monte Carlo (MC) sampling. To address this, we propose Diverse Alt…",
+      "authors": [
+        "Lukas Aichberger",
+        "Adam Golinski",
+        "Arno Blaas",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.34928v1",
+      "published": "2026-11-25T18:59:11Z",
       "category": "cs.CL"
     },
     {
-      "title": "MetaFORGE: A Meta-Learning Framework for Harness Optimization in Automated Code Generation for Parallel Computing",
-      "summary": "Large language models (LLMs) can generate parallel programs, but their correctness and performance depend strongly on the instructions that guide generation. We present \\textsc{MetaFORGE}, an execution-grounded meta-learning framework that iteratively optimizes persistent natural…",
+      "title": "Mixture-of-Loops Transformer",
+      "summary": "Looped Transformers boost expressivity by reusing shared layers across loops, yet at the cost of efficiency. Pushing their expressivity-efficiency frontier requires rethinking the core mechanism connecting adjacent loops: What should be passed as a Transformer loops? We introduce…",
       "authors": [
-        "Scott Piersall",
-        "Yang Gao",
-        "Shenyang Liu",
+        "Lianghui Zhu",
+        "Shijie Wang",
+        "Xinggang Wang",
         "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.33119v1",
-      "published": "2026-11-24T18:49:19Z",
-      "category": "cs.AI"
-    },
-    {
-      "title": "Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions",
-      "summary": "Speculative decoding accelerates large language model (LLM) inference by employing a lightweight draft model to propose draft tokens and allowing the target model to verify the new tokens in parallel to improve inference-time compute utilization. The speedup relies on the accepta…",
-      "authors": [
-        "Yuxing Liu",
-        "Wei Zuo",
-        "Walid Krichene",
-        "et al."
-      ],
-      "link": "http://arxiv.org/abs/2611.33111v1",
-      "published": "2026-11-24T18:41:59Z",
+      "link": "http://arxiv.org/abs/2611.34923v1",
+      "published": "2026-11-25T18:58:53Z",
       "category": "cs.LG"
     },
     {
-      "title": "Temporal Conditioning for Human Behavioral Cloning in Chess",
-      "summary": "Behavioral cloning models in chess typically predict human moves from board states while ignoring temporal inputs such as the remaining clock. However, time pressure is a major determinant of human decision-making quality, and temporal state is a missing dimension of human behavi…",
+      "title": "$μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents",
+      "summary": "Voice agents in shared spaces must satisfy interdependent multi-user requests while upholding per-user authority, privacy, and task constraints. Existing evaluations offer limited coverage when participants react throughout a session. We introduce $μ$-Bench, a benchmark for joint…",
       "authors": [
-        "Victor Dziwniel",
-        "Tianxiang Lu"
+        "Qihao Lin",
+        "Guanxu Chen",
+        "Shuhang Zheng",
+        "et al."
       ],
-      "link": "http://arxiv.org/abs/2611.33106v1",
-      "published": "2026-11-24T18:40:51Z",
-      "category": "cs.AI"
+      "link": "http://arxiv.org/abs/2611.34920v1",
+      "published": "2026-11-25T18:58:42Z",
+      "category": "cs.CL"
+    },
+    {
+      "title": "Enhancing Maritime Domain Awareness using Latent Space Representations",
+      "summary": "This work presents a novel application of Earth Observation (EO) embeddings for Maritime Domain Awareness (MDA) from the perspective of the geospatial foundation model TerraMind. By operating directly on compressed latent-space representations rather than on the original Sentinel…",
+      "authors": [
+        "Rikard Vinge",
+        "Miguel A. Belenguer-Plomer",
+        "Isabelle Wittmann",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.34899v1",
+      "published": "2026-11-25T18:51:36Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "What a Drop Reveals: Sim-to-Real Material Estimation for Deformable Objects from Video",
+      "summary": "How an object deforms when it hits the ground reveals what it is made of. From a single real video of a drop, we estimate a deformable object's density-normalized stiffness $E/ρ$, and its yield stress $σ_Y/ρ$ when the impact causes plastic deformation, with a feed-forward predict…",
+      "authors": [
+        "Ziyue Peng",
+        "Yanxi Hu",
+        "Junyoung Kim",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.34894v1",
+      "published": "2026-11-25T18:47:56Z",
+      "category": "cs.CV"
+    },
+    {
+      "title": "Interpretable and Accurate Hybrid Decision Trees with Selective Case-Based Splits",
+      "summary": "Decision trees are among the most well-known interpretable models in Machine Learning. Over the years, a wide variety of strategies have been proposed to define split conditions within the greedy learning framework, aiming to guide instance routing and enhance predictive performa…",
+      "authors": [
+        "Cristiano Landi",
+        "Alessio Cascione",
+        "Riccardo Guidotti"
+      ],
+      "link": "http://arxiv.org/abs/2611.34887v1",
+      "published": "2026-11-25T18:45:35Z",
+      "category": "cs.LG"
+    },
+    {
+      "title": "Stranger Things: When Objects Appear Without Their Typical Neighbors",
+      "summary": "Visual context is a powerful cue for object recognition: scenes inform what, where, and at what scale objects are likely to appear. Yet over-reliance on context becomes a failure mode when models predict objects based on their typical neighbors rather than the objects' own visual…",
+      "authors": [
+        "Siddhartha Gairola",
+        "Jiahao Xie",
+        "Anna Kukleva",
+        "et al."
+      ],
+      "link": "http://arxiv.org/abs/2611.34881v1",
+      "published": "2026-11-25T18:39:28Z",
+      "category": "cs.CV"
     }
   ]
 }

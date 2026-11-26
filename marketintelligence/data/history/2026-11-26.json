@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "26 Nov 2026",
+    "time": "18:29 IST",
+    "iso": "2026-11-26T18:29:25.013211+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 45,
+    "todays_trade": "Reduce Size",
+    "preferred_asset": "ETH",
+    "risk_level": "High",
+    "risk_note": "Reduce Size",
+    "conviction": 45
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 20,
+      "support": 55711.45,
+      "resistance": 63978.14,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 1559.0,
+      "resistance": 1811.49,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 45,
+    "flow": 68,
+    "technical": 35,
+    "risk": 71
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Vitalik Buterin calls for verifiable chips as hardware wallet threats evolve"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Standard Chartered\u2019s Zodia Custody suffers data breach: Report"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin price eyes $61K as Talos warns of thin Thanksgiving liquidity"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Zcash devs urge users to migrate 2% of ZEC supply to accelerate Sapling pool retirement"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Switzerland\u2019s first spot Bitcoin ETF ticks up 0.6% in opening hour"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "UK regulator plans tighter DeFi rules, citing $6.3B Binance hack: Report"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "yellow",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

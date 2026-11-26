@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-26T11:48:33+00:00",
+  "generated_at": "2026-11-26T23:26:03+00:00",
   "items": [
     {
       "id": "thinkingmachines/Inkling-2-Mini",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
       "downloads": 96527,
-      "likes": 6122,
+      "likes": 6239,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Inkling-2-Mini-GGUF",
       "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
       "downloads": 2445633,
-      "likes": 1414,
+      "likes": 1491,
+      "pipeline_tag": "image-text-to-text"
+    },
+    {
+      "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+      "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+      "downloads": 762491,
+      "likes": 931,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "inworld/voice-isolator",
       "url": "https://huggingface.co/inworld/voice-isolator",
       "downloads": 15244,
-      "likes": 919,
+      "likes": 960,
       "pipeline_tag": "audio-to-audio"
-    },
-    {
-      "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
-      "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
-      "downloads": 762491,
-      "likes": 871,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "SulphurAI/Sulphur-3",
       "url": "https://huggingface.co/SulphurAI/Sulphur-3",
       "downloads": 189735,
-      "likes": 1147,
+      "likes": 1211,
       "pipeline_tag": null
     },
     {
       "id": "prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
       "downloads": 59366,
-      "likes": 426,
+      "likes": 514,
       "pipeline_tag": "text-generation"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
       "downloads": 3041405,
-      "likes": 13491,
+      "likes": 13587,
       "pipeline_tag": "image-to-video"
-    },
-    {
-      "id": "apple/DepthPro2",
-      "url": "https://huggingface.co/apple/DepthPro2",
-      "downloads": 0,
-      "likes": 1267,
-      "pipeline_tag": "depth-estimation"
     },
     {
       "id": "llamaindex/OCRia-nano-1",
       "url": "https://huggingface.co/llamaindex/OCRia-nano-1",
       "downloads": 126,
-      "likes": 247,
+      "likes": 282,
       "pipeline_tag": "image-to-text"
     },
     {
-      "id": "inclusionAI/Ling-3.2-air",
-      "url": "https://huggingface.co/inclusionAI/Ling-3.2-air",
-      "downloads": 1467,
-      "likes": 241,
-      "pipeline_tag": null
+      "id": "apple/DepthPro2",
+      "url": "https://huggingface.co/apple/DepthPro2",
+      "downloads": 0,
+      "likes": 1314,
+      "pipeline_tag": "depth-estimation"
+    },
+    {
+      "id": "nvidia/Nemotron-Labs-Image-30B-A3B",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B",
+      "downloads": 218,
+      "likes": 270,
+      "pipeline_tag": "text-to-image"
     }
   ]
 }

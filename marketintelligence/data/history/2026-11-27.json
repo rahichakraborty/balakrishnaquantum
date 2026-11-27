@@ -1,0 +1,92 @@
+{
+  "last_updated": {
+    "date": "27 Nov 2026",
+    "time": "18:26 IST",
+    "iso": "2026-11-27T18:26:06.206027+00:00"
+  },
+  "overall": {
+    "emoji": "\ud83d\udfe1",
+    "bias": "Neutral",
+    "confidence": 47,
+    "todays_trade": "Wait For Confirmation",
+    "preferred_asset": "ETH",
+    "risk_level": "Low",
+    "risk_note": "Normal Conditions",
+    "conviction": 47
+  },
+  "assets": {
+    "BTC": {
+      "name": "Bitcoin",
+      "bias": "Bearish",
+      "confidence": 20,
+      "support": 55711.45,
+      "resistance": 63697.28,
+      "trade_plan": "Fade rallies while below resistance."
+    },
+    "ETH": {
+      "name": "Ethereum",
+      "bias": "Neutral",
+      "confidence": 50,
+      "support": 1559.0,
+      "resistance": 1805.03,
+      "trade_plan": "Wait for confirmed breakout."
+    }
+  },
+  "scores": {
+    "macro": 40,
+    "flow": 54,
+    "technical": 35,
+    "risk": 23
+  },
+  "drivers": [
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Brazil\u2019s stock exchange pushes stablecoin launch back to 2027"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Austria-supervised crypto firms report 20.4B euros in H1 trading volume"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin supply metric hits 11-year low as new \u2018capitulation\u2019 signal arrives"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bluefin to shut down perps, refocus on spot trading and tokenized RWAs"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "ESMA to overhaul EU\u2019s MiCA crypto register in 2027"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "New York AG secures $1.37B court judgment against NovaTech founders"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Here\u2019s what happened in crypto today"
+    },
+    {
+      "emoji": "\ud83d\udd34",
+      "text": "Japan\u2019s crypto security group taps SEAL to speed up hack response"
+    }
+  ],
+  "events": [
+    {
+      "label": "CLARITY Act",
+      "when": "Awaiting Senate",
+      "raw_days": null,
+      "note": "Digital Asset Market CLARITY Act - Senate vote pending, targeting before Aug 10 recess"
+    }
+  ],
+  "checklist": {
+    "ETF": "green",
+    "Funding": "green",
+    "Open Interest": "green",
+    "Fear & Greed": "yellow",
+    "Macro": "green",
+    "News": "yellow",
+    "Risk": "green"
+  }
+}

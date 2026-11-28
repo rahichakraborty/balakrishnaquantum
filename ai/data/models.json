@@ -1,75 +1,75 @@
 {
-  "generated_at": "2026-11-27T23:09:53+00:00",
+  "generated_at": "2026-11-28T11:15:56+00:00",
   "items": [
     {
       "id": "thinkingmachines/Inkling-2-Mini",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
-      "downloads": 155741,
-      "likes": 6457,
+      "downloads": 177012,
+      "likes": 6524,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "unsloth/Inkling-2-Mini-GGUF",
       "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
-      "downloads": 3302340,
-      "likes": 1602,
+      "downloads": 3621301,
+      "likes": 1630,
       "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "SulphurAI/Sulphur-3",
       "url": "https://huggingface.co/SulphurAI/Sulphur-3",
-      "downloads": 539421,
-      "likes": 1366,
+      "downloads": 759937,
+      "likes": 1398,
       "pipeline_tag": null
-    },
-    {
-      "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
-      "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
-      "downloads": 1059763,
-      "likes": 1033,
-      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
-      "downloads": 382546,
-      "likes": 634,
+      "downloads": 473980,
+      "likes": 662,
       "pipeline_tag": "text-generation"
+    },
+    {
+      "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+      "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+      "downloads": 1297386,
+      "likes": 1052,
+      "pipeline_tag": "image-text-to-text"
     },
     {
       "id": "inworld/voice-isolator",
       "url": "https://huggingface.co/inworld/voice-isolator",
-      "downloads": 20510,
-      "likes": 1011,
+      "downloads": 22810,
+      "likes": 1018,
       "pipeline_tag": "audio-to-audio"
     },
     {
       "id": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "downloads": 3080701,
-      "likes": 13723,
+      "downloads": 3088512,
+      "likes": 13771,
       "pipeline_tag": "image-to-video"
     },
     {
       "id": "llamaindex/OCRia-nano-1",
       "url": "https://huggingface.co/llamaindex/OCRia-nano-1",
-      "downloads": 626,
-      "likes": 355,
+      "downloads": 9982,
+      "likes": 372,
       "pipeline_tag": "image-to-text"
     },
     {
       "id": "nvidia/Nemotron-Labs-Image-30B-A3B",
       "url": "https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B",
-      "downloads": 1692,
-      "likes": 340,
+      "downloads": 2042,
+      "likes": 350,
       "pipeline_tag": "text-to-image"
     },
     {
-      "id": "strata-engine/Inkling-2-Mini-Strata",
-      "url": "https://huggingface.co/strata-engine/Inkling-2-Mini-Strata",
-      "downloads": 4532,
-      "likes": 300,
-      "pipeline_tag": "image-text-to-text"
+      "id": "ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF",
+      "url": "https://huggingface.co/ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF",
+      "downloads": 97896,
+      "likes": 306,
+      "pipeline_tag": "text-generation"
     }
   ]
 }

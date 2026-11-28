@@ -1,25 +1,25 @@
 {
   "last_updated": {
-    "date": "27 Nov 2026",
-    "time": "18:26 IST",
-    "iso": "2026-11-27T18:26:06.206027+00:00"
+    "date": "28 Nov 2026",
+    "time": "17:39 IST",
+    "iso": "2026-11-28T17:39:00.404686+00:00"
   },
   "overall": {
-    "emoji": "\ud83d\udfe1",
-    "bias": "Neutral",
-    "confidence": 47,
-    "todays_trade": "Wait For Confirmation",
+    "emoji": "\ud83d\udd34",
+    "bias": "Mild Bearish",
+    "confidence": 37,
+    "todays_trade": "Reduce Size",
     "preferred_asset": "ETH",
-    "risk_level": "Low",
-    "risk_note": "Normal Conditions",
-    "conviction": 47
+    "risk_level": "High",
+    "risk_note": "Reduce Size",
+    "conviction": 37
   },
   "assets": {
     "BTC": {
       "name": "Bitcoin",
       "bias": "Bearish",
       "confidence": 20,
-      "support": 55711.45,
+      "support": 58012.72,
       "resistance": 63697.28,
       "trade_plan": "Fade rallies while below resistance."
     },
@@ -27,49 +27,49 @@
       "name": "Ethereum",
       "bias": "Neutral",
       "confidence": 50,
-      "support": 1559.0,
+      "support": 1630.07,
       "resistance": 1805.03,
       "trade_plan": "Wait for confirmed breakout."
     }
   },
   "scores": {
-    "macro": 40,
-    "flow": 54,
+    "macro": 48,
+    "flow": 30,
     "technical": 35,
-    "risk": 23
+    "risk": 76
   },
   "drivers": [
     {
       "emoji": "\ud83d\udfe1",
-      "text": "Brazil\u2019s stock exchange pushes stablecoin launch back to 2027"
+      "text": "ASEAN+3 agrees on initiative to explore crypto payments cooperation"
     },
     {
-      "emoji": "\ud83d\udfe1",
-      "text": "Austria-supervised crypto firms report 20.4B euros in H1 trading volume"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Bitcoin supply metric hits 11-year low as new \u2018capitulation\u2019 signal arrives"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "Bluefin to shut down perps, refocus on spot trading and tokenized RWAs"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "ESMA to overhaul EU\u2019s MiCA crypto register in 2027"
-    },
-    {
-      "emoji": "\ud83d\udfe1",
-      "text": "New York AG secures $1.37B court judgment against NovaTech founders"
+      "emoji": "\u2705",
+      "text": "Binance plans Asia hub in Bhutan, receives preliminary approval"
     },
     {
       "emoji": "\ud83d\udfe1",
       "text": "Here\u2019s what happened in crypto today"
     },
     {
-      "emoji": "\ud83d\udd34",
-      "text": "Japan\u2019s crypto security group taps SEAL to speed up hack response"
+      "emoji": "\ud83d\udfe1",
+      "text": "Franklin Templeton makes room for HYPE in crypto index ETF"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin whales pile into BTC despite shrinking profit cushion"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "China sets March 2027 rollout for blockchain identity regulations"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "Bitcoin price drops below $59K as Anthropic joins tech stock rebound"
+    },
+    {
+      "emoji": "\ud83d\udfe1",
+      "text": "What was Coinbase worth while Nasdaq was closed?"
     }
   ],
   "events": [
